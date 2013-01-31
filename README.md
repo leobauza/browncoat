@@ -1,4 +1,4 @@
-Welcome to browncoat
+Welcome to browncoat 1.0.0 (in serious development)
 ==================
 
 
@@ -25,6 +25,13 @@ I would never have considered creating any of this had I not come across [bootst
 - browncoat will have a host of contributing designers for libraries, icons, etc. for example my bud [Jimmy 'Billy' French](http://billyfrench.com) 
 - The fine people at [saforian](http://saforian.com) are constantly QA'ing this, even when they don't know that they are. I work there, and I start all my projects with where ever this is at.
 - My mom thinks my project is cool...my dad thinks it's aight too.
+
+### versioning
+numbered as such:
+
+```
+<major>.<minor>.<patch>
+```
 
 ## Explain kaylee.php
 
