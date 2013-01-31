@@ -1,0 +1,56 @@
+Welcome to Browncoat
+==================
+
+- Follow the [HTML5 History API](https://developer.mozilla.org/en/DOM/Manipulating_the_browser_history) as much as possible
+- Provide a cross-compatible experience for all HTML5 Browsers (they all implement the HTML5 History API a little bit differently causing different behaviours and sometimes bugs - History.js fixes this ensuring the experience is as expected / the same / great throughout the HTML5 browsers)
+- Provide a backwards-compatible experience for all HTML4 Browsers using a hash-fallback (including continued support for the HTML5 History API's `data`, `title`, `pushState` and `replaceState`) with the option to [remove HTML4 support if it is not right for your application](https://github.com/balupton/history.js/wiki/Intelligent-State-Handling)
+- Provide a forwards-compatible experience for HTML4 States to HTML5 States (so if a hash-fallbacked url is accessed by a HTML5 browser it is naturally transformed into its non-hashed url equivalent)
+- Provide support for as many javascript frameworks as possible via adapters; especially [jQuery](http://jquery.com/), [MooTools](http://mootools.net/), [Prototype](http://www.prototypejs.org/) and [Zepto](http://zeptojs.com/)
+
+
+## stuff
+
+### lower stuff
+
+``` javascript
+//javascript code
+```
+
+
+### header?
+
+1. a list
+1. that is
+1. numbered
+
+> Note: a note
+
+
+
+
+### this is the worst readme file right now
+
+- I had no idea how to use git's readme mark up so....
+- my bad...for this being up for now
+
+
+
+
+## nested list
+
+
+- top
+
+	- second
+
+		``` html
+			<h1>some html</h1>
+		```
+
+
+## Get Updates
+
+- hmmmmm soon
+	- trying this nested thing
+
+
