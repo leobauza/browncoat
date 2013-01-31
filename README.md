@@ -2,9 +2,13 @@ Welcome to Browncoat
 ==================
 
 
-## stuff
+## About this project
 
-### lower stuff
+### reason
+
+I want a front end framework that allows me to prototype projects quickly. I want to build it using PHP, LESS, HTML5, and jQuery. 
+
+
 
 ``` javascript
 //javascript code

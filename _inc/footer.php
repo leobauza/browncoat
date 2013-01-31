@@ -1,16 +1,5 @@
 	<footer class="container">
-		<div class="inline-box">
-			these
-		</div>
-		<div class="inline-box">
-			boxes
-		</div>
-		<div class="inline-box">
-			are
-		</div>
-		<div class="inline-box">
-			inline
-		</div>
+		Footer
 	</footer>
 
 	<!-- javascript -->
