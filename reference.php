@@ -194,5 +194,5 @@ $title = "reference file"; //this is backed up by a generic title set in kaylee.
 	</form>
 </section>
 
- <?php include('_inc/footer.php')?>
+ <?php include('_inc/footer.php'); ?>
 

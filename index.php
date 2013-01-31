@@ -199,5 +199,4 @@ $title = "index"; //this is backed up by a generic title set in kaylee.php or a 
 	</form>
 </section>
 
- <?php include('_inc/footer.php')?>
-
+ <?php include('_inc/footer.php'); ?>
