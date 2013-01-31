@@ -21,19 +21,23 @@ I would never have considered creating any of this had I not come across [bootst
 //just reminding myself how to add code blocks...
 ```
 
+### So who cares?
+- browncoat will have a host of contributing designers for libraries, icons, etc. for example my bud [Jimmy 'Billy' French](http://billyfrench.com) 
+- The fine people at [saforian](http://saforian.com) are constantly QA'ing this, even when they don't know that they are. I work there, and I start all my projects with where ever this is at.
+- My mom thinks my project is cool...my dad thinks it's aight too.
 
-### Explain kaylee.php
+## Explain kaylee.php
 
-#### available varibles
+### available varibles
 
 ``` PHP
-	$useless //determines whether to use the less script to compile server side or use an already compiled css file
-	$genericTitle //if individual pages don't have a $title var set use this title other wise browncoat decides the title
-	$isResponsive //add the meta tag for it to work on mobile devices...and possibly do other stuff that I haven't decided yet
+$useless //use the less script or use an already compiled css file
+$genericTitle //if $title var in page missing, use this title else browncoat default is used
+$isResponsive //add the meta tag for mobi...possibly do other stuff that I haven't decided yet
 ```
-#### other stuff?
+### other stuff?
 
-#### more stuff?
+### more stuff?
 
 > Note: you can totally do away with kaylee.php and fall back on defaults or manually enter your own. Perhaps I should have a separate version that doesn't use php at all? keeping it truly front end?
 
@@ -65,6 +69,15 @@ I would never have considered creating any of this had I not come across [bootst
 			}
 		```
 
+## Libraries
+
+### How to integrate these?
+
+Currently I have no clue how to create these libraries or how to integrate them. The idea though is to have a core styles.less file and then folders for different form styles or button styles etc depending on the project. All of these being dependent upon a core.less file that determines colors, font-sizes, etc. This seems crazy but I HATE having extraneous css even when prototyping.
+
+## Multiuser browncoat Development
+
+A problem I seem to run into a lot with source control when multiple people are working on the front end is conflicts in editing css. I want to create a standard way of multiuser development that limits the conflicts that could possibly occur. (obviously communication on what each person is working on is key.) I don't know what I am thinking here but I want a solution for this.
 
 ## Get Updates
 
