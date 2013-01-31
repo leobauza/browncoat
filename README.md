@@ -4,9 +4,9 @@ Welcome to browncoat 1.0.0 (in serious development)
 
 ## about this project
 
-### credit where credit is due
+### inspiration
 
-I would never have considered creating any of this had I not come across [bootstrap](http://twitter.github.com/bootstrap/index.html) which is a much more complete framework as of January 30th 2012 and if you are looking for something like that you should check it out. It's pretty cool.
+I would never have considered creating any of this had I not come across [bootstrap](http://twitter.github.com/bootstrap/index.html) and [foundation](http://foundation.zurb.com/) which are much more complete frameworks as of January 31th 2012 and if you are looking for something like that you should check it out. They pretty cool. 
 
 ### goals
 
