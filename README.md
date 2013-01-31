@@ -25,7 +25,7 @@ I would never have considered creating any of this had I not come across [bootst
 ### Explain kaylee.php
 
 1. available varibles
-	```PHP
+	```php
 		$useless //determines whether to use the less script to compile server side or use an already compiled css file
 		$genericTitle //if individual pages don't have a $title var set use this title other wise browncoat decides the title
 		$isResponsive //add the meta tag for it to work on mobile devices...and possibly do other stuff that I haven't decided yet
