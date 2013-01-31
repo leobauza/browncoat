@@ -19,12 +19,4 @@ $isResponsive = true;
 
 
 
-
-
-
-
-
-
-
-
 ?>
