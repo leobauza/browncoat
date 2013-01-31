@@ -1,4 +1,8 @@
-<?php require("kaylee.php");?>
+<?php 
+
+require("kaylee.php")
+
+;?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -22,12 +26,20 @@
 	  <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
 	<![endif]-->
 	<?php else:?>
-		<!-- use css and never run the less.js script -->
-		<link rel="stylesheet" href="../assets/css/styles.css" type="text/css" media="screen" charset="utf-8">
-		<!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
-		<!--[if lt IE 9]>
-		  <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
-		<![endif]-->
+		<?php 
+		$hasContent = file_get_contents($pathToSerenity);
+		if($hasContent == true):
+		?>
+			<!-- use css and never run the less.js script -->
+			<link rel="stylesheet" href="../assets/css/styles.css" type="text/css" media="screen" charset="utf-8">
+			<!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+			<!--[if lt IE 9]>
+			  <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+			<![endif]-->
+		<?php else: ?>
+			<!-- delete default after simon runs I guess I could set it to do that but I don't know right now-->
+			<link rel="stylesheet" href="../assets/css/default.css" type="text/css" media="screen" charset="utf-8">
+		<?php endif; ?>
 	<?php endif; ?>
 
 	<!-- fav and touch icons -->
@@ -42,8 +54,16 @@
 
 <body>
 	<header class="container-alt">
-		<h1>Some Header</h1>
-		<h3>Still coming up with designs for this and stuff</h3> 
+		<?php if($hasContent == true): ?>
+			<h1>Some Header</h1>
+			<h3>Still coming up with designs for this and stuff</h3> 
+		<?php else: ?>
+			<h1>Using Default</h1>
+			<a href="/simon.php" class="btn-main small">Run Simon</a>
+			 
+		<?php endif; ?>
+		
+		
 		<?php 
 		//hey if you ever wanted to know ur document root uncoment this for some reason I had it here
 		//echo $_SERVER["DOCUMENT_ROOT"];

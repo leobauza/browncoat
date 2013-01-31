@@ -33,7 +33,7 @@ numbered as such:
 <major>.<minor>.<patch>
 ```
 
-## Explain kaylee.php
+## kaylee
 
 ### available varibles
 
@@ -56,6 +56,10 @@ $isResponsive //add the meta tag for mobi...possibly do other stuff that I haven
 - I apologize
 
 
+## simon
+
+
+
 ## Explain less structure?
 
 
@@ -76,17 +80,17 @@ $isResponsive //add the meta tag for mobi...possibly do other stuff that I haven
 			}
 		```
 
-## Libraries
+## libraries
 
 ### How to integrate these?
 
 Currently I have no clue how to create these libraries or how to integrate them. The idea though is to have a core styles.less file and then folders for different form styles or button styles etc depending on the project. All of these being dependent upon a core.less file that determines colors, font-sizes, etc. This seems crazy but I HATE having extraneous css even when prototyping.
 
-## Multiuser browncoat Development
+## multiuser browncoat development
 
 A problem I seem to run into a lot with source control when multiple people are working on the front end is conflicts in editing css. I want to create a standard way of multiuser development that limits the conflicts that could possibly occur. (obviously communication on what each person is working on is key.) I don't know what I am thinking here but I want a solution for this.
 
-## Get Updates
+## get updates
 
 - Beware
 	- Updates are coming
