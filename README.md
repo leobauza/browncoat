@@ -2,53 +2,68 @@ Welcome to Browncoat
 ==================
 
 
-## About this project
+## about this project
 
-### reason
+### credit where credit is due
 
-I want a front end framework that allows me to prototype projects quickly. I want to build it using PHP, LESS, HTML5, and jQuery. 
+I would never have considered creating any of this had I not come across [bootstrap](http://twitter.github.com/bootstrap/index.html) which is a much more complete framework as of January 30th 2012 and if you are looking for something like that you should check it out. It's pretty cool.
 
+### goals
+
+- a front end framework that allows for fast project prototyping.
+- built using PHP, LESS, HTML5, and jQuery. 
+- uses great existing libraries such as [isotope.js](http://isotope.metafizzy.co/) [history.js]( https://github.com/balupton/History.js/) and has options for ajax content loading, etc.
+- documentation that normal people can understand. I will at times be that asshole that says incomprehensible things. It is up to whoever asks the question to tell me I am being that asshole and I will do my best to explain. That said, at some point I will give up on anyone.
+- more to come
 
 
 ``` javascript
-//javascript code
+//just reminding myself how to add code blocks...
 ```
 
 
-### header?
+### Explain kaylee.php
 
-1. a list
-1. that is
-1. numbered
+1. available varibles
+	- $genericTitle
+	- $isResponsive
+1. ??
+1. ??
 
-> Note: a note
+> Note: you can totally do away with kaylee.php and fall back on defaults or manually enter your own. Perhaps I should have a separate version that doesn't use php at all? keeping it truly front end?
 
 
 
 
 ### this is the worst readme file right now
 
-- I had no idea how to use git's readme mark up so....
-- my bad...for this being up for now
+- I apologize
 
 
+## Explain less structure?
 
 
-## nested list
+- ??
 
-
-- top
-
-	- second
+	- ??
 
 		``` html
 			<h1>some html</h1>
+		```
+		``` less
+			.some {
+				.nested {
+					.less {
+						color:@awesome;
+					}
+				}
+			}
 		```
 
 
 ## Get Updates
 
-- hmmmmm soon
-	- trying this nested thing
+- Beware
+	- Updates are coming
 
 
