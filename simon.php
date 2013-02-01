@@ -28,9 +28,6 @@ $title = "simon diagnostic"; //this is backed up by a generic title set in kayle
 
 			//create serenity @imports
 			$i = 0;
-			//pass the lib folder to somehow dynamically generate this array or what? i dunno
-			$serenityArr = createLibArrays();
-			
 			foreach($serenityArr as $key => $val) {
 				if($i == 0) {
 					$serenity_imports = "//".$key."-lib include";

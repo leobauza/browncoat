@@ -38,12 +38,17 @@ $isResponsive = true;
  */
 
 //sets path to serenity
-$pathToSerenity = './assets/less/serenity.less';
-$pathToWash = './assets/less/wash.less';
+$pathToSerenity = './assets/less/serenity.reaver.less';
+$pathToWash = './assets/less/wash.reaver.less';
 
 //basic imports
 //what do I pass and how do I determine selected arrays??
 function createLibArrays() {
+
+	//the wash lib arr contains, so far as I've thought out, (text-lib, structure-lib, js specific libs, colours-lib)
+	
+	//the serenity lib arr contains, so far as I've thought out, (btn-lib, callout-lib, form-lib, list-lib)
+
 	$libArr = array(
 		//lib name => lib path
 		"core" => "../libs/core-lib/core-firefly.less",
@@ -52,5 +57,9 @@ function createLibArrays() {
 	);
 	return $libArr;
 }
+//serenity arr pass the lib folder to somehow dynamically generate this array or what? i dunno
+$serenityArr = createLibArrays();
+//wash arr pass the lib folder to somehow dynamically generate this array or what? i dunno
+$washArr = createLibArrays();
 
 ?>
