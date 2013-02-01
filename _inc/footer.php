@@ -6,6 +6,19 @@
 
 	<!-- javascript -->
 
+	<!-- why the fuck are these called modals? -->
+	<section data-modal="wiper" class="modal-main">
+		<header>
+			<h2>Wiper Modals</h2>
+		</header>
+		<article class="body">
+			<p>Write something that returns whether or not serenity, washer, and styles.css are cleared...</p>
+		</article>
+		<footer>
+			<p>modals can have footers</p>
+		</footer>
+	</section>
+	<div class="overlay dark" data-modal='wiper'></div>
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
 	<script src="../assets/js/touchwipe.min.js"></script>
@@ -16,11 +29,14 @@
 		
 		$('[data-ajax="wiper"]').click(function(e){
 			
+			$("[data-modal='wiper']").show();
+			
 			var url = $(this).attr('href');
 			$wipeRequest = $.ajax({
 				url:url,
 				success: function(data){
 					//do something when it succeeds
+					
 				}
 			});
 
@@ -28,7 +44,6 @@
 				//do something when it is done
 			});
 			e.preventDefault();
-
 
 
 		});

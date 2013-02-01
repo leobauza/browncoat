@@ -56,6 +56,7 @@ function createLibArrays() {
 		"core" => "../libs/core-lib/core-firefly.less",
 		"btn" => "../libs/btn-lib/btn-firefly.less",
 		"callout" => "../libs/callouts-lib/callouts-firefly.less",
+		"modal" => "../libs/modal-lib/modal-firefly.less",
 	);
 	return $libArr;
 }

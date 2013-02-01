@@ -1,0 +1,46 @@
+//include using @import "callouts-lib/modals-firefly.less";
+/* 
+ * =============================================================
+ * Modals (pop ups that for some reason are called modals)
+ * firefly theme dependencies
+ * =============================================================
+ */
+
+
+.modal-main {
+	position:absolute;
+	top:20px;
+	display:none;
+	background:@white;
+	width:500px;
+	margin:20px auto 0px;
+	z-index:200;
+	header {
+		h2 {
+			
+		}
+	}
+	.body {
+		p {
+			
+		}
+	}
+	footer {
+		p {
+			
+		}
+	}
+}
+
+.overlay {
+	z-index:100;
+	display:none;
+	position:fixed;
+	top:0;
+	left:0;
+	.square(100%,100%);
+	&.dark {
+		background:@black;
+		background:fade(@black,90%);
+	}
+}
