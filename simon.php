@@ -79,6 +79,11 @@ $title = "simon diagnostic"; //this is backed up by a generic title set in kayle
 			//write wash
 			writeLessFiles($pathToWash, $wash_imports, "wash");
 			
+			
+			
+			
+			
+			
 			?>
 		</article>
 		<aside class="span5">

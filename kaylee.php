@@ -37,10 +37,12 @@ $isResponsive = true;
  * 
  */
 
-//sets path to serenity
+//sets path to core less files
 $pathToSerenity = './assets/less/serenity.reaver.less';
 $pathToWash = './assets/less/wash.reaver.less';
 
+//set paths to core css file
+$pathToCSS = './assets/css/styles.css';
 //basic imports
 //what do I pass and how do I determine selected arrays??
 function createLibArrays() {

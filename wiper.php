@@ -61,11 +61,13 @@ $title = "wiper"; //this is backed up by a generic title set in kaylee.php or a 
 				}
 			}
 
-			//write serenity
+			//wipe serenity
 			wipeLessFiles($pathToSerenity, $imports, "serenity");
-			//write wash
+			//wipe wash
 			wipeLessFiles($pathToWash, $imports, "wash");
-			
+
+			wipeLessFiles($pathToCSS, $imports, "css");
+
 
 			?>
 		</article>
