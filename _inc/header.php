@@ -28,7 +28,7 @@ require("kaylee.php");
 	<?php else:?>
 		<?php 
 		$hasContent = file_get_contents($pathToSerenity);
-		if($hasContent == true):
+		if($hasContent == true && !isset($isWiper)):
 		?>
 			<!-- use css and never run the less.js script -->
 			<link rel="stylesheet" href="../assets/css/styles.css" type="text/css" media="screen" charset="utf-8">
@@ -36,6 +36,9 @@ require("kaylee.php");
 			<!--[if lt IE 9]>
 			  <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
 			<![endif]-->
+		<?php elseif(isset($isWiper)): ?>
+			<!-- delete default after simon runs I guess I could set it to do that but I don't know right now-->
+			<link rel="stylesheet" href="../assets/css/default.reaver.css" type="text/css" media="screen" charset="utf-8">
 		<?php else: ?>
 			<!-- delete default after simon runs I guess I could set it to do that but I don't know right now-->
 			<link rel="stylesheet" href="../assets/css/default.reaver.css" type="text/css" media="screen" charset="utf-8">

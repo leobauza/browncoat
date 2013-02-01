@@ -1,5 +1,8 @@
 <?php
 
+//sets some defaults so there's always a default style showing
+$isWiper = true;
+
 //some possible page variables
 $title = "wiper"; //this is backed up by a generic title set in kaylee.php or a browncoat generic title
 
