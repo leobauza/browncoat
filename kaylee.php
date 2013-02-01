@@ -12,6 +12,7 @@
  *
  */
 $genericTitle = "default title";
+$pageDescription = "default description";
 
 /*
  *
@@ -28,6 +29,7 @@ $genericTitle = "default title";
  */
 $isResponsive = true;
 
+
 /*
  *
  * Library vars and path to serenity.less 
@@ -42,5 +44,4 @@ $pathToSerenity = './assets/less/serenity.less';
 $core = '@import "core";';
 $btn_lib = '@import "/btn-lib/btn-firefly.less";';
 $callout_lib = '@import "/callouts-lib/callouts-firefly.less";';
-
 ?>

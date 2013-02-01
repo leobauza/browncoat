@@ -1,17 +1,17 @@
 <?php 
 
-require("kaylee.php")
+require("kaylee.php");
 
-;?>
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
 	<meta charset="utf-8">
-	<title><?php if(isset($title)){print $title; } elseif(isset($genericTitle)) { print "page lacks title soldier";} ?></title>
+	<title><?php if(isset($title)){print $title; } elseif(!isset($genericTitle)) { print "page lacks title soldier";} else { print $genericTitle; } ?></title>
 	<?php if(isset($isResponsive)):?>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<?php endif?>
-	<meta name="description" content="a website description">
+	<meta name="description" content="<?php if(isset($pageDescription)){ print $pageDescription; } else { print "page lacks description soldier";} ?>">
 	<meta name="author" content="the author">
 
 	<!-- styles -->
