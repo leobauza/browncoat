@@ -28,6 +28,7 @@ $title = "index"; //this is backed up by a generic title set in kaylee.php or a 
 			<p>The way I see documentation for stuff is usually this: "what the fuck are you talking about?" so hopefully I will have better documentation that is readable to human beings even those who have 0 experience with every single part of this. If I ever answer your question and you don't know what the hell I mean say so...I need to be able to convey real answers to people  of all experience levels. Granted, if you are an idiot I'll tell you that too</p>
 		</div>
 	</section>
+</section>
 
 
  <?php include('_inc/footer.php'); ?>

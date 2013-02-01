@@ -2,6 +2,15 @@
 
 require("kaylee.php");
 
+//determine whether serenity has content...this checks if simon has run...
+//should probably have a key word that simon writes here to check
+$hasContent = file_get_contents($pathToSerenity);
+
+
+//so how about wrapping this entire thing in a function that returns a clean header.
+//then create a clean.header.php with just clean html and it does away with all this if else shit during set up
+
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -18,8 +27,12 @@ require("kaylee.php");
 
 	<?php if(isset($useless)): ?>
 		<!-- use less js compiling and have ie fallback with css -->
-		<link rel="stylesheet/less" type="text/css" href="../assets/less/styles.less">
-	<script src="../assets/js/less.js" type="text/javascript"></script>
+		<?php if($hasContent == true && !isset($isWiper)): ?>
+			<link rel="stylesheet/less" type="text/css" href="../assets/less/styles.less">
+		<?php else: ?>
+			<link rel="stylesheet/less" type="text/css" href="../assets/less/default.reaver.less">
+		<?php endif; ?>
+		<script src="../assets/js/less.js" type="text/javascript"></script>
 	<!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
 	<!--[if lt IE 9]>
 		<link rel="stylesheet" href="../assets/css/styles.css" type="text/css" media="screen" charset="utf-8">
@@ -27,7 +40,6 @@ require("kaylee.php");
 	<![endif]-->
 	<?php else:?>
 		<?php 
-		$hasContent = file_get_contents($pathToSerenity);
 		if($hasContent == true && !isset($isWiper)):
 		?>
 			<!-- use css and never run the less.js script -->
@@ -57,7 +69,7 @@ require("kaylee.php");
 
 <body>
 	<header class="container-alt">
-		<?php if($hasContent == true): ?>
+		<?php if($hasContent == true && !isset($isWiper)): ?>
 			<h1>Some Header</h1>
 			<h3>Still coming up with designs for this and stuff</h3> 
 		<?php else: ?>

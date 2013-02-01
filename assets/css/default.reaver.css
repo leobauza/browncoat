@@ -1,8 +1,7 @@
 /*!
  * 
- * Developed by:
- *
- * Developed for:
+ * 
+ * default.reaver.less loads the firefly library directly in.
  *
  *
  */
@@ -587,10 +586,10 @@ footer:after,
 /****** FOOTER ******/
 /******STRUCTURE MAKE INTO STRUCTURE******/
 .container {
-  padding: 20px 3%;
+  padding: 20px 2%;
 }
 .container-alt {
-  padding: 20px 3%;
+  padding: 20px 2%;
   background: #f5f5f5;
 }
 .row-fluid {
@@ -600,7 +599,7 @@ footer:after,
 /*margin right instead of margin left to do overflow hidden*/
 .row-fluid > [class*="span"] {
   float: left;
-  margin-right: 3%;
+  margin-right: 2%;
 }
 .row-fluid > [class*="span"].l {
   margin-right: 0;
@@ -616,40 +615,40 @@ footer:after,
   overflow: hidden;
 }
 .row-fluid .span1 {
-  width: 5.606060602727273%;
+  width: 6.515151511818182%;
 }
 .row-fluid .span2 {
-  width: 14.16666666%;
+  width: 14.999999993333335%;
 }
 .row-fluid .span3 {
-  width: 22.74999999%;
+  width: 23.49999999%;
 }
 .row-fluid .span4 {
-  width: 31.33333332%;
+  width: 31.99999998666667%;
 }
 .row-fluid .span5 {
-  width: 38.66666665%;
+  width: 39.66666665%;
 }
 .row-fluid .span6 {
-  width: 48.49999998%;
+  width: 48.99999998%;
 }
 .row-fluid .span7 {
-  width: 55.33333331%;
+  width: 56.33333331%;
 }
 .row-fluid .span8 {
-  width: 63.66666664%;
+  width: 64.66666664%;
 }
 .row-fluid .span9 {
-  width: 71.99999997%;
+  width: 72.99999997%;
 }
 .row-fluid .span10 {
-  width: 80.3333333%;
+  width: 81.3333333%;
 }
 .row-fluid .span11 {
-  width: 88.66666663000001%;
+  width: 89.66666663000001%;
 }
 .row-fluid .span12 {
-  width: 96.99999996%;
+  width: 97.99999996%;
 }
 @media (max-width: 959px) {
   /*margin right instead of margin left to do overflow hidden*/

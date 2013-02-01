@@ -6,6 +6,8 @@
 
 $(function(){
 
+	console.log("malcolm lives");
+
 /* 
  * =============================================================
  * IE FIXES
@@ -65,7 +67,6 @@ $(function(){
  * BTN PULL DOWN
  * =============================================================
  */
-	console.log("i am running");
 
 	$('.btn-set-dropdown .drop').click(function(e){
 		var $this = $(this);

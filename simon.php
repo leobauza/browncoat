@@ -96,13 +96,12 @@ $title = "simon diagnostic"; //this is backed up by a generic title set in kayle
 			?>
 		</article>
 		<aside class="span5">
-			<a href="/wiper.php" class="btn-gray small">wipe serenity</a>
+			<a href="/wiper.php" data-ajax="wiper" class="btn-gray small">wipe serenity</a>
 			<p class="note unbump">note: this button should call a file like serenity-wipe.php that runs some code to wipe everything in serenity.less. This should be an ajax call.</p>
 			<br>
 			<a href="/index.php" class="btn-main small">to index</a>
 		</aside>
 	</div>
-
 
 
 </section>
