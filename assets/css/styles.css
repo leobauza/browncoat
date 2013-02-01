@@ -394,7 +394,7 @@ h1 {
   font-size: 3.8em;
 }
 h2 {
-  font-size: 2.1em;
+  font-size: 2.6em;
 }
 h3 {
   font-size: 1.8em;
@@ -587,10 +587,10 @@ footer:after,
 /****** FOOTER ******/
 /******STRUCTURE MAKE INTO STRUCTURE******/
 .container {
-  padding: 20px 1%;
+  padding: 20px 3%;
 }
 .container-alt {
-  padding: 20px 1%;
+  padding: 20px 3%;
   background: #f5f5f5;
 }
 .row-fluid {
@@ -600,7 +600,7 @@ footer:after,
 /*margin right instead of margin left to do overflow hidden*/
 .row-fluid > [class*="span"] {
   float: left;
-  margin-right: 1%;
+  margin-right: 3%;
 }
 .row-fluid > [class*="span"].l {
   margin-right: 0;
@@ -616,40 +616,40 @@ footer:after,
   overflow: hidden;
 }
 .row-fluid .span1 {
-  width: 7.424242420909091%;
+  width: 5.606060602727273%;
 }
 .row-fluid .span2 {
-  width: 15.833333326666667%;
+  width: 14.16666666%;
 }
 .row-fluid .span3 {
-  width: 24.24999999%;
+  width: 22.74999999%;
 }
 .row-fluid .span4 {
-  width: 32.66666665333334%;
+  width: 31.33333332%;
 }
 .row-fluid .span5 {
-  width: 40.66666665%;
+  width: 38.66666665%;
 }
 .row-fluid .span6 {
-  width: 49.49999998%;
+  width: 48.49999998%;
 }
 .row-fluid .span7 {
-  width: 57.33333331%;
+  width: 55.33333331%;
 }
 .row-fluid .span8 {
-  width: 65.66666664%;
+  width: 63.66666664%;
 }
 .row-fluid .span9 {
-  width: 73.99999997%;
+  width: 71.99999997%;
 }
 .row-fluid .span10 {
-  width: 82.3333333%;
+  width: 80.3333333%;
 }
 .row-fluid .span11 {
-  width: 90.66666663000001%;
+  width: 88.66666663000001%;
 }
 .row-fluid .span12 {
-  width: 98.99999996%;
+  width: 96.99999996%;
 }
 @media (max-width: 959px) {
   /*margin right instead of margin left to do overflow hidden*/
