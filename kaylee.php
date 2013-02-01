@@ -41,7 +41,7 @@ $isResponsive = true;
 $pathToSerenity = './assets/less/serenity.less';
 
 //basic imports
-$core = '@import "core";';
-$btn_lib = '@import "/btn-lib/btn-firefly.less";';
-$callout_lib = '@import "/callouts-lib/callouts-firefly.less";';
+$core_lib = '@import "../libs/core-lib/core-firefly.less";';
+$btn_lib = '@import "../libs/btn-lib/btn-firefly.less";';
+$callout_lib = '@import "../libs/callouts-lib/callouts-firefly.less";';
 ?>

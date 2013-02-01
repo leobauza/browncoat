@@ -65,6 +65,8 @@ simon runs a diagnostic on the installation. He outputs:
 - What js libraries are on
 - other variables in kaylee?
 
+simon has a control panel.
+
 ## river (river.php)
 river prepares the files to take with you to whatever project you are using them in. she outputs:
 
@@ -106,7 +108,7 @@ reavers destroy all files you no longer need after setting up your project to st
 ## libraries
 Libraries are an easy way to determine a starting point for a project & cut down the filler
 
-> Note: libraries use standarized naming conventions. It is encouraged to maintain these when creating custom libraries: libraryType-lib -> libraryType-libraryTheme.less -> .libraryType-(description) (there are exceptions such as callout libs which would be annoying to name following the conventions. And nothing will prevent you from ignoring that altogether.) ie. btn-lib -> btn-firefly.less -> .btn-main 
+> Note: libraries use standarized naming conventions. It is encouraged to maintain these when creating custom libraries: libraryType-lib/libraryType-libraryTheme.less/.libraryType-(description) (there are exceptions such as callout libs which would be annoying to name following the conventions. And nothing will prevent you from ignoring that altogether.) ie. btn-lib/btn-firefly.less/.btn-main 
 
 ### How to integrate these?
 

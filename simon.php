@@ -31,7 +31,7 @@ $title = "simon diagnostic"; //this is backed up by a generic title set in kayle
 
 			//create the @import
 			$imports = "//the core include";
-			$imports .= "\n".$core;
+			$imports .= "\n".$core_lib;
 			$imports .= "\n"."//the btn library";
 			$imports .= "\n".$btn_lib;
 			$imports .= "\n"."//the callout library";
@@ -53,7 +53,7 @@ $title = "simon diagnostic"; //this is backed up by a generic title set in kayle
 						echo "<p><strong>Cannot write to file ($filename)</strong></p>";
 						exit;
 					}
-					$serenityWritten = "<p class='warning'><strong>serenity.less has been written.</strong> to rewrite it delete its contents and refresh this page.</p>";
+					$serenityWritten = "<p class='warning'><strong>serenity.less has been written.</strong> refresh to see the result</p>";
 					$serenityWritten .= "\n"."<p>You must take care of compiling you styles.less file now. (using less.app or similar.)</p>";
 					echo $serenityWritten;
 					fclose($handle);
@@ -65,13 +65,11 @@ $title = "simon diagnostic"; //this is backed up by a generic title set in kayle
 				$serenityExists .= "<p class='note'>if you are not seeing styles your .less files are not being compiled (using less.app or similar) or turn on \$useless in kaylee</p>";
 				echo $serenityExists;
 			}
-
 			?>
 		</article>
 		<aside class="span5">
 			<a href="/wipe-serenity.php" class="btn-gray small">wipe serenity</a>
-			<p class="note">note: this also wipes the styles.css file already compiled</p>
-			<p class="unbump">this button should call a file like serenity-wipe.php that runs some code to wipe everything in serenity.less. This should be an ajax call.</p>
+			<p class="note unbump">note: this button should call a file like serenity-wipe.php that runs some code to wipe everything in serenity.less. This should be an ajax call.</p>
 			<br>
 			<a href="/index.php" class="btn-main small">to index</a>
 		</aside>
