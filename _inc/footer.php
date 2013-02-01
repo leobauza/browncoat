@@ -1,7 +1,7 @@
 	<footer class="container">
 		<a href="/simon.php" class="btn-gray">run simon</a>
 		<a href="/" class="btn-gray">go home</a>
-		<a href="/wipe-serenity.php" class="btn-gray">wipe serenity</a>
+		<a href="/wiper.php" class="btn-gray">wipe serenity</a>
 	</footer>
 
 	<!-- javascript -->

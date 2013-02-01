@@ -26,49 +26,66 @@ $title = "simon diagnostic"; //this is backed up by a generic title set in kayle
 			 *
 			 */
 
-			//this is the path to your serenity file that is set in kaylee
-			$filename = $pathToSerenity;
-
-			//create the @import
-			$imports = "//the core include";
-			$imports .= "\n".$core_lib;
-			$imports .= "\n"."//the btn library";
-			$imports .= "\n".$btn_lib;
-			$imports .= "\n"."//the callout library";
-			$imports .= "\n".$callout_lib;
-
-			$hasContent = file_get_contents($filename);
-
-			//write only if empty
-			if(!$hasContent){
-				// Let's make sure the file exists and is writable first.
-				if (is_writable($filename)) {
-					//if it can't open then exit
-					if (!$handle = fopen($filename, 'w')) {
-						echo "<strong>Cannot open file ($filename)</strong>";
-						exit;
-					}
-					//write it and if it cant say it cant
-					if (fwrite($handle, $imports) === FALSE) {
-						echo "<p><strong>Cannot write to file ($filename)</strong></p>";
-						exit;
-					}
-					$serenityWritten = "<p class='warning'><strong>serenity.less has been written.</strong> refresh to see the result</p>";
-					$serenityWritten .= "\n"."<p>You must take care of compiling you styles.less file now. (using less.app or similar.)</p>";
-					echo $serenityWritten;
-					fclose($handle);
+			//create serenity @imports
+			$i = 0;
+			//pass the lib folder to somehow dynamically generate this array or what? i dunno
+			$serenityArr = createLibArrays();
+			
+			foreach($serenityArr as $key => $val) {
+				if($i == 0) {
+					$serenity_imports = "//".$key."-lib include";
+					$serenity_imports .= "\n".'@import "'.$val. '";';
 				} else {
-					echo "<p><strong>The file $filename is not writable</strong></p>";
+					$serenity_imports .= "\n//".$key."-lib include";
+					$serenity_imports .= "\n".'@import "'.$val. '";';
 				}
-			} else {
-				$serenityExists = "<p class='warning'><strong>serenity.less is already written</strong></p>";
-				$serenityExists .= "<p class='note'>if you are not seeing styles your .less files are not being compiled (using less.app or similar) or turn on \$useless in kaylee</p>";
-				echo $serenityExists;
+				$i++;
 			}
+			//create the @imports for wash
+			$wash_imports = "//IT WORKS";
+
+			function writeLessFiles($filename, $imports, $name){
+				$hasContent = file_get_contents($filename);
+				//write only if empty
+				if(!$hasContent){
+					// Let's make sure the file exists and is writable first.
+					if (is_writable($filename)) {
+						//if it can't open then exit
+						if (!$handle = fopen($filename, 'w')) {
+							echo "<strong>Cannot open file ($filename)</strong>";
+							exit;
+						}
+						//write it and if it cant say it cant
+						if (fwrite($handle, $imports) === FALSE) {
+							echo "<p><strong>Cannot write to file ($filename)</strong></p>";
+							exit;
+						}
+						$written = "<p class='warning'><strong> $name has been written.</strong> refresh to see the result</p>";
+						$written .= "\n"."<p>You must take care of compiling you styles.less file now. (using less.app or similar.)</p>";
+						echo $written;
+						//close the file
+						fclose($handle);
+					} else {
+						//if its not writtable tell me
+						echo "<p class='warning'><strong>The file $filename is not writable</strong></p>";
+					}
+				} else {
+					//serenity already exists
+					$exists = "<p class='warning'><strong>$name is already written</strong></p>";
+					$exists .= "<p class='note'>if you are not seeing styles your .less files are not being compiled (using less.app or similar) or turn on \$useless in kaylee</p>";
+					echo $exists;
+				}
+			}
+			
+			//write serenity
+			writeLessFiles($pathToSerenity, $serenity_imports, "serenity");
+			//write wash
+			writeLessFiles($pathToWash, $wash_imports, "wash");
+			
 			?>
 		</article>
 		<aside class="span5">
-			<a href="/wipe-serenity.php" class="btn-gray small">wipe serenity</a>
+			<a href="/wiper.php" class="btn-gray small">wipe serenity</a>
 			<p class="note unbump">note: this button should call a file like serenity-wipe.php that runs some code to wipe everything in serenity.less. This should be an ajax call.</p>
 			<br>
 			<a href="/index.php" class="btn-main small">to index</a>

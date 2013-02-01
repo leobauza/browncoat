@@ -58,6 +58,7 @@ require("kaylee.php");
 			<h1>Some Header</h1>
 			<h3>Still coming up with designs for this and stuff</h3> 
 		<?php else: ?>
+			
 			<h1>Using Default</h1>
 			<a href="/simon.php" class="btn-main small">Run Simon</a>
 			 

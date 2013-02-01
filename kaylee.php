@@ -39,9 +39,18 @@ $isResponsive = true;
 
 //sets path to serenity
 $pathToSerenity = './assets/less/serenity.less';
+$pathToWash = './assets/less/wash.less';
 
 //basic imports
-$core_lib = '@import "../libs/core-lib/core-firefly.less";';
-$btn_lib = '@import "../libs/btn-lib/btn-firefly.less";';
-$callout_lib = '@import "../libs/callouts-lib/callouts-firefly.less";';
+//what do I pass and how do I determine selected arrays??
+function createLibArrays() {
+	$libArr = array(
+		//lib name => lib path
+		"core" => "../libs/core-lib/core-firefly.less",
+		"btn" => "../libs/btn-lib/btn-firefly.less",
+		"callout" => "../libs/callouts-lib/callouts-firefly.less",
+	);
+	return $libArr;
+}
+
 ?>
