@@ -293,6 +293,34 @@
   color: #2d2d2d;
   font-weight: bold;
 }
+/* 
+ * =============================================================
+ * Modals (pop ups that for some reason are called modals)
+ * firefly theme dependencies
+ * =============================================================
+ */
+.modal-main {
+  position: absolute;
+  top: 20px;
+  display: none;
+  background: #ffffff;
+  width: 500px;
+  margin: 20px auto 0px;
+  z-index: 200;
+}
+.overlay {
+  z-index: 100;
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.overlay.dark {
+  background: #000000;
+  background: rgba(0, 0, 0, 0.9);
+}
 article,
 aside,
 details,
