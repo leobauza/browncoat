@@ -32,7 +32,10 @@ numbered as such:
 <major>.<minor>.<patch>
 ```
 
-## kaylee
+## river (river.php)
+River is the GUI for creating a kaylee file. River scans the browncoat project finds all the available libraries (LESS and js) and displays checkboxes. It also has options for whole themes instead of individual library mixings. 
+
+## kaylee (kaylee.php)
 
 kaylee is fuel for browncoat, it contains all the functions and variables that help create your end framework. kaylee is created by river, but if you want you can go into kaylee and write it out yourself or change any variables manually, add your own functions to customize or add functionality.
 
@@ -58,8 +61,10 @@ $libArr = array(
 	"btn" => "../libs/btn-lib/btn-firefly.less",
 	"callout" => "../libs/callouts-lib/callouts-firefly.less",
 	"modal" => "../libs/modal-lib/modal-firefly.less",
+	"yourLib" => "../libs/yourLib-lib/yourLib-yourLibThem.less",
 );
 ```
+> Note: see library section for library naming conventions.
 
 > Note: if you look inside kaylee you will see that this is wrapped in a function "createLibArrays()" the plan here is to write something that can dynamically create the array with some information river writes into the creation of all the library arrays. Right now I can't even imagine what that looks like or how to accomplish this.
 
@@ -79,14 +84,6 @@ simon runs a diagnostic on the installation. He outputs:
 
 simon has a control panel.
 
-## river (river.php)
-river prepares the files to take with you to whatever project you are using them in. she outputs:
-
-- a success message or failure message. 
-- a link to the reavers
-
-river backs ups all files that will be destroyed by the reavers.
-
 ## reavers (reavers.php)
 reavers destroy all files you no longer need after setting up your project to start working on it. Files and directories destroyed include:
 
@@ -97,7 +94,7 @@ reavers destroy all files you no longer need after setting up your project to st
 - any unused .js files
 - header/footer (how are these handled? is there a final output of these without all the browncoat crap?)
 
-## Explain less files structure?
+## explain file structure
 
 -
 
@@ -114,21 +111,12 @@ reavers destroy all files you no longer need after setting up your project to st
 	}
 ```
 
+## explain standardarized markup
+
 ## libraries
-Libraries are an easy way to determine a starting point for a project & cut down the filler. The library array is in kaylee and is looped through by simon to write out your library imports unto serenity.less
+Libraries are an easy way to determine a starting point for a project & cut down the filler. The library arrays are in kaylee and are looped through by simon to write out your library imports to serenity, wash, or write out the scripts in your footer file. See kaylee section for an example of what it looks like.
 
-```PHP
-$libArr = array(
-	//lib name => lib path
-	"core" => "../libs/core-lib/core-firefly.less",
-	"btn" => "../libs/btn-lib/btn-firefly.less",
-	"callout" => "../libs/callouts-lib/callouts-firefly.less",
-	"modal" => "../libs/modal-lib/modal-firefly.less",
-	"yourLib" => "../libs/yourLib-lib/yourLib-yourLibThem.less",
-);
-```
-
-> Note: Until I write the front end piece to write out and rewrite kaylee, kaylee has to be updated manually like that so that simon can write out serenity.less with the correct imports. 
+> Note: Until I write the front end piece to write out and rewrite kaylee, kaylee has to be updated manually (this piece is now called river and is still not available)
 
 
 > Note: libraries use standarized naming conventions. It is encouraged to maintain these when creating custom libraries: libraryType-lib/libraryType-libraryTheme.less/.libraryType-(description) (The actual classes in the less file are just a suggestion, the directory name and file name are mandatory) ie. btn-lib/btn-firefly.less/.btn-main 
