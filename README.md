@@ -115,7 +115,7 @@ $libArr = array(
 	"btn" => "../libs/btn-lib/btn-firefly.less",
 	"callout" => "../libs/callouts-lib/callouts-firefly.less",
 	"modal" => "../libs/modal-lib/modal-firefly.less",
-	"yourLib" => "../libs/yourLib-lib/yourLib-yourLibThem.less"
+	"yourLib" => "../libs/yourLib-lib/yourLib-yourLibThem.less",
 );
 ```
 
