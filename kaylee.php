@@ -57,7 +57,6 @@ function createLibArrays() {
 	//the wash lib arr contains, so far as I've thought out, (text-lib, structure-lib, js specific libs, colours-lib)
 	
 	//the serenity lib arr contains, so far as I've thought out, (btn-lib, callout-lib, form-lib, list-lib)
-
 	$libArr = array(
 		//lib name => lib path
 		"core" => "../libs/core-lib/core-firefly.less",
