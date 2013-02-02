@@ -1,7 +1,7 @@
 <?php
 
 //some possible page variables
-$title = "index"; //this is backed up by a generic title set in kaylee.php or a browncoat generic title
+$title = "home"; //this is backed up by a generic title set in kaylee.php or a browncoat generic title
 
 ?>
 
