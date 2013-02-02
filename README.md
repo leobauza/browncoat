@@ -92,21 +92,35 @@ reavers destroy all files you no longer need after setting up your project to st
 
 	- ??
 
-		``` html
-			<h1>some html</h1>
-		```
-		``` less
-			.some {
-				.nested {
-					.less {
-						color:@awesome;
-					}
-				}
+``` html
+	<h1>some html</h1>
+```
+``` less
+	.some {
+		.nested {
+			.less {
+				color:@awesome;
 			}
-		```
+		}
+	}
+```
 
 ## libraries
-Libraries are an easy way to determine a starting point for a project & cut down the filler
+Libraries are an easy way to determine a starting point for a project & cut down the filler. The library array is in kaylee and is looped through by simon to write out your library imports unto serenity.less
+
+```PHP
+$libArr = array(
+	//lib name => lib path
+	"core" => "../libs/core-lib/core-firefly.less",
+	"btn" => "../libs/btn-lib/btn-firefly.less",
+	"callout" => "../libs/callouts-lib/callouts-firefly.less",
+	"modal" => "../libs/modal-lib/modal-firefly.less",
+	"yourLib" => "../libs/yourLib-lib/yourLib-yourLibThem.less"
+);
+```
+
+> Note: Until I write the front end piece to write out and rewrite kaylee, kaylee has to be updated manually like that so that simon can write out serenity.less with the correct imports. 
+
 
 > Note: libraries use standarized naming conventions. It is encouraged to maintain these when creating custom libraries: libraryType-lib/libraryType-libraryTheme.less/.libraryType-(description) (The actual classes in the less file are just a suggestion, the directory name and file name are mandatory) ie. btn-lib/btn-firefly.less/.btn-main 
 
