@@ -2,7 +2,6 @@
 
 //some possible page variables
 $title = "simon diagnostic"; //this is backed up by a generic title set in kaylee.php or a browncoat generic title
-
 ?>
 
 <?php include('_inc/header.php'); ?> 

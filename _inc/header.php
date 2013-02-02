@@ -16,7 +16,7 @@ $hasContent = file_get_contents($pathToSerenity);
 <html lang="en">
 <head>
 	<meta charset="utf-8">
-	<title><?php if(isset($title)){print $title; } elseif(!isset($genericTitle)) { print "page lacks title soldier";} else { print $genericTitle; } ?></title>
+	<title><?php if(isset($title)){print $title; } else { print "page lacks title soldier";} ?></title>
 	<?php if(isset($isResponsive)):?>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<?php endif?>

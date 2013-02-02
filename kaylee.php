@@ -11,8 +11,15 @@
  * variables for title, what scripts to run, etc
  *
  */
-$genericTitle = "default title";
-$pageDescription = "default description";
+//check for page level setting
+
+if(!isset($title)):
+	$title = "default title";
+endif;
+//check for page level setting
+if(!isset($pageDescription)):
+	$pageDescription = "default description";
+endif;
 
 /*
  *
