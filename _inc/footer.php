@@ -17,10 +17,10 @@
 	<section class="modal-cont">
 		<aside data-modal="wiper" class="modal-main ">
 			<header>
-				<h2>Wiper Modals</h2>
+				<h2>Wiper Modal</h2>
 			</header>
 			<article class="body">
-				<p>Write something that returns whether or not serenity, washer, and styles.css are cleared...</p>
+				<p>Write something that returns whether or not serenity, washer, and styles.css are cleared...for now just refresh to see the result...Obviously, in simon you can't just refresh because it rewrites</p>
 			</article>
 			<footer>
 				<p>modals can have footers</p>
@@ -36,13 +36,13 @@
 
 	<script>
 		//hide all modals no matter their modal relation or if modal files are wri
-		$("[data-modal]").hide();
 		
 		
 		//show modal wipers on wiper clicks
 		$('[data-ajax="wiper"]').click(function(e){
 			
 			$("[data-modal='wiper']").show();
+			$(".modal-cont").show();
 			
 			var url = $(this).attr('href');
 			$wipeRequest = $.ajax({

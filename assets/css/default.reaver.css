@@ -299,14 +299,28 @@
  * firefly theme dependencies
  * =============================================================
  */
+.modal-cont {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
 .modal-main {
   position: absolute;
-  top: 20px;
-  display: none;
+  top: 30px;
+  left: 50%;
   background: #ffffff;
   width: 500px;
-  margin: 20px auto 0px;
+  margin: 0px 0px 0px -250px;
   z-index: 200;
+}
+.modal-main header {
+  background: #dedede;
+}
+.modal-main footer {
+  background: #dedede;
 }
 .overlay {
   z-index: 100;
