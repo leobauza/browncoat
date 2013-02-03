@@ -38,7 +38,7 @@ $hasContent = file_get_contents($pathToSerenity);
 		<link rel="stylesheet" href="../assets/css/styles.css" type="text/css" media="screen" charset="utf-8">
 	  <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
 	<![endif]-->
-	<?php else:?>
+	<?php else: //not using less.js to compile?>
 		<?php 
 		if($hasContent == true && !isset($isWiper)):
 		?>
@@ -51,7 +51,7 @@ $hasContent = file_get_contents($pathToSerenity);
 		<?php elseif(isset($isWiper)): ?>
 			<!-- delete default after simon runs I guess I could set it to do that but I don't know right now-->
 			<link rel="stylesheet" href="../assets/css/default.reaver.css" type="text/css" media="screen" charset="utf-8">
-		<?php else: ?>
+		<?php else: //why is this and the isset wiper the same?? ?>
 			<!-- delete default after simon runs I guess I could set it to do that but I don't know right now-->
 			<link rel="stylesheet" href="../assets/css/default.reaver.css" type="text/css" media="screen" charset="utf-8">
 		<?php endif; ?>
@@ -69,7 +69,10 @@ $hasContent = file_get_contents($pathToSerenity);
 
 <body>
 	<header class="container-alt">
-		<?php if($hasContent == true && !isset($isWiper)): ?>
+		<?php if(isset($isRiver)): ?>
+			<h1>River</h1>
+			<h3>set up your kaylee configurations file</h3> 
+		<?php elseif($hasContent == true && !isset($isWiper)): ?>
 			<h1>Some Header</h1>
 			<h3>Still coming up with designs for this and stuff</h3> 
 		<?php else: ?>

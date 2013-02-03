@@ -19,35 +19,56 @@ $titleVarIntro = "/*
 ";
 
 //adds to the data string and prints it out in case the file is not writtable for copy and paste
-function addAndEcho($theString) {
-	if(isset($theData)):
-		$theData .= $theString."\n";
+function superPrint($theString) {
+	if(isset($data)):
+		$data .= $theString."\n";
 	else:
-		$theData = $theString."\n";
+		$data = $theString."\n";
 	endif;
 	echo "<pre>".$theString."</pre>";
-	return $theData;
+	return $data;
 }
 
 
 //process submitted river form
 if(isset($_POST["submit"])) {
 
+
 	//introduction comment block to kaylee
-	$theData = addAndEcho($kayleeIntro);
+	$theData = superPrint($kayleeIntro);
+
+	//introduction to
+	$theData .= superPrint($titleVarIntro);
+
+	foreach ($_POST['general'] as $var => $value) {
+		//open if statement
+		$theData .= superPrint("//check for existing $var at page level");
+		$theData .= superPrint("if(!isset(\$$var)):");
+		//set var
+		$theData .= superPrint("  \$$var = '$value';");
+		//close var
+		$theData .= superPrint("endif;");
+	}
+
+
+
 
 	//start lib array
-	$theData .= addAndEcho("\$libArr = array(");
+	$theData .= superPrint("\$libArr = array(");
 	//write out the library array
 	foreach ($_POST['library'] as $lib => $theme) {
-		//use the info to write out how simon will want these
-		$theme = '"'."/libs/$lib-lib/$lib-$theme.less".'"';
-		$lib = '"'.$lib.'"';
-		//add each row
-		$theData .= addAndEcho($lib . " => " . $theme .";");
+		if($theme != "none") {
+			//use the info to write out how simon will want these
+			$theme = '"'."/libs/$lib-lib/$lib-$theme.less".'"';
+			$lib = '"'.$lib.'"';
+			//add each row
+			$theData .= superPrint("  ".$lib . " => " . $theme .";");
+		} else {
+			$theData .= superPrint("&nbsp;//there is no $lib-lib loaded");
+		}
 	}
 	//close the lib array
-	$theData.= addAndEcho(");");
+	$theData.= superPrint(");");
 
 
 
@@ -63,6 +84,15 @@ if(isset($_POST["submit"])) {
 	fclose($fh);
 
 
+
+} else {
+	echo "no \$_POST";
+}
+
+//in a function so i can collapse it
+function oldStuff() {
+	//$file = preg_replace('', '' $file);
+
 	//writing to kayleetest.php
 	// $myFile = "./kayleetest.php";
 	// 
@@ -74,12 +104,7 @@ if(isset($_POST["submit"])) {
 	// $fh = fopen($myFile, 'w') or die("can't open file");
 	// fwrite($fh, $newData . " and some more");
 	// fclose($fh);
-
-} else {
-	echo "no \$_POST";
 }
-
-//$file = preg_replace('', '' $file);
 
 
 
