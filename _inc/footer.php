@@ -37,13 +37,14 @@
 	<script>
 		//hide all modals no matter their modal relation or if modal files are wri
 		
-		
-		//show modal wipers on wiper clicks
+		/* 
+		 * =============================================================
+		 * show modal wipers on wiper clicks
+		 * =============================================================
+		 */
 		$('[data-ajax="wiper"]').click(function(e){
-			
 			$("[data-modal='wiper']").show();
 			$(".modal-cont").show();
-			
 			var url = $(this).attr('href');
 			$wipeRequest = $.ajax({
 				url:url,
@@ -52,14 +53,13 @@
 					
 				}
 			});
-
 			$wipeRequest.done(function(msg){
 				//do something when it is done
 			});
 			e.preventDefault();
-
-
 		});
+
+
 
 
 	</script>
