@@ -28,8 +28,48 @@ $isRiver = true;
 					<input type="text" name="general[author]" value=""></input>
 				</div>
 
-				<?php
+				<div class="input-group">
+					<label>Use LESS.js</label>
+					<div class="radio-group">
+						<label>true</label>
+						<input type="radio" name="general[useless]" value="true"></input>
+					</div>
+					<div class="radio-group">
+						<label>false</label>
+						<input type="radio" name="general[useless]" value="false" checked="checked"></input>
+					</div>
+				</div>
 
+				<div class="input-group">
+					<label>Add Responsive Meta Tag</label>
+					<div class="radio-group">
+						<label>true</label>
+						<input type="radio" name="general[isResponsive]" value="true" checked="checked"></input>
+					</div>
+					<div class="radio-group">
+						<label>false</label>
+						<input type="radio" name="general[isResponsive]" value="false"></input>
+					</div>
+				</div>
+
+				<div class="input-group">
+					<label>serenity path</label>
+					<input type="text" name="path[pathToSerenity]" value="./assets/less/serenity.reaver.less"></input>
+				</div>
+
+				<div class="input-group">
+					<label>wash path</label>
+					<input type="text" name="path[pathToWash]" value="./assets/less/wash.reaver.less"></input>
+				</div>
+
+				<div class="input-group">
+					<label>css path</label>
+					<input type="text" name="path[pathToCSS]" value="./assets/css/styles.css"></input>
+				</div>
+
+
+				<?php
+				//loop through the libs director to extract all the less libraries
 				if ($dirRoot = opendir('./assets/libs/')) {
 					//echo "Directory handle: $handle\n";
 					//echo "Entries:\n";
@@ -48,6 +88,7 @@ $isRiver = true;
 										$lib_theme = explode("-", $splitLibSubDir[0]);
 										$lib = $lib_theme[0];
 										$theme = $lib_theme[1];
+										echo "<div class='radio-group'>";
 										echo "<label>$theme</label>";
 										if($lib == "text" || $lib == "colour" || $lib == "structure" || $lib == "helper" || $lib == "core"):
 											//the four libraries that belong to wash that make up the core of less and color in both spellings just couse
@@ -56,17 +97,15 @@ $isRiver = true;
 											//otherwise add to serenity arr
 											echo '<input type="radio" name="serenity-library['.$lib.']" value="'.$theme.'" />';
 										endif;
-										// echo "<div>$lib is the lib</div>\n";
-										// echo "<div>$theme is the theme</div>\n";
-
+										echo "</div>"; //close the radio group
 									}
 								}
 								closedir($dirSubRoot);
 							}
 							if($libDirSplit[0] == "text" || $libDirSplit[0] == "colour" || $libDirSplit[0] == "structure" || $libDirSplit[0] == "helper" || $libDirSplit[0] == "core"):
-								echo '<label>none</label><input type="radio" name="wash-library['.$libDirSplit[0].']" value="none" checked="checked"/>';
+								echo '<div class="radio-group"><label>none</label><input type="radio" name="wash-library['.$libDirSplit[0].']" value="none" checked="checked"/></div>';
 							else:
-								echo '<label>none</label><input type="radio" name="serenity-library['.$libDirSplit[0].']" value="none" checked="checked"/>';
+								echo '<div class="radio-group"><label>none</label><input type="radio" name="serenity-library['.$libDirSplit[0].']" value="none" checked="checked"/></div>';
 							endif;
 
 							echo "</div>";//close input group
@@ -75,8 +114,6 @@ $isRiver = true;
 
 					closedir($dirRoot);
 				}
-
-
 				?>
 
 				<button id="river-submit" type="submit" name="submit" value="submit">Submit</button>

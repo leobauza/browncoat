@@ -1,6 +1,6 @@
-<?php
+<?php 
 /*
- *
+ * RIVER WROTE TO KAYLEE!
  * Kaylee has all the variables that create the pages, decides what scripts to run, adds the desired libraries
  * also, she sets general meta tags, is a badass engineer, etc
  *
@@ -11,64 +11,66 @@
  * variables for title, what scripts to run, etc
  *
  */
-//check for page level setting
 
+//check for existing title at page level
 if(!isset($title)):
-	$title = "default title";
+  $title = 'My title';
 endif;
-//check for page level setting
-if(!isset($pageDescription)):
-	$pageDescription = "default description";
+//check for existing description at page level
+if(!isset($description)):
+  $description = 'description';
 endif;
-
+//check for existing author at page level
+if(!isset($author)):
+  $author = 'leonardo';
+endif;
 /*
  *
- * if you would like to run the less script and have a ie fallback with your own compiled css then uncomment $useless
+ * if you would like to run the less script and have a ie fallback with your own compiled css then set $useless to true
  *
  */
-//$useless = true;
 
-
+//check for existing useless at page level
+if(!isset($useless)):
+  $useless = false;
+endif;
 /*
  *
  * sets the meta tag for responsiveness and possibly other shit
  *
  */
-$isResponsive = true;
 
-
+//check for existing isResponsive at page level
+if(!isset($isResponsive)):
+  $isResponsive = true;
+endif;
 /*
  *
- * Library vars and path to serenity.less 
- * They get passed through to simon to set up configurations
+ * Path vars get passed through to simon to set up configurations
  * 
  */
 
-//sets path to core less files
+//sets path to serenity
 $pathToSerenity = './assets/less/serenity.reaver.less';
+//sets path to wash
 $pathToWash = './assets/less/wash.reaver.less';
-
-//set paths to core css file
+//sets path to css
 $pathToCSS = './assets/css/styles.css';
-//basic imports
-//what do I pass and how do I determine selected arrays??
-function createLibArrays() {
 
-	//the wash lib arr contains, so far as I've thought out, (text-lib, structure-lib, js specific libs, colours-lib)
-	
-	//the serenity lib arr contains, so far as I've thought out, (btn-lib, callout-lib, form-lib, list-lib)
-	$libArr = array(
-		//lib name => lib path
-		"core" => "../libs/core-lib/core-firefly.less",
-		"btn" => "../libs/btn-lib/btn-firefly.less",
-		"callouts" => "../libs/callouts-lib/callouts-firefly.less",
-		"modal" => "../libs/modal-lib/modal-firefly.less",
-	);
-	return $libArr;
-}
-//serenity arr pass the lib folder to somehow dynamically generate this array or what? i dunno
-$serenityArr = createLibArrays();
-//wash arr pass the lib folder to somehow dynamically generate this array or what? i dunno
-$washArr = createLibArrays();
+/*
+ *
+ * find a better way to set these up.
+ * I shouldn't have to write out each one but rather pass an array into the function and it spits out a workable array
+ * 
+ */
+
+$washArr = array(
+  "core" => "../libs/core-lib/core-firefly.less",
+);
+$serenityArr = array(
+  "btn" => "../libs/btn-lib/btn-firefly.less",
+  "callouts" => "../libs/callouts-lib/callouts-firefly.less",
+  "modal" => "../libs/modal-lib/modal-firefly.less",
+);
 
 ?>

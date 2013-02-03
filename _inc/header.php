@@ -1,7 +1,6 @@
 <?php 
 
 //change for testing
-//require("writingtest.php");
 require("kaylee.php");
 
 //determine whether serenity has content...this checks if simon has run...
@@ -22,12 +21,12 @@ $hasContent = file_get_contents($pathToSerenity);
 	<?php if(isset($isResponsive)):?>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<?php endif?>
-	<meta name="description" content="<?php if(isset($pageDescription)){ print $pageDescription; } else { print "page lacks description soldier";} ?>">
-	<meta name="author" content="the author">
+	<meta name="description" content="<?php if(isset($description)){ print $description; } else { print "page lacks description soldier";} ?>">
+	<meta name="author" content="<?php if(isset($author)){ print $author; } else { print "page lacks author";} ?>">
 
 	<!-- styles -->
 
-	<?php if(isset($useless)): ?>
+	<?php if(isset($useless) && $useless == true): ?>
 		<!-- use less js compiling and have ie fallback with css -->
 		<?php if($hasContent == true && !isset($isWiper)): ?>
 			<link rel="stylesheet/less" type="text/css" href="../assets/less/styles.less">

@@ -1,12 +1,10 @@
 <?php
-
 /*
  *
  * Kaylee has all the variables that create the pages, decides what scripts to run, adds the desired libraries
  * also, she sets general meta tags, is a badass engineer, etc
  *
  */
-
 
 /*
  *
@@ -25,11 +23,12 @@ endif;
 
 /*
  *
- * if you would like to run the less script and have a ie fallback with your own compiled css then uncomment $useless
+ * if you would like to run the less script and have a ie fallback with your own compiled css then set $useless to true
  *
  */
-//$useless = true;
-
+if(!isset($useless)):
+$useless = false;
+endif;
 
 /*
  *
@@ -63,7 +62,7 @@ function createLibArrays() {
 		//lib name => lib path
 		"core" => "../libs/core-lib/core-firefly.less",
 		"btn" => "../libs/btn-lib/btn-firefly.less",
-		"callout" => "../libs/callouts-lib/callouts-firefly.less",
+		"callouts" => "../libs/callouts-lib/callouts-firefly.less",
 		"modal" => "../libs/modal-lib/modal-firefly.less",
 	);
 	return $libArr;
@@ -74,4 +73,3 @@ $serenityArr = createLibArrays();
 $washArr = createLibArrays();
 
 ?>
-

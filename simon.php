@@ -38,7 +38,17 @@ $title = "simon diagnostic"; //this is backed up by a generic title set in kayle
 				$i++;
 			}
 			//create the @imports for wash
-			$wash_imports = "//IT WORKS";
+			$i = 0;
+			foreach($washArr as $key => $val) {
+				if($i == 0) {
+					$wash_imports = "//".$key."-lib include";
+					$wash_imports .= "\n".'@import "'.$val. '";';
+				} else {
+					$wash_imports .= "\n//".$key."-lib include";
+					$wash_imports .= "\n".'@import "'.$val. '";';
+				}
+				$i++;
+			}
 
 			function writeLessFiles($filename, $imports, $name){
 				$hasContent = file_get_contents($filename);
