@@ -114,7 +114,7 @@ $isRiver = true;
 				}
 				?>
 
-				<button id="river-submit" type="submit" name="submit" value="submit">Submit</button>
+				<button id="river-submit" class="btn-gray large" type="submit" name="submit" value="submit">Submit</button>
 			</form>
 		</article>
 		<aside class="span4">

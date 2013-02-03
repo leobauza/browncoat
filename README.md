@@ -128,6 +128,8 @@ Libraries are an easy way to determine a starting point for a project & cut down
 	- the structure library (the grid)
 	- and the helper library (css3, ie hacks, other helpers)
 
+> note: You can bypass having these four libraries by just having a single core-library and setting these four to "none" 
+
 ### serenity libraries
 
 - Serenity libraries can be as many as you want
