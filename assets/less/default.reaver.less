@@ -8,121 +8,16 @@
 
 //core-lib include
 @import "../libs/core-lib/core-firefly.less";
+//base-lib include
+@import "../libs/base-lib/base-test.less";
 //btn-lib include
 @import "../libs/btn-lib/btn-firefly.less";
 //callout-lib include
-@import "../libs/callouts-lib/callouts-firefly.less";
+@import "../libs/callout-lib/callouts-firefly.less";
 //modal-lib include
 @import "../libs/modal-lib/modal-firefly.less";
-
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-hgroup,
-nav,
-section {
-	display: block;
-}
-audio, canvas, video {
-	display: inline-block;
-	*display: inline;
-	*zoom: 1;
-}
-audio:not([controls]) {
-	display: none;
-}
-img {
-	max-width: 100%;
-	height: auto;
-	border: 0;
-	-ms-interpolation-mode: bicubic;
-}
-html {
-	font-size: 100%;
-	-webkit-text-size-adjust: 100%;
-	-ms-text-size-adjust: 100%;
-}
-:focus {
-	outline:none;
-	border:none;
-}
-a:focus {
-	outline: none;
-	border:none;
-}
-a:hover, a:active {
-	outline: 0;
-}
-
-body {
-	background: @bg-colour;
-	font-size:@base-size;
-	.marpad(0px, 0px);
-	.helvetica;
-}
-hr {
-	height:1px;
-	.marpad(0 0 20px 0, 0);
-	border:0;
-	border-bottom:1px solid @light-gray;
-	border-top:1px solid @white;
-	clear:both;
-	overflow:0;
-}
-a {
-	color: @link-colour;
-	text-decoration: none;
-}
-a:hover {
-	color: @link-colour-hover;
-	text-decoration: underline;
-}
-p {
-	font-size:1.4em;
-	line-height:1.6em;
-	color:@mid-gray;
-	margin: 0 0 .5em;
-	padding:0;
-}
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-	margin: 0 0 .25em;
-	font-weight: 700;
-	text-rendering: optimizelegibility;
-	line-height:1.2em;
-	a {
-		font-weight:normal;
-		&:hover {
-			
-		}
-	}
-}
-h1 {
-	font-size: 3.8em;
-}
-h2 {
-	font-size: 2.1em;
-}
-h3 {
-	font-size: 1.8em;
-}
-h4 {
-	font-size: 1.6em;
-}
-h5 {
-	font-size: 1.4em;
-}
-h6 {
-	font-size: 1.3em;
-}
+//form-lib include
+@import "../libs/form-lib/form-firefly.less";
 
 /****** LISTS MAKE INTO LIST LIB******/
 ul, ol {
@@ -145,78 +40,6 @@ li {
 	line-height: 1;
 }
 
-/****** FORMS MAKE INTO FORM LIB******/
-form {
-	.form-group {
-		
-	}
-	.input-group {
-		
-	}
-	label, input, textarea, button, select {
-		font-family: @sans-serif;
-		font-size: 1.3em;
-		font-weight: normal;
-		line-height: 1.8em;
-	}
-	label {
-		display:block;
-		margin:0 0 5px 0;
-	}
-
-	select,
-	textarea,
-	input[type="text"],
-	input[type="password"] {
-		.inline-block(18px);
-	  height: 18px;
-	  padding: 4px;
-	  margin-bottom: 9px;
-	  color: @dark-gray;
-	}
-
-	textarea,
-	input[type="text"],
-	input[type="password"] {
-		background-color: @white;
-		border: 1px solid @light-gray;
-		#CSS3 > .border-radius(3px);
-		#CSS3 > .inset-box-shadow( inset 0 1px 1px rgba(0, 0, 0, 0.075) );
-		&:focus {
-			border:1px solid @focus-border;
-			outline: 0;
-			outline: thin dotted \9; /* IE6-9 */
-			#CSS3 > .double-box-shadow();
-		}
-	}
-
-	select {
-		
-	}	
-	input[type="text"], input[type="password"]{
-		
-	}
-
-	textarea {
-		height:auto;
-		overflow:auto; /*remove scrollbar in IE*/
-	}
-	button,
-	input[type="submit"] {
-		cursor:pointer;
-		&:hover{
-
-		}
-		&:focus {
-			border:1px solid @focus-border;
-			outline: 0;
-			outline: thin dotted \9; /* IE6-9 */
-			#CSS3 > .double-box-shadow();
-		}
-	}
-}
-
-
 /******clearfix ******/
 
 header,
@@ -224,7 +47,8 @@ footer,
 .row-fluid,
 .group,
 .form-group,
-.input-group {
+.input-group,
+[class*="-group"] {
 	zoom:1;
 	&:before {
 		display: table;

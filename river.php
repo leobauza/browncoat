@@ -8,62 +8,60 @@ $isRiver = true;
 <?php include('_inc/header.php'); ?> 
 
 <section class="container">
-	<h1>River</h1>
-	<h2>river writes your kaylee file for you</h2>
 	<section class="row-fluid">
 		<article class="span8">
 			<form action="/process-river.php" method="post">
 				<div class="input-group">
-					<label>Title</label>
+					<h3>Title</h3>
 					<input type="text" name="general[title]" value=""></input>
 				</div>
 
 				<div class="input-group">
-					<label>Description</label>
+					<h3>Description</h3>
 					<input type="text" name="general[description]" value=""></input>
 				</div>
 
 				<div class="input-group">
-					<label>Author</label>
+					<h3>Author</h3>
 					<input type="text" name="general[author]" value=""></input>
 				</div>
 
 				<div class="input-group">
-					<label>Use LESS.js</label>
+					<h3>Use LESS.js</h3>
 					<div class="radio-group">
-						<label>true</label>
 						<input type="radio" name="general[useless]" value="true"></input>
-					</div>
-					<div class="radio-group">
-						<label>false</label>
-						<input type="radio" name="general[useless]" value="false" checked="checked"></input>
-					</div>
-				</div>
-
-				<div class="input-group">
-					<label>Add Responsive Meta Tag</label>
-					<div class="radio-group">
 						<label>true</label>
-						<input type="radio" name="general[isResponsive]" value="true" checked="checked"></input>
 					</div>
 					<div class="radio-group">
+						<input type="radio" name="general[useless]" value="false" checked="checked"></input>
 						<label>false</label>
-						<input type="radio" name="general[isResponsive]" value="false"></input>
 					</div>
 				</div>
 
 				<div class="input-group">
-					<label>serenity path</label>
+					<h3>Add Responsive Meta Tag</h3>
+					<div class="radio-group">
+						<input type="radio" name="general[isResponsive]" value="true" checked="checked"></input>
+						<label>true</label>
+					</div>
+					<div class="radio-group">
+						<input type="radio" name="general[isResponsive]" value="false"></input>
+						<label>false</label>
+					</div>
+				</div>
+
+				<div class="input-group">
+					<h3>serenity path</h3>
 					<input type="text" name="path[pathToSerenity]" value="./assets/less/serenity.reaver.less"></input>
 				</div>
 
 				<div class="input-group">
-					<label>wash path</label>
+					<h3>wash path</h3>
 					<input type="text" name="path[pathToWash]" value="./assets/less/wash.reaver.less"></input>
 				</div>
 
 				<div class="input-group">
-					<label>css path</label>
+					<h3>css path</h3>
 					<input type="text" name="path[pathToCSS]" value="./assets/css/styles.css"></input>
 				</div>
 
@@ -89,7 +87,6 @@ $isRiver = true;
 										$lib = $lib_theme[0];
 										$theme = $lib_theme[1];
 										echo "<div class='radio-group'>";
-										echo "<label>$theme</label>";
 										if($lib == "text" || $lib == "colour" || $lib == "structure" || $lib == "helper" || $lib == "core"):
 											//the four libraries that belong to wash that make up the core of less and color in both spellings just couse
 											echo '<input type="radio" name="wash-library['.$lib.']" value="'.$theme.'" />';
@@ -97,15 +94,16 @@ $isRiver = true;
 											//otherwise add to serenity arr
 											echo '<input type="radio" name="serenity-library['.$lib.']" value="'.$theme.'" />';
 										endif;
+										echo "<label>$theme</label>";
 										echo "</div>"; //close the radio group
 									}
 								}
 								closedir($dirSubRoot);
 							}
 							if($libDirSplit[0] == "text" || $libDirSplit[0] == "colour" || $libDirSplit[0] == "structure" || $libDirSplit[0] == "helper" || $libDirSplit[0] == "core"):
-								echo '<div class="radio-group"><label>none</label><input type="radio" name="wash-library['.$libDirSplit[0].']" value="none" checked="checked"/></div>';
+								echo '<div class="radio-group"><input type="radio" name="wash-library['.$libDirSplit[0].']" value="none" checked="checked"/><label>none</label></div>';
 							else:
-								echo '<div class="radio-group"><label>none</label><input type="radio" name="serenity-library['.$libDirSplit[0].']" value="none" checked="checked"/></div>';
+								echo '<div class="radio-group"><input type="radio" name="serenity-library['.$libDirSplit[0].']" value="none" checked="checked"/><label>none</label></div>';
 							endif;
 
 							echo "</div>";//close input group
