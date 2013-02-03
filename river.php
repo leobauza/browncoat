@@ -15,11 +15,11 @@ $isWiper = true;
 			<form action="/process-river.php" method="post">
 				<div class="input-group">
 					<label>Modal Library</label>
-					<input type="radio" name="library[core]" value="firefly"/>
+					<input type="radio" name="library[modal]" value="firefly"/>
 				</div>
 				<div class="input-group">
 					<label>Btn Library</label>
-					<input type="radio" name="library[core]" value="firefly"/>
+					<input type="radio" name="library[btn]" value="firefly"/>
 				</div>
 				<div class="input-group">
 					<label>Core Library</label>

@@ -1,4 +1,5 @@
 	<footer class="container">
+		<a href="/river.php" class="btn-gray">go to river</a>
 		<a href="/simon.php" class="btn-gray">run simon</a>
 		<a href="/" class="btn-gray">go home</a>
 		<a href="/wiper.php" data-ajax="wiper" class="btn-gray">wipe serenity</a>
@@ -23,7 +24,10 @@
 				<p>Write something that returns whether or not serenity, washer, and styles.css are cleared...for now just refresh to see the result...Obviously, in simon you can't just refresh because it rewrites</p>
 			</article>
 			<footer>
-				<p>modals can have footers</p>
+				<a href="/river.php" class="btn-main">go to river</a>
+				<a href="/simon.php" class="btn-main">run simon</a>
+				<a href="/" class="btn-main">go home</a>
+				<a href="/wiper.php" data-ajax="wiper" class="btn-main">wipe serenity</a>
 			</footer>
 		</aside>
 	</section>
