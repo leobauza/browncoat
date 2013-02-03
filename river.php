@@ -28,56 +28,61 @@ $isRiver = true;
 					<input type="text" name="general[author]" value=""></input>
 				</div>
 
-				<div class="input-group">
-					<label>Core Library</label>
-					<input type="radio" name="wash-library[core]" value="firefly" checked="checked"/>
-					<input type="radio" name="wash-library[core]" value="none"/>
-				</div>
+				<?php
 
-				<div class="input-group">
-					<label>Modal Library</label>
-					<input type="radio" name="serenity-library[modal]" value="firefly"	checked="checked"/>
-					<input type="radio" name="serenity-library[modal]" value="none"/>
+				if ($dirRoot = opendir('./assets/libs/')) {
+					//echo "Directory handle: $handle\n";
+					//echo "Entries:\n";
 
-				</div>
-				<div class="input-group">
-					<label>Btn Library</label>
-					<input type="radio" name="serenity-library[btn]" value="firefly"	checked="checked"/>
-					<input type="radio" name="serenity-library[btn]" value="none"/>
-				</div>
+					/* This is the correct way to loop over the directory. */
+					while (false !== ($libDir = readdir($dirRoot))) {
+						if ($libDir != "." && $libDir != "..") {
+							//echo "<h2>$entry contains:</h2>\n";
+							$libDirSplit = explode("-",$libDir); 
+							echo "<div class='input-group'>";//open input group
+							echo "<h3>$libDirSplit[0] library</h3>";
+								if ($dirSubRoot = opendir('./assets/libs/'.$libDir)) {
+								while (false !== ($libSubDir = readdir($dirSubRoot))) {
+									if($libSubDir != "." && $libSubDir != ".."){
+										$splitLibSubDir = explode(".", $libSubDir);
+										$lib_theme = explode("-", $splitLibSubDir[0]);
+										$lib = $lib_theme[0];
+										$theme = $lib_theme[1];
+										echo "<label>$theme</label>";
+										if($lib == "text" || $lib == "colour" || $lib == "structure" || $lib == "helper" || $lib == "core"):
+											//the four libraries that belong to wash that make up the core of less and color in both spellings just couse
+											echo '<input type="radio" name="wash-library['.$lib.']" value="'.$theme.'" />';
+										else:
+											//otherwise add to serenity arr
+											echo '<input type="radio" name="serenity-library['.$lib.']" value="'.$theme.'" />';
+										endif;
+										// echo "<div>$lib is the lib</div>\n";
+										// echo "<div>$theme is the theme</div>\n";
+
+									}
+								}
+								closedir($dirSubRoot);
+							}
+							if($libDirSplit[0] == "text" || $libDirSplit[0] == "colour" || $libDirSplit[0] == "structure" || $libDirSplit[0] == "helper" || $libDirSplit[0] == "core"):
+								echo '<label>none</label><input type="radio" name="wash-library['.$libDirSplit[0].']" value="none" checked="checked"/>';
+							else:
+								echo '<label>none</label><input type="radio" name="serenity-library['.$libDirSplit[0].']" value="none" checked="checked"/>';
+							endif;
+
+							echo "</div>";//close input group
+						}
+					}
+
+					closedir($dirRoot);
+				}
+
+
+				?>
+
 				<button id="river-submit" type="submit" name="submit" value="submit">Submit</button>
 			</form>
 		</article>
 		<aside class="span4">
-			<?php
-			
-			if ($handle = opendir('./assets/libs/')) {
-				//echo "Directory handle: $handle\n";
-				//echo "Entries:\n";
-
-				/* This is the correct way to loop over the directory. */
-				while (false !== ($entry = readdir($handle))) {
-					if ($entry != "." && $entry != "..") {
-						echo "<h2>$entry contains:</h2>\n";
-						if ($handle2 = opendir('./assets/libs/'.$entry)) {
-							//echo "Directory handle: $handle\n";
-							//echo "Entries:\n";
-							/* This is the correct way to loop over the directory. */
-							while (false !== ($entry2 = readdir($handle2))) {
-								if($entry2 != "." && $entry2 != ".."){
-									echo "<div>$entry2</div>\n";
-								}
-							}
-							closedir($handle2);
-						}
-					}
-				}
-
-				closedir($handle);
-			}
-			
-			
-			?>
 		</aside>
 	</section>
 </section>

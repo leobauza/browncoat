@@ -73,8 +73,8 @@ if(isset($_POST["submit"])) {
 			//use the info to write out how simon will want these
 			$theme = '"'."../libs/$lib-lib/$lib-$theme.less".'"';
 			$lib = '"'.$lib.'"';
-			//add each row
-			$theData .= superPrint("  ".$lib . " => " . $theme .";");
+			//add each row libraries
+			$theData .= superPrint("  ".$lib . " => " . $theme .",");
 		} else {
 			$theData .= superPrint("&nbsp;//there is no $lib-lib loaded");
 		}
@@ -92,10 +92,10 @@ if(isset($_POST["submit"])) {
 			//use the info to write out how simon will want these
 			$theme = '"'."../libs/$lib-lib/$lib-$theme.less".'"';
 			$lib = '"'.$lib.'"';
-			//add each row
-			$theData .= superPrint("  ".$lib . " => " . $theme .";");
+			//add each row of libraries
+			$theData .= superPrint("  ".$lib . " => " . $theme .",");
 		} else {
-			$theData .= superPrint("&nbsp;//there is no $lib-lib loaded", true);
+			$theData .= superPrint("  //there is no $lib-lib loaded", true);
 		}
 	}
 	//close the lib array

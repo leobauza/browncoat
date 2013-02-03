@@ -1,5 +1,7 @@
 <?php 
 
+//change for testing
+//require("writingtest.php");
 require("kaylee.php");
 
 //determine whether serenity has content...this checks if simon has run...

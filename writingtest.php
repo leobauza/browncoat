@@ -14,15 +14,15 @@
 
 //check for existing title at page level
 if(!isset($title)):
-  $title = '';
+  $title = 'my site';
 endif;
 //check for existing description at page level
 if(!isset($description)):
-  $description = '';
+  $description = 'a site';
 endif;
 //check for existing author at page level
 if(!isset($author)):
-  $author = '';
+  $author = 'me';
 endif;
 /*
  *
@@ -32,11 +32,12 @@ endif;
  */
 
 $washArr = array(
-  "core" => "../libs/core-lib/core-firefly.less";
+  "core" => "../libs/core-lib/core-firefly.less",
 );
 $serenityArr = array(
-  "modal" => "../libs/modal-lib/modal-firefly.less";
-  "btn" => "../libs/btn-lib/btn-firefly.less";
+  "btn" => "../libs/btn-lib/btn-test.less",
+  "callouts" => "../libs/callouts-lib/callouts-firefly.less",
+  //there is no modal-lib loaded
 );
 
 ?>
