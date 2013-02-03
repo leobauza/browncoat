@@ -71,7 +71,7 @@ $hasContent = file_get_contents($pathToSerenity);
 <body>
 	<header class="container-alt">
 		<?php if(isset($isRiver)): ?>
-			<h1>River</h1>
+			<h1>river</h1>
 			<h3>set up your kaylee configurations file</h3> 
 		<?php elseif($hasContent == true && !isset($isWiper)): ?>
 			<h1>Some Header</h1>
@@ -79,7 +79,7 @@ $hasContent = file_get_contents($pathToSerenity);
 		<?php else: ?>
 			
 			<h1>Using Default</h1>
-			<a href="/simon.php" class="btn-main small">Run Simon</a>
+			<a href="/simon.php" class="btn-main small">Run simon</a>
 			 
 		<?php endif; ?>
 		

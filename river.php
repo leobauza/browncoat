@@ -10,6 +10,7 @@ $isRiver = true;
 <section class="container">
 	<section class="row-fluid">
 		<article class="span8">
+			<a href="#" data-theme="firefly" class="btn-main">check all firefly</a>
 			<form action="/process-river.php" method="post">
 				<div class="input-group">
 					<h3>Title</h3>

@@ -14,15 +14,15 @@
 
 //check for existing title at page level
 if(!isset($title)):
-  $title = 'title';
+  $title = '';
 endif;
 //check for existing description at page level
 if(!isset($description)):
-  $description = 'a description';
+  $description = '';
 endif;
 //check for existing author at page level
 if(!isset($author)):
-  $author = 'dsadassa';
+  $author = '';
 endif;
 /*
  *
@@ -66,12 +66,12 @@ $pathToCSS = './assets/css/styles.css';
 
 $washArr = array(
   "core" => "../libs/core-lib/core-firefly.less",
+  "structure" => "../libs/structure-lib/structure-firefly.less",
 );
 $serenityArr = array(
   "base" => "../libs/base-lib/base-firefly.less",
   "btn" => "../libs/btn-lib/btn-firefly.less",
-  "callouts" => "../libs/callouts-lib/callouts-firefly.less",
-  //there is no callout-lib loaded
+  "callout" => "../libs/callout-lib/callout-firefly.less",
   "form" => "../libs/form-lib/form-firefly.less",
   "modal" => "../libs/modal-lib/modal-firefly.less",
 );

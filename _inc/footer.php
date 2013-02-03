@@ -63,6 +63,11 @@
 			e.preventDefault();
 		});
 
+		$('[data-theme]').click(function(){
+			var $theme = $(this).attr('data-theme');
+			console.log($theme);
+			$("[value=" + $theme + "]").attr('checked','checked');
+		});
 
 
 
