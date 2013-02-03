@@ -64,13 +64,13 @@ $libArr = array(
 	"yourLib" => "../libs/yourLib-lib/yourLib-yourLibThem.less",
 );
 ```
-> Note: see library section for library naming conventions.
+> note: see library section for library naming conventions.
 
-> Note: if you look inside kaylee you will see that this is wrapped in a function "createLibArrays()" the plan here is to write something that can dynamically create the array with some information river writes into the creation of all the library arrays. Right now I can't even imagine what that looks like or how to accomplish this.
+> note: if you look inside kaylee you will see that this is wrapped in a function "createLibArrays()" the plan here is to write something that can dynamically create the array with some information river writes into the creation of all the library arrays. Right now I can't even imagine what that looks like or how to accomplish this.
 
 ### more stuff?
 
-> Note: kaylee can be transferred from project to project. river will read a kaylee file and prove a gui with the libraries checked and all the other available libraries available.
+> note: kaylee can be transferred from project to project. river will read a kaylee file and prove a gui with the libraries checked and all the other available libraries available.
 
 
 ## simon (simon.php)
@@ -113,13 +113,28 @@ reavers destroy all files you no longer need after setting up your project to st
 
 ## explain standardarized markup
 
-## libraries
+## libraries (details)
 Libraries are an easy way to determine a starting point for a project & cut down the filler. The library arrays are in kaylee and are looped through by simon to write out your library imports to serenity, wash, or write out the scripts in your footer file. See kaylee section for an example of what it looks like.
 
-> Note: Until I write the front end piece to write out and rewrite kaylee, kaylee has to be updated manually (this piece is now called river and is still not available)
+> note: Until I write the front end piece to write out and rewrite kaylee, kaylee has to be updated manually (this piece is now called river and is still not available)
 
+> note: libraries use standarized naming conventions. It is encouraged to maintain these when creating custom libraries: libraryType-lib/libraryType-libraryTheme.less/.libraryType-(description) (The actual classes in the less file are just a suggestion, the directory name and file name are mandatory) ie. btn-lib/btn-firefly.less/.btn-main 
 
-> Note: libraries use standarized naming conventions. It is encouraged to maintain these when creating custom libraries: libraryType-lib/libraryType-libraryTheme.less/.libraryType-(description) (The actual classes in the less file are just a suggestion, the directory name and file name are mandatory) ie. btn-lib/btn-firefly.less/.btn-main 
+### wash libraries
+
+- the wash libraries always consists of 4 specific and mandatory libraries:
+	- the text library
+	- the colour library
+	- the structure library (the grid)
+	- and the helper library (css3, ie hacks, other helpers)
+
+### serenity libraries
+
+- Serenity libraries can be as many as you want
+- new ones can be created and added to the project
+- there is no limit to how many serenity libraries there can be
+
+> note: only libraries built with the correct naming conventions will be picked up by river. 
 
 ### How to integrate these?
 

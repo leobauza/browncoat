@@ -17,15 +17,27 @@ $titleVarIntro = "/*
  *
  */
 ";
+$commentAboutArrays = "/*
+ *
+ * find a better way to set these up.
+ * I shouldn't have to write out each one but rather pass an array into the function and it spits out a workable array
+ * 
+ */
+";
 
 //adds to the data string and prints it out in case the file is not writtable for copy and paste
-function superPrint($theString) {
+function superPrint($theString,$comment = false) {
+
 	if(isset($data)):
 		$data .= $theString."\n";
 	else:
 		$data = $theString."\n";
 	endif;
-	echo "<pre>".$theString."</pre>";
+		if($comment == true):
+			echo "<pre class=\"comment\">".$theString."</pre>";
+		else:
+			echo "<pre>".$theString."</pre>";
+		endif;
 	return $data;
 }
 
@@ -35,14 +47,14 @@ if(isset($_POST["submit"])) {
 
 
 	//introduction comment block to kaylee
-	$theData = superPrint($kayleeIntro);
+	$theData = superPrint($kayleeIntro, true);
 
-	//introduction to
-	$theData .= superPrint($titleVarIntro);
+	//introduction to general
+	$theData .= superPrint($titleVarIntro, true);
 
 	foreach ($_POST['general'] as $var => $value) {
 		//open if statement
-		$theData .= superPrint("//check for existing $var at page level");
+		$theData .= superPrint("//check for existing $var at page level", true);
 		$theData .= superPrint("if(!isset(\$$var)):");
 		//set var
 		$theData .= superPrint("  \$$var = '$value';");
@@ -50,16 +62,16 @@ if(isset($_POST["submit"])) {
 		$theData .= superPrint("endif;");
 	}
 
+	$theData .= superPrint($commentAboutArrays, true);
 
 
-
-	//start lib array
-	$theData .= superPrint("\$libArr = array(");
+	//start wash lib array
+	$theData .= superPrint("\$washArr = array(");
 	//write out the library array
-	foreach ($_POST['library'] as $lib => $theme) {
+	foreach ($_POST['wash-library'] as $lib => $theme) {
 		if($theme != "none") {
 			//use the info to write out how simon will want these
-			$theme = '"'."/libs/$lib-lib/$lib-$theme.less".'"';
+			$theme = '"'."../libs/$lib-lib/$lib-$theme.less".'"';
 			$lib = '"'.$lib.'"';
 			//add each row
 			$theData .= superPrint("  ".$lib . " => " . $theme .";");
@@ -72,7 +84,30 @@ if(isset($_POST["submit"])) {
 
 
 
-	//writing to writingtest.php
+	//start serenity lib array
+	$theData .= superPrint("\$serenityArr = array(");
+	//write out the library array
+	foreach ($_POST['serenity-library'] as $lib => $theme) {
+		if($theme != "none") {
+			//use the info to write out how simon will want these
+			$theme = '"'."../libs/$lib-lib/$lib-$theme.less".'"';
+			$lib = '"'.$lib.'"';
+			//add each row
+			$theData .= superPrint("  ".$lib . " => " . $theme .";");
+		} else {
+			$theData .= superPrint("&nbsp;//there is no $lib-lib loaded", true);
+		}
+	}
+	//close the lib array
+	$theData.= superPrint(");");
+
+
+
+/*
+ *
+ * writing to writingtest.php
+ * 
+ */
 	$myFile = "./writingtest.php";
 	
 	// $fh = fopen($myFile, 'r') or die("can't open file");
@@ -82,8 +117,6 @@ if(isset($_POST["submit"])) {
 	$fh = fopen($myFile, 'w') or die("can't open file");
 	fwrite($fh, "<?php \n".$theData."\n?>");
 	fclose($fh);
-
-
 
 } else {
 	echo "no \$_POST";
@@ -109,3 +142,9 @@ function oldStuff() {
 
 
 ?>
+
+<style>
+	.comment {
+		background:#ffdd00;
+	}
+</style>

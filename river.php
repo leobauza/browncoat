@@ -30,26 +30,54 @@ $isRiver = true;
 
 				<div class="input-group">
 					<label>Core Library</label>
-					<input type="radio" name="library[core]" value="firefly" checked="checked"/>
-					<input type="radio" name="library[core]" value="none"/>
+					<input type="radio" name="wash-library[core]" value="firefly" checked="checked"/>
+					<input type="radio" name="wash-library[core]" value="none"/>
 				</div>
 
 				<div class="input-group">
 					<label>Modal Library</label>
-					<input type="radio" name="library[modal]" value="firefly"  checked="checked"/>
-					<input type="radio" name="library[modal]" value="none"/>
+					<input type="radio" name="serenity-library[modal]" value="firefly"	checked="checked"/>
+					<input type="radio" name="serenity-library[modal]" value="none"/>
 
 				</div>
 				<div class="input-group">
 					<label>Btn Library</label>
-					<input type="radio" name="library[btn]" value="firefly"  checked="checked"/>
-					<input type="radio" name="library[btn]" value="none"/>
+					<input type="radio" name="serenity-library[btn]" value="firefly"	checked="checked"/>
+					<input type="radio" name="serenity-library[btn]" value="none"/>
 				</div>
 				<button id="river-submit" type="submit" name="submit" value="submit">Submit</button>
 			</form>
 		</article>
 		<aside class="span4">
+			<?php
 			
+			if ($handle = opendir('./assets/libs/')) {
+				//echo "Directory handle: $handle\n";
+				//echo "Entries:\n";
+
+				/* This is the correct way to loop over the directory. */
+				while (false !== ($entry = readdir($handle))) {
+					if ($entry != "." && $entry != "..") {
+						echo "<h2>$entry contains:</h2>\n";
+						if ($handle2 = opendir('./assets/libs/'.$entry)) {
+							//echo "Directory handle: $handle\n";
+							//echo "Entries:\n";
+							/* This is the correct way to loop over the directory. */
+							while (false !== ($entry2 = readdir($handle2))) {
+								if($entry2 != "." && $entry2 != ".."){
+									echo "<div>$entry2</div>\n";
+								}
+							}
+							closedir($handle2);
+						}
+					}
+				}
+
+				closedir($handle);
+			}
+			
+			
+			?>
 		</aside>
 	</section>
 </section>
