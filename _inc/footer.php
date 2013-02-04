@@ -137,7 +137,11 @@
 			$('.radio-group').each(function(){
 				var $label = $(this).find('label').html();
 				var $checked = $(this).find('input').attr('checked');
-				$(this).append("<a href=\"#\" data-theme=\""+ $label +"\" data-input=\"radio\" class=\"btn-main\">" + $label + "</a>");
+				if($label == "true" || $label == "false") {
+					$(this).append("<a href=\"#\" data-input=\"radio\" class=\"btn-main\">" + $label + "</a>");
+				} else {
+					$(this).append("<a href=\"#\" data-theme=\""+ $label +"\" data-input=\"radio\" class=\"btn-main\">" + $label + "</a>");
+				}
 				if($checked == "checked") {
 					$(this).find("a").addClass("active");
 				}
