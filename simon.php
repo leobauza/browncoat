@@ -101,6 +101,18 @@ $title = "simon diagnostic"; //this is backed up by a generic title set in kayle
 			//save less
 			saveStylesLess('./assets/less/styles.less');
 			
+			function kayleeNotDefault($path){
+				//uhh this is dumb but reaplace every space with a space...
+				$handle = fopen($path,"r");
+				$content = fread($handle,filesize($path));
+				$content = str_replace("\$kaylee = false;", "\$kaylee = true;", $content);
+				//oppen again to write
+				$handle = fopen($path,"w");
+				fwrite($handle,$content);
+				fclose($handle);
+			}
+			kayleeNotDefault("./kaylee.php");
+
 			
 			?>
 		</article>

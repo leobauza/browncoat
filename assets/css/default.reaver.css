@@ -5,13 +5,160 @@
  *
  *
  */
-.helvetica {
-  font-family: "Helvetica Neue", Helvetica, sans-serif;
-}
+/* 
+ * =============================================================
+ * COLOUR LIB (part of wash)
+ * =============================================================
+ */
+/* 
+ * =============================================================
+ * CORE LIB (master library for wash...in case you don't want to split it in four)
+ * =============================================================
+ */
+/* 
+ * =============================================================
+ * HELPER LIB (part of wash)
+ * =============================================================
+ */
 .overflow {
   width: auto;
   float: none;
   overflow: hidden;
+}
+/****** CLEARFIX ******/
+header,
+footer,
+.row-fluid,
+.group,
+.form-group,
+.input-group,
+[class*="-group"] {
+  zoom: 1;
+}
+header:before,
+footer:before,
+.row-fluid:before,
+.group:before,
+.form-group:before,
+.input-group:before,
+[class*="-group"]:before {
+  display: table;
+  content: "";
+}
+header:after,
+footer:after,
+.row-fluid:after,
+.group:after,
+.form-group:after,
+.input-group:after,
+[class*="-group"]:after {
+  display: table;
+  content: "";
+  clear: both;
+}
+/****** QUICK MODS ******/
+.bump {
+  font-size: 1.4em;
+}
+.unbump {
+  font-size: .75em;
+}
+.al-l {
+  text-align: left;
+}
+.al-c {
+  text-align: center;
+}
+.al-r {
+  text-align: right;
+}
+.rel {
+  position: relative;
+}
+.abs {
+  position: absolute;
+}
+.fix {
+  position: fixed;
+}
+/* 
+ * =============================================================
+ * STRUCTURE LIB (part of wash)
+ * =============================================================
+ */
+/****** Container ******/
+.container {
+  padding: 20px 2%;
+}
+.container-alt {
+  padding: 20px 2%;
+  background: #f5f5f5;
+}
+.row-fluid {
+  width: 100%;
+  margin: 0 0 20px 0;
+}
+/*margin right instead of margin left to do overflow hidden*/
+.row-fluid > [class*="span"] {
+  float: left;
+  margin-right: 2%;
+}
+.row-fluid > [class*="span"].l {
+  margin-right: 0;
+  width: auto;
+  float: none;
+  overflow: hidden;
+}
+/*Use this to set exact percentages and have the last box be ok*/
+.row-fluid > [class*="span"]:last-child {
+  margin-right: 0;
+  width: auto;
+  float: none;
+  overflow: hidden;
+}
+.row-fluid .span1 {
+  width: 6.515151511818182%;
+}
+.row-fluid .span2 {
+  width: 14.999999993333335%;
+}
+.row-fluid .span3 {
+  width: 23.49999999%;
+}
+.row-fluid .span4 {
+  width: 31.99999998666667%;
+}
+.row-fluid .span5 {
+  width: 39.66666665%;
+}
+.row-fluid .span6 {
+  width: 48.99999998%;
+}
+.row-fluid .span7 {
+  width: 56.33333331%;
+}
+.row-fluid .span8 {
+  width: 64.66666664%;
+}
+.row-fluid .span9 {
+  width: 72.99999997%;
+}
+.row-fluid .span10 {
+  width: 81.3333333%;
+}
+.row-fluid .span11 {
+  width: 89.66666663000001%;
+}
+.row-fluid .span12 {
+  width: 97.99999996%;
+}
+/* 
+ * =============================================================
+ * TEXT LIB (part of wash)
+ * =============================================================
+ */
+.helvetica {
+  font-family: "Helvetica Neue", Helvetica, sans-serif;
 }
 article,
 aside,
@@ -486,6 +633,7 @@ form input[type="password"] {
   padding: 4px;
   margin-bottom: 9px;
   color: #2d2d2d;
+  width: 400px;
 }
 form textarea,
 form input[type="text"],

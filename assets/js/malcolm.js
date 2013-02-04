@@ -6,11 +6,16 @@
 
 $(function(){
 
+	// this should fix the console problem in IE 
+	if (typeof console == "undefined") {
+		this.console = {log: function() {}};
+	}
+
 	console.log("malcolm lives");
 
 /* 
  * =============================================================
- * IE FIXES
+ * IE TARGETTING
  * =============================================================
  */
 

@@ -13,6 +13,7 @@ $hasContent = file_get_contents($pathToSerenity);
 
 
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>

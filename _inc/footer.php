@@ -33,9 +33,7 @@
 	</section>
 	<div class="overlay dark" data-modal='wiper'></div>
 
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-	<script src="../assets/js/touchwipe.min.js"></script>
-	<script src="../assets/js/malcolm.js"></script> 
+	<?php include("scripts.php"); ?>
 
 
 	<script>
@@ -63,10 +61,24 @@
 			e.preventDefault();
 		});
 
-		$('[data-theme]').click(function(){
+		$('[data-theme]').on("click", function(e){
 			var $theme = $(this).attr('data-theme');
-			console.log($theme);
 			$("[value=" + $theme + "]").attr('checked','checked');
+			e.preventDefault();
+		});
+		
+		$('[data-name]').on("click", function(e){
+			$name = $(this).attr('data-name');
+			$value = $(this).attr('data-value');
+			if($name == "all") {
+				console.log('is all');
+				$("[data-name]").not($(this)).trigger("click");
+			} else {
+				$("input[type=text][name*="+ $name +"]").attr('value', $value);
+				$("input[type=radio][name*="+ $name +"][value=" + $value + "]").attr('checked', 'checked');
+			}
+
+			e.preventDefault();
 		});
 
 

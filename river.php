@@ -1,7 +1,5 @@
 <?php
-
 //some possible page variables
-$title = "river"; //this is backed up by a generic title set in kaylee.php or a browncoat generic title
 $isRiver = true;
 ?>
 
@@ -10,7 +8,6 @@ $isRiver = true;
 <section class="container">
 	<section class="row-fluid">
 		<article class="span8">
-			<a href="#" data-theme="firefly" class="btn-main">check all firefly</a>
 			<form action="/process-river.php" method="post">
 				<div class="input-group">
 					<h3>Title</h3>
@@ -66,6 +63,7 @@ $isRiver = true;
 					<input type="text" name="path[pathToCSS]" value="./assets/css/styles.css"></input>
 				</div>
 
+				<a href="#" data-theme="firefly" class="btn-main">check all firefly</a>
 
 				<?php
 				//loop through the libs director to extract all the less libraries
@@ -119,6 +117,25 @@ $isRiver = true;
 			</form>
 		</article>
 		<aside class="span4">
+			<?php 
+			if($kaylee == true):
+			?>
+			<h5>looks like kaylee is already written</h5>
+			<a href="#" data-name="all" class="btn-main large">import all</a>
+			<?php
+			//find a way to import
+			foreach($exportArr as $key => $value){
+				if(!empty($value)):
+					echo "<a href='#' class='btn-gray large' data-name='$key' data-value='$value'>set $key to $value</a>";
+				endif;
+			}
+			
+			else:
+			?>
+			<h5>kaylee is set to the default</h5>
+			<?php
+			endif;
+			?>
 		</aside>
 	</section>
 </section>

@@ -14,15 +14,15 @@
 
 //check for existing title at page level
 if(!isset($title)):
-  $title = '';
+  $title = 'the title';
 endif;
 //check for existing description at page level
 if(!isset($description)):
-  $description = '';
+  $description = 'the description';
 endif;
 //check for existing author at page level
 if(!isset($author)):
-  $author = '';
+  $author = 'meeeee';
 endif;
 /*
  *
@@ -65,8 +65,11 @@ $pathToCSS = './assets/css/styles.css';
  */
 
 $washArr = array(
+  "colour" => "../libs/colour-lib/colour-firefly.less",
   "core" => "../libs/core-lib/core-firefly.less",
+  "helper" => "../libs/helper-lib/helper-firefly.less",
   "structure" => "../libs/structure-lib/structure-firefly.less",
+  "text" => "../libs/text-lib/text-firefly.less",
 );
 $serenityArr = array(
   "base" => "../libs/base-lib/base-firefly.less",
@@ -74,6 +77,27 @@ $serenityArr = array(
   "callout" => "../libs/callout-lib/callout-firefly.less",
   "form" => "../libs/form-lib/form-firefly.less",
   "modal" => "../libs/modal-lib/modal-firefly.less",
+);
+$kaylee = true;
+$exportArr = array(
+  'title' => 'the title',
+  'description' => 'the description',
+  'author' => 'meeeee',
+  'useless' => 'false',
+  'isResponsive' => 'true',
+  'pathToSerenity' => './assets/less/serenity.reaver.less',
+  'pathToWash' => './assets/less/wash.reaver.less',
+  'pathToCSS' => './assets/css/styles.css',
+  'colour' => 'firefly',
+  'core' => 'firefly',
+  'helper' => 'firefly',
+  'structure' => 'firefly',
+  'text' => 'firefly',
+  'base' => 'firefly',
+  'btn' => 'firefly',
+  'callout' => 'firefly',
+  'form' => 'firefly',
+  'modal' => 'firefly',
 );
 
 ?>

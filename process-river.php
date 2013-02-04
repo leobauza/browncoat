@@ -154,6 +154,27 @@ if(isset($_POST["submit"])) {
 	//close the lib array
 	$theData.= superPrint(");");
 
+	//add a kaylee is written var and an export array
+	$theData.= superPrint("\$kaylee = true;");
+
+	//declare array
+	$theData.= superPrint("\$exportArr = array(");
+	foreach($_POST["general"] as $key => $val){
+		$theData .= superPrint("  '$key' => '$val',");
+	}
+	foreach($_POST["path"] as $key => $val){
+		$theData .= superPrint("  '$key' => '$val',");
+	}
+	foreach($_POST["wash-library"] as $key => $val){
+		$theData .= superPrint("  '$key' => '$val',");
+	}
+	foreach($_POST["serenity-library"] as $key => $val){
+		$theData .= superPrint("  '$key' => '$val',");
+	}
+
+	//close array
+	$theData .= superPrint(");");
+
 
 
 /*
