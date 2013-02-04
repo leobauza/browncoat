@@ -1,7 +1,11 @@
 <?php 
 
 //change for testing
-require("kaylee.php");
+if(file_exists('kaylee.php')):
+	require("kaylee.php");
+else:
+	echo "<p class=\"warning\">no kaylee file exists...you probably just downloaded this and didn't even bother to read the instructions where it tells you to take the default part out of default.kaylee.php out so it reads just kaylee.php (that's actually not in any instructions right this second but it will be.)</p>"
+endif;
 
 //determine whether serenity has content...this checks if simon has run...
 //should probably have a key word that simon writes here to check
