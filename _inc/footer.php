@@ -118,15 +118,14 @@
 			$value = $(this).attr('data-value');
 			if($name == "all") {
 				$("[data-name]").not($(this)).trigger("click");
-				$(".radio-group").each(function(){
-					$(this).find("a").removeClass('active');
-					$(this).find("input:checked").closest(".radio-group").find("a").addClass('active');
-				});
 			} else {
 				$("input[type=text][name*="+ $name +"]").attr('value', $value);
 				$("input[type=radio][name*="+ $name +"][value=" + $value + "]").attr('checked', 'checked');
 			}
-
+			$(".radio-group").each(function(){
+				$(this).find("a").removeClass('active');
+				$(this).find("input:checked").closest(".radio-group").find("a").addClass('active');
+			});
 			e.preventDefault();
 		});
 

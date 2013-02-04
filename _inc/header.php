@@ -75,7 +75,7 @@ $hasContent = file_get_contents($pathToSerenity);
 			<h1>river</h1>
 			<h3>set up your kaylee configurations file. This page always uses the default theme.</h3> 
 		<?php elseif($hasContent == true && !isset($isWiper)): ?>
-			<h1>Some Header</h1>
+			<h1>browncoat</h1>
 			<h3>Still coming up with designs for this and stuff</h3> 
 		<?php else: ?>
 			
