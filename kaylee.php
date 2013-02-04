@@ -20,7 +20,7 @@
 
 //check for existing useless at page level
 if(!isset($useless)):
-  $useless = true;
+  $useless = false;
 endif;
 /*
  *
@@ -30,7 +30,7 @@ endif;
 
 //check for existing isResponsive at page level
 if(!isset($isResponsive)):
-  $isResponsive = false;
+  $isResponsive = true;
 endif;
 /*
  *
@@ -53,36 +53,36 @@ $pathToCSS = './assets/css/styles.css';
  */
 
 $washArr = array(
-  //there is no colour-lib loaded
-  //there is no core-lib loaded
-  //there is no helper-lib loaded
-  //there is no structure-lib loaded
-  //there is no text-lib loaded
+  "colour" => "../libs/colour-lib/colour-firefly.less",
+  "core" => "../libs/core-lib/core-firefly.less",
+  "helper" => "../libs/helper-lib/helper-firefly.less",
+  "structure" => "../libs/structure-lib/structure-firefly.less",
+  "text" => "../libs/text-lib/text-firefly.less",
 );
 $serenityArr = array(
-  //there is no base-lib loaded
-  //there is no btn-lib loaded
-  //there is no callout-lib loaded
-  //there is no form-lib loaded
-  //there is no modal-lib loaded
+  "base" => "../libs/base-lib/base-firefly.less",
+  "btn" => "../libs/btn-lib/btn-firefly.less",
+  "callout" => "../libs/callout-lib/callout-firefly.less",
+  "form" => "../libs/form-lib/form-firefly.less",
+  "modal" => "../libs/modal-lib/modal-firefly.less",
 );
 $kaylee = true;
 $exportArr = array(
-  'useless' => 'true',
-  'isResponsive' => 'false',
+  'useless' => 'false',
+  'isResponsive' => 'true',
   'pathToSerenity' => './assets/less/serenity.reaver.less',
   'pathToWash' => './assets/less/wash.reaver.less',
   'pathToCSS' => './assets/css/styles.css',
-  'colour' => 'none',
-  'core' => 'none',
-  'helper' => 'none',
-  'structure' => 'none',
-  'text' => 'none',
-  'base' => 'none',
-  'btn' => 'none',
-  'callout' => 'none',
-  'form' => 'none',
-  'modal' => 'none',
+  'colour' => 'firefly',
+  'core' => 'firefly',
+  'helper' => 'firefly',
+  'structure' => 'firefly',
+  'text' => 'firefly',
+  'base' => 'firefly',
+  'btn' => 'firefly',
+  'callout' => 'firefly',
+  'form' => 'firefly',
+  'modal' => 'firefly',
 );
 
 ?>

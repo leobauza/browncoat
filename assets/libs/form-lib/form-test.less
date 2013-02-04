@@ -12,11 +12,21 @@ form {
 		
 	}
 	.radio-group {
+		&.horizontal {
+			float:left;
+			margin:0 5px 0 0;
+			&:last-child {
+				margin:0;
+			}
+		}
 		label {
 			float:left;
 		}
 		input[type="radio"]{
 			float:left;
+		}
+		[data-input="radio"]{
+			
 		}
 	}
 	label, input, textarea, button, select {

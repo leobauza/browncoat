@@ -144,7 +144,6 @@
 				}
 				$(this).find('input, label').hide();
 			});
-
 			
 			$('[data-input=radio]').click(function(e){
 				$(this).closest('.input-group').find('.active').removeClass('active');

@@ -27,11 +27,11 @@ $title = "river"
 
 				<div class="input-group">
 					<h3>Use LESS.js</h3>
-					<div class="radio-group">
+					<div class="radio-group horizontal">
 						<input type="radio" name="general[useless]" value="true"></input>
 						<label>true</label>
 					</div>
-					<div class="radio-group">
+					<div class="radio-group horizontal">
 						<input type="radio" name="general[useless]" value="false" checked="checked"></input>
 						<label>false</label>
 					</div>
@@ -39,11 +39,11 @@ $title = "river"
 
 				<div class="input-group">
 					<h3>Add Responsive Meta Tag</h3>
-					<div class="radio-group">
+					<div class="radio-group horizontal">
 						<input type="radio" name="general[isResponsive]" value="true" checked="checked"></input>
 						<label>true</label>
 					</div>
-					<div class="radio-group">
+					<div class="radio-group horizontal">
 						<input type="radio" name="general[isResponsive]" value="false"></input>
 						<label>false</label>
 					</div>
@@ -73,7 +73,7 @@ $title = "river"
 					//echo "Directory handle: $handle\n";
 					//echo "Entries:\n";
 
-					/* This is the correct way to loop over the directory. */
+					//looop and add all the files in the libs directory
 					while (false !== ($libDir = readdir($dirRoot))) {
 						if ($libDir != "." && $libDir != "..") {
 							//echo "<h2>$entry contains:</h2>\n";
@@ -87,7 +87,7 @@ $title = "river"
 										$lib_theme = explode("-", $splitLibSubDir[0]);
 										$lib = $lib_theme[0];
 										$theme = $lib_theme[1];
-										echo "<div class='radio-group'>";
+										echo "<div class='radio-group horizontal'>";
 										if($lib == "text" || $lib == "colour" || $lib == "structure" || $lib == "helper" || $lib == "core"):
 											//the four libraries that belong to wash that make up the core of less and color in both spellings just couse
 											echo '<input type="radio" name="wash-library['.$lib.']" value="'.$theme.'" />';
@@ -102,9 +102,9 @@ $title = "river"
 								closedir($dirSubRoot);
 							}
 							if($libDirSplit[0] == "text" || $libDirSplit[0] == "colour" || $libDirSplit[0] == "structure" || $libDirSplit[0] == "helper" || $libDirSplit[0] == "core"):
-								echo '<div class="radio-group"><input type="radio" name="wash-library['.$libDirSplit[0].']" value="none" checked="checked"/><label>none</label></div>';
+								echo '<div class="radio-group horizontal"><input type="radio" name="wash-library['.$libDirSplit[0].']" value="none" checked="checked"/><label>none</label></div>';
 							else:
-								echo '<div class="radio-group"><input type="radio" name="serenity-library['.$libDirSplit[0].']" value="none" checked="checked"/><label>none</label></div>';
+								echo '<div class="radio-group horizontal"><input type="radio" name="serenity-library['.$libDirSplit[0].']" value="none" checked="checked"/><label>none</label></div>';
 							endif;
 
 							echo "</div>";//close input group
