@@ -5,6 +5,23 @@ Welcome to browncoat 0.1.0
 ## about this project
 This is the first semi workable update.
 
+### instructions for 0.1.0 release
+
+1. clone the repo
+2. browncoat needs to be able to write to a couple files so when running locally be mindful of that. Some other good to knows:
+	- the browncoat folder needs to be the root folder for browncoat (I think...) I set it up on a virtual host and on MAMP and haven't tried running it any other way
+	- there's a lot of I don't know what I am doing going on, so that's good to know.
+3. add a kaylee.php file...it can be empty or it can be the default.kaylee.php copy
+4. point to yourlocalserver/river.php 
+5. pick your settings
+6. submit
+7. hit run simon on the pop-up
+8. you now have 75% of what browncoat will one day do...
+	- The libraries you selected are written to your wash and serenity files.
+	- your header is kinda written
+	- your footer is sorta written
+9. feel like this doesn't do a heck of a lot right now!
+
 ### inspiration
 
 I would never have considered creating any of this had I not come across [bootstrap](http://twitter.github.com/bootstrap/index.html) and [foundation](http://foundation.zurb.com/) which are much more complete frameworks as of January 31th 2012 and if you are looking for something like that you should check it out. They are pretty cool. 
