@@ -2,9 +2,9 @@
 
 //change for testing
 if(file_exists('kaylee.php')):
-	require("kaylee.php");
+	include("kaylee.php");
 else:
-	echo "<p class=\"warning\">no kaylee file exists...you probably just downloaded this and didn't even bother to read the instructions where it tells you to take the default part out of default.kaylee.php out so it reads just kaylee.php (that's actually not in any instructions right this second but it will be.)</p>"
+	echo "<div class=\"container\"><p class=\"warning\">no kaylee file exists...you probably just downloaded this and didn't even bother to read the instructions where it tells you to take the default part out of default.kaylee.php out so it reads just kaylee.php (that's actually not in any instructions right this second but it will be.)</p></div>";
 endif;
 
 //determine whether serenity has content...this checks if simon has run...
