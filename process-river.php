@@ -7,14 +7,14 @@ $kayleeIntro = "/*
  * RIVER WROTE TO KAYLEE!
  * Kaylee has all the variables that create the pages, decides what scripts to run, adds the desired libraries
  * also, she sets general meta tags, is a badass engineer, etc
- *
+ * 
  */
 ";
 
 $titleVarIntro = "/*
  *
  * variables for title, what scripts to run, etc
- *
+ * I removed these (leo)
  */
 ";
 $commentAboutArrays = "
