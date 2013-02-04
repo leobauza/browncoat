@@ -29,7 +29,7 @@ $hasContent = file_get_contents($pathToSerenity);
 
 	<?php if(isset($useless) && $useless == true): ?>
 		<!-- use less js compiling and have ie fallback with css -->
-		<?php if($hasContent == true && !isset($isWiper)): ?>
+		<?php if($hasContent == true && !isset($isWiper) && !isset($isRiver)): ?>
 			<link rel="stylesheet/less" type="text/css" href="../assets/less/styles.less">
 		<?php else: ?>
 			<link rel="stylesheet/less" type="text/css" href="../assets/less/default.reaver.less">
