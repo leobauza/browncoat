@@ -53,16 +53,16 @@ function superPrint($theString,$comment = false) {
 		$data = $theString."\n";
 	endif;
 		if($comment == true):
-			echo "<pre class=\"comment\">".$theString."</pre>";
+			echo "<pre class=\"comment\">".$theString."</pre>\n";
 		else:
-			echo "<pre>".$theString."</pre>";
+			echo "<pre>".$theString."</pre>\n";
 		endif;
 	return $data;
 }
 
 
 //process submitted river form
-if(isset($_POST["submit"])) {
+if(isset($_POST)) {
 
 
 	//introduction comment block to kaylee
@@ -88,7 +88,8 @@ if(isset($_POST["submit"])) {
 		if($var == "useless" || $var == "isResponsive"):
 			$theData .= superPrint("  \$$var = $value;");
 		else:
-			$theData .= superPrint("  \$$var = '$value';");
+			$addSlashVal = addslashes($value);
+			$theData .= superPrint("  \$$var = '$addSlashVal';");
 		endif;
 		//close var
 		$theData .= superPrint("endif;");
@@ -160,7 +161,8 @@ if(isset($_POST["submit"])) {
 	//declare array
 	$theData.= superPrint("\$exportArr = array(");
 	foreach($_POST["general"] as $key => $val){
-		$theData .= superPrint("  '$key' => '$val',");
+		$addSlashVal = addslashes($val);
+		$theData .= superPrint("  '$key' => '$addSlashVal',");
 	}
 	foreach($_POST["path"] as $key => $val){
 		$theData .= superPrint("  '$key' => '$val',");
@@ -216,9 +218,3 @@ function oldStuff() {
 
 
 ?>
-
-<style>
-	.comment {
-		background:#ffdd00;
-	}
-</style>

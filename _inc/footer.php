@@ -14,9 +14,24 @@
 	
 	
 	?>
+	
+	<section data-modal="river" class="modal-cont">
+		<aside class="modal-main ">
+			<header>
+				<h2>river processed</h2>
+			</header>
+			<article class="body">
+				
+			</article>
+			<footer>
+				<a href="/simon.php" class="btn-main">run simon</a>
+			</footer>
+		</aside>
+	</section>
+	<div class="overlay dark" data-modal='river'></div>
 
-	<section class="modal-cont">
-		<aside data-modal="wiper" class="modal-main ">
+	<section data-modal="wiper" class="modal-cont">
+		<aside class="modal-main ">
 			<header>
 				<h2>Wiper Modal</h2>
 			</header>
@@ -46,8 +61,7 @@
 		 */
 
 		$('[data-ajax="river"]').click(function(e){
-			//$("[data-modal='river']").show();
-			//$(".modal-cont").show();
+			$("[data-modal='river']").show();
 			var url = "/process-river.php";
 			$riverRequest = $.ajax({
 				type: "POST",
@@ -55,21 +69,21 @@
 				data: $("form").serialize(), // serializes the form's elements.
 				success: function(data){
 					//do something when it succeeds
+					$("[data-modal='river'] .body").html(data);
 					console.log(data);
 				}
 			});
 			$riverRequest.done(function(msg){
 				//do something when it is done
-				console.log(msg);
+				
 			});
-			e.preventDefault();
+			return false; // avoid to execute the actual submit of the form.
 		});
 
 		
 		
-		$('[data-ajax="wiper"]').click(function(e){
+		$("[data-ajax='wiper']").click(function(e){
 			$("[data-modal='wiper']").show();
-			$(".modal-cont").show();
 			var url = $(this).attr('href');
 			$wipeRequest = $.ajax({
 				url:url,

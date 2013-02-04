@@ -127,7 +127,10 @@ $isRiver = true;
 			//find a way to import
 			foreach($exportArr as $key => $value){
 				if(!empty($value)):
-					echo "<a href='#' class='btn-gray large' data-name='$key' data-value='$value'>set $key to $value</a>";
+					$addSlashValue = addslashes($value);
+					$stripSlashValue = stripslashes($value);
+					
+					echo "<a href='#' class=\"btn-gray large\" data-name=\"$key\" data-value=\"$addSlashValue\">set $key to $stripSlashValue</a>";
 				endif;
 			}
 			
