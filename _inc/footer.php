@@ -44,6 +44,29 @@
 		 * show modal wipers on wiper clicks
 		 * =============================================================
 		 */
+
+		$('[data-ajax="river"]').click(function(e){
+			//$("[data-modal='river']").show();
+			//$(".modal-cont").show();
+			var url = "/process-river.php";
+			$riverRequest = $.ajax({
+				type: "POST",
+				url: url,
+				data: $("form").serialize(), // serializes the form's elements.
+				success: function(data){
+					//do something when it succeeds
+					console.log(data);
+				}
+			});
+			$riverRequest.done(function(msg){
+				//do something when it is done
+				console.log(msg);
+			});
+			e.preventDefault();
+		});
+
+		
+		
 		$('[data-ajax="wiper"]').click(function(e){
 			$("[data-modal='wiper']").show();
 			$(".modal-cont").show();
@@ -61,17 +84,19 @@
 			e.preventDefault();
 		});
 
+		//set all to theme
 		$('[data-theme]').on("click", function(e){
 			var $theme = $(this).attr('data-theme');
 			$("[value=" + $theme + "]").attr('checked','checked');
 			e.preventDefault();
 		});
 		
+		
+		//import click
 		$('[data-name]').on("click", function(e){
 			$name = $(this).attr('data-name');
 			$value = $(this).attr('data-value');
 			if($name == "all") {
-				console.log('is all');
 				$("[data-name]").not($(this)).trigger("click");
 			} else {
 				$("input[type=text][name*="+ $name +"]").attr('value', $value);

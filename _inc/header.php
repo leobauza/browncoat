@@ -42,7 +42,7 @@ $hasContent = file_get_contents($pathToSerenity);
 	<![endif]-->
 	<?php else: //not using less.js to compile?>
 		<?php 
-		if($hasContent == true && !isset($isWiper)):
+		if($hasContent == true && !isset($isWiper) && !isset($isRiver)):
 		?>
 			<!-- use css and never run the less.js script -->
 			<link rel="stylesheet" href="../assets/css/styles.css" type="text/css" media="screen" charset="utf-8">
@@ -73,7 +73,7 @@ $hasContent = file_get_contents($pathToSerenity);
 	<header class="container-alt">
 		<?php if(isset($isRiver)): ?>
 			<h1>river</h1>
-			<h3>set up your kaylee configurations file</h3> 
+			<h3>set up your kaylee configurations file. This page always uses the default theme.</h3> 
 		<?php elseif($hasContent == true && !isset($isWiper)): ?>
 			<h1>Some Header</h1>
 			<h3>Still coming up with designs for this and stuff</h3> 

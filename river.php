@@ -8,7 +8,7 @@ $isRiver = true;
 <section class="container">
 	<section class="row-fluid">
 		<article class="span8">
-			<form action="/process-river.php" method="post">
+			<form id="river" action="/process-river.php" method="post">
 				<div class="input-group">
 					<h3>Title</h3>
 					<input type="text" name="general[title]" value=""></input>
@@ -64,6 +64,7 @@ $isRiver = true;
 				</div>
 
 				<a href="#" data-theme="firefly" class="btn-main">check all firefly</a>
+				<a href="#" data-theme="test" class="btn-main">check all test</a>
 
 				<?php
 				//loop through the libs director to extract all the less libraries
@@ -113,7 +114,7 @@ $isRiver = true;
 				}
 				?>
 
-				<button id="river-submit" class="btn-gray large" type="submit" name="submit" value="submit">Submit</button>
+				<button id="river-submit" data-ajax="river" class="btn-gray large" type="submit" name="submit" value="submit">Submit</button>
 			</form>
 		</article>
 		<aside class="span4">

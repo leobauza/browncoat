@@ -14,15 +14,15 @@
 
 //check for existing title at page level
 if(!isset($title)):
-  $title = 'the title';
+  $title = 'title';
 endif;
 //check for existing description at page level
 if(!isset($description)):
-  $description = 'the description';
+  $description = 'dasda';
 endif;
 //check for existing author at page level
 if(!isset($author)):
-  $author = 'meeeee';
+  $author = 'sdasda';
 endif;
 /*
  *
@@ -80,9 +80,9 @@ $serenityArr = array(
 );
 $kaylee = true;
 $exportArr = array(
-  'title' => 'the title',
-  'description' => 'the description',
-  'author' => 'meeeee',
+  'title' => 'title',
+  'description' => 'dasda',
+  'author' => 'sdasda',
   'useless' => 'false',
   'isResponsive' => 'true',
   'pathToSerenity' => './assets/less/serenity.reaver.less',

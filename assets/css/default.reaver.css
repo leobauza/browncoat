@@ -1,7 +1,7 @@
 /*!
  * 
  * 
- * default.reaver.less loads the firefly library directly in.
+ * default.reaver.less loads the test library directly in.
  *
  *
  */
@@ -13,6 +13,7 @@
 /* 
  * =============================================================
  * CORE LIB (master library for wash...in case you don't want to split it in four)
+ * DONT USE THIS UNLESS REPLACING THE FOUR WASH LIBRARIES (colour, text, structure, helpers)
  * =============================================================
  */
 /* 
@@ -206,11 +207,12 @@ a:active {
   outline: 0;
 }
 body {
-  background: #ffffff;
+  background: #f5f5f5;
   font-size: 63.7%;
   margin: 0px;
   padding: 0px;
-  font-family: Georgia, "Times New Roman", Times, serif;
+  font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  word-wrap: break-word;
 }
 hr {
   height: 1px;
@@ -534,6 +536,16 @@ h6 {
  * Callouts (warning message, labels, etc?)
  * =============================================================
  */
+.success {
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  background: #dc4e44;
+  border: 1px solid #9d261d;
+  padding: 10px;
+  color: #ffffff;
+  font-weight: bold;
+}
 .warning {
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
@@ -633,7 +645,84 @@ form input[type="password"] {
   padding: 4px;
   margin-bottom: 9px;
   color: #2d2d2d;
-  width: 400px;
+}
+form textarea,
+form input[type="text"],
+form input[type="password"] {
+  background-color: #ffffff;
+  border: 1px solid #dedede;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+}
+form textarea:focus,
+form input[type="text"]:focus,
+form input[type="password"]:focus {
+  border: 1px solid rgba(82, 168, 236, 0.8);
+  outline: 0;
+  outline: thin dotted \9;
+  /* IE6-9 */
+
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6);
+  -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6);
+}
+form textarea {
+  height: auto;
+  overflow: auto;
+  /*remove scrollbar in IE*/
+
+}
+form button,
+form input[type="submit"] {
+  cursor: pointer;
+}
+form button:focus,
+form input[type="submit"]:focus {
+  border: 1px solid rgba(82, 168, 236, 0.8);
+  outline: 0;
+  outline: thin dotted \9;
+  /* IE6-9 */
+
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6);
+  -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6);
+}
+form .radio-group label {
+  float: left;
+}
+form .radio-group input[type="radio"] {
+  float: left;
+}
+form label,
+form input,
+form textarea,
+form button,
+form select {
+  font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-size: 1.3em;
+  font-weight: normal;
+  line-height: 1.8em;
+}
+form label {
+  display: block;
+  margin: 0 0 5px 0;
+}
+form select,
+form textarea,
+form input[type="text"],
+form input[type="password"] {
+  display: inline-block;
+  *display: inline;
+  zoom: 1;
+  _height: 18px;
+  height: 18px;
+  padding: 4px;
+  margin-bottom: 9px;
+  color: #2d2d2d;
 }
 form textarea,
 form input[type="text"],
