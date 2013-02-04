@@ -1,4 +1,4 @@
-Welcome to browncoat 0.0.0 (pre-alpha)
+Welcome to browncoat 0.0.0 (pre-alpha) testing something
 ==================
 
 
