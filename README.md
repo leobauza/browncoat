@@ -1,8 +1,9 @@
-Welcome to browncoat 0.0.0 (pre-alpha)
+Welcome to browncoat 0.1.0
 ==================
 
 
 ## about this project
+This is the first semi workable update.
 
 ### inspiration
 
