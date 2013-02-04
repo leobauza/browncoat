@@ -1,6 +1,7 @@
 <?php
 //some possible page variables
 $isRiver = true;
+$title = "river"
 ?>
 
 <?php include('_inc/header.php'); ?> 
@@ -9,7 +10,7 @@ $isRiver = true;
 	<section class="row-fluid">
 		<article class="span8">
 			<form id="river" action="/process-river.php" method="post">
-				<div class="input-group">
+				<!-- <div class="input-group">
 					<h3>Title</h3>
 					<input type="text" name="general[title]" value=""></input>
 				</div>
@@ -22,7 +23,7 @@ $isRiver = true;
 				<div class="input-group">
 					<h3>Author</h3>
 					<input type="text" name="general[author]" value=""></input>
-				</div>
+				</div> -->
 
 				<div class="input-group">
 					<h3>Use LESS.js</h3>

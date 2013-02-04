@@ -12,18 +12,6 @@
  *
  */
 
-//check for existing title at page level
-if(!isset($title)):
-  $title = 'billy\'s';
-endif;
-//check for existing description at page level
-if(!isset($description)):
-  $description = 'desction';
-endif;
-//check for existing author at page level
-if(!isset($author)):
-  $author = 'leo';
-endif;
 /*
  *
  * if you would like to run the less script and have a ie fallback with your own compiled css then set $useless to true
@@ -80,9 +68,6 @@ $serenityArr = array(
 );
 $kaylee = true;
 $exportArr = array(
-  'title' => 'billy\'s',
-  'description' => 'desction',
-  'author' => 'leo',
   'useless' => 'false',
   'isResponsive' => 'true',
   'pathToSerenity' => './assets/less/serenity.reaver.less',
