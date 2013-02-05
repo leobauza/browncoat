@@ -67,12 +67,5 @@ $title = "home"; //this is backed up by a generic title set in kaylee.php or a b
 	</section>
 </section>
 
-<?php
 
-$num1 = 25.4888888789;
-
-echo ($num1 * 4) - 2;
-
-?>
-
- <?php include('_inc/footer.php'); ?>
+<?php include('_inc/footer.php'); ?>
