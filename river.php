@@ -137,7 +137,7 @@ $title = "river"
 			
 			else:
 			?>
-			<h5>kaylee is set to the default</h5>
+			<h5>kaylee is set to the default or doesn't exist</h5>
 			<?php
 			endif;
 			?>
