@@ -69,14 +69,14 @@ li {
 	
 	
 	/*margin right instead of margin left to do overflow hidden*/
-	.row-fluid > [class*="span"] {
+	[class*="row-fluid"] > [class*="span"] {
 		float: none;
 		width:auto;
 		margin-right: 0;
 	}
 
 	/*Use this to set exact percentages and have the last box be ok*/
-	.row-fluid > [class*="span"]:last-child {
+	[class*="row-fluid"] > [class*="span"]:last-child {
 		overflow:auto;
 	}
 	

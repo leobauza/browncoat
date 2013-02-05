@@ -36,27 +36,25 @@
 	background:@bg-colour-two;
 }
 
+/* 
+ * =============================================================
+ * ROW FLUID USING OVERFOW:HIDDEN
+ * =============================================================
+ */
+
 .row-fluid {
 	width:100%;
 	margin:@b-margin;
 }
-
-/*margin right instead of margin left to do overflow hidden*/
+/*margin right instead of margin left to do overflow hidden*/ /*Use this to set exact percentages and have the last box be ok*/
 .row-fluid > [class*="span"] {
 	float: left;
 	margin-right: @column-gutter;
-	&.l {
+	&.l, &:last-child {
 		margin-right: 0;
 		.overflow;
 	}
 }
-
-/*Use this to set exact percentages and have the last box be ok*/
-.row-fluid > [class*="span"]:last-child {
-	margin-right: 0;
-	.overflow;
-}
-
 .row-fluid .span1 {
 	width: @column-width + @column-gutter/11;
 }
@@ -94,12 +92,60 @@
 	width: @column-width * 12 + @column-gutter * 11;
 }
 
-.in-left {
-	
+/* 
+ * =============================================================
+ * ROW FLUID NOT NOT NOT USING OVERFOW:HIDDEN
+ * =============================================================
+ */
+
+/*use this to have a non overflow:hidden set up*/
+.row-fluid-alt {
+	width:100%;
+	margin:@b-margin;
 }
-.in-right {
-	
+.row-fluid-alt > [class*="span"] {
+	float: left;
+	margin-right: @column-gutter;
+	&.l, &:last-child {
+		margin-right: 0;
+	}
 }
-.in-all {
-	
+
+.row-fluid-alt .span1 {
+	width: @column-width + @column-gutter/11 - .0111111111;
 }
+.row-fluid-alt .span2 {
+	width: @column-width * 2 + @column-gutter + @column-gutter/6 - .0111111111;
+}
+.row-fluid-alt .span3 {
+	width: @column-width * 3 + @column-gutter * 2 + @column-gutter/4 - .0111111111;
+}
+.row-fluid-alt .span4 {
+	width: @column-width * 4 + @column-gutter * 3 + @column-gutter/3 - .0111111111;
+}
+.row-fluid-alt .span5 {
+	width: @column-width * 5 + @column-gutter * 4 - .0111111111;
+}
+.row-fluid-alt .span6 {
+	width: @column-width * 6 + @column-gutter * 5 + @column-gutter/2 - .0111111111;
+}
+.row-fluid-alt .span7 {
+	width: @column-width * 7 + @column-gutter * 6 - .0111111111;
+}
+.row-fluid-alt .span8 {
+	width: @column-width * 8 + @column-gutter * 7 - .0111111111;
+}
+.row-fluid-alt .span9 {
+	width: @column-width * 9 + @column-gutter * 8 - .0111111111;
+}
+.row-fluid-alt .span10 {
+	width: @column-width * 10 + @column-gutter * 9 - .0111111111;
+}
+.row-fluid-alt .span11 {
+	width: @column-width * 11 + @column-gutter * 10 - .0111111111;
+}
+.row-fluid-alt .span12 {
+	width: @column-width * 12 + @column-gutter * 11 - .0111111111;
+}
+
+
