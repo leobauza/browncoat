@@ -120,7 +120,7 @@ $title = "river"
 		</article>
 		<aside class="span4">
 			<?php 
-			if($kaylee == true):
+			if(isset($kaylee) && $kaylee == true):
 			?>
 			<h5>looks like kaylee is already written</h5>
 			<a href="#" data-name="all" class="btn-main large">import all</a>

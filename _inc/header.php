@@ -4,13 +4,16 @@
 if(file_exists('kaylee.php')):
 	include("kaylee.php");
 else:
-	echo "<div class=\"container\"><p class=\"warning\">no kaylee file exists...you probably just downloaded this and didn't even bother to read the instructions where it tells you to copy default.kaylee.php to kaylee.php (that's actually not in any instructions right this second but it will be.)</p></div>";
+	$warnings = "<div class=\"container\"><p class=\"warning\">no kaylee file exists...you probably just downloaded this and didn't even bother to read the instructions where it tells you to copy default.kaylee.php to kaylee.php (that's actually not in any instructions right this second but it will be.)</p></div>";
 endif;
 
 //determine whether serenity has content...this checks if simon has run...
 //should probably have a key word that simon writes here to check
+if(isset($hasContent)):
 $hasContent = file_get_contents($pathToSerenity);
-
+else:
+$hasContent = false;
+endif;
 
 //so how about wrapping this entire thing in a function that returns a clean header.
 //then create a clean.header.php with just clean html and it does away with all this if else shit during set up
@@ -75,6 +78,11 @@ $hasContent = file_get_contents($pathToSerenity);
 
 <body>
 	<header class="container-alt">
+		<?php
+		if(isset($warnings)):
+			print $warnings;
+		endif;
+		?>
 		<?php if(isset($isRiver)): ?>
 			<h1>river</h1>
 			<h3>set up your kaylee configurations file. This page always uses the default theme.</h3> 
