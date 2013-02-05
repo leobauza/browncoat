@@ -9,11 +9,7 @@ endif;
 
 //determine whether serenity has content...this checks if simon has run...
 //should probably have a key word that simon writes here to check
-if(isset($hasContent)):
 $hasContent = file_get_contents($pathToSerenity);
-else:
-$hasContent = false;
-endif;
 
 //so how about wrapping this entire thing in a function that returns a clean header.
 //then create a clean.header.php with just clean html and it does away with all this if else shit during set up
