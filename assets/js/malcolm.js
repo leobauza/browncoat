@@ -49,7 +49,7 @@ $(function(){
 
 	//checkVersion();
 
-	$('.row-fluid').each(function(){
+	$('[class*=row-fluid]').each(function(){
 		$(this).find("[class*=\"span\"]:last-child").addClass('l');
 	});
 	
