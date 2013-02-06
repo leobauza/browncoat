@@ -7,6 +7,12 @@ $title = "home"; //this is backed up by a generic title set in kaylee.php or a b
 
 <?php include('_inc/header.php'); ?> 
 
+<section class="opening">
+	<?php include('_inc/intro.php'); ?> 
+</section>
+
+
+
 <!-- 
 
 ROWS WITH overflow:hidden 

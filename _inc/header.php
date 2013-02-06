@@ -102,4 +102,4 @@ endif;
 		?>
 	</header>
 	<!-- I need to come up with cross browser options for hr's even though hr's are fucking dumb -->
-	<hr>
+	<!-- <hr> -->
