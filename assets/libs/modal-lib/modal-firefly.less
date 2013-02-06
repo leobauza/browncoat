@@ -62,15 +62,14 @@
 }
 
 
-
-
 /* 
  * =============================================================
  * 
- * ACTUAL CODE FOR MODALS
+ * ACTUAL CORE FOR MODALS
  * 
  * =============================================================
  */
+/*all modals*/
 .modal-parent {
 	&> [class*=modal] {
 		display:none;
@@ -80,8 +79,25 @@
 		z-index:200;
 		width:500px;
 		margin:-90px 0 0 -250px;
+		/*do sizes make sense?*/
+		&.large {
+			width:800px;
+			margin:-100px 0 0 -400px;
+		}
+		&.medium {
+			width:800px;
+			margin:-100px 0 0 -400px;
+		}
+		&.small {
+			
+		}
+		&.variable {
+			width:50%;
+			margin:-90px 0 0 -25%;
+		}
 	}
 }
+/*all overlays*/
 .overlay {
 	position:fixed;
 	z-index:100;
@@ -115,6 +131,7 @@
 		padding:10px;
 	}
 }
+
 .modal-main {
 	border:1px solid @light-gray;
 	.modal-header {
