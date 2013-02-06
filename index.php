@@ -175,6 +175,58 @@ MODALS
 			</section>
 		</div>
 	</section>
+
+	<section class="row-fluid-alt">
+		<article class="span4">
+			<div class="modal-parent" data-role="parent">
+				<section class="modal-main" data-plugin="modal" data-type="onclick">
+					<header class="modal-header">
+						<h2>FIRST MODAL CLICK</h2>
+					</header>
+					<article class="modal-body">
+						Click the overlay to close
+					</article>
+					<footer class="modal-footer">
+						footer
+					</footer>
+				</section>
+				<a href="#" class="btn-secondary small" data-role="trigger">modal click</a>
+			</div>
+		</article>
+		<article class="span4">
+			<div class="modal-parent" data-role="parent">
+				<section class="modal-main" data-plugin="modal" data-type="onclick">
+					<header class="modal-header">
+						<h2>Second Modal onload</h2>
+					</header>
+					<article class="modal-body">
+						Click the overlay to close
+					</article>
+					<footer class="modal-footer">
+						footer
+					</footer>
+				</section>
+				<a href="#" class="btn-secondary small" data-role="trigger">Modal</a>
+			</div>
+		</article>
+		<article class="span4">
+			<div class="modal-parent" data-role="parent">
+				<section class="modal-main" data-plugin="modal" data-type="onclick">
+					<header class="modal-header">
+						<h2>Third Modal (onclick)</h2>
+					</header>
+					<article class="modal-body">
+						Click the overlay to close
+					</article>
+					<footer class="modal-footer">
+						footer
+					</footer>
+				</section>
+				<a href="#" class="btn-secondary small" data-role="trigger">modal click</a>
+			</div>
+		</article>
+	</section>
+
 </section>
 
 <!-- 

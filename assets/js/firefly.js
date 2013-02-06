@@ -4,38 +4,71 @@
  * THIS IS TEMPORARY UNTIL I SORT OUT JS LIBRARIES
  * =============================================================
  */
+$(function(){
+	
+	/* 
+	 * =============================================================
+	 * Modals
+	 * =============================================================
+	 */
+	/*
 
-/* 
- * =============================================================
- * Modals
- * =============================================================
- */
-/*
-options:
-data-plugin = modal
-data-role = parent 
-data-role = overlay
-*/
-/*
-options:
+	options:
+	data-plugin = modal
+	data-id = unique ID //for overlay closing
+	data-type = onclick || onhover || onload
+	data-overlay = dark || light (creates .overlay.dark or .overlay.light)
+	==========
+	roles:
+	data-role = parent //parent of the modal
+	data-trigger = unique ID
 
 
+	*/
+	
+	//create unique modal id if none exists
+	var $modalID = 0;
+	$('[data-plugin=modal]').each(function(){
+		$modalID = $modalID + 1;
+		var
+			$modal = $(this),
+			$id = $modal.attr('data-id') || $modalID,
+			$parent = $modal.closest('[data-role=parent]'), //required
+			$overlay = $modal.attr('data-overlay') || "dark",  //light or dark
+			$dataType = $modal.attr('data-type') || "onload",
+			$dataTrigger = $parent.find('[data-role=trigger]')
+			$height = $modal.height();
+		;
+		function overlayClick(){
+			$("#" + $id + ".overlay").on("click", function(e){
+				console.log("click");
+				$(this).remove();
+				$modal.hide();
+				e.preventDefault();
+			});
+		}
+		switch($dataType) {
+			case "onclick":
+				$dataTrigger.on("click",function(e){
+					$(this).closest('[data-role=parent]').find($modal).show().css('margin-top', -($height/2));
+					$parent.after('<div id="'+ $id +'" class="overlay ' + $overlay + '"></div>');
+					overlayClick();
+					e.preventDefault();
+				});
+			break;
+			case "onhover":
+				
+			break;
+			default:
+				$modal.show().css('margin-top', -($height/2));
+				$parent.after('<div id="'+ $id +'" class="overlay ' + $overlay + '"></div>');
+				overlayClick();
+			break;
+		}
+		
+	});
+	
+	
+	
+});
 
-
-
-*/
-
-	<div class="modal-parent">
-		<section class="modal-main" data-plugin="modal">
-			<header class="modal-header">
-				<h2>Header</h2>
-			</header>
-			<article class="modal-body">
-				BODY
-			</article>
-			<footer class="modal-footer">
-				footer
-			</footer>
-		</section>
-		<div class="modal-overlay dark"></div>
-	</div>

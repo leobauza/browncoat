@@ -28,7 +28,7 @@
 			</footer>
 		</aside>
 	</section>
-	<div class="overlay dark" data-modal='river'></div>
+	<div class="overlayold dark" data-modal='river'></div>
 
 	<section data-modal="wiper" class="modal-cont">
 		<aside class="modal-inner">
@@ -46,23 +46,7 @@
 			</footer>
 		</aside>
 	</section>
-	<div class="overlay dark" data-modal='wiper'></div>
-
-
-	<div class="modal-parent">
-		<section class="modal-main" data-plugin="modal">
-			<header class="modal-header">
-				<h2>Header</h2>
-			</header>
-			<article class="modal-body">
-				BODY
-			</article>
-			<footer class="modal-footer">
-				footer
-			</footer>
-		</section>
-		<div class="overlay dark"></div>
-	</div>
+	<div class="overlayold dark" data-modal='wiper'></div>
 
 
 
