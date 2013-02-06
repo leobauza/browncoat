@@ -30,6 +30,7 @@
 header,
 footer,
 .row-fluid,
+.row-fluid-alt,
 .group,
 .form-group,
 .input-group,
@@ -39,6 +40,7 @@ footer,
 header:before,
 footer:before,
 .row-fluid:before,
+.row-fluid-alt:before,
 .group:before,
 .form-group:before,
 .input-group:before,
@@ -49,6 +51,7 @@ footer:before,
 header:after,
 footer:after,
 .row-fluid:after,
+.row-fluid-alt:after,
 .group:after,
 .form-group:after,
 .input-group:after,
@@ -95,22 +98,21 @@ footer:after,
   padding: 20px 2%;
   background: #f5f5f5;
 }
+/* 
+ * =============================================================
+ * ROW FLUID USING OVERFOW:HIDDEN
+ * =============================================================
+ */
 .row-fluid {
   width: 100%;
   margin: 0 0 20px 0;
 }
-/*margin right instead of margin left to do overflow hidden*/
+/*margin right instead of margin left to do overflow hidden*//*Use this to set exact percentages and have the last box be ok*/
 .row-fluid > [class*="span"] {
   float: left;
   margin-right: 2%;
 }
-.row-fluid > [class*="span"].l {
-  margin-right: 0;
-  width: auto;
-  float: none;
-  overflow: hidden;
-}
-/*Use this to set exact percentages and have the last box be ok*/
+.row-fluid > [class*="span"].l,
 .row-fluid > [class*="span"]:last-child {
   margin-right: 0;
   width: auto;
@@ -155,12 +157,71 @@ footer:after,
 }
 /* 
  * =============================================================
+ * ROW FLUID NOT NOT NOT USING OVERFOW:HIDDEN
+ * =============================================================
+ */
+/*use this to have a non overflow:hidden set up*/
+.row-fluid-alt {
+  width: 100%;
+  margin: 0 0 20px 0;
+}
+.row-fluid-alt > [class*="span"] {
+  float: left;
+  margin-right: 2%;
+}
+.row-fluid-alt > [class*="span"].l,
+.row-fluid-alt > [class*="span"]:last-child {
+  margin-right: 0;
+}
+.row-fluid-alt .span1 {
+  width: 6.504040400718182%;
+}
+.row-fluid-alt .span2 {
+  width: 14.988888882233335%;
+}
+.row-fluid-alt .span3 {
+  width: 23.4888888789%;
+}
+.row-fluid-alt .span4 {
+  width: 31.98888887556667%;
+}
+.row-fluid-alt .span5 {
+  width: 39.6555555389%;
+}
+.row-fluid-alt .span6 {
+  width: 48.9888888689%;
+}
+.row-fluid-alt .span7 {
+  width: 56.3222221989%;
+}
+.row-fluid-alt .span8 {
+  width: 64.6555555289%;
+}
+.row-fluid-alt .span9 {
+  width: 72.9888888589%;
+}
+.row-fluid-alt .span10 {
+  width: 81.3222221889%;
+}
+.row-fluid-alt .span11 {
+  width: 89.6555555189%;
+}
+.row-fluid-alt .span12 {
+  width: 97.98888884889999%;
+}
+/* 
+ * =============================================================
  * TEXT LIB (part of wash)
  * =============================================================
  */
 .helvetica {
   font-family: "Helvetica Neue", Helvetica, sans-serif;
 }
+/* 
+ * =============================================================
+ * BASE LIB 
+ * =============================================================
+ */
 article,
 aside,
 details,
@@ -207,11 +268,11 @@ a:active {
   outline: 0;
 }
 body {
-  background: #f0e5d6;
+  background: #ffffff;
   font-size: 63.7%;
   margin: 0px;
   padding: 0px;
-  font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-family: "Helvetica Neue", Helvetica, sans-serif;
   word-wrap: break-word;
 }
 hr {
@@ -335,7 +396,7 @@ h6 {
   -webkit-box-shadow: inset 0 5px 10px #90631f;
   -moz-box-shadow: inset 0 5px 10px #90631f;
   box-shadow: inset 0 5px 10px #90631f;
-  border: 1px solid #513811;
+  border: 1px solid #7b551a;
 }
 .btn-secondary {
   background: #d9a14b;
@@ -481,7 +542,7 @@ h6 {
   zoom: 1;
   _height: 17px;
 }
-.btn-set-dropdown > a {
+.btn-set-dropdown  > a {
   float: left;
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
@@ -489,17 +550,17 @@ h6 {
   margin-bottom: 0px;
   margin-left: -1px;
 }
-.btn-set-dropdown > a:first-child {
+.btn-set-dropdown  > a:first-child {
   -webkit-border-radius: 5px 0 0 5px;
   -moz-border-radius: 5px 0 0 5px;
   border-radius: 5px 0 0 5px;
 }
-.btn-set-dropdown > a.drop {
+.btn-set-dropdown  > a.drop {
   -webkit-border-radius: 0 5px 5px 0;
   -moz-border-radius: 0 5px 5px 0;
   border-radius: 0 5px 5px 0;
 }
-.btn-set-dropdown > a .carat {
+.btn-set-dropdown  > a .carat {
   text-indent: -999999px;
   display: block;
 }
@@ -536,16 +597,6 @@ h6 {
  * Callouts (warning message, labels, etc?)
  * =============================================================
  */
-.success {
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
-  border-radius: 3px;
-  background: #dc4e44;
-  border: 1px solid #9d261d;
-  padding: 10px;
-  color: #ffffff;
-  font-weight: bold;
-}
 .warning {
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
@@ -566,10 +617,28 @@ h6 {
   color: #2d2d2d;
   font-weight: bold;
 }
+.success {
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  background: #eca833;
+  border: 1px solid #a97110;
+  padding: 10px;
+  color: #ffffff;
+  font-weight: bold;
+}
 /* 
  * =============================================================
  * Modals (pop ups that for some reason are called modals)
  * firefly theme dependencies
+ * =============================================================
+ */
+/* 
+ * =============================================================
+ * 
+ * DO NOT DO MODALS THIS WAY DOOOOOOO NOOOOOOOOOT DOOOOO THISSSSS!!!!!!!!!!!!! 
+ * MOVE THIS SHIIIIIIIIIIT TO SOME APPLICATION SPECIFIC LESS THIS IS AWFUL
+ * 
  * =============================================================
  */
 .modal-cont {
@@ -580,7 +649,7 @@ h6 {
   width: 100%;
   height: 100%;
 }
-.modal-main {
+.modal-inner {
   position: absolute;
   top: 30px;
   left: 50%;
@@ -589,10 +658,10 @@ h6 {
   margin: 0px 0px 0px -250px;
   z-index: 200;
 }
-.modal-main header {
+.modal-inner header {
   background: #dedede;
 }
-.modal-main footer {
+.modal-inner footer {
   background: #dedede;
 }
 .overlay {
@@ -610,9 +679,112 @@ h6 {
 }
 /* 
  * =============================================================
+ * 
+ * ACTUAL CODE FOR MODALS
+ * 
+ * =============================================================
+ */
+.modal .modal-header {
+  background: #2d2d2d;
+  color: #ffffff;
+  padding: 10px;
+}
+.modal .modal-body {
+  background: #eeeeee;
+  color: #2d2d2d;
+  padding: 10px;
+}
+.modal .modal-footer {
+  background: #666666;
+  color: #ffffff;
+  padding: 10px;
+}
+.modal-main {
+  border: 1px solid #dedede;
+}
+.modal-main .modal-header {
+  background: #ba8028;
+  background: -moz-linear-gradient(top, #d69b3e 0%, #ba8028 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #d69b3e), color-stop(100%, #ba8028));
+  background: -webkit-linear-gradient(top, #d69b3e 0%, #ba8028 100%);
+  background: -o-linear-gradient(top, #d69b3e 0%, #ba8028 100%);
+  background: -ms-linear-gradient(top, #d69b3e 0%, #ba8028 100%);
+  background: linear-gradient(to bottom, #d69b3e 0%, #ba8028 100%);
+  *filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#d69b3e', endColorstr='#ba8028');
+  color: #ffffff;
+  padding: 10px;
+}
+.modal-main .modal-body {
+  background: #ffffff;
+  color: #2d2d2d;
+  padding: 10px;
+}
+.modal-main .modal-footer {
+  background: #666666;
+  color: #ffffff;
+  padding: 10px;
+}
+.modal-warning {
+  border: 1px solid #dedede;
+}
+.modal-warning .modal-header {
+  background: #721c15;
+  background: -moz-linear-gradient(top, #bb2d23 0%, #721c15 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #bb2d23), color-stop(100%, #721c15));
+  background: -webkit-linear-gradient(top, #bb2d23 0%, #721c15 100%);
+  background: -o-linear-gradient(top, #bb2d23 0%, #721c15 100%);
+  background: -ms-linear-gradient(top, #bb2d23 0%, #721c15 100%);
+  background: linear-gradient(to bottom, #bb2d23 0%, #721c15 100%);
+  *filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#bb2d23', endColorstr='#721c15');
+  color: #ffffff;
+  padding: 10px;
+}
+.modal-warning .modal-body {
+  background: #ffffff;
+  color: #2d2d2d;
+  padding: 10px;
+}
+.modal-warning .modal-footer {
+  background: #dedede;
+  color: #000000;
+  padding: 10px;
+}
+.modal-success {
+  border: 1px solid #dedede;
+}
+.modal-success .modal-header {
+  background: #d89014;
+  background: -moz-linear-gradient(top, #efb654 0%, #d89014 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #efb654), color-stop(100%, #d89014));
+  background: -webkit-linear-gradient(top, #efb654 0%, #d89014 100%);
+  background: -o-linear-gradient(top, #efb654 0%, #d89014 100%);
+  background: -ms-linear-gradient(top, #efb654 0%, #d89014 100%);
+  background: linear-gradient(to bottom, #efb654 0%, #d89014 100%);
+  *filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#efb654', endColorstr='#d89014');
+  color: #ffffff;
+  padding: 10px;
+}
+.modal-success .modal-body {
+  background: #ffffff;
+  color: #2d2d2d;
+  padding: 10px;
+}
+.modal-success .modal-footer {
+  background: #dedede;
+  color: #000000;
+  padding: 10px;
+}
+/* 
+ * =============================================================
  * forms
  * =============================================================
  */
+form .form-group {
+  background: #f5f5f5;
+  padding: 10px;
+  border: 1px solid #dedede;
+  margin: 0 0 5px;
+}
 form .radio-group.horizontal {
   float: left;
   margin: 0 5px 0 0;
@@ -698,82 +870,53 @@ form input[type="submit"]:focus {
   -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6);
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6);
 }
-/****** LISTS MAKE INTO LIST LIB******/
-ul,
-ol {
-  padding: 0;
-  margin: 0;
-}
+/* 
+ * =============================================================
+ * 
+ * LISTS
+ *
+ * =============================================================
+ */
 ul ul,
 ul ol,
 ol ol,
 ol ul {
   margin-bottom: 0;
 }
-ul {
-  list-style: none;
-}
 ol {
   list-style: decimal;
+  margin: 0;
 }
-li {
-  line-height: 1;
-}
-/******clearfix ******/
-header,
-footer,
-.row-fluid,
-.group,
-.form-group,
-.input-group,
-[class*="-group"] {
-  zoom: 1;
-}
-header:before,
-footer:before,
-.row-fluid:before,
-.group:before,
-.form-group:before,
-.input-group:before,
-[class*="-group"]:before {
-  display: table;
-  content: "";
-}
-header:after,
-footer:after,
-.row-fluid:after,
-.group:after,
-.form-group:after,
-.input-group:after,
-[class*="-group"]:after {
-  display: table;
-  content: "";
-  clear: both;
-}
-/****** HELPERS MAKE INTO HELPERS LIB******/
-.bump {
+ul {
   font-size: 1.4em;
+  padding: 0 0 0 20px;
+  margin: 0;
+  list-style: disc;
 }
-.unbump {
-  font-size: .75em;
+ul li {
+  line-height: 1;
+  margin: 0 0 10px;
+  /*all nested*/
+
+  /*expert*/
+
 }
-.al-l {
-  text-align: left;
+ul li ul {
+  padding-top: 10px;
+  font-size: 100%;
 }
-.al-c {
-  text-align: center;
+ul li > ul > li {
+  /*madness*/
+
 }
-.al-r {
-  text-align: right;
+ul li > ul > li > ul > li {
+  /*inception*/
+
 }
-.rel {
-  position: relative;
-}
-.abs {
-  position: absolute;
-}
-.fix {
-  position: fixed;
+ul li > ul > li > ul > li > ul {
+  background: #f5f5f5;
+  padding: 20px 50px 10px;
+  margin-top: 10px;
 }
 /****** Samples ******/
 .box {
@@ -805,72 +948,6 @@ footer:after,
 }
 /******HEADER******/
 /****** FOOTER ******/
-/******STRUCTURE MAKE INTO STRUCTURE******/
-.container {
-  padding: 20px 2%;
-}
-.container-alt {
-  padding: 20px 2%;
-  background: #f5f5f5;
-}
-.row-fluid {
-  width: 100%;
-  margin: 0 0 20px 0;
-}
-/*margin right instead of margin left to do overflow hidden*/
-.row-fluid > [class*="span"] {
-  float: left;
-  margin-right: 2%;
-}
-.row-fluid > [class*="span"].l {
-  margin-right: 0;
-  width: auto;
-  float: none;
-  overflow: hidden;
-}
-/*Use this to set exact percentages and have the last box be ok*/
-.row-fluid > [class*="span"]:last-child {
-  margin-right: 0;
-  width: auto;
-  float: none;
-  overflow: hidden;
-}
-.row-fluid .span1 {
-  width: 6.515151511818182%;
-}
-.row-fluid .span2 {
-  width: 14.999999993333335%;
-}
-.row-fluid .span3 {
-  width: 23.49999999%;
-}
-.row-fluid .span4 {
-  width: 31.99999998666667%;
-}
-.row-fluid .span5 {
-  width: 39.66666665%;
-}
-.row-fluid .span6 {
-  width: 48.99999998%;
-}
-.row-fluid .span7 {
-  width: 56.33333331%;
-}
-.row-fluid .span8 {
-  width: 64.66666664%;
-}
-.row-fluid .span9 {
-  width: 72.99999997%;
-}
-.row-fluid .span10 {
-  width: 81.3333333%;
-}
-.row-fluid .span11 {
-  width: 89.66666663000001%;
-}
-.row-fluid .span12 {
-  width: 97.99999996%;
-}
 @media (max-width: 959px) {
   /*margin right instead of margin left to do overflow hidden*/
   .row-fluid > [class*="span"] {

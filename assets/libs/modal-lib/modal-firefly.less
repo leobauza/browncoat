@@ -5,6 +5,15 @@
  * firefly theme dependencies
  * =============================================================
  */
+
+/* 
+ * =============================================================
+ * 
+ * DO NOT DO MODALS THIS WAY DOOOOOOO NOOOOOOOOOT DOOOOO THISSSSS!!!!!!!!!!!!! 
+ * MOVE THIS SHIIIIIIIIIIT TO SOME APPLICATION SPECIFIC LESS THIS IS AWFUL
+ * 
+ * =============================================================
+ */
 .modal-cont {
 	display:none;
 	position:absolute;
@@ -12,8 +21,7 @@
 	left:0;
 	.square(100%,100%);
 }
-
-.modal-main {
+.modal-inner {
 	position:absolute;
 	top:30px;
 	left:50%;
@@ -40,7 +48,6 @@
 		}
 	}
 }
-
 .overlay {
 	z-index:100;
 	display:none;
@@ -53,3 +60,91 @@
 		background:fade(@black,90%);
 	}
 }
+
+
+
+
+/* 
+ * =============================================================
+ * 
+ * ACTUAL CODE FOR MODALS
+ * 
+ * =============================================================
+ */
+.modal {
+	.modal-header {
+		background:@dark-gray;
+		color:@white;
+		padding:10px;
+	}
+	.modal-body {
+		background:@lighter-gray;
+		color:@dark-gray;
+		padding:10px;
+	}
+	.modal-footer {
+		background:@gray;
+		color:@white;
+		padding:10px;
+	}
+}
+
+
+.modal-main {
+	border:1px solid @light-gray;
+	.modal-header {
+		#gradients > .main-gradient();
+		color:@white;
+		padding:10px;
+	}
+	.modal-body {
+		background:@white;
+		color:@dark-gray;
+		padding:10px;
+	}
+	.modal-footer {
+		background:@gray;
+		color:@white;
+		padding:10px;
+	}
+}
+
+.modal-warning {
+	border:1px solid @light-gray;
+	.modal-header {
+		#gradients > .gradify(lighten(@warning,7%), darken(@warning,10%);
+		color:@white;
+		padding:10px;
+	}
+	.modal-body {
+		background:@white;
+		color:@dark-gray;
+		padding:10px;
+	}
+	.modal-footer {
+		background:@light-gray;
+		color:@black;
+		padding:10px;
+	}
+}
+
+.modal-success {
+	border:1px solid @light-gray;
+	.modal-header {
+		#gradients > .gradify(lighten(@success,7%), darken(@success,10%);
+		color:@white;
+		padding:10px;
+	}
+	.modal-body {
+		background:@white;
+		color:@dark-gray;
+		padding:10px;
+	}
+	.modal-footer {
+		background:@light-gray;
+		color:@black;
+		padding:10px;
+	}
+}
+
+

@@ -16,7 +16,7 @@
 	?>
 	
 	<section data-modal="river" class="modal-cont">
-		<aside class="modal-main ">
+		<aside class="modal-inner ">
 			<header>
 				<h2>river processed</h2>
 			</header>
@@ -31,7 +31,7 @@
 	<div class="overlay dark" data-modal='river'></div>
 
 	<section data-modal="wiper" class="modal-cont">
-		<aside class="modal-main ">
+		<aside class="modal-inner">
 			<header>
 				<h2>Wiper Modal</h2>
 			</header>

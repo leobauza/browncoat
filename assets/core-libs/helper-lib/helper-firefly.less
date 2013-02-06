@@ -85,6 +85,19 @@
 		background: linear-gradient(to bottom,  @top 0%,@bottom 100%);
 		*filter: e(%("progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#%s', endColorstr='#%s')", @ms-top, @ms-bottom));
 	}
+	.gradify(@top, @bottom){
+		//Hack for IE parcing, strip out # of the beginning of the HEX color and pass it to the LESS parcer
+		@ms-top: ~`"@{top}".slice(1)`;
+		@ms-bottom: ~`"@{bottom}".slice(1)`;
+		background: @bottom;
+		background: -moz-linear-gradient(top,  @top 0%, @bottom 100%);
+		background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,@top), color-stop(100%,@bottom));
+		background: -webkit-linear-gradient(top,  @top 0%,@bottom 100%);
+		background: -o-linear-gradient(top,  @top 0%,@bottom 100%);
+		background: -ms-linear-gradient(top,  @top 0%,@bottom 100%);
+		background: linear-gradient(to bottom,  @top 0%,@bottom 100%);
+		*filter: e(%("progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#%s', endColorstr='#%s')", @ms-top, @ms-bottom));
+	}
 }
 
 //IE 

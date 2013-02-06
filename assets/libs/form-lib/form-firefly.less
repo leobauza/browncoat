@@ -6,17 +6,30 @@
  */
 form {
 	.form-group {
-		
+		background:@off-white;
+		padding:10px;
+		border:1px solid @light-gray;
+		margin:0 0 5px;
 	}
 	.input-group {
 		
 	}
 	.radio-group {
+		&.horizontal {
+			float:left;
+			margin:0 5px 0 0;
+			&:last-child {
+				margin:0;
+			}
+		}
 		label {
 			float:left;
 		}
 		input[type="radio"]{
 			float:left;
+		}
+		[data-input="radio"]{
+			
 		}
 	}
 	label, input, textarea, button, select {

@@ -7,77 +7,29 @@
  */
 
 //colour-lib include
-@import "../libs/colour-lib/colour-test.less";
+@import "../core-libs/colour-lib/colour-firefly.less";
 //core-lib include
-@import "../libs/core-lib/core-test.less";
+@import "../core-libs/core-lib/core-firefly.less";
 //helper-lib include
-@import "../libs/helper-lib/helper-test.less";
+@import "../core-libs/helper-lib/helper-firefly.less";
 //structure-lib include
-@import "../libs/structure-lib/structure-test.less";
+@import "../core-libs/structure-lib/structure-firefly.less";
 //text-lib include
-@import "../libs/text-lib/text-test.less";
+@import "../core-libs/text-lib/text-firefly.less";
 //base-lib include
-@import "../libs/base-lib/base-test.less";
+@import "../libs/base-lib/base-firefly.less";
 //btn-lib include
-@import "../libs/btn-lib/btn-test.less";
+@import "../libs/btn-lib/btn-firefly.less";
 //callout-lib include
-@import "../libs/callout-lib/callout-test.less";
+@import "../libs/callout-lib/callout-firefly.less";
 //modal-lib include
-@import "../libs/modal-lib/modal-test.less";
+@import "../libs/modal-lib/modal-firefly.less";
 //form-lib include
-@import "../libs/form-lib/form-test.less";
+@import "../libs/form-lib/form-firefly.less";
+//list-lib include
+@import "../libs/list-lib/list-firefly.less";
 
-/****** LISTS MAKE INTO LIST LIB******/
-ul, ol {
-	padding: 0;
-	margin: 0;
-}
-ul ul,
-ul ol,
-ol ol,
-ol ul {
-	margin-bottom: 0;
-}
-ul {
-	list-style: none;
-}
-ol {
-	list-style: decimal;
-}
-li {
-	line-height: 1;
-}
 
-/******clearfix ******/
-
-header,
-footer,
-.row-fluid,
-.group,
-.form-group,
-.input-group,
-[class*="-group"] {
-	zoom:1;
-	&:before {
-		display: table;
-		content: "";
-	}
-	&:after {
-		display: table;
-		content: "";
-		clear:both;
-	}
-}
-
-/****** HELPERS MAKE INTO HELPERS LIB******/
-.bump { font-size:1.4em; }
-.unbump { font-size:.75em; }
-.al-l { text-align:left; }
-.al-c { text-align:center; }
-.al-r { text-align:right; }
-.rel { position:relative; }
-.abs { position:absolute; }
-.fix { position:fixed; }
 
 /****** Samples ******/
 .box {
@@ -104,84 +56,6 @@ footer,
 
 /****** FOOTER ******/
 
-
-
-/******STRUCTURE MAKE INTO STRUCTURE******/
-.container {
-	padding:20px @column-gutter;
-}
-.container-alt {
-	padding:20px @column-gutter;
-	background:@bg-colour-two;
-}
-
-.row-fluid {
-	width:100%;
-	margin:@b-margin;
-}
-
-/*margin right instead of margin left to do overflow hidden*/
-.row-fluid > [class*="span"] {
-	float: left;
-	margin-right: @column-gutter;
-	&.l {
-		margin-right: 0;
-		.overflow;
-	}
-}
-
-/*Use this to set exact percentages and have the last box be ok*/
-.row-fluid > [class*="span"]:last-child {
-	margin-right: 0;
-	.overflow;
-}
-
-.row-fluid .span1 {
-	width: @column-width + @column-gutter/11;
-}
-.row-fluid .span2 {
-	width: @column-width * 2 + @column-gutter + @column-gutter/6;
-}
-.row-fluid .span3 {
-	width: @column-width * 3 + @column-gutter * 2 + @column-gutter/4;
-}
-.row-fluid .span4 {
-	width: @column-width * 4 + @column-gutter * 3 + @column-gutter/3;
-}
-.row-fluid .span5 {
-	width: @column-width * 5 + @column-gutter * 4;
-}
-.row-fluid .span6 {
-	width: @column-width * 6 + @column-gutter * 5 + @column-gutter/2;
-}
-.row-fluid .span7 {
-	width: @column-width * 7 + @column-gutter * 6;
-}
-.row-fluid .span8 {
-	width: @column-width * 8 + @column-gutter * 7;
-}
-.row-fluid .span9 {
-	width: @column-width * 9 + @column-gutter * 8;
-}
-.row-fluid .span10 {
-	width: @column-width * 10 + @column-gutter * 9;
-}
-.row-fluid .span11 {
-	width: @column-width * 11 + @column-gutter * 10;
-}
-.row-fluid .span12 {
-	width: @column-width * 12 + @column-gutter * 11;
-}
-
-.in-left {
-	
-}
-.in-right {
-	
-}
-.in-all {
-	
-}
 
 
 @media (max-width: 959px) {
