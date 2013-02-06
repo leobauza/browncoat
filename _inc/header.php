@@ -40,11 +40,28 @@ endif;
 		<?php else: ?>
 			<link rel="stylesheet/less" type="text/css" href="../assets/less/default.reaver.less">
 		<?php endif; ?>
+		<script>
+		less = {
+			env: "development", // or "production"
+			async: false,				// load imports async
+			fileAsync: false,		// load imports async when in a page under 
+													// a file protocol
+			poll: 1000,					// when in watch mode, time in ms between polls
+			functions: {},			// user functions, keyed by name
+			dumpLineNumbers: "comments", // or "mediaQuery" or "all"
+			relativeUrls: false,// whether to adjust url's to be relative
+													// if false, url's are already relative to the
+													// entry less file
+			//rootpath: ":/a.com/"// a path to add on to the start of every url 
+													//resource
+		};
+		</script>
+		</script>
 		<script src="../assets/js/less.js" type="text/javascript"></script>
 	<!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
 	<!--[if lt IE 9]>
 		<link rel="stylesheet" href="../assets/css/styles.css" type="text/css" media="screen" charset="utf-8">
-	  <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+		<script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
 	<![endif]-->
 	<?php else: //not using less.js to compile?>
 		<?php 
@@ -54,7 +71,7 @@ endif;
 			<link rel="stylesheet" href="../assets/css/styles.css" type="text/css" media="screen" charset="utf-8">
 			<!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
 			<!--[if lt IE 9]>
-			  <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+				<script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
 			<![endif]-->
 		<?php elseif(isset($isWiper)): ?>
 			<!-- delete default after simon runs I guess I could set it to do that but I don't know right now-->

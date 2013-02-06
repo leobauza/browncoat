@@ -339,31 +339,6 @@ h6 {
 }
 /* 
  * =============================================================
- * BROWNCOAT SPECIFIC LIBRARY. REAVER GETS KILLED BY REAVERS UPON FINAL EXPORT
- * =============================================================
- */
-.hero {
-  background: #fd4747;
-}
-.hero [class*=row-fluid] {
-  margin: 0;
-}
-.hero .inner {
-  padding: 29px;
-  background: url('/assets/img/app/bg_hero_inner.jpg') 0% 100% repeat-x;
-}
-.hero h1 {
-  color: #ffffff;
-}
-.hero h2 {
-  color: #ffffff;
-}
-.opening {
-  background: #282828;
-  padding: 0 0 40px;
-}
-/* 
- * =============================================================
  * BUTTONS & LINKS
  * =============================================================
  */
@@ -976,6 +951,31 @@ ol li > ol > li > ol > li > ol {
   background: #f5f5f5;
   padding: 20px 50px 10px;
   margin-top: 10px;
+}
+/* 
+ * =============================================================
+ * BROWNCOAT SPECIFIC LIBRARY. REAVER GETS KILLED BY REAVERS UPON FINAL EXPORT
+ * =============================================================
+ */
+.hero {
+  background: #fd4747;
+}
+.hero [class*=row-fluid] {
+  margin: 0;
+}
+.hero .inner {
+  padding: 39px;
+  background: url('/assets/img/app/bg_hero_inner.jpg') 0% 100% repeat-x;
+}
+.hero h1 {
+  color: #ffffff;
+}
+.hero h2 {
+  color: #ffffff;
+}
+.opening {
+  background: #282828;
+  padding: 0 0 40px;
 }
 /****** Samples ******/
 .box {

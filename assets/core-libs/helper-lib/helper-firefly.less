@@ -85,6 +85,14 @@
 		background: linear-gradient(to bottom,  @top 0%,@bottom 100%);
 		*filter: e(%("progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#%s', endColorstr='#%s')", @ms-top, @ms-bottom));
 	}
+	/*
+		apparently this is the proper use for gradify
+		otherwise less.js fucks up and throws an error if you do it inline...
+		@light:lighten(@success,7%);
+		@dark:darken(@success,10%);
+		#gradients > .gradify(@light, @dark);
+	*/
+	
 	.gradify(@top, @bottom){
 		//Hack for IE parcing, strip out # of the beginning of the HEX color and pass it to the LESS parcer
 		@ms-top: ~`"@{top}".slice(1)`;

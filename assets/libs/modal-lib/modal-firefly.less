@@ -112,7 +112,9 @@
 .modal-warning {
 	border:1px solid @light-gray;
 	.modal-header {
-		#gradients > .gradify(lighten(@warning,7%), darken(@warning,10%);
+		@light:lighten(@warning,7%);
+		@dark:darken(@warning,10%);
+		#gradients > .gradify(@light, @dark);
 		color:@white;
 		padding:10px;
 	}
@@ -131,7 +133,10 @@
 .modal-success {
 	border:1px solid @light-gray;
 	.modal-header {
-		#gradients > .gradify(lighten(@success,7%), darken(@success,10%);
+		//apparently this is the proper use for gradify
+		@light:lighten(@success,7%);
+		@dark:darken(@success,10%);
+		#gradients > .gradify(@light, @dark);
 		color:@white;
 		padding:10px;
 	}
