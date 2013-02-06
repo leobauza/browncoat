@@ -127,7 +127,7 @@ if(isset($_POST)) {
 	foreach ($_POST['wash-library'] as $lib => $theme) {
 		if($theme != "none") {
 			//use the info to write out how simon will want these
-			$theme = '"'."../libs/$lib-lib/$lib-$theme.less".'"';
+			$theme = '"'."../core-libs/$lib-lib/$lib-$theme.less".'"';
 			$lib = '"'.$lib.'"';
 			//add each row libraries
 			$theData .= superPrint("  ".$lib . " => " . $theme .",");

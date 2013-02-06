@@ -68,14 +68,64 @@ $title = "river"
 				<a href="#" data-theme="test" class="btn-main">check all test</a>
 
 				<?php
-				//loop through the libs director to extract all the less libraries
+				//loop through the core-libs directory to extract all the less libraries
+				if ($dirRoot = opendir('./assets/core-libs/')) {
+					//echo "Directory handle: $handle\n";
+					//echo "Entries:\n";
+
+					//looop and add all the files in the libs directory
+					while (false !== ($libDir = readdir($dirRoot))) {
+						if ($libDir != "." && $libDir != ".." && $libDir != ".DS_Store") {
+							//echo "<h2>$entry contains:</h2>\n";
+							$libDirSplit = explode("-",$libDir); 
+							echo "<div class='input-group'>";//open input group
+							echo "<h3>$libDirSplit[0] library</h3>";
+								if ($dirSubRoot = opendir('./assets/core-libs/'.$libDir)) {
+								while (false !== ($libSubDir = readdir($dirSubRoot))) {
+									if($libSubDir != "." && $libSubDir != ".."){
+										$splitLibSubDir = explode(".", $libSubDir);
+										$lib_theme = explode("-", $splitLibSubDir[0]);
+										$lib = $lib_theme[0];
+										$theme = $lib_theme[1];
+										echo "<div class='radio-group horizontal'>";
+										if($lib == "text" || $lib == "colour" || $lib == "structure" || $lib == "helper" || $lib == "core"):
+											//the four libraries that belong to wash that make up the core of less and color in both spellings just couse
+											echo '<input type="radio" name="wash-library['.$lib.']" value="'.$theme.'" />';
+										else:
+											//otherwise add to serenity arr
+											echo '<input type="radio" name="serenity-library['.$lib.']" value="'.$theme.'" />';
+										endif;
+										echo "<label>$theme</label>";
+										echo "</div>"; //close the radio group
+									}
+								}
+								closedir($dirSubRoot);
+							}
+							if($libDirSplit[0] == "text" || $libDirSplit[0] == "colour" || $libDirSplit[0] == "structure" || $libDirSplit[0] == "helper" || $libDirSplit[0] == "core"):
+								echo '<div class="radio-group horizontal"><input type="radio" name="wash-library['.$libDirSplit[0].']" value="none" checked="checked"/><label>none</label></div>';
+							else:
+								echo '<div class="radio-group horizontal"><input type="radio" name="serenity-library['.$libDirSplit[0].']" value="none" checked="checked"/><label>none</label></div>';
+							endif;
+
+							echo "</div>";//close input group
+						}
+					}
+
+					closedir($dirRoot);
+				}
+				?>
+
+
+
+				<?php
+				//loop through the libs directory to extract all the less libraries
 				if ($dirRoot = opendir('./assets/libs/')) {
 					//echo "Directory handle: $handle\n";
 					//echo "Entries:\n";
 
 					//looop and add all the files in the libs directory
 					while (false !== ($libDir = readdir($dirRoot))) {
-						if ($libDir != "." && $libDir != "..") {
+						if ($libDir != "." && $libDir != ".." && $libDir != ".DS_Store") {
 							//echo "<h2>$entry contains:</h2>\n";
 							$libDirSplit = explode("-",$libDir); 
 							echo "<div class='input-group'>";//open input group
@@ -114,6 +164,8 @@ $title = "river"
 					closedir($dirRoot);
 				}
 				?>
+
+
 
 				<button id="river-submit" data-ajax="river" class="btn-gray large" type="submit" name="submit" value="submit">Submit</button>
 			</form>
