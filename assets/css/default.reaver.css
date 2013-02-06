@@ -306,7 +306,7 @@ h3,
 h4,
 h5,
 h6 {
-  margin: 0 0 .25em;
+  margin: 0 0 .45em;
   font-weight: 700;
   text-rendering: optimizelegibility;
   line-height: 1.2em;
@@ -320,22 +320,22 @@ h6 a {
   font-weight: normal;
 }
 h1 {
-  font-size: 3.8em;
+  font-size: 4.8em;
 }
 h2 {
-  font-size: 2.6em;
+  font-size: 3.6em;
 }
 h3 {
-  font-size: 1.8em;
+  font-size: 2.8em;
 }
 h4 {
-  font-size: 1.6em;
+  font-size: 2.2em;
 }
 h5 {
-  font-size: 1.4em;
+  font-size: 1.8em;
 }
 h6 {
-  font-size: 1.3em;
+  font-size: 1.4em;
 }
 /* 
  * =============================================================
@@ -957,6 +957,12 @@ ol li > ol > li > ol > li > ol {
  * SECTIONS
  * =============================================================
  */
+/*
+
+SOME OF THIS STUFF IS WAYYYYYY TO SITE SPECIFIC 
+let's figure out a way to move that somewhere where it can be destroyed
+
+*/
 .hero {
   background: #fd4747;
 }
@@ -971,6 +977,10 @@ ol li > ol > li > ol > li > ol {
 }
 .hero h2 {
   color: #ffffff;
+}
+.opening {
+  background: #282828;
+  padding: 0 0 40px;
 }
 /****** Samples ******/
 .box {
