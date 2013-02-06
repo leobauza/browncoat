@@ -12,10 +12,6 @@ ol ol,
 ol ul {
 	margin-bottom: 0;
 }
-ol {
-	list-style: decimal;
-	margin: 0;
-}
 
 ul {
 	font-size:1.4em;
@@ -54,3 +50,45 @@ ul {
 		}
 	}
 }
+
+ol {
+	font-size:1.4em;
+	padding:0 0 0 20px;
+	margin:0;
+	list-style:decimal;
+	li {
+		line-height: 1;
+		margin:0 0 10px;
+		/*all nested*/
+		ol {
+			padding-top:10px;
+			font-size:100%;//makes all nested ol's be the same size
+			li {
+				
+			}
+		}
+		/*expert*/
+		&>ol {
+			list-style:lower-latin;
+			&>li {
+				/*madness*/
+				&>ol {
+					list-style:lower-alpha;
+					&>li {
+						/*inception*/
+						&>ol {
+							list-style:katakana;
+							background:@off-white;
+							padding:20px 50px 10px;
+							margin-top:10px;
+							&>li {
+								
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+

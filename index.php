@@ -245,7 +245,8 @@ LISTS
 <section class="container">
 	<h2></h2>
 	<section class="row-fluid">
-		<div class="span4">
+		<!-- unordered lists -->
+		<div class="span6">
 			<!-- ONE LEVEL -->
 			<h3>Unordered List (Basic)</h3>
 			<ul>
@@ -325,11 +326,85 @@ LISTS
 			</ul>
 			<!-- out of the dream -->
 		</div>
-		<div class="span4">
-
-		</div>
-		<div class="span4">
-
+		<!-- ordered lists -->
+		<div class="span6">
+			<!-- ONE LEVEL -->
+			<h3>ordered List (Basic)</h3>
+			<ol>
+				<li>item one</li>
+				<li>item two</li>
+				<li>item three</li>
+				<li>item four</li>
+			</ol>
+			<!-- TWO LEVELS -->
+			<h3>ordered List (Expert)</h3>
+			<ol>
+				<li>item one</li>
+				<li>item two</li>
+				<li>item three
+						<!-- level two -->
+						<ol>
+							<li>nested item one</li>
+							<li>nested item two</li>
+							<li>nested item three</li>
+							<li>nested item four</li>
+						</ol>
+				</li>
+				<li>item four</li>
+			</ol>
+			<!-- THREE LEVELS -->
+			<h3>ordered List (Madness)</h3>
+			<ol>
+				<li>item one</li>
+				<li>item two</li>
+				<li>item three
+						<!-- level two -->
+						<ol>
+							<li>nested item one</li>
+							<li>nested item two</li>
+							<li>nested item three
+								<!-- level three -->
+								<ol>
+									<li>nested nested item one</li>
+									<li>nested nested item two</li>
+									<li>nested nested item three</li>
+								</ol>
+							</li>
+							<li>nested item four</li>
+						</ol>
+				</li>
+				<li>item four</li>
+			</ol>
+			<!-- INCEPTION -->
+			<h3>ordered List (INCEPTION BRAMMMMMMM)</h3>
+			<ol>
+				<li>item one</li>
+				<li>item two</li>
+				<li>item three
+						<!-- level two -->
+						<ol>
+							<li>nested item one</li>
+							<li>nested item two</li>
+							<li>nested item three
+								<!-- level three -->
+								<ol>
+									<li>nested nested item one</li>
+									<li>nested nested item two
+										<!-- level inception -->
+										<ol>
+											<li>inception nested nested item one</li>
+											<li>inception nested nested item two</li>
+											<li>inception nested nested item three</li>
+										</ol>
+									</li>
+									<li>nested nested item three</li>
+								</ol>
+							</li>
+							<li>nested item four</li>
+						</ol>
+				</li>
+				<li>item four</li>
+			</ol>
 		</div>
 	</section>
 </section>

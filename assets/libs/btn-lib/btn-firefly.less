@@ -41,16 +41,16 @@
 .btn-secondary {
 	#gradients > .secondary-gradient();
 	color:@btn-type;
-	border:1px solid @brand;
-	border-bottom:1px solid darken(@brand,10%);
+	border:1px solid @brand-alt;
+	border-bottom:1px solid darken(@brand-alt,10%);
 	&:hover {
-		background:@brand;
+		background:@brand-alt;
 		color:@btn-type;
 	}
 	&:active, &.active {
 		#gradients > .secondary-gradient();
-		#CSS3 > .inset-box-shadow( inset 0 5px 10px darken(@brand,10%) );
-		border:1px solid darken(@brand,10%);
+		#CSS3 > .inset-box-shadow( inset 0 5px 10px darken(@brand-alt,10%) );
+		border:1px solid darken(@brand-alt,10%);
 	}
 }
 

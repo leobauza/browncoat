@@ -59,7 +59,7 @@
 		background: linear-gradient(to bottom,  @top 0%,@bottom 100%);
 		*filter: e(%("progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#%s', endColorstr='#%s')", @ms-top, @ms-bottom));
 	}
-	.secondary-gradient(@top:lighten(@brand,8%), @bottom:lighten(@brand, 2%)) {
+	.secondary-gradient(@top:lighten(@brand-alt,8%), @bottom:lighten(@brand-alt, 2%)) {
 		//Hack for IE parcing, strip out # of the beginning of the HEX color and pass it to the LESS parcer
 		@ms-top: ~`"@{top}".slice(1)`;
 		@ms-bottom: ~`"@{bottom}".slice(1)`;
