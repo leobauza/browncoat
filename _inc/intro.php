@@ -8,7 +8,7 @@
 				<a href="#" class="btn-secondary large">Get Started</a>
 			</article>
 			<aside class="span5">
-				<img src="../assets/img/browncoat/platy.png" alt="Platy">
+				<img src="../assets/img/app/platy.png" alt="Platy">
 			</aside>
 		</div>
 	</div>
