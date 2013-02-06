@@ -7,8 +7,36 @@ $title = "home"; //this is backed up by a generic title set in kaylee.php or a b
 
 <?php include('_inc/header.php'); ?> 
 
-<section class="opening">
+<section class="reverse">
 	<?php include('_inc/intro.php'); ?> 
+	<div class="container">
+		<section class="row-fluid">
+			<div class="span6">
+				<h1>A Reversed Row</h1>
+				<h2>with reversed type</h2>
+				<h3>all the types...</h3>
+				<h4>heading fo'</h4>
+				<h5>heading five</h5>
+				<h6>even h6's</h6>
+				<p>paragraphs too</p>
+				<a href="#" class="btn-main large">not buttons tho</a>
+				<a href="#" class="btn-gray large">gray one too</a>
+				<a href="#" class="btn-secondary large">large btns</a>
+			</div>
+			<div class="span6">
+				<h1>A Reversed Row</h1>
+				<h2>with reversed type</h2>
+				<h3>all the types...</h3>
+				<h4>heading fo'</h4>
+				<h5>heading five</h5>
+				<h6>even h6's</h6>
+				<p>paragraphs too</p>
+				<a href="#" class="btn-main small">not buttons tho</a>
+				<a href="#" class="btn-gray small">gray one too</a>
+				<a href="#" class="btn-secondary small">small btns</a>
+			</div>
+		</section>
+	</div>
 </section>
 
 

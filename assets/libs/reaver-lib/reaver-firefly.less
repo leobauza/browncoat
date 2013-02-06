@@ -7,6 +7,7 @@
  */
 
 .hero {
+	text-align:center;
 	background:@brand;
 	[class*=row-fluid] {
 		margin:0;
@@ -22,9 +23,18 @@
 	h2 {
 		color:@white;
 	}
+	img {
+		display:block;
+		margin:0 auto;
+	}
+	[class*=btn-] {
+		margin:0 auto;
+	}
 }
-.opening {
+.reverse {
 	background:@bg-dark;
-	padding:0 0 40px;
+	h1,h2,h3,h4,h5,h6,p {
+		color:@white;
+	}
 }
 

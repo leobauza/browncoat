@@ -34,7 +34,11 @@ endif;
 	<!-- styles -->
 
 	<?php if(isset($useless) && $useless == true): ?>
-		<!-- use less js compiling and have ie fallback with css -->
+		<!-- 
+		use less js compiling and have ie fallback with css 
+		you should never use less js in prod...so that ie fallback shouldn't be there
+		because you should never set up stuff in ie
+		-->
 		<?php if($hasContent == true && !isset($isWiper) && !isset($isRiver)): ?>
 			<link rel="stylesheet/less" type="text/css" href="../assets/less/styles.less">
 		<?php else: ?>
