@@ -21,65 +21,105 @@
  */
 
 (function( $ ) {
-	
-	$.fn.bcModals = function(options) {
-		
-		
-		//default ID declared
-		var $modalID = 0;
-		return this.each(function() {
-			$modalID = $modalID + 1;
-			//change this to jquery's way of doing it which is right above
-			var
-				//the modal
-				$modal = $(this),
-				//if there are data attributes grab em'
-				$data = $(this).data();
-				//the required parent
-				$parent = $modal.closest('[data-role=parent]'),
-				//the required trigger
-				$dataTrigger = $parent.find('[data-role=trigger]')
-			;
 
-			//data comes in plugin overlay event and id
-
-			//default settings
-			var settings = $.extend( {
-				'modalOverlay' : ($data.overlay) ? $data.overlay : 'dark',
-				'modalEvent' : ($data.event) ? $data.event : 'onclick',
-				'modalID' : ($data.id) ? $data.id : $modalID + 1,
-				'modalHeight' : $modal.height()
-			}, options);
-
-			function overlayClick(){
-				$("#" + settings.modalID + ".overlay").on("click", function(e){
-					$(this).remove();
-					$modal.hide();
+	var Modal = function (element, options) {
+		this.options = $.extend({}, $.fn.affix.settings, options)
+		this.$window = $(window)
+			.on('scroll.affix.data-api', $.proxy(this.checkPosition, this))
+			.on('click.affix.data-api',	 $.proxy(function () { setTimeout($.proxy(this.checkPosition, this), 1) }, this))
+		this.$element = $(element)
+		this.checkPosition()
+	}
+	//closing modals with overlay click
+	function overlayClick(modal, modalID){
+		$("#" + modalID + ".overlay").on("click", function(e){
+			$(this).remove();
+			modal.hide();
+			e.preventDefault();
+		});
+	}
+	//default ID declared
+	var $modalID = 0;
+	//methods
+	var methods = {
+		click : function( options ) { 
+			console.log("called click modal");
+			return this.each(function() {
+				$modalID = $modalID + 1;
+				var
+					//the modal
+					$modal = $(this),
+					//if there are data attributes grab em'
+					$data = $(this).data();
+					//the required parent
+					$parent = $modal.closest('[data-role=parent]'),
+					//the required trigger
+					$dataTrigger = $parent.find('[data-role=trigger]')
+					//default settings :: data comes in plugin overlay event and id
+				;
+				var settings = $.extend( {
+						'modalOverlay' : ($data.overlay) ? $data.overlay : 'dark',
+						'modalEvent' : ($data.event) ? $data.event : 'onclick',
+						'modalID' : ($data.id) ? $data.id : $modalID + 1,
+						'modalHeight' : $modal.height()
+					}, options);
+					
+				//attach the clicks to each
+				$dataTrigger.on("click",function(e){
+					$(this).closest('[data-role=parent]').find($modal).show().css('margin-top', -(settings.modalHeight/2));
+					$parent.after('<div id="'+ settings.modalID +'" class="overlay ' + settings.modalOverlay + '"></div>');
+					overlayClick($modal, settings.modalID);
 					e.preventDefault();
 				});
-			}
+			});
+		},
+		load : function( options ) {
+			// IS
+			console.log('called load');
 			
-			switch(settings.modalEvent) {
-				case "onclick":
-					$dataTrigger.on("click",function(e){
-						$(this).closest('[data-role=parent]').find($modal).show().css('margin-top', -(settings.modalHeight/2));
-						$parent.after('<div id="'+ settings.modalID +'" class="overlay ' + settings.modalOverlay + '"></div>');
-						overlayClick();
-						e.preventDefault();
-					});
-				break;
-				case "onhover":
-
-				break;
-				default:
-					$modal.show().css('margin-top', -(settings.modalHeight/2));
-					$parent.after('<div id="'+ settings.modalID +'" class="overlay ' + settings.modalOverlay + '"></div>');
-					overlayClick();
-				break;
-			}		
-		
-		});
-		
+			return this.each(function() {
+				$modalID = $modalID + 1;
+				var
+					//the modal
+					$modal = $(this),
+					//if there are data attributes grab em'
+					$data = $(this).data();
+					//the required parent
+					$parent = $modal.closest('[data-role=parent]'),
+					//the required trigger
+					$dataTrigger = $parent.find('[data-role=trigger]')
+					//default settings :: data comes in plugin overlay event and id
+				;
+				var settings = $.extend( {
+						'modalOverlay' : ($data.overlay) ? $data.overlay : 'dark',
+						'modalEvent' : ($data.event) ? $data.event : 'onclick',
+						'modalID' : ($data.id) ? $data.id : $modalID + 1,
+						'modalHeight' : $modal.height()
+					}, options);
+				//attach the clicks to each
+				
+				$modal.show().css('margin-top', -(settings.modalHeight/2));
+				$parent.after('<div id="'+ settings.modalID +'" class="overlay ' + settings.modalOverlay + '"></div>');
+				overlayClick($modal, settings.modalID);
+				
+			});
+		},
+		hover : function( ) { 
+			console.log("write hover code");
+		}
+	};
+	
+	
+	$.fn.bcModals = function( method ) {
+		// Method calling logic
+		if ( methods[method] ) {
+			return methods[ method ].apply( this, Array.prototype.slice.call( arguments, 1 ));
+		} else if ( typeof method === 'object' || ! method ) {
+			//click is default
+			return methods.click.apply( this, arguments );
+		} else {
+			$.error( 'Method ' +	method + ' does not exist on jQuery.tooltip' );
+		}
 	};
 })( jQuery );
 
@@ -115,7 +155,10 @@ $(function(){
 	modalHeight = height of modal for positioning
 	*/
 	
-	$('[data-plugin=modal]').bcModals().css('border-color','yellow');
+	$('[data-plugin="modal"]').each(function(){
+		var data = $(this).data();
+		$(this).bcModals(data.event);//.css('border-color','yellow');
+	});
 	
 	
 	
