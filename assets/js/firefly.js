@@ -21,16 +21,49 @@
  */
 
 (function( $ ) {
+	
+	var methods = {
+		init : function( options ) { 
+			// THIS 
+		},
+		show : function( ) {
+			// IS
+		},
+		hide : function( ) { 
+			// GOOD
+		},
+		update : function( content ) { 
+			// !!! 
+		}
+	};
+	
+	
 	$.fn.bcModals = function(options) {
+		
+		// Method calling logic (which I admit I dont understand AT ALL)
+		if ( methods[method] ) {
+			return methods[ method ].apply( this, Array.prototype.slice.call( arguments, 1 ));
+		} else if ( typeof method === 'object' || ! method ) {
+			return methods.init.apply( this, arguments );
+		} else {
+			$.error( 'Method ' +	method + ' does not exist on jQuery.tooltip' );
+		}
+		
+		
+		
 		//default ID declared
 		var $modalID = 0;
 		return this.each(function() {
 			$modalID = $modalID + 1;
 			//change this to jquery's way of doing it which is right above
 			var
+				//the modal
 				$modal = $(this),
+				//if there are data attributes grab em'
 				$data = $(this).data();
+				//the required parent
 				$parent = $modal.closest('[data-role=parent]'),
+				//the required trigger
 				$dataTrigger = $parent.find('[data-role=trigger]')
 			;
 
@@ -90,11 +123,14 @@ $(function(){
 	- they can take data-attr to set the options 
 	- options can be set here
 	
-	options:
-	data-plugin = modal
-	data-id = unique ID //for overlay closing
+	options in mark up:
+	data-plugin = modal 
+	data-id = unique ID
+	data-overlay = light or dark overlay
+	data-event = onclick onhover onload
+	
 	==========
-	roles:
+	related roles:
 	data-role = parent //parent of the modal
 	data-role = trigger
 	==========
@@ -105,7 +141,7 @@ $(function(){
 	modalHeight = height of modal for positioning
 	*/
 	
-	$('[data-plugin=modal]').bcModals();
+	$('[data-plugin=modal]').bcModals().css('border-color','yellow');
 	
 	
 	
