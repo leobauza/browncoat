@@ -11,7 +11,6 @@ $(function(){
 		this.console = {log: function() {}};
 	}
 
-	console.log("malcolm lives");
 
 /* 
  * =============================================================
