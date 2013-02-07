@@ -110,6 +110,13 @@ $(function(){
 		'modalID':'thePlatypusHasLanded'
 	});
 	
+	
+	$('[data-plugin="modal"]').each(function(){
+		var data = $(this).data();
+		
+		console.log(data.overlay);
+	})
+	
 	//write DATA-API too
 
 	
