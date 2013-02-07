@@ -179,15 +179,15 @@ MODALS
 	<section class="row-fluid-alt">
 		<article class="span4">
 			<div class="modal-parent" data-role="parent">
-				<section class="modal-main" data-plugin="modal" data-type="onclick">
+				<section class="modal-warning variable" data-plugin="modal" data-type="onclick">
 					<header class="modal-header">
-						<h2>FIRST MODAL CLICK</h2>
+						<h2>MODAL CLICK (variable)</h2>
 					</header>
 					<article class="modal-body">
-						Click the overlay to close
+						<p>this is the variable setting of modal. It creates a modal 50% of the screen width and centers it.</p>
 					</article>
 					<footer class="modal-footer">
-						footer
+						Click the overlay to close
 					</footer>
 				</section>
 				<a href="#" class="btn-secondary small" data-role="trigger">modal click</a>
@@ -211,7 +211,7 @@ MODALS
 		</article>
 		<article class="span4">
 			<div class="modal-parent" data-role="parent">
-				<section class="modal-main" data-plugin="modal" data-type="onclick">
+				<section class="modal-main" data-plugin="modal" data-overlay="dark" data-type="onclick">
 					<header class="modal-header">
 						<h2>Third Modal (onclick)</h2>
 					</header>

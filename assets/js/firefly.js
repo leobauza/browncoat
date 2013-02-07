@@ -8,7 +8,7 @@ $(function(){
 	
 	/* 
 	 * =============================================================
-	 * Modals
+	 * Modals (firefly)
 	 * =============================================================
 	 */
 	
@@ -22,11 +22,11 @@ $(function(){
 	==========
 	roles:
 	data-role = parent //parent of the modal
-	data-trigger = unique ID
+	data-role = trigger
 
 
 	*/
-	
+
 	//create unique modal id if none exists
 	var $modalID = 0;
 	$('[data-plugin=modal]').each(function(){
@@ -36,7 +36,7 @@ $(function(){
 			$id = $modal.attr('data-id') || $modalID,
 			$parent = $modal.closest('[data-role=parent]'), //required
 			$overlay = $modal.attr('data-overlay') || "dark",  //light or dark
-			$dataType = $modal.attr('data-type') || "onload",
+			$dataType = $modal.attr('data-type') || "onclick",
 			$dataTrigger = $parent.find('[data-role=trigger]')
 			$height = $modal.height();
 		;
