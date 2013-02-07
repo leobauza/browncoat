@@ -179,7 +179,7 @@ MODALS
 	<section class="row-fluid-alt">
 		<article class="span4">
 			<div class="modal-parent" data-role="parent">
-				<section class="modal-warning variable" data-plugin="modal"  data-event="click">
+				<section class="modal-warning variable" data-plugin="modal"  data-event="load">
 					<header class="modal-header">
 						<h2>MODAL CLICK (variable)</h2>
 					</header>
