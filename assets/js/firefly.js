@@ -34,18 +34,16 @@
 				$dataTrigger = $parent.find('[data-role=trigger]')
 			;
 
-			console.log($data);
+			//data comes in plugin overlay event and id
 
 			//default settings
 			var settings = $.extend( {
-				'modalOverlay' : ($modal.attr('data-overlay')) ? $modal.attr('data-overlay') : 'dark',
-				//should i not name it event??
-				'modalEvent' : ($modal.attr('data-event')) ? $modal.attr('data-event') : 'onclick',
-				'modalID' : ($modal.attr('data-id')) ? $modal.attr('data-id') : $modalID + 1,
+				'modalOverlay' : ($data.overlay) ? $data.overlay : 'dark',
+				'modalEvent' : ($data.event) ? $data.event : 'onclick',
+				'modalID' : ($data.id) ? $data.id : $modalID + 1,
 				'modalHeight' : $modal.height()
 			}, options);
-			
-			
+
 			function overlayClick(){
 				$("#" + settings.modalID + ".overlay").on("click", function(e){
 					$(this).remove();
@@ -107,19 +105,8 @@ $(function(){
 	modalHeight = height of modal for positioning
 	*/
 	
-	$('[data-plugin=modal]').bcModals({
-		'modalID':'thePlatypusHasLanded'
-	});
+	$('[data-plugin=modal]').bcModals();
 	
-	
-	$('[data-plugin="modal"]').each(function(){
-		var data = $(this).data();
-		
-		console.log(data.overlay);
-	})
-	
-	//write DATA-API too
-
 	
 	
 	

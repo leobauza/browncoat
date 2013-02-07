@@ -211,7 +211,7 @@ MODALS
 		</article>
 		<article class="span4">
 			<div class="modal-parent" data-role="parent">
-				<section class="modal-main" data-plugin="modal" data-overlay="dark" data-event="onclick" data-id="crazynessss">
+				<section class="modal-main" data-plugin="modal" data-overlay="dark" data-event="onclick" data-id="myPersonalId">
 					<header class="modal-header">
 						<h2>Third Modal</h2>
 					</header>
