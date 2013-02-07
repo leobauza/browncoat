@@ -107,7 +107,6 @@ $(function(){
 	*/
 	
 	$('[data-plugin=modal]').bcModals({
-		//platypus ID wahooo
 		'modalID':'thePlatypusHasLanded'
 	});
 	
