@@ -32,19 +32,19 @@
 	Plugin.prototype.init = function (modal, data) {
 		//init stuff
 		// this.element, this.option, modal is this.element object, data is the this.element.data()
-		$modal = $(this.element);
-		//data parent in $object form
-		$parent = this.options.modalParent;
-		//data trigger in $object form
-		$trigger = this.options.modalParent.find('[data-role=trigger]');
-		//the event
-		
-		
+		var
+			$modal = $(this.element),
+			//data parent in $object form
+			$parent = this.options.modalParent,
+			//data trigger in $object form
+			$trigger = this.options.modalParent.find('[data-role=trigger]')
+		;
+
 		//log all my options
 		//console.log(this.options);
 
 		//pass my init vars through to other events as need be
-
+		
 		this.click($modal, $parent, $trigger);
 	};
 	
