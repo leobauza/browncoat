@@ -29,11 +29,12 @@
 			//change this to jquery's way of doing it which is right above
 			var
 				$modal = $(this),
+				$data = $(this).data();
 				$parent = $modal.closest('[data-role=parent]'),
 				$dataTrigger = $parent.find('[data-role=trigger]')
-				//$height = $modal.height()
 			;
 
+			console.log($data);
 
 			//default settings
 			var settings = $.extend( {
