@@ -11,6 +11,7 @@ $(function(){
 	 * Modals
 	 * =============================================================
 	 */
+	
 	/*
 
 	options:
@@ -41,7 +42,6 @@ $(function(){
 		;
 		function overlayClick(){
 			$("#" + $id + ".overlay").on("click", function(e){
-				console.log("click");
 				$(this).remove();
 				$modal.hide();
 				e.preventDefault();
