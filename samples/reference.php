@@ -5,7 +5,7 @@ $title = "reference file"; //this is backed up by a generic title set in kaylee.
 
 ?>
 
-<?php include('_inc/header.php'); ?> 
+<?php include('sample_inc/header.php'); ?> 
 
 <section class="container">
 	<h1>Twelve Column Grid</h1>
@@ -194,5 +194,5 @@ $title = "reference file"; //this is backed up by a generic title set in kaylee.
 	</form>
 </section>
 
- <?php include('_inc/footer.php'); ?>
+ <?php include('sample_inc/footer.php'); ?>
 
