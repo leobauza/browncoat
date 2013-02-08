@@ -72,11 +72,11 @@ MODALS
 		</article>
 	</section>
 
-	<pre class="prettyprint linenums">
-		//here is some code
-		$(body).addClass('someClass');
-		var $this = 1+4;
-	</pre>
+<pre class="prettyprint linenums">
+//here is some code
+$(body).addClass('someClass');
+var $this = 1+4;
+</pre>
 
 	<section class="row-fluid-alt">
 		<div class="span4">
