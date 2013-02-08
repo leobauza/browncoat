@@ -133,6 +133,7 @@ MODALS
 -->
 <section class="container">
 	<h2>Modals</h2>
+	<a href="/samples/modals.php" class="btn-secondary large">Modal Sample Page</a>
 	<p>This are for whole pages with overlays and come in multiple sizes and stuff. These are obviously not in action..</p>
 	<section class="row-fluid-alt">
 		<div class="span4">

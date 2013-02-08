@@ -28,6 +28,12 @@
 		};
 		</script>
 		<script src="../assets/js/less.js" type="text/javascript"></script>
+		
+		<!-- pretty code -->
+		<link rel="stylesheet" href="/samples/sample_assets/prettify.css" type="text/css" media="screen" title="no title" charset="utf-8">
+		<script src="/samples/sample_assets/prettify.js" type="text/javascript" charset="utf-8"></script>
+		
+		
 	<!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
 	<!--[if lt IE 9]>
 		<link rel="stylesheet" href="../assets/css/styles.css" type="text/css" media="screen" charset="utf-8">
@@ -43,7 +49,7 @@
 	-->
 </head>
 
-<body>
+<body onload="prettyPrint()">
 	<header class="container-alt">
 		<h4>Using Default Reavers Less...You can sort showing your own libraries until I find an easy way</h4>
 	</header>
