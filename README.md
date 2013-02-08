@@ -1,11 +1,11 @@
-Welcome to browncoat 0.1.0
+Welcome to browncoat 0.1.1
 ==================
 
 
 ## about this project
 This is the first semi workable update.
 
-### instructions for 0.1.0 release
+### instructions for 0.1.1 release
 
 1. clone the repo
 2. browncoat needs to be able to write to a couple files so when running locally be mindful of that. Some other good to knows:
@@ -21,6 +21,10 @@ This is the first semi workable update.
 	- your header is kinda written
 	- your footer is sorta written
 9. feel like this doesn't do a heck of a lot right now!
+
+#### what is new
+- sample page
+- modal plugin
 
 ### inspiration
 
