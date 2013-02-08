@@ -179,7 +179,7 @@ MODALS
 	<section class="row-fluid-alt">
 		<article class="span4">
 			<div class="modal-parent" data-role="parent">
-				<section class="modal-warning variable" data-plugin="modal"  data-event="load">
+				<section class="modal-warning variable" data-plugin="modal" data-overlay="light"  data-event="load">
 					<header class="modal-header">
 						<h2>MODAL CLICK (variable)</h2>
 					</header>
@@ -195,7 +195,7 @@ MODALS
 		</article>
 		<article class="span4">
 			<div class="modal-parent" data-role="parent">
-				<section class="modal-main" data-plugin="modal" data-overlay="light" data-event="click">
+				<section class="modal-main" data-plugin="modal" data-overlay="light" data-event="hover">
 					<header class="modal-header">
 						<h2>Second Modal onload</h2>
 					</header>

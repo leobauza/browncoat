@@ -106,11 +106,5 @@
 
  */
 
-//write data api
-
+//data api built into plugin
 $('[data-plugin=modal]').fireflyModal();
-
-
-
-
-
