@@ -25,7 +25,6 @@
 		this._name = pluginName;
 		this.init($modal, data);
 	}
-	
 	Plugin.prototype = {
 		init : function (modal, data) {
 			// this.element, this.option, modal is this.element object, data is the this.element.data()
