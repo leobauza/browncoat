@@ -72,10 +72,37 @@ MODALS
 		</article>
 	</section>
 
+<h5>HTML structure</h5>
 <pre class="prettyprint linenums">
-//here is some code
-$(body).addClass('someClass');
-var $this = 1+4;
+&lt;div class="modal-parent" data-role="parent"&gt;
+ &lt;section class="modal-main" data-plugin="modal" data-overlay="dark" data-event="click" data-id="myPersonalId"&gt;
+  &lt;header class="modal-header"&gt;
+   &lt;h2&gt;Modal Header Area&lt;/h2&gt;
+  &lt;/header&gt;
+  &lt;article class="modal-body"&gt;
+   Your modals body code
+  &lt;/article&gt;
+  &lt;footer class="modal-footer"&gt;
+   Your modal's footer code
+  &lt;/footer&gt;
+ &lt;/section&gt;
+ &lt;a href="#" class="btn-secondary small" data-role="trigger"&gt;modal on click&lt;/a&gt;
+&lt;/div&gt;
+</pre>
+
+<h5>LESS</h5>
+<pre class="prettyprint linenums">
+.modal {
+  width: 100px;
+  .nested {
+    width:300px;
+  }
+}
+</pre>
+
+<h5>Javascript</h5>
+<pre class="prettyprint linenums">
+$('.element').fireflyModal();
 </pre>
 
 	<section class="row-fluid-alt">
