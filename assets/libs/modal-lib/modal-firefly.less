@@ -71,8 +71,8 @@
  */
 /*all modals*/
 .modal-parent {
+	position:relative;
 	&> [class*=modal] {
-		//top:-999999px;
 		display:none;
 		position:fixed;
 		top:50%;
@@ -97,10 +97,17 @@
 			width:50%;
 			margin:-90px 0 0 -25%;
 		}
+		/*positioning need auto detection for hover*/
+		&.position-top {
+			position:absolute;
+			bottom:100%;
+			top:auto;
+			left:0;
+			margin:0;
+		}
 	}
 	// "limit" class keeps the modal & overlay contained to this parent
 	&.limit {
-		position:relative;
 		.overlay {
 			position:absolute;
 		}

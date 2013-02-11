@@ -37,9 +37,6 @@
 				theEvent = this.options.modalEvent
 			;
 			
-			//display none and top back to normal
-			
-			
 			//pass my init vars through to other events as need be
 			if(!theEvent || theEvent == "click") {
 				this.modalClick($modal, $parent, $trigger);
@@ -62,12 +59,13 @@
 			});
 		}
 		, modalHover : function(modal, parent, trigger){
-			trigger.hover(
+			//write options for hover...
+			parent.hover(
 			function(){
-				$(this).closest('[data-role=parent]').find(modal).show();
+				$(this).find(modal).show();
 			},
 			function() {
-				$(this).closest('[data-role=parent]').find(modal).hide();
+				$(this).find(modal).hide();
 			});
 		}
 		, modalLoad : function(modal, parent) {
