@@ -72,6 +72,7 @@
 /*all modals*/
 .modal-parent {
 	&> [class*=modal] {
+		//top:-999999px;
 		display:none;
 		position:fixed;
 		top:50%;
@@ -85,15 +86,26 @@
 			margin:-100px 0 0 -400px;
 		}
 		&.medium {
-			width:800px;
+			width:600px;
 			margin:-100px 0 0 -400px;
 		}
 		&.small {
-			
+			width:400px;
+			margin:-100px 0 0 -400px;
 		}
 		&.variable {
 			width:50%;
 			margin:-90px 0 0 -25%;
+		}
+	}
+	// "limit" class keeps the modal & overlay contained to this parent
+	&.limit {
+		position:relative;
+		.overlay {
+			position:absolute;
+		}
+		&> [class*=modal] {
+			position:absolute;
 		}
 	}
 }

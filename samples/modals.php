@@ -24,7 +24,7 @@ MODALS
 	<section class="row-fluid-alt">
 		<article class="span4">
 			<div class="modal-parent" data-role="parent">
-				<section class="modal-success variable" data-plugin="modal" data-overlay="dark"  data-event="hover">
+				<section class="modal-success variable" data-plugin="modal" data-overlay="dark"	 data-event="hover">
 					<header class="modal-header">
 						<h2>MODAL CLICK (variable)</h2>
 					</header>
@@ -76,15 +76,15 @@ MODALS
 <pre class="prettyprint linenums">
 &lt;div class="modal-parent" data-role="parent"&gt;
  &lt;section class="modal-main" data-plugin="modal" data-overlay="dark" data-event="click" data-id="myPersonalId"&gt;
-  &lt;header class="modal-header"&gt;
-   &lt;h2&gt;Modal Header Area&lt;/h2&gt;
-  &lt;/header&gt;
-  &lt;article class="modal-body"&gt;
-   Your modals body code
-  &lt;/article&gt;
-  &lt;footer class="modal-footer"&gt;
-   Your modal's footer code
-  &lt;/footer&gt;
+	&lt;header class="modal-header"&gt;
+	 &lt;h2&gt;Modal Header Area&lt;/h2&gt;
+	&lt;/header&gt;
+	&lt;article class="modal-body"&gt;
+	 Your modals body code
+	&lt;/article&gt;
+	&lt;footer class="modal-footer"&gt;
+	 Your modal's footer code
+	&lt;/footer&gt;
  &lt;/section&gt;
  &lt;a href="#" class="btn-secondary small" data-role="trigger"&gt;modal on click&lt;/a&gt;
 &lt;/div&gt;
@@ -93,16 +93,23 @@ MODALS
 <h5>LESS</h5>
 <pre class="prettyprint linenums">
 .modal {
-  width: 100px;
-  .nested {
-    width:300px;
-  }
+	width: 100px;
+	.nested {
+		width:300px;
+	}
 }
 </pre>
 
 <h5>Javascript</h5>
 <pre class="prettyprint linenums">
-$('.element').fireflyModal();
+$('[data-plugin=modal]').fireflyModal({
+ modalOverlay : "light",
+ modalEvent : "click",
+ modalID : "platy",
+ modalHeight: "100px"
+ //modalParent...need to figure out a way to specify this
+ //modalParent: $(this).closest('body')
+});
 </pre>
 
 	<section class="row-fluid-alt">
@@ -146,8 +153,28 @@ $('.element').fireflyModal();
 			</section>
 		</div>
 	</section>
+</section>
 
-
+<section class="container">
+	<!-- this modal is container by it's container -->
+	<div class="modal-parent limit" data-role="parent">
+		<p>What ever happened to predictability? The milkman, the paperboy, evening TV. Everywhere you look, everywhere you go, there's a heart, a hand to hold onto. Everywhere you look, everywhere you go. There's a face of somebody who needs you.
+		Everywhere you look, when you're lost out there and you're all alone, a light is waiting to carry you home, Everywhere you look. Everywhere you look.</p>
+		<p>There once was a story about a man who could turn invisible. I thought it was only a story... until it happened to me. Ok, so here's how it works: there's this stuff called Quicksilver that can bend light. Some scientist made it into a synthetic gland, and that's where I came in. See, I was facing life in prison and they were looking for a human experiment. So, we made a deal. They put the gland in my brain; I walk free. The operation was a success... but that's where everything started to go wrong.</p>
+		
+		<section class="modal-main" data-plugin="modal" data-overlay="dark" data-event="click" data-id="myPersonalId">
+			<header class="modal-header">
+				<h2>Modal Header Area</h2>
+			</header>
+			<article class="modal-body">
+				Your modals body code
+			</article>
+			<footer class="modal-footer">
+				Your modal's footer code
+			</footer>
+		</section>
+	<a href="#" class="btn-secondary small" data-role="trigger">modal on click</a>
+	</div>
 </section>
 
 <?php include('sample_inc/footer.php'); ?>

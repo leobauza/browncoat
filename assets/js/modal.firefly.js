@@ -19,8 +19,8 @@
 			'modalOverlay' : (data.overlay) ? data.overlay : 'dark',
 			'modalEvent' : (data.event) ? data.event : 'click',
 			'modalID' : (data.id) ? data.id : modalID,
-			'modalHeight' : $modal.height(),
-			'modalParent' : $modal.closest('[data-role=parent]'),
+			//'modalHeight' : modalHeight,
+			'modalParent' : $modal.closest('[data-role=parent]')
 		}, options) ;
 		this._name = pluginName;
 		this.init($modal, data);
@@ -35,23 +35,29 @@
 				$parent = this.options.modalParent,
 				$trigger = this.options.modalParent.find('[data-role=trigger]'),
 				theEvent = this.options.modalEvent
+				modalHeight = $modal.height();
 			;
+			
+			//display none and top back to normal
+			
+			
 			//pass my init vars through to other events as need be
 			if(!theEvent || theEvent == "click") {
-				this.modalClick($modal, $parent, $trigger);
+				this.modalClick($modal, $parent, $trigger, modalHeight);
 			} else if(theEvent == "hover") {
 				this.modalHover($modal, $parent, $trigger);
 			} else {
 				this.modalLoad($modal, $parent);
 			}
 		}
-		, modalClick : function(modal, parent, trigger) {
+		, modalClick : function(modal, parent, trigger, modalHeight) {
 			var
 				that = this;
 			;
+			
 			trigger.on("click",function(e){
-				$(this).closest('[data-role=parent]').find(modal).show().css('margin-top', -(that.options.height/2));
-				parent.after('<div id="'+ that.options.modalID +'" class="overlay ' + that.options.modalOverlay + '"></div>');
+				$(this).closest('[data-role=parent]').find(modal).show().css('margin-top', -(modalHeight/2) + "px");
+				parent.append('<div id="'+ that.options.modalID +'" class="overlay ' + that.options.modalOverlay + '"></div>');
 				that.modalClose(modal, that.options.modalID);
 				e.preventDefault();
 			});
@@ -102,9 +108,16 @@
 	'modalID' : (data.id) ? data.id : modalID,
 	'modalHeight' : $modal.height(),
 	'modalParent' : $modal.closest('[data-role=parent]'),
+	
  ===========================================================
 
  */
 
 //data api built into plugin
-$('[data-plugin=modal]').fireflyModal();
+$('[data-plugin=modal]').fireflyModal({
+	//modalOverlay : "light",
+	modalEvent : "click",
+	modalID : "platy",
+	modalHeight: "100px"
+	//modalParent: $(this).closest('body')
+});
