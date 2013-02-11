@@ -30,19 +30,6 @@ This is the first semi workable update.
 
 I would never have considered creating any of this had I not come across [bootstrap](http://twitter.github.com/bootstrap/index.html) and [foundation](http://foundation.zurb.com/) which are much more complete frameworks as of January 31th 2012 and if you are looking for something like that you should check it out. They are pretty cool. 
 
-### goals
-
-- create front end frameworks that allows for fast project prototyping.
-- built using PHP, LESS, HTML5, and jQuery.
-- a self destructing outer shell. browncoat is an application that builds a framework from which to start, this means:
-	- browncoat itself has no "core" 
-	- browncoat has a default library built on the firefly theme (the default theme) but that isn't a core from which to work from. Rather just something to make the application have a look. (this default less and scripts destroy themselves after you've run the reavers file)
-	- browncoat's application files (river, kaylee, simon, wiper, reavers) no longer exist in your project after you go through the browncoat workflow to create your framework.
-	- browncoat itself isn't a framework, but a maker of frameworks, granted, if you pick the firefly theme and go through the workflow you will end up with the framework used to build the browncoat front end.
-- has options to include great js libraries such as [isotope.js](http://isotope.metafizzy.co/) and [history.js]( https://github.com/balupton/History.js/) and has options for ajax content loading, etc.
-- comes built it with useful snippets that can be added or deleted when choosing libraries. These snippets are associated with the js libraries they depend on (these are added to malcolm.js) 
-- documentation that normal people can understand. Yet to define a "normal person".
-
 ### who is working on this
 - browncoat will have a host of contributing designers for libraries, icons, etc. for example my bud [Jimmy 'Billy' French](http://billyfrench.com) 
 - The fine people at [saforian](http://saforian.com) are constantly QA'ing this, even when they don't know that they are. I work there, and I start all my projects with where ever this is at.
@@ -107,7 +94,8 @@ simon runs a diagnostic on the installation. He outputs:
 simon has a control panel.
 
 ## reavers (reavers.php)
-reavers destroy all files you no longer need after setting up your project to start working on it. Files and directories destroyed include:
+
+Reavers creates a folder containing your site that you can take away with you. This left behind:
 
 - simon.php
 - river.php
@@ -118,7 +106,7 @@ reavers destroy all files you no longer need after setting up your project to st
 
 ## explain file structure
 
--
+soon...
 
 ``` html
 	<h1>some html</h1>
