@@ -9,7 +9,7 @@ $title = "river"
 <section class="container">
 	<section class="row-fluid">
 		<article class="span8">
-			<form id="river" action="/process-river.php" method="post">
+			<form id="river" action="processors/process-river.php" method="post">
 				<!-- <div class="input-group">
 					<h3>Title</h3>
 					<input type="text" name="general[title]" value=""></input>

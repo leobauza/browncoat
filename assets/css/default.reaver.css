@@ -695,6 +695,9 @@ h6 {
  * =============================================================
  */
 /*all modals*/
+.modal-parent {
+  position: relative;
+}
 .modal-parent > [class*=modal] {
   display: none;
   position: fixed;
@@ -705,18 +708,37 @@ h6 {
   margin: -90px 0 0 -250px;
   /*do sizes make sense?*/
 
+  /*positioning need auto detection for hover*/
+
 }
 .modal-parent > [class*=modal].large {
   width: 800px;
   margin: -100px 0 0 -400px;
 }
 .modal-parent > [class*=modal].medium {
-  width: 800px;
+  width: 600px;
+  margin: -100px 0 0 -400px;
+}
+.modal-parent > [class*=modal].small {
+  width: 400px;
   margin: -100px 0 0 -400px;
 }
 .modal-parent > [class*=modal].variable {
   width: 50%;
   margin: -90px 0 0 -25%;
+}
+.modal-parent > [class*=modal].position-top {
+  position: absolute;
+  bottom: 100%;
+  top: auto;
+  left: 0;
+  margin: 0;
+}
+.modal-parent.limit .overlay {
+  position: absolute;
+}
+.modal-parent.limit > [class*=modal] {
+  position: absolute;
 }
 /*all overlays*/
 .overlay {

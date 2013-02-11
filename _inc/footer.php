@@ -2,7 +2,7 @@
 		<a href="/river.php" class="btn-gray">go to river</a>
 		<a href="/simon.php" class="btn-gray">run simon</a>
 		<a href="/" class="btn-gray">go home</a>
-		<a href="/wiper.php" data-ajax="wiper" class="btn-gray">wipe serenity</a>
+		<a href="processors/wiper.php" data-ajax="wiper" class="btn-gray">wipe serenity</a>
 	</footer>
 
 	<!-- javascript -->
@@ -42,7 +42,7 @@
 				<a href="/river.php" class="btn-main">go to river</a>
 				<a href="/simon.php" class="btn-main">run simon</a>
 				<a href="/" class="btn-main">go home</a>
-				<a href="/wiper.php" data-ajax="wiper" class="btn-main">wipe serenity</a>
+				<a href="processors/wiper.php" data-ajax="wiper" class="btn-main">wipe serenity</a>
 			</footer>
 		</aside>
 	</section>
@@ -64,7 +64,7 @@
 		//river modal 
 		$('[data-ajax="river"]').click(function(e){
 			$("[data-modal='river']").show();
-			var url = "/process-river.php";
+			var url = "processors/process-river.php";
 			$riverRequest = $.ajax({
 				type: "POST",
 				url: url,
