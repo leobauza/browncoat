@@ -1,6 +1,11 @@
 <?php
-//zite so it goes to the bottom of my folder structure.
-if(!mkdir("./zite", 0755)) {
-	die('failed');
+
+$file = 'default.kaylee.php';
+$newfile = 'site/example.php';
+
+if (!copy($file, $newfile)) {
+	echo "failed to copy $file...\n";
 }
+
+
 ?>
