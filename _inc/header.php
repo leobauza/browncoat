@@ -21,7 +21,7 @@ endif;
 <!-- [collect] -->
 <?php
 
-//look up here documents print tag to tag
+//look up here documents print tag to tag or something
 
 ?>
 
