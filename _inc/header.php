@@ -17,17 +17,6 @@ endif;
 //so how about wrapping this entire thing in a function that returns a clean header.
 //then create a clean.header.php with just clean html and it does away with all this if else shit during set up
 
-
-	//maybe????
-	function echoCollect($someString) {
-		echo $someString;
-		if(isset($cleanHeader)):
-			$cleanHeader .= $someString;
-		else:
-			$cleanHeader = $someString;
-		endif;
-	}
-
 ?>
 <!-- [collect] -->
 <?php
