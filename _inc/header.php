@@ -18,12 +18,29 @@ endif;
 //then create a clean.header.php with just clean html and it does away with all this if else shit during set up
 
 
+	//maybe????
+	function echoCollect($someString) {
+		echo $someString;
+		if(isset($cleanHeader)):
+			$cleanHeader .= $someString;
+		else:
+			$cleanHeader = $someString;
+		endif;
+	}
+
+?>
+<!-- [collect] -->
+<?php
+
+//look up here documents print tag to tag
+
 ?>
 
 <!DOCTYPE html>
 <html lang="en">
 <head>
 	<meta charset="utf-8">
+<!-- [collect] -->
 	<title><?php if(isset($title)){print $title; } else { print "page lacks title soldier";} ?></title>
 	<?php if(isset($isResponsive)):?>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
