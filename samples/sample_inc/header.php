@@ -9,7 +9,7 @@
 	<meta name="author" content="">
 
 	<!-- styles -->
-
+		<?php $lessOrCss = "using default.reaver.less" ?>
 		<link rel="stylesheet/less" type="text/css" href="../assets/less/default.reaver.less">
 		<script>
 		less = {
@@ -50,6 +50,7 @@
 </head>
 
 <body onload="prettyPrint()">
+	<p class="warning"><?php echo $lessOrCss; ?></p>
 	<header class="container-alt">
 		<h4>Using Default Reavers Less...You can sort showing your own libraries until I find an easy way</h4>
 	</header>

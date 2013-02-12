@@ -41,8 +41,10 @@ endif;
 		-->
 		<?php if($hasContent == true && !isset($isWiper) && !isset($isRiver)): ?>
 			<link rel="stylesheet/less" type="text/css" href="../assets/less/styles.less">
+			<?php $lessOrCss = "using styles.less" ?>
 		<?php else: ?>
 			<link rel="stylesheet/less" type="text/css" href="../assets/less/default.reaver.less">
+			<?php $lessOrCss = "using default.reaver.less" ?>
 		<?php endif; ?>
 		<script>
 		less = {
@@ -71,6 +73,7 @@ endif;
 		<?php 
 		if($hasContent == true && !isset($isWiper) && !isset($isRiver)):
 		?>
+			<?php $lessOrCss = "using styles.css" ?>
 			<!-- use css and never run the less.js script -->
 			<link rel="stylesheet" href="../assets/css/styles.css" type="text/css" media="screen" charset="utf-8">
 			<!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
@@ -79,9 +82,11 @@ endif;
 			<![endif]-->
 		<?php elseif(isset($isWiper)): ?>
 			<!-- delete default after simon runs I guess I could set it to do that but I don't know right now-->
+			<?php $lessOrCss = "using default.reaver.css" ?>
 			<link rel="stylesheet" href="../assets/css/default.reaver.css" type="text/css" media="screen" charset="utf-8">
 		<?php else: //why is this and the isset wiper the same?? ?>
 			<!-- delete default after simon runs I guess I could set it to do that but I don't know right now-->
+			<?php $lessOrCss = "using default.reaver.css" ?>
 			<link rel="stylesheet" href="../assets/css/default.reaver.css" type="text/css" media="screen" charset="utf-8">
 		<?php endif; ?>
 	<?php endif; ?>
@@ -101,6 +106,9 @@ endif;
 		<?php
 		if(isset($warnings)):
 			print $warnings;
+		endif;
+		if(isset($lessOrCss)):
+			print $lessOrCss;
 		endif;
 		?>
 		<?php if(isset($isRiver)): ?>
