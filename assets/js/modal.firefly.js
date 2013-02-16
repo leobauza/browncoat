@@ -69,9 +69,11 @@
 			});
 		}
 		, modalLoad : function(modal, parent) {
-				modal.show().css('margin-top', -(this.options.modalHeight/2));
+				modal.show();
+				modal.css('margin-top', -(modal.height()/2) + "px");
 				parent.after('<div id="'+ this.options.modalID +'" class="overlay ' + this.options.modalOverlay + '"></div>');
 				this.modalClose(modal, this.options.modalID);
+
 		}
 		, modalClose : function(modal, modalID) {
 			$("#" + modalID + ".overlay").on("click", function(e){

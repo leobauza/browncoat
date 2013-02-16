@@ -180,18 +180,20 @@ MODALS
 	<section class="row-fluid-alt">
 		<article class="span4">
 			<div class="modal-parent" data-role="parent">
-				<section class="modal-warning variable" data-plugin="modal" data-overlay="light"  data-event="load">
+				<section class="modal-main variable" data-plugin="modal" data-overlay="dark" data-event="load" data-id="myPersonalId">
 					<header class="modal-header">
-						<h2>MODAL CLICK (variable)</h2>
+						<h2>welcome to browncoat</h2>
 					</header>
 					<article class="modal-body">
-						<p>this is the variable setting of modal. It creates a modal 50% of the screen width and centers it. Making this a two liner, by adding dummy test. blah blah blah</p>
+						<p>This is the front page of browncoat. You want to head over to river and write out your <strong>kaylee</strong>. file</p>
+						<p>If you have a kaylee file written then head to <strong>simon</strong></p>
 					</article>
 					<footer class="modal-footer">
-						Click the overlay to close
+						<a href="/simon" class="btn-main">go to simon</a>
+						<a href="/river" class="btn-main">go to river</a>
 					</footer>
 				</section>
-				<a href="#" class="btn-secondary small" data-role="trigger">modal click</a>
+				<a href="#" class="btn-secondary small" data-role="trigger">modal on click</a>
 			</div>
 		</article>
 		<article class="span4">
