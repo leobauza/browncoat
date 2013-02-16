@@ -198,7 +198,7 @@ MODALS
 		</article>
 		<article class="span4">
 			<div class="modal-parent" data-role="parent">
-				<section class="modal-main" data-plugin="modal" data-overlay="light" data-event="hover">
+				<section class="modal-main position-top" data-plugin="modal" data-overlay="light" data-event="hover">
 					<header class="modal-header">
 						<h2>Second Modal onload</h2>
 					</header>
