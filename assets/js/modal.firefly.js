@@ -51,7 +51,7 @@
 				that = this;
 			;
 			trigger.on("click",function(e){
-				$(this).closest('[data-role=parent]').find(modal).show().css('margin-top', -(modal.height()/2) + "px");
+				modal.show().css('margin-top', -(modal.height()/2) + "px");
 				parent.append('<div id="'+ that.options.modalID +'" class="overlay ' + that.options.modalOverlay + '"></div>');
 				that.modalClose(modal, that.options.modalID);
 				e.preventDefault();

@@ -56,7 +56,7 @@ MODALS
 		</article>
 		<article class="span4">
 			<div class="modal-parent" data-role="parent">
-				<section class="modal-main" data-plugin="modal" data-overlay="dark" data-event="load" data-id="myPersonalId">
+				<section class="modal-main" data-plugin="modal" data-overlay="dark" data-event="click" data-id="myPersonalId">
 					<header class="modal-header">
 						<h2>welcome to browncoat</h2>
 					</header>
@@ -173,7 +173,7 @@ CODE
 		Everywhere you look, when you're lost out there and you're all alone, a light is waiting to carry you home, Everywhere you look. Everywhere you look.</p>
 		<p>There once was a story about a man who could turn invisible. I thought it was only a story... until it happened to me. Ok, so here's how it works: there's this stuff called Quicksilver that can bend light. Some scientist made it into a synthetic gland, and that's where I came in. See, I was facing life in prison and they were looking for a human experiment. So, we made a deal. They put the gland in my brain; I walk free. The operation was a success... but that's where everything started to go wrong.</p>
 		
-		<section class="modal-main" data-plugin="modal" data-overlay="dark" data-event="click" data-id="myPersonalId">
+		<section class="modal-main" data-plugin="modal" data-overlay="dark" data-event="click" data-id="lowerModal">
 			<header class="modal-header">
 				<h2>Modal Header Area</h2>
 			</header>
