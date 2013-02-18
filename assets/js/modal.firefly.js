@@ -111,10 +111,4 @@
  */
 
 //data api built into plugin
-$('[data-plugin=modal]').fireflyModal({
-	//modalOverlay : "light",
-	//modalEvent : "click",
-	//modalID : "platy",
-	//modalHeight: "100px"
-	//modalParent: $(this).closest('body')
-});
+$('[data-plugin=modal]').fireflyModal();
