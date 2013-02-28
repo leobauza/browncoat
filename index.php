@@ -239,6 +239,7 @@ FORMS
 -->
 <section class="container">
 	<h2>Forms</h2>
+	<a href="/samples/forms.php" class="btn-secondary large">Modal Sample Page</a>
 	<p></p>
 	<section class="row-fluid">
 		<form class="span6">

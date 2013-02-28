@@ -11,11 +11,9 @@ $title = "modal samples"; //this is backed up by a generic title set in kaylee.p
 	<?php include('sample_inc/intro.php'); ?> 
 </section>
 
-
-
 <!-- 
 
-MODALS 
+FORMS 
 
 -->
 <section class="container">
@@ -23,7 +21,7 @@ MODALS
 	<p>some mother-f-ing-forms. And code that prettifies them, because forms are so damn ugly</p>
 
 	<section class="row-fluid">
-		<form class="span6">
+		<form class="span6" data-radios="true">
 			<div class="input-group">
 				<label>Form Label</label>
 				<input type="text" placeholder="placeholder"></input>
@@ -42,23 +40,23 @@ MODALS
 				<h3>Radio Buttons</h3>
 				<p>prettify these bitches up...</p>
 				<div class="radio-group">
-					<input type="radio" name="awesome" value="awesome"></input>
-					<label>awesome</label>
+					<input type="radio" name="valueOne" value="a" checked="checked"></input>
+					<label>value a</label>
 				</div>
 				<div class="radio-group">
-					<input type="radio" name="not awesome" value="not awesome"></input>
-					<label>not awesome</label>
+					<input type="radio" name="valueOne" value="b"></input>
+					<label>value b</label>
 				</div>
 			</div>
 			<div class="input-group">
 				<h3>Radio Buttons (horizontal)</h3>
 				<p>prettify these bitches up...</p>
 				<div class="radio-group horizontal">
-					<input type="radio" name="awesome" value="awesome"></input>
+					<input type="radio" name="levelOfAwesome" value="awesome"></input>
 					<label>awesome</label>
 				</div>
 				<div class="radio-group horizontal">
-					<input type="radio" name="not awesome" value="not awesome"></input>
+					<input type="radio" name="levelOfAwesome" value="not awesome"></input>
 					<label>not awesome</label>
 				</div>
 			</div>
@@ -119,7 +117,7 @@ CODE
 <section id="code" class="container">
 <h5>HTML structure</h5>
 <pre class="prettyprint linenums">
-&lt;div class="modal-parent" data-role="parent"&gt;
+&lt;form&gt;
 	&lt;section class="modal-main" data-plugin="modal" data-overlay="dark" data-event="click" data-id="myPersonalId"&gt;
 	&lt;header class="modal-header"&gt;
 		&lt;h2&gt;Modal Header Area&lt;/h2&gt;
@@ -132,7 +130,7 @@ CODE
 	&lt;/footer&gt;
 	&lt;/section&gt;
 	&lt;a href="#" class="btn-secondary small" data-role="trigger"&gt;modal on click&lt;/a&gt;
-&lt;/div&gt;
+&lt;/form&gt;
 </pre>
 
 <h5>LESS</h5>

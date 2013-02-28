@@ -2,6 +2,7 @@
 	<script src="../assets/js/touchwipe.min.js"></script>
 	<script src="../assets/js/malcolm.js"></script> 
 	<script src="../assets/js/modal.firefly.js"></script> 
+	<script src="../assets/js/forms.firefly.js"></script> 
 	<script>
 	
 

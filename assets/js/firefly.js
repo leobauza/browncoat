@@ -18,7 +18,7 @@
 			'myoption2' : (data.myoptions2) ? data.myoption2 : 'my default 2'
 		}, options) ;
 		this._name = pluginName;
-		this.init($modal, data);
+		this.init(stuff);
 	}
 	
 	Plugin.prototype = {

@@ -14,22 +14,42 @@
 		;
 		//default settings :: data comes in plugin overlay event and id
 		this.options = $.extend( {
-			'myoption' : (data.myoption) ? data.myoption : 'my default',
+			'radios' : (data.radios) ? data.radios : 'false',
 			'myoption2' : (data.myoptions2) ? data.myoption2 : 'my default 2'
 		}, options) ;
 		this._name = pluginName;
-		this.init($modal, data);
+		this.init();
 	}
 	
 	Plugin.prototype = {
-		init : function (stuff) {
-			//my init code
-			
-			//call my methods from init
-			this.myMethod(stuff);
+		init : function () {
+			if(this.options.radios == true) {
+				this.radios();
+			}
 		}
-		, myMethod : function(stuff) {
+		, radios : function() {
 			//my event
+
+			$(this.element).find('.radio-group').each(function(){
+				var $label = $(this).find('label').html();
+				var $checked = $(this).find('input').attr('checked');
+				if($label == "true" || $label == "false") {
+					$(this).append("<a href=\"#\" data-input=\"radio\" class=\"btn-main\">" + $label + "</a>");
+				} else {
+					$(this).append("<a href=\"#\" data-theme=\""+ $label +"\" data-input=\"radio\" class=\"btn-main\">" + $label + "</a>");
+				}
+				if($checked == "checked") {
+					$(this).find("a").addClass("active");
+				}
+				$(this).find('input, label').hide();
+			});
+			
+			$('[data-input=radio]').click(function(e){
+				$(this).closest('.input-group').find('.active').removeClass('active');
+				$(this).addClass('active');
+				$(this).closest('.radio-group').find('input').attr('checked','checked');
+				e.preventDefault();
+			});
 		}
 	}
 
@@ -59,4 +79,4 @@
  */
 
 //data api built into plugin
-$('[data-plugin=plugin]').myplugin();
+$('form').fireflyForm();
