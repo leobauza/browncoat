@@ -1,7 +1,7 @@
 <?php
 
 //some possible page variables
-$title = "modal samples"; //this is backed up by a generic title set in kaylee.php or a browncoat generic title
+$title = "forms samples"; //this is backed up by a generic title set in kaylee.php or a browncoat generic title
 
 ?>
 
@@ -26,7 +26,7 @@ FORMS
 				<label>Form Label</label>
 				<input type="text" placeholder="placeholder"></input>
 			</div>
-			<section class="form-group">
+			<fieldset class="form-group">
 				<div class="input-group">
 					<label>Related Fields</label>
 					<input type="text" placeholder="placeholder"></input>
@@ -35,7 +35,7 @@ FORMS
 					<label>Related Fields</label>
 					<input type="text" placeholder="placeholder"></input>
 				</div>
-			</section>
+			</fieldset>
 			<div class="input-group">
 				<h3>Radio Buttons</h3>
 				<p>prettify these bitches up...</p>
@@ -62,12 +62,12 @@ FORMS
 			</div>
 			<input type="submit" name="submit" value="submit" class="btn-gray"></input>
 		</form>
-		<form class="span6">
+		<form class="span6" data-radiosb="true">
 			<div class="input-group">
 				<label>Form With other shit</label>
 				<input type="text" placeholder="placeholder"></input>
 			</div>
-			<section class="form-group">
+			<fieldset class="form-group">
 				<div class="input-group">
 					<label>Related Fields</label>
 					<input type="text" placeholder="placeholder"></input>
@@ -76,7 +76,7 @@ FORMS
 					<label>Related Fields</label>
 					<input type="text" placeholder="placeholder"></input>
 				</div>
-			</section>
+			</fieldset>
 			<div class="input-group">
 				<h3>Radio Buttons</h3>
 				<p>prettify these bitches up...</p>
@@ -115,44 +115,38 @@ CODE
 
 --> 
 <section id="code" class="container">
-<h5>HTML structure</h5>
+
+<h5>HTML structure (input groups)</h5>
 <pre class="prettyprint linenums">
 &lt;form&gt;
-	&lt;section class="modal-main" data-plugin="modal" data-overlay="dark" data-event="click" data-id="myPersonalId"&gt;
-	&lt;header class="modal-header"&gt;
-		&lt;h2&gt;Modal Header Area&lt;/h2&gt;
-	&lt;/header&gt;
-	&lt;article class="modal-body"&gt;
-		Your modals body code
-	&lt;/article&gt;
-	&lt;footer class="modal-footer"&gt;
-		Your modal's footer code
-	&lt;/footer&gt;
-	&lt;/section&gt;
-	&lt;a href="#" class="btn-secondary small" data-role="trigger"&gt;modal on click&lt;/a&gt;
+	&lt;div class="input-group"&gt;
+		&lt;label&gt;Related Fields&lt;/label&gt;
+		&lt;input type="text" placeholder="placeholder"&gt;&lt;/input&gt;
+	&lt;/div&gt;
 &lt;/form&gt;
 </pre>
 
-<h5>LESS</h5>
+
+<h5>HTML structure (form groups)</h5>
 <pre class="prettyprint linenums">
-.modal {
-	width: 100px;
-	.nested {
-		width:300px;
-	}
-}
+&lt;form&gt;
+	&lt;fieldset class="form-group"&gt;
+		&lt;div class="input-group"&gt;
+			&lt;label&gt;Related Fields&lt;/label&gt;
+			&lt;input type="text" placeholder="placeholder"&gt;&lt;/input&gt;
+		&lt;/div&gt;
+		&lt;div class="input-group"&gt;
+			&lt;label&gt;Related Fields&lt;/label&gt;
+			&lt;input type="text" placeholder="placeholder"&gt;&lt;/input&gt;
+		&lt;/div&gt;
+	&lt;/fieldset&gt;
+&lt;/form&gt;
 </pre>
+
 
 <h5>Javascript</h5>
 <pre class="prettyprint linenums">
-$('[data-plugin=modal]').fireflyModal({
-	modalOverlay : "light",
-	modalEvent : "click",
-	modalID : "platy",
-	modalHeight: "100px"
-	//modalParent...need to figure out a way to specify this
-	//modalParent: $(this).closest('body')
-});
+$('form').fireflyForm();
 </pre>
 </section>
 

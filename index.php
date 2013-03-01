@@ -41,12 +41,15 @@ $title = "home"; //this is backed up by a generic title set in kaylee.php or a b
 
 
 
+
+
 <!-- 
 
 ROWS WITH overflow:hidden 
 
 -->
 <section class="container">
+	
 	<h2>Row Fluids Using overflow:hidden</h2>
 	<section class="row-fluid">
 		<div class="span3">
@@ -114,6 +117,7 @@ WARNING NOTES SUCCESS
 -->
 <section class="container">
 	<h2>Warnings Notes Success</h2>
+	<p>Add some form of closing these. They and btns within it that do...stuff</p>
 	<section class="row-fluid">
 		<div class="span4">
 			<p class="warning">Holy shit everything has gone to hell!! these should be able to close or turn into a small square or something... basically option to dissappear</p>
@@ -239,7 +243,7 @@ FORMS
 -->
 <section class="container">
 	<h2>Forms</h2>
-	<a href="/samples/forms.php" class="btn-secondary large">Modal Sample Page</a>
+	<a href="/samples/forms.php" class="btn-secondary large">Forms Sample Page</a>
 	<p></p>
 	<section class="row-fluid">
 		<form class="span6">

@@ -15,7 +15,7 @@
 		//default settings :: data comes in plugin overlay event and id
 		this.options = $.extend( {
 			'radios' : (data.radios) ? data.radios : 'false',
-			'myoption2' : (data.myoptions2) ? data.myoption2 : 'my default 2'
+			'radiosb' : (data.radiosb) ? data.radiosb : 'false'
 		}, options) ;
 		this._name = pluginName;
 		this.init();
@@ -26,6 +26,10 @@
 			if(this.options.radios == true) {
 				this.radios();
 			}
+			if(this.options.radiosb == true) {
+				this.radiosb();
+			}
+			
 		}
 		, radios : function() {
 			//my event
@@ -33,11 +37,7 @@
 			$(this.element).find('.radio-group').each(function(){
 				var $label = $(this).find('label').html();
 				var $checked = $(this).find('input').attr('checked');
-				if($label == "true" || $label == "false") {
-					$(this).append("<a href=\"#\" data-input=\"radio\" class=\"btn-main\">" + $label + "</a>");
-				} else {
-					$(this).append("<a href=\"#\" data-theme=\""+ $label +"\" data-input=\"radio\" class=\"btn-main\">" + $label + "</a>");
-				}
+				$(this).append("<a href=\"#\" data-input=\"radio\" class=\"btn-radio\">" + $label + "</a>");
 				if($checked == "checked") {
 					$(this).find("a").addClass("active");
 				}
@@ -51,6 +51,26 @@
 				e.preventDefault();
 			});
 		}
+		, radiosb : function() {
+			console.log('more radio options');
+			$(this.element).find('.radio-group').each(function(){
+				var $label = $(this).find('label').html();
+				var $checked = $(this).find('input').attr('checked');
+				$(this).prepend("<a href=\"#\" data-input=\"radio\" class=\"pretty-radio\">&nbsp;</a>");
+				if($checked == "checked") {
+					$(this).find("a").addClass("active");
+				}
+				$(this).append($(this).find('input').hide());
+			});
+			
+			$('[data-input=radio]').click(function(e){
+				$(this).closest('.input-group').find('.active').removeClass('active');
+				$(this).addClass('active');
+				$(this).closest('.radio-group').find('input').attr('checked','checked');
+				e.preventDefault();
+			});
+		}
+		
 	}
 
 	// A really lightweight plugin wrapper around the constructor, 
