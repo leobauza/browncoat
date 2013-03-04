@@ -3,7 +3,7 @@ Welcome to browncoat 0.1.1
 
 
 ## about this project
-This is the first semi workable update.
+This is the first semi workable update. This version is totally unstable.
 
 ### instructions for 0.1.1 release
 

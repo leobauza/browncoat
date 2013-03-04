@@ -48,6 +48,14 @@
 	</section>
 	<div class="overlayold dark" data-modal='wiper'></div>
 
+	<!--
+	
+	LOADING SCREEN (should be part of everything always)
+	
+	-->
+	<div id="loading">
+		
+	</div>
 
 
 	<?php include("scripts.php"); ?>
@@ -58,7 +66,7 @@
 		
 		/* 
 		 * =============================================================
-		 *  MODALS
+		 *  MODALS (this is now part of the firefly modals plugin)
 		 * =============================================================
 		 */
 		//river modal 
@@ -133,7 +141,7 @@
 
 		/* 
 		 * =============================================================
-		 *  pretty radio btns
+		 *  pretty radio btns (this is now part of the firefly forms plugin) BUT THESE HAVE THE THEME ADDING THING
 		 * =============================================================
 		 */
 			$('.radio-group').each(function(){

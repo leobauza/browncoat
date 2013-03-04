@@ -106,4 +106,18 @@ $(function(){
 		});
 	}
 	
+/* 
+ * =============================================================
+ * LOADING
+ * =============================================================
+ */
+	
+	$(window).load(function(){
+		console.log($images.length);
+		$('#loading').delay(500).fadeOut('slow');
+	})
+	
+	
+	
+	
 }); //end ready function

@@ -184,7 +184,7 @@ MODALS
 	<section class="row-fluid-alt">
 		<article class="span4">
 			<div class="modal-parent" data-role="parent">
-				<section class="modal-main variable" data-plugin="modal" data-overlay="dark" data-event="load" data-id="myPersonalId">
+				<section class="modal-main variable" data-plugin="modal" data-overlay="dark" data-event="click" data-id="myPersonalId">
 					<header class="modal-header">
 						<h2>welcome to browncoat</h2>
 					</header>
