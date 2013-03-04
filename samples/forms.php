@@ -11,6 +11,7 @@ $title = "forms samples"; //this is backed up by a generic title set in kaylee.p
 	<?php include('sample_inc/intro.php'); ?> 
 </section>
 
+
 <!-- 
 
 FORMS 
@@ -81,11 +82,11 @@ FORMS
 				<h3>Radio Buttons</h3>
 				<p>prettify these bitches up...</p>
 				<div class="radio-group">
-					<input type="radio" name="awesome" value="awesome"></input>
+					<input type="radio" name="awesomeness" value="awesome"></input>
 					<label>awesome</label>
 				</div>
 				<div class="radio-group">
-					<input type="radio" name="not awesome" value="not awesome"></input>
+					<input type="radio" name="awesomeness" value="not awesome"></input>
 					<label>not awesome</label>
 				</div>
 			</div>
@@ -93,11 +94,11 @@ FORMS
 				<h3>Radio Buttons (horizontal)</h3>
 				<p>prettify these bitches up...</p>
 				<div class="radio-group horizontal">
-					<input type="radio" name="awesome" value="awesome"></input>
+					<input type="radio" name="poop" value="awesome"></input>
 					<label>awesome</label>
 				</div>
 				<div class="radio-group horizontal">
-					<input type="radio" name="not awesome" value="not awesome"></input>
+					<input type="radio" name="poop" value="not awesome"></input>
 					<label>not awesome</label>
 				</div>
 			</div>
@@ -119,10 +120,10 @@ CODE
 <h5>HTML structure (input groups)</h5>
 <pre class="prettyprint linenums">
 &lt;form&gt;
-	&lt;div class="input-group"&gt;
-		&lt;label&gt;Related Fields&lt;/label&gt;
-		&lt;input type="text" placeholder="placeholder"&gt;&lt;/input&gt;
-	&lt;/div&gt;
+ &lt;div class="input-group"&gt;
+  &lt;label&gt;a damn label&lt;/label&gt;
+  &lt;input type="text" placeholder="your damn placeholder"&gt;&lt;/input&gt;
+ &lt;/div&gt;
 &lt;/form&gt;
 </pre>
 
@@ -130,16 +131,16 @@ CODE
 <h5>HTML structure (form groups)</h5>
 <pre class="prettyprint linenums">
 &lt;form&gt;
-	&lt;fieldset class="form-group"&gt;
-		&lt;div class="input-group"&gt;
-			&lt;label&gt;Related Fields&lt;/label&gt;
-			&lt;input type="text" placeholder="placeholder"&gt;&lt;/input&gt;
-		&lt;/div&gt;
-		&lt;div class="input-group"&gt;
-			&lt;label&gt;Related Fields&lt;/label&gt;
-			&lt;input type="text" placeholder="placeholder"&gt;&lt;/input&gt;
-		&lt;/div&gt;
-	&lt;/fieldset&gt;
+ &lt;fieldset class="form-group"&gt;
+  &lt;div class="input-group"&gt;
+   &lt;label&gt;Related Fields&lt;/label&gt;
+   &lt;input type="text" placeholder="placeholder"&gt;&lt;/input&gt;
+  &lt;/div&gt;
+  &lt;div class="input-group"&gt;
+   &lt;label&gt;Related Fields&lt;/label&gt;
+   &lt;input type="text" placeholder="placeholder"&gt;&lt;/input&gt;
+  &lt;/div&gt;
+ &lt;/fieldset&gt;
 &lt;/form&gt;
 </pre>
 

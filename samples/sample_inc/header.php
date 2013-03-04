@@ -30,7 +30,6 @@
 		<script src="../assets/js/less.js" type="text/javascript"></script>
 		
 		<!-- pretty code -->
-		<link rel="stylesheet" href="/samples/sample_assets/prettify.css" type="text/css" media="screen" title="no title" charset="utf-8">
 		<script src="/samples/sample_assets/prettify.js" type="text/javascript" charset="utf-8"></script>
 		
 		

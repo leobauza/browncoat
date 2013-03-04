@@ -20,7 +20,8 @@ pre.prettyprint {
 
 pre.prettyprint{
 	padding:2px;
-	border:1px solid #888;
+	border:1px solid #dedede;
+	
 }
 ol.linenums{
 	margin-top:0;
