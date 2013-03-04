@@ -124,7 +124,9 @@ pre {
 	height:100%;
 	width:100%;
 	background:@black;
-	background:fade(@black,95%) ;
+	@file:"ajax-loader.gif";
+	@url:"@{genpath}@{file}";
+	background:fade(@black,95%) url(@url) 50% 50% no-repeat;
 	top:0;
 	left:0;
 }

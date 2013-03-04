@@ -108,16 +108,23 @@ $(function(){
 	
 /* 
  * =============================================================
- * LOADING
+ * LOADING (only images)
  * =============================================================
  */
-	
 	$(window).load(function(){
-		console.log($images.length);
-		$('#loading').delay(500).fadeOut('slow');
-	})
-	
-	
-	
+		$('body').imagesLoaded(function($images){
+			//console.log($images.length);
+			$('#loading').delay(700).fadeOut();
+		});
+	});
 	
 }); //end ready function
+
+
+
+
+
+
+
+
+

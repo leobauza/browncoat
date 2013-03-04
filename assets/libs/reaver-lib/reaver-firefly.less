@@ -15,7 +15,9 @@
 	.inner {
 		padding:39px;
 		//fuck.........images.....ok.....we will deal with this....even though /assets/img/app/whatever.png always works
-		background:url('/assets/img/app/bg_hero_inner.jpg') 0% 100% repeat-x;
+		@file:"bg_hero_inner.jpg";
+		@url:"@{apppath}@{file}";
+		background:url(@url) 0% 100% repeat-x;
 	}
 	h1 {
 		color:@white;
