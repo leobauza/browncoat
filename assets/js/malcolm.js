@@ -111,12 +111,19 @@ $(function(){
  * LOADING (only images)
  * =============================================================
  */
-	$(window).load(function(){
-		$('body').imagesLoaded(function($images){
-			//console.log($images.length);
-			$('#loading').delay(700).fadeOut();
-		});
+	// $(window).load(function(){
+	// 	$('body').imagesLoaded(function($images){
+	// 		$('#loading').delay(700).fadeOut();
+	// 	});
+	// });
+
+
+	$('body').jpreLoader({
+		showSplash: false
+		//,autoClose: false
+		,loaderVPos: '50%'
 	});
+
 	
 }); //end ready function
 

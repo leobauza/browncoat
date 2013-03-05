@@ -118,15 +118,3 @@ h6 {
 pre {
 	white-space:pre-wrap;
 }
-//does this belong here? maybe since it is a base helper...(can't go in helper...that's for non-classes)
-#loading {
-	position:fixed;
-	height:100%;
-	width:100%;
-	background:@black;
-	@file:"ajax-loader.gif";
-	@url:"@{genpath}@{file}";
-	background:fade(@black,95%) url(@url) 50% 50% no-repeat;
-	top:0;
-	left:0;
-}

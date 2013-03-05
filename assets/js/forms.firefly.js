@@ -52,7 +52,6 @@
 			});
 		}
 		, radiosb : function() {
-			console.log('more radio options');
 			$(this.element).find('.radio-group').each(function(){
 				var $label = $(this).find('label').html();
 				var $checked = $(this).find('input').attr('checked');

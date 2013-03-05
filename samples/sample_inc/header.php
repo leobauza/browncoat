@@ -9,8 +9,8 @@
 	<meta name="author" content="">
 
 	<!-- styles -->
-		<?php $lessOrCss = "using default.reaver.less" ?>
-		<link rel="stylesheet/less" type="text/css" href="../assets/less/default.reaver.less">
+		<?php $lessOrCss = "using default.less" ?>
+		<link rel="stylesheet/less" type="text/css" href="../assets/less/default.less">
 		<script>
 		less = {
 			env: "development", // or "production"

@@ -49,8 +49,8 @@ endif;
 			<link rel="stylesheet/less" type="text/css" href="../assets/less/styles.less">
 			<?php $lessOrCss = "using styles.less" ?>
 		<?php else: ?>
-			<link rel="stylesheet/less" type="text/css" href="../assets/less/default.reaver.less">
-			<?php $lessOrCss = "using default.reaver.less" ?>
+			<link rel="stylesheet/less" type="text/css" href="../assets/less/default.less">
+			<?php $lessOrCss = "using default.less" ?>
 		<?php endif; ?>
 		<script>
 		less = {
