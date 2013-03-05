@@ -123,10 +123,19 @@ $(function(){
 			//,autoClose: false
 			,loaderVPos: '50%'
 		});
-
-		if(!$('img').length) {
+		
+		//should also account for background images
+		
+		//find backgrounds
+		var backgroundImages = [];
+		$("body").find('*:not(script)').each(function() {
+			if($(this).css('background-image').indexOf('none') == -1 && $(this).css('background-image').indexOf('-gradient') == -1) {
+				backgroundImages.push($(this).css('background-image'));
+			}
+		});
+		
+		if(!$('img').length && backgroundImages.length == 0) {
 			$(jOverlay).remove();
-			onComplete(); //callback function
 		}
 	
 }); //end ready function
