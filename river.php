@@ -68,11 +68,11 @@ $title = "river"
 					<h2>Advanced Settings?</h2>
 					<div class="input-group">
 						<h3>serenity path</h3>
-						<input type="text" name="path[pathToSerenity]" value="./assets/less/serenity.reaver.less"></input>
+						<input type="text" name="path[pathToSerenity]" value="./assets/less/serenity.less"></input>
 					</div>
 					<div class="input-group">
 						<h3>wash path</h3>
-						<input type="text" name="path[pathToWash]" value="./assets/less/wash.reaver.less"></input>
+						<input type="text" name="path[pathToWash]" value="./assets/less/wash.less"></input>
 					</div>
 					<div class="input-group">
 						<h3>css path</h3>

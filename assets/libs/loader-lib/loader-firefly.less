@@ -19,9 +19,12 @@
 	left:0;
 }
 
+body {
+	display:none;
+}
 
 #jpreOverlay {
-	background-color: #000000;
+	background-color:@white;
 }
 #jpreSlide{
 	font-size:22px;
@@ -36,13 +39,12 @@
 	height:25px;
 }
 #jpreBar {
-	background-color:#fff;
+	background-color:@black;
 }
 #jprePercentage {
-	color:#ccc;
+	color:@dark-gray;
 	font-weight:bold;
 	text-align:center;
-	text-shadow:1px 1px 1px #333;
 }
 #jpreButton{
 	.btn-main;
@@ -50,44 +52,4 @@
 	width:50px;
 	margin:0 auto;
 	cursor:pointer;
-}
-@-webkit-keyframes progress {
-	from {
-		background-position: 0 0;
-	}
-	to {
-		background-position: -60px -60px;
-	}
-}
-@-moz-keyframes progress {
-	from {
-		background-position: 0 0;
-	}
-	to {
-		background-position: -60px -60px;
-	}
-}
-@-ms-keyframes progress {
-	from {
-		background-position: 0 0;
-	}
-	to {
-		background-position: -60px -60px;
-	}
-}
-@-o-keyframes progress {
-	from {
-		background-position: 0 0;
-	}
-	to {
-		background-position: -60px -60px;
-	}
-}
-@keyframes progress {
-	from {
-		background-position: 0 0;
-	}
-	to {
-		background-position: -60px -60px;
-	}
 }

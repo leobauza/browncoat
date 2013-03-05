@@ -39,9 +39,9 @@ endif;
  */
 
 //sets path to serenity
-$pathToSerenity = './assets/less/serenity.reaver.less';
+$pathToSerenity = './assets/less/serenity.less';
 //sets path to wash
-$pathToWash = './assets/less/wash.reaver.less';
+$pathToWash = './assets/less/wash.less';
 //sets path to css
 $pathToCSS = './assets/css/styles.css';
 
@@ -71,7 +71,7 @@ $exportArr = array(
   'useless' => 'false',
   'isResponsive' => 'true',
   'pathToSerenity' => './assets/less/serenity.reaver.less',
-  'pathToWash' => './assets/less/wash.reaver.less',
+  'pathToWash' => './assets/less/wash.less',
   'pathToCSS' => './assets/css/styles.css',
   'colour' => 'firefly',
   'core' => 'firefly',

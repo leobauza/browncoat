@@ -118,12 +118,16 @@ $(function(){
 	// });
 
 
-	$('body').jpreLoader({
-		showSplash: false
-		//,autoClose: false
-		,loaderVPos: '50%'
-	});
+		$('body').jpreLoader({
+			showSplash: false
+			//,autoClose: false
+			,loaderVPos: '50%'
+		});
 
+		if(!$('img').length) {
+			$(jOverlay).remove();
+			onComplete(); //callback function
+		}
 	
 }); //end ready function
 

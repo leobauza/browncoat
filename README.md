@@ -55,8 +55,8 @@ $useless //use the less script or use an already compiled css file
 $title //if $title var in page missing, use this title else browncoat default is used
 $pageDescription //generic page description overridden at the page level
 $isResponsive //add the meta tag for mobi...possibly do other stuff that I haven't decided yet
-$pathToSerenity = './assets/less/serenity.reaver.less'; //sets path to serenity so wipers can wipe them and simon can write them
-$pathToWash = './assets/less/wash.reaver.less'; //sets path to wash so wipers can wipe them and simon can write them
+$pathToSerenity = './assets/less/serenity.less'; //sets path to serenity so wipers can wipe them and simon can write them
+$pathToWash = './assets/less/wash.less'; //sets path to wash so wipers can wipe them and simon can write them
 $pathToCSS = './assets/css/styles.css'; //set paths to core css file so wiper can wipe it and simon can write it
 ```
 ### libraries
