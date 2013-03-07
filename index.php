@@ -21,7 +21,7 @@ $title = "home"; //this is backed up by a generic title set in kaylee.php or a b
 				<p>paragraphs too</p>
 				<a href="#" class="btn-main large">not buttons tho</a>
 				<a href="#" class="btn-gray large">gray one too</a>
-				<a href="#" class="btn-secondary large">large btns</a>
+				<a href="/samples/loader.php" class="btn-secondary large">loader sample</a>
 			</div>
 			<div class="span6">
 				<h1>A Reversed Row</h1>
