@@ -7,6 +7,11 @@ $title = "home"; //this is backed up by a generic title set in kaylee.php or a b
 
 <?php include('_inc/header.php'); ?> 
 
+<p>
+	<?php include('_inc/tweet.php'); ?> 
+</p>
+
+
 <section class="reverse">
 	<?php include('_inc/intro.php'); ?> 
 	<div class="container">
