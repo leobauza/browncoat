@@ -27,12 +27,6 @@ if($content === FALSE) {
 
 $decode = json_decode($content, true); //getting the file content as array
 
-
-
-
-
-
-
 $count = count($decode); //counting the number of status
 for($i=0;$i<$count;$i++){
 $tweet = $decode[$i]["text"];
@@ -61,9 +55,9 @@ $timeDiff = $timeNow - $tweetTime;
 
 //108000 = 30 mins 216000 = 60 mins
 //check if that is true...
-if ($timeDiff < 50)
+if ($timeDiff < 2700)
 {
-	echo $timeDiff;
+	echo $timeDiff. " that's how long this has been going so if its less that 2700 then it's not gonna update brah";
 }
 else
 {
