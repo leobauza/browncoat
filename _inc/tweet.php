@@ -1,7 +1,7 @@
 
 <?php
 
-$json = file_get_contents("http://api.twitter.com/1/statuses/user_timeline/ConanOBrien.json?count=1", true); //getting the file content
+$json = file_get_contents("http://api.twitter.com/1/statuses/user_timeline/ConanOBrien.json?count=10", true); //getting the file content
 $decode = json_decode($json, true); //getting the file content as array
 
 // echo "<pre>";
@@ -16,12 +16,12 @@ $tweet = $decode[$i][text]."<br>";
 //print $tweet;
 
 $status = preg_replace('@((https?://)?([-\w]+\.[-\w\.]+)+\w(:\d+)?(/([-\w/_\.]*(\?\S+)?)?)*)@', '<a href="$1" target="_blank">$1</a>', $tweet);
-echo $status;
+echo "<li>".$status;
 
-$time = $decode[$i][created_at]."<br>";
+$time = $decode[$i][created_at];
 $id = $decode[$i][id_str];
 $username = $decode[$i][user][screen_name];
-echo '<a href="http://twitter.com/' . $username . '/statuses/' . $id . '" target="_blank">' . relative_time($time) . "</a>";
+echo '<a href="http://twitter.com/' . $username . '/statuses/' . $id . '" target="_blank">' . relative_time($time) . "</a></li>";
 }
 
 
@@ -57,11 +57,11 @@ function relative_time($time_value) {
 	//compare
 	if($parsed_today["year"] - $parsed_date["year"] != 0) {
 		$time = $parsed_today["year"] - $parsed_date["year"];
-		return "way too long ago";
+		return "way too long ago...years";
 	}
 	if($parsed_today["month"] - $parsed_date["month"] != 0) {
 		$time = $parsed_today["month"] - $parsed_date["month"];
-		return "long ago";
+		return "long ago, like months";
 	}
 	if($parsed_today["day"] - $parsed_date["day"] != 0) {
 		$time = $parsed_today["day"] - $parsed_date["day"];
