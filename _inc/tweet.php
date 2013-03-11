@@ -1,1 +1,1 @@
-<li>so that thing yesterday about twitter and <a href="NBD...well" target="_blank">NBD...well</a> it's a big deal, or you are way better than me, because that was tough.<a href="http://twitter.com/browncoatPlaty/statuses/310127036779872258" target="_blank">about an hour ago</a></li>
+<li>Another day, another 100 or so bugs found, it's going to be a long weekend.<a href="http://twitter.com/browncoatPlaty/statuses/310147660659191808" target="_blank">about 3 days ago</a></li>
