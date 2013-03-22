@@ -1,1 +1,1 @@
-<li>Another day, another 100 or so bugs found, it's going to be a long weekend.<a href="http://twitter.com/browncoatPlaty/statuses/310147660659191808" target="_blank">about 3 days ago</a></li>
+<li><a href="http://twitter.com/@H_FJ" target="_blank">@H_FJ</a> so archer is a web font now? <a href="http://t.co/qQaEEiFGGM" target="_blank">http://t.co/qQaEEiFGGM</a><a href="http://twitter.com/browncoatPlaty/statuses/311482485718519808" target="_blank">about 10 days ago</a></li>

@@ -155,10 +155,14 @@ if(isset($_POST)) {
 	//close the lib array
 	$theData.= superPrint(");");
 
+
+
+
+
 	//add a kaylee is written var and an export array
 	$theData.= superPrint("\$kaylee = true;");
 
-	//declare array
+	//exrport array
 	$theData.= superPrint("\$exportArr = array(");
 	foreach($_POST["general"] as $key => $val){
 		$addSlashVal = addslashes($val);
@@ -171,6 +175,9 @@ if(isset($_POST)) {
 		$theData .= superPrint("  '$key' => '$val',");
 	}
 	foreach($_POST["serenity-library"] as $key => $val){
+		$theData .= superPrint("  '$key' => '$val',");
+	}
+	foreach($_POST["js-library"] as $key => $val){
 		$theData .= superPrint("  '$key' => '$val',");
 	}
 

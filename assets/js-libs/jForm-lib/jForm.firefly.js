@@ -69,7 +69,10 @@
 				e.preventDefault();
 			});
 		}
-		
+		, checkboxes : function() {
+			// THIS IS FOR CHECKBOXES TO UNCHECK
+			//$(this).closest('.check-group').find('input').attr('checked',false);
+		}
 	}
 
 	// A really lightweight plugin wrapper around the constructor, 

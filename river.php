@@ -58,11 +58,7 @@ $title = "river"
 					<a href="#" data-theme="firefly" class="btn-main">check all firefly</a>
 					<a href="#" data-theme="test" class="btn-main">check all test</a>
 
-
 				</section>
-
-
-
 
 				<section class="form-group">
 					<h2>Advanced Settings?</h2>
@@ -79,7 +75,9 @@ $title = "river"
 						<input type="text" name="path[pathToCSS]" value="./assets/css/styles.css"></input>
 					</div>
 				</section>
-
+				<?php
+					//create wash library btns
+				?>
 				<section class="form-group">
 					<h2>Core Libraries (wash)</h2>
 					<?php
@@ -131,7 +129,9 @@ $title = "river"
 					?>
 				</section>
 
-
+				<?php
+					//create serenity library btns
+				?>
 				<section class="form-group">
 					<h2>Display Libraries (serenity)</h2>
 					<?php
@@ -182,6 +182,53 @@ $title = "river"
 					}
 					?>
 				</section>
+
+				<?php
+					//create jQuery library btns
+				?>
+				<section class="form-group">
+					<h2>jQuery Libraries</h2>
+					<?php
+					//loop through the libs directory to extract all the less libraries
+					if ($dirRoot = opendir('./assets/js-libs/')) {
+						//echo "Directory handle: $handle\n";
+						//echo "Entries:\n";
+
+						//looop and add all the files in the libs directory
+						while (false !== ($libDir = readdir($dirRoot))) {
+							if ($libDir != "." && $libDir != ".." && $libDir != ".DS_Store") {
+								//echo "<h2>$entry contains:</h2>\n";
+								$libDirSplit = explode("-",$libDir); 
+								echo "<div class='input-group'>";//open input group
+								echo "<h3>$libDirSplit[0] library</h3>";
+									if ($dirSubRoot = opendir('./assets/js-libs/'.$libDir)) {
+									while (false !== ($libSubDir = readdir($dirSubRoot))) {
+										if($libSubDir != "." && $libSubDir != ".."){
+											$splitLibSubDir = explode(".", $libSubDir);
+											$lib = $splitLibSubDir[0];
+											$theme = $splitLibSubDir[1];
+											echo "<div class='radio-group horizontal'>";
+												echo '<input type="radio" name="js-library['.$lib.']" value="'.$theme.'" />';
+												echo "<label>$theme</label>";
+											echo "</div>"; //close the radio group
+										}
+									}
+									closedir($dirSubRoot);
+								}
+									echo '<div class="radio-group horizontal"><input type="radio" name="js-library['.$libDirSplit[0].']" value="none" checked="checked"/><label>none</label></div>';
+									
+								echo "</div>";//close input group
+							}
+						}
+
+						closedir($dirRoot);
+					}
+					?>
+				</section>
+
+
+
+
 
 
 
