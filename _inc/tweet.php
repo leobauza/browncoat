@@ -1,1 +1,1 @@
-<li><a href="http://twitter.com/@H_FJ" target="_blank">@H_FJ</a> so archer is a web font now? <a href="http://t.co/qQaEEiFGGM" target="_blank">http://t.co/qQaEEiFGGM</a><a href="http://twitter.com/browncoatPlaty/statuses/311482485718519808" target="_blank">about 10 days ago</a></li>
+<li>well this is going to be alot harder than I <a href="expected...http" target="_blank">expected...http</a>://<a href="t.co/Zp26d5EAhD" target="_blank">t.co/Zp26d5EAhD</a><a href="http://twitter.com/browncoatPlaty/statuses/315117169417547778" target="_blank">about 5 days ago</a></li>
