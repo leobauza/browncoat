@@ -8,8 +8,6 @@
 
 //colour-lib include
 @import "../core-libs/colour-lib/colour-firefly.less";
-//core-lib include
-@import "../core-libs/core-lib/core-firefly.less";
 //helper-lib include
 @import "../core-libs/helper-lib/helper-firefly.less";
 //structure-lib include
@@ -32,27 +30,8 @@
 @import "../libs/loader-lib/loader-firefly.less";
 //section-lib include
 @import "../libs/reaver-lib/reaver-firefly.less";
-
-
-/****** Samples ******/
-.box {
-	background:@bg-colour-two;
-	color:@mid-gray;
-	#CSS3 > .border-radius(10px);
-	#CSS3 > .box-shadow();
-	header {
-		.marpad(0 0 10px, 10px);
-		border-bottom:1px solid @light-gray;
-	}
-	footer.spacer {
-		padding: 60px 0;
-	}
-}
-.inline-box {
-	background:@brand;
-	.inline-block(25px);
-	.adjust-colour(dark, #333);
-}
+//drupal-lib include
+@import "../libs/drupal-lib/drupal-firefly.less";
 
 /******HEADER******/
 

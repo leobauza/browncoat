@@ -10,19 +10,18 @@
 //echo $json;
 
 
-
-
 //initialize a new curl resource
 $ch = curl_init();  
-curl_setopt($ch, CURLOPT_URL, 'http://api.twitter.com/1/statuses/user_timeline/browncoatPlaty.json?count=1');
+curl_setopt($ch, CURLOPT_URL, 'http://api.twitter.com/1/statuses/user_timeline/drupalcon.json?count=1');
 curl_setopt($ch, CURLOPT_HEADER, 0);
 curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, FALSE);
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1); 
 $content = curl_exec($ch);
 curl_close($ch);
 
+
 if($content === FALSE) {
-    //Content couldn't be retrieved... Do something. Possibly end the function prematurely hence no else.
+	//Content couldn't be retrieved... Do something. Possibly end the function prematurely hence no else.
 }
 
 $decode = json_decode($content, true); //getting the file content as array

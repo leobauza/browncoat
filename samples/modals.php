@@ -35,7 +35,7 @@ MODALS
 						Click the overlay to close
 					</footer>
 				</section>
-				<span href="#" class="btn-secondary small" data-role="trigger">Hover Trigger</span>
+				<span href="#" class="btn-secondary btn-small" data-role="trigger">Hover Trigger</span>
 			</div>
 		</article>
 		<article class="span4">
@@ -51,7 +51,7 @@ MODALS
 						footer
 					</footer>
 				</section>
-				<span class="btn-secondary small" data-role="trigger">hover over me</span>
+				<span class="btn-secondary btn-small" data-role="trigger">hover over me</span>
 			</div>
 		</article>
 		<article class="span4">
@@ -69,7 +69,7 @@ MODALS
 						<a href="/river" class="btn-main">go to river</a>
 					</footer>
 				</section>
-				<a href="#" class="btn-secondary small" data-role="trigger">modal on click</a>
+				<a href="#" class="btn-secondary btn-small" data-role="trigger">modal on click</a>
 			</div>
 		</article>
 	</section>
@@ -94,7 +94,7 @@ CODE
 		 Your modal's footer code
 		&lt;/footer&gt;
 	 &lt;/section&gt;
-	 &lt;a href="#" class="btn-secondary small" data-role="trigger"&gt;modal on click&lt;/a&gt;
+	 &lt;a href="#" class="btn-secondary btn-small" data-role="trigger"&gt;modal on click&lt;/a&gt;
 	&lt;/div&gt;
 	</pre>
 
@@ -184,7 +184,7 @@ CODE
 				Your modal's footer code
 			</footer>
 		</section>
-	<a href="#" class="btn-secondary small" data-role="trigger">modal on click</a>
+	<a href="#" class="btn-secondary btn-small" data-role="trigger">modal on click</a>
 	</div>
 </section>
 

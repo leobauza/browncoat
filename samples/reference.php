@@ -121,16 +121,16 @@ $title = "reference file"; //this is backed up by a generic title set in kaylee.
 			<a href="#" class="btn-main">Plain Button</a>
 			<a href="#" class="btn-secondary">Secondary Button</a>
 			<div class="ctr-btn">
-				<a href="#" class="btn-main larger">Larger Button</a>
-				<a href="#" class="btn-secondary larger">Secondary Button</a>
-				<a href="#" class="btn-main large">Large Button</a>
-				<a href="#" class="btn-secondary large">Secondary Button</a>
-				<a href="#" class="btn-main medium">Medium Button</a>
-				<a href="#" class="btn-secondary medium">Secondary Button</a>
-				<a href="#" class="btn-main small">Small Button</a>
-				<a href="#" class="btn-secondary small">Secondary Button</a>
-				<a href="#" class="btn-main smaller">Smaller Button</a>
-				<a href="#" class="btn-secondary smaller">Secondary Button</a>
+				<a href="#" class="btn-main btn-larger">Larger Button</a>
+				<a href="#" class="btn-secondary btn-larger">Secondary Button</a>
+				<a href="#" class="btn-main btn-large">Large Button</a>
+				<a href="#" class="btn-secondary btn-large">Secondary Button</a>
+				<a href="#" class="btn-main btn-medium">Medium Button</a>
+				<a href="#" class="btn-secondary btn-medium">Secondary Button</a>
+				<a href="#" class="btn-main btn-small">Small Button</a>
+				<a href="#" class="btn-secondary btn-small">Secondary Button</a>
+				<a href="#" class="btn-main btn-smaller">Smaller Button</a>
+				<a href="#" class="btn-secondary btn-smaller">Secondary Button</a>
 			</div>
 		</div>
 		<div class="span2 box">hi</div>
@@ -142,16 +142,16 @@ $title = "reference file"; //this is backed up by a generic title set in kaylee.
 			</header>
 			<a href="#" class="btn-main">Plain Button</a>
 			<a href="#" class="btn-secondary">Secondary Button</a>
-			<a href="#" class="btn-main larger">Larger Button</a>
-			<a href="#" class="btn-secondary larger">Secondary Button</a>
-			<a href="#" class="btn-main large">Large Button</a>
-			<a href="#" class="btn-secondary large">Secondary Button</a>
-			<a href="#" class="btn-main medium">Medium Button</a>
-			<a href="#" class="btn-secondary medium">Secondary Button</a>
-			<a href="#" class="btn-main small">Small Button</a>
-			<a href="#" class="btn-secondary small">Secondary Button</a>
-			<a href="#" class="btn-main smaller">Smaller Button</a>
-			<a href="#" class="btn-secondary smaller">Secondary Button</a>			
+			<a href="#" class="btn-main btn-larger">Larger Button</a>
+			<a href="#" class="btn-secondary btn-larger">Secondary Button</a>
+			<a href="#" class="btn-main btn-large">Large Button</a>
+			<a href="#" class="btn-secondary btn-large">Secondary Button</a>
+			<a href="#" class="btn-main btn-medium">Medium Button</a>
+			<a href="#" class="btn-secondary btn-medium">Secondary Button</a>
+			<a href="#" class="btn-main btn-small">Small Button</a>
+			<a href="#" class="btn-secondary btn-small">Secondary Button</a>
+			<a href="#" class="btn-main btn-smaller">Smaller Button</a>
+			<a href="#" class="btn-secondary btn-smaller">Secondary Button</a>
 		</div>
 		<div class="span1 box">hi</div>
 	</section>

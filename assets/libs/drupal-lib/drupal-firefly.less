@@ -1,0 +1,16 @@
+//include using @import "drupal-lib/drupal-firefly.less";
+
+/* 
+ * =============================================================
+ * DRUPAL specific less
+ * =============================================================
+ */
+@breakOne: 950px;
+
+.element-invisible {
+	display:none;
+	@media (max-width: @breakOne) {
+		//this works!!
+		display:none;
+	}
+}
