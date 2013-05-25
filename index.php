@@ -263,25 +263,25 @@ FORMS
 			</section>
 			<div class="input-group">
 				<h3>Radio Buttons</h3>
-				<p>prettify these bitches up...</p>
+				<p>prettify these up...</p>
 				<div class="radio-group">
-					<input type="radio" name="awesome" value="awesome"></input>
+					<input type="radio" name="radio-one" value="awesome"></input>
 					<label>awesome</label>
 				</div>
 				<div class="radio-group">
-					<input type="radio" name="not awesome" value="not awesome"></input>
+					<input type="radio" name="radio-one" value="not awesome"></input>
 					<label>not awesome</label>
 				</div>
 			</div>
 			<div class="input-group">
 				<h3>Radio Buttons (horizontal)</h3>
-				<p>prettify these bitches up...</p>
+				<p>prettify these up...</p>
 				<div class="radio-group horizontal">
-					<input type="radio" name="awesome" value="awesome"></input>
+					<input type="radio" name="radio-two" value="awesome"></input>
 					<label>awesome</label>
 				</div>
 				<div class="radio-group horizontal">
-					<input type="radio" name="not awesome" value="not awesome"></input>
+					<input type="radio" name="radio-two" value="not awesome"></input>
 					<label>not awesome</label>
 				</div>
 			</div>
@@ -289,7 +289,7 @@ FORMS
 		</form>
 		<form class="span6">
 			<div class="input-group">
-				<label>Form With other shit</label>
+				<label>Form With other things</label>
 				<input type="text" placeholder="placeholder"></input>
 			</div>
 			<section class="form-group">
@@ -304,13 +304,13 @@ FORMS
 			</section>
 			<div class="input-group">
 				<h3>Radio Buttons</h3>
-				<p>prettify these bitches up...</p>
+				<p>prettify these up...</p>
 				<div class="radio-group">
-					<input type="radio" name="awesome" value="awesome"></input>
+					<input type="radio" name="radio-three" value="awesome"></input>
 					<label>awesome</label>
 				</div>
 				<div class="radio-group">
-					<input type="radio" name="not awesome" value="not awesome"></input>
+					<input type="radio" name="radio-three" value="not awesome"></input>
 					<label>not awesome</label>
 				</div>
 			</div>
@@ -318,11 +318,11 @@ FORMS
 				<h3>Radio Buttons (horizontal)</h3>
 				<p>prettify these bitches up...</p>
 				<div class="radio-group horizontal">
-					<input type="radio" name="awesome" value="awesome"></input>
+					<input type="radio" name="radio-four" value="awesome"></input>
 					<label>awesome</label>
 				</div>
 				<div class="radio-group horizontal">
-					<input type="radio" name="not awesome" value="not awesome"></input>
+					<input type="radio" name="radio-four" value="not awesome"></input>
 					<label>not awesome</label>
 				</div>
 			</div>
