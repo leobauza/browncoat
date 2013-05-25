@@ -99,7 +99,13 @@
 			e.preventDefault();
 		});
 
+/* 
+ * =============================================================
+ *  RIVER SPECIFIC CODE
+ * =============================================================
+ */
 
+if($('#river').length) {
 		/* 
 		 * =============================================================
 		 *  kaylee IMPORTING
@@ -141,6 +147,7 @@
 		 *  pretty radio btns (this is now part of the firefly forms plugin) BUT THESE HAVE THE THEME ADDING THING
 		 * =============================================================
 		 */
+
 			$('.radio-group').each(function(){
 				var $label = $(this).find('label').html();
 				var $checked = $(this).find('input').prop('checked');
@@ -161,6 +168,7 @@
 				$(this).closest('.radio-group').find('input').prop('checked','checked');
 				e.preventDefault();
 			});
+} // end if river has length
 
 
 	</script>

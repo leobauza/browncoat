@@ -246,12 +246,12 @@ FORMS
 	<a href="/samples/forms.php" class="btn-secondary btn-large">Forms Sample Page</a>
 	<p></p>
 	<section class="row-fluid">
-		<form class="span6">
+		<form class="span6" data-radios="true">
 			<div class="input-group">
 				<label>Form Label</label>
 				<input type="text" placeholder="placeholder"></input>
 			</div>
-			<section class="form-group">
+			<fieldset class="form-group">
 				<div class="input-group">
 					<label>Related Fields</label>
 					<input type="text" placeholder="placeholder"></input>
@@ -260,39 +260,39 @@ FORMS
 					<label>Related Fields</label>
 					<input type="text" placeholder="placeholder"></input>
 				</div>
-			</section>
+			</fieldset>
 			<div class="input-group">
 				<h3>Radio Buttons</h3>
-				<p>prettify these up...</p>
+				<p>prettify these bitches up...</p>
 				<div class="radio-group">
-					<input type="radio" name="radio-one" value="awesome"></input>
-					<label>awesome</label>
+					<input type="radio" name="valueOne" value="a" checked="checked"></input>
+					<label>value a</label>
 				</div>
 				<div class="radio-group">
-					<input type="radio" name="radio-one" value="not awesome"></input>
-					<label>not awesome</label>
+					<input type="radio" name="valueOne" value="b"></input>
+					<label>value b</label>
 				</div>
 			</div>
 			<div class="input-group">
 				<h3>Radio Buttons (horizontal)</h3>
-				<p>prettify these up...</p>
+				<p>prettify these bitches up...</p>
 				<div class="radio-group horizontal">
-					<input type="radio" name="radio-two" value="awesome"></input>
+					<input type="radio" name="levelOfAwesome" value="awesome"></input>
 					<label>awesome</label>
 				</div>
 				<div class="radio-group horizontal">
-					<input type="radio" name="radio-two" value="not awesome"></input>
+					<input type="radio" name="levelOfAwesome" value="not awesome"></input>
 					<label>not awesome</label>
 				</div>
 			</div>
 			<input type="submit" name="submit" value="submit" class="btn-gray"></input>
 		</form>
-		<form class="span6">
+		<form class="span6" data-radiosb="true">
 			<div class="input-group">
-				<label>Form With other things</label>
+				<label>Form With other shit</label>
 				<input type="text" placeholder="placeholder"></input>
 			</div>
-			<section class="form-group">
+			<fieldset class="form-group">
 				<div class="input-group">
 					<label>Related Fields</label>
 					<input type="text" placeholder="placeholder"></input>
@@ -301,16 +301,16 @@ FORMS
 					<label>Related Fields</label>
 					<input type="text" placeholder="placeholder"></input>
 				</div>
-			</section>
+			</fieldset>
 			<div class="input-group">
 				<h3>Radio Buttons</h3>
-				<p>prettify these up...</p>
+				<p>prettify these bitches up...</p>
 				<div class="radio-group">
-					<input type="radio" name="radio-three" value="awesome"></input>
-					<label>awesome</label>
+					<input type="radio" name="awesomeness" value="awesome"></input>
+					<label>We never thought of findin' a place where we belong. Don't have to stand alone, we'll never let you fall. Don't need permission to decide what you believe. You gotta learn something when we meet you after school. I said jump, down on Jump Street. I</label>
 				</div>
 				<div class="radio-group">
-					<input type="radio" name="radio-three" value="not awesome"></input>
+					<input type="radio" name="awesomeness" value="not awesome"></input>
 					<label>not awesome</label>
 				</div>
 			</div>
@@ -318,11 +318,11 @@ FORMS
 				<h3>Radio Buttons (horizontal)</h3>
 				<p>prettify these bitches up...</p>
 				<div class="radio-group horizontal">
-					<input type="radio" name="radio-four" value="awesome"></input>
+					<input type="radio" name="poop" value="awesome"></input>
 					<label>awesome</label>
 				</div>
 				<div class="radio-group horizontal">
-					<input type="radio" name="radio-four" value="not awesome"></input>
+					<input type="radio" name="poop" value="not awesome"></input>
 					<label>not awesome</label>
 				</div>
 			</div>
