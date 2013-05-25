@@ -24,7 +24,6 @@ endif;
 //look up here documents print tag to tag or something
 
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -88,12 +87,12 @@ endif;
 			<![endif]-->
 		<?php elseif(isset($isWiper)): ?>
 			<!-- delete default after simon runs I guess I could set it to do that but I don't know right now-->
-			<?php $lessOrCss = "using default.reaver.css" ?>
-			<link rel="stylesheet" href="../assets/css/default.reaver.css" type="text/css" media="screen" charset="utf-8">
+			<?php $lessOrCss = "using default.css" ?>
+			<link rel="stylesheet" href="../assets/css/default.css" type="text/css" media="screen" charset="utf-8">
 		<?php else: //why is this and the isset wiper the same?? ?>
 			<!-- delete default after simon runs I guess I could set it to do that but I don't know right now-->
-			<?php $lessOrCss = "using default.reaver.css" ?>
-			<link rel="stylesheet" href="../assets/css/default.reaver.css" type="text/css" media="screen" charset="utf-8">
+			<?php $lessOrCss = "using default.css" ?>
+			<link rel="stylesheet" href="../assets/css/default.css" type="text/css" media="screen" charset="utf-8">
 		<?php endif; ?>
 	<?php endif; ?>
 

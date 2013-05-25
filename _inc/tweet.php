@@ -1,1 +1,0 @@
-<li>Have you see the bats on the <a href="http://twitter.com/#DrupalCon" target="_blank">#DrupalCon</a> Austin site yet? <a href="http://t.co/iZsq22YcNF" target="_blank">http://t.co/iZsq22YcNF</a> They are swarming tight now!<a href="http://twitter.com/drupalcon/statuses/337758629824458752" target="_blank">2 hours ago</a></li>
