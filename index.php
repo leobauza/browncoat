@@ -6,6 +6,34 @@ $title = "home"; //this is backed up by a generic title set in kaylee.php or a b
 ?>
 
 <?php include('_inc/header.php'); ?> 
+<!-- 
+
+NAVIGATION
+
+-->
+<nav id="site-nav">
+	<ul class="menu">
+		<li>
+			<a href="#">item one</a>
+			<ul class="sub-menu">
+				<li><a href="#">sub one</a></li>
+				<li><a href="#">sub two</a></li>
+				<li><a href="#">sub three</a></li>
+			</ul>
+		</li>
+		<li><a href="#">item two</a></li>
+		<li><a href="#">item three</a></li>
+		<li><a href="#">item four</a></li>
+	</ul>
+</nav>
+
+
+
+<!-- 
+
+HERO
+
+-->
 
 <section class="reverse">
 	<?php include('_inc/intro.php'); ?> 
@@ -38,9 +66,6 @@ $title = "home"; //this is backed up by a generic title set in kaylee.php or a b
 		</section>
 	</div>
 </section>
-
-
-
 
 
 <!-- 
