@@ -11,7 +11,7 @@ $title = "home"; //this is backed up by a generic title set in kaylee.php or a b
 NAVIGATION
 
 -->
-<nav id="site-nav">
+<nav class="site-nav">
 	<ul class="menu">
 		<li>
 			<a href="#">item one</a>
@@ -101,6 +101,7 @@ ROWS WITH overflow:hidden
 			<a href="#" class="btn-main btn-medium">main button</a>
 		</div>
 	</section>
+
 </section>
 <!-- 
 
@@ -134,6 +135,51 @@ ROWS WITH %
 			<a href="#" class="btn-main btn-medium">main button</a>
 		</div>
 	</section>
+
+	<section class="row-fluid-alt">
+		<div class="span6 box">
+			<header>
+				<h3>Button Sets</h3>
+			</header>
+			<div class="btn-set group">
+				<a href="#" class="btn-main">1</a>
+				<a href="#" class="btn-main">2</a>
+				<a href="#" class="btn-main">3</a>
+				<a href="#" class="btn-main">4</a>
+			</div>
+			<div class="btn-set-dropdown group">
+				<a href="#" class="btn-main">Button w/ Dropdown</a>
+				<a href="#" class="btn-main drop"><span class="carat">v</span></a>
+				<ul>
+					<li><a href="#">the</a></li>
+					<li><a href="#">drop</a></li>
+					<li><a href="#">down</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="span6 box">
+			<header>
+				<h3>Button Sets Secondary</h3>
+			</header>
+			<div class="btn-set group">
+				<a href="#" class="btn-secondary">1</a>
+				<a href="#" class="btn-secondary">2</a>
+				<a href="#" class="btn-secondary">3</a>
+				<a href="#" class="btn-secondary">4</a>
+			</div>
+			<div class="btn-set-dropdown group">
+				<a href="#" class="btn-secondary">Button w/ Dropdown</a>
+				<a href="#" class="btn-secondary drop"><span class="carat">v</span></a>
+				<ul>
+					<li><a href="#">the</a></li>
+					<li><a href="#">drop</a></li>
+					<li><a href="#">down</a></li>
+				</ul>
+			</div>
+		</div>
+	</section>
+
+
 </section>
 <!-- 
 

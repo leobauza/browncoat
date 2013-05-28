@@ -111,33 +111,36 @@ $(function(){
  * LOADING (only images)
  * =============================================================
  */
-	// $(window).load(function(){
-	// 	$('body').imagesLoaded(function($images){
-	// 		$('#loading').delay(700).fadeOut();
-	// 	});
-	// });
 
-
-		$('body').jpreLoader({
-			showSplash: false
-			//,autoClose: false
-			,loaderVPos: '50%'
-		});
-		
-		//should also account for background images
-		
-		//find backgrounds
-		var backgroundImages = [];
-		$("body").find('*:not(script)').each(function() {
-			if($(this).css('background-image').indexOf('none') == -1 && $(this).css('background-image').indexOf('-gradient') == -1) {
-				backgroundImages.push($(this).css('background-image'));
-			}
-		});
-		
-		if(!$('img').length && backgroundImages.length == 0) {
-			$(jOverlay).remove();
-		}
+	$('body').jpreLoader({
+		showSplash: false
+		//,autoClose: false
+		,loaderVPos: '50%'
+	});
 	
+	//should also account for background images
+	
+	//find backgrounds
+	var backgroundImages = [];
+	$("body").find('*:not(script)').each(function() {
+		if($(this).css('background-image').indexOf('none') == -1 && $(this).css('background-image').indexOf('-gradient') == -1) {
+			backgroundImages.push($(this).css('background-image'));
+		}
+	});
+	
+	if(!$('img').length && backgroundImages.length == 0) {
+		$(jOverlay).remove();
+	}
+	
+/* 
+ * =============================================================
+ * MAIN NAV DROPDOWN
+ * =============================================================
+ */
+
+
+
+
 }); //end ready function
 
 
