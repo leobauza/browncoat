@@ -111,20 +111,12 @@ $(function(){
  * LOADING (only images)
  * =============================================================
  */
-	// $(window).load(function(){
-	// 	$('body').imagesLoaded(function($images){
-	// 		$('#loading').delay(700).fadeOut();
-	// 	});
-	// });
-
 
 		$('body').jpreLoader({
 			showSplash: false
 			//,autoClose: false
 			,loaderVPos: '50%'
 		});
-		
-		//should also account for background images
 		
 		//find backgrounds
 		var backgroundImages = [];
@@ -137,7 +129,10 @@ $(function(){
 		if(!$('img').length && backgroundImages.length == 0) {
 			$(jOverlay).remove();
 		}
-	
+		
+		
+		
+		
 }); //end ready function
 
 

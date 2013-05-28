@@ -3,4 +3,4 @@
 <script src="../assets/js/jpreloader.js"></script> 
 <script src="../assets/js/malcolm.js"></script> 
 <script src="../assets/js-libs/jModal-lib/jModal.firefly.js"></script> 
-<script src="../assets/js-libs/jForm-lib/jForms.firefly.js"></script>
+<script src="../assets/js-libs/jForm-lib/jForm.firefly.js"></script>

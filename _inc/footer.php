@@ -7,7 +7,7 @@
 
 	<!-- javascript -->
 
-	<!-- why the fuck are these called modals? -->
+	<!-- why are these called modals? -->
 	<?php
 	
 	//
