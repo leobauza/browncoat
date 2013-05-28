@@ -1,0 +1,35 @@
+//include using @import "drupal-lib/drupal-firefly.less";
+
+/* 
+ * =============================================================
+ * DRUPAL specific less
+ * =============================================================
+ */
+@breakOne: 950px;
+
+/*display none for these*/
+.element-invisible {
+	display:none;
+	@media (max-width: @breakOne) {
+		//this works!!
+		display:none;
+	}
+}
+
+/*fix better admin menu css*/
+#admin-menu-wrapper {
+	ul {
+		font-size:100%;
+	}
+	.dropdown > li > ul {
+		//top:100%;
+	}
+}
+
+#admin-menu {
+	.dropdown {
+		li {
+			line-height:1.2em;
+		}
+	} 
+}

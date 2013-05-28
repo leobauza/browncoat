@@ -57,7 +57,7 @@
 	var createContainer = function() {
 		
 		jOverlay = $('<div></div>')
-		.attr('id', 'jpreOverlay')
+		.prop('id', 'jpreOverlay')
 		.css({
 			position: "fixed",
 			top: 0,
@@ -70,7 +70,7 @@
 		
 		if(jpreOptions.showSplash) {
 			jContent = $('<div></div>')
-			.attr('id', 'jpreSlide')
+			.prop('id', 'jpreSlide')
 			.appendTo(jOverlay);
 			
 			var conWidth = $(window).width() - $(jContent).width();
@@ -85,7 +85,7 @@
 		}
 		
 		jLoader = $('<div></div>')
-		.attr('id', 'jpreLoader')
+		.prop('id', 'jpreLoader')
 		.appendTo(jOverlay);
 		
 		var posWidth = $(window).width() - $(jLoader).width();
@@ -96,7 +96,7 @@
 		});
 		
 		jBar = $('<div></div>')
-		.attr('id', 'jpreBar')
+		.prop('id', 'jpreBar')
 		.css({
 			width: '0%',
 			height: '100%'
@@ -105,7 +105,7 @@
 		
 		if(jpreOptions.showPercentage) {
 			jPer = $('<div></div>')
-			.attr('id', 'jprePercentage')
+			.prop('id', 'jprePercentage')
 			.css({
 				position: 'relative',
 				height: '100%'
@@ -115,7 +115,7 @@
 		}
 		if( !jpreOptions.autoclose ) {
 			jButton = $('<div></div>')
-			.attr('id', 'jpreButton')
+			.prop('id', 'jpreButton')
 			.on('click', function() {
 				loadComplete();
 			})
@@ -140,8 +140,8 @@
 					var temp = url.match(/url\((.*?)\)/);
 					url = temp[1].replace(/\"/g, '');
 				}
-			} else if ($(this).get(0).nodeName.toLowerCase() == 'img' && typeof($(this).attr('src')) != 'undefined') {
-				url = $(this).attr('src');
+			} else if ($(this).get(0).nodeName.toLowerCase() == 'img' && typeof($(this).prop('src')) != 'undefined') {
+				url = $(this).prop('src');
 			}
 			
 			if (url.length > 0) {
@@ -163,10 +163,10 @@
 			completeLoading();
 		})
 		.error(function() {
-			errors.push($(this).attr('src'));
+			errors.push($(this).prop('src'));
 			completeLoading();
 		})
-		.attr('src', url);
+		.prop('src', url);
 	}
 	
 	//update progress bar once image loaded

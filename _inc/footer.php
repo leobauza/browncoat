@@ -99,30 +99,41 @@
 			e.preventDefault();
 		});
 
+/* 
+ * =============================================================
+ *  RIVER SPECIFIC CODE
+ * =============================================================
+ */
 
+if($('#river').length) {
 		/* 
 		 * =============================================================
 		 *  kaylee IMPORTING
 		 * =============================================================
 		 */
 		//set all to theme
-		$('[data-theme]').on("click", function(e){
+		$(document).on("click",'[data-theme]' ,function(e){
+
 			var $theme = $(this).attr('data-theme');
-			$("[value=" + $theme + "]").attr('checked','checked');
+
+			$("[value=" + $theme + "]").prop('checked','checked');
 			$("[data-theme]").removeClass('active');
 			$("[data-theme=" + $theme + "]").addClass('active');
 			e.preventDefault();
 		});
 
 		//import clicks
-		$('[data-name]').on("click", function(e){
+		$(document).on("click", '[data-name]',function(e){
+			
 			$name = $(this).attr('data-name');
 			$value = $(this).attr('data-value');
+			$value = "'" + $value + "'";
+
 			if($name == "all") {
 				$("[data-name]").not($(this)).trigger("click");
 			} else {
-				$("input[type=text][name*="+ $name +"]").attr('value', $value);
-				$("input[type=radio][name*="+ $name +"][value=" + $value + "]").attr('checked', 'checked');
+				$("input[type=text][name*="+ $name +"]").attr('value', $value.replace(/'/g, ""));
+				$("input[type=radio][name*="+ $name +"][value=" + $value + "]").prop('checked', 'checked');
 			}
 			$(".radio-group").each(function(){
 				$(this).find("a").removeClass('active');
@@ -136,9 +147,10 @@
 		 *  pretty radio btns (this is now part of the firefly forms plugin) BUT THESE HAVE THE THEME ADDING THING
 		 * =============================================================
 		 */
+
 			$('.radio-group').each(function(){
 				var $label = $(this).find('label').html();
-				var $checked = $(this).find('input').attr('checked');
+				var $checked = $(this).find('input').prop('checked');
 				if($label == "true" || $label == "false") {
 					$(this).append("<a href=\"#\" data-input=\"radio\" class=\"btn-main\">" + $label + "</a>");
 				} else {
@@ -153,9 +165,11 @@
 			$('[data-input=radio]').click(function(e){
 				$(this).closest('.input-group').find('.active').removeClass('active');
 				$(this).addClass('active');
-				$(this).closest('.radio-group').find('input').attr('checked','checked');
+				$(this).closest('.radio-group').find('input').prop('checked','checked');
 				e.preventDefault();
 			});
+} // end if river has length
+
 
 	</script>
 

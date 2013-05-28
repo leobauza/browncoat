@@ -12,12 +12,6 @@
  */
 /* 
  * =============================================================
- * CORE LIB (master library for wash...in case you don't want to split it in four)
- * DONT USE THIS UNLESS REPLACING THE FOUR WASH LIBRARIES (colour, text, structure, helpers)
- * =============================================================
- */
-/* 
- * =============================================================
  * HELPER LIB (part of wash)
  * =============================================================
  */
@@ -475,45 +469,45 @@ pre {
   box-shadow: inset 0 5px 10px #b8b8b8;
   border: 1px solid #ababab;
 }
-.btn-gray.larger,
-.btn-main.larger,
-.btn-secondary.larger {
+.btn-gray.btn-larger,
+.btn-main.btn-larger,
+.btn-secondary.btn-larger {
   display: block;
   font-size: 2em;
   width: 300px;
   margin: 10px 0px;
   padding: 15px;
 }
-.btn-gray.large,
-.btn-main.large,
-.btn-secondary.large {
+.btn-gray.btn-large,
+.btn-main.btn-large,
+.btn-secondary.btn-large {
   display: block;
   font-size: 1.8em;
   width: 250px;
   margin: 10px 0px;
   padding: 10px;
 }
-.btn-gray.medium,
-.btn-main.medium,
-.btn-secondary.medium {
+.btn-gray.btn-medium,
+.btn-main.btn-medium,
+.btn-secondary.btn-medium {
   display: block;
   font-size: 1.6em;
   width: 200px;
   margin: 10px 0px;
   padding: 10px;
 }
-.btn-gray.small,
-.btn-main.small,
-.btn-secondary.small {
+.btn-gray.btn-small,
+.btn-main.btn-small,
+.btn-secondary.btn-small {
   display: block;
   width: 150px;
   margin: 10px 0px;
   padding: 10px;
   font-size: 1.2em;
 }
-.btn-gray.smaller,
-.btn-main.smaller,
-.btn-secondary.smaller {
+.btn-gray.btn-smaller,
+.btn-main.btn-smaller,
+.btn-secondary.btn-smaller {
   display: block;
   width: 100px;
   margin: 10px 0px;
@@ -578,6 +572,10 @@ pre {
   display: block;
 }
 .btn-set-dropdown ul {
+  margin: 2px 0 0 0;
+  padding: 4px 0;
+  list-style: none;
+  font-size: 100%;
   display: none;
   position: absolute;
   top: 100%;
@@ -586,11 +584,12 @@ pre {
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
   border-radius: 3px;
-  margin: 2px 0 0 0;
-  padding: 4px 0;
   min-width: 120px;
   background: #feacac;
   border: 1px solid #fd6060;
+}
+.btn-set-dropdown ul li {
+  margin: 0;
 }
 .btn-set-dropdown ul li a {
   float: none;
@@ -1043,9 +1042,7 @@ form .pretty-radio.active {
 /*end form*/
 /* 
  * =============================================================
- * 
  * LISTS
- *
  * =============================================================
  */
 ul ul,
@@ -1123,10 +1120,45 @@ ol li > ol > li > ol > li > ol {
   padding: 20px 50px 10px;
   margin-top: 10px;
 }
-#site-nav ul {
-  font-size: 100%;
-}
 /* 
+ * =============================================================
+ * NAV
+ * =============================================================
+ */
+.site-nav > ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-size: 100%;
+  zoom: 1;
+}
+.site-nav > ul:before {
+  display: table;
+  content: "";
+}
+.site-nav > ul:after {
+  display: table;
+  content: "";
+  clear: both;
+}
+.site-nav > ul > li {
+  margin: 0;
+  float: left;
+  /*SECOND LEVEL*/
+
+}
+.site-nav > ul > li a {
+  display: block;
+  padding: 10px 20px;
+  font-size: 1.2em;
+}
+.site-nav > ul > li > ul {
+  display: none;
+}
+.site-nav > ul > li > ul > li a {
+  font-size: 1.2em;
+}
+/* VERTICAL *//* 
  * =============================================================
  * LOADER LIB 
  * =============================================================
@@ -1221,40 +1253,61 @@ body {
   box-shadow: inset 0 5px 10px #f50303;
   border: 1px solid #dc0202;
 }
-#jpreButton.larger {
+#jpreButton.btn-larger {
   display: block;
   font-size: 2em;
   width: 300px;
   margin: 10px 0px;
   padding: 15px;
 }
-#jpreButton.large {
+#jpreButton.btn-large {
   display: block;
   font-size: 1.8em;
   width: 250px;
   margin: 10px 0px;
   padding: 10px;
 }
-#jpreButton.medium {
+#jpreButton.btn-medium {
   display: block;
   font-size: 1.6em;
   width: 200px;
   margin: 10px 0px;
   padding: 10px;
 }
-#jpreButton.small {
+#jpreButton.btn-small {
   display: block;
   width: 150px;
   margin: 10px 0px;
   padding: 10px;
   font-size: 1.2em;
 }
-#jpreButton.smaller {
+#jpreButton.btn-smaller {
   display: block;
   width: 100px;
   margin: 10px 0px;
   padding: 10px;
   font-size: 1.1em;
+}
+/* 
+ * =============================================================
+ * DRUPAL specific less
+ * =============================================================
+ */
+/*display none for these*/
+.element-invisible {
+  display: none;
+}
+@media (max-width: 950px) {
+  .element-invisible {
+    display: none;
+  }
+}
+/*fix better admin menu css*/
+#admin-menu-wrapper ul {
+  font-size: 100%;
+}
+#admin-menu .dropdown li {
+  line-height: 1.2em;
 }
 /* 
  * =============================================================
@@ -1422,34 +1475,6 @@ li.L9 {
   .atv {
     color: #006600;
   }
-}
-/****** Samples ******/
-.box {
-  background: #f5f5f5;
-  color: #bebec5;
-  -webkit-border-radius: 10px;
-  -moz-border-radius: 10px;
-  border-radius: 10px;
-  -webkit-box-shadow: 0px 5px 10px -4px rgba(0, 0, 0, 0.3);
-  -moz-box-shadow: 0px 5px 10px -4px rgba(0, 0, 0, 0.3);
-  box-shadow: 0px 5px 10px -4px rgba(0, 0, 0, 0.3);
-}
-.box header {
-  margin: 0 0 10px;
-  padding: 10px;
-  border-bottom: 1px solid #dedede;
-}
-.box footer.spacer {
-  padding: 60px 0;
-}
-.inline-box {
-  background: #fd4747;
-  display: inline-block;
-  *display: inline;
-  zoom: 1;
-  _height: 25px;
-  color: #1a1a1a;
-  text-decoration: underline;
 }
 /******HEADER******/
 /****** FOOTER ******/

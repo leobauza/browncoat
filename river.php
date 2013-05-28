@@ -5,8 +5,8 @@ $title = "river"
 ?>
 
 <?php include('_inc/header.php'); ?> 
-
-<section class="container">
+<!-- river ID to target this prettify code -->
+<section id="river" class="container">
 	<section class="row-fluid">
 		<article class="span8">
 			<form id="river" action="processors/process-river.php" method="post">
@@ -232,7 +232,7 @@ $title = "river"
 
 
 
-				<button id="river-submit" data-ajax="river" class="btn-gray large" type="submit" name="submit" value="submit">Submit</button>
+				<button id="river-submit" data-ajax="river" class="btn-gray btn-large" type="submit" name="submit" value="submit">Submit</button>
 			</form>
 		</article>
 		<aside class="span4">
@@ -240,7 +240,7 @@ $title = "river"
 			if(isset($kaylee) && $kaylee == true):
 			?>
 			<h5>looks like kaylee is already written</h5>
-			<a href="#" data-name="all" class="btn-main large">import all</a>
+			<a href="#" data-name="all" class="btn-main btn-large">import all</a>
 			<?php
 			//find a way to import
 			foreach($exportArr as $key => $value){
@@ -248,7 +248,7 @@ $title = "river"
 					$addSlashValue = addslashes($value);
 					$stripSlashValue = stripslashes($value);
 					
-					echo "<a href='#' class=\"btn-gray large\" data-name=\"$key\" data-value=\"$addSlashValue\">set $key to $stripSlashValue</a>";
+					echo "<a href='#' class=\"btn-gray btn-large\" data-name=\"$key\" data-value=\"$addSlashValue\">set $key to $stripSlashValue</a>";
 				endif;
 			}
 			

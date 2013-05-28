@@ -1,0 +1,34 @@
+//include using @import "nav-lib/nav-firefly.less";
+/* 
+ * =============================================================
+ * NAV
+ * =============================================================
+ */
+
+.site-nav {
+	&> ul {
+		.reset-list();
+		.group;
+		&> li {
+			margin:0;
+			float:left;
+			a {
+				display:block;
+				padding:10px 20px;
+				font-size:1.2em;
+			}
+			/*SECOND LEVEL*/
+			&> ul {
+				display:none;
+				&> li {
+					a {
+						font-size:1.2em;
+					}
+				}
+			}
+		}
+	}
+}
+
+
+/* VERTICAL */

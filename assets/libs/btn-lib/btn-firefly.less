@@ -74,31 +74,31 @@
 .btn-gray,
 .btn-main,
 .btn-secondary {
-	&.larger{
+	&.btn-larger{
 		display:block;
 		font-size:2em;
 		width:300px;
 		.marpad(10px 0px, 15px);
 	}
-	&.large {
+	&.btn-large {
 		display:block;
 		font-size:1.8em;
 		width:250px;
 		.marpad(10px 0px, 10px);
 	}
-	&.medium {
+	&.btn-medium {
 		display:block;
 		font-size:1.6em;
 		width:200px;
 		.marpad(10px 0px, 10px);
 	}
-	&.small {
+	&.btn-small {
 		display:block;
 		width:150px;
 		.marpad(10px 0px, 10px);
 		font-size: 1.2em;
 	}
-	&.smaller {
+	&.btn-smaller {
 		display:block;
 		width: 100px;
 		.marpad(10px 0px, 10px);
@@ -152,17 +152,18 @@
 		}
 	}
 	ul {
+		.reset-list(2px 0 0 0, 4px 0);
 		display: none;
 		position:absolute;
 		top: 100%;
 		right:0;
 		z-index: 200;
 		#CSS3 > .border-radius(3px);
-		.marpad(2px 0 0 0, 4px 0);
 		min-width: 120px;
 		background: lighten(@brand,20%);
 		border:1px solid lighten(@brand,5%);
 		li {
+			margin:0;
 			a{
 				float: none;
 				display:block;

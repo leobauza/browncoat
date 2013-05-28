@@ -52,7 +52,7 @@ echo $warnings;
 		<article class="span7">
 				<h1>Serenity Wipe</h1>
 				<h3>This file wipes sernity, if you did this by mistake then:</h3>
-				<a href="/simon.php" class="btn-main small">Run Simon</a>
+				<a href="/simon.php" class="btn-main btn-small">Run Simon</a>
 				<p>Otherwise you can go about your day:</p>
 				<a href="/index.php" class="btn-gray">go home</a>
 

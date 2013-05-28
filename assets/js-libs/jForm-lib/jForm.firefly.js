@@ -36,9 +36,9 @@
 
 			$(this.element).find('.radio-group').each(function(){
 				var $label = $(this).find('label').html();
-				var $checked = $(this).find('input').attr('checked');
+				var $checked = $(this).find('input').prop('checked');
 				$(this).append("<a href=\"#\" data-input=\"radio\" class=\"btn-secondary\">" + $label + "</a>");
-				if($checked == "checked") {
+				if($checked == true) {
 					$(this).find("a").addClass("active");
 				}
 				$(this).find('input, label').hide();
@@ -47,14 +47,14 @@
 			$('[data-input=radio]').click(function(e){
 				$(this).closest('.input-group').find('.active').removeClass('active');
 				$(this).addClass('active');
-				$(this).closest('.radio-group').find('input').attr('checked','checked');
+				$(this).closest('.radio-group').find('input').prop('checked','checked');
 				e.preventDefault();
 			});
 		}
 		, radiosb : function() {
 			$(this.element).find('.radio-group').each(function(){
 				var $label = $(this).find('label').html();
-				var $checked = $(this).find('input').attr('checked');
+				var $checked = $(this).find('input').prop('checked');
 				$(this).prepend("<a href=\"#\" data-input=\"radio\" class=\"pretty-radio\"></a>").addClass('radiosb');
 				if($checked == "checked") {
 					$(this).find("a").addClass("active");
@@ -65,13 +65,13 @@
 			$('[data-input=radio]').click(function(e){
 				$(this).closest('.input-group').find('.active').removeClass('active');
 				$(this).addClass('active');
-				$(this).closest('.radio-group').find('input').attr('checked','checked');
+				$(this).closest('.radio-group').find('input').prop('checked','checked');
 				e.preventDefault();
 			});
 		}
 		, checkboxes : function() {
 			// THIS IS FOR CHECKBOXES TO UNCHECK
-			//$(this).closest('.check-group').find('input').attr('checked',false);
+			//$(this).closest('.check-group').find('input').prop('checked',false);
 		}
 	}
 
