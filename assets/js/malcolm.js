@@ -53,7 +53,7 @@ SITE = {
 			function desktopNav(w){
 				console.log(w);
 				
-				$('.site-nav .menu > li.dropdown').unbind('click').mouseenter(
+				$('.site-nav .menu > li.dropdown').unbind('click mouseenter mouseleave').mouseenter(
 					function() {
 						$(this).find('.sub-menu').show();
 					}
@@ -66,12 +66,14 @@ SITE = {
 			
 			function mobileNav(w){
 				console.log(w);
-				
+
 				$('.site-nav .menu > li.dropdown').unbind('mouseenter mouseleave');
-				$('.site-nav .menu > li.dropdown > .btn-dropdown').click(function(e){
+				$('.site-nav .menu > li.dropdown > .btn-dropdown').unbind('click').click(function(e){
 					$(this).toggleClass('is-active');
 					$(this).parent().find('.sub-menu').toggle();
 				});
+
+
 			}
 			
 			//go mobile or desktop...also pass the width so we can get more specific in mobile
