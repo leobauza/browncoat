@@ -1,1 +1,1 @@
-
+<li>Liked a session at <a href="http://twitter.com/#DrupalCon" target="_blank">#DrupalCon</a> Portland? Show your appreciation by providing feedback <a href="http://t.co/L5HeNkhyXR" target="_blank">http://t.co/L5HeNkhyXR</a><a href="http://twitter.com/drupalcon/statuses/340499402240167936" target="_blank">2 hours ago</a></li>

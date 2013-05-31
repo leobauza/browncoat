@@ -4,151 +4,100 @@
  * =============================================================
  */
 
-$(function(){
-
-	// this should fix the console problem in IE 
-	if (typeof console == "undefined") {
-		this.console = {log: function() {}};
-	}
-
-
 /* 
  * =============================================================
- * IE TARGETTING
+ * v.awesome
  * =============================================================
  */
+SITE = {
+	//global
+	common : {
+		init			: function(){
+			console.log('common init!')
+			function loadImg() {
+				var r = $.Deferred();
+				$('body').imagesLoaded( function() {
+					console.log('my images are loaded from common.init');
+					r.resolve();
+				});
+				return r;
+			} 
 
-// Returns the version of Internet Explorer or a -1
-// (indicating the use of another browser).
-	function getInternetExplorerVersion() {
-		var rv = -1; // Return value assumes failure.
-		if (navigator.appName == 'Microsoft Internet Explorer') {
-			var ua = navigator.userAgent;
-			var re	= new RegExp("MSIE ([0-9]{1,}[\.0-9]{0,})");
-			if (re.exec(ua) != null) {
-				rv = parseFloat( RegExp.$1 );
+			var callDone = function() {
+				SITE.common.initDone();
 			}
+
+			loadImg().done(callDone);
+
+		},
+		initDone	: function() {
+			$('.span6 img').animate({
+				opacity: .5,
+			}, 2000, function() {
+				console.log('fade in has happend on initDone');
+			});
+		},
+
+		finalize	: function(){
+			console.log('finalize common, oh and here are my global vars:');
+			console.log($vars);
 		}
-		return rv;
-	}
-	//Sample Check Version Function
-	function checkVersion() {
-		var msg = "You're not using Internet Explorer.";
-		var ver = getInternetExplorerVersion();
-		if ( ver > -1 ) {
-			if ( ver >= 8.0 ) {
-				msg = "You're using a recent copy of Internet Explorer."
-			}
-			else {
-				msg = "You should upgrade your copy of Internet Explorer.";
-			}
+	},
+	//interior pages
+	interior : {
+		init			: function(){
+			console.log('interior init!');
+		},
+		about			: function(){
+			console.log('about ID in the house!');
+			$(document).bind('finalized',function(){
+				console.log('my low priority code (non queue)');
+			});
+		},
+		contact	: function(){
+			console.log('contact ID in the house!');
 		}
-		console.log( msg );
 	}
-
-	//checkVersion();
-
-	$('[class*=row-fluid]').each(function(){
-		$(this).find("[class*=\"span\"]:last-child").addClass('l');
-	});
-	
-
-/* 
- * =============================================================
- * Some Vars
- * =============================================================
- */
-
-	//Window Width
-	$winWidth = $(window).width();
-	//iPad Check
-	var isiPad = navigator.userAgent.match(/iPad/i) != null;
-	var ieVer = getInternetExplorerVersion();
+}
 
 
-/* 
- * =============================================================
- * BTN PULL DOWN
- * =============================================================
- */
 
-	$('.btn-set-dropdown .drop').click(function(e){
-		var $this = $(this);
-		$this.closest('.btn-set-dropdown').find('ul').toggle();
-		e.preventDefault();
-	});
-	
-/* 
- * =============================================================
- * iDevices touch wipe
- * =============================================================
- */
-	
-	var ieVer = getInternetExplorerVersion();
-	if(ieVer == -1) {
-		// iDevice
-		$("body").touchwipe({
-			wipeLeft: function(e) {
-				console.log("wipe left");
-				e.preventDefault();
-			},
-			wipeRight: function(e) {
-				console.log("wipe right");
-				e.preventDefault();
-			},
-			wipeUp: function() {
-				
-			},
-			wipeDown: function() {
-	
-			}
-	
+UTIL = {
+
+	fire : function(func,funcname, args){
+
+		var namespace = SITE;// indicate your obj literal namespace here
+
+		funcname = (funcname === undefined) ? 'init' : funcname;
+		if (func !== '' && namespace[func] && typeof namespace[func][funcname] == 'function'){
+			namespace[func][funcname](args);
+		}
+
+	},
+
+	loadEvents : function(){
+
+		var bodyId = document.body.id;
+
+		// hit up common first.
+		UTIL.fire('common');
+
+		// do all the classes too.
+		$.each(document.body.className.split(/\s+/),function(i,classnm){
+			UTIL.fire(classnm);
+			UTIL.fire(classnm,bodyId);
 		});
+
+		UTIL.fire('common','finalize');
+		$(document).trigger('finalized');
 	}
-	
-/* 
- * =============================================================
- * LOADING (only images)
- * =============================================================
- */
+
+};
 
 
-	$('body').jpreLoader({
-		showSplash: false
-		//,autoClose: false
-		,loaderVPos: '50%'
-	});
-	
-	//should also account for background images
-	
-	//find backgrounds
-	var backgroundImages = [];
-	$("body").find('*:not(script)').each(function() {
-		if($(this).css('background-image').indexOf('none') == -1 && $(this).css('background-image').indexOf('-gradient') == -1) {
-			backgroundImages.push($(this).css('background-image'));
-		}
-	});
-	
-	if(!$('img').length && backgroundImages.length == 0) {
-		$(jOverlay).remove();
-	}
-	
-/* 
- * =============================================================
- * MAIN NAV DROPDOWN
- * =============================================================
- */
-
-
-
-
-}); //end ready function
-
-
-
-
-
-
-
-
-
+// kick it all off here (doc ready) 
+$(function(){
+	//GLOBAL vars
+	$vars = initial();
+	UTIL.loadEvents();
+});
