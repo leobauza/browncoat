@@ -11,9 +11,9 @@ $title = "home"; //this is backed up by a generic title set in kaylee.php or a b
 NAVIGATION
 
 -->
-<nav class="site-nav">
-	<ul class="menu">
-		<li>
+<nav class="site-nav" data-image="true">
+	<ul class="menu menu-left">
+		<li class="first dropdown">
 			<a href="#">item one</a>
 			<ul class="sub-menu">
 				<li><a href="#">sub one</a></li>
@@ -23,7 +23,11 @@ NAVIGATION
 		</li>
 		<li><a href="#">item two</a></li>
 		<li><a href="#">item three</a></li>
-		<li><a href="#">item four</a></li>
+		<li class="last"><a href="#">item four</a></li>
+	</ul>
+	<ul class="menu menu-right">
+		<li class="first"><a href="#">something</a></li>
+		<li class="last"><a href="#">somewhat</a></li>
 	</ul>
 </nav>
 

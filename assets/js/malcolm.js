@@ -1,9 +1,12 @@
 /* 
  * =============================================================
- * v.awesome
+ * v.awesome (part of firefly theme build with horizontal nav)
  * =============================================================
  */
 
+//Somewhat DOM based routing.
+//Map to keys in this object literal
+//common goes everywhere...then classes then id's..or however you call em
 SITE = {
 	//global
 	common : {
@@ -11,10 +14,20 @@ SITE = {
 			console.log('common init!')
 			function loadImg() {
 				var r = $.Deferred();
-				$('body').imagesLoaded( function() {
+				
+				var images = $('img');
+				$('[data-image]').each(function(){
+				  var el = $(this)
+				    , image = el.css('background-image').match(/url\((['"])?(.*?)\1\)/);
+				  if(image)
+				    images = images.add($('<img>').attr('src', image.pop()));
+				});
+
+				images.imagesLoaded(function(){
 					console.log('my images are loaded from common.init');
 					r.resolve();
 				});
+				
 				return r;
 			} 
 
@@ -23,19 +36,50 @@ SITE = {
 			}
 
 			loadImg().done(callDone);
-
+			
+			SITE.common.navigation();
 		},
 		initDone	: function() {
-			$('.span6 img').animate({
-				opacity: .5,
-			}, 2000, function() {
-				console.log('fade in has happend on initDone');
-			});
+			console.log('called after the resolved load image');
 		},
 
+		navigation	: function(){
+			
+			if(!$('.site-nav .btn-dropdown').length) {
+				console.log('add my dropdown btn for mobile!!');
+				$('.site-nav .menu > li.dropdown > a').after('<i class="btn-dropdown">v</i>');
+			}
+			
+			function desktopNav(w){
+				console.log(w);
+				
+				$('.site-nav .menu > li.dropdown').unbind('click').mouseenter(
+					function() {
+						$(this).find('.sub-menu').show();
+					}
+				).mouseleave(
+					function() {
+						$(this).find('.sub-menu').hide();
+					}
+				);
+			}
+			
+			function mobileNav(w){
+				console.log(w);
+				
+				$('.site-nav .menu > li.dropdown').unbind('mouseenter mouseleave');
+				$('.site-nav .menu > li.dropdown > .btn-dropdown').click(function(e){
+					$(this).toggleClass('is-active');
+					$(this).parent().find('.sub-menu').toggle();
+				});
+			}
+			
+			//go mobile or desktop...also pass the width so we can get more specific in mobile
+			($vars["winWidth"] > 1024) ? desktopNav($vars["winWidth"]) : mobileNav($vars["winWidth"]);
+						
+		},
 		finalize	: function(){
-			console.log('finalize common, oh and here are my global vars:');
-			console.log($vars);
+			console.log("finalize common");
 		}
 	},
 	//interior pages
@@ -49,12 +93,11 @@ SITE = {
 				console.log('my low priority code (non queue)');
 			});
 		},
-		contact	: function(){
+		contact		: function(){
 			console.log('contact ID in the house!');
 		}
 	}
 }
-
 
 
 UTIL = {
@@ -95,4 +138,18 @@ $(function(){
 	//GLOBAL vars
 	$vars = initial();
 	UTIL.loadEvents();
+
+	//SITE.common.init();
+
+	$(window).resize(function(){
+		$vars["winWidth"] = $(window).width();
+		SITE.common.navigation();
+	});
+	
+
 });
+
+
+
+
+

@@ -6,16 +6,41 @@
  */
 
 .site-nav {
+	.group;
+	@file:"platy.png";
+	@url:"@{apppath}@{file}";	
+	//background:@bg-site-nav url(@url);
+	background:@bg-site-nav;
 	&> ul {
 		.reset-list();
 		.group;
 		&> li {
 			margin:0;
 			float:left;
+			&.first {
+				
+			}
+			&.last {
+				
+			}
+			&.active {
+				
+			}
 			a {
+				color:@color-site-nav;
+				border-right:1px solid @border-site-nav;
 				display:block;
-				padding:10px 20px;
+				padding:25px 20px;
 				font-size:1.2em;
+				&:hover {
+					background:@border-site-nav;
+					text-decoration:none;
+				}
+				@media (max-width: 1024px) {
+					&:hover {
+						background:inherit;
+					}
+				}
 			}
 			/*SECOND LEVEL*/
 			&> ul {
@@ -23,7 +48,36 @@
 				&> li {
 					a {
 						font-size:1.2em;
+						&:hover {
+							text-decoration:none;
+						}
 					}
+				}
+			}
+		}
+	}
+}
+.menu {
+	&.menu-left {
+		float:left;
+		li {
+			&.first {
+				
+			}
+			&.last {
+				
+			}
+		}
+	}
+	&.menu-right {
+		float:right;
+		li {
+			&.first {
+				border-left:1px solid @border-site-nav;
+			}
+			&.last {
+				a {
+					border:none;
 				}
 			}
 		}
