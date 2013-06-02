@@ -17,6 +17,7 @@
 		&> li {
 			margin:0;
 			float:left;
+			position:relative;
 			&.first {
 				
 			}
@@ -26,7 +27,8 @@
 			&.active {
 				
 			}
-			a {
+			&> a {
+				float:left;
 				color:@color-site-nav;
 				border-right:1px solid @border-site-nav;
 				display:block;
@@ -42,10 +44,25 @@
 					}
 				}
 			}
+			.btn-dropdown {
+				display:none;
+				float:left;
+				color:@white;
+				padding: 25px 10px;
+				font-size: 1.2em;
+				border-right:1px solid @border-site-nav;
+				@media (max-width: 1024px) {
+					display:block;
+				}
+			}
 			/*SECOND LEVEL*/
 			&> ul {
+				position:absolute;
+				top:100%;
+				.reset-list();
 				display:none;
 				&> li {
+					margin:0;
 					a {
 						font-size:1.2em;
 						&:hover {
