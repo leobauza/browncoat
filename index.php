@@ -11,7 +11,7 @@ $title = "home"; //this is backed up by a generic title set in kaylee.php or a b
 NAVIGATION
 
 -->
-<nav class="site-nav" data-image="true">
+<nav class="site-nav nav-horizontal" data-image="true">
 	<ul class="menu menu-left">
 		<li class="first dropdown">
 			<a href="#">item one</a>
@@ -78,6 +78,12 @@ ROWS WITH overflow:hidden
 
 -->
 <section class="container">
+	
+	<ul class="nav-tabs">
+		<li class="active"><a href="#">view</a></li>
+		<li><a href="#">edit</a></li>
+		<li><a href="#">manage display</a></li>
+	</ul>
 	
 	<h2>Row Fluids Using overflow:hidden</h2>
 	<section class="row-fluid">
