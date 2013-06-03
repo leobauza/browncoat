@@ -15,7 +15,7 @@ NAVIGATION
 	<ul class="menu menu-left">
 		<li class="first dropdown">
 			<a href="#">item one</a>
-			<ul class="sub-menu">
+			<ul class="dropdown-menu">
 				<li><a href="#">sub one</a></li>
 				<li><a href="#">sub two</a></li>
 				<li><a href="#">sub three</a></li>
