@@ -55,11 +55,11 @@ SITE = {
 				
 				$('.site-nav .menu > li.dropdown').unbind('click mouseenter mouseleave').mouseenter(
 					function() {
-						$(this).find('.sub-menu').show();
+						$(this).find('.dropdown-menu').show();
 					}
 				).mouseleave(
 					function() {
-						$(this).find('.sub-menu').hide();
+						$(this).find('.dropdown-menu').hide();
 					}
 				);
 			}
@@ -70,7 +70,7 @@ SITE = {
 				$('.site-nav .menu > li.dropdown').unbind('mouseenter mouseleave');
 				$('.site-nav .menu > li.dropdown > .btn-dropdown').unbind('click').click(function(e){
 					$(this).toggleClass('is-active');
-					$(this).parent().find('.sub-menu').toggle();
+					$(this).parent().find('.dropdown-menu').toggle();
 				});
 
 
