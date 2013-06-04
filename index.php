@@ -183,7 +183,7 @@ ROWS WITH %
 				<a href="#" class="btn-secondary">3</a>
 				<a href="#" class="btn-secondary">4</a>
 			</div>
-			<div class="btn-set-dropdown group">
+			<div class="btn-set-dropdown secondary group">
 				<a href="#" class="btn-secondary">Button w/ Dropdown</a>
 				<a href="#" class="btn-secondary drop"><span class="carat">v</span></a>
 				<ul>

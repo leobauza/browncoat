@@ -8,8 +8,8 @@
 //Map to keys in this object literal
 //common goes everywhere...then classes then id's..or however you call em
 SITE = {
-	//global
 	common : {
+		//all common code kicks offs
 		init			: function(){
 			console.log('common init!')
 			function loadImg() {
@@ -30,29 +30,29 @@ SITE = {
 				
 				return r;
 			} 
-
+			//called after images are loaded (possible loader screen remove)
 			var callDone = function() {
 				SITE.common.initDone();
 			}
-
 			loadImg().done(callDone);
 			
+			//navigation code gets called 
 			SITE.common.navigation();
 		},
+		//code called AFTER init is DONE and LOADED
 		initDone	: function() {
 			console.log('called after the resolved load image');
 		},
-
+		//Navigation code for NAV-FIREFLY (horizontal nav dropdown)
 		navigation	: function(){
-			
+
 			if(!$('.site-nav .btn-dropdown').length) {
 				console.log('add my dropdown btn for mobile!!');
 				$('.site-nav .menu > li.dropdown > a').after('<i class="btn-dropdown">v</i>');
 			}
-			
+
 			function desktopNav(w){
 				console.log(w);
-				
 				$('.site-nav .menu > li.dropdown').unbind('click mouseenter mouseleave').mouseenter(
 					function() {
 						$(this).find('.dropdown-menu').show();
@@ -63,23 +63,21 @@ SITE = {
 					}
 				);
 			}
-			
+
 			function mobileNav(w){
 				console.log(w);
-
 				$('.site-nav .menu > li.dropdown').unbind('mouseenter mouseleave');
 				$('.site-nav .menu > li.dropdown > .btn-dropdown').unbind('click').click(function(e){
 					$(this).toggleClass('is-active');
 					$(this).parent().find('.dropdown-menu').toggle();
 				});
-
-
 			}
-			
+
 			//go mobile or desktop...also pass the width so we can get more specific in mobile
 			($vars["winWidth"] > 1024) ? desktopNav($vars["winWidth"]) : mobileNav($vars["winWidth"]);
 						
 		},
+		//Last code called in init gets kicked off
 		finalize	: function(){
 			console.log("finalize common");
 		}

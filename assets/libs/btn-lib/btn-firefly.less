@@ -188,4 +188,21 @@
 			}
 		}
 	}	
+	&.secondary {
+		ul {
+			background: lighten(@brand-alt,20%);
+			border:1px solid lighten(@brand-alt,5%);
+			li {
+				a {
+					background: lighten(@brand-alt,20%);
+					color:@white;
+					font-size: 1.2em;
+					&:hover {
+						background:darken(@brand-alt,20%);
+						color:@white;
+					}
+				}
+			}
+		}
+	}
 }
