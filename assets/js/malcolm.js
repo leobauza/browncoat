@@ -4,9 +4,13 @@
  * =============================================================
  */
 
-//Somewhat DOM based routing.
-//Map to keys in this object literal
-//common goes everywhere...then classes then id's..or however you call em
+/* 
+ * =============================================================
+ * Somewhat DOM based routing.
+ * Map to keys in this object literal
+ * common goes everywhere...then classes then id's..or however you call em
+ * =============================================================
+ */
 SITE = {
 	common : {
 		/* 
@@ -121,6 +125,7 @@ SITE = {
 }
 
 
+
 UTIL = {
 
 	fire : function(func,funcname, args){
@@ -152,7 +157,6 @@ UTIL = {
 	}
 
 };
-
 
 // kick it all off here (doc ready) 
 $(function(){

@@ -80,7 +80,7 @@ NEW BUTTONS
 <section class="container">
 	<h2>New Better Btn Mark Up</h2>
 	<p>Base class of .btn and all classes following .btn-property and the property is camel cased if more than one word</p>
-	<section class="row-fluid">
+	<section class="row-fluid-alt">
 		<div class="span4">
 			<h2>Button Colours</h2>
 			<p>(main, secondary, grey, custom)</p>
@@ -111,21 +111,43 @@ NEW BUTTONS
 				<h3>Button Sets</h3>
 			</header>
 			<div class="btn-set group">
-				<a href="#" class="btn-main">1</a>
+				<a href="#" class="btn-main active">1</a>
 				<a href="#" class="btn-main">2</a>
 				<a href="#" class="btn-main">3</a>
 				<a href="#" class="btn-main">4</a>
 			</div>
-			<div class="btn-set btn-dropdown group">
+
+			<div class="btn-dropdown dropdown-main group">
 				<a href="#" class="btn-main">Button w/ Dropdown</a>
-				<a href="#" class="btn-main drop"><span class="carat">v</span></a>
+				<a href="#" class="btn-main btn-drop"><span class="carat">v</span></a>
 				<ul>
 					<li><a href="#">the</a></li>
 					<li><a href="#">drop</a></li>
 					<li><a href="#">down</a></li>
 				</ul>
 			</div>
-			
+
+			<div class="btn-dropdown dropdown-secondary group">
+				<a href="#" class="btn-secondary">Button w/ Dropdown</a>
+				<a href="#" class="btn-secondary btn-drop"><span class="carat">v</span></a>
+				<ul>
+					<li><a href="#">the</a></li>
+					<li><a href="#">drop</a></li>
+					<li><a href="#">down</a></li>
+				</ul>
+			</div>
+
+			<div class="btn-dropdown dropdown-grey group">
+				<a href="#" class="btn-grey">Button w/ Dropdown</a>
+				<a href="#" class="btn-grey btn-drop"><span class="carat">v</span></a>
+				<ul>
+					<li><a href="#">the</a></li>
+					<li><a href="#">drop</a></li>
+					<li><a href="#">down</a></li>
+				</ul>
+			</div>
+
+
 		</div>
 	</section>
 </section>
@@ -192,33 +214,6 @@ ROWS WITH %
 			<p>There will be sample pages for every library at some point. These will have sample code for markup as well as LESS and javascript.</p>
 		</div>
 	</section>
-
-	<section class="row-fluid-alt">
-		<div class="span6 box">
-		</div>
-		<div class="span6 box">
-			<header>
-				<h3>Button Sets Secondary</h3>
-			</header>
-			<div class="btn-set group">
-				<a href="#" class="btn-secondary">1</a>
-				<a href="#" class="btn-secondary">2</a>
-				<a href="#" class="btn-secondary">3</a>
-				<a href="#" class="btn-secondary">4</a>
-			</div>
-			<div class="btn-set-dropdown secondary group">
-				<a href="#" class="btn-secondary">Button w/ Dropdown</a>
-				<a href="#" class="btn-secondary drop"><span class="carat">v</span></a>
-				<ul>
-					<li><a href="#">the</a></li>
-					<li><a href="#">drop</a></li>
-					<li><a href="#">down</a></li>
-				</ul>
-			</div>
-		</div>
-	</section>
-
-
 </section>
 
 
@@ -250,7 +245,7 @@ MODALS
 -->
 <section class="container">
 	<h2>Modals</h2>
-	<a href="/samples/modals.php" class="btn-secondary btn-large">Modal Sample Page</a>
+	<a href="/samples/modals.php" class="btn btn-secondary btn-large">Modal Sample Page</a>
 	<p>change This are for whole pages with overlays and come in multiple sizes and stuff. These are obviously not in action..</p>
 	<section class="row-fluid-alt">
 		<div class="span4">
@@ -306,11 +301,11 @@ MODALS
 						<p>If you have a kaylee file written then head to <strong>simon</strong></p>
 					</article>
 					<footer class="modal-footer">
-						<a href="/simon" class="btn-main">go to simon</a>
-						<a href="/river" class="btn-main">go to river</a>
+						<a href="/simon" class="btn btn-main">go to simon</a>
+						<a href="/river" class="btn btn-main">go to river</a>
 					</footer>
 				</section>
-				<a href="#" class="btn-secondary btn-small" data-role="trigger">modal on click</a>
+				<a href="#" class="btn btn-secondary btn-small" data-role="trigger">modal on click</a>
 			</div>
 		</article>
 		<article class="span4">
@@ -326,7 +321,7 @@ MODALS
 						footer
 					</footer>
 				</section>
-				<a href="#" class="btn-secondary btn-small" data-role="trigger">Modal</a>
+				<a href="#" class="btn btn-secondary btn-small" data-role="trigger">Modal</a>
 			</div>
 		</article>
 		<article class="span4">
@@ -342,7 +337,7 @@ MODALS
 						footer
 					</footer>
 				</section>
-				<a href="#" class="btn-secondary btn-small" data-role="trigger">modal on click</a>
+				<a href="#" class="btn btn-secondary btn-small" data-role="trigger">modal on click</a>
 			</div>
 		</article>
 	</section>
@@ -356,7 +351,7 @@ FORMS
 -->
 <section class="container">
 	<h2>Forms</h2>
-	<a href="/samples/forms.php" class="btn-secondary btn-large">Forms Sample Page</a>
+	<a href="/samples/forms.php" class="btn btn-secondary btn-large">Forms Sample Page</a>
 	<p></p>
 	<section class="row-fluid">
 		<form class="span6" data-radios="true">
@@ -398,7 +393,7 @@ FORMS
 					<label>not awesome</label>
 				</div>
 			</div>
-			<input type="submit" name="submit" value="submit" class="btn-grey"></input>
+			<input type="submit" name="submit" value="submit" class="btn btn-grey"></input>
 		</form>
 		<form class="span6" data-radiosb="true">
 			<div class="input-group">
@@ -439,7 +434,7 @@ FORMS
 					<label>not awesome</label>
 				</div>
 			</div>
-			<input type="submit" name="submit" value="submit" class="btn-grey"></input>
+			<input type="submit" name="submit" value="submit" class="btn btn-grey"></input>
 		</form>
 	</section>
 </section>
