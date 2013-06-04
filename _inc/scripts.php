@@ -6,7 +6,6 @@
 
 	<!-- other libs -->
 	<script src="../assets/js/touchwipe.min.js"></script>
-	<script src="../assets/js/jpreloader.js"></script> 
 	<script src="../assets/js/imagesloaded.js"></script>
 
 	<!-- browncoat libs -->

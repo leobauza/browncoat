@@ -5,27 +5,25 @@
  * =============================================================
  */
 
-.warning {
+.messages {
 	#CSS3 > .border-radius();
-	background:lighten(@warning, 20%);
-	border:1px solid @warning;
-	padding: 10px;
-	color: @white;
-	font-weight: bold;
-}
-.note {
-	#CSS3 > .border-radius();
-	background:@lighter-gray;
-	border:1px solid darken(@light-gray,10%);
-	padding: 10px;
-	color: @dark-gray;
-	font-weight: bold;
-}
-.success {
-	#CSS3 > .border-radius();
-	background:@success;
-	border:1px solid darken(@success,20%);
-	padding: 10px;
-	color: @white;
-	font-weight: bold;
+	font-size:1.2em;
+	&.status {
+		background:@status;
+		border:1px solid darken(@status,10%);
+		padding: 10px;
+		color: darken(@status,50%);
+	}
+	&.error {
+		background:lighten(@error, 20%);
+		border:1px solid @error;
+		padding: 10px;
+		color: @white;
+	}
+	&.success {
+		background:@success;
+		border:1px solid darken(@success,20%);
+		padding: 10px;
+		color: @white;
+	}
 }

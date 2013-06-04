@@ -53,7 +53,7 @@ HERO
 				<p>paragraphs too</p>
 				<a href="#" class="btn-main btn-large">not buttons tho</a>
 				<a href="#" class="btn-gray btn-large">gray one too</a>
-				<a href="/samples/loader.php" class="btn-secondary btn-large">loader sample</a>
+				<a href="#" class="btn-secondary btn-large">button</a>
 			</div>
 			<div class="span6">
 				<h1>A Reversed Row</h1>
@@ -197,23 +197,32 @@ ROWS WITH %
 
 
 </section>
+
 <!-- 
 
-WARNING NOTES SUCCESS 
+SIDE NAV (FHI360) 
+
+-->
+
+
+
+<!-- 
+
+MESSAGES (status, error, success) ...callouts
 
 -->
 <section class="container">
-	<h2>Warnings Notes Success</h2>
+	<h2>Messages</h2>
 	<p>Add some form of closing these. They and btns within it that do...stuff</p>
 	<section class="row-fluid">
 		<div class="span4">
-			<p class="warning">Holy shit everything has gone to hell!! these should be able to close or turn into a small square or something... basically option to dissappear</p>
+			<div class="messages error"><strong>Warning:</strong> Things have gone terribly wrong</div>
 		</div>
 		<div class="span4">
-			<p class="note"><strong>note:</strong> this is a note brah</p>
+			<div class="messages status"><strong>Status:</strong> Things have gone and here is how they went</div>
 		</div>
 		<div class="span4">
-			<p class="success">Yay! you did it right, everything is aces!</p>
+			<div class="messages success"><strong>Success:</strong> Things went fine</div>
 		</div>
 	</section>
 </section>

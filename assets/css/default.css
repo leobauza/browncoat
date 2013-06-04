@@ -549,7 +549,7 @@ pre {
   zoom: 1;
   _height: 17px;
 }
-.btn-set-dropdown  > a {
+.btn-set-dropdown > a {
   float: left;
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
@@ -557,17 +557,17 @@ pre {
   margin-bottom: 0px;
   margin-left: -1px;
 }
-.btn-set-dropdown  > a:first-child {
+.btn-set-dropdown > a:first-child {
   -webkit-border-radius: 5px 0 0 5px;
   -moz-border-radius: 5px 0 0 5px;
   border-radius: 5px 0 0 5px;
 }
-.btn-set-dropdown  > a.drop {
+.btn-set-dropdown > a.drop {
   -webkit-border-radius: 0 5px 5px 0;
   -moz-border-radius: 0 5px 5px 0;
   border-radius: 0 5px 5px 0;
 }
-.btn-set-dropdown  > a .carat {
+.btn-set-dropdown > a .carat {
   text-indent: -999999px;
   display: block;
 }
@@ -609,35 +609,29 @@ pre {
  * Callouts (warning message, labels, etc?)
  * =============================================================
  */
-.warning {
+.messages {
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
   border-radius: 3px;
+  font-size: 1.2em;
+}
+.messages.status {
+  background: #eeeeee;
+  border: 1px solid #d5d5d5;
+  padding: 10px;
+  color: #6f6f6f;
+}
+.messages.error {
   background: #dc4e44;
   border: 1px solid #9d261d;
   padding: 10px;
   color: #ffffff;
-  font-weight: bold;
 }
-.note {
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
-  border-radius: 3px;
-  background: #eeeeee;
-  border: 1px solid #c5c5c5;
-  padding: 10px;
-  color: #2d2d2d;
-  font-weight: bold;
-}
-.success {
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
-  border-radius: 3px;
+.messages.success {
   background: #eca833;
   border: 1px solid #a97110;
   padding: 10px;
   color: #ffffff;
-  font-weight: bold;
 }
 /* 
  * =============================================================
@@ -1273,136 +1267,6 @@ ol li > ol > li > ol > li > ol {
 /* BREADCRUMBS */
 #breadcrumb {
   padding: 20px 0;
-}
-/* 
- * =============================================================
- * LOADER LIB 
- * =============================================================
- */
-#loading {
-  display: none;
-  position: fixed;
-  height: 100%;
-  width: 100%;
-  background: #000000;
-  background: rgba(0, 0, 0, 0.95) url("/assets/img/gen/ajax-loader.gif") 50% 50% no-repeat;
-  top: 0;
-  left: 0;
-}
-body {
-  display: none;
-}
-#jpreOverlay {
-  background-color: #ffffff;
-}
-#jpreSlide {
-  font-size: 22px;
-  font-weight: bold;
-  color: #ccc;
-  text-align: center;
-  width: 50%;
-  height: 30%;
-}
-#jpreLoader {
-  width: 300px;
-  height: 25px;
-}
-#jpreBar {
-  background-color: #000000;
-}
-#jprePercentage {
-  color: #2d2d2d;
-  font-weight: bold;
-  text-align: center;
-}
-#jpreButton {
-  display: inline-block;
-  *display: inline;
-  zoom: 1;
-  _height: 17px;
-  margin: 0 0 10px;
-  padding: 5px 10px;
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  border-radius: 5px;
-  -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.3), 0 1px 2px rgba(0, 0, 0, 0.05);
-  -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.3), 0 1px 2px rgba(0, 0, 0, 0.05);
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.3), 0 1px 2px rgba(0, 0, 0, 0.05);
-  font-weight: bold;
-  font-size: 1.2em;
-  text-align: center;
-  background: #fd2e2e;
-  background: -moz-linear-gradient(top, #fd6060 0%, #fd2e2e 100%);
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #fd6060), color-stop(100%, #fd2e2e));
-  background: -webkit-linear-gradient(top, #fd6060 0%, #fd2e2e 100%);
-  background: -o-linear-gradient(top, #fd6060 0%, #fd2e2e 100%);
-  background: -ms-linear-gradient(top, #fd6060 0%, #fd2e2e 100%);
-  background: linear-gradient(to bottom, #fd6060 0%, #fd2e2e 100%);
-  *filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#fd6060', endColorstr='#fd2e2e');
-  color: #ffffff;
-  border: 1px solid #fd2e2e;
-  border-bottom: 1px solid #dc0202;
-  display: block;
-  width: 50px;
-  margin: 0 auto;
-  cursor: pointer;
-}
-#jpreButton:hover {
-  text-decoration: none;
-}
-#jpreButton:hover {
-  background: #fd2424;
-  color: #ffffff;
-}
-#jpreButton:active,
-#jpreButton.active {
-  background: #fd2e2e;
-  background: -moz-linear-gradient(top, #fd6060 0%, #fd2e2e 100%);
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #fd6060), color-stop(100%, #fd2e2e));
-  background: -webkit-linear-gradient(top, #fd6060 0%, #fd2e2e 100%);
-  background: -o-linear-gradient(top, #fd6060 0%, #fd2e2e 100%);
-  background: -ms-linear-gradient(top, #fd6060 0%, #fd2e2e 100%);
-  background: linear-gradient(to bottom, #fd6060 0%, #fd2e2e 100%);
-  *filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#fd6060', endColorstr='#fd2e2e');
-  -webkit-box-shadow: inset 0 5px 10px #f50303;
-  -moz-box-shadow: inset 0 5px 10px #f50303;
-  box-shadow: inset 0 5px 10px #f50303;
-  border: 1px solid #dc0202;
-}
-#jpreButton.btn-larger {
-  display: block;
-  font-size: 2em;
-  width: 300px;
-  margin: 10px 0px;
-  padding: 15px;
-}
-#jpreButton.btn-large {
-  display: block;
-  font-size: 1.8em;
-  width: 250px;
-  margin: 10px 0px;
-  padding: 10px;
-}
-#jpreButton.btn-medium {
-  display: block;
-  font-size: 1.6em;
-  width: 200px;
-  margin: 10px 0px;
-  padding: 10px;
-}
-#jpreButton.btn-small {
-  display: block;
-  width: 150px;
-  margin: 10px 0px;
-  padding: 10px;
-  font-size: 1.2em;
-}
-#jpreButton.btn-smaller {
-  display: block;
-  width: 100px;
-  margin: 10px 0px;
-  padding: 10px;
-  font-size: 1.1em;
 }
 /* 
  * =============================================================
