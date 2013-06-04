@@ -371,7 +371,7 @@ FORMS
 			</fieldset>
 			<div class="input-group">
 				<h3>Radio Buttons</h3>
-				<p>prettify these bitches up...</p>
+				<p>prettify these up...</p>
 				<div class="radio-group">
 					<input type="radio" name="valueOne" value="a" checked="checked"></input>
 					<label>value a</label>
@@ -383,7 +383,7 @@ FORMS
 			</div>
 			<div class="input-group">
 				<h3>Radio Buttons (horizontal)</h3>
-				<p>prettify these bitches up...</p>
+				<p>prettify these up...</p>
 				<div class="radio-group horizontal">
 					<input type="radio" name="levelOfAwesome" value="awesome"></input>
 					<label>awesome</label>
@@ -412,7 +412,7 @@ FORMS
 			</fieldset>
 			<div class="input-group">
 				<h3>Radio Buttons</h3>
-				<p>prettify these bitches up...</p>
+				<p>prettify these up...</p>
 				<div class="radio-group">
 					<input type="radio" name="awesomeness" value="awesome"></input>
 					<label>We never thought of findin' a place where we belong. Don't have to stand alone, we'll never let you fall. Don't need permission to decide what you believe. You gotta learn something when we meet you after school. I said jump, down on Jump Street. I</label>
@@ -424,7 +424,7 @@ FORMS
 			</div>
 			<div class="input-group">
 				<h3>Radio Buttons (horizontal)</h3>
-				<p>prettify these bitches up...</p>
+				<p>prettify these up...</p>
 				<div class="radio-group horizontal">
 					<input type="radio" name="poop" value="awesome"></input>
 					<label>awesome</label>
