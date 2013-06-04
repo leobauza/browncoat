@@ -1,8 +1,8 @@
 	<footer class="container">
-		<a href="/river.php" class="btn-gray">go to river</a>
-		<a href="/simon.php" class="btn-gray">run simon</a>
-		<a href="/" class="btn-gray">go home</a>
-		<a href="processors/wiper.php" data-ajax="wiper" class="btn-gray">wipe serenity</a>
+		<a href="/river.php" class="btn btn-grey">go to river</a>
+		<a href="/simon.php" class="btn btn-grey">run simon</a>
+		<a href="/" class="btn btn-grey">go home</a>
+		<a href="processors/wiper.php" data-ajax="wiper" class="btn btn-grey">wipe serenity</a>
 	</footer>
 
 	<!-- javascript -->
@@ -24,7 +24,7 @@
 				
 			</article>
 			<footer>
-				<a href="/simon.php" class="btn-main">run simon</a>
+				<a href="/simon.php" class="btn btn-main">run simon</a>
 			</footer>
 		</aside>
 	</section>
@@ -39,10 +39,10 @@
 				<p>Write something that returns whether or not serenity, washer, and styles.css are cleared...for now just refresh to see the result...Obviously, in simon you can't just refresh because it rewrites</p>
 			</article>
 			<footer>
-				<a href="/river.php" class="btn-main">go to river</a>
-				<a href="/simon.php" class="btn-main">run simon</a>
-				<a href="/" class="btn-main">go home</a>
-				<a href="processors/wiper.php" data-ajax="wiper" class="btn-main">wipe serenity</a>
+				<a href="/river.php" class="btn btn-main">go to river</a>
+				<a href="/simon.php" class="btn btn-main">run simon</a>
+				<a href="/" class="btn btn-main">go home</a>
+				<a href="processors/wiper.php" data-ajax="wiper" class="btn btn-main">wipe serenity</a>
 			</footer>
 		</aside>
 	</section>
@@ -152,9 +152,9 @@ if($('#river').length) {
 				var $label = $(this).find('label').html();
 				var $checked = $(this).find('input').prop('checked');
 				if($label == "true" || $label == "false") {
-					$(this).append("<a href=\"#\" data-input=\"radio\" class=\"btn-main\">" + $label + "</a>");
+					$(this).append("<a href=\"#\" data-input=\"radio\" class=\"btn btn-main\">" + $label + "</a>");
 				} else {
-					$(this).append("<a href=\"#\" data-theme=\""+ $label +"\" data-input=\"radio\" class=\"btn-main\">" + $label + "</a>");
+					$(this).append("<a href=\"#\" data-theme=\""+ $label +"\" data-input=\"radio\" class=\"btn btn-main\">" + $label + "</a>");
 				}
 				if($checked == "checked") {
 					$(this).find("a").addClass("active");

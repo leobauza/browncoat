@@ -54,7 +54,7 @@ echo $warnings;
 				<h3>This file wipes sernity, if you did this by mistake then:</h3>
 				<a href="/simon.php" class="btn-main btn-small">Run Simon</a>
 				<p>Otherwise you can go about your day:</p>
-				<a href="/index.php" class="btn-gray">go home</a>
+				<a href="/index.php" class="btn-grey">go home</a>
 
 			<?php
 			if(isset($pathToSerenity)):

@@ -126,7 +126,7 @@ endif;
 		<?php else: ?>
 			
 			<h1>Using Default</h1>
-			<a href="/simon.php" class="btn-main btn-small">Run simon</a>
+			<a href="/simon.php" class="btn btn-main btn-small">Run simon</a>
 			 
 		<?php endif; ?>
 		

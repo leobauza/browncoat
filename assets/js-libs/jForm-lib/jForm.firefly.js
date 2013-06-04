@@ -37,7 +37,7 @@
 			$(this.element).find('.radio-group').each(function(){
 				var $label = $(this).find('label').html();
 				var $checked = $(this).find('input').prop('checked');
-				$(this).append("<a href=\"#\" data-input=\"radio\" class=\"btn-secondary\">" + $label + "</a>");
+				$(this).append("<a href=\"#\" data-input=\"radio\" class=\"btn btn-secondary\">" + $label + "</a>");
 				if($checked == true) {
 					$(this).find("a").addClass("active");
 				}

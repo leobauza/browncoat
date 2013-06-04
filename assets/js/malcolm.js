@@ -4,12 +4,20 @@
  * =============================================================
  */
 
-//Somewhat DOM based routing.
-//Map to keys in this object literal
-//common goes everywhere...then classes then id's..or however you call em
+/* 
+ * =============================================================
+ * Somewhat DOM based routing.
+ * Map to keys in this object literal
+ * common goes everywhere...then classes then id's..or however you call em
+ * =============================================================
+ */
 SITE = {
 	common : {
-		//all common code kicks offs
+		/* 
+		 * =============================================================
+		 * ALL COMMON CODE KICKS OFF
+		 * =============================================================
+		 */
 		init			: function(){
 			console.log('common init!')
 			function loadImg() {
@@ -39,11 +47,19 @@ SITE = {
 			//navigation code gets called 
 			SITE.common.navigation();
 		},
-		//code called AFTER init is DONE and LOADED
+		/* 
+		 * =============================================================
+		 * COMMON INIT IS DONE THIS KICKS OFF
+		 * =============================================================
+		 */
 		initDone	: function() {
 			console.log('called after the resolved load image');
 		},
-		//Navigation code for NAV-FIREFLY (horizontal nav dropdown)
+		/* 
+		 * =============================================================
+		 * NAVIGATION CODE FOR HORIZONTAL NAV
+		 * =============================================================
+		 */
 		navigation	: function(){
 
 			if(!$('.site-nav .btn-dropdown').length) {
@@ -77,12 +93,21 @@ SITE = {
 			($vars["winWidth"] > 1024) ? desktopNav($vars["winWidth"]) : mobileNav($vars["winWidth"]);
 						
 		},
-		//Last code called in init gets kicked off
+		/* 
+		 * =============================================================
+		 * FINALIZE COMMON CODE
+		 * =============================================================
+		 */
 		finalize	: function(){
 			console.log("finalize common");
 		}
 	},
-	//interior pages
+	/* 
+	 * =============================================================
+	 * PAGES WITH A CLASS OF .interior KICKS OFF
+	 * ID's #about and #contact bellow
+	 * =============================================================
+	 */
 	interior : {
 		init			: function(){
 			console.log('interior init!');
@@ -98,6 +123,7 @@ SITE = {
 		}
 	}
 }
+
 
 
 UTIL = {
@@ -131,7 +157,6 @@ UTIL = {
 	}
 
 };
-
 
 // kick it all off here (doc ready) 
 $(function(){

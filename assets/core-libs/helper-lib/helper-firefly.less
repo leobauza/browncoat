@@ -75,7 +75,7 @@
 		background: linear-gradient(to bottom,  @top 0%,@bottom 100%);
 		*filter: e(%("progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#%s', endColorstr='#%s')", @ms-top, @ms-bottom));
 	}
-	.gray-gradient(@top:@lighter-gray, @bottom:darken(@lighter-gray, 10%)) {
+	.grey-gradient(@top:@lighter-grey, @bottom:darken(@lighter-grey, 10%)) {
 		//Hack for IE parcing, strip out # of the beginning of the HEX color and pass it to the LESS parcer
 		@ms-top: ~`"@{top}".slice(1)`;
 		@ms-bottom: ~`"@{bottom}".slice(1)`;

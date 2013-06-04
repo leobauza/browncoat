@@ -58,9 +58,9 @@ function initial(){
  * =============================================================
  */
 
-	$('.btn-set-dropdown .drop').click(function(e){
+	$('.btn-dropdown .btn-drop').click(function(e){
 		var $this = $(this);
-		$this.closest('.btn-set-dropdown').find('ul').toggle();
+		$this.closest('.btn-dropdown').find('ul').toggle();
 		e.preventDefault();
 	});
 	

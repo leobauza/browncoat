@@ -189,7 +189,7 @@ $title = "reference file"; //this is backed up by a generic title set in kaylee.
 		</div>
 		<textarea></textarea>
 		<div class="input-group">
-			<button type="submit" value="submit" class="btn-gray">Submit</button>
+			<button type="submit" value="submit" class="btn-grey">Submit</button>
 		</div>
 	</form>
 </section>
