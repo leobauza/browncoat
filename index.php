@@ -85,6 +85,12 @@ ROWS WITH overflow:hidden
 		<li><a href="#">manage display</a></li>
 	</ul>
 	
+	<div id="breadcrumb">
+		<div class="breadcrumb">
+			<a href="#">home</a> >> <a href="#">about</a>
+		</div>
+	</div>
+	
 	<h2>Row Fluids Using overflow:hidden</h2>
 	<section class="row-fluid">
 		<div class="span3">

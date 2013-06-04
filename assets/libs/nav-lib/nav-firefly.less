@@ -5,14 +5,13 @@
  * =============================================================
  */
 
-
 .site-nav {
 	&.nav-horizontal {
 		.group;
 		//@file:"platy.png";
 		//@url:"@{apppath}@{file}";	
-		//background:@bg-site-nav url(@url);
-		background:@bg-site-nav;
+		//background:@bg-site-nav-horizontal url(@url);
+		background:@bg-site-nav-horizontal;
 		&> ul {
 			.reset-list();
 			.group;
@@ -31,13 +30,13 @@
 				}
 				&> a {
 					float:left;
-					color:@color-site-nav;
-					border-right:1px solid @border-site-nav;
+					color:@color-site-nav-horizontal;
+					border-right:1px solid @border-site-nav-horizontal;
 					display:block;
 					padding:25px 20px;
 					font-size:1.2em;
 					&:hover {
-						background:@border-site-nav;
+						background:@border-site-nav-horizontal;
 						text-decoration:none;
 					}
 					@media (max-width: 1024px) {
@@ -52,7 +51,7 @@
 					color:@white;
 					padding: 25px 10px;
 					font-size: 1.2em;
-					border-right:1px solid @border-site-nav;
+					border-right:1px solid @border-site-nav-horizontal;
 					@media (max-width: 1024px) {
 						display:block;
 					}
@@ -96,7 +95,7 @@
 		float:right;
 		li {
 			&.first {
-				border-left:1px solid @border-site-nav;
+				border-left:1px solid @border-site-nav-horizontal;
 			}
 			&.last {
 				a {
@@ -142,7 +141,17 @@
 		}
 	}
 }
-
+/* BREADCRUMBS */
+#breadcrumb {
+	padding:20px 0;
+}
+.breadcrumb {
+	a {
+		&:hover {
+			
+		}
+	}
+}
 
 
 

@@ -1126,65 +1126,94 @@ ol li > ol > li > ol > li > ol {
  * =============================================================
  */
 .site-nav {
+  /*end horizontal*/
+
+}
+.site-nav.nav-horizontal {
   zoom: 1;
   background: #272727;
 }
-.site-nav:before {
+.site-nav.nav-horizontal:before {
   display: table;
   content: "";
 }
-.site-nav:after {
+.site-nav.nav-horizontal:after {
   display: table;
   content: "";
   clear: both;
 }
-.site-nav > ul {
+.site-nav.nav-horizontal > ul {
   margin: 0;
   padding: 0;
   list-style: none;
   font-size: 100%;
   zoom: 1;
 }
-.site-nav > ul:before {
+.site-nav.nav-horizontal > ul:before {
   display: table;
   content: "";
 }
-.site-nav > ul:after {
+.site-nav.nav-horizontal > ul:after {
   display: table;
   content: "";
   clear: both;
 }
-.site-nav > ul > li {
+.site-nav.nav-horizontal > ul > li {
   margin: 0;
   float: left;
+  position: relative;
   /*SECOND LEVEL*/
 
 }
-.site-nav > ul > li a {
+.site-nav.nav-horizontal > ul > li > a {
+  float: left;
   color: #ffffff;
   border-right: 1px solid #1f1f1f;
   display: block;
   padding: 25px 20px;
   font-size: 1.2em;
 }
-.site-nav > ul > li a:hover {
+.site-nav.nav-horizontal > ul > li > a:hover {
   background: #1f1f1f;
   text-decoration: none;
 }
 @media (max-width: 1024px) {
-  .site-nav > ul > li a:hover {
+  .site-nav.nav-horizontal > ul > li > a:hover {
     background: inherit;
   }
 }
-.site-nav > ul > li > ul {
+.site-nav.nav-horizontal > ul > li .btn-dropdown {
+  display: none;
+  float: left;
+  color: #ffffff;
+  padding: 25px 10px;
+  font-size: 1.2em;
+  border-right: 1px solid #1f1f1f;
+}
+@media (max-width: 1024px) {
+  .site-nav.nav-horizontal > ul > li .btn-dropdown {
+    display: block;
+  }
+}
+.site-nav.nav-horizontal > ul > li > ul {
+  position: absolute;
+  top: 100%;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-size: 100%;
   display: none;
 }
-.site-nav > ul > li > ul > li a {
+.site-nav.nav-horizontal > ul > li > ul > li {
+  margin: 0;
+}
+.site-nav.nav-horizontal > ul > li > ul > li a {
   font-size: 1.2em;
 }
-.site-nav > ul > li > ul > li a:hover {
+.site-nav.nav-horizontal > ul > li > ul > li a:hover {
   text-decoration: none;
 }
+/*end general site-nav*/
 .menu.menu-left {
   float: left;
 }
@@ -1197,7 +1226,55 @@ ol li > ol > li > ol > li > ol {
 .menu.menu-right li.last a {
   border: none;
 }
-/* VERTICAL *//* 
+/* NAV TABS */
+.nav-tabs {
+  margin: 0px 0px 10px;
+  padding: 0px;
+  list-style: none;
+  font-size: 100%;
+  border-bottom: 1px solid #000000;
+  zoom: 1;
+}
+.nav-tabs:before {
+  display: table;
+  content: "";
+}
+.nav-tabs:after {
+  display: table;
+  content: "";
+  clear: both;
+}
+.nav-tabs li {
+  margin: 0 10px 0 0;
+  float: left;
+}
+.nav-tabs li a {
+  display: block;
+  padding: 5px;
+  background: #ffffff;
+  color: #000000;
+  border: 1px solid #000000;
+  border-bottom: none;
+  font-size: 1.2em;
+}
+.nav-tabs li a:hover {
+  text-decoration: none;
+  background: #000000;
+  color: #ffffff;
+}
+.nav-tabs li.active a {
+  background: #000000;
+  color: #ffffff;
+}
+.nav-tabs li.active a:hover {
+  background: #000000;
+  color: #ffffff;
+}
+/* BREADCRUMBS */
+#breadcrumb {
+  padding: 20px 0;
+}
+/* 
  * =============================================================
  * LOADER LIB 
  * =============================================================
