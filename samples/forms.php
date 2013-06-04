@@ -66,7 +66,7 @@ FORMS WITH RADIOS
 					<label>not awesome</label>
 				</div>
 			</div>
-			<input type="submit" name="submit" value="submit" class="btn-gray"></input>
+			<input type="submit" name="submit" value="submit" class="btn-grey"></input>
 		</form>
 		<form class="span6" data-radiosb="true">
 			<div class="input-group">
@@ -107,7 +107,7 @@ FORMS WITH RADIOS
 					<label>not awesome</label>
 				</div>
 			</div>
-			<input type="submit" name="submit" value="submit" class="btn-gray"></input>
+			<input type="submit" name="submit" value="submit" class="btn-grey"></input>
 		</form>
 	</section>
 <!-- 
@@ -174,7 +174,7 @@ FORMS WITH UN-Prettified
 				</select>
 			</div>
 		</fieldset>
-		<input type="submit" name="submit" value="submit" class="btn-gray"></input>
+		<input type="submit" name="submit" value="submit" class="btn-grey"></input>
 	</form>
 
 </section>

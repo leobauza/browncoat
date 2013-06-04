@@ -51,9 +51,9 @@ HERO
 				<h5>heading five</h5>
 				<h6>even h6's</h6>
 				<p>paragraphs too</p>
-				<a href="#" class="btn-main btn-large">not buttons tho</a>
-				<a href="#" class="btn-gray btn-large">gray one too</a>
-				<a href="#" class="btn-secondary btn-large">button</a>
+				<a href="#" class="btn btn-main btn-large">not buttons tho</a>
+				<a href="#" class="btn btn-grey btn-large">grey one too</a>
+				<a href="#" class="btn btn-secondary btn-large">button</a>
 			</div>
 			<div class="span6">
 				<h1>A Reversed Row</h1>
@@ -63,12 +63,71 @@ HERO
 				<h5>heading five</h5>
 				<h6>even h6's</h6>
 				<p>paragraphs too</p>
-				<a href="#" class="btn-main btn-small">not buttons tho</a>
-				<a href="#" class="btn-gray btn-small">gray one too</a>
-				<a href="#" class="btn-secondary btn-small">small btns</a>
+				<a href="#" class="btn btn-main btn-small">not buttons tho</a>
+				<a href="#" class="btn btn-grey btn-small">grey one too</a>
+				<a href="#" class="btn btn-secondary btn-small">small btns</a>
 			</div>
 		</section>
 	</div>
+</section>
+
+
+<!-- 
+
+NEW BUTTONS
+
+-->
+<section class="container">
+	<h2>New Better Btn Mark Up</h2>
+	<p>Base class of .btn and all classes following .btn-property and the property is camel cased if more than one word</p>
+	<section class="row-fluid">
+		<div class="span4">
+			<h2>Button Colours</h2>
+			<p>(main, secondary, grey, custom)</p>
+			<a href="#" class="btn btn-main">main</a>
+			<a href="#" class="btn btn-secondary">secondary</a>
+			<a href="#" class="btn btn-grey">grey</a>
+			<a href="#" class="btn btn-customColour">custom</a>
+			<p>Active State (custom is black so you can't see it)</p>
+			<a href="#" class="btn active btn-main">main</a>
+			<a href="#" class="btn active btn-secondary">secondary</a>
+			<a href="#" class="btn active btn-grey">grey</a>
+			<a href="#" class="btn active btn-customColour">custom</a>
+		</div>
+		<div class="span4">
+			<h2>Button Sizes</h2>
+			<p>(smaller, small, medium, large, larger, custom)</p>
+			<a href="#" class="btn btn-main btn-smaller">smaller</a>
+			<a href="#" class="btn btn-main btn-small">small</a>
+			<a href="#" class="btn btn-main btn-medium">medium</a>
+			<a href="#" class="btn btn-main btn-large">large</a>
+			<a href="#" class="btn btn-main btn-larger">larger</a>
+			<a href="#" class="btn btn-main btn-customSize">custom</a>
+		</div>
+		<div class="span4">
+			<h2>Other Buttons</h2>
+			<p>(sets, dropdowns, etc)</p>
+			<header>
+				<h3>Button Sets</h3>
+			</header>
+			<div class="btn-set group">
+				<a href="#" class="btn-main">1</a>
+				<a href="#" class="btn-main">2</a>
+				<a href="#" class="btn-main">3</a>
+				<a href="#" class="btn-main">4</a>
+			</div>
+			<div class="btn-set btn-dropdown group">
+				<a href="#" class="btn-main">Button w/ Dropdown</a>
+				<a href="#" class="btn-main drop"><span class="carat">v</span></a>
+				<ul>
+					<li><a href="#">the</a></li>
+					<li><a href="#">drop</a></li>
+					<li><a href="#">down</a></li>
+				</ul>
+			</div>
+			
+		</div>
+	</section>
 </section>
 
 
@@ -92,29 +151,20 @@ ROWS WITH overflow:hidden
 	</div>
 	
 	<h2>Row Fluids Using overflow:hidden</h2>
+	<h3>Project Goals</h3>
+	<p>more libraries, more themes, more plugins. <strong>Libraries are the compartments</strong> of browncoat. There are 4 core libraries (colour, helper, structure, text) that are required for any <strong>theme.</strong> A <strong>theme is the looks</strong> for that browncoat build. Themes can contain any number of other libraries (nav, btn, base, form, modal, etc.) Furthermor themes must make sure to play nice with the <strong>firefly</strong> (my basic theme) plugins or build their own.</p>
 	<section class="row-fluid">
-		<div class="span3">
-			<h3>Browncoat is</h3>
-			<p>a lightweight front end framework built partially on php and less. Rather than having a huge css file Browncoat will use libraries than can be included or excluded by means of a configuration file (kaylee.php) somehow. Browncoat is in its infancy, or rather even before that, so fucking tear it apart do with it as you wish and suggest anything you want.</p>
-			<a href="#" class="btn-main btn-medium">main button</a>
-			<a href="#" class="btn-main active btn-medium">active main button</a>
+		<div class="span4">
+			<h3>what is this?</h3>
+			<p><strong>browncoat</strong> is a light front end framework utilizing LESS. It is <strong>highly customizable and highly compartmental</strong>. It is designed in small pieces so that any one of them can be <strong>copied, discarded, or altered</strong> for any given project.</p>
 		</div>
-		<div class="span3">
-			<h3>Some Goals</h3>
-			<p>of Browncoat are to create a good starting point for front end developers working in any area. Whether that is developing for CMS's (like drupal, wordpress, expression engine, etc) or frameworks (such as ruby on rails, grails, codeigniter or laravel) Browncoat should provide a starting point for prototyping or even integrating into those systems (not sure how by the way but that's why we call 'em goals).</p>
-			<a href="#" class="btn-gray btn-medium">gray button</a>
-			<a href="#" class="btn-gray active btn-medium">gray button</a>
-		</div>
-		<div class="span3">
+		<div class="span4">
 			<h3>My Promises</h3>
-			<p>none...I am building this because I need it...if someone makes something better that I can use I'll steal that and abandon this project...ok...no I won't but I still make no promises about updates or whatever. For as long as this is relevant all my free time will go towards making this framework as awesome as I can, but I am a human with a job and I like to drink and pass out a lot.</p>
-			<a href="#" class="btn-secondary btn-medium">secondary button</a>
-			<a href="#" class="btn-secondary active btn-medium">secondary button</a>
+			<p>Constant improvement of libraries. Constant improvement of JS and asset structure. One day actually finishing the backbone of browncoat for theme selection and theme building.</p>
 		</div>
-		<div class="span3">
+		<div class="span4">
 			<h3>Documentation</h3>
-			<p>The way I see documentation for stuff is usually this: "what the fuck are you talking about?" so hopefully I will have better documentation that is readable to human beings even those who have 0 experience with every single part of this. If I ever answer your question and you don't know what the hell I mean say so...I need to be able to convey real answers to people  of all experience levels. Granted, if you are an idiot I'll tell you that too</p>
-			<a href="#" class="btn-main btn-medium">main button</a>
+			<p>There will be sample pages for every library at some point. These will have sample code for markup as well as LESS and javascript.</p>
 		</div>
 	</section>
 
@@ -126,52 +176,25 @@ ROWS WITH %
 -->
 <section class="container">
 	<h2>Row Fluid Alternates using only % and no overflow:hidden</h2>
+	<h3>Project Goals</h3>
+	<p>more libraries, more themes, more plugins. <strong>Libraries are the compartments</strong> of browncoat. There are 4 core libraries (colour, helper, structure, text) that are required for any <strong>theme.</strong> A <strong>theme is the looks</strong> for that browncoat build. Themes can contain any number of other libraries (nav, btn, base, form, modal, etc.) Furthermor themes must make sure to play nice with the <strong>firefly</strong> (my basic theme) plugins or build their own.</p>
 	<section class="row-fluid-alt">
-		<div class="span3">
-			<h3>Browncoat is</h3>
-			<p>a lightweight front end framework built partially on php and less. Rather than having a huge css file Browncoat will use libraries than can be included or excluded by means of a configuration file (kaylee.php) somehow. Browncoat is in its infancy, or rather even before that, so fucking tear it apart do with it as you wish and suggest anything you want.</p>
-			<a href="#" class="btn-main btn-medium">main button</a>
-			<a href="#" class="btn-main active btn-medium">active main button</a>
+		<div class="span4">
+			<h3>what is this?</h3>
+			<p><strong>browncoat</strong> is a light front end framework utilizing LESS. It is <strong>highly customizable and highly compartmental</strong>. It is designed in small pieces so that any one of them can be <strong>copied, discarded, or altered</strong> for any given project.</p>
 		</div>
-		<div class="span3">
-			<h3>Some Goals</h3>
-			<p>of Browncoat are to create a good starting point for front end developers working in any area. Whether that is developing for CMS's (like drupal, wordpress, expression engine, etc) or frameworks (such as ruby on rails, grails, codeigniter or laravel) Browncoat should provide a starting point for prototyping or even integrating into those systems (not sure how by the way but that's why we call 'em goals).</p>
-			<a href="#" class="btn-gray btn-medium">gray button</a>
-			<a href="#" class="btn-gray active btn-medium">gray button</a>
-		</div>
-		<div class="span3">
+		<div class="span4">
 			<h3>My Promises</h3>
-			<p>none...I am building this because I need it...if someone makes something better that I can use I'll steal that and abandon this project...ok...no I won't but I still make no promises about updates or whatever. For as long as this is relevant all my free time will go towards making this framework as awesome as I can, but I am a human with a job and I like to drink and pass out a lot.</p>
-			<a href="#" class="btn-secondary btn-medium">secondary button</a>
-			<a href="#" class="btn-secondary active btn-medium">secondary button</a>
+			<p>Constant improvement of libraries. Constant improvement of JS and asset structure. One day actually finishing the backbone of browncoat for theme selection and theme building.</p>
 		</div>
-		<div class="span3">
+		<div class="span4">
 			<h3>Documentation</h3>
-			<p>The way I see documentation for stuff is usually this: "what the fuck are you talking about?" so hopefully I will have better documentation that is readable to human beings even those who have 0 experience with every single part of this. If I ever answer your question and you don't know what the hell I mean say so...I need to be able to convey real answers to people  of all experience levels. Granted, if you are an idiot I'll tell you that too</p>
-			<a href="#" class="btn-main btn-medium">main button</a>
+			<p>There will be sample pages for every library at some point. These will have sample code for markup as well as LESS and javascript.</p>
 		</div>
 	</section>
 
 	<section class="row-fluid-alt">
 		<div class="span6 box">
-			<header>
-				<h3>Button Sets</h3>
-			</header>
-			<div class="btn-set group">
-				<a href="#" class="btn-main">1</a>
-				<a href="#" class="btn-main">2</a>
-				<a href="#" class="btn-main">3</a>
-				<a href="#" class="btn-main">4</a>
-			</div>
-			<div class="btn-set-dropdown group">
-				<a href="#" class="btn-main">Button w/ Dropdown</a>
-				<a href="#" class="btn-main drop"><span class="carat">v</span></a>
-				<ul>
-					<li><a href="#">the</a></li>
-					<li><a href="#">drop</a></li>
-					<li><a href="#">down</a></li>
-				</ul>
-			</div>
 		</div>
 		<div class="span6 box">
 			<header>
@@ -375,7 +398,7 @@ FORMS
 					<label>not awesome</label>
 				</div>
 			</div>
-			<input type="submit" name="submit" value="submit" class="btn-gray"></input>
+			<input type="submit" name="submit" value="submit" class="btn-grey"></input>
 		</form>
 		<form class="span6" data-radiosb="true">
 			<div class="input-group">
@@ -416,7 +439,7 @@ FORMS
 					<label>not awesome</label>
 				</div>
 			</div>
-			<input type="submit" name="submit" value="submit" class="btn-gray"></input>
+			<input type="submit" name="submit" value="submit" class="btn-grey"></input>
 		</form>
 	</section>
 </section>

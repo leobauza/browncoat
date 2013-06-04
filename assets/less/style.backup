@@ -65,7 +65,7 @@ hr {
 	height:1px;
 	.marpad(0 0 20px 0, 0);
 	border:0;
-	border-bottom:1px solid @light-gray;
+	border-bottom:1px solid @light-grey;
 	border-top:1px solid @white;
 	clear:both;
 	overflow:0;
@@ -81,7 +81,7 @@ a:hover {
 p {
 	font-size:1.4em;
 	line-height:1.6em;
-	color:@mid-gray;
+	color:@mid-grey;
 	margin: 0 0 .5em;
 	padding:0;
 }
@@ -169,14 +169,14 @@ form {
 	  height: 18px;
 	  padding: 4px;
 	  margin-bottom: 9px;
-	  color: @dark-gray;
+	  color: @dark-grey;
 	}
 
 	textarea,
 	input[type="text"],
 	input[type="password"] {
 		background-color: @white;
-		border: 1px solid @light-gray;
+		border: 1px solid @light-grey;
 		#CSS3 > .border-radius(3px);
 		#CSS3 > .inset-box-shadow( inset 0 1px 1px rgba(0, 0, 0, 0.075) );
 		&:focus {
@@ -247,12 +247,12 @@ footer,
 /****** Samples ******/
 .box {
 	background:@bg-colour-two;
-	color:@mid-gray;
+	color:@mid-grey;
 	#CSS3 > .border-radius(10px);
 	#CSS3 > .box-shadow();
 	header {
 		.marpad(0 0 10px, 10px);
-		border-bottom:1px solid @light-gray;
+		border-bottom:1px solid @light-grey;
 	}
 	footer.spacer {
 		padding: 60px 0;

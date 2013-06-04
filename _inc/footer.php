@@ -1,8 +1,8 @@
 	<footer class="container">
-		<a href="/river.php" class="btn-gray">go to river</a>
-		<a href="/simon.php" class="btn-gray">run simon</a>
-		<a href="/" class="btn-gray">go home</a>
-		<a href="processors/wiper.php" data-ajax="wiper" class="btn-gray">wipe serenity</a>
+		<a href="/river.php" class="btn-grey">go to river</a>
+		<a href="/simon.php" class="btn-grey">run simon</a>
+		<a href="/" class="btn-grey">go home</a>
+		<a href="processors/wiper.php" data-ajax="wiper" class="btn-grey">wipe serenity</a>
 	</footer>
 
 	<!-- javascript -->

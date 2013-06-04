@@ -7,7 +7,7 @@
 
 .btn-main,
 .btn-secondary,
-.btn-gray {
+.btn-grey {
 	.inline-block(@btn-height);
 	.marpad(0 0 10px, 5px 10px);
 	#CSS3 .border-radius(5px);
@@ -54,24 +54,24 @@
 	}
 }
 
-.btn-gray {
-	#gradients > .gray-gradient();
+.btn-grey {
+	#gradients > .grey-gradient();
 	color:@dark-btn-type;
-	border:1px solid @light-gray;
-	border-bottom:1px solid darken(@light-gray,20%);
+	border:1px solid @light-grey;
+	border-bottom:1px solid darken(@light-grey,20%);
 	&:hover {
-		background:darken(@light-gray,2%);
+		background:darken(@light-grey,2%);
 		color:@dark-btn-type;
 	}
 	&:active, &.active {
-		#gradients > .gray-gradient();
-		#CSS3 > .inset-box-shadow( inset 0 5px 10px darken(@light-gray,15%) );
-		border:1px solid darken(@light-gray,20%);
+		#gradients > .grey-gradient();
+		#CSS3 > .inset-box-shadow( inset 0 5px 10px darken(@light-grey,15%) );
+		border:1px solid darken(@light-grey,20%);
 	}
 }
 
 
-.btn-gray,
+.btn-grey,
 .btn-main,
 .btn-secondary {
 	&.btn-larger{
@@ -110,7 +110,7 @@
 .ctr-btn {
 	.btn-main,
 	.btn-secondary,
-	.btn-gray {
+	.btn-grey {
 		margin: 0 auto 10px;
 	}
 }
@@ -169,7 +169,7 @@
 				display:block;
 				padding:5px 15px;
 				background: lighten(@brand,20%);
-				color:@dark-gray;
+				color:@dark-grey;
 				font-size: 1.2em;
 				&:hover {
 					background:darken(@brand,20%);
