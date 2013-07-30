@@ -58,13 +58,17 @@
 				}
 				/*SECOND LEVEL*/
 				&> ul {
+					.reset-list();
 					position:absolute;
 					top:100%;
-					.reset-list();
+					min-width:200px;
 					display:none;
+					background:@bg-site-nav-horizontal;
 					&> li {
 						margin:0;
 						a {
+							display:block;
+							padding:10px 20px;
 							font-size:1.2em;
 							&:hover {
 								text-decoration:none;
