@@ -15,7 +15,8 @@
 		//default settings :: data comes in plugin overlay event and id
 		this.options = $.extend( {
 			'radios' : (data.radios) ? data.radios : 'false',
-			'radiosb' : (data.radiosb) ? data.radiosb : 'false'
+			'radiosb' : (data.radiosb) ? data.radiosb : 'false',
+			'selects' : (data.selects) ? data.selects : 'false'
 		}, options) ;
 		this._name = pluginName;
 		this.init();
@@ -29,7 +30,9 @@
 			if(this.options.radiosb == true) {
 				this.radiosb();
 			}
-			
+			if(this.options.selects == true) {
+				this.selects();
+			}
 		}
 		, radios : function() {
 			//my event
@@ -72,6 +75,32 @@
 		, checkboxes : function() {
 			// THIS IS FOR CHECKBOXES TO UNCHECK
 			//$(this).closest('.check-group').find('input').prop('checked',false);
+		}
+		, selects : function() {
+			// prettify selects
+			console.log('we gonna prettify these selects upppp');
+			
+			$(this.element).find('select').each(function(){
+				$(this).after('<div class="pretty-select"><span>option</span><a href="#">v</a><ul></ul></div>');
+				$(this).find('option').each(function(){
+					var $val = $(this).val();
+					var $text = $(this).html();
+					$(this).closest('.select-group').find('.pretty-select ul').append('<li><a href="#" data-input="option" data-val="'+ $val +'">' + $text + '</a></li>')
+				});
+			});
+			//dropdown functionality
+			$('.pretty-select a').click(function(e){
+				$(this).parent().find('ul').toggle();
+				e.preventDefault();
+			})
+			
+			//assing value to select
+			$('[data-input=option]').click(function(e){
+				var $data = $(this).data();
+				$(this).closest('.select-group').find('select').val($data.val);
+				e.preventDefault();
+			});
+			
 		}
 	}
 
