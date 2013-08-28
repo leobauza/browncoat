@@ -48,7 +48,11 @@
 .row-fluid > [class*="span"] {
 	float: left;
 	margin-right: @column-gutter;
-	&.l, &:last-child {
+	&.l {
+		margin-right: 0;
+		.overflow;
+	}
+	&:last-child {
 		margin-right: 0;
 		.overflow;
 	}

@@ -23,11 +23,11 @@ FORMS
 
 <!-- 
 
-FORMS WITH RADIOS
+FORMS WITH PRETTIFY
 
 -->
 	<section class="row-fluid">
-		<form class="span6" data-radios="true">
+		<form class="span6" data-radios="true" data-selects="true">
 			<div class="input-group">
 				<label>Form Label</label>
 				<input type="text" placeholder="placeholder"></input>
@@ -44,7 +44,7 @@ FORMS WITH RADIOS
 			</fieldset>
 			<div class="input-group">
 				<h3>Radio Buttons</h3>
-				<p>prettify these bitches up...</p>
+				<p>prettify these up...</p>
 				<div class="radio-group">
 					<input type="radio" name="valueOne" value="a" checked="checked"></input>
 					<label>value a</label>
@@ -56,7 +56,7 @@ FORMS WITH RADIOS
 			</div>
 			<div class="input-group">
 				<h3>Radio Buttons (horizontal)</h3>
-				<p>prettify these bitches up...</p>
+				<p>prettify these up...</p>
 				<div class="radio-group horizontal">
 					<input type="radio" name="levelOfAwesome" value="awesome"></input>
 					<label>awesome</label>
@@ -66,6 +66,27 @@ FORMS WITH RADIOS
 					<label>not awesome</label>
 				</div>
 			</div>
+
+			<fieldset class="input-group">
+				<div class="select-group">
+					<label for="select-choice">Select Dropdown Choice:</label>
+					<select name="select-choice">
+						<option value="Choice 1">Choice Number 1</option>
+						<option value="Choice 2">Choice Number 2</option>
+						<option value="Choice 3">Choice 3</option>
+					</select>
+				</div>
+				<div class="select-group">
+					<label for="select-choice-multiple">Select Dropdown Choice:</label>
+					<select name="select-choice-multiple" multiple="multiple">
+						<option value="Choice 1">Choice 1</option>
+						<option value="Choice 2">Choice 2</option>
+						<option value="Choice 3">Choice 3</option>
+					</select>
+				</div>
+			</fieldset>
+
+
 			<input type="submit" name="submit" value="submit" class="btn btn-grey"></input>
 		</form>
 		<form class="span6" data-radiosb="true">
@@ -85,7 +106,7 @@ FORMS WITH RADIOS
 			</fieldset>
 			<div class="input-group">
 				<h3>Radio Buttons</h3>
-				<p>prettify these bitches up...</p>
+				<p>prettify these up...</p>
 				<div class="radio-group">
 					<input type="radio" name="awesomeness" value="awesome"></input>
 					<label>We never thought of findin' a place where we belong. Don't have to stand alone, we'll never let you fall. Don't need permission to decide what you believe. You gotta learn something when we meet you after school. I said jump, down on Jump Street. I</label>
@@ -97,7 +118,7 @@ FORMS WITH RADIOS
 			</div>
 			<div class="input-group">
 				<h3>Radio Buttons (horizontal)</h3>
-				<p>prettify these bitches up...</p>
+				<p>prettify these up...</p>
 				<div class="radio-group horizontal">
 					<input type="radio" name="poop" value="awesome"></input>
 					<label>awesome</label>
@@ -134,7 +155,7 @@ FORMS WITH UN-Prettified
 		</fieldset>
 		<div class="input-group">
 			<h3>Radio Buttons</h3>
-			<p>prettify these bitches up...</p>
+			<p>prettify these up...</p>
 			<div class="radio-group">
 				<input type="radio" name="valueOne" value="a" checked="checked"></input>
 				<label>value a</label>
@@ -146,7 +167,7 @@ FORMS WITH UN-Prettified
 		</div>
 		<fieldset class="input-group">
 			<h3>Radio Buttons (horizontal)</h3>
-			<p>prettify these bitches up...</p>
+			<p>prettify these up...</p>
 			<div class="radio-group horizontal">
 				<input type="radio" name="levelOfAwesome" value="awesome"></input>
 				<label>awesome</label>

@@ -170,7 +170,6 @@ $(function(){
 		$vars["winWidth"] = $(window).width();
 		SITE.common.navigation();
 	});
-	
 
 });
 
