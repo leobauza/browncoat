@@ -1,4 +1,3 @@
-//include using @import "callouts-lib/modals-firefly.less";
 /* 
  * =============================================================
  * Modals (pop ups that for some reason are called modals)
@@ -6,69 +5,6 @@
  * =============================================================
  */
 
-/* 
- * =============================================================
- * 
- * DO NOT DO MODALS THIS WAY DOOOOOOO NOOOOOOOOOT DOOOOO THISSSSS!!!!!!!!!!!!! 
- * MOVE THIS stuff TO SOME APPLICATION SPECIFIC LESS THIS IS AWFUL
- * 
- * =============================================================
- */
-.modal-cont {
-	display:none;
-	position:absolute;
-	top:0;
-	left:0;
-	.square(100%,100%);
-}
-.modal-inner {
-	position:absolute;
-	top:30px;
-	left:50%;
-	background:@white;
-	width:500px;
-	margin:0px 0px 0px -250px;
-	z-index:200;
-	header {
-		background:@light-grey;
-		h2 {
-			
-		}
-	}
-	.body {
-		
-		p {
-			
-		}
-	}
-	footer {
-		background:@light-grey;
-		p {
-			
-		}
-	}
-}
-.overlayold {
-	z-index:100;
-	display:none;
-	position:fixed;
-	top:0;
-	left:0;
-	.square(100%,100%);
-	&.dark {
-		background:@black;
-		background:fade(@black,90%);
-	}
-}
-
-
-/* 
- * =============================================================
- * 
- * ACTUAL CORE FOR MODALS
- * 
- * =============================================================
- */
 /*all modals*/
 .modal-parent {
 	position:relative;

@@ -11,7 +11,7 @@ $title = "home"; //this is backed up by a generic title set in kaylee.php or a b
 NAVIGATION
 
 -->
-<nav class="site-nav nav-horizontal" data-image="true">
+<nav class="site-nav" data-image="true">
 	<ul class="menu menu-left">
 		<li class="first dropdown">
 			<a href="#">item one</a>
@@ -611,11 +611,6 @@ LISTS
 	</section>
 </section>
 
-<section class="container">
-	<ul>
-		<?php include('_inc/getTweet.php'); ?> 
-	</ul>
-</section>
 
 
 <?php include('_inc/footer.php'); ?>
