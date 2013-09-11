@@ -218,42 +218,32 @@ CODE
 <pre class="prettyprint linenums">
 &lt;form&gt;
  &lt;div class="input-group"&gt;
-  &lt;label&gt;a damn label&lt;/label&gt;
-  &lt;input type="text" placeholder="your damn placeholder"&gt;&lt;/input&gt;
+  &lt;label&gt;a label&lt;/label&gt;
+  &lt;input type="text" placeholder="your placeholder"&gt;&lt;/input&gt;
  &lt;/div&gt;
 &lt;/form&gt;
 </pre>
 
-
 <h5>HTML structure (form groups)</h5>
-<form>
-	<fieldset class="form-group">
-		<div class="input-group">
-			<label>Input One</label>
-			<input type="text" name="input one" placeholder="input one value"></input>
-		</div>
-		<div class="input-group">
-			<label>Input Two</label>
-			<input type="text" name="input two" placeholder="input two value"></input>
-		</div>
-	</fieldset>
-</form>
-
+<?php
+	$formGroups = 
+'<form>
+  <fieldset class="form-group">
+    <div class="input-group">
+      <label>Input One</label>
+      <input type="text" name="input one" placeholder="input one value"></input>
+    </div>
+    <div class="input-group">
+      <label>Input Two</label>
+      <input type="text" name="input two" placeholder="input two value"></input>
+    </div>
+  </fieldset>
+</form>';
+?>
+<?php print $formGroups; ?>
 <pre class="prettyprint linenums">
-&lt;form&gt;
- &lt;fieldset class="form-group"&gt;
-  &lt;div class="input-group"&gt;
-   &lt;label&gt;Related Fields&lt;/label&gt;
-   &lt;input type="text" placeholder="placeholder"&gt;&lt;/input&gt;
-  &lt;/div&gt;
-  &lt;div class="input-group"&gt;
-   &lt;label&gt;Related Fields&lt;/label&gt;
-   &lt;input type="text" placeholder="placeholder"&gt;&lt;/input&gt;
-  &lt;/div&gt;
- &lt;/fieldset&gt;
-&lt;/form&gt;
+<?php print htmlentities($formGroups);?>
 </pre>
-
 
 <h5>HTML (radio buttons, like actual buttons)</h5>
 <form data-radios="true">

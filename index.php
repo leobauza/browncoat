@@ -78,6 +78,8 @@ NEW BUTTONS
 
 -->
 <section class="container">
+	<a href="/samples/basics.php" class="btn btn-secondary btn-large">Basics Sample Page</a>
+	
 	<h2>New Better Btn Mark Up</h2>
 	<p>Base class of .btn and all classes following .btn-property and the property is camel cased if more than one word</p>
 	<section class="row-fluid-alt">
