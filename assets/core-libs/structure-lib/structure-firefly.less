@@ -5,7 +5,7 @@
  */
 
 //grid
-@columns: 12;
+@columns:12;
 @column-width:6.33333333%;
 @column-gutter:2%;
 
@@ -153,4 +153,20 @@
 	width:@column-width * 12 + @column-gutter * 11 - .0111111111;
 }
 
+/* 
+ * =============================================================
+ * STATIC SIDEBAR
+ * =============================================================
+ */
+
+.static-sidebar {
+	.sidebar {
+		width:360px;
+		float:left;
+	}
+	.main {
+		padding:20px;
+		.overflow();
+	}
+}
 
