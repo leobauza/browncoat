@@ -10,6 +10,10 @@
  * COLOUR LIB (part of wash)
  * =============================================================
  */
+/*@main-btn-type:#fff;
+@secondary-btn-type:#fff;
+@grey-btn-type:#9da0a4;
+@custom-btn-type:#fff;*/
 /* 
  * =============================================================
  * HELPER LIB (part of wash)
@@ -18,17 +22,38 @@
 #gradients {
   /*
 		apparently this is the proper use for gradify
-		otherwise less.js fucks up and throws an error if you do it inline...
+		otherwise less.js mess up and throws an error if you do it inline...
 		@light:lighten(@success,7%);
 		@dark:darken(@success,10%);
 		#gradients > .gradify(@light, @dark);
 	*/
 
 }
+/****** IE******/
 .overflow {
   width: auto;
   float: none;
   overflow: hidden;
+}
+/****** TEST PATTER MATCHING DELETE?? ******/
+/****** VERTICAL DIV ALIGNMENT ******/
+.align-outter {
+  display: table;
+  height: 300px;
+  overflow: hidden;
+  *position: relative;
+}
+.align-outter .align-inner {
+  display: table-cell;
+  vertical-align: middle;
+  width: 100%;
+  margin: 0 auto;
+  *position: absolute;
+  *top: 50%;
+}
+.align-outter .align-inner .ie {
+  *position: relative;
+  *top: -50%;
 }
 /****** CLEARFIX ******/
 header,
@@ -116,7 +141,12 @@ footer:after,
   float: left;
   margin-right: 2%;
 }
-.row-fluid > [class*="span"].l,
+.row-fluid > [class*="span"].l {
+  margin-right: 0;
+  width: auto;
+  float: none;
+  overflow: hidden;
+}
 .row-fluid > [class*="span"]:last-child {
   margin-right: 0;
   width: auto;
@@ -173,7 +203,9 @@ footer:after,
   float: left;
   margin-right: 2%;
 }
-.row-fluid-alt > [class*="span"].l,
+.row-fluid-alt > [class*="span"].l {
+  margin-right: 0;
+}
 .row-fluid-alt > [class*="span"]:last-child {
   margin-right: 0;
 }
@@ -212,6 +244,21 @@ footer:after,
 }
 .row-fluid-alt .span12 {
   width: 97.98888884889999%;
+}
+/* 
+ * =============================================================
+ * STATIC SIDEBAR
+ * =============================================================
+ */
+.static-sidebar .sidebar {
+  width: 360px;
+  float: left;
+}
+.static-sidebar .main {
+  padding: 20px;
+  width: auto;
+  float: none;
+  overflow: hidden;
 }
 /* 
  * =============================================================
@@ -344,6 +391,17 @@ h6 {
 pre {
   white-space: pre-wrap;
 }
+.reverse h1,
+.reverse h2,
+.reverse h3,
+.reverse h4,
+.reverse h5,
+.reverse h6,
+.reverse p,
+.reverse li,
+.reverse a {
+  color: #ffffff;
+}
 /* 
  * =============================================================
  * BUTTONS
@@ -443,13 +501,13 @@ pre {
   background: -ms-linear-gradient(top, #f5f5f5 0%, #f5f5f5 100%);
   background: linear-gradient(to bottom, #f5f5f5 0%, #f5f5f5 100%);
   *filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#f5f5f5', endColorstr='#f5f5f5');
-  color: #9da0a4;
+  color: #ffffff;
   border: 1px solid #e8e8e8;
   border-bottom: 1px solid #c2c2c2;
 }
 .btn-grey:hover {
   background: #e3e3e3;
-  color: #9da0a4;
+  color: #ffffff;
 }
 .btn-grey:active,
 .btn-grey.active {
@@ -581,7 +639,7 @@ pre {
   zoom: 1;
   _height: 17px;
 }
-.btn-dropdown  > a {
+.btn-dropdown > a {
   float: left;
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
@@ -596,12 +654,12 @@ pre {
   font-size: 1.2em;
   font-weight: bold;
 }
-.btn-dropdown  > a.btn-drop {
+.btn-dropdown > a.btn-drop {
   -webkit-border-radius: 0 5px 5px 0;
   -moz-border-radius: 0 5px 5px 0;
   border-radius: 0 5px 5px 0;
 }
-.btn-dropdown  > a .carat {
+.btn-dropdown > a .carat {
   text-indent: -999999px;
   display: block;
 }
@@ -703,57 +761,6 @@ pre {
  * =============================================================
  * Modals (pop ups that for some reason are called modals)
  * firefly theme dependencies
- * =============================================================
- */
-/* 
- * =============================================================
- * 
- * DO NOT DO MODALS THIS WAY DOOOOOOO NOOOOOOOOOT DOOOOO THISSSSS!!!!!!!!!!!!! 
- * MOVE THIS stuff TO SOME APPLICATION SPECIFIC LESS THIS IS AWFUL
- * 
- * =============================================================
- */
-.modal-cont {
-  display: none;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-.modal-inner {
-  position: absolute;
-  top: 30px;
-  left: 50%;
-  background: #ffffff;
-  width: 500px;
-  margin: 0px 0px 0px -250px;
-  z-index: 200;
-}
-.modal-inner header {
-  background: #dedede;
-}
-.modal-inner footer {
-  background: #dedede;
-}
-.overlayold {
-  z-index: 100;
-  display: none;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-.overlayold.dark {
-  background: #000000;
-  background: rgba(0, 0, 0, 0.9);
-}
-/* 
- * =============================================================
- * 
- * ACTUAL CORE FOR MODALS
- * 
  * =============================================================
  */
 /*all modals*/
@@ -910,11 +917,8 @@ pre {
   padding: 10px;
 }
 /* 
- * DEPENDENCIES form-btn.less
- */
-/* 
  * =============================================================
- * forms
+ * forms (dependency btns library)
  * =============================================================
  */
 form fieldset {
@@ -1123,7 +1127,7 @@ ul {
   list-style: disc;
 }
 ul li {
-  line-height: 1;
+  line-height: 1.6em;
   margin: 0 0 10px;
   /*all nested*/
 
@@ -1154,7 +1158,7 @@ ol {
   list-style: decimal;
 }
 ol li {
-  line-height: 1;
+  line-height: 1.6em;
   margin: 0 0 10px;
   /*all nested*/
 
@@ -1185,52 +1189,57 @@ ol li > ol > li > ol > li > ol {
   padding: 20px 50px 10px;
   margin-top: 10px;
 }
+/*mixed*/
+ul ol {
+  padding-top: 10px;
+  font-size: 100%;
+}
+ol ul {
+  padding-top: 10px;
+  font-size: 100%;
+}
 /* 
  * =============================================================
  * NAV
  * =============================================================
  */
 .site-nav {
-  /*end horizontal*/
-
-}
-.site-nav.nav-horizontal {
   zoom: 1;
   background: #272727;
 }
-.site-nav.nav-horizontal:before {
+.site-nav:before {
   display: table;
   content: "";
 }
-.site-nav.nav-horizontal:after {
+.site-nav:after {
   display: table;
   content: "";
   clear: both;
 }
-.site-nav.nav-horizontal > ul {
+.site-nav > ul {
   margin: 0;
   padding: 0;
   list-style: none;
   font-size: 100%;
   zoom: 1;
 }
-.site-nav.nav-horizontal > ul:before {
+.site-nav > ul:before {
   display: table;
   content: "";
 }
-.site-nav.nav-horizontal > ul:after {
+.site-nav > ul:after {
   display: table;
   content: "";
   clear: both;
 }
-.site-nav.nav-horizontal > ul > li {
+.site-nav > ul > li {
   margin: 0;
   float: left;
   position: relative;
   /*SECOND LEVEL*/
 
 }
-.site-nav.nav-horizontal > ul > li > a {
+.site-nav > ul > li > a {
   float: left;
   color: #ffffff;
   border-right: 1px solid #1f1f1f;
@@ -1238,16 +1247,16 @@ ol li > ol > li > ol > li > ol {
   padding: 25px 20px;
   font-size: 1.2em;
 }
-.site-nav.nav-horizontal > ul > li > a:hover {
+.site-nav > ul > li > a:hover {
   background: #1f1f1f;
   text-decoration: none;
 }
 @media (max-width: 1024px) {
-  .site-nav.nav-horizontal > ul > li > a:hover {
+  .site-nav > ul > li > a:hover {
     background: inherit;
   }
 }
-.site-nav.nav-horizontal > ul > li .btn-dropdown {
+.site-nav > ul > li .btn-dropdown {
   display: none;
   float: left;
   color: #ffffff;
@@ -1256,26 +1265,30 @@ ol li > ol > li > ol > li > ol {
   border-right: 1px solid #1f1f1f;
 }
 @media (max-width: 1024px) {
-  .site-nav.nav-horizontal > ul > li .btn-dropdown {
+  .site-nav > ul > li .btn-dropdown {
     display: block;
   }
 }
-.site-nav.nav-horizontal > ul > li > ul {
-  position: absolute;
-  top: 100%;
+.site-nav > ul > li > ul {
   margin: 0;
   padding: 0;
   list-style: none;
   font-size: 100%;
+  position: absolute;
+  top: 100%;
+  min-width: 200px;
   display: none;
+  background: #272727;
 }
-.site-nav.nav-horizontal > ul > li > ul > li {
+.site-nav > ul > li > ul > li {
   margin: 0;
 }
-.site-nav.nav-horizontal > ul > li > ul > li a {
+.site-nav > ul > li > ul > li a {
+  display: block;
+  padding: 10px 20px;
   font-size: 1.2em;
 }
-.site-nav.nav-horizontal > ul > li > ul > li a:hover {
+.site-nav > ul > li > ul > li a:hover {
   text-decoration: none;
 }
 /*end general site-nav*/
@@ -1405,6 +1418,50 @@ ol li > ol > li > ol > li > ol {
   background: url("/assets/img/app/huge_image.png") 50% 50% no-repeat;
   height: 500px;
   width: 100%;
+}
+/* 
+ * =============================================================
+ * 
+ * DO NOT DO MODALS THIS WAY DOOOOOOO NOOOOOOOOOT DOOOOO THISSSSS!!!!!!!!!!!!! 
+ * MOVE THIS stuff TO SOME APPLICATION SPECIFIC LESS THIS IS AWFUL
+ * 
+ * =============================================================
+ */
+.modal-cont {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.modal-inner {
+  position: absolute;
+  top: 30px;
+  left: 50%;
+  background: #ffffff;
+  width: 500px;
+  margin: 0px 0px 0px -250px;
+  z-index: 200;
+}
+.modal-inner header {
+  background: #dedede;
+}
+.modal-inner footer {
+  background: #dedede;
+}
+.overlayold {
+  z-index: 100;
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.overlayold.dark {
+  background: #000000;
+  background: rgba(0, 0, 0, 0.9);
 }
 /* 
  * =============================================================
