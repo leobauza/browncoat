@@ -1,11 +1,11 @@
-Welcome to browncoat 0.1.1
+Welcome to browncoat 0.1.9
 ==================
 
 
 ## about this project
 This is the first semi workable update. This version is totally unstable.
 
-### instructions for 0.1.1 release
+### instructions for 0.1.9 release
 
 1. clone the repo
 2. browncoat needs to be able to write to a couple files so when running locally be mindful of that. Some other good to knows:
