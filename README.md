@@ -26,8 +26,15 @@ browncoat (lower case "b") is a light front end library. It is built using scss 
 
 > note: inside the browncoat/ directory there are two folders bases and normalizers. By "browncoat convention" the bases folder are meant for variables, placeholders, and mixins, meaning none of those files should output any real CSS. 
 
-### scss
+### compiling scss
 You will need to install [sass](http://sass-lang.com/)  on your machine to compile the files. you can then run:
+
+### js (coffeescript)
+Found in the assets/js/ directory. Documentation coming soon. For now: It uses require.js and there is a build file for use with r.js in the assets/build/ directory. The assets/vendor/ directory contains some plugins. And the assets/boilerplates/ directory has some boilerplates for jQuery plugins.
+
+> Note: All js is written in coffeescript and the coffeescript plugin for require.js takes care of compiling it.
+
+
 
 ```
 cd path/to/browncoat/root
