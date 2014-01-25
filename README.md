@@ -51,16 +51,16 @@ I am working on an easier go at installing browncoat using a combination of grun
 
 ### changelog (highlights)
 
-####v0.1.9
+#####v0.1.9
 - The first "version"
 
-####v0.2.0
+#####v0.2.0
 - Slim php framework added (templates and views)
 - Moved from less to scss
 - Added require.js to structure js
 - Added r.js for build
 
-####v0.2.1
+#####v0.2.1
 - Add change log to readme
 - Add license
 
