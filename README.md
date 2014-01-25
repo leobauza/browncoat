@@ -1,4 +1,4 @@
-Welcome to browncoat 0.2.0
+Welcome to browncoat 0.2.1
 ==================
 
 
@@ -12,7 +12,7 @@ browncoat (lower case "b") is a light front end library. It is built using scss 
 2. You will need something like MAMP or WAMP or AAMP to get it up and running. Alternative if you know how to set up your own virtual host using your machines built in apache server and php you may do that. Future versions will run on node.js with express, so more detailed instructions will be available then.
 3. Navigate to your localhost.
 
-#### templates and views
+### templates and views
 - There is one template that is basically an html wrapper localated at templates/template.php
 - All the pages are set up as views with subviews in the views/ directory. ie. to edit the homepage you would open the file at views/_home.php and edit that.
 
@@ -41,12 +41,38 @@ numbered as such:
 ```
 <major>.<minor>.<patch>
 ```
-The first minor release of [browncoat](https://github.com/leobauza/browncoat) and isn't included on this repo as a tag because this second release is a total departure from that first release. The underlying structure will be changing drastically. Thinking of changing it to have an express backend and do some task management with grunt and later move to yeoman as well. 
+
+The underlying structure has changed drastically since v0.1.9 and will be changing again. It will change to have an express backend and do some task management with grunt and later move to yeoman. 
 
 
-## get updates
+### get updates
 
 I am working on an easier go at installing browncoat using a combination of grunt and bower to set up a project. Until then forking the repository is all I've got for you though. 
+
+### changelog (highlights)
+
+####v0.1.9
+- The first "version"
+
+####v0.2.0
+- Slim php framework added (templates and views)
+- Moved from less to scss
+- Added require.js to structure js
+- Added r.js for build
+
+####v0.2.1
+- Add change log to readme
+- Add license
+
+
+
+
+
+
+
+
+
+
 
 
 
