@@ -3,7 +3,7 @@
 	<div class="inner">
 		<div class="row-fluid">
 			<article class="span6">
-				<h1>browncoat</h1>
+				<h1>browncoat v 0.1.9</h1>
 				<h2>the most rudimentary looking framework, ever <br>(and that's the point)</h2>
 				<a href="#" class="btn btn-secondary btn-large">Get Started</a>
 			</article>
