@@ -1,0 +1,60 @@
+/* browncoat/base/colour (does not output css) */
+//greyscale
+$white: #fff;
+$black: #000;
+
+//gen
+$brand: #8790A5;
+$brandAlt: darken($brand, 10);
+$bodyBg: $white;
+
+
+//links
+$linkColour: #428bca;
+$linkHoverColour: darken($linkColour, 20);
+
+
+//focus
+$focusBorder: rgba(82, 168, 236, 0.8);
+
+
+//factory
+@function ColourConstructor ($perc, $colour) {
+	@if $perc > 0 {
+		@return darken($colour, $perc)
+	}
+	@if $perc < 0 {
+		@return lighten($colour, $perc * -1)
+	}
+	@if $perc == 0 {
+		@return $colour
+	}	
+}
+
+
+//functions
+@function Greyscale ($perc: 50) {
+	@return darken(#fff, $perc)
+}
+@function Text ($perc: 80, $colour: $white) {
+	@return ColourConstructor($perc, $colour)
+}
+
+
+//box parts
+@function Background ($perc: 0, $colour: $brand) {
+	@return ColourConstructor($perc, $colour)
+}
+@function Border ($perc: 0, $colour: $brandAlt) {
+	@return ColourConstructor($perc, $colour)
+}
+
+
+//alets
+$default: Greyscale(25);
+$info: $linkColour;
+$success: #5cb85c;
+$warning: #f0ad4e;
+$error: #d9534f;
+
+/* end */

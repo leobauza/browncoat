@@ -1,0 +1,58 @@
+/* browncoat/base/helper (does not output css) */
+$imgPath: '../img/';
+
+//common box shadows
+$singleShadow: 0px 5px 10px -4px rgba(0, 0, 0, 0.3);
+$doubleShadow: inset 0 5px 5px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6);
+$insetShadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+
+
+//css3
+@mixin borderRadius ($radius: 3px) {
+	-webkit-border-radius:$radius;
+	   -moz-border-radius:$radius;
+	        border-radius:$radius;
+}
+
+@mixin boxShadow ($shadows...) {
+	-webkit-box-shadow: $shadows;
+		-moz-box-shadow: $shadows;
+			box-shadow: $shadows;
+}
+
+@mixin transition ($args...) {
+	transition: $args;
+		-moz-transition: $args;
+			-webkit-transition: $args;
+				-o-transition: $args;
+}
+
+@mixin rotate ($deg) {
+	transform:rotate($deg);
+	-ms-transform:rotate($deg); 
+	-webkit-transform:rotate($deg);
+}
+
+//gradients
+@mixin gradient ($top, $bottom){
+	background: $bottom;
+	background:-moz-linear-gradient(top,  $top 0%, $bottom 100%);
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0%,$top), color-stop(100%,$bottom));
+	background:-webkit-linear-gradient(top,  $top 0%,$bottom 100%);
+	background:-o-linear-gradient(top,  $top 0%,$bottom 100%);
+	background:-ms-linear-gradient(top,  $top 0%,$bottom 100%);
+	background:linear-gradient(to bottom,  $top 0%,$bottom 100%);
+  *filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr=#{$top}, endColorstr=#{$bottom});
+}
+
+//resets
+@mixin resetList ($margin: 0 0 20px, $padding: 0) {
+	margin: $margin;
+	padding: $padding;
+	list-style:none;
+	font-size:100%;
+}
+
+
+
+/* end */

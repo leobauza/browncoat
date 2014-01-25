@@ -1,0 +1,159 @@
+/* browncoat/normalizers/reset */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+nav,
+section {
+	display: block;
+}
+audio, canvas, video {
+	display: inline-block;
+	*display: inline;
+	*zoom: 1;
+}
+audio:not([controls]) {
+	display: none;
+}
+img {
+	max-width: 100%;
+	height: auto;
+	border: 0;
+	-ms-interpolation-mode: bicubic;
+}
+html {
+	font-size: 100%;
+	-webkit-text-size-adjust: 100%;
+	-ms-text-size-adjust: 100%;
+}
+:focus {
+	outline: none;
+	border: none;
+}
+a:focus {
+	outline: none;
+	border: none;
+}
+a:hover, a:active {
+	outline: 0;
+}
+
+body {
+	background: $bodyBg;
+	font-size: $baseSize;
+	@include marpad(0px, 0px);
+	font-family: $serif;
+	//font-family: $sansSerif;
+	word-wrap: break-word;
+}
+hr {
+	height: 1px;
+	@include marpad(0px 0px 20px 0px, 0px);
+	border: 0;
+	border-bottom: 1px solid Greyscale(0%);
+	border-top: 1px solid Greyscale(25%);
+	clear: both;
+	overflow: 0;
+}
+a {
+	color: $linkColour;
+	text-decoration: none;
+}
+a:hover {
+	color: $linkHoverColour;
+	text-decoration: underline;
+}
+p {
+	font-size: $textSize;
+	line-height: $textLineHeight;
+	color: Text();
+	margin: 0 0 20px;
+	padding: 0;
+	&.intro {
+		font-size: 2em;
+		margin: 0 0 40px;
+	}
+	&.soft-intro {
+		font-size: 2em;
+	}
+}
+strong {
+	font-weight: 700;
+}
+em {
+	font-style: italic;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	margin: 0 0 .45em;
+	font-weight: 500;
+	text-rendering: optimizelegibility;
+	line-height: 1.2em;
+	color: Text();
+	a {
+		color: Text();
+		font-weight: normal;
+		&:hover {
+			text-decoration:none;
+		}
+	}
+}
+h1 {
+	font-size: 4.8em;
+}
+h2 {
+	font-size: 3.6em;
+}
+h3 {
+	font-size: 2.8em;
+}
+h4 {
+	font-size: 2.2em;
+}
+h5 {
+	font-size: 1.8em;
+}
+h6 {
+	font-size: 1.4em;
+}
+pre {
+	white-space: pre-wrap;
+}
+
+.reverse {
+	background: Greyscale(85);
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6,
+	p,
+	li {
+		color: $white;
+	}
+	a {
+		color: lighten($linkColour, 10);
+		&:hover {
+			color: lighten($linkColour, 20);
+		}
+	}
+}
+
+header,
+footer,
+%rows,
+.group,
+.form-group,
+.input-group,
+[class*="-group"] {
+	@include group;
+}

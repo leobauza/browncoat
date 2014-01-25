@@ -1,0 +1,168 @@
+.row-fluid {
+	width:100%;
+	//margin:@b-margin;
+}
+
+//margin right instead of margin left to do overflow hidden
+//Use this to set exact percentages and have the last box be ok
+.row-fluid > [class*="span"] {
+	float: left;
+	margin-right: $columnGutter;
+	&.l {
+		margin-right: 0;
+		@include overflower;
+	}
+	&:last-child {
+		margin-right: 0;
+		@include overflower;
+	}
+}
+.row-fluid > {
+	.span1 {
+		width: $columnWidth + $columnGutter/11;
+	}
+	.span2 {
+		width: $columnWidth * 2 + $columnGutter + $columnGutter/6;
+	}
+	.span3 {
+		width: $columnWidth * 3 + $columnGutter * 2 + $columnGutter/4;
+	}
+	.span4 {
+		width: $columnWidth * 4 + $columnGutter * 3 + $columnGutter/3;
+	}
+	.span5 {
+		width: $columnWidth * 5 + $columnGutter * 4;
+	}
+	.span6 {
+		width: $columnWidth * 6 + $columnGutter * 5 + $columnGutter/2;
+	}
+	.span7 {
+		width: $columnWidth * 7 + $columnGutter * 6;
+	}
+	.span8 {
+		width: $columnWidth * 8 + $columnGutter * 7;
+	}
+	.span9 {
+		width: $columnWidth * 9 + $columnGutter * 8;
+	}
+	.span10 {
+		width: $columnWidth * 10 + $columnGutter * 9;
+	}
+	.span11 {
+		width: $columnWidth * 11 + $columnGutter * 10;
+	}
+	.span12 {
+		width: $columnWidth * 12 + $columnGutter * 11;
+	}	
+}
+
+
+
+.row-fluid-alt {
+	width:100%;
+	//margin:@b-margin;
+}
+.row-fluid-alt > [class*="span"] {
+	float:left;
+	margin-right:$columnGutter;
+	&.l {
+		margin-right:0;
+	}
+	&:last-child {
+		margin-right:0;
+	}
+}
+
+.row-fluid-alt > {
+	.span1 {
+		width:$columnWidth + $columnGutter/11 - .0111111111;
+	}
+	.span2 {
+		width:$columnWidth * 2 + $columnGutter + $columnGutter/6 - .0111111111;
+	}
+	.span3 {
+		width:$columnWidth * 3 + $columnGutter * 2 + $columnGutter/4 - .0111111111;
+	}
+	.span4 {
+		width:$columnWidth * 4 + $columnGutter * 3 + $columnGutter/3 - .0111111111;
+	}
+	.span5 {
+		width:$columnWidth * 5 + $columnGutter * 4 - .0111111111;
+	}
+	.span6 {
+		width:$columnWidth * 6 + $columnGutter * 5 + $columnGutter/2 - .0111111111;
+	}
+	.span7 {
+		width:$columnWidth * 7 + $columnGutter * 6 - .0111111111;
+	}
+	.span8 {
+		width:$columnWidth * 8 + $columnGutter * 7 - .0111111111;
+	}
+	.span9 {
+		width:$columnWidth * 9 + $columnGutter * 8 - .0111111111;
+	}
+	.span10 {
+		width:$columnWidth * 10 + $columnGutter * 9 - .0111111111;
+	}
+	.span11 {
+		width:$columnWidth * 11 + $columnGutter * 10 - .0111111111;
+	}
+	.span12 {
+		width:$columnWidth * 12 + $columnGutter * 11 - .0111111111;
+	}
+}
+
+
+.row-fluid-flush {
+	width:100%;
+	//margin:@b-margin;
+}
+.row-fluid-flush > [class*="span"] {
+	float:left;
+	margin-right: 0;
+	&.l {
+		margin-right:0;
+	}
+	&:last-child {
+		margin-right:0;
+	}
+}
+
+.row-fluid-flush > {
+	.span1 {
+		width:$columnWidth + $columnGutter;
+	}
+	.span2 {
+		width:$columnWidth * 2  + $columnGutter * 2 - .0111111111;
+	}
+	.span3 {
+		width:$columnWidth * 3 + $columnGutter * 3 - .0111111111;
+	}
+	.span4 {
+		width:$columnWidth * 4 + $columnGutter * 4 - .0111111111;
+	}
+	.span5 {
+		width:$columnWidth * 5 + $columnGutter * 5 - .0111111111;
+	}
+	.span6 {
+		width:$columnWidth * 6 + $columnGutter * 6 - .0111111111;
+	}
+	.span7 {
+		width:$columnWidth * 7 + $columnGutter * 7 - .0111111111;
+	}
+	.span8 {
+		width:$columnWidth * 8 + $columnGutter * 8 - .0111111111;
+	}
+	.span9 {
+		width:$columnWidth * 9 + $columnGutter * 9 - .0111111111;
+	}
+	.span10 {
+		width:$columnWidth * 10 + $columnGutter * 10 - .0111111111;
+	}
+	.span11 {
+		width:$columnWidth * 11 + $columnGutter * 11 - .0111111111;
+	}
+	.span12 {
+		width:$columnWidth * 12 + $columnGutter * 12 - .0111111111;
+	}
+}

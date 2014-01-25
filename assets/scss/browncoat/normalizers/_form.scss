@@ -1,0 +1,126 @@
+/* browncoat/normalizers/form */
+
+form {
+	fieldset {
+		border: none;
+		padding: 0;
+		margin: 0;
+	}
+	.form-group {
+		background: Greyscale(5);
+		padding: 10px;
+		border: 1px solid Greyscale();
+		margin: 0 0 10px;
+	}
+	.input-group {
+		
+	}
+	.radio-group {
+		&.horizontal {
+			float: left;
+			margin: 0 5px 0 0;
+			&:last-child {
+				margin: 0;
+			}
+		}
+		label {
+			float: left;
+		}
+		input[type="radio"]{
+			float: left;
+		}
+		[data-input="radio"]{
+			
+		}
+		&.radiosb {
+			label{
+				float: none;
+			}
+			&.horizontal {
+				label {
+					float: left;
+				}
+			}
+		}
+	}
+	label, input, textarea, button, select {
+		font-family: $sansSerif;
+		font-size: 1.3em;
+		font-weight: normal;
+		line-height: 1.8em;
+	}
+	label {
+		display: block;
+		margin: 0 0 5px 0;
+	}
+
+	select,
+	textarea,
+	input[type="text"],
+	input[type="password"],
+	input[type="email"] {
+		//.inline-block(18px);
+		height: 18px;
+		padding: 4px;
+		margin-bottom: 9px;
+		color: Greyscale(75);
+		margin-left:0;
+	}
+
+	textarea,
+	input[type="text"],
+	input[type="password"],
+	input[type="email"] {
+		background-color: $white;
+		border:1px solid Greyscale(25);
+		@include borderRadius();
+		@include boxShadow(inset 0 1px 1px rgba(0, 0, 0, 0.075));
+		&:focus {
+			border:1px solid $focusBorder;
+			outline:0;
+			outline:thin dotted \9; /* IE6-9 */
+			@include boxShadow($doubleShadow);
+		}
+	}
+	.select-group {
+		
+	}
+	select {
+		width: 220px;
+		background-color: $white;
+		border: 1px solid Greyscale();
+		height: 30px;
+		line-height: 30px;
+		@include borderRadius(5px);
+		&:focus {
+			border: 1px solid $focusBorder;
+			outline: 0;
+			outline: thin dotted \9; /* IE6-9 */
+			outline: 5px auto -webkit-focus-ring-color;
+			outline-offset: -2px;
+		}
+		&[multiple], &[size] {
+			height: auto;
+		}
+	}
+	input[type="text"], input[type="password"], input[type="email"]{
+		
+	}
+	textarea {
+		height: auto;
+		overflow: auto; /*remove scrollbar in IE*/
+	}
+	button,
+	input[type="submit"] {
+		cursor: pointer;
+		&:hover{
+
+		}
+		&:focus {
+			border: 1px solid $focusBorder;
+			outline: 0;
+			outline: thin dotted \9; /* IE6-9 */
+			@include boxShadow($doubleShadow);
+		}
+	}
+}

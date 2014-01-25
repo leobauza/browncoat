@@ -1,0 +1,122 @@
+/* app/vendors/extraBtns */
+$transTime: .2s;
+
+.collapse-btn {
+	@include square(48px, 48px);
+	display: block;
+	padding: 0;
+	margin: 0;
+	background: $white;
+	border: 1px solid Greyscale(25);
+	cursor: pointer;
+	&:hover, &.active {
+		background: $white;
+		text-decoration: none;
+	}
+	&:focus {
+		border: 1px solid Greyscale(25);
+	}
+	&:active {
+		
+	}
+}
+
+//THIN
+.collapse-thin {
+	position: relative;
+	span {
+		@include transition(all $transTime);
+		position: absolute;
+		left: 5px;
+		display: block;
+		width: 38px;
+		height: 4px;
+		background: Greyscale(25);
+	}
+	.one {
+		top: 9px;
+	}
+	.two {
+		top: 22px;
+	}
+	.three {
+		top: 35px;
+	}
+}
+
+.collapse-thin {
+	/*stage one*/
+	&.stg-one {
+		.one, .two, .three {
+			top: 22px;
+		}
+		.two {
+			visibility: hidden;
+		}
+	}
+	/*stage two*/
+	&.stg-two {
+		span {
+			background: $error;
+		}
+		.one {
+			@include rotate(45deg);
+		}
+		.three {
+			@include rotate(-45deg);
+		}
+	}
+}
+
+
+//THICK
+.collapse-thick {
+	position: relative;
+	span {
+		@include transition(all $transTime);
+		position: absolute;
+		left: 5px;
+		display: block;
+		width: 38px;
+		height: 6px;
+		background: Greyscale(25);
+	}
+	.one {
+		top: 8px;
+	}
+	.two {
+		top: 21px;
+	}
+	.three {
+		top: 34px;
+	}
+}
+
+.collapse-thick {
+	/*stage one*/
+	&.stg-one {
+		.one, .two, .three {
+			top: 21px;
+		}
+		.two {
+			visibility: hidden;
+		}
+	}
+	/*stage two*/
+	&.stg-two {
+		span {
+			background: $error;
+		}
+		.one {
+			@include rotate(45deg);
+		}
+		.three {
+			@include rotate(-45deg);
+		}
+	}
+}
+
+//BORDERLESS
+.collapse-borderless {
+	border: none;
+}

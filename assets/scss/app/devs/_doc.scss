@@ -1,0 +1,30 @@
+/* app/devs/doc (documentation css) */
+.site-header {
+	padding-top: 36px;
+	margin:0 0 20px;
+	.nav-bar {
+		position:fixed;
+		top:0;
+		left:0;
+		z-index:100;
+	}
+}
+p, li {
+	em {
+		color:Greyscale(50);
+	}
+}
+.short {
+	width:35%;
+}
+.boxy {
+	border:1px solid Border();
+	background: Background(-100);
+	color: Text();
+}
+
+@media (max-width: 959px) {
+	.short {
+		width: auto;
+	}
+}
