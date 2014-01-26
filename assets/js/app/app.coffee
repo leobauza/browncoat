@@ -10,6 +10,8 @@ define (require) ->
 	helpers.init()
 	ui.init()
 	
+	console.log "stuff"
+	
 	console.log "plugins module returns: ", plugins
 	
 	#play around with stuff on the sandbox

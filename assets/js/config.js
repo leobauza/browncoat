@@ -1,7 +1,8 @@
 require.config({
-	paths: {
-		'jquery': './libs/jquery/jquery',
-		'jqueryM': './libs/jquery/jquery-migrate',
+	deps: ['cs!app/app'], //this is the same as require(['cs!app/app'], function(app){ });
+	paths: { //these are aliases
+		'jquery': './libs/jquery',
+		'jqueryM': './libs/jquery-migrate',
 		'jForm' : './vendor/jform'
 	},
 	//Shim for non amd ready stuff and for jquery dependencies
@@ -17,7 +18,7 @@ require.config({
 	}
 });
 
-require(['cs!app/app'], function(app){ });
+//require(['cs!app/app'], function(app){ });
 
 
 //doesn't work when optimizing???

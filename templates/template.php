@@ -70,7 +70,7 @@
 		<p>created by <a href="http://www.leobauza.com" target="_blank">The Fine People of Fairfax</a></p>
 	</footer>
 <?php endif; ?>
-	<script src="/assets/js/require/require.js" data-main="/assets/js/main"></script>
+	<script src="/assets/js/libs/require.js" data-main="/assets/js/config"></script>
 	<!-- <script src="../assets/js/require/require.js" data-main="/assets/js/conc-modules"></script> -->
 	<!-- <script src="../assets/js/min/scripts.min.js"></script> -->
 	
