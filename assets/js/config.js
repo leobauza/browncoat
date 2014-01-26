@@ -1,9 +1,10 @@
 require.config({
-	deps: ['cs!app/app'], //this is the same as require(['cs!app/app'], function(app){ });
+	deps: ['cs!app/app'], //this is the same as require(['cs!app/app'], function(app){ }); the config code
 	paths: { //these are aliases
-		'jquery': './libs/jquery',
-		'jqueryM': './libs/jquery-migrate',
-		'jForm' : './vendor/jform'
+		// 'jquery': '//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min',
+		'jquery': 'libs/jquery', //need a local one because of jForm having a dependency
+		'jqueryM': 'libs/jquery-migrate',
+		'jForm' : 'vendor/jform'
 	},
 	//Shim for non amd ready stuff and for jquery dependencies
 	shim: {
@@ -17,19 +18,3 @@ require.config({
 		}
 	}
 });
-
-//require(['cs!app/app'], function(app){ });
-
-
-//doesn't work when optimizing???
-
-// define(function(require){
-// 	var
-// 		$ = require('jquery')
-// 		, migrate = require('jqueryM')
-// 		,tester = require('cs!app/test')
-// 	;
-// 	
-// 	console.log("main.js");
-// 	console.log("returned from test: ", tester());
-// });

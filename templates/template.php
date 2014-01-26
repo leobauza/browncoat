@@ -70,14 +70,10 @@
 		<p>created by <a href="http://www.leobauza.com" target="_blank">The Fine People of Fairfax</a></p>
 	</footer>
 <?php endif; ?>
+
 	<script src="/assets/js/libs/require.js" data-main="/assets/js/config"></script>
 	<!-- <script src="../assets/js/require/require.js" data-main="/assets/js/conc-modules"></script> -->
 	<!-- <script src="../assets/js/min/scripts.min.js"></script> -->
-	
-	
-	<!-- TESTING STUFF -->
-	<!-- <script src="../assets/js/libs/jquery/jquery.js"></script>
-	<script src="../assets/js/compiled/jquery.plugin.boilerplate.js"></script> -->
 	
 	
 </body>

@@ -10,7 +10,8 @@ define (require) ->
 	helpers.init()
 	ui.init()
 	
-	console.log "stuff"
+	console.log $
+	console.log $('h1').html();
 	
 	console.log "plugins module returns: ", plugins
 	
