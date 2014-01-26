@@ -1,17 +1,19 @@
 define (require) ->
 	$ = require('jquery')
-	migrate = require('jqueryM')
+	#migrate = require('jqueryM')
 	markers = require('cs!app/markers')
 	helpers = require('cs!app/helpers')
 	ui = require('cs!app/ui')
 	plugins = require('cs!app/plugins')
-	sandbox = require('cs!app/sandbox')
+	#sandbox = require('cs!app/sandbox')
 	
 	helpers.init()
 	ui.init()
 	
+	console.log "plugins module returns: ", plugins
+	
 	#play around with stuff on the sandbox
-	sandbox.init()
+	#sandbox.init()
 	
 	
 	#log

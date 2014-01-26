@@ -1,35 +1,16 @@
 define (require) ->
 	$ = require('jquery')
-	sandbox = require('cs!vendor/sandbox')
+	#sandbox = require('cs!vendor/sandbox')
 	jbtnfx = require('cs!vendor/jbtnfx')
-	sandboxjs = require('vendor/sandboxjs')
-	#boilerplate = require('cs!boilerplates/amd.jquery.plugin.boilerplate')
+	#sandboxjs = require('vendor/sandboxjs')
 	
 	sandbox =
 		init: ->
 			console.warn "using the sandbox"
-			@boilerplate()
 			@btnfx()
 		
-		boilerplate: ->
-			#console.warn "boilerplate use example in sandbox"
-			# console.log $.fn.myPlugin.defaults
-			# console.log $.fn.myPlugin.Plugin.prototype
-			# console.log "shortcut to proto: ", boilerplate.prototype
-			# $('h1').myPlugin {
-			# 	paramA: "Param A"
-			# }
-			# $('h1').myPlugin('myMethod', 'This is in my h1')
-
-			#console.log jdrop
-			#jdrop.useOutside("my word")
-		
-		closeCallout: () ->
-			
-		
-		modals: () ->
-			
 		btnfx: () ->
+			console.log "btn fx"
 			# console.log jbtnfx.prototype
 			# console.log $.fn.jbtnfx.defaults
 			$('[data-plugin=btnfx]').jbtnfx({
@@ -38,9 +19,7 @@ define (require) ->
 			})#.jbtnfx('toEndState')
 			$('.collapse-sidebar').on "open.bc.btnfx", -> $('.span-sidebar .list-group').show()
 			$('.collapse-sidebar').on "close.bc.btnfx", -> $('.span-sidebar .list-group').hide()
-			
-			
-			#setTimeout (-> $('.open-and-close').jbtnfx('toStartState')), 2000
 		
+	
 	#end
 	
