@@ -1,4 +1,4 @@
-Welcome to browncoat 0.2.1
+Welcome to browncoat 0.2.2
 ==================
 
 
@@ -70,7 +70,10 @@ I am working on an easier go at installing browncoat using a combination of grun
 - Add change log to readme
 - Add license
 
-
+#####v0.2.2 (in progress)
+- Javascript clean up
+- Better definition of how javascript should be structured for prototyping
+- other js concerns...
 
 
 
