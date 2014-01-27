@@ -73,7 +73,9 @@ I am working on an easier go at installing browncoat using a combination of grun
 #####v0.2.2 (in progress)
 - Javascript clean up
 - Better definition of how javascript should be structured for prototyping
-- other js concerns...
+- Restructure assets/js directory
+- Added comments in all js to explain things better
+- Updated README with better JS section
 
 
 

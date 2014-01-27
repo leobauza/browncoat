@@ -55,7 +55,7 @@
 	@for $i from 1 through $columns {
 		$testColWidth: (99.9998 / $columns);
 
-		.span#{$i} {
+		& > .span#{$i} {
 			$remainder: ($gutter/$columns) * $i;
 			width: ($testColWidth * $i - $gutter + $remainder) * 1%;
 		}
@@ -105,7 +105,7 @@
 
 	@for $i from 1 through $columns {
 		$testColWidth: (99.9998 / $columns);
-		.span#{$i} {
+		& > .span#{$i} {
 			width: ($testColWidth * $i) * 1%;
 		}
 	}
