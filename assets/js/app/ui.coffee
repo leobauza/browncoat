@@ -1,43 +1,38 @@
 define (require) ->
 	markers = require('cs!app/markers')
 	jdrop = require('cs!vendor/jdropdown')
+	jbtnfx = require('cs!vendor/jbtnfx')
 	
 	ui = 
 		init: ->
-			@navigation()
-			@dropdowns()
-	
+			@dropdowns('[data-plugin=dropdown] [data-role=toggle]')
+			@btnfx('[data-plugin=btnfx]')
+		
 		resize: ->
-			@navigation()
+			console.log "resize"
 		
-		navigation: ->
-			#go mobile or desktop...also pass the width so we can get more specific in mobile
-			if not $('.site-nav .btn-dropdown').length
-				$('.site-nav .menu > li.dropdown > a').after '<i class="btn-dropdown">v</i>'
-			if markers.win > 1024 then @desktopNav(markers.win) else @mobileNav(markers.win)
+		dropdowns: (el) ->
+			###
+			dev:
+			console.log "jdrop defaults: ", $.fn.jdropdown.defaults
+			console.log "jdrop proto: ", jdrop.prototype			
+			$('[data-plugin=dropdown] [data-role=toggle]').jdropdown("useOutside", "my word")
+			$('.btn--error[data-role=toggle]').jdropdown("toggle", null, '.btn--error[data-role=toggle]')
+			###
+			console.warn "using jdrop"
+			$(el).jdropdown()
 		
-		desktopNav: (w) ->
-			#console.log "desktop nav: ", w
-			$('.site-nav .menu > li.dropdown').unbind('click mouseenter mouseleave').mouseenter ->
-					$(@).find('.dropdown-menu').show()
-			.mouseleave ->
-					$(@).find('.dropdown-menu').hide()
+		btnfx: (el) ->
+			###
+			dev:
+			console.log jbtnfx.prototype
+			console.log $.fn.jbtnfx.defaults
+			$('.collapse-sidebar').on "open.bc.btnfx", -> $('.span-sidebar .list-group').show()
+			$('.collapse-sidebar').on "close.bc.btnfx", -> $('.span-sidebar .list-group').hide()
+			###
+			console.warn "using jbtnfx"
+			$(el).jbtnfx({
+				tcss: 200
+				tdiff: 0
+			})
 		
-		mobileNav: (w) ->
-			#console.log "mobile nav: ", w
-			$('.site-nav .menu > li.dropdown').unbind 'mouseenter mouseleave'
-			$('.site-nav .menu > li.dropdown > .btn-dropdown').unbind('click').click (e) ->
-				e.preventDefault()
-				$(@).toggleClass 'is-active'
-				$(@).parent().find('.dropdown-menu').toggle()
-	
-		
-		dropdowns: () ->
-			# console.log "jdrop defaults: ", $.fn.jdropdown.defaults
-			# console.log "jdrop proto: ", jdrop.prototype
-			$('[data-plugin=dropdown] [data-role=toggle]').jdropdown()
-			# $('[data-plugin=dropdown] [data-role=toggle]').jdropdown("useOutside", "my word")
-			#$('.btn-error[data-role=toggle]').jdropdown("toggle", null, '.btn-error[data-role=toggle]')
-			
-
-			#console.log "add dropdown"

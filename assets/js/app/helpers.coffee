@@ -22,4 +22,4 @@ define (require) ->
 			#add l class for ie
 			$('[class*=row-fluid]').each ->
 				$(this).find("[class*=\"span\"]:last-child").addClass 'l'
-	
+		

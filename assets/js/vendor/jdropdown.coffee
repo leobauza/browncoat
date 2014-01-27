@@ -59,9 +59,10 @@
 			$this = $(this)
 			data = $this.data('jdropdown')
 			if !data
-				$this.data 'jdropdown', (data = new Plugin(this, option))
+				$this.data 'jdropdown', (data = new Plugin(this, option)) #if no data create a new object
 			if typeof option is 'string'
-				data[option].apply(data, args)
+				data[option].apply(data, args) #if it already has data then apply the data and arguments to that option
+				#same as data["toggle"].apply(data, [null, ".btn--error[data-role=toggle]"]) where data is this instance of the Plugin
 	
 
 
