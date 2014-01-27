@@ -5,6 +5,8 @@
 	        border-radius:$radius!important;
 }
 
+$docBorder: Greyscale(12);
+
 
 .site-header {
 	padding-top: 36px;
@@ -31,10 +33,18 @@ p, li {
 	color: $textColour;
 }
 
+/*documentation divisions*/
+.section-header {
+	padding-bottom: 20px;
+	margin-bottom: 20px;
+	border-bottom: 1px solid $docBorder;
+}
+
 
 /*documentation capsule*/
 .bc-capsule {
-	border: 1px solid Greyscale(15);
+	@include borderRadius(5px);
+	border: 1px solid $docBorder;
 	padding: 20px;
 	margin: 0 0 20px;
 	&.code-companion {
@@ -48,7 +58,9 @@ p, li {
 /*github gist styles*/
 .gist {
 	font-size: 1.3em;
+	margin-bottom: 40px;
 	.gist-file {
+		margin: 0!important;
 		.gist-data .line-pre {
 			font-family: $code!important;
 		}

@@ -1,67 +1,29 @@
 /* browncoat/normalizers/form */
 
+//form elements
 form {
-	fieldset {
-		border: none;
-		padding: 0;
-		margin: 0;
-	}
-	.form-group {
-		background: Greyscale(5);
-		padding: 10px;
-		border: 1px solid Greyscale();
-		margin: 0 0 10px;
-	}
-	.input-group {
-		
-	}
-	.radio-group {
-		&.horizontal {
-			float: left;
-			margin: 0 5px 0 0;
-			&:last-child {
-				margin: 0;
-			}
-		}
-		label {
-			float: left;
-		}
-		input[type="radio"]{
-			float: left;
-		}
-		[data-input="radio"]{
-			
-		}
-		&.radiosb {
-			label{
-				float: none;
-			}
-			&.horizontal {
-				label {
-					float: left;
-				}
-			}
-		}
-	}
 	label, input, textarea, select {
 		font-family: $globFamily;
-		font-size: 1.3em;
+		font-size: 1.4em;
 		font-weight: normal;
-		line-height: 1.8em;
+		line-height: 1.6em;
 		@extend %borderBox;
 	}
+
 	legend {
 		font-family: $globFamily;
-		font-size: 1.4em;
+		font-size: 1.6em;
 		line-height: 1.8em;
 		width: 100%;
 		margin: 0 0 10px;
 		color: Greyscale(50);
 		@extend %borderBox;
 	}
+
 	label {
 		font-family: $globFamily;
 		display: block;
+		font-weight: 700;
 		margin: 0 0 5px 0;
 	}
 
@@ -93,9 +55,7 @@ form {
 			@include boxShadow($formFocusShadow);
 		}
 	}
-	.select-group {
-		
-	}
+
 	select {
 		background-color: $white;
 		border: 1px solid Greyscale();
@@ -113,13 +73,21 @@ form {
 			height: auto;
 		}
 	}
+
 	input[type="text"], input[type="password"], input[type="email"]{
 		
 	}
+
+	input[type="file"] {
+		display: block;
+		width: 100%;
+	}
+
 	textarea {
 		height: auto;
 		overflow: auto; /*remove scrollbar in IE*/
 	}
+
 	button,
 	input[type="submit"] {
 		cursor: pointer;
@@ -134,3 +102,139 @@ form {
 		}
 	}
 }
+
+
+//form groups
+fieldset {
+	border: none;
+	padding: 0;
+	margin: 0;
+}
+
+.form__collection {
+	background: Greyscale(5);
+	padding: 10px;
+	border: 1px solid Greyscale();
+	margin: 0 0 10px;
+}
+.form__group {
+	margin: 0 0 20px;
+}
+
+.form__text {
+	padding: 3px 0px;
+	margin: 0px;
+	font-size: 1.4em;
+	color: Greyscale(50);
+}
+
+%radio_checkbox {
+	margin: 0 0 20px;
+	label {
+		font-weight: normal;
+	}
+}
+.form__radios {
+	@extend %radio_checkbox;
+}
+.form__checkbox {
+	@extend %radio_checkbox;
+	label {
+		margin: 0;
+	}
+}
+
+//form modifiers
+.form--inline {
+	.form__group {
+		display: inline-block;
+		padding-right: 10px;
+	}
+	.form__checkbox {
+		display: inline-block;
+		padding-right: 10px;
+	}
+	button {
+		display: inline-block;
+	}
+}
+
+.form--horizontal {	
+	$formGutter: 2;
+	$formColumns: 12;
+
+	.form__group {
+		label {
+			padding-top: 5px;
+			text-align: right;
+		}
+		@include group();
+	}
+	.form__checkbox {
+		@include group();
+	}
+	
+	
+	[class*="span"] {
+		float:left;
+		margin-right: $formGutter * 1%;
+		&.l {
+			margin-right:0;
+		}
+		&:last-child {
+			margin-right:0;
+		}
+	}
+
+	@for $i from 1 through $columns {
+		$testColWidth: (99.9998 / $formColumns);
+
+		.span#{$i} {
+			$remainder: ($formGutter/$formColumns) * $i;
+			width: ($testColWidth * $i - $formGutter + $remainder) * 1%;
+		}
+	}
+	
+	
+	
+	
+}
+
+
+
+
+@media (max-width: 959px) {
+	
+	.form--horizontal {
+		.form__group {
+			label {
+				text-align: left;
+				padding: 0;
+			}
+		}
+		
+		[class*="span"] {
+			float: none;
+			width:auto;
+			margin-right: 0;
+		}
+
+		[class*="span"]:last-child {
+			overflow:auto;
+		}
+		
+		
+	}
+	
+	
+}
+
+
+
+
+
+
+
+
+
+

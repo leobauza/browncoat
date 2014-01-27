@@ -181,8 +181,8 @@ code {
 header,
 footer,
 .row-fluid,
-.row-fluid-alt,
-.row-fluid-flush,
+.row-fluid--alt,
+.row-fluid--flush,
 .group,
 .form-group,
 .input-group,
@@ -191,8 +191,8 @@ footer,
   header:before,
   footer:before,
   .row-fluid:before,
-  .row-fluid-alt:before,
-  .row-fluid-flush:before,
+  .row-fluid--alt:before,
+  .row-fluid--flush:before,
   .group:before,
   .form-group:before,
   .input-group:before,
@@ -202,8 +202,8 @@ footer,
   header:after,
   footer:after,
   .row-fluid:after,
-  .row-fluid-alt:after,
-  .row-fluid-flush:after,
+  .row-fluid--alt:after,
+  .row-fluid--flush:after,
   .group:after,
   .form-group:after,
   .input-group:after,
@@ -240,38 +240,38 @@ footer,
 /*
  * base rows
  */
-.row-fluid, .row-fluid-alt, .row-fluid-flush {
+.row-fluid, .row-fluid--alt, .row-fluid--flush {
   width: 100%; }
-  .row-fluid > [class*="span"], .row-fluid-alt > [class*="span"], .row-fluid-flush > [class*="span"] {
+  .row-fluid > [class*="span"], .row-fluid--alt > [class*="span"], .row-fluid--flush > [class*="span"] {
     float: left;
-    margin-right: 4%; }
-    .row-fluid > [class*="span"].l, .row-fluid-alt > [class*="span"].l, .row-fluid-flush > [class*="span"].l {
+    margin-right: 3%; }
+    .row-fluid > [class*="span"].l, .row-fluid--alt > [class*="span"].l, .row-fluid--flush > [class*="span"].l {
       margin-right: 0; }
-    .row-fluid > [class*="span"]:last-child, .row-fluid-alt > [class*="span"]:last-child, .row-fluid-flush > [class*="span"]:last-child {
+    .row-fluid > [class*="span"]:last-child, .row-fluid--alt > [class*="span"]:last-child, .row-fluid--flush > [class*="span"]:last-child {
       margin-right: 0; }
-  .row-fluid > .span1, .row-fluid-alt > .span1, .row-fluid-flush > .span1 {
-    width: 4.66665%; }
-  .row-fluid > .span2, .row-fluid-alt > .span2, .row-fluid-flush > .span2 {
-    width: 13.3333%; }
-  .row-fluid > .span3, .row-fluid-alt > .span3, .row-fluid-flush > .span3 {
-    width: 21.99995%; }
-  .row-fluid > .span4, .row-fluid-alt > .span4, .row-fluid-flush > .span4 {
-    width: 30.6666%; }
-  .row-fluid > .span5, .row-fluid-alt > .span5, .row-fluid-flush > .span5 {
-    width: 39.33325%; }
-  .row-fluid > .span6, .row-fluid-alt > .span6, .row-fluid-flush > .span6 {
-    width: 47.9999%; }
-  .row-fluid > .span7, .row-fluid-alt > .span7, .row-fluid-flush > .span7 {
-    width: 56.66655%; }
-  .row-fluid > .span8, .row-fluid-alt > .span8, .row-fluid-flush > .span8 {
-    width: 65.3332%; }
-  .row-fluid > .span9, .row-fluid-alt > .span9, .row-fluid-flush > .span9 {
-    width: 73.99985%; }
-  .row-fluid > .span10, .row-fluid-alt > .span10, .row-fluid-flush > .span10 {
-    width: 82.6665%; }
-  .row-fluid > .span11, .row-fluid-alt > .span11, .row-fluid-flush > .span11 {
-    width: 91.33315%; }
-  .row-fluid > .span12, .row-fluid-alt > .span12, .row-fluid-flush > .span12 {
+  .row-fluid > .span1, .row-fluid--alt > .span1, .row-fluid--flush > .span1 {
+    width: 5.58332%; }
+  .row-fluid > .span2, .row-fluid--alt > .span2, .row-fluid--flush > .span2 {
+    width: 14.16663%; }
+  .row-fluid > .span3, .row-fluid--alt > .span3, .row-fluid--flush > .span3 {
+    width: 22.74995%; }
+  .row-fluid > .span4, .row-fluid--alt > .span4, .row-fluid--flush > .span4 {
+    width: 31.33327%; }
+  .row-fluid > .span5, .row-fluid--alt > .span5, .row-fluid--flush > .span5 {
+    width: 39.91658%; }
+  .row-fluid > .span6, .row-fluid--alt > .span6, .row-fluid--flush > .span6 {
+    width: 48.4999%; }
+  .row-fluid > .span7, .row-fluid--alt > .span7, .row-fluid--flush > .span7 {
+    width: 57.08322%; }
+  .row-fluid > .span8, .row-fluid--alt > .span8, .row-fluid--flush > .span8 {
+    width: 65.66653%; }
+  .row-fluid > .span9, .row-fluid--alt > .span9, .row-fluid--flush > .span9 {
+    width: 74.24985%; }
+  .row-fluid > .span10, .row-fluid--alt > .span10, .row-fluid--flush > .span10 {
+    width: 82.83317%; }
+  .row-fluid > .span11, .row-fluid--alt > .span11, .row-fluid--flush > .span11 {
+    width: 91.41648%; }
+  .row-fluid > .span12, .row-fluid--alt > .span12, .row-fluid--flush > .span12 {
     width: 99.9998%; }
 
 /*
@@ -294,31 +294,31 @@ footer,
 /*
  * fluid row no gutter
  */
-.row-fluid-flush > [class*="span"] {
+.row-fluid--flush > [class*="span"] {
   margin-right: 0; }
-.row-fluid-flush > .span1 {
+.row-fluid--flush > .span1 {
   width: 8.33332%; }
-.row-fluid-flush > .span2 {
+.row-fluid--flush > .span2 {
   width: 16.66663%; }
-.row-fluid-flush > .span3 {
+.row-fluid--flush > .span3 {
   width: 24.99995%; }
-.row-fluid-flush > .span4 {
+.row-fluid--flush > .span4 {
   width: 33.33327%; }
-.row-fluid-flush > .span5 {
+.row-fluid--flush > .span5 {
   width: 41.66658%; }
-.row-fluid-flush > .span6 {
+.row-fluid--flush > .span6 {
   width: 49.9999%; }
-.row-fluid-flush > .span7 {
+.row-fluid--flush > .span7 {
   width: 58.33322%; }
-.row-fluid-flush > .span8 {
+.row-fluid--flush > .span8 {
   width: 66.66653%; }
-.row-fluid-flush > .span9 {
+.row-fluid--flush > .span9 {
   width: 74.99985%; }
-.row-fluid-flush > .span10 {
+.row-fluid--flush > .span10 {
   width: 83.33317%; }
-.row-fluid-flush > .span11 {
+.row-fluid--flush > .span11 {
   width: 91.66648%; }
-.row-fluid-flush > .span12 {
+.row-fluid--flush > .span12 {
   width: 99.9998%; }
 
 /*
@@ -431,36 +431,14 @@ ol ul {
   font-size: 100%; }
 
 /* browncoat/normalizers/form */
-form fieldset {
-  border: none;
-  padding: 0;
-  margin: 0; }
-form .form-group {
-  background: #f2f2f2;
-  padding: 10px;
-  border: 1px solid gray;
-  margin: 0 0 10px; }
-form .radio-group.horizontal {
-  float: left;
-  margin: 0 5px 0 0; }
-  form .radio-group.horizontal:last-child {
-    margin: 0; }
-form .radio-group label {
-  float: left; }
-form .radio-group input[type="radio"] {
-  float: left; }
-form .radio-group.radiosb label {
-  float: none; }
-form .radio-group.radiosb.horizontal label {
-  float: left; }
 form label, form input, form textarea, form select {
   font-family: "Georgia", "Times New Roman", Times, serif;
-  font-size: 1.3em;
+  font-size: 1.4em;
   font-weight: normal;
-  line-height: 1.8em; }
+  line-height: 1.6em; }
 form legend {
   font-family: "Georgia", "Times New Roman", Times, serif;
-  font-size: 1.4em;
+  font-size: 1.6em;
   line-height: 1.8em;
   width: 100%;
   margin: 0 0 10px;
@@ -468,6 +446,7 @@ form legend {
 form label {
   font-family: "Georgia", "Times New Roman", Times, serif;
   display: block;
+  font-weight: 700;
   margin: 0 0 5px 0; }
 form select,
 form textarea,
@@ -516,6 +495,9 @@ form select {
     outline-offset: -2px; }
   form select[multiple], form select[size] {
     height: auto; }
+form input[type="file"] {
+  display: block;
+  width: 100%; }
 form textarea {
   height: auto;
   overflow: auto;
@@ -533,6 +515,106 @@ form input[type="submit"] {
     -moz-box-shadow: inset 0 5px 5px rgba(0, 0, 0, 0.025), 0 0 2px rgba(82, 168, 236, 0.6);
     box-shadow: inset 0 5px 5px rgba(0, 0, 0, 0.025), 0 0 2px rgba(82, 168, 236, 0.6); }
 
+fieldset {
+  border: none;
+  padding: 0;
+  margin: 0; }
+
+.form__collection {
+  background: #f2f2f2;
+  padding: 10px;
+  border: 1px solid gray;
+  margin: 0 0 10px; }
+
+.form__group {
+  margin: 0 0 20px; }
+
+.form__text {
+  padding: 3px 0px;
+  margin: 0px;
+  font-size: 1.4em;
+  color: gray; }
+
+.form__radios, .form__checkbox {
+  margin: 0 0 20px; }
+  .form__radios label, .form__checkbox label {
+    font-weight: normal; }
+
+.form__checkbox label {
+  margin: 0; }
+
+.form--inline .form__group {
+  display: inline-block;
+  padding-right: 10px; }
+.form--inline .form__checkbox {
+  display: inline-block;
+  padding-right: 10px; }
+.form--inline button {
+  display: inline-block; }
+
+.form--horizontal .form__group {
+  zoom: 1; }
+  .form--horizontal .form__group label {
+    padding-top: 5px;
+    text-align: right; }
+  .form--horizontal .form__group:before {
+    display: table;
+    content: ""; }
+  .form--horizontal .form__group:after {
+    display: table;
+    content: "";
+    clear: both; }
+.form--horizontal .form__checkbox {
+  zoom: 1; }
+  .form--horizontal .form__checkbox:before {
+    display: table;
+    content: ""; }
+  .form--horizontal .form__checkbox:after {
+    display: table;
+    content: "";
+    clear: both; }
+.form--horizontal [class*="span"] {
+  float: left;
+  margin-right: 2%; }
+  .form--horizontal [class*="span"].l {
+    margin-right: 0; }
+  .form--horizontal [class*="span"]:last-child {
+    margin-right: 0; }
+.form--horizontal .span1 {
+  width: 6.49998%; }
+.form--horizontal .span2 {
+  width: 14.99997%; }
+.form--horizontal .span3 {
+  width: 23.49995%; }
+.form--horizontal .span4 {
+  width: 31.99993%; }
+.form--horizontal .span5 {
+  width: 40.49992%; }
+.form--horizontal .span6 {
+  width: 48.9999%; }
+.form--horizontal .span7 {
+  width: 57.49988%; }
+.form--horizontal .span8 {
+  width: 65.99987%; }
+.form--horizontal .span9 {
+  width: 74.49985%; }
+.form--horizontal .span10 {
+  width: 82.99983%; }
+.form--horizontal .span11 {
+  width: 91.49982%; }
+.form--horizontal .span12 {
+  width: 99.9998%; }
+
+@media (max-width: 959px) {
+  .form--horizontal .form__group label {
+    text-align: left;
+    padding: 0; }
+  .form--horizontal [class*="span"] {
+    float: none;
+    width: auto;
+    margin-right: 0; }
+  .form--horizontal [class*="span"]:last-child {
+    overflow: auto; } }
 /* browncoat/normalizers/table */
 /* app/libs/nav */
 .nav-bar {
@@ -1176,9 +1258,18 @@ p em, li em {
   background: white;
   color: #333333; }
 
+/*documentation divisions*/
+.section-header {
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #e0e0e0; }
+
 /*documentation capsule*/
 .bc-capsule {
-  border: 1px solid #d9d9d9;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  border: 1px solid #e0e0e0;
   padding: 20px;
   margin: 0 0 20px; }
   .bc-capsule.code-companion {
@@ -1190,11 +1281,14 @@ p em, li em {
 
 /*github gist styles*/
 .gist {
-  font-size: 1.3em; }
-  .gist .gist-file .gist-data .line-pre {
-    font-family: Menlo, Monaco, Consolas, "Courier New", monospace !important; }
-  .gist .gist-file .gist-data .line-numbers {
-    display: none; }
+  font-size: 1.3em;
+  margin-bottom: 40px; }
+  .gist .gist-file {
+    margin: 0 !important; }
+    .gist .gist-file .gist-data .line-pre {
+      font-family: Menlo, Monaco, Consolas, "Courier New", monospace !important; }
+    .gist .gist-file .gist-data .line-numbers {
+      display: none; }
 
 .gist, .gist-file {
   -webkit-border-radius: 0px 0px 3px 3px !important;

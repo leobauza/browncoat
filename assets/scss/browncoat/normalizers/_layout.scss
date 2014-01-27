@@ -87,7 +87,7 @@
  * fluid row using percentages
  */
 
-.row-fluid-alt {
+.row-fluid--alt {
 	@extend %rows;
 }
 
@@ -96,7 +96,7 @@
  * fluid row no gutter
  */
 
-.row-fluid-flush {
+.row-fluid--flush {
 	@extend %rows;
 	
 	&> [class*="span"] {

@@ -1,27 +1,33 @@
-<section class="divider division">
-	<h3>Forms</h3>
-	<p>Forms can be optimally divided into form groups <code>.form-group</code> and further divided into input groups <code>.input-group</code>. A <code>.form-group</code> encapsulates groups of inputs while <code>.input-group</code> encapsulates a label and input field.</p>
+<section class="divider">
+	<h2 class="section-header">Forms</h2>
+	<p class="callout--warning"><strong>Good to know! </strong> All form elements are using <code>box-sizing: border-box</code> so you will need to deal with IE7 compatibility issues with forms. browncoat doesn't use border-box on all elements, just unwieldy form elements.</p>
+	<p>Forms can be optimally divided into <code>.form__collection</code> and further divided into <code>.form__group</code>. A group of inputs is encapsulated by a <code>.form__collection</code> while <code>.form__group</code> encapsulates a label and input field.</p>
+	<p>Validation and special UI elements will be included in a library called <code>jForms</code>. It will be a form prettifier, the validation will be left to up to the user but styles will be provided there.</p>
 	
+	<!-- basic -->
+	<h3>Basic</h3>
+	<p>All <code><?php print htmlentities("<input>");?></code>, <code><?php print htmlentities("<select>");?></code>, <code><?php print htmlentities("<textarea>");?></code>, etc don't require any classes to be styled. You are encouraged to go into the <code>assets/scss/browncoat/normalizers</code> directory and change the defaults for your project.</p>
+		
 	<section class="bc-capsule code-companion">
 		<form>
 			<legend><strong>Basic Example:</strong> This is a legend</legend>
 
-			<div class="input-group">
+			<div class="form__group">
 				<label>text</label>
 				<input type="text" placeholder="placeholder"></input>
 			</div>
 
-			<div class="input-group">
+			<div class="form__group">
 				<label>email</label>
 				<input type="email" placeholder="placeholder"></input>
 			</div>
 
-			<div class="input-group">
+			<div class="form__group">
 				<label>password</label>
 				<input type="password"></input>
 			</div>
 
-			<div class="input-group">
+			<div class="form__group">
 				<label>file</label>
 				<input type="file">
 			</div>
@@ -33,37 +39,154 @@
 	
 	<script src="https://gist.github.com/leobauza/b2f411544f9f2e6c6bfd.js"></script>
 	
+	<!-- Textarea -->
+	<h3>Textarea and help text</h3>
+	<p>You may use any of the buttons classes inside of forms for example this one uses <code>.btn--success</code></p>
+	<section class="bc-capsule code-companion">
+		<form>
+			<legend><strong>Text area with help text</strong></legend>
+			<div class="form__group">
+				<label>text</label>
+				<input type="text" placeholder="placeholder"></input>
+				<p class="form__text">Helper text for the form. Use the class <code>.form__text</code></p>
+			</div>
+			<div class="form__group">
+				<label>textarea</label>
+				<textarea rows="3"></textarea>
+			</div>
+			
+			<button type="submit" class="btn--success">Submit</button>
+			
+		</form>
+	</section>
+	<script src="https://gist.github.com/leobauza/6b03b610bfb6b56e8f09.js"></script>
+	
+	
+	
+	
+	<!-- Radios and checkboxes -->
+	<h3>Radios and checkboxes</h3>
+	<p>Checkboxes for single or multiple selection, and radios for selecting between options.</p>
+	<section class="bc-capsule code-companion">
+		<form>
+			<legend><strong>Radios and checkboxes</strong></legend>
+			<label>Checkbox</label>
+			<div class="form__checkbox">
+				<label>
+					<input type="checkbox" value="">
+					A single checkbox, this uses the wrapper class <code>.form__checkbox</code> for spacing. More text to wrap to a second line. 
+				</label>
+			</div>
+			<label>Radios</label>
+			<div class="form__radios">
+				<label>
+					<input type="radio" name="a" value="1" checked>
+					A single radio, this uses the wrapper class <code>.form__radios</code> around all related radios. This radio and the next radio are both wrapped by that class.
+				</label>
+				<label>
+					<input type="radio" name="a" value="2" >
+					A second option radio, this uses the wrapper class <code>.form__radios</code> around all related radios. This radio and the previous radio are both wrapped by that class.
+				</label>
+			</div>
+			
+			<button type="submit" class="btn--error">Submit</button>
+			
+		</form>
+	</section>
+	<script src="https://gist.github.com/leobauza/3d908e08e03c698734ad.js"></script>
 
-	<form>
-		<label>textarea</label>
-		<textarea rows="3"></textarea>
+	
+	
+	
+	<!-- Inline forms -->
+	<h3>Inline form</h3>
+	<p>Typically used for compact login forms.</p>
+	<p class="callout--error">The code for making these inline is <strong>thoroughly</strong> untested (will get to that soon.)</p>
+	<section class="bc-capsule code-companion">
+		<form class="form--inline">
+			<legend><strong>Inline Form: </strong>Again, this code is untested in IE.</legend>
+			<div class="form__group">
+				<label>email</label>
+				<input type="email" placeholder="placeholder"></input>
+			</div>
+			
+			<div class="form__group">
+				<label>password</label>
+				<input type="password"></input>
+			</div>
+			
+			<div class="form__checkbox">
+				<label>
+					<input type="checkbox" value="">
+					Remember me.
+				</label>
+			</div>
+			
+			<button type="submit" class="btn--info">submit</button>
+			
+		</form>
+	</section>
+	<script src="https://gist.github.com/leobauza/b49d99fe254669768115.js"></script>
+	
+	
+	<!-- Horizontal Labels -->
+	<h3>Horizontal labels</h3>
+	<p>Horizontal labels utilize the grid code but is set specifically for forms so no need to add a <code>.row-fluid-&lt;modifier&gt;</code> class. To adjust it, it can be found in <code>assets/scss/normalizers/_forms.scss</code> under the class <code>.form--horizontal</code>. The <code>.row-fluid</code> is replaced by <code>.form--horizontal</code>. There is <strong>no</strong> nesting of grids in forms.</p>
+	<section class="bc-capsule code-companion">
+		<form class="form--horizontal">
+			<legend><strong>Horizontal Labels</strong> on smaller screen sizes these default back to regular labels.</legend>
+			<div class="form__group">
+				<label class="span2">Text</label>
+				<div class="span10">
+					<input type="text" placeholder="placeholder"></input>
+				</div>
+			</div>
+			<div class="form__group">
+				<label class="span2">more</label>
+				<div class="span10">
+					<input type="text" placeholder="placeholder"></input>
+				</div>
+			</div>
+			<div class="form__checkbox">
+				<span class="span2">&nbsp;</span> <!-- temporary hack -->
+				<label class="span10">
+					<input type="checkbox" value="">
+					Remember me. (working on those offsets for rows...)
+				</label>
+			</div>
+			<div class="group"> <!-- temporary hack -->
+				<div class="span2">&nbsp;</div>
+				<div class="span10">
+					<button type="submit" class="btn--info">submit</button>
+				</div>
+			</div>
+		</form>
+	</section>
+	<script src="https://gist.github.com/leobauza/40131b080555c3176dcf.js"></script>
 
-		<label>select</label>
-		<select>
-			<option>one</option>
-			<option>two</option>
-		</select>
-
-		<label>select multiple</label>
-		<select multiple>
-			<option>one</option>
-			<option>two</option>
-		</select>
-
-		<label>
-			<input type="checkbox" value="">
-			checkbox
-		</label>
-
-		<label>
-			<input type="radio" name="a" value="1" checked>
-			radio
-		</label>
-		<label>
-			<input type="radio" name="a" value="2" >
-			radio 2
-		</label>
-	</form>
+	<!-- Selects -->
+	<h3>Selects</h3>
+	<section class="bc-capsule code-companion">
+		<form>
+			<legend><strong>Horizontal Labels</strong></legend>
+			<div class="form__group">
+				<label>select</label>
+				<select>
+					<option>one</option>
+					<option>two</option>
+				</select>
+			</div>
+			<div class="form__group">
+				<label>select multiple</label>
+				<select multiple>
+					<option>one</option>
+					<option>two</option>
+				</select>
+			</div>
+		</form>
+	</section>
+	<script src="https://gist.github.com/leobauza/68905c1a973754bb698b.js"></script>
+	
 
 
 

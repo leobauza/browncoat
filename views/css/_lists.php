@@ -1,5 +1,7 @@
-<section class="container division">
-	<h2>Lists Standard</h2>
+<section class="divider">
+	<h2 class="section-header">Lists (one line, multi line, and combined)</h2>
+
+	<h3>Lists Standard</h3>
 	<section class="row-fluid">
 		<!-- unordered lists -->
 		<div class="span6">
@@ -164,7 +166,7 @@
 		</div>
 	</section>
 
-	<h2>Lists Combined</h2>
+	<h3>Lists Combined</h3>
 	<section class="row-fluid">
 		<div class="span6">
 			<h3>UL UL OL</h3>
@@ -298,7 +300,7 @@
 		</div>
 	</section>
 
-	<h2>Lists Multiline</h2>
+	<h3>Lists Multiline</h3>
 	<section class="row-fluid">
 		<div class="span6">
 			<h3>Unordered Multiline</h3>
