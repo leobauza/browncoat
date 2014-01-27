@@ -5,6 +5,15 @@
 /* browncoat/base/helper (does not output css) */
 /* end */
 /* browncoat/base/structure (does not output css) */
+form label, form input, form textarea, form button, form select {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+  form label:before, form input:before, form textarea:before, form button:before, form select:before, form label:after, form input:after, form textarea:after, form button:after, form select:after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box; }
+
 /* end */
 /* browncoat/normalizers/reset */
 article,
@@ -139,7 +148,9 @@ h6 {
   font-size: 1.4em; }
 
 pre {
-  white-space: pre-wrap; }
+  white-space: pre-wrap;
+  font-size: 1.4em;
+  line-height: 1.8em; }
 
 .reverse {
   background: #262626; }
@@ -445,7 +456,8 @@ form textarea,
 form input[type="text"],
 form input[type="password"],
 form input[type="email"] {
-  height: 18px;
+  width: 100%;
+  height: 34px;
   padding: 4px;
   margin-bottom: 9px;
   color: #404040;
@@ -458,10 +470,7 @@ form input[type="email"] {
   border: 1px solid #bfbfbf;
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
-  border-radius: 3px;
-  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
-  -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
-  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075); }
+  border-radius: 3px; }
   form textarea:focus,
   form input[type="text"]:focus,
   form input[type="password"]:focus,
@@ -470,11 +479,10 @@ form input[type="email"] {
     outline: 0;
     outline: thin dotted \9;
     /* IE6-9 */
-    -webkit-box-shadow: inset 0 5px 5px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6);
-    -moz-box-shadow: inset 0 5px 5px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6);
-    box-shadow: inset 0 5px 5px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6); }
+    -webkit-box-shadow: inset 0 5px 5px rgba(0, 0, 0, 0.025), 0 0 2px rgba(82, 168, 236, 0.6);
+    -moz-box-shadow: inset 0 5px 5px rgba(0, 0, 0, 0.025), 0 0 2px rgba(82, 168, 236, 0.6);
+    box-shadow: inset 0 5px 5px rgba(0, 0, 0, 0.025), 0 0 2px rgba(82, 168, 236, 0.6); }
 form select {
-  width: 220px;
   background-color: white;
   border: 1px solid gray;
   height: 30px;
@@ -504,9 +512,9 @@ form input[type="submit"] {
     outline: 0;
     outline: thin dotted \9;
     /* IE6-9 */
-    -webkit-box-shadow: inset 0 5px 5px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6);
-    -moz-box-shadow: inset 0 5px 5px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6);
-    box-shadow: inset 0 5px 5px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6); }
+    -webkit-box-shadow: inset 0 5px 5px rgba(0, 0, 0, 0.025), 0 0 2px rgba(82, 168, 236, 0.6);
+    -moz-box-shadow: inset 0 5px 5px rgba(0, 0, 0, 0.025), 0 0 2px rgba(82, 168, 236, 0.6);
+    box-shadow: inset 0 5px 5px rgba(0, 0, 0, 0.025), 0 0 2px rgba(82, 168, 236, 0.6); }
 
 /* browncoat/normalizers/table */
 /* app/libs/nav */

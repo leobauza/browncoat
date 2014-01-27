@@ -48,6 +48,7 @@ form {
 		font-size: 1.3em;
 		font-weight: normal;
 		line-height: 1.8em;
+		@extend %borderBox;
 	}
 	label {
 		display: block;
@@ -59,8 +60,8 @@ form {
 	input[type="text"],
 	input[type="password"],
 	input[type="email"] {
-		//.inline-block(18px);
-		height: 18px;
+		width: 100%;
+		height: 34px;
 		padding: 4px;
 		margin-bottom: 9px;
 		color: Greyscale(75);
@@ -74,19 +75,18 @@ form {
 		background-color: $white;
 		border:1px solid Greyscale(25);
 		@include borderRadius();
-		@include boxShadow(inset 0 1px 1px rgba(0, 0, 0, 0.075));
+		//@include boxShadow(inset 0 1px 1px rgba(0, 0, 0, 0.5));
 		&:focus {
 			border:1px solid $focusBorder;
 			outline:0;
 			outline:thin dotted \9; /* IE6-9 */
-			@include boxShadow($doubleShadow);
+			@include boxShadow($formFocusShadow);
 		}
 	}
 	.select-group {
 		
 	}
 	select {
-		width: 220px;
 		background-color: $white;
 		border: 1px solid Greyscale();
 		height: 30px;
@@ -120,7 +120,7 @@ form {
 			border: 1px solid $focusBorder;
 			outline: 0;
 			outline: thin dotted \9; /* IE6-9 */
-			@include boxShadow($doubleShadow);
+			@include boxShadow($formFocusShadow);
 		}
 	}
 }
