@@ -1,4 +1,11 @@
 /* app/devs/doc (documentation css) */
+@mixin importantBorderRadius ($radius: 3px) {
+	-webkit-border-radius:$radius!important;
+	   -moz-border-radius:$radius!important;
+	        border-radius:$radius!important;
+}
+
+
 .site-header {
 	padding-top: 36px;
 	margin:0 0 20px;
@@ -24,7 +31,21 @@ p, li {
 }
 
 .gist {
-	font-size: 1.4em;
+	font-size: 1.2em;
+}
+.gist, .gist-file {
+	@include importantBorderRadius(0px 0px 3px 3px);
+}
+
+.bc-capsule {
+	border: 1px solid Greyscale(7);
+	padding: 20px;
+	margin: 0 0 20px;
+	&.code-companion {
+		@include borderRadius(5px 5px 0 0);
+		margin: 0;
+		border-bottom: none;
+	}
 }
 
 @media (max-width: 959px) {

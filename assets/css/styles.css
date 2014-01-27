@@ -5,11 +5,11 @@
 /* browncoat/base/helper (does not output css) */
 /* end */
 /* browncoat/base/structure (does not output css) */
-form label, form input, form textarea, form button, form select, form legend {
+code, form label, form input, form textarea, form select, form legend {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box; }
-  form label:before, form input:before, form textarea:before, form button:before, form select:before, form legend:before, form label:after, form input:after, form textarea:after, form button:after, form select:after, form legend:after {
+  code:before, form label:before, form input:before, form textarea:before, form select:before, form legend:before, code:after, form label:after, form input:after, form textarea:after, form select:after, form legend:after {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box; }
@@ -84,6 +84,9 @@ a:hover {
   color: #245682;
   text-decoration: underline; }
 
+button {
+  font-family: "Georgia", "Times New Roman", Times, serif; }
+
 p {
   font-size: 1.6em;
   line-height: 1.6em;
@@ -151,6 +154,13 @@ pre {
   white-space: pre-wrap;
   font-size: 1.4em;
   line-height: 1.8em; }
+
+code {
+  font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
+  font-size: 85%;
+  padding: 2px 4px;
+  color: #428bca;
+  background: #f2f2f2; }
 
 .reverse {
   background: #262626; }
@@ -443,14 +453,21 @@ form .radio-group.radiosb label {
   float: none; }
 form .radio-group.radiosb.horizontal label {
   float: left; }
-form label, form input, form textarea, form button, form select {
-  font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+form label, form input, form textarea, form select {
+  font-family: "Georgia", "Times New Roman", Times, serif;
   font-size: 1.3em;
   font-weight: normal;
   line-height: 1.8em; }
 form legend {
-  width: 100%; }
+  font-family: "Georgia", "Times New Roman", Times, serif;
+  font-size: 1.4em;
+  line-height: 1.8em;
+  width: 100%;
+  padding: 10px;
+  margin: 0 0 10px;
+  background: whitesmoke; }
 form label {
+  font-family: "Georgia", "Times New Roman", Times, serif;
   display: block;
   margin: 0 0 5px 0; }
 form select,
@@ -461,7 +478,6 @@ form input[type="email"] {
   width: 100%;
   height: 34px;
   padding: 4px;
-  margin-bottom: 9px;
   color: #404040;
   margin-left: 0; }
 form textarea,
@@ -1162,7 +1178,23 @@ p em, li em {
   color: #333333; }
 
 .gist {
-  font-size: 1.4em; }
+  font-size: 1.2em; }
+
+.gist, .gist-file {
+  -webkit-border-radius: 0px 0px 3px 3px !important;
+  -moz-border-radius: 0px 0px 3px 3px !important;
+  border-radius: 0px 0px 3px 3px !important; }
+
+.bc-capsule {
+  border: 1px solid #ededed;
+  padding: 20px;
+  margin: 0 0 20px; }
+  .bc-capsule.code-companion {
+    -webkit-border-radius: 5px 5px 0 0;
+    -moz-border-radius: 5px 5px 0 0;
+    border-radius: 5px 5px 0 0;
+    margin: 0;
+    border-bottom: none; }
 
 @media (max-width: 959px) {
   .short {

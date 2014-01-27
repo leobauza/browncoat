@@ -46,8 +46,9 @@ body {
 	background: $bodyBg;
 	font-size: $baseSize;
 	@include marpad(0px, 0px);
-	font-family: $serif;
+	//font-family: $serif;
 	//font-family: $sansSerif;
+	font-family: $globFamily;
 	word-wrap: break-word;
 }
 hr {
@@ -66,6 +67,9 @@ a {
 a:hover {
 	color: $linkHoverColour;
 	text-decoration: underline;
+}
+button {
+	font-family: $globFamily;
 }
 p {
 	font-size: $textSize;
@@ -128,6 +132,14 @@ pre {
 	white-space: pre-wrap;
 	font-size: 1.4em;
 	line-height: 1.8em;
+}
+code {
+	@extend %borderBox;
+	font-family: $code;
+	font-size: 85%;
+	padding: 2px 4px;
+	color: $info;
+	background: Greyscale(5);
 }
 
 .reverse {

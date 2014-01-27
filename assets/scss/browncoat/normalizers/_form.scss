@@ -43,18 +43,25 @@ form {
 			}
 		}
 	}
-	label, input, textarea, button, select {
-		font-family: $sansSerif;
+	label, input, textarea, select {
+		font-family: $globFamily;
 		font-size: 1.3em;
 		font-weight: normal;
 		line-height: 1.8em;
 		@extend %borderBox;
 	}
 	legend {
+		font-family: $globFamily;
+		font-size: 1.4em;
+		line-height: 1.8em;
 		width: 100%;
+		padding: 10px;
+		margin: 0 0 10px;
+		background: Greyscale(4);
 		@extend %borderBox;
 	}
 	label {
+		font-family: $globFamily;
 		display: block;
 		margin: 0 0 5px 0;
 	}
@@ -67,7 +74,7 @@ form {
 		width: 100%;
 		height: 34px;
 		padding: 4px;
-		margin-bottom: 9px;
+		//margin-bottom: 9px;
 		color: Greyscale(75);
 		margin-left:0;
 	}

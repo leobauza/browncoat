@@ -1,18 +1,40 @@
 <section class="divider division">
 	<h3>Forms</h3>
-	<div class="callout--warning"><strong>browncoat</strong> is still in early development, forms are very unfinished.</div>
+	<p>Forms can be optimally divided into form groups <code>.form-group</code> and further divided into input groups <code>.input-group</code>. A <code>.form-group</code> encapsulates groups of inputs while <code>.input-group</code> encapsulates a label and input field.</p>
+	
+	<section class="bc-capsule code-companion">
+		<form>
+			<legend><strong>Basic Example:</strong> This is a legend</legend>
+
+			<div class="input-group">
+				<label>text</label>
+				<input type="text" placeholder="placeholder"></input>
+			</div>
+
+			<div class="input-group">
+				<label>email</label>
+				<input type="email" placeholder="placeholder"></input>
+			</div>
+
+			<div class="input-group">
+				<label>password</label>
+				<input type="password"></input>
+			</div>
+
+			<div class="input-group">
+				<label>file</label>
+				<input type="file">
+			</div>
+
+			<button type="submit" class="btn--default">Submit</button>
+
+		</form>
+	</section>
+	
+	<script src="https://gist.github.com/leobauza/b2f411544f9f2e6c6bfd.js"></script>
+	
+
 	<form>
-		<legend><p class="callout--success">I am legend</p></legend>
-
-		<label>text</label>
-		<input type="text" placeholder="placeholder"></input>
-		<label>email</label>
-		<input type="email" placeholder="placeholder"></input>
-		<label>password</label>
-		<input type="password"></input>
-		<label>file</label>
-		<input type="file">
-
 		<label>textarea</label>
 		<textarea rows="3"></textarea>
 
@@ -42,7 +64,11 @@
 			radio 2
 		</label>
 	</form>
-	
-	<script src="https://gist.github.com/leobauza/b2f411544f9f2e6c6bfd.js"></script>
-	
+
+
+
+
 </section>
+
+
+
