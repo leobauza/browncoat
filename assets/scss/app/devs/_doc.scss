@@ -18,13 +18,8 @@ $docBorder: Greyscale(12);
 		z-index:100;
 	}
 }
-p, li {
-	em {
-		color:Greyscale(50);
-	}
-}
 .short {
-	width:35%;
+	margin-right: 50%; //does this solve the IE issue?
 }
 
 .boxy {

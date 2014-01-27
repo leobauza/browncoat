@@ -137,26 +137,26 @@
 			<legend><strong>Horizontal Labels</strong> on smaller screen sizes these default back to regular labels.</legend>
 			<div class="form__group">
 				<label class="span2">Text</label>
-				<div class="span10">
+				<div class="span10 l">
 					<input type="text" placeholder="placeholder"></input>
 				</div>
 			</div>
 			<div class="form__group">
 				<label class="span2">more</label>
-				<div class="span10">
+				<div class="span10 l">
 					<input type="text" placeholder="placeholder"></input>
 				</div>
 			</div>
 			<div class="form__checkbox">
 				<span class="span2">&nbsp;</span> <!-- temporary hack -->
-				<label class="span10">
+				<label class="span10 l">
 					<input type="checkbox" value="">
 					Remember me. (working on those offsets for rows...)
 				</label>
 			</div>
 			<div class="group"> <!-- temporary hack -->
 				<div class="span2">&nbsp;</div>
-				<div class="span10">
+				<div class="span10 l">
 					<button type="submit" class="btn--info">submit</button>
 				</div>
 			</div>

@@ -63,7 +63,7 @@ body {
   font-size: 63.7%;
   margin: 0px;
   padding: 0px;
-  font-family: "Georgia", "Times New Roman", Times, serif;
+  font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   word-wrap: break-word; }
 
 hr {
@@ -85,7 +85,7 @@ a:hover {
   text-decoration: underline; }
 
 button {
-  font-family: "Georgia", "Times New Roman", Times, serif; }
+  font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; }
 
 p {
   font-size: 1.6em;
@@ -432,19 +432,19 @@ ol ul {
 
 /* browncoat/normalizers/form */
 form label, form input, form textarea, form select {
-  font-family: "Georgia", "Times New Roman", Times, serif;
+  font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   font-size: 1.4em;
   font-weight: normal;
   line-height: 1.6em; }
 form legend {
-  font-family: "Georgia", "Times New Roman", Times, serif;
+  font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   font-size: 1.6em;
   line-height: 1.8em;
   width: 100%;
   margin: 0 0 10px;
   color: gray; }
 form label {
-  font-family: "Georgia", "Times New Roman", Times, serif;
+  font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   display: block;
   font-weight: 700;
   margin: 0 0 5px 0; }
@@ -1247,11 +1247,8 @@ ul.list-group {
     left: 0;
     z-index: 100; }
 
-p em, li em {
-  color: gray; }
-
 .short {
-  width: 35%; }
+  margin-right: 50%; }
 
 .boxy {
   border: 1px solid #8790a5;

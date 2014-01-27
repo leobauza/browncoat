@@ -7,7 +7,7 @@ $serif: "Georgia", "Times New Roman", Times, serif;
 $code: Menlo,Monaco,Consolas,"Courier New",monospace;
 //$serif: "Palatino Linotype", "Book Antiqua", Palatino, serif;
 
-$globFamily: $serif; //not everything inherits from the body...so we have $globFamily
+$globFamily: $sansSerif; //not everything inherits from the body...so we have $globFamily
 
 $textSize: 1.6em;
 $textLineHeight: 1.6em;
