@@ -76,6 +76,7 @@ I am working on an easier go at installing browncoat using a combination of grun
 - Restructure assets/js directory
 - Added comments in all js to explain things better
 - Updated README with better JS section
+- Add new form styles
 
 
 
