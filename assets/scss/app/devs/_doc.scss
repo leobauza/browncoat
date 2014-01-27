@@ -18,9 +18,9 @@ p, li {
 	width:35%;
 }
 .boxy {
-	border:1px solid Border();
-	background: Background(-100);
-	color: Text();
+	border:1px solid $boxBorderColour;
+	background: $boxBackgroundColour;
+	color: $textColour;
 }
 
 @media (max-width: 959px) {

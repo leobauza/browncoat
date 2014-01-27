@@ -228,29 +228,29 @@ footer,
       margin-right: 0; }
     .row-fluid > [class*="span"]:last-child, .row-fluid-alt > [class*="span"]:last-child, .row-fluid-flush > [class*="span"]:last-child {
       margin-right: 0; }
-  .row-fluid .span1, .row-fluid-alt .span1, .row-fluid-flush .span1 {
+  .row-fluid > .span1, .row-fluid-alt > .span1, .row-fluid-flush > .span1 {
     width: 4.66665%; }
-  .row-fluid .span2, .row-fluid-alt .span2, .row-fluid-flush .span2 {
+  .row-fluid > .span2, .row-fluid-alt > .span2, .row-fluid-flush > .span2 {
     width: 13.3333%; }
-  .row-fluid .span3, .row-fluid-alt .span3, .row-fluid-flush .span3 {
+  .row-fluid > .span3, .row-fluid-alt > .span3, .row-fluid-flush > .span3 {
     width: 21.99995%; }
-  .row-fluid .span4, .row-fluid-alt .span4, .row-fluid-flush .span4 {
+  .row-fluid > .span4, .row-fluid-alt > .span4, .row-fluid-flush > .span4 {
     width: 30.6666%; }
-  .row-fluid .span5, .row-fluid-alt .span5, .row-fluid-flush .span5 {
+  .row-fluid > .span5, .row-fluid-alt > .span5, .row-fluid-flush > .span5 {
     width: 39.33325%; }
-  .row-fluid .span6, .row-fluid-alt .span6, .row-fluid-flush .span6 {
+  .row-fluid > .span6, .row-fluid-alt > .span6, .row-fluid-flush > .span6 {
     width: 47.9999%; }
-  .row-fluid .span7, .row-fluid-alt .span7, .row-fluid-flush .span7 {
+  .row-fluid > .span7, .row-fluid-alt > .span7, .row-fluid-flush > .span7 {
     width: 56.66655%; }
-  .row-fluid .span8, .row-fluid-alt .span8, .row-fluid-flush .span8 {
+  .row-fluid > .span8, .row-fluid-alt > .span8, .row-fluid-flush > .span8 {
     width: 65.3332%; }
-  .row-fluid .span9, .row-fluid-alt .span9, .row-fluid-flush .span9 {
+  .row-fluid > .span9, .row-fluid-alt > .span9, .row-fluid-flush > .span9 {
     width: 73.99985%; }
-  .row-fluid .span10, .row-fluid-alt .span10, .row-fluid-flush .span10 {
+  .row-fluid > .span10, .row-fluid-alt > .span10, .row-fluid-flush > .span10 {
     width: 82.6665%; }
-  .row-fluid .span11, .row-fluid-alt .span11, .row-fluid-flush .span11 {
+  .row-fluid > .span11, .row-fluid-alt > .span11, .row-fluid-flush > .span11 {
     width: 91.33315%; }
-  .row-fluid .span12, .row-fluid-alt .span12, .row-fluid-flush .span12 {
+  .row-fluid > .span12, .row-fluid-alt > .span12, .row-fluid-flush > .span12 {
     width: 99.9998%; }
 
 /*
@@ -275,29 +275,29 @@ footer,
  */
 .row-fluid-flush > [class*="span"] {
   margin-right: 0; }
-.row-fluid-flush .span1 {
+.row-fluid-flush > .span1 {
   width: 8.33332%; }
-.row-fluid-flush .span2 {
+.row-fluid-flush > .span2 {
   width: 16.66663%; }
-.row-fluid-flush .span3 {
+.row-fluid-flush > .span3 {
   width: 24.99995%; }
-.row-fluid-flush .span4 {
+.row-fluid-flush > .span4 {
   width: 33.33327%; }
-.row-fluid-flush .span5 {
+.row-fluid-flush > .span5 {
   width: 41.66658%; }
-.row-fluid-flush .span6 {
+.row-fluid-flush > .span6 {
   width: 49.9999%; }
-.row-fluid-flush .span7 {
+.row-fluid-flush > .span7 {
   width: 58.33322%; }
-.row-fluid-flush .span8 {
+.row-fluid-flush > .span8 {
   width: 66.66653%; }
-.row-fluid-flush .span9 {
+.row-fluid-flush > .span9 {
   width: 74.99985%; }
-.row-fluid-flush .span10 {
+.row-fluid-flush > .span10 {
   width: 83.33317%; }
-.row-fluid-flush .span11 {
+.row-fluid-flush > .span11 {
   width: 91.66648%; }
-.row-fluid-flush .span12 {
+.row-fluid-flush > .span12 {
   width: 99.9998%; }
 
 /*
@@ -1147,7 +1147,7 @@ p em, li em {
   width: 35%; }
 
 .boxy {
-  border: 1px solid #6b758e;
+  border: 1px solid #8790a5;
   background: white;
   color: #333333; }
 

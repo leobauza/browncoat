@@ -14,7 +14,7 @@
 		<input type="file">
 
 		<label>textarea</label>
-		<textarea rows="6"></textarea>
+		<textarea rows="3"></textarea>
 
 		<label>select</label>
 		<select>

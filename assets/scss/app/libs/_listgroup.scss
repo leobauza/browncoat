@@ -4,7 +4,7 @@ $listGroupBorder: Greyscale(10);
 	margin:0;
 	padding:10px;
 	border-top: 1px solid $listGroupBorder;	
-	color: Text();
+	color: $textColour;
 	font-size: $textSize;
 	line-height:$textLineHeight;
 }

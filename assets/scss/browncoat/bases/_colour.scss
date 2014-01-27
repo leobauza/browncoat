@@ -36,18 +36,12 @@ $focusBorder: rgba(82, 168, 236, 0.8);
 @function Greyscale ($perc: 50) {
 	@return darken(#fff, $perc)
 }
-@function Text ($perc: 80, $colour: $white) {
-	@return ColourConstructor($perc, $colour)
-}
 
 
-//box parts
-@function Background ($perc: 0, $colour: $brand) {
-	@return ColourConstructor($perc, $colour)
-}
-@function Border ($perc: 0, $colour: $brandAlt) {
-	@return ColourConstructor($perc, $colour)
-}
+//boxes and text
+$textColour: ColourConstructor(80, $white);
+$boxBackgroundColour: ColourConstructor(-100, $brandAlt);
+$boxBorderColour: ColourConstructor(0, $brand);
 
 
 //alets

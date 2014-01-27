@@ -70,7 +70,7 @@ a:hover {
 p {
 	font-size: $textSize;
 	line-height: $textLineHeight;
-	color: Text();
+	color: $textColour;
 	margin: 0 0 20px;
 	padding: 0;
 	&.intro {
@@ -97,9 +97,9 @@ h6 {
 	font-weight: 500;
 	text-rendering: optimizelegibility;
 	line-height: 1.2em;
-	color: Text();
+	color: $textColour;
 	a {
-		color: Text();
+		color: $textColour;
 		font-weight: normal;
 		&:hover {
 			text-decoration:none;
