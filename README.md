@@ -78,8 +78,8 @@ I am working on an easier go at installing browncoat using a combination of grun
 - Better definition of how javascript should be structured for prototyping
 - Restructure assets/js directory
 - Added comments in all js to explain things better
-- Updated README with better JS section
 - Add new form styles
+- Add code to documentation, revamp all css section documentation.
 
 
 

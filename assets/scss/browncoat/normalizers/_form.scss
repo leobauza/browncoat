@@ -55,9 +55,8 @@ form {
 		font-size: 1.4em;
 		line-height: 1.8em;
 		width: 100%;
-		padding: 10px;
 		margin: 0 0 10px;
-		background: Greyscale(4);
+		color: Greyscale(50);
 		@extend %borderBox;
 	}
 	label {

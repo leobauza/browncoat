@@ -24,21 +24,17 @@ p, li {
 .short {
 	width:35%;
 }
+
 .boxy {
 	border:1px solid $boxBorderColour;
 	background: $boxBackgroundColour;
 	color: $textColour;
 }
 
-.gist {
-	font-size: 1.2em;
-}
-.gist, .gist-file {
-	@include importantBorderRadius(0px 0px 3px 3px);
-}
 
+/*documentation capsule*/
 .bc-capsule {
-	border: 1px solid Greyscale(7);
+	border: 1px solid Greyscale(15);
 	padding: 20px;
 	margin: 0 0 20px;
 	&.code-companion {
@@ -46,6 +42,23 @@ p, li {
 		margin: 0;
 		border-bottom: none;
 	}
+}
+
+
+/*github gist styles*/
+.gist {
+	font-size: 1.3em;
+	.gist-file {
+		.gist-data .line-pre {
+			font-family: $code!important;
+		}
+		.gist-data .line-numbers {
+			display: none;
+		}
+	}
+}
+.gist, .gist-file {
+	@include importantBorderRadius(0px 0px 3px 3px);
 }
 
 @media (max-width: 959px) {

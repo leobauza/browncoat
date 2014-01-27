@@ -463,9 +463,8 @@ form legend {
   font-size: 1.4em;
   line-height: 1.8em;
   width: 100%;
-  padding: 10px;
   margin: 0 0 10px;
-  background: whitesmoke; }
+  color: gray; }
 form label {
   font-family: "Georgia", "Times New Roman", Times, serif;
   display: block;
@@ -1177,16 +1176,9 @@ p em, li em {
   background: white;
   color: #333333; }
 
-.gist {
-  font-size: 1.2em; }
-
-.gist, .gist-file {
-  -webkit-border-radius: 0px 0px 3px 3px !important;
-  -moz-border-radius: 0px 0px 3px 3px !important;
-  border-radius: 0px 0px 3px 3px !important; }
-
+/*documentation capsule*/
 .bc-capsule {
-  border: 1px solid #ededed;
+  border: 1px solid #d9d9d9;
   padding: 20px;
   margin: 0 0 20px; }
   .bc-capsule.code-companion {
@@ -1195,6 +1187,19 @@ p em, li em {
     border-radius: 5px 5px 0 0;
     margin: 0;
     border-bottom: none; }
+
+/*github gist styles*/
+.gist {
+  font-size: 1.3em; }
+  .gist .gist-file .gist-data .line-pre {
+    font-family: Menlo, Monaco, Consolas, "Courier New", monospace !important; }
+  .gist .gist-file .gist-data .line-numbers {
+    display: none; }
+
+.gist, .gist-file {
+  -webkit-border-radius: 0px 0px 3px 3px !important;
+  -moz-border-radius: 0px 0px 3px 3px !important;
+  border-radius: 0px 0px 3px 3px !important; }
 
 @media (max-width: 959px) {
   .short {
