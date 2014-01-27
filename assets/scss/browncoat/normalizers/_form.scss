@@ -50,6 +50,10 @@ form {
 		line-height: 1.8em;
 		@extend %borderBox;
 	}
+	legend {
+		width: 100%;
+		@extend %borderBox;
+	}
 	label {
 		display: block;
 		margin: 0 0 5px 0;

@@ -5,11 +5,11 @@
 /* browncoat/base/helper (does not output css) */
 /* end */
 /* browncoat/base/structure (does not output css) */
-form label, form input, form textarea, form button, form select {
+form label, form input, form textarea, form button, form select, form legend {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box; }
-  form label:before, form input:before, form textarea:before, form button:before, form select:before, form label:after, form input:after, form textarea:after, form button:after, form select:after {
+  form label:before, form input:before, form textarea:before, form button:before, form select:before, form legend:before, form label:after, form input:after, form textarea:after, form button:after, form select:after, form legend:after {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box; }
@@ -448,6 +448,8 @@ form label, form input, form textarea, form button, form select {
   font-size: 1.3em;
   font-weight: normal;
   line-height: 1.8em; }
+form legend {
+  width: 100%; }
 form label {
   display: block;
   margin: 0 0 5px 0; }
@@ -1158,6 +1160,9 @@ p em, li em {
   border: 1px solid #8790a5;
   background: white;
   color: #333333; }
+
+.gist {
+  font-size: 1.4em; }
 
 @media (max-width: 959px) {
   .short {
