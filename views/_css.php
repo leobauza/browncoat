@@ -1,33 +1,29 @@
-<section class="container division">
-	<div class="callout--warning"><strong>browncoat</strong> is still in early development, forms are very unfinished.</div>
+<section class="row division">
 	<h1>CSS</h1>
 	<p class="short">This section contains examples of the basic styles that make up the foundation of <em>browncoat</em>. There is nothing fancy here.</p>
 </section>
 
-<section class="row-static">
-	<nav class="span-sidebar">
-		<nav class="inner">
-			<h4>See More:</h4>
-			<div class="list-group">
-				<a href="/" class="active">browncoat 2.0</a>
-				<a href="/css">CSS</a>
-				<a href="/libraries">Libraries</a>
-				<a href="/layouts">Layouts</a>
-			</div>
-			<ul class="list-group">
-				<li>No link list group item</li>
-				<li>Second Item</li>
-				<li>Third Item</li>
-			</ul>
-			<p><strong>note:</strong> sample list-group library items above</p>
-		</nav>
-	</nav>
-	<div class="span-main">
+<section class="row spacer">
+	<div class="callout--warning"><strong>browncoat</strong> is still in early development, css is not locked down</div>
+</section>
+
+<section class="row">
+	<div class="span8">
 		<?php
 			include './views/css/_reset.php';
 			include './views/css/_lists.php';
 			include './views/css/_forms.php';
 		?>
 	</div>
+	<nav class="span4">
+		<nav>
+			<h4>Browse CSS</h4>
+			<div class="list-group">
+				<a href="#" class="active">Typography</a>
+				<a href="#">Lists</a>
+				<a href="#">Forms</a>
+			</div>
+		</nav>
+	</nav>
 </section>
 
