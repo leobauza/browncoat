@@ -1,7 +1,6 @@
 /* browncoat/normalizers/layout */
 
 .container {
-	//padding:0px $columnGutter;
 	padding: 0px 20px;
 }
 .divider {
@@ -62,6 +61,15 @@
 	}
 }
 
+/*
+ * new: basic row
+ */
+.row {
+	@extend %rows;
+	width: (100 - $gutter * 2) * 1%;
+	padding: 0 $gutter * 1%;
+}
+
 
 /*
  * fluid row using overflow hidden
@@ -118,7 +126,7 @@
 
 .row-static > {
 	.span-sidebar {
-		width:250px;
+		width: 250px;
 		float:left;
 	}
 	.span-main {
