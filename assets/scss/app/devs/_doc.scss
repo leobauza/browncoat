@@ -41,13 +41,23 @@ $docBorder: Greyscale(12);
 
 .bc-capsule {
 	@include borderRadius(5px);
+	position:relative;
 	border: 1px solid $docBorder;
-	padding: 20px;
+	padding: 60px 20px 20px;
 	margin: 0 0 20px;
 	&.code-companion {
 		@include borderRadius(5px 5px 0 0);
 		margin: 0;
 		border-bottom: none;
+	}
+	&:after {
+		content: "Sample";
+		position:absolute;
+		top: 20px;
+		left: 20px;
+		font-size: 2em;
+		font-weight: 500;
+		color: Greyscale(25);
 	}
 }
 
@@ -60,11 +70,6 @@ $docBorder: Greyscale(12);
 			}
 		}
 	}
-}
-
-.bc-capsule-title {
-	color: Greyscale(35);
-	margin: 0 0 20px;
 }
 
 

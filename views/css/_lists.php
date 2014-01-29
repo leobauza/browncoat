@@ -6,7 +6,6 @@
 	<p>List items in no particular order</p>
 	
 	<article class="bc-capsule">
-		<h4 class="bc-capsule-title">Sample</h4>
 		<ul>
 			<li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</li>
 			<li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</li>

@@ -10,30 +10,23 @@
 		
 	<section class="bc-capsule code-companion">
 		<form>
-			<legend><strong>Basic Example:</strong> This is a legend</legend>
-
 			<div class="form__group">
 				<label>text</label>
 				<input type="text" placeholder="placeholder"></input>
 			</div>
-
 			<div class="form__group">
 				<label>email</label>
 				<input type="email" placeholder="placeholder"></input>
 			</div>
-
 			<div class="form__group">
 				<label>password</label>
 				<input type="password"></input>
 			</div>
-
 			<div class="form__group">
 				<label>file</label>
 				<input type="file">
 			</div>
-
 			<button type="submit" class="btn--default">Submit</button>
-
 		</form>
 	</section>
 	
@@ -44,7 +37,6 @@
 	<p>You may use any of the buttons classes inside of forms for example this one uses <code>.btn--success</code></p>
 	<section class="bc-capsule code-companion">
 		<form>
-			<legend><strong>Text area with help text</strong></legend>
 			<div class="form__group">
 				<label>text</label>
 				<input type="text" placeholder="placeholder"></input>
@@ -54,9 +46,7 @@
 				<label>textarea</label>
 				<textarea rows="3"></textarea>
 			</div>
-			
 			<button type="submit" class="btn--success">Submit</button>
-			
 		</form>
 	</section>
 	<script src="https://gist.github.com/leobauza/6b03b610bfb6b56e8f09.js"></script>
@@ -69,7 +59,6 @@
 	<p>Checkboxes for single or multiple selection, and radios for selecting between options.</p>
 	<section class="bc-capsule code-companion">
 		<form>
-			<legend><strong>Radios and checkboxes</strong></legend>
 			<label>Checkbox</label>
 			<div class="form__checkbox">
 				<label>
@@ -88,9 +77,7 @@
 					A second option radio, this uses the wrapper class <code>.form__radios</code> around all related radios. This radio and the previous radio are both wrapped by that class.
 				</label>
 			</div>
-			
 			<button type="submit" class="btn--error">Submit</button>
-			
 		</form>
 	</section>
 	<script src="https://gist.github.com/leobauza/3d908e08e03c698734ad.js"></script>
@@ -104,26 +91,21 @@
 	<p class="callout--error">The code for making these inline is <strong>thoroughly</strong> untested (will get to that soon.)</p>
 	<section class="bc-capsule code-companion">
 		<form class="form--inline">
-			<legend><strong>Inline Form: </strong>Again, this code is untested in IE.</legend>
 			<div class="form__group">
 				<label>email</label>
 				<input type="email" placeholder="placeholder"></input>
-			</div>
-			
+			</div>			
 			<div class="form__group">
 				<label>password</label>
 				<input type="password"></input>
 			</div>
-			
 			<div class="form__checkbox">
 				<label>
 					<input type="checkbox" value="">
 					Remember me.
 				</label>
 			</div>
-			
 			<button type="submit" class="btn--info">submit</button>
-			
 		</form>
 	</section>
 	<script src="https://gist.github.com/leobauza/b49d99fe254669768115.js"></script>
@@ -134,7 +116,6 @@
 	<p>Horizontal labels utilize the grid code but is set specifically for forms so no need to add a <code>.row-fluid-&lt;modifier&gt;</code> class. To adjust it, it can be found in <code>assets/scss/normalizers/_forms.scss</code> under the class <code>.form--horizontal</code>. The <code>.row-fluid</code> is replaced by <code>.form--horizontal</code>. There is <strong>no</strong> nesting of grids in forms.</p>
 	<section class="bc-capsule code-companion">
 		<form class="form--horizontal">
-			<legend><strong>Horizontal Labels</strong> on smaller screen sizes these default back to regular labels.</legend>
 			<div class="form__group">
 				<label class="span2">Text</label>
 				<div class="span10 l">
@@ -168,7 +149,6 @@
 	<h3>Selects</h3>
 	<section class="bc-capsule code-companion">
 		<form>
-			<legend><strong>Horizontal Labels</strong></legend>
 			<div class="form__group">
 				<label>select</label>
 				<select>
