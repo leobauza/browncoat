@@ -24,6 +24,8 @@
 	else:
 		$nav = '';
 	endif;
+
+	$browncoatVersion = "browncoat v0.2.3"
 ?>
 
 <body>
@@ -31,7 +33,7 @@
 	<header class="site-header">
 		<nav class="nav-bar">
 			<ul class="menu-left">
-				<li class="brand"><a <?php if ($nav == "") echo "class='active'"; ?> href="/">browncoat 2.0</a></li>
+				<li class="brand"><a <?php if ($nav == "") echo "class='active'"; ?> href="/"><?php echo $browncoatVersion; ?></a></li>
 				<li><a <?php if ($nav == "css") echo "class='active'"; ?> href="/css">css</a></li>
 				<li><a <?php if ($nav == "libraries") echo "class='active'"; ?> href="/libraries">libraries</a></li>
 				<li><a <?php if ($nav == "layouts") echo "class='active'"; ?> href="/layouts">layouts</a></li>

@@ -85,10 +85,13 @@ p {
 		font-size: 2em;
 	}
 }
-strong {
-	font-weight: 700;
+small {
+	font-size: 80%;
 }
-em {
+strong, b {
+	font-weight: 600;
+}
+em, i {
 	font-style: italic;
 }
 h1,

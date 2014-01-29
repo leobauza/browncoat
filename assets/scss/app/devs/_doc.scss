@@ -74,6 +74,12 @@ $docBorder: Greyscale(12);
 
 
 /*github gist styles*/
+.bc-gist-solo {
+	.gist, .gist-file {
+		@include importantBorderRadius(3px);
+	}
+}
+
 .gist {
 	font-size: 1.3em;
 	margin-bottom: 40px;

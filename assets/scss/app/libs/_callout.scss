@@ -65,7 +65,7 @@
 }
 .note--info {
 	@extend %note;
-	@include noteSetup($info);
+	@include noteSetup($info, 44);
 }
 .note--success {
 	@extend %note;

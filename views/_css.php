@@ -1,6 +1,6 @@
 <section class="row division">
 	<h1>CSS</h1>
-	<p class="short">This section contains examples of the basic styles that make up the foundation of <em>browncoat</em>. There is nothing fancy here.</p>
+	<p class="short">This section contains examples of the basic styles that make up the foundation of <?php echo $browncoatVersion; ?>. Nothing fancy here.</p>
 </section>
 
 <section class="row spacer">
@@ -9,11 +9,8 @@
 
 <section class="row">
 	<div class="span8">
-		<section class="bc-doc-box">
-			<h2 class="bc-section-header">Overview</h2>
-			<p>some overview...</p>
-		</section>
 		<?php
+			include './views/css/_overview.php';
 			include './views/css/_type.php';
 			include './views/css/_lists.php';
 			include './views/css/_forms.php';
