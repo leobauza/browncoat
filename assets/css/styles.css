@@ -1324,6 +1324,15 @@ ul.list-group {
     margin: 0;
     border-bottom: none; }
 
+.bc-capsule ul:last-child, .bc-capsule p:last-child, .bc-capsule ol:last-child {
+  margin-bottom: 0; }
+  .bc-capsule ul:last-child li:last-child, .bc-capsule p:last-child li:last-child, .bc-capsule ol:last-child li:last-child {
+    margin: 0; }
+
+.bc-capsule-title {
+  color: #a6a6a6;
+  margin: 0 0 20px; }
+
 /*github gist styles*/
 .gist {
   font-size: 1.3em;

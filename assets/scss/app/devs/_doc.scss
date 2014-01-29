@@ -51,6 +51,22 @@ $docBorder: Greyscale(12);
 	}
 }
 
+.bc-capsule {
+	ul, p, ol {
+		&:last-child {
+			margin-bottom: 0;
+			li:last-child {
+				margin: 0;
+			}
+		}
+	}
+}
+
+.bc-capsule-title {
+	color: Greyscale(35);
+	margin: 0 0 20px;
+}
+
 
 /*github gist styles*/
 .gist {

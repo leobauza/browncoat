@@ -14,7 +14,7 @@
 			<p>some overview...</p>
 		</section>
 		<?php
-			include './views/css/_reset.php';
+			include './views/css/_type.php';
 			include './views/css/_lists.php';
 			include './views/css/_forms.php';
 		?>

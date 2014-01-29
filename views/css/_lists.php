@@ -1,6 +1,21 @@
 <section class="bc-doc-box">
 	<h2 class="bc-section-header">Lists (one line, multi line, and combined)</h2>
-
+	<p>List nesting is supported down 3 levels. Combining <code>&lt;ul&gt;</code>s and <code>&lt;ol&gt;</code>s is also supported</p>
+	
+	<h3>Unordered List</h3>
+	<p>List items in no particular order</p>
+	
+	<article class="bc-capsule">
+		<h4 class="bc-capsule-title">Sample</h4>
+		<ul>
+			<li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</li>
+			<li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</li>
+			<li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</li>
+			<li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</li>
+		</ul>
+	</article>
+	
+	
 	<h3>Lists Standard</h3>
 	<section class="row-fluid">
 		<!-- unordered lists -->
