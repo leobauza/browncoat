@@ -900,7 +900,7 @@ fieldset {
   color: #761c19; }
 
 .note--default, .note--main, .note--info, .note--success, .note--warning, .note--error {
-  margin: 0 0 10px;
+  margin: 0 0 20px;
   padding: 15px; }
   .note--default p:last-child, .note--main p:last-child, .note--info p:last-child, .note--success p:last-child, .note--warning p:last-child, .note--error p:last-child {
     margin: 0; }

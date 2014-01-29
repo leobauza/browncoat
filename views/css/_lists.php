@@ -1,11 +1,11 @@
 <section class="bc-doc-box">
-	<h2 class="bc-section-header">Lists (one line, multi line, and combined)</h2>
+	<h2 class="bc-section-header">Lists</h2>
 	<p>List nesting is supported down 3 levels. Combining <code>&lt;ul&gt;</code>s and <code>&lt;ol&gt;</code>s is also supported</p>
 	
 	<h3>Unordered List</h3>
-	<p>List items in no particular order</p>
+	<p>List items in no particular order.</p>
 	
-	<article class="bc-capsule">
+	<article class="bc-capsule code-companion">
 		<ul>
 			<li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</li>
 			<li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</li>
@@ -13,325 +13,55 @@
 			<li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</li>
 		</ul>
 	</article>
+	<script src="https://gist.github.com/leobauza/ec0a2209c5432fad1760.js"></script>
 	
+	<h3>Ordered List</h3>
+	<p>List items in order.</p>
+
+	<article class="bc-capsule code-companion">
+		<ol>
+			<li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</li>
+			<li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</li>
+			<li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</li>
+			<li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</li>
+		</ol>
+	</article>	
+	<script src="https://gist.github.com/leobauza/00fb12637390b430a9b7.js"></script>
 	
-	<h3>Lists Standard</h3>
-	<section class="row-fluid">
-		<!-- unordered lists -->
-		<div class="span6">
-			<!-- ONE LEVEL -->
-			<h3>Unordered List (Basic)</h3>
-			<ul>
-				<li>item one</li>
-				<li>item two</li>
-				<li>item three</li>
-				<li>item four</li>
-			</ul>
-			<!-- TWO LEVELS -->
-			<h3>Unordered List (Expert)</h3>
-			<ul>
-				<li>item one</li>
-				<li>item two</li>
-				<li>item three
-						<!-- level two -->
-						<ul>
-							<li>nested item one</li>
-							<li>nested item two</li>
-							<li>nested item three</li>
-							<li>nested item four</li>
-						</ul>
-				</li>
-				<li>item four</li>
-			</ul>
-			<!-- THREE LEVELS -->
-			<h3>Unordered List (Madness)</h3>
-			<ul>
-				<li>item one</li>
-				<li>item two</li>
-				<li>item three
-						<!-- level two -->
-						<ul>
-							<li>nested item one</li>
-							<li>nested item two</li>
-							<li>nested item three
-								<!-- level three -->
-								<ul>
-									<li>nested nested item one</li>
-									<li>nested nested item two</li>
-									<li>nested nested item three</li>
-								</ul>
-							</li>
-							<li>nested item four</li>
-						</ul>
-				</li>
-				<li>item four</li>
-			</ul>
-			<!-- INCEPTION -->
-			<h3>Unordered List (INCEPTION BRAMMMMMMM)</h3>
-			<ul>
-				<li>item one</li>
-				<li>item two</li>
-				<li>item three
-						<!-- level two -->
-						<ul>
-							<li>nested item one</li>
-							<li>nested item two</li>
-							<li>nested item three
-								<!-- level three -->
-								<ul>
-									<li>nested nested item one</li>
-									<li>nested nested item two
-										<!-- level inception -->
-										<ul>
-											<li>inception nested nested item one</li>
-											<li>inception nested nested item two</li>
-											<li>inception nested nested item three</li>
-										</ul>
-									</li>
-									<li>nested nested item three</li>
-								</ul>
-							</li>
-							<li>nested item four</li>
-						</ul>
-				</li>
-				<li>item four</li>
-			</ul>
-			<!-- out of the dream -->
-		</div>
-		<!-- ordered lists -->
-		<div class="span6">
-			<!-- ONE LEVEL -->
-			<h3>ordered List (Basic)</h3>
-			<ol>
-				<li>item one</li>
-				<li>item two</li>
-				<li>item three</li>
-				<li>item four</li>
-			</ol>
-			<!-- TWO LEVELS -->
-			<h3>ordered List (Expert)</h3>
-			<ol>
-				<li>item one</li>
-				<li>item two</li>
-				<li>item three
-						<!-- level two -->
-						<ol>
-							<li>nested item one</li>
-							<li>nested item two</li>
-							<li>nested item three</li>
-							<li>nested item four</li>
-						</ol>
-				</li>
-				<li>item four</li>
-			</ol>
-			<!-- THREE LEVELS -->
-			<h3>ordered List (Madness)</h3>
-			<ol>
-				<li>item one</li>
-				<li>item two</li>
-				<li>item three
-						<!-- level two -->
-						<ol>
-							<li>nested item one</li>
-							<li>nested item two</li>
-							<li>nested item three
-								<!-- level three -->
-								<ol>
-									<li>nested nested item one</li>
-									<li>nested nested item two</li>
-									<li>nested nested item three</li>
-								</ol>
-							</li>
-							<li>nested item four</li>
-						</ol>
-				</li>
-				<li>item four</li>
-			</ol>
-			<!-- INCEPTION -->
-			<h3>ordered List (INCEPTION BRAMMMMMMM)</h3>
-			<ol>
-				<li>item one</li>
-				<li>item two</li>
-				<li>item three
-						<!-- level two -->
-						<ol>
-							<li>nested item one</li>
-							<li>nested item two</li>
-							<li>nested item three
-								<!-- level three -->
-								<ol>
-									<li>nested nested item one</li>
-									<li>nested nested item two
-										<!-- level inception -->
-										<ol>
-											<li>inception nested nested item one</li>
-											<li>inception nested nested item two</li>
-											<li>inception nested nested item three</li>
-										</ol>
-									</li>
-									<li>nested nested item three</li>
-								</ol>
-							</li>
-							<li>nested item four</li>
-						</ol>
-				</li>
-				<li>item four</li>
-			</ol>
-		</div>
-	</section>
-
-	<h3>Lists Combined</h3>
-	<section class="row-fluid">
-		<div class="span6">
-			<h3>UL UL OL</h3>
-			<ul>
-				<li>item one</li>
-				<li>item two</li>
-				<li>
-					item three
-					<ul>
-						<li>nested item one</li>
-						<li>
-							nested item two
-							<ol>
-								<li>nested nested item one</li>
-								<li>nested nested item two</li>
-								<li>nested nested item three</li>
-							</ol>
-						</li>
-						<li>nested item three</li>
-					</ul>
-				</li>
-				<li>item four</li>
-			</ul>
-			<h3>UL OL UL</h3>
-			<ul>
-				<li>item one</li>
-				<li>item two</li>
-				<li>
-					item three
-					<ol>
-						<li>nested item one</li>
-						<li>
-							nested item two
-							<ul>
-								<li>nested nested item one</li>
-								<li>nested nested item two</li>
-								<li>nested nested item three</li>
-							</ul>
-						</li>
-						<li>nested item three</li>
-					</ol>
-				</li>
-				<li>item four</li>
-			</ul>
-			<h3>UL OL OL</h3>
-			<ul>
-				<li>item one</li>
-				<li>item two</li>
-				<li>
-					item three
-					<ol>
-						<li>nested item one</li>
-						<li>
-							nested item two
-							<ol>
-								<li>nested nested item one</li>
-								<li>nested nested item two</li>
-								<li>nested nested item three</li>
-							</ol>
-						</li>
-						<li>nested item three</li>
-					</ol>
-				</li>
-				<li>item four</li>
-			</ul>
-		</div>
-		<div class="span6">
-			<h3>OL OL UL</h3>
-			<ol>
-				<li>item one</li>
-				<li>item two</li>
-				<li>
-					item three
-					<ol>
-						<li>nested item one</li>
-						<li>
-							nested item two
-							<ul>
-								<li>nested nested item one</li>
-								<li>nested nested item two</li>
-								<li>nested nested item three</li>
-							</ul>
-						</li>
-						<li>nested item three</li>
-					</ol>
-				</li>
-				<li>item four</li>
-			</ol>
-			<h3>OL UL OL</h3>
-			<ol>
-				<li>item one</li>
-				<li>item two</li>
-				<li>
-					item three
-					<ul>
-						<li>nested item one</li>
-						<li>
-							nested item two
-							<ol>
-								<li>nested nested item one</li>
-								<li>nested nested item two</li>
-								<li>nested nested item three</li>
-							</ol>
-						</li>
-						<li>nested item three</li>
-					</ul>
-				</li>
-				<li>item four</li>
-			</ol>
-			<h3>OL UL UL</h3>
-			<ol>
-				<li>item one</li>
-				<li>item two</li>
-				<li>
-					item three
-					<ul>
-						<li>nested item one</li>
-						<li>
-							nested item two
-							<ul>
-								<li>nested nested item one</li>
-								<li>nested nested item two</li>
-								<li>nested nested item three</li>
-							</ul>
-						</li>
-						<li>nested item three</li>
-					</ul>
-				</li>
-				<li>item four</li>
-			</ol>
-		</div>
-	</section>
-
-	<h3>Lists Multiline</h3>
-	<section class="row-fluid">
-		<div class="span6">
-			<h3>Unordered Multiline</h3>
-			<ul>
-				<li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</li>
-				<li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip.</li>
-				<li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam.</li>
-			</ul>
-		</div>
-		<div class="span6">
-			<h3>Ordered Multiline</h3>
-			<ol>
-				<li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation aliquip ex ea commodo consequat.</li>
-				<li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</li>
-				<li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</li>
-			</ol>
-		</div>
-	</section>
+	<h3>Nesting and Combining</h3>
+	<p>Ordered lists can be nested within unordered lists and vice versa.</p>
+	<article class="bc-capsule code-companion">
+		<h5>Unordered nested inside ordered</h5>
+		<ol>
+			<li>
+				Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+				<ul>
+					<li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</li>
+					<li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</li>
+					<li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</li>
+					<li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</li>
+				</ul>
+			</li>
+			<li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</li>
+		</ol>
+	</article>
+	<script src="https://gist.github.com/leobauza/f1836e906138a7cfcc4e.js"></script>
+	
+	<article class="bc-capsule code-companion">
+		<h5>Ordered nested inside unordered</h5>
+		<ul>
+			<li>
+				Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+				<ol>
+					<li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</li>
+					<li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</li>
+					<li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</li>
+					<li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</li>
+				</ol>
+			</li>
+			<li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</li>
+		</ul>
+	</article>
+	<script src="https://gist.github.com/leobauza/2758569601aff9d8f942.js"></script>
 
 </section>
