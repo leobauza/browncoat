@@ -1,5 +1,5 @@
-<section class="divider">
-	<h2 class="section-header">Lists (one line, multi line, and combined)</h2>
+<section class="bc-doc-box">
+	<h2 class="bc-section-header">Lists (one line, multi line, and combined)</h2>
 
 	<h3>Lists Standard</h3>
 	<section class="row-fluid">

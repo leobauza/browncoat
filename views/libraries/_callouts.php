@@ -16,5 +16,27 @@
 	<div class="callout--error"><strong>Error: </strong> oh no, this is an error</div>
 
 
+	<div class="note--default">
+		<h4>note</h4>
+		<p>something of note <code>.code</code></p>
+	</div>
+	<div class="note--info">
+		<h4>note</h4>
+		<p>something of note <code>.code</code></p>
+	</div>
+	<div class="note--warning">
+		<h4>note</h4>
+		<p>something of note <code>.code</code></p>
+	</div>
+	<div class="note--success">
+		<h4>note</h4>
+		<p>something of note <code>.code</code></p>
+	</div>
+	<div class="note--error">
+		<h4>note</h4>
+		<p>something of note <code>.code</code></p>
+	</div>
+
+
 </section>
 

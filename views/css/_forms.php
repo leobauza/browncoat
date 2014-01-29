@@ -1,5 +1,5 @@
-<section class="divider">
-	<h2 class="section-header">Forms</h2>
+<section class="bc-doc-box">
+	<h2 class="bc-section-header">Forms</h2>
 	<p class="callout--warning"><strong>Good to know! </strong> All form elements are using <code>box-sizing: border-box</code> so you will need to deal with IE7 compatibility issues with forms. browncoat doesn't use border-box on all elements, just unwieldy form elements.</p>
 	<p>Forms can be optimally divided into <code>.form__collection</code> and further divided into <code>.form__group</code>. A group of inputs is encapsulated by a <code>.form__collection</code> while <code>.form__group</code> encapsulates a label and input field.</p>
 	<p>Validation and special UI elements will be included in a library called <code>jForms</code>. It will be a form prettifier, the validation will be left to up to the user but styles will be provided there.</p>

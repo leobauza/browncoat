@@ -36,3 +36,46 @@
 	@extend %callout;
 	@include calloutSetup($error);
 }
+
+
+//notes (like callouts but different)
+@mixin noteSetup ($color, $lper: 34, $dper: 30, $bper: 20) {
+	background: lighten($color, $lper);
+	border-left: 3px solid lighten($color, $bper);
+	h1, h2, h3, h4, h5, h6, code {
+		color: darken($color, $dper);
+	}
+}
+
+%note {
+	@include marpad(0 0 10px, 15px);
+	p:last-child {
+		margin: 0;
+	}
+}
+
+//callout types
+.note--default {
+	@extend %note;
+	@include noteSetup($default, 22, 30, 15);
+}
+.note--main {
+	@extend %note;
+	@include noteSetup($brand);
+}
+.note--info {
+	@extend %note;
+	@include noteSetup($info);
+}
+.note--success {
+	@extend %note;
+	@include noteSetup($success);
+}
+.note--warning {
+	@extend %note;
+	@include noteSetup($warning);
+}
+.note--error {
+	@extend %note;
+	@include noteSetup($error);
+}

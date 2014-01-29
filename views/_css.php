@@ -9,6 +9,10 @@
 
 <section class="row">
 	<div class="span8">
+		<section class="bc-doc-box">
+			<h2 class="bc-section-header">Overview</h2>
+			<p>some overview...</p>
+		</section>
 		<?php
 			include './views/css/_reset.php';
 			include './views/css/_lists.php';
@@ -19,7 +23,8 @@
 		<nav>
 			<h4>Browse CSS</h4>
 			<div class="list-group">
-				<a href="#" class="active">Typography</a>
+				<a href="#" class="active">Overview</a>
+				<a href="#">Typography</a>
 				<a href="#">Lists</a>
 				<a href="#">Forms</a>
 			</div>

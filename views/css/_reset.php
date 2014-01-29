@@ -1,8 +1,10 @@
-<section class="divider">
-	<h2 class="section-header">Typography</h2>
+<section class="bc-doc-box">
+	<h2 class="bc-section-header">Typography</h2>
 	<p>description</p>
 	
 	<!-- headings -->
+	<h3>Headings</h3>
+	<p>Header <code>font-size</code>, <code>line-height</code>, and <code>margin</code> are set in <code>ems</code>. Found in <code>assets/scss/browncoat/normalizers/_reset.scss</code></p>
 	<section class="bc-capsule">
 		<h1>Heading One</h1>
 		<h2>Heading Two</h2>
@@ -13,37 +15,19 @@
 	</section>
 
 	<!-- reversed text -->
+	<h3>Reversing</h3>
+	<p>By default reversing turns a box black and text white (except for links.) Apply the <code>.reverse</code> class to a box to reverse it.</p>
+	<section class="bc-capsule reverse">
+		<h1>Reversed Box</h1>
+		<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. <a href="#">Link Item</a></p>
+	</section>
 	
+	<!-- bold and italic -->
 	
-
-	<h3>Regular</h3>
-	<div>
-		<h1>Heading One</h1>
-		<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. <a href="#">Link Item</a></p>
-		<h2>Heading Two</h2>
-		<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. <a href="#">Link Item</a></p>
-		<h3>Heading Three</h3>
-		<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. <a href="#">Link Item</a></p>
-		<h4>Heading Four</h4>
-		<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. <a href="#">Link Item</a></p>
-		<h5>Heading Five</h5>
-		<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. <a href="#">Link Item</a></p>
-		<h6>Heading Six</h6>
-		<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. <a href="#">Link Item</a></p>
-	</div>
-	<h3>Reverse</h3>
-	<div class="reverse">
-		<h1>Heading One</h1>
-		<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. <a href="#">Link Item</a></p>
-		<h2>Heading Two</h2>
-		<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. <a href="#">Link Item</a></p>
-		<h3>Heading Three</h3>
-		<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. <a href="#">Link Item</a></p>
-		<h4>Heading Four</h4>
-		<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. <a href="#">Link Item</a></p>
-		<h5>Heading Five</h5>
-		<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. <a href="#">Link Item</a></p>
-		<h6>Heading Six</h6>
-		<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. <a href="#">Link Item</a></p>
-	</div>
+	<!-- paragraphs -->
+	
+	<!-- address -->
+	
+	<!-- blockquotes -->
+	
 </section>
