@@ -25,7 +25,7 @@
 			<div class="list-group">
 				<a href="#" class="active">Overview</a>
 				<a href="#">Typography</a>
-				<a href="#">Lists</a>
+				<a href="#lists">Lists</a>
 				<a href="#">Forms</a>
 			</div>
 		</nav>

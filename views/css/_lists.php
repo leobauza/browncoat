@@ -1,4 +1,4 @@
-<section class="bc-doc-box">
+<section id="lists" class="bc-doc-box">
 	<h2 class="bc-section-header">Lists</h2>
 	<p>List nesting is supported down 3 levels. Combining <code>&lt;ul&gt;</code>s and <code>&lt;ol&gt;</code>s is also supported</p>
 	
