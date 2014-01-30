@@ -82,8 +82,33 @@ I am working on an easier go at installing browncoat using a combination of grun
 - Add code to documentation, revamp all css section documentation.
 
 #####v0.2.3 (in progress)
+- Documentation for CSS section
+- Documentation patterns defined
+- New %row class
 
 
+### Plan
+
+#####v0.2
+This version will see the finalizing of all base browncoat css code
+
+#####v0.3
+This version will see the finalizing of all the existing libraries css code
+
+#####v0.4
+This version will see the finalizing of all the existing vendors css code
+
+#####v0.5
+This version will see the finalizing of javascript starter code (both require.js style and non require.js)
+
+#####v0.6
+This version will address all documentation concerns. Rearranging of directories, corrections, structure, etc. 
+
+#####v0.7
+Basic sample pages developed. Possibly with new libraries and plugins.
+
+#####v0.8
+Including grunt.
 
 
 
