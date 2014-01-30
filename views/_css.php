@@ -1,6 +1,6 @@
 <section class="row division">
 	<h1>CSS</h1>
-	<p class="short">This section contains examples of the basic styles that make up the foundation of <?php echo $browncoatVersion; ?>. Nothing fancy here.</p>
+	<p class="short">This section contains examples of the basic styles that make up the foundation of <?php echo $bcV; ?>. Nothing fancy here.</p>
 </section>
 
 <section class="row spacer">

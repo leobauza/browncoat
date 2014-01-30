@@ -2,7 +2,7 @@
 	<h2 class="bc-section-header">Overview</h2>
 	<p>[overview text goes here...]</p>
 	<h3>HTML Boilerplate</h3>
-	<p><?php echo $browncoatVersion; ?> uses HTML5 elements thus requiring an HTML5 doctype. It is also responsive requiring the appropriate meta tag. Below is a github gist containing a boilerplate for an <code>index.html</code> page.</p>
+	<p><?php echo $bcV; ?> uses HTML5 elements thus requiring an HTML5 doctype. It is also responsive requiring the appropriate meta tag. Below is a github gist containing a boilerplate for an <code>index.html</code> page.</p>
 	<div class="bc-gist-solo">
 		<script src="https://gist.github.com/leobauza/baefedca7fd3ceb3c288.js"></script>
 	</div>

@@ -24,7 +24,7 @@
 	
 	<!-- paragraphs -->
 	<h3>Paragraphs</h3>
-	<p>The default <code>font-size</code> for <?php echo $browncoatVersion; ?> is <b>16px</b> expressed in <code>ems</code> it is <b>1.6em</b>.</p>
+	<p>The default <code>font-size</code> for <?php echo $bcV; ?> is <b>16px</b> expressed in <code>ems</code> it is <b>1.6em</b>.</p>
 	<article class="bc-capsule">
 		<p>a paragraph</p>
 	</article>

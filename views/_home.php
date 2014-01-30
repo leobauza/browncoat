@@ -20,11 +20,11 @@
 			</div>
 		</article>
 	</section>
-	<aside class="span4">
+	<aside class="span4 l">
 		<nav>
 			<h4>See More:</h4>
 			<div class="list-group">
-				<a href="/" class="active">browncoat 2.0</a>
+				<a href="/" class="active"><?php print $bcV; ?></a>
 				<a href="/css">CSS</a>
 				<a href="/libraries">Libraries</a>
 				<a href="/layouts">Layouts</a>
