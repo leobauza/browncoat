@@ -5,6 +5,8 @@
 /* browncoat/base/helper (does not output css) */
 /* end */
 /* browncoat/base/structure (does not output css) */
+/* end */
+/* browncoat/normalizers/reset */
 code, form label, form input, form textarea, form select, form legend {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -14,8 +16,6 @@ code, form label, form input, form textarea, form select, form legend {
     -moz-box-sizing: border-box;
     box-sizing: border-box; }
 
-/* end */
-/* browncoat/normalizers/reset */
 article,
 aside,
 details,
