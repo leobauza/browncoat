@@ -12,14 +12,9 @@
 			<li class="bc-soon"><strong>coming soon:</strong> A gruntfile set up to automate all browncoat tasks with one simple command on your terminal: <code>grunt bc</code></li>
 			<li class="bc-soon"><strong>coming soon:</strong> Multiple ways of installing browncoat, from simply cloning, to bower, to a yeoman generator</li>
 		</ol>
-
-		
 		
 		<h3>HTML Boilerplate</h3>
 		<p><?php echo $bcV; ?> uses HTML5 elements thus requiring an HTML5 doctype. It is also responsive requiring the appropriate meta tag. Below is a github gist containing a boilerplate for an <code>index.html</code> page.</p>
-		<div class="note--info">
-			<p>For more information on this boilerplate see the main page of the documentation.</p>
-		</div>
 		<div class="bc-gist-solo">
 			<script src="https://gist.github.com/leobauza/baefedca7fd3ceb3c288.js"></script>
 		</div>

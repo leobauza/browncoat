@@ -40,6 +40,7 @@ $focusBorder: rgba(82, 168, 236, 0.8);
 
 //boxes and text
 $textColour: ColourConstructor(80, $white);
+$liteTextColour: lighten($textColour, 50);
 $boxBackgroundColour: ColourConstructor(-100, $brandAlt);
 $boxBorderColour: ColourConstructor(0, $brand);
 
