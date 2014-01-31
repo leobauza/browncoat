@@ -11,6 +11,7 @@
 	<div class="span8">
 		<?php
 			include './views/css/_overview.php';
+			include './views/css/_grid.php';
 			include './views/css/_type.php';
 			include './views/css/_lists.php';
 			include './views/css/_forms.php';
@@ -21,6 +22,7 @@
 			<h4>Browse CSS</h4>
 			<div class="list-group">
 				<a href="#overview" class="active">Overview</a>
+				<a href="#grid">Grid</a>
 				<a href="#typography">Typography</a>
 				<a href="#lists">Lists</a>
 				<a href="#">Forms</a>
