@@ -1345,11 +1345,12 @@ ul.list-group {
     font-size: 2em;
     font-weight: 500;
     color: #bfbfbf; }
-
-.bc-capsule ul:last-child, .bc-capsule p:last-child, .bc-capsule ol:last-child {
-  margin-bottom: 0; }
-  .bc-capsule ul:last-child li:last-child, .bc-capsule p:last-child li:last-child, .bc-capsule ol:last-child li:last-child {
-    margin: 0; }
+  .bc-capsule.rel-files:after {
+    content: "Relevant Files"; }
+  .bc-capsule ul:last-child, .bc-capsule p:last-child, .bc-capsule ol:last-child {
+    margin-bottom: 0; }
+    .bc-capsule ul:last-child li:last-child, .bc-capsule p:last-child li:last-child, .bc-capsule ol:last-child li:last-child {
+      margin: 0; }
 
 /*github gist styles*/
 .bc-gist-solo .gist, .bc-gist-solo .gist-file {

@@ -62,9 +62,11 @@ $docBorder: Greyscale(12);
 		font-weight: 500;
 		color: Greyscale(25);
 	}
-}
-
-.bc-capsule {
+	&.rel-files {
+		&:after {
+			content: "Relevant Files";
+		}
+	}
 	ul, p, ol {
 		&:last-child {
 			margin-bottom: 0;
@@ -74,6 +76,7 @@ $docBorder: Greyscale(12);
 		}
 	}
 }
+
 
 
 /*github gist styles*/

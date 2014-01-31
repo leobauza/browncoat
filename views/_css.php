@@ -20,8 +20,8 @@
 		<nav>
 			<h4>Browse CSS</h4>
 			<div class="list-group">
-				<a href="#" class="active">Overview</a>
-				<a href="#">Typography</a>
+				<a href="#overview" class="active">Overview</a>
+				<a href="#typography">Typography</a>
 				<a href="#lists">Lists</a>
 				<a href="#">Forms</a>
 			</div>

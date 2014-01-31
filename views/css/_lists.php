@@ -1,6 +1,14 @@
 <section id="lists" class="bc-doc-box">
 	<h2 class="bc-section-header">Lists</h2>
-	<p>List nesting is supported down 3 levels. Combining <code>&lt;ul&gt;</code>s and <code>&lt;ol&gt;</code>s is also supported</p>
+	<p>List nesting is supported down 3 levels. Combining <code>&lt;ul&gt;</code> and <code>&lt;ol&gt;</code> is supported.</p>
+	
+	<article class="bc-capsule rel-files">
+		<ol>
+			<li>List styles: <code>assets/scss/browncoat/normalizers/_list.scss</code></li>
+			<li>Text related variables: <code>assets/scss/browncoat/bases/_text.scss</code></li>
+			<li>Colours: <code>assets/scss/browncoat/bases/_colours.scss</code></li>
+		</ol>
+	</article>
 	
 	<h3>Unordered List</h3>
 	<p>List items in no particular order.</p>

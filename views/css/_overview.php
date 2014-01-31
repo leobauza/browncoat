@@ -1,4 +1,4 @@
-<section class="bc-doc-box">
+<section id="overview" class="bc-doc-box">
 	<h2 class="bc-section-header">Overview</h2>
 	<p>This section contains documentation for everything contained in the <code>assets/scss/browncoat/</code> directory. </p>
 	

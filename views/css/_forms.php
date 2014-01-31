@@ -7,6 +7,17 @@
 	<p>Forms can be optimally divided into <code>.form__collection</code> and further divided into <code>.form__group</code>. A group of inputs is encapsulated by a <code>.form__collection</code> while <code>.form__group</code> encapsulates a label and input field.</p>
 	<p>Validation and special UI elements will be included in a library called <code>jForms</code>. It will be a form prettifier, the validation will be left to up to the user but styles will be provided there.</p>
 	
+	<article class="bc-capsule rel-files">
+		<ol>
+			<li>List styles: <code>assets/scss/browncoat/normalizers/_form.scss</code></li>
+			<li>Text related variables: <code>assets/scss/browncoat/bases/_text.scss</code></li>
+			<li>Buttons/Submit input: <code>assets/scss/app/libs/_btn.scss</code></li>
+			<li>Colours: <code>assets/scss/browncoat/bases/_colours.scss</code></li>
+		</ol>
+	</article>
+	
+	
+	
 	<!-- basic -->
 	<h3>Basic</h3>
 	<p>All <code><?php print htmlentities("<input>");?></code>, <code><?php print htmlentities("<select>");?></code>, <code><?php print htmlentities("<textarea>");?></code>, etc don't require any classes to be styled. You are encouraged to go into the <code>assets/scss/browncoat/normalizers</code> directory and change the defaults for your project.</p>

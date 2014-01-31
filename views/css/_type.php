@@ -1,6 +1,12 @@
-<section class="bc-doc-box">
+<section id="typography" class="bc-doc-box">
 	<h2 class="bc-section-header">Typography</h2>
-	<p><strong>Relevant Files:</strong> Text styles at <code>assets/scss/browncoat/normalizers/_reset.scss</code>. Text related variables at <code>assets/scss/browncoat/bases/_text.scss</code>. Colours are all handled in <code>assets/scss/browncoat/bases/_colours.scss</code>.</p>
+	<article class="bc-capsule rel-files">
+		<ol>
+			<li>Typography styles: <code>assets/scss/browncoat/normalizers/_reset.scss</code></li>
+			<li>Text related variables: <code>assets/scss/browncoat/bases/_text.scss</code></li>
+			<li>Colours: <code>assets/scss/browncoat/bases/_colours.scss</code></li>
+		</ol>
+	</article>
 	
 	<!-- Headings -->
 	<h3>Headings</h3>
@@ -23,18 +29,21 @@
 	<!-- reversed text -->
 	<h3>Reversing</h3>
 	<p>By default reversing turns a box black and text white (except for links.) Apply the <code>.reverse</code> class to a box to reverse it.</p>
-	<article class="bc-capsule reverse">
+	<article class="bc-capsule code-companion reverse">
 		<h1>Reversed Box</h1>
 		<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. <a href="#">Link Item</a></p>
 	</article>	
+	<script src="https://gist.github.com/leobauza/08125df269d793227747.js"></script>
 	
 	<!-- paragraphs -->
 	<h3>Paragraphs</h3>
 	<p>The default <code>font-size</code> for <?php echo $bcV; ?> is <b>16px</b> expressed in <code>ems</code> it is <b>1.6em</b>.</p>
-	<h4>Intro Paragraphs</h4>
+	
+	<h5>Intro Paragraphs</h5>
 	<p>Add the <code>.intro</code> class to make intro paragraphs. The default size for these is <code>2em</code>. By default intro paragraphs have a bottom margin of <code>40px</code> this can be removed by instead using the <code>.soft-into</code> class.</p>
-	<h4>Bold and italic</h4>
-	<p>Add emphasis to words or sections in a paragraph by adding emphasis in the form of bolding or italicizing. Alternatively using the <code>&lt;small&gt;</code> tag will provide you with de-emphasized text.</p>
+	
+	<h5>Bold and italic</h5>
+	<p>Add emphasis to words or sections in a paragraph with <code>&lt;strong&gt;</code> or <code>&lt;em&gt;</code> tags for bolding and italicizing respectively. Use the <code>&lt;small&gt;</code> tag for fine print text.</p>
 	
 	<article class="bc-capsule code-companion">
 		<p class="intro">Intro: Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
