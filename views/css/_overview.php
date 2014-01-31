@@ -1,16 +1,12 @@
 <section class="bc-doc-box">
 	<h2 class="bc-section-header">Overview</h2>
-	<p>[overview text goes here...]</p>
-	<h3>HTML Boilerplate</h3>
-	<p><?php echo $bcV; ?> uses HTML5 elements thus requiring an HTML5 doctype. It is also responsive requiring the appropriate meta tag. Below is a github gist containing a boilerplate for an <code>index.html</code> page.</p>
-	<div class="bc-gist-solo">
-		<script src="https://gist.github.com/leobauza/baefedca7fd3ceb3c288.js"></script>
-	</div>
+	<p>This section contains documentation for everything contained in the <code>assets/scss/browncoat/</code> directory. </p>
 	
-	<h3>Using CSS</h3>
-	<p>In the above boilerplate CSS is included through one entry point <code><?php echo htmlentities('<link rel="stylesheet" href="/assets/css/styles.css" type="text/css" media="screen" charset="utf-8">'); ?></code> which is compiled from the scss directory.</p>
 	
-	<h3>RequireJS</h3>
-	<p>In the above boilerplate we are using <a href="http://requirejs.org/" target="_blank">require.js</a>. In this way we can write modules and have a single entry point to our application/website using this line of code <code><?php echo htmlentities('<script src="/assets/js/libs/require.js" data-main="/assets/js/config"></script>'); ?></code></p>
-	
+	<h3>Using scss files</h3>
+	<p>For more information on the <strong>browncoat scss pattern</strong> see the <a href="/">front page</a> of the documentation. This section covers the contents inside the <code>browncoat</code> directory under <code>assets/scss</code> which contains two directories with files aggregated in <code>assets/scss/_browncoat.scss</code></p>
+	<h4>bases directory</h4>
+	<p>The bases directory <code>assets/scss/bases/</code> follows one important rule. <strong>Nothing</strong> from these scss files should output any actual css. This directory is reserved for variables and mixins.</p>
+	<h4>normalizers directory</h4>
+	<p>The normalizers directory <code>assets/scss/normalizers/</code> is the core of the browncoat css. It contains all the styles for all plain html elements as well as the foundations for the grid system and containers.</p>
 </section>

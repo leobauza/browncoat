@@ -1287,6 +1287,9 @@ ul.list-group {
   border-bottom: 1px solid black; }
 
 /* app/devs/doc (documentation css) */
+.bc-soon {
+  color: #bfbfbf; }
+
 .site-header {
   padding-top: 36px;
   margin: 0 0 20px; }
