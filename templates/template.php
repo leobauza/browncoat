@@ -25,7 +25,7 @@
 		$nav = '';
 	endif;
 
-	$bcV = "browncoat v0.2.3"
+	$bcV = "browncoat <small>0.2.3</small>";
 ?>
 
 <body>
