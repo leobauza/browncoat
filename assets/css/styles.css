@@ -100,7 +100,8 @@ p {
     font-size: 2em; }
 
 small {
-  font-size: 80%; }
+  font-size: 80%;
+  line-height: 1; }
 
 strong, b {
   font-weight: 600; }

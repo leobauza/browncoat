@@ -13,38 +13,38 @@
 		</ol>
 	</article>
 		
-	<article class="bc-capsule">
+	<article class="bc-capsule bc-doc-row">
 		<section class="row">
-			<article class="span3">.span3</article>
-			<article class="span3">.span3</article>
-			<article class="span3">.span3</article>
-			<article class="span3">.span3</article>
+			<article class="span3"><p>.span3</p></article>
+			<article class="span3"><p>.span3</p></article>
+			<article class="span3"><p>.span3</p></article>
+			<article class="span3"><p>.span3</p></article>
 		</section>
 
 		<section class="row">
-			<article class="span1">.span1</article>
-			<article class="span1">.span1</article>
-			<article class="span1">.span1</article>
-			<article class="span1">.span1</article>
-			<article class="span1">.span1</article>
-			<article class="span1">.span1</article>
-			<article class="span1">.span1</article>
-			<article class="span1">.span1</article>
-			<article class="span1">.span1</article>
-			<article class="span1">.span1</article>
-			<article class="span1">.span1</article>
-			<article class="span1">.span1</article>
+			<article class="span1"><p>.span1</p></article>
+			<article class="span1"><p>.span1</p></article>
+			<article class="span1"><p>.span1</p></article>
+			<article class="span1"><p>.span1</p></article>
+			<article class="span1"><p>.span1</p></article>
+			<article class="span1"><p>.span1</p></article>
+			<article class="span1"><p>.span1</p></article>
+			<article class="span1"><p>.span1</p></article>
+			<article class="span1"><p>.span1</p></article>
+			<article class="span1"><p>.span1</p></article>
+			<article class="span1"><p>.span1</p></article>
+			<article class="span1"><p>.span1</p></article>
 		</section>
 
 		<section class="row">
-			<article class="span8">.span8</article>
-			<article class="span4">.span4</article>
+			<article class="span8"><p>.span8</p></article>
+			<article class="span4"><p>.span4</p></article>
 		</section>
 		
 		<section class="row">
-			<article class="span4">.span4</article>
-			<article class="span4">.span4</article>
-			<article class="span4">.span4</article>
+			<article class="span4"><p>.span4</p></article>
+			<article class="span4"><p>.span4</p></article>
+			<article class="span4"><p>.span4</p></article>
 		</section>
 
 	</article>
