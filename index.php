@@ -4,13 +4,13 @@ function render_template($filename, $variables) {
 	//$variables['new'] = 'new value!';
 	extract($variables);
 	ob_start();
-	require("./templates/" . $filename . ".php");
+	require("./docs-php/templates/" . $filename . ".php");
 	$contents = ob_get_contents(); 
 	ob_end_clean();
 	return $contents;
 }
 
-require_once 'Slim/Slim.php';
+require_once 'docs-php/Slim/Slim.php';
 
 $app = new Slim();
 
@@ -33,14 +33,14 @@ $app -> get('/pages/:id(/)', 'page');
 //functions
 function homepage() {
 	echo render_template("template", array(
-		'body' => './views/_home.php',
+		'body' => './docs-php/views/_home.php',
 		'title' => 'home'
 	));
 }
 
 function libraries() {
 	echo render_template("template", array(
-		'body' => './views/_libraries.php'
+		'body' => './docs-php/views/_libraries.php'
 		,'title' => 'libraries'
 		,'activeNav' => 'libraries'
 	));
@@ -48,7 +48,7 @@ function libraries() {
 
 function css() {
 	echo render_template("template", array(
-		'body' => './views/_css.php'
+		'body' => './docs-php/views/_css.php'
 		,'title' => 'css'
 		,'activeNav' => 'css'
 	));
@@ -56,7 +56,7 @@ function css() {
 
 function layouts() {
 	echo render_template("template", array(
-		'body' => './views/_layouts.php'
+		'body' => './docs-php/views/_layouts.php'
 		,'title' => 'layouts'
 		,'activeNav' => 'layouts'
 	));
@@ -64,7 +64,7 @@ function layouts() {
 
 function removingthings() {
 	echo render_template("template", array(
-		'body' => './views/_removingthings.php',
+		'body' => './docs-php/views/_removingthings.php',
 		'title' => 'Removing Things'
 	));
 }
@@ -72,7 +72,7 @@ function removingthings() {
 function layout($id) {
 	if($id == 'fluidrows') {
 		echo render_template("template", array(
-			'body' => './views/layouts/_fluidRows.php'
+			'body' => './docs-php/views/layouts/_fluidRows.php'
 			,'link' => '<p><a href="/layouts">Back to layouts</a></p>'
 			,'title' => 'Fluid Rows'
 			,'activeNav' => 'layouts'
@@ -80,7 +80,7 @@ function layout($id) {
 	}
 	if($id == 'staticsidebar') {
 		echo render_template("template", array(
-			'body' => './views/layouts/_staticSidebar.php'
+			'body' => './docs-php/views/layouts/_staticSidebar.php'
 			,'link' => '<p><a href="/layouts">Back to layouts</a></p>'
 			,'title' => 'Static Sidebar'
 			,'activeNav' => 'layouts'
@@ -89,13 +89,13 @@ function layout($id) {
 }
 function test() {
 	echo render_template("template", array(
-		'body' => './views/etc/_layoutTest.php',
+		'body' => './docs-php/views/etc/_layoutTest.php',
 		'title' => 'test'
 	));
 }
 function page($id) {
 	echo render_template("template", array(
-		'body' => './views/pages/_' . $id . '.php'
+		'body' => './docs-php/views/pages/_' . $id . '.php'
 		//,'link' => '<p><a href="/layouts">Back to layouts</a></p>'
 		,'title' => $id
 		,'page' => true

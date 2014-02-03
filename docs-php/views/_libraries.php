@@ -18,19 +18,19 @@
 	</aside>
 	<section class="span-main">
 		<article id="extrabuttons" class="division">
-			<?php include './views/libraries/_btnfx.php'; ?>
+			<?php include './docs-php/views/libraries/_btnfx.php'; ?>
 		</article>
 		<article id="buttons" class="division">
-			<?php include './views/libraries/_btns.php'; ?>
+			<?php include './docs-php/views/libraries/_btns.php'; ?>
 		</article>
 		<article id="listgroups" class="division">
-			<?php include './views/libraries/_listgroups.php'; ?>
+			<?php include './docs-php/views/libraries/_listgroups.php'; ?>
 		</article>
 		<article id="callouts" class="division">
-			<?php include './views/libraries/_callouts.php'; ?>
+			<?php include './docs-php/views/libraries/_callouts.php'; ?>
 		</article>
 		<article id="boxes">
-			<?php include './views/libraries/_boxes.php'; ?>
+			<?php include './docs-php/views/libraries/_boxes.php'; ?>
 		</article>
 	</section>
 </section>

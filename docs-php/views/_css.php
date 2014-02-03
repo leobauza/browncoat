@@ -10,11 +10,11 @@
 <section class="row">
 	<div class="span8">
 		<?php
-			include './views/css/_overview.php';
-			include './views/css/_grid.php';
-			include './views/css/_type.php';
-			include './views/css/_lists.php';
-			include './views/css/_forms.php';
+			include './docs-php/views/css/_overview.php';
+			include './docs-php/views/css/_grid.php';
+			include './docs-php/views/css/_type.php';
+			include './docs-php/views/css/_lists.php';
+			include './docs-php/views/css/_forms.php';
 		?>
 	</div>
 	<nav class="span4">

@@ -7,6 +7,7 @@
 	<meta name="description" content="a website description">
 	<meta name="author" content="the author">
 
+
 	<!-- styles -->
 	<link rel="stylesheet" href="/assets/css/styles.css" type="text/css" media="screen" charset="utf-8">
 	
