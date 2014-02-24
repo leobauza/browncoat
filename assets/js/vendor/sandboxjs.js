@@ -138,6 +138,12 @@ define(function(require){
 	console.log("my box: ", myBox)
 	
 	
+	var extendThis = {
+		prop: "prop"
+	}
+	
+	var newobject = extendThis.extend({});
+	console.log(newobject);
 	
 
 });
