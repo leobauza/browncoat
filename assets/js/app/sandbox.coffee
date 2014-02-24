@@ -1,7 +1,7 @@
 define (require) ->
 	$ = require('jquery')
 	#sandbox = require('cs!vendor/sandbox')
-	#sandboxjs = require('vendor/sandboxjs')
+	sandboxjs = require('vendor/sandboxjs')
 	
 	sandbox =
 		init: ->

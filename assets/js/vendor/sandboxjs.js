@@ -1,4 +1,5 @@
 define(function(require){
+	
 	var numbers = [1, 5, 10, 15, 2, 4, 6];
 	var results = numbers.map( function(x) { return x * 2 } );
 	console.log("results: ", results);
@@ -10,6 +11,9 @@ define(function(require){
 		}
 	}
 	
+	var test10 = func("my message");
+	test10("the message");
+	//the equivalent of the above but immediately invoked
 	func("my message")("the message");
 
 	var puzzlers = [
@@ -105,7 +109,7 @@ define(function(require){
 	var targetFor = makeTargetAssigner(sharksArr, targetsArr);
 	targetFor("foxy");
 
-	console.warn("sandbox js");
+	//console.warn("sandbox js");
 	
 	var external = ["one", "two"];
 	var object = {
@@ -138,6 +142,57 @@ define(function(require){
 	console.log("my box: ", myBox)
 	
 	
+	/*
+	 *
+	 * IIFE (immediately invoked function expressions)
+	 *
+	 */
+	var counter = (function() {
+		var i = 0; //not accesible directly
+		
+		return { //return these methods (which are now closures aka functions returned out of a function that wrap their outter scope in this case just "i")
+			get: function() {
+				return i;
+			},
+			set: function(val) {
+				i = val;
+			},
+			increment: function() {
+				return ++i;
+			}
+		}
+	}()); 
 	
-
+	console.warn("IIFE example first using an IIFE then a regular object for contrast")
+	console.log("counter 1 i prop: ", counter.i);
+	console.log(counter.get());
+	counter.set(50);
+	console.log(counter.get());
+	console.log(counter.increment());
+	
+	/*
+	 *
+	 * In the example above the i is private to the object and below everything is public
+	 *
+	 */
+	
+	var counter2 = {
+		i: 0,
+		get: function() {
+			return this.i;
+		},
+		set: function(val) {
+			this.i = val;
+		},
+		increment: function() {
+			return ++this.i
+		}
+	}
+	
+	console.log("counter 2 i prop: ", counter2.i);
+	console.log(counter2.get());
+	counter2.set(50);
+	console.log(counter2.get() + " || " + counter2.i);
+	console.log(counter2.increment());
+	
 });
