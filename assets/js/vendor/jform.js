@@ -93,7 +93,7 @@
 				e.preventDefault();
 			})
 			
-			//assing value to select
+			//assign value to select
 			$('[data-input=option]').click(function(e){
 				var $data = $(this).data();
 				var $html = $(this).html();
