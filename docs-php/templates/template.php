@@ -10,7 +10,7 @@
 
 	<!-- styles -->
 	<link rel="stylesheet" href="/assets/css/styles.css" type="text/css" media="screen" charset="utf-8">
-	
+
 	<!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
 	<!--[if lt IE 9]>
 	  <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
@@ -56,7 +56,7 @@
 	</section>
 
 
-	<section class="divider">	
+	<section class="divider">
 		<nav class="nav-btns inline-nav">
 			<ul>
 				<li class="brand"><a <?php if ($nav == "") echo "class='active'"; ?> href="/">browncoat 2.0</a></li>
@@ -65,19 +65,20 @@
 				<li><a <?php if ($nav == "layouts") echo "class='active'"; ?> href="/layouts">layouts</a></li>
 			</ul>
 		</nav>
-	</section>	
+	</section>
 
-	
-<?php if(!isset($page)) :?>	
+
+<?php if(!isset($page)) :?>
 	<footer class="site-footer container">
 		<p>created by <a href="http://www.leobauza.com" target="_blank">The Fine People of Fairfax</a></p>
 	</footer>
 <?php endif; ?>
-
-	<script src="/assets/js/libs/require.js" data-main="/assets/js/config"></script>
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+	<script src="/assets/js/script.js" type="text/javascript"></script>
+	<!-- <script src="/assets/js/libs/require.js" data-main="/assets/js/config"></script> -->
 	<!-- <script src="../assets/js/require/require.js" data-main="/assets/js/conc-modules"></script> -->
 	<!-- <script src="../assets/js/min/scripts.min.js"></script> -->
-	
-	
+
+
 </body>
 </html>
