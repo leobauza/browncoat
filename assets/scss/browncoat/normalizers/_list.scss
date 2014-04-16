@@ -8,14 +8,14 @@ ol ul {
 }
 ul, ol {
 	margin:0 0 20px; //under consideration
-	color: $textColour;
+	color: $text_colour;
 }
 ul {
-	font-size: $listsFontSize;
+	font-size: $lists_font_size;
 	padding:0 0 0 22px;
 	list-style:disc;
 	li {
-		line-height: $listsLineHeight;
+		line-height: $lists_line_height;
 		margin:0 0 10px;
 		/*all nested*/
 		ul {
@@ -48,11 +48,11 @@ ul {
 }
 
 ol {
-	font-size: $listsFontSize;
+	font-size: $lists_font_size;
 	padding:0 0 0 22px;
 	list-style:decimal;
 	li {
-		line-height: $listsLineHeight;
+		line-height: $lists_line_height;
 		margin:0 0 10px;
 		/*all nested*/
 		ol {

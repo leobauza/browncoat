@@ -55,12 +55,12 @@ a:hover, a:active {
 }
 
 body {
-	background: $bodyBg;
-	font-size: $baseSize;
+	background: $body_bg;
+	font-size: $base_size;
 	@include marpad(0px, 0px);
 	//font-family: $serif;
-	//font-family: $sansSerif;
-	font-family: $globFamily;
+	//font-family: $sans_serif;
+	font-family: $global_family;
 	word-wrap: break-word;
 }
 hr {
@@ -73,20 +73,20 @@ hr {
 	overflow: 0;
 }
 a {
-	color: $linkColour;
+	color: $link_colour;
 	text-decoration: none;
 }
 a:hover {
-	color: $linkHoverColour;
+	color: $link_hover_colour;
 	text-decoration: underline;
 }
 button {
-	font-family: $globFamily;
+	font-family: $global_family;
 }
 p {
-	font-size: $textSize;
-	line-height: $textLineHeight;
-	color: $textColour;
+	font-size: $text_size;
+	line-height: $text_line_height;
+	color: $text_colour;
 	margin: 0 0 20px;
 	padding: 0;
 	&.intro {
@@ -117,16 +117,16 @@ h6 {
 	font-weight: 500;
 	text-rendering: optimizelegibility;
 	line-height: 1.2em;
-	color: $textColour;
+	color: $text_colour;
 	a {
-		color: $linkColour;
+		color: $link_colour;
 		&:hover {
 			text-decoration:none;
 		}
 	}
 	small {
 		font-size: 70%;
-		color: $liteTextColour;
+		color: $litetext_colour;
 	}
 }
 h1 {
@@ -174,9 +174,9 @@ code {
 		color: $white;
 	}
 	a {
-		color: lighten($linkColour, 10);
+		color: lighten($link_colour, 10);
 		&:hover {
-			color: lighten($linkColour, 20);
+			color: lighten($link_colour, 20);
 		}
 	}
 }

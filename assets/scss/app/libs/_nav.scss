@@ -21,7 +21,7 @@ $navBarColour: $brand;
 			display: block;
 			padding: 10px;
 			color: $white;
-			font-size: $textSize;
+			font-size: $text_size;
 			&:hover, &.active {
 				background: darken($navBarColour, 10);
 				text-decoration:none;
@@ -65,12 +65,12 @@ $navBarColour: $brand;
 				@include borderRadius(5px);
 				display: block;
 				padding: 10px 15px;
-				background: $linkColour;
-				border: 1px solid darken($linkColour, 10);
+				background: $link_colour;
+				border: 1px solid darken($link_colour, 10);
 				color: $white;
-				font-size: $textSize;
+				font-size: $text_size;
 				&:hover, &.active {
-					background: $linkHoverColour;
+					background: $link_hover_colour;
 					text-decoration: none;
 				}
 			}

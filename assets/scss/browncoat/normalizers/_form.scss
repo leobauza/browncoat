@@ -3,7 +3,7 @@
 //form elements
 form {
 	label, input, textarea, select {
-		font-family: $globFamily;
+		font-family: $global_family;
 		font-size: 1.4em;
 		font-weight: normal;
 		line-height: 1.6em;
@@ -11,7 +11,7 @@ form {
 	}
 
 	legend {
-		font-family: $globFamily;
+		font-family: $global_family;
 		font-size: 1.6em;
 		line-height: 1.8em;
 		width: 100%;
@@ -21,7 +21,7 @@ form {
 	}
 
 	label {
-		font-family: $globFamily;
+		font-family: $global_family;
 		display: block;
 		font-weight: 700;
 		margin: 0 0 5px 0;
@@ -49,10 +49,10 @@ form {
 		@include borderRadius();
 		//@include boxShadow(inset 0 1px 1px rgba(0, 0, 0, 0.5));
 		&:focus {
-			border:1px solid $focusBorder;
+			border:1px solid $focus_border;
 			outline:0;
 			outline:thin dotted \9; /* IE6-9 */
-			@include boxShadow($formFocusShadow);
+			@include boxShadow($form_focus_shadow);
 		}
 	}
 
@@ -63,7 +63,7 @@ form {
 		line-height: 30px;
 		@include borderRadius(5px);
 		&:focus {
-			border: 1px solid $focusBorder;
+			border: 1px solid $focus_border;
 			outline: 0;
 			outline: thin dotted \9; /* IE6-9 */
 			outline: 5px auto -webkit-focus-ring-color;
@@ -95,10 +95,10 @@ form {
 
 		}
 		&:focus {
-			border: 1px solid $focusBorder;
+			border: 1px solid $focus_border;
 			outline: 0;
 			outline: thin dotted \9; /* IE6-9 */
-			@include boxShadow($formFocusShadow);
+			@include boxShadow($form_focus_shadow);
 		}
 	}
 }

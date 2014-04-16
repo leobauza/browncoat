@@ -8,14 +8,14 @@
 		padding: 10px;
 		background: lighten($default, 20);
 		h1,h2,h3,h4,h5,h6 {
-			color: $textColour;
+			color: $text_colour;
 			margin: 0;
 		}
 	}
 	.box__body {
 		padding:10px;
-		font-size: $textSize;
-		line-height: $textLineHeight;
+		font-size: $text_size;
+		line-height: $text_line_height;
 		p {
 			font-size: 100%;
 		}

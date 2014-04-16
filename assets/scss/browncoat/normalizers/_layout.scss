@@ -34,6 +34,9 @@
 /*
  * base rows
  */
+//grid
+$columns: 12;
+$gutter: 3.183;
 
 %rows {
 	width:100%;
@@ -76,7 +79,7 @@
 
 .row-fluid {
 	@extend %rows;
-	
+
 	&> [class*="span"] {
 		&.l {
 			margin-right: 0;
@@ -105,7 +108,7 @@
 
 .row-fluid--flush {
 	@extend %rows;
-	
+
 	&> [class*="span"] {
 		margin-right:0;
 	}
@@ -153,7 +156,7 @@
  */
 
 @media (max-width: 959px) {
-	
+
 	/*margin right instead of margin left to do overflow hidden*/
 	[class*="row"] > [class*="span"] {
 		float: none;
@@ -165,7 +168,6 @@
 	[class*="row"] > [class*="span"]:last-child {
 		overflow: visible;
 	}
-	
-	
-}
 
+
+}

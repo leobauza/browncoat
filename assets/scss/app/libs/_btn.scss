@@ -5,7 +5,7 @@
 	@include borderRadius(5px);	
 	color: $white;
 	border: 1px solid darken($default, 10);
-	font-size: $textSize;
+	font-size: $text_size;
 	text-align: center;
 	cursor: pointer;
 	&:hover, &.active {
@@ -25,7 +25,7 @@
 .btn--default {
 	@extend %btn;
 	background: none;
-	color: $textColour;
+	color: $text_colour;
 	&:hover, &.active {
 		background: $default;
 	}

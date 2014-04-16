@@ -1,18 +1,18 @@
 /* browncoat/base/text (does not output css) */
 
-$baseSize: 63.7%;
+$base_size: 63.7%;
 $display: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-$sansSerif: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+$sans_serif: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
 $serif: "Georgia", "Times New Roman", Times, serif;
 $code: Menlo,Monaco,Consolas,"Courier New",monospace;
 //$serif: "Palatino Linotype", "Book Antiqua", Palatino, serif;
 
-$globFamily: $sansSerif; //not everything inherits from the body...so we have $globFamily
+$global_family: $sans_serif; //not everything inherits from the body...so we have $global_family
 
-$textSize: 1.6em;
-$textLineHeight: 1.6em;
+$text_size: 1.6em;
+$text_line_height: 1.6em;
 
-$listsFontSize: $textSize;
-$listsLineHeight: $textLineHeight;
+$lists_font_size: $text_size;
+$lists_line_height: $text_line_height;
 
 /* end */

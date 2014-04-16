@@ -1,8 +1,4 @@
 /* browncoat/base/structure (does not output css) */
-//grid
-$columns: 12;
-$gutter: 3.183;
-
 
 //build box
 @mixin square($w,$h) {
@@ -20,7 +16,6 @@ $gutter: 3.183;
 	_height: $h;
 }
 
-
 //layout
 @mixin overflower {
 	width: auto;
@@ -33,8 +28,6 @@ $gutter: 3.183;
 	padding-bottom: $perc * 1%;
 	height: 0;
 }
-
-
 
 //clearfix
 @mixin group {

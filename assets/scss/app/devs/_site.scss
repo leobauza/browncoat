@@ -26,9 +26,9 @@ $docBorder: Greyscale(12);
 }
 
 .boxy {
-	border:1px solid $boxBorderColour;
-	background: $boxBackgroundColour;
-	color: $textColour;
+	border:1px solid ColourConstructor(0, $brand);
+	background: ColourConstructor(-100, $brand_alt);
+	color: $text_colour;
 }
 
 

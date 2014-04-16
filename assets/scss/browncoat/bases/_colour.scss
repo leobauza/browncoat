@@ -5,17 +5,17 @@ $black: #000;
 
 //gen
 $brand: #8790A5;
-$brandAlt: darken($brand, 10);
-$bodyBg: $white;
+$brand_alt: darken($brand, 10);
+$body_bg: $white;
 
 
 //links
-$linkColour: #428bca;
-$linkHoverColour: darken($linkColour, 20);
+$link_colour: #428bca;
+$link_hover_colour: darken($link_colour, 20);
 
 
 //focus
-$focusBorder: rgba(82, 168, 236, 0.8);
+$focus_border: rgba(82, 168, 236, 0.8);
 
 
 //factory
@@ -28,7 +28,7 @@ $focusBorder: rgba(82, 168, 236, 0.8);
 	}
 	@if $perc == 0 {
 		@return $colour
-	}	
+	}
 }
 
 
@@ -39,15 +39,12 @@ $focusBorder: rgba(82, 168, 236, 0.8);
 
 
 //boxes and text
-$textColour: ColourConstructor(80, $white);
-$liteTextColour: lighten($textColour, 50);
-$boxBackgroundColour: ColourConstructor(-100, $brandAlt);
-$boxBorderColour: ColourConstructor(0, $brand);
-
+$text_colour: ColourConstructor(80, $white);
+$litetext_colour: lighten($text_colour, 50);
 
 //alets
 $default: Greyscale(25);
-$info: $linkColour;
+$info: $link_colour;
 $success: #5cb85c;
 $warning: #f0ad4e;
 $error: #d9534f;

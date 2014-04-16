@@ -4,9 +4,9 @@ $listGroupBorder: Greyscale(10);
 	margin:0;
 	padding:10px;
 	border-top: 1px solid $listGroupBorder;	
-	color: $textColour;
-	font-size: $textSize;
-	line-height:$textLineHeight;
+	color: $text_colour;
+	font-size: $text_size;
+	line-height:$text_line_height;
 }
 
 ul.list-group {
@@ -36,8 +36,8 @@ ul.list-group {
 			text-decoration:none;
 		}
 		&.active {
-			background: $linkColour;
-			border-top: 1px solid lighten($linkColour, 10);
+			background: $link_colour;
+			border-top: 1px solid lighten($link_colour, 10);
 			color: $white;
 			text-decoration:none;
 		}

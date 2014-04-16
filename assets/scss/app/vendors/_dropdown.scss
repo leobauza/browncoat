@@ -33,9 +33,9 @@
 		a {
 			display:block;
 			padding: 5px 15px;
-			font-size: $textSize;
-			line-height: $textLineHeight;
-			color: $textColour;
+			font-size: $text_size;
+			line-height: $text_line_height;
+			color: $text_colour;
 			&:hover {
 				text-decoration: none;
 				background: Greyscale(10);
