@@ -3,61 +3,6 @@
  */
 
 /**
- * A Class
- */
-//var APP = APP || {};
-// APP = function (name) {
-//
-//   if(!(this instanceof APP)) {
-// 		return new APP(name)
-// 	}
-//
-//   this.name = name || 'App';
-//
-//   this.ns = function (ns_string) {
-//     var
-//     	parts = ns_string.split('.'),
-//     	parent = this,
-//     	i
-//     ;
-//     //strip redundant leading global
-//     if (parts[0] === this.name) {
-//     	parts = parts.slice(1);
-//     }
-//     for (i = 0; i < parts.length; i += 1) {
-//     	//create a property if it doesn't exist
-//     	if (typeof parent[parts[i]] === "undefined") {
-//     		parent[parts[i]] = {};
-//     	}
-//     	parent = parent[parts[i]];
-//     }
-//     return parent;
-//   }
-//
-//   this.init = function () {
-//     for (var key in this.modules) {
-//       if (this.modules[key] !== undefined) {
-//         if(this.modules.hasOwnProperty(key) && this.modules[key].hasOwnProperty('init')) {
-//           this.modules[key].init();
-//         }
-//       }
-//     }
-//   }
-//
-//   //creates a jQuery dependency
-//   this.extend = function(object) {
-// 	   return $.extend(object, this);
-// 	}
-//
-//   return this;
-// }
-
-//optionally pass a name (defaults to App)
-//var App = new APP('App');
-//name can be set up afterwards
-//App.name = "App";
-
-/**
  * An Exendable Object
  */
 var APP = APP || {
@@ -82,39 +27,88 @@ var APP = APP || {
     return parent;
   }
 
-  ,init: function () {
-    var name = this.name;
-    for (var key in this.modules) {
-      if (this.modules[key] !== undefined) {
-        if(this.modules.hasOwnProperty(key) && this.modules[key].hasOwnProperty('init')) {
-          this.modules[key].init();
+  ,init: function (namespace) {
+    //for every property based on the namespce do stuff...
+    for (var key in this[namespace]) {
+      if (this[namespace][key] !== undefined) {
+        if(this[namespace].hasOwnProperty(key) && this[namespace][key].hasOwnProperty('init')) {
+          this[namespace][key].init();
         }
       }
-    }
+
+      if (this[namespace][key].actions && this[namespace][key].els) {
+        console.log(this[namespace][key], " => has actions and els");
+        var
+          that = this,
+          actions = this[namespace][key].actions,
+          els = this[namespace][key].els
+        ;
+
+        // console.log("els: ", els);
+        // console.log("actions: ", actions);
+
+        //sort through actions
+        jQuery.each(actions, function(event_target, method_name) {
+          var
+            parts = event_target.split(' '),
+            the_event = parts[0],
+            the_target = parts[1]
+          ;
+          console.log(parts);
+          jQuery(document).on(the_event, els[the_target], method_name);
+        });
+
+        //sort through elements
+        jQuery.each(els, function(k, v) {
+          els[k] = jQuery(v);
+        });
+
+      }
+
+    } // end for loop
+
   }
 
   ,extend: function (object) {
     return $.extend(object, this);
   }
+
 }
 
 var App = APP.extend({
   name: "App"
 });
 
-//this part works the same for both
+
 App.ns('App.modules');
 
 App.modules.module = (function () {
+  var actions, els;
+
   function init () {
     console.log("my initialize funcion...");
   }
 
+  function method () {
+    console.log("clicked something!");
+  }
+
+  actions = {
+    'click listitem': method
+  };
+
+  els = {
+    'listitem': '.list-group li:first-child'
+  };
+
   return {
-    init: init
+    init: init,
+    actions: actions,
+    els: els
   };
 
 })();
+
 App.modules.module2 = (function () {
   function init () {
     console.log("my second initialize function...");
@@ -126,60 +120,10 @@ App.modules.module2 = (function () {
 
 })();
 
-App.init();
+/**
+ * init takes a namespace to initialize as a parameter
+ */
+App.init('modules');
 
-
-
-// //a namespacing function that the namespace doesnt exist
-// APP.ns = function (ns_string) {
-// 	var
-// 		parts = ns_string.split('.'),
-// 		parent = APP,
-// 		i
-// 	;
-// 	//strip redundant leading global
-// 	if (parts[0] === "APP") {
-// 		parts = parts.slice(1);
-// 	}
-// 	for (i = 0; i < parts.length; i += 1) {
-// 		//create a property if it doesn't exist
-// 		if (typeof parent[parts[i]] === "undefined") {
-// 			parent[parts[i]] = {};
-// 		}
-// 		parent = parent[parts[i]];
-// 	}
-// 	return parent;
-// }
-//
-// //use ns function to create modules namespace
-// APP.ns('modules');
-//
-// //attach properties to moduels namespace
-// APP.modules.module = (function () {
-//   console.log("don't return stuf...")
-// 	//private function for initiation
-// 	function init () {
-// 		console.log("some init stuff happens here!")
-// 	}
-//
-// 	//expose only what you want
-// 	return {
-// 		init: init
-// 	}
-//
-// })();
-//
-//
-// //log out you APP object for kicks
-// console.log(APP);
-//
-// /**
-//  * cycle through APP properties with an init method (for no reason in this site)
-//  */
-// for (var key in APP.modules) {
-//   if (APP.modules[key] !== undefined) {
-// 		if(APP.modules.hasOwnProperty(key) && APP.modules[key].hasOwnProperty('init')) {
-// 			APP.modules[key].init();
-// 		}
-//   }
-// }
+console.log(APP);
+console.log(App);

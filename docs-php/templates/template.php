@@ -74,7 +74,8 @@
 	</footer>
 <?php endif; ?>
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
-	<script src="/assets/js/script.js" type="text/javascript"></script>
+	<script src="/assets/js/flyweightclass.js" type="text/javascript"></script>
+	<!-- <script src="/assets/js/script.js" type="text/javascript"></script> -->
 	<!-- <script src="/assets/js/libs/require.js" data-main="/assets/js/config"></script> -->
 	<!-- <script src="../assets/js/require/require.js" data-main="/assets/js/conc-modules"></script> -->
 	<!-- <script src="../assets/js/min/scripts.min.js"></script> -->
