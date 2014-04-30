@@ -24,7 +24,7 @@ browncoat (lower case "b") is a light front end library. It is built using scss 
 	2. _browncoat.scss: this file combines all the files inside the assets/scss/browncoat directory. These files are all the bases and variables that form the core of browncoat.
 	3. _styles.scss: this file combines the above to files and is the single file that needs to be compiled.
 
-> note: inside the browncoat/ directory there are two folders bases and normalizers. By "browncoat convention" the bases folder are meant for variables, placeholders, and mixins, meaning none of those files should output any real CSS. 
+> note: inside the browncoat/ directory there are two folders bases and normalizers. By "browncoat convention" the bases folder are meant for variables, placeholders, and mixins, meaning none of those files should output any real CSS.
 
 ### compiling scss
 You will need to install [sass](http://sass-lang.com/)  on your machine to compile the files. you can then run:
@@ -48,14 +48,14 @@ numbered as such:
 <major>.<minor>.<patch>
 ```
 
-The underlying structure has changed drastically since v0.1.9 and will be changing again. It will change to have an express backend and do some task management with grunt and later move to yeoman. 
+The underlying structure has changed drastically since v0.1.9 and will be changing again. It will change to have an express backend and do some task management with grunt and later move to yeoman.
 
 ### Code
 All the code and conventions will be made available as github gists so that anyone can comment on any individual piece of code. My hope is this will make it easier for me to update different parts of the framework. While having issues on github for browncoat as a whole is useful, something like changing a class name on the forms prettify library might get lost.
 Of course, that may end up working horribly, but it also has the side-effect of giving me an easier way to include embedded code for easier copying and pasting in the docs.
 
 ### get updates
-I am working on an easier go at installing browncoat using a combination of grunt and bower to set up a project. Until then forking the repository is all I've got for you though. 
+I am working on an easier go at installing browncoat using a combination of grunt and bower to set up a project. Until then forking the repository is all I've got for you though.
 
 
 ### changelog (highlights)
@@ -84,7 +84,7 @@ I am working on an easier go at installing browncoat using a combination of grun
 #####v0.2.3 (in progress)
 - Documentation for CSS section
 - Documentation patterns defined
-- New %row class
+- New %row class (scratch that, this should be a @mixin)
 
 
 ### Plan
@@ -102,20 +102,10 @@ This version will see the finalizing of all the existing vendors css code
 This version will see the finalizing of javascript starter code (both require.js style and non require.js)
 
 #####v0.6
-This version will address all documentation concerns. Rearranging of directories, corrections, structure, etc. 
+This version will address all documentation concerns. Rearranging of directories, corrections, structure, etc.
 
 #####v0.7
 Basic sample pages developed. Possibly with new libraries and plugins.
 
 #####v0.8
 Including grunt.
-
-
-
-
-
-
-
-
-
-
