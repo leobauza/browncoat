@@ -10,16 +10,19 @@ APP = function (name) {
 
   this.name = name || 'App';
 
-  function process (obj, key) {
-    //this should be changeable
-    var namespace = "modules";
+  function process (conf) {
+    var
+      obj = conf.obj,
+      key = conf.key,
+      ns = conf.ns
+    ;
 
-    if (obj[namespace][key].actions && obj[namespace][key].els) {
-      console.log(obj[namespace][key], " => has actions and els");
+    if (obj[ns][key].actions && obj[ns][key].els) {
+      console.log(obj[ns][key], " => has actions and els");
       var
         that = obj,
-        actions = obj[namespace][key].actions,
-        els = obj[namespace][key].els
+        actions = obj[ns][key].actions,
+        els = obj[ns][key].els
       ;
 
       console.log("els: ", els);
@@ -64,17 +67,24 @@ APP = function (name) {
     return parent;
   }
 
-  this.init = function () {
-    for (var key in this.modules) {
+  this.init = function (ns) {
+    ns = typeof ns !== "undefined" ? ns : 'modules';
 
-      if (this.modules[key] !== undefined) {
-        if(this.modules.hasOwnProperty(key) && this.modules[key].hasOwnProperty('init')) {
-          this.modules[key].init();
+    for (var key in this[ns]) {
+
+      if (this[ns][key] !== undefined) {
+        if(this[ns].hasOwnProperty(key) && this[ns][key].hasOwnProperty('init')) {
+          this[ns][key].init();
         }
       }
 
       //process the actions and elements
-      process(this, key);
+      var conf = {
+        obj: this,
+        key: key,
+        ns: ns
+      };
+      process(conf);
 
     }
   }
@@ -91,8 +101,6 @@ APP = function (name) {
 var App = new APP();
 //name can be set up afterwards
 //App.name = "App";
-
-
 
 App.ns('modules');
 App.modules.mymodule = (function () {
@@ -146,7 +154,6 @@ $('.bc-section-header').click( function (e) {
   var mymodule = App.modules.mymodule
 
   mymodule.els.listitem.html("booom!");
-
 
   App.modules.mymodule.destroy();
 
