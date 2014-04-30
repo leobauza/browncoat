@@ -75,7 +75,7 @@ form {
 	}
 
 	input[type="text"], input[type="password"], input[type="email"]{
-		
+
 	}
 
 	input[type="file"] {
@@ -159,9 +159,9 @@ fieldset {
 	}
 }
 
-.form--horizontal {	
-	$formGutter: 2;
-	$formColumns: 12;
+.form--horizontal {
+	$form_gutter: 2;
+	$form_columns: 12;
 
 	.form__group {
 		label {
@@ -173,11 +173,11 @@ fieldset {
 	.form__checkbox {
 		@include group();
 	}
-	
-	
+
+
 	[class*="span"] {
 		float:left;
-		margin-right: $formGutter * 1%;
+		margin-right: $form_gutter * 1%;
 		&.l {
 			margin-right:0;
 		}
@@ -186,25 +186,25 @@ fieldset {
 		}
 	}
 
-	@for $i from 1 through $columns {
-		$testColWidth: (99.9998 / $formColumns);
+	@for $i from 1 through $form_columns {
+		$form_columns_width: (99.9998 / $form_columns);
 
 		.span#{$i} {
-			$remainder: ($formGutter/$formColumns) * $i;
-			width: ($testColWidth * $i - $formGutter + $remainder) * 1%;
+			$form_col_remainder: ($form_gutter/$form_columns) * $i;
+			width: ($form_columns_width * $i - $form_gutter + $form_col_remainder) * 1%;
 		}
 	}
-	
-	
-	
-	
+
+
+
+
 }
 
 
 
 
 @media (max-width: 959px) {
-	
+
 	.form--horizontal {
 		.form__group {
 			label {
@@ -212,7 +212,7 @@ fieldset {
 				padding: 0;
 			}
 		}
-		
+
 		[class*="span"] {
 			float: none;
 			width:auto;
@@ -222,19 +222,9 @@ fieldset {
 		[class*="span"]:last-child {
 			overflow:auto;
 		}
-		
-		
+
+
 	}
-	
-	
+
+
 }
-
-
-
-
-
-
-
-
-
-

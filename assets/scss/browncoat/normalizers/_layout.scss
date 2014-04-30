@@ -35,10 +35,10 @@
  * base rows
  */
 //grid
-$columns: 12;
-$gutter: 3.183;
+$global_columns: 12;
+$global_gutter: 3.183;
 
-%rows {
+@mixin rows($gutter: 3.183, $columns: 12) {
 	width:100%;
 	//margin: 0px 0px 10px;
 
@@ -54,11 +54,11 @@ $gutter: 3.183;
 	}
 
 	@for $i from 1 through $columns {
-		$testColWidth: (99.9998 / $columns);
+		$col_width: (99.9998 / $columns);
 
 		& > .span#{$i} {
-			$remainder: ($gutter/$columns) * $i;
-			width: ($testColWidth * $i - $gutter + $remainder) * 1%;
+			$col_remainder: ($gutter/$columns) * $i;
+			width: ($col_width * $i - $gutter + $col_remainder) * 1%;
 		}
 	}
 }
@@ -67,9 +67,9 @@ $gutter: 3.183;
  * new: basic row
  */
 .row {
-	@extend %rows;
-	width: (100 - $gutter * 2) * 1%;
-	padding: 0 $gutter * 1%;
+	@include rows($global_gutter, $global_columns);
+	width: (100 - $global_gutter * 2) * 1%;
+	padding: 0 $global_gutter * 1%;
 }
 
 
@@ -78,7 +78,7 @@ $gutter: 3.183;
  */
 
 .row-fluid {
-	@extend %rows;
+	@include rows($global_gutter, $global_columns);
 
 	&> [class*="span"] {
 		&.l {
@@ -98,7 +98,7 @@ $gutter: 3.183;
  */
 
 .row-fluid--alt {
-	@extend %rows;
+	@include rows();
 }
 
 
@@ -107,16 +107,16 @@ $gutter: 3.183;
  */
 
 .row-fluid--flush {
-	@extend %rows;
+	@include rows($global_gutter, $global_columns);
 
 	&> [class*="span"] {
 		margin-right:0;
 	}
 
-	@for $i from 1 through $columns {
-		$testColWidth: (99.9998 / $columns);
+	@for $i from 1 through $global_columns {
+		$alt_col_width: (99.9998 / $global_columns);
 		& > .span#{$i} {
-			width: ($testColWidth * $i) * 1%;
+			width: ($alt_col_width * $i) * 1%;
 		}
 	}
 }
