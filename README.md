@@ -20,9 +20,9 @@ browncoat (lower case "b") is a light front end library. It is built using scss 
 
 - Found in the assets/scss directory
 - There are 3 main files:
-	1. _app.scss: this file combines all the files inside the assets/scss/app folder. These files are app specific and make up the libraries included with browncoat.
-	2. _browncoat.scss: this file combines all the files inside the assets/scss/browncoat directory. These files are all the bases and variables that form the core of browncoat.
-	3. _styles.scss: this file combines the above to files and is the single file that needs to be compiled.
+	1. \_app.scss: this file combines all the files inside the assets/scss/app folder. These files are app specific and make up the libraries included with browncoat.
+	2. \_browncoat.scss: this file combines all the files inside the assets/scss/browncoat directory. These files are all the bases and variables that form the core of browncoat.
+	3. \_styles.scss: this file combines the above to files and is the single file that needs to be compiled.
 
 > note: inside the browncoat/ directory there are two folders bases and normalizers. By "browncoat convention" the bases folder are meant for variables, placeholders, and mixins, meaning none of those files should output any real CSS.
 
@@ -38,7 +38,7 @@ sass --watch assets/scss/styles.scss:assets/css/styles.css
 ### js (coffeescript)
 Found in the assets/js/ directory. Documentation coming soon. For now: It uses require.js and there is a build file for use with r.js in the assets/build/ directory. The assets/vendor/ directory contains some plugins. And the assets/boilerplates/ directory has some boilerplates for jQuery plugins.
 
-> Note: All js is written in coffeescript and the coffeescript plugin for require.js takes care of compiling it.
+> note: All js is written in coffeescript and the coffeescript plugin for require.js takes care of compiling it.
 
 
 ### versioning
@@ -60,20 +60,20 @@ I am working on an easier go at installing browncoat using a combination of grun
 
 ### changelog (highlights)
 
-#####v0.1.9
+##### v0.1.9
 - The first "version"
 
-#####v0.2.0
+##### v0.2.0
 - Slim php framework added (templates and views)
 - Moved from less to scss
 - Added require.js to structure js
 - Added r.js for build
 
-#####v0.2.1
+##### v0.2.1
 - Add change log to readme
 - Add license
 
-#####v0.2.2
+##### v0.2.2
 - Javascript clean up
 - Better definition of how javascript should be structured for prototyping
 - Restructure assets/js directory
@@ -81,31 +81,31 @@ I am working on an easier go at installing browncoat using a combination of grun
 - Add new form styles
 - Add code to documentation, revamp all css section documentation.
 
-#####v0.2.3 (in progress)
+##### v0.2.3 (in progress)
 - Documentation for CSS section
 - Documentation patterns defined
 - New %row class (scratch that, this should be a @mixin)
-
+- Reorganized all SCSS, revised folder structure, and revised some rules
 
 ### Plan
 
-#####v0.2
+##### v0.2
 This version will see the finalizing of all base browncoat css code
 
-#####v0.3
+##### v0.3
 This version will see the finalizing of all the existing libraries css code
 
-#####v0.4
+##### v0.4
 This version will see the finalizing of all the existing vendors css code
 
-#####v0.5
+##### v0.5
 This version will see the finalizing of javascript starter code (both require.js style and non require.js)
 
-#####v0.6
+##### v0.6
 This version will address all documentation concerns. Rearranging of directories, corrections, structure, etc.
 
-#####v0.7
+##### v0.7
 Basic sample pages developed. Possibly with new libraries and plugins.
 
-#####v0.8
+##### v0.8
 Including grunt.
