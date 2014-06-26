@@ -1,4 +1,4 @@
-/* browncoat/normalizers/form */
+/* core/form */
 
 //form elements
 form {
@@ -168,10 +168,10 @@ fieldset {
 			padding-top: 5px;
 			text-align: right;
 		}
-		@include group();
+		@extend %group;
 	}
 	.form__checkbox {
-		@include group();
+		@extend %group;
 	}
 
 

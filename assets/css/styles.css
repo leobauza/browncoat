@@ -1,12 +1,35 @@
-/* browncoat/base/colour (does not output css) */
+/* config/bases (outputs clearfix and @fontface) */
+header,
+footer,
+.group,
+.form-group,
+.input-group,
+[class*="-group"], .form--horizontal .form__group, .form--horizontal .form__checkbox, .nav-bar, .nav-bar .menu, .nav-bar .menu-left, .nav-bar .menu-right {
+  zoom: 1; }
+  header:before,
+  footer:before,
+  .group:before,
+  .form-group:before,
+  .input-group:before,
+  [class*="-group"]:before, .form--horizontal .form__group:before, .form--horizontal .form__checkbox:before, .nav-bar:before, .nav-bar .menu:before, .nav-bar .menu-left:before, .nav-bar .menu-right:before {
+    display: table;
+    content: ""; }
+  header:after,
+  footer:after,
+  .group:after,
+  .form-group:after,
+  .input-group:after,
+  [class*="-group"]:after, .form--horizontal .form__group:after, .form--horizontal .form__checkbox:after, .nav-bar:after, .nav-bar .menu:after, .nav-bar .menu-left:after, .nav-bar .menu-right:after {
+    display: table;
+    content: "";
+    clear: both; }
+
 /* end */
-/* browncoat/base/text (does not output css) */
+/* config/_vars (does not output css) */
 /* end */
-/* browncoat/base/helper (does not output css) */
+/* config/mixins (does not output css) */
 /* end */
-/* browncoat/base/structure (does not output css) */
-/* end */
-/* browncoat/normalizers/reset */
+/* core/reset */
 code, form label, form input, form textarea, form select, form legend {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -189,32 +212,7 @@ code {
     .reverse a:hover {
       color: #92bce0; }
 
-header,
-footer,
-.group,
-.form-group,
-.input-group,
-[class*="-group"] {
-  zoom: 1; }
-  header:before,
-  footer:before,
-  .group:before,
-  .form-group:before,
-  .input-group:before,
-  [class*="-group"]:before {
-    display: table;
-    content: ""; }
-  header:after,
-  footer:after,
-  .group:after,
-  .form-group:after,
-  .input-group:after,
-  [class*="-group"]:after {
-    display: table;
-    content: "";
-    clear: both; }
-
-/* browncoat/normalizers/layout */
+/* core/layout */
 .container {
   padding: 0px 20px; }
 
@@ -464,7 +462,7 @@ footer,
   /*Use this to set exact percentages and have the last box be ok*/
   [class*="row"] > [class*="span"]:last-child {
     overflow: visible; } }
-/* browncoat/normalizers/list */
+/* core/list */
 ul ul,
 ul ol,
 ol ol,
@@ -531,7 +529,7 @@ ol ul {
   padding-top: 10px;
   font-size: 100%; }
 
-/* browncoat/normalizers/form */
+/* core/form */
 form label, form input, form textarea, form select {
   font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   font-size: 1.4em;
@@ -653,27 +651,9 @@ fieldset {
 .form--inline button {
   display: inline-block; }
 
-.form--horizontal .form__group {
-  zoom: 1; }
-  .form--horizontal .form__group label {
-    padding-top: 5px;
-    text-align: right; }
-  .form--horizontal .form__group:before {
-    display: table;
-    content: ""; }
-  .form--horizontal .form__group:after {
-    display: table;
-    content: "";
-    clear: both; }
-.form--horizontal .form__checkbox {
-  zoom: 1; }
-  .form--horizontal .form__checkbox:before {
-    display: table;
-    content: ""; }
-  .form--horizontal .form__checkbox:after {
-    display: table;
-    content: "";
-    clear: both; }
+.form--horizontal .form__group label {
+  padding-top: 5px;
+  text-align: right; }
 .form--horizontal [class*="span"] {
   float: left;
   margin-right: 2%; }
@@ -716,33 +696,17 @@ fieldset {
     margin-right: 0; }
   .form--horizontal [class*="span"]:last-child {
     overflow: auto; } }
-/* browncoat/normalizers/table */
+/* core/table */
 /* app/libs/nav */
 .nav-bar {
-  zoom: 1;
   background: #8790a5;
   background: rgba(135, 144, 165, 0.8);
   width: 100%; }
-  .nav-bar:before {
-    display: table;
-    content: ""; }
-  .nav-bar:after {
-    display: table;
-    content: "";
-    clear: both; }
   .nav-bar .menu, .nav-bar .menu-left, .nav-bar .menu-right {
-    zoom: 1;
     margin: 0;
     padding: 0;
     list-style: none;
     font-size: 100%; }
-    .nav-bar .menu:before, .nav-bar .menu-left:before, .nav-bar .menu-right:before {
-      display: table;
-      content: ""; }
-    .nav-bar .menu:after, .nav-bar .menu-left:after, .nav-bar .menu-right:after {
-      display: table;
-      content: "";
-      clear: both; }
 
 .menu, .menu-left, .menu-right {
   /*first level*/

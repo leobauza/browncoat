@@ -3,12 +3,12 @@ $navBarColour: $brand;
 
 //nav bar
 .nav-bar {
-	@include group();
+	@extend %group;
 	background: $navBarColour;
 	background: transparentize($navBarColour, .20);
 	width: 100%;
 	.menu {
-		@include group();
+		@extend %group;
 		@include resetList(0, 0);
 	}
 }

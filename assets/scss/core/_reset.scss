@@ -1,4 +1,4 @@
-/* browncoat/normalizers/reset */
+/* core/reset */
 //border box
 %borderBox {
 	-webkit-box-sizing: border-box;
@@ -8,7 +8,7 @@
 		-webkit-box-sizing: border-box;
 		-moz-box-sizing: border-box;
 		box-sizing: border-box;
-	}	
+	}
 }
 
 article,
@@ -188,5 +188,5 @@ footer,
 .form-group,
 .input-group,
 [class*="-group"] {
-	@include group;
+	@extend %group;
 }

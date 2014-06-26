@@ -1,0 +1,17 @@
+/* config/bases (outputs clearfix and @fontface) */
+
+//clearfix
+%group {
+	zoom: 1;
+	&:before {
+		display: table;
+		content: "";
+	}
+	&:after {
+		display: table;
+		content: "";
+		clear: both;
+	}
+}
+
+/* end */

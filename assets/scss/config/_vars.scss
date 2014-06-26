@@ -1,4 +1,4 @@
-/* browncoat/base/colour (does not output css) */
+/* config/_vars (does not output css) */
 //greyscale
 $white: #fff;
 $black: #000;
@@ -48,5 +48,20 @@ $info: $link_colour;
 $success: #5cb85c;
 $warning: #f0ad4e;
 $error: #d9534f;
+
+$base_size: 63.7%;
+$display: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+$sans_serif: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+$serif: "Georgia", "Times New Roman", Times, serif;
+$code: Menlo,Monaco,Consolas,"Courier New",monospace;
+//$serif: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+
+$global_family: $sans_serif; //not everything inherits from the body...so we have $global_family
+
+$text_size: 1.6em;
+$text_line_height: 1.6em;
+
+$lists_font_size: $text_size;
+$lists_line_height: $text_line_height;
 
 /* end */

@@ -1,4 +1,4 @@
-/* browncoat/normalizers/list */
+/* core/list */
 
 ul ul,
 ul ol,
@@ -22,7 +22,7 @@ ul {
 			padding-top:10px;
 			font-size:100%;//makes all nested ul's be the same size
 			li {
-				
+
 			}
 		}
 		/*expert*/
@@ -37,7 +37,7 @@ ul {
 							padding:20px 50px 10px;
 							margin-top:10px;
 							&>li {
-								
+
 							}
 						}
 					}
@@ -59,7 +59,7 @@ ol {
 			padding-top:10px;
 			font-size:100%;//makes all nested ol's be the same size
 			li {
-				
+
 			}
 		}
 		/*expert*/
@@ -77,7 +77,7 @@ ol {
 							padding:20px 50px 10px;
 							margin-top:10px;
 							&>li {
-								
+
 							}
 						}
 					}

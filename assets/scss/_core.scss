@@ -1,0 +1,11 @@
+//config
+@import 'config/bases',
+        'config/vars',
+        'config/mixins';
+
+//core
+@import 'core/reset',
+        'core/layout',
+        'core/list',
+        'core/form',
+        'core/table';
