@@ -1,0 +1,148 @@
+/* app/components/btn */
+%btn{ //placeholder selector!
+  @include inlineBlock(20);
+  @include marpad(0 0 20px, 10px 15px);
+  @include borderRadius(5px);
+  color: $white;
+  border: 1px solid darken($default, 10);
+  font-size: $text_size;
+  text-align: center;
+  cursor: pointer;
+  &:hover, &.active {
+    background: darken($default,10);
+    color: $white;
+    text-decoration:none;
+  }
+  &:focus {
+    border: 1px solid darken($default, 10);
+  }
+  &:active {
+
+  }
+}
+
+//button types (using BEM syntax)
+.btn--default {
+  @extend %btn;
+  background: none;
+  color: $text_colour;
+  &:hover, &.active {
+    background: $default;
+  }
+}
+.btn--main {
+  @extend %btn;
+  @include gradient($brand, lighten($brand, 2));
+  border-color: darken($brand, 10);
+  &:hover, &.active {
+    background: darken($brand, 10);
+  }
+  &:focus {
+    border: 1px solid darken($brand, 10);
+  }
+}
+.btn--info {
+  @extend %btn;
+  @include gradient($info, lighten($info, 2));
+  border-color: darken($info, 10);
+  &:hover, &.active {
+    background: darken($info, 10);
+  }
+  &:focus {
+    border: 1px solid darken($info, 10);
+  }
+}
+.btn--success {
+  @extend %btn;
+  @include gradient($success, lighten($success, 2));
+  border-color: darken($success, 10);
+  &:hover, &.active {
+    background: darken($success, 10);
+  }
+  &:focus {
+    border: 1px solid darken($success, 10);
+  }
+}
+.btn--warning {
+  @extend %btn;
+  @include gradient($warning, lighten($warning, 2));
+  border-color: darken($warning, 10);
+  &:hover, &.active {
+    background: darken($warning, 10);
+  }
+  &:focus {
+    border: 1px solid darken($warning, 10);
+  }
+}
+.btn--error {
+  @extend %btn;
+  @include gradient($error, lighten($error, 2));
+  border-color: darken($error, 10);
+  &:hover, &.active {
+    background: darken($error, 10);
+  }
+  &:focus {
+    border: 1px solid darken($error, 10);
+  }
+}
+
+//button sizes
+.btn--large {
+  padding: 15px 25px;
+  font-size: 2em;
+}
+.btn--small {
+  padding: 10px 15px;
+  font-size: 1.4em;
+}
+.btn--xsmall {
+  padding: 5px 10px;
+  font-size: 1.2em;
+}
+
+//button groups
+.btn-group {
+  margin: 0 0 20px;
+  %btn{
+    @include borderRadius(0);
+    position: relative;
+    float: left;
+    margin-bottom: 0;
+    margin-left: -1px;
+    //border-left: none;
+    &:first-child {
+      @include borderRadius(5px 0px 0px 5px);
+    }
+    &:last-child {
+      @include borderRadius(0px 5px 5px 0px);
+    }
+  }
+}
+/*
+.btn--group {
+  .btn--default:first-child , .btn:first-child {
+    border-left: 1px solid darken($default, 10);
+  }
+  .btn--main:first-child {
+    border-left: 1px solid darken($brand, 10);
+  }
+  .btn--info:first-child {
+    border-left: 1px solid darken($info, 10);
+  }
+  .btn--success:first-child {
+    border-color: 1px solid darken($success, 10);
+  }
+  .btn--warning:first-child {
+    border-color: 1px solid darken($warning, 10);
+  }
+  .btn--error:first-child {
+    border-color: 1px solid darken($error, 10);
+  }
+}
+*/
+
+
+
+
+
+

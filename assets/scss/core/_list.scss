@@ -4,99 +4,99 @@ ul ul,
 ul ol,
 ol ol,
 ol ul {
-	margin-bottom:0;
+  margin-bottom:0;
 }
 ul, ol {
-	margin:0 0 20px; //under consideration
-	color: $text_colour;
+  margin:0 0 20px; //under consideration
+  color: $text_colour;
 }
 ul {
-	font-size: $lists_font_size;
-	padding:0 0 0 22px;
-	list-style:disc;
-	li {
-		line-height: $lists_line_height;
-		margin:0 0 10px;
-		/*all nested*/
-		ul {
-			padding-top:10px;
-			font-size:100%;//makes all nested ul's be the same size
-			li {
+  font-size: $lists_font_size;
+  padding:0 0 0 22px;
+  list-style:disc;
+  li {
+    line-height: $lists_line_height;
+    margin:0 0 10px;
+    /*all nested*/
+    ul {
+      padding-top:10px;
+      font-size:100%;//makes all nested ul's be the same size
+      li {
 
-			}
-		}
-		/*expert*/
-		&>ul {
-			&>li {
-				/*madness*/
-				&>ul {
-					&>li {
-						/*inception*/
-						&>ul {
-							background:Greyscale(9);
-							padding:20px 50px 10px;
-							margin-top:10px;
-							&>li {
+      }
+    }
+    /*expert*/
+    &>ul {
+      &>li {
+        /*madness*/
+        &>ul {
+          &>li {
+            /*inception*/
+            &>ul {
+              background:Greyscale(9);
+              padding:20px 50px 10px;
+              margin-top:10px;
+              &>li {
 
-							}
-						}
-					}
-				}
-			}
-		}
-	}
+              }
+            }
+          }
+        }
+      }
+    }
+  }
 }
 
 ol {
-	font-size: $lists_font_size;
-	padding:0 0 0 22px;
-	list-style:decimal;
-	li {
-		line-height: $lists_line_height;
-		margin:0 0 10px;
-		/*all nested*/
-		ol {
-			padding-top:10px;
-			font-size:100%;//makes all nested ol's be the same size
-			li {
+  font-size: $lists_font_size;
+  padding:0 0 0 22px;
+  list-style:decimal;
+  li {
+    line-height: $lists_line_height;
+    margin:0 0 10px;
+    /*all nested*/
+    ol {
+      padding-top:10px;
+      font-size:100%;//makes all nested ol's be the same size
+      li {
 
-			}
-		}
-		/*expert*/
-		&>ol {
-			list-style:lower-latin;
-			&>li {
-				/*madness*/
-				&>ol {
-					list-style:lower-alpha;
-					&>li {
-						/*inception*/
-						&>ol {
-							list-style:katakana;
-							background:Greyscale(9);
-							padding:20px 50px 10px;
-							margin-top:10px;
-							&>li {
+      }
+    }
+    /*expert*/
+    &>ol {
+      list-style:lower-latin;
+      &>li {
+        /*madness*/
+        &>ol {
+          list-style:lower-alpha;
+          &>li {
+            /*inception*/
+            &>ol {
+              list-style:katakana;
+              background:Greyscale(9);
+              padding:20px 50px 10px;
+              margin-top:10px;
+              &>li {
 
-							}
-						}
-					}
-				}
-			}
-		}
-	}
+              }
+            }
+          }
+        }
+      }
+    }
+  }
 }
 
 /*mixed*/
 ul {
-	ol {
-		padding-top:10px;
-		font-size:100%;
-	}
+  ol {
+    padding-top:10px;
+    font-size:100%;
+  }
 }
 ol {
-	ul {
-		padding-top:10px;
-		font-size:100%;
-	}
+  ul {
+    padding-top:10px;
+    font-size:100%;
+  }
 }

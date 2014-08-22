@@ -2,16 +2,16 @@
 
 //clearfix
 %group {
-	zoom: 1;
-	&:before {
-		display: table;
-		content: "";
-	}
-	&:after {
-		display: table;
-		content: "";
-		clear: both;
-	}
+  zoom: 1;
+  &:before {
+    display: table;
+    content: "";
+  }
+  &:after {
+    display: table;
+    content: "";
+    clear: both;
+  }
 }
 
 /* end */

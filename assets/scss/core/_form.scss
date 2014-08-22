@@ -2,198 +2,198 @@
 
 //form elements
 form {
-	label, input, textarea, select {
-		font-family: $global_family;
-		font-size: 1.4em;
-		font-weight: normal;
-		line-height: 1.6em;
-		@extend %borderBox;
-	}
+  label, input, textarea, select {
+    font-family: $global_family;
+    font-size: 1.4em;
+    font-weight: normal;
+    line-height: 1.6em;
+    @extend %borderBox;
+  }
 
-	legend {
-		font-family: $global_family;
-		font-size: 1.6em;
-		line-height: 1.8em;
-		width: 100%;
-		margin: 0 0 10px;
-		color: Greyscale(50);
-		@extend %borderBox;
-	}
+  legend {
+    font-family: $global_family;
+    font-size: 1.6em;
+    line-height: 1.8em;
+    width: 100%;
+    margin: 0 0 10px;
+    color: Greyscale(50);
+    @extend %borderBox;
+  }
 
-	label {
-		font-family: $global_family;
-		display: block;
-		font-weight: 700;
-		margin: 0 0 5px 0;
-	}
+  label {
+    font-family: $global_family;
+    display: block;
+    font-weight: 700;
+    margin: 0 0 5px 0;
+  }
 
-	select,
-	textarea,
-	input[type="text"],
-	input[type="password"],
-	input[type="email"] {
-		width: 100%;
-		height: 34px;
-		padding: 4px;
-		//margin-bottom: 9px;
-		color: Greyscale(75);
-		margin-left:0;
-	}
+  select,
+  textarea,
+  input[type="text"],
+  input[type="password"],
+  input[type="email"] {
+    width: 100%;
+    height: 34px;
+    padding: 4px;
+    //margin-bottom: 9px;
+    color: Greyscale(75);
+    margin-left:0;
+  }
 
-	textarea,
-	input[type="text"],
-	input[type="password"],
-	input[type="email"] {
-		background-color: $white;
-		border:1px solid Greyscale(25);
-		@include borderRadius();
-		//@include boxShadow(inset 0 1px 1px rgba(0, 0, 0, 0.5));
-		&:focus {
-			border:1px solid $focus_border;
-			outline:0;
-			outline:thin dotted \9; /* IE6-9 */
-			@include boxShadow($form_focus_shadow);
-		}
-	}
+  textarea,
+  input[type="text"],
+  input[type="password"],
+  input[type="email"] {
+    background-color: $white;
+    border:1px solid Greyscale(25);
+    @include borderRadius();
+    //@include boxShadow(inset 0 1px 1px rgba(0, 0, 0, 0.5));
+    &:focus {
+      border:1px solid $focus_border;
+      outline:0;
+      outline:thin dotted \9; /* IE6-9 */
+      @include boxShadow($form_focus_shadow);
+    }
+  }
 
-	select {
-		background-color: $white;
-		border: 1px solid Greyscale();
-		height: 30px;
-		line-height: 30px;
-		@include borderRadius(5px);
-		&:focus {
-			border: 1px solid $focus_border;
-			outline: 0;
-			outline: thin dotted \9; /* IE6-9 */
-			outline: 5px auto -webkit-focus-ring-color;
-			outline-offset: -2px;
-		}
-		&[multiple], &[size] {
-			height: auto;
-		}
-	}
+  select {
+    background-color: $white;
+    border: 1px solid Greyscale();
+    height: 30px;
+    line-height: 30px;
+    @include borderRadius(5px);
+    &:focus {
+      border: 1px solid $focus_border;
+      outline: 0;
+      outline: thin dotted \9; /* IE6-9 */
+      outline: 5px auto -webkit-focus-ring-color;
+      outline-offset: -2px;
+    }
+    &[multiple], &[size] {
+      height: auto;
+    }
+  }
 
-	input[type="text"], input[type="password"], input[type="email"]{
+  input[type="text"], input[type="password"], input[type="email"]{
 
-	}
+  }
 
-	input[type="file"] {
-		display: block;
-		width: 100%;
-	}
+  input[type="file"] {
+    display: block;
+    width: 100%;
+  }
 
-	textarea {
-		height: auto;
-		overflow: auto; /*remove scrollbar in IE*/
-	}
+  textarea {
+    height: auto;
+    overflow: auto; /*remove scrollbar in IE*/
+  }
 
-	button,
-	input[type="submit"] {
-		cursor: pointer;
-		&:hover{
+  button,
+  input[type="submit"] {
+    cursor: pointer;
+    &:hover{
 
-		}
-		&:focus {
-			border: 1px solid $focus_border;
-			outline: 0;
-			outline: thin dotted \9; /* IE6-9 */
-			@include boxShadow($form_focus_shadow);
-		}
-	}
+    }
+    &:focus {
+      border: 1px solid $focus_border;
+      outline: 0;
+      outline: thin dotted \9; /* IE6-9 */
+      @include boxShadow($form_focus_shadow);
+    }
+  }
 }
 
 
 //form groups
 fieldset {
-	border: none;
-	padding: 0;
-	margin: 0;
+  border: none;
+  padding: 0;
+  margin: 0;
 }
 
 .form__collection {
-	background: Greyscale(5);
-	padding: 10px;
-	border: 1px solid Greyscale();
-	margin: 0 0 10px;
+  background: Greyscale(5);
+  padding: 10px;
+  border: 1px solid Greyscale();
+  margin: 0 0 10px;
 }
 .form__group {
-	margin: 0 0 20px;
+  margin: 0 0 20px;
 }
 
 .form__text {
-	padding: 3px 0px;
-	margin: 0px;
-	font-size: 1.4em;
-	color: Greyscale(50);
+  padding: 3px 0px;
+  margin: 0px;
+  font-size: 1.4em;
+  color: Greyscale(50);
 }
 
 %radio_checkbox {
-	margin: 0 0 20px;
-	label {
-		font-weight: normal;
-	}
+  margin: 0 0 20px;
+  label {
+    font-weight: normal;
+  }
 }
 .form__radios {
-	@extend %radio_checkbox;
+  @extend %radio_checkbox;
 }
 .form__checkbox {
-	@extend %radio_checkbox;
-	label {
-		margin: 0;
-	}
+  @extend %radio_checkbox;
+  label {
+    margin: 0;
+  }
 }
 
 //form modifiers
 .form--inline {
-	.form__group {
-		display: inline-block;
-		padding-right: 10px;
-	}
-	.form__checkbox {
-		display: inline-block;
-		padding-right: 10px;
-	}
-	button {
-		display: inline-block;
-	}
+  .form__group {
+    display: inline-block;
+    padding-right: 10px;
+  }
+  .form__checkbox {
+    display: inline-block;
+    padding-right: 10px;
+  }
+  button {
+    display: inline-block;
+  }
 }
 
 .form--horizontal {
-	$form_gutter: 2;
-	$form_columns: 12;
+  $form_gutter: 2;
+  $form_columns: 12;
 
-	.form__group {
-		label {
-			padding-top: 5px;
-			text-align: right;
-		}
-		@extend %group;
-	}
-	.form__checkbox {
-		@extend %group;
-	}
+  .form__group {
+    label {
+      padding-top: 5px;
+      text-align: right;
+    }
+    @extend %group;
+  }
+  .form__checkbox {
+    @extend %group;
+  }
 
 
-	[class*="span"] {
-		float:left;
-		margin-right: $form_gutter * 1%;
-		&.l {
-			margin-right:0;
-		}
-		&:last-child {
-			margin-right:0;
-		}
-	}
+  [class*="span"] {
+    float:left;
+    margin-right: $form_gutter * 1%;
+    &.l {
+      margin-right:0;
+    }
+    &:last-child {
+      margin-right:0;
+    }
+  }
 
-	@for $i from 1 through $form_columns {
-		$form_columns_width: (99.9998 / $form_columns);
+  @for $i from 1 through $form_columns {
+    $form_columns_width: (99.9998 / $form_columns);
 
-		.span#{$i} {
-			$form_col_remainder: ($form_gutter/$form_columns) * $i;
-			width: ($form_columns_width * $i - $form_gutter + $form_col_remainder) * 1%;
-		}
-	}
+    .span#{$i} {
+      $form_col_remainder: ($form_gutter/$form_columns) * $i;
+      width: ($form_columns_width * $i - $form_gutter + $form_col_remainder) * 1%;
+    }
+  }
 
 
 
@@ -205,26 +205,26 @@ fieldset {
 
 @media (max-width: 959px) {
 
-	.form--horizontal {
-		.form__group {
-			label {
-				text-align: left;
-				padding: 0;
-			}
-		}
+  .form--horizontal {
+    .form__group {
+      label {
+        text-align: left;
+        padding: 0;
+      }
+    }
 
-		[class*="span"] {
-			float: none;
-			width:auto;
-			margin-right: 0;
-		}
+    [class*="span"] {
+      float: none;
+      width:auto;
+      margin-right: 0;
+    }
 
-		[class*="span"]:last-child {
-			overflow:auto;
-		}
+    [class*="span"]:last-child {
+      overflow:auto;
+    }
 
 
-	}
+  }
 
 
 }

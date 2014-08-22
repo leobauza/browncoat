@@ -20,21 +20,21 @@ $focus_border: rgba(82, 168, 236, 0.8);
 
 //factory
 @function ColourConstructor ($perc, $colour) {
-	@if $perc > 0 {
-		@return darken($colour, $perc)
-	}
-	@if $perc < 0 {
-		@return lighten($colour, $perc * -1)
-	}
-	@if $perc == 0 {
-		@return $colour
-	}
+  @if $perc > 0 {
+    @return darken($colour, $perc)
+  }
+  @if $perc < 0 {
+    @return lighten($colour, $perc * -1)
+  }
+  @if $perc == 0 {
+    @return $colour
+  }
 }
 
 
 //functions
 @function Greyscale ($perc: 50) {
-	@return darken(#fff, $perc)
+  @return darken(#fff, $perc)
 }
 
 
@@ -60,6 +60,13 @@ $global_family: $sans_serif; //not everything inherits from the body...so we hav
 
 $text_size: 1.6em;
 $text_line_height: 1.6em;
+
+$h1: 4.8em;
+$h2: 3.6em;
+$h3: 2.8em;
+$h4: 2.2em;
+$h5: 1.8em;
+$h6: 1.4em;
 
 $lists_font_size: $text_size;
 $lists_line_height: $text_line_height;
