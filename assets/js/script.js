@@ -15,7 +15,7 @@ var APP = APP || {
     ;
     //strip redundant leading global
     if (parts[0] === this.name) {
-    	parts = parts.slice(1);
+      parts = parts.slice(1);
     }
     for (i = 0; i < parts.length; i += 1) {
     	//create a property if it doesn't exist
