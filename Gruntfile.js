@@ -2,7 +2,6 @@ module.exports = function(grunt) {
 
   // Project configuration.
   grunt.initConfig({
-
     pkg: grunt.file.readJSON('package.json'),
 
     sass: {
@@ -16,17 +15,19 @@ module.exports = function(grunt) {
       }
     },
 
-    // concat: {
-    //   options: {
-    //     separator: '\n',
-    //   },
-    //   dist: {
-    //     src: [
-    //       'client/assets/js/**/*.js'
-    //     ],
-    //     dest: 'public/assets/js/concat.js'
-    //   }
-    // },
+    concat: {
+      options: {
+        separator: '\n',
+      },
+      dist: {
+        src: [
+          'src/js/flyweightclass.js',
+          'src/js/script.js'
+        ],
+        dest: 'web/assets/js/concat.js'
+      }
+    },
+
     //
     // uglify: {
     //   script: {
@@ -46,14 +47,14 @@ module.exports = function(grunt) {
         options: {
           spawn: false
         }
+      },
+      js: {
+        files: ['src/js/**/*.js'],
+        tasks: ['concat'],
+        options: {
+          spawn: false
+        }
       }
-      // ,js: {
-      //   files: ['client/assets/js/**/*.js'],
-      //   tasks: ['concat', 'uglify'],
-      //   options: {
-      //     spawn: false
-      //   }
-      // }
     },
 
   });
