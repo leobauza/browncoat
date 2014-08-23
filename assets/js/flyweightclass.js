@@ -5,8 +5,8 @@ var APP = APP || {};
 APP = function (name) {
 
   if(!(this instanceof APP)) {
-		return new APP(name)
-	}
+    return new APP(name)
+  }
 
   this.name = name || 'App';
 
@@ -49,20 +49,20 @@ APP = function (name) {
 
   this.ns = function (ns_string) {
     var
-    	parts = ns_string.split('.'),
-    	parent = this,
-    	i
+      parts = ns_string.split('.'),
+      parent = this,
+      i
     ;
     //strip redundant leading global
     if (parts[0] === this.name) {
-    	parts = parts.slice(1);
+      parts = parts.slice(1);
     }
     for (i = 0; i < parts.length; i += 1) {
-    	//create a property if it doesn't exist
-    	if (typeof parent[parts[i]] === "undefined") {
-    		parent[parts[i]] = {};
-    	}
-    	parent = parent[parts[i]];
+      //create a property if it doesn't exist
+      if (typeof parent[parts[i]] === "undefined") {
+        parent[parts[i]] = {};
+      }
+      parent = parent[parts[i]];
     }
     return parent;
   }
@@ -91,8 +91,8 @@ APP = function (name) {
 
   //creates a jQuery dependency (don't really need this when working with a "class")
   this.extend = function(object) {
-	   return $.extend(object, this);
-	}
+     return $.extend(object, this);
+  }
 
   return this;
 }

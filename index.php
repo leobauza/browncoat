@@ -1,13 +1,13 @@
 <?php
 
 function render_template($filename, $variables) {
-	//$variables['new'] = 'new value!';
-	extract($variables);
-	ob_start();
-	require("./docs-php/templates/" . $filename . ".php");
-	$contents = ob_get_contents(); 
-	ob_end_clean();
-	return $contents;
+  //$variables['new'] = 'new value!';
+  extract($variables);
+  ob_start();
+  require "./docs-php/templates/" . $filename . ".php";
+  $contents = ob_get_contents();
+  ob_end_clean();
+  return $contents;
 }
 
 require_once 'docs-php/Slim/Slim.php';
@@ -32,74 +32,74 @@ $app -> get('/pages/:id(/)', 'page');
 
 //functions
 function homepage() {
-	echo render_template("template", array(
-		'body' => './docs-php/views/_home.php',
-		'title' => 'home'
-	));
+  echo render_template("template", array(
+    'body' => './docs-php/views/_home.php',
+    'title' => 'home'
+  ));
 }
 
 function libraries() {
-	echo render_template("template", array(
-		'body' => './docs-php/views/_libraries.php'
-		,'title' => 'libraries'
-		,'activeNav' => 'libraries'
-	));
+  echo render_template("template", array(
+    'body' => './docs-php/views/_libraries.php'
+    ,'title' => 'libraries'
+    ,'activeNav' => 'libraries'
+  ));
 }
 
 function css() {
-	echo render_template("template", array(
-		'body' => './docs-php/views/_css.php'
-		,'title' => 'css'
-		,'activeNav' => 'css'
-	));
+  echo render_template("template", array(
+    'body' => './docs-php/views/_css.php'
+    ,'title' => 'css'
+    ,'activeNav' => 'css'
+  ));
 }
 
 function layouts() {
-	echo render_template("template", array(
-		'body' => './docs-php/views/_layouts.php'
-		,'title' => 'layouts'
-		,'activeNav' => 'layouts'
-	));
+  echo render_template("template", array(
+    'body' => './docs-php/views/_layouts.php'
+    ,'title' => 'layouts'
+    ,'activeNav' => 'layouts'
+  ));
 }
 
 function removingthings() {
-	echo render_template("template", array(
-		'body' => './docs-php/views/_removingthings.php',
-		'title' => 'Removing Things'
-	));
+  echo render_template("template", array(
+    'body' => './docs-php/views/_removingthings.php',
+    'title' => 'Removing Things'
+  ));
 }
 
 function layout($id) {
-	if($id == 'fluidrows') {
-		echo render_template("template", array(
-			'body' => './docs-php/views/layouts/_fluidRows.php'
-			,'link' => '<p><a href="/layouts">Back to layouts</a></p>'
-			,'title' => 'Fluid Rows'
-			,'activeNav' => 'layouts'
-		));
-	}
-	if($id == 'staticsidebar') {
-		echo render_template("template", array(
-			'body' => './docs-php/views/layouts/_staticSidebar.php'
-			,'link' => '<p><a href="/layouts">Back to layouts</a></p>'
-			,'title' => 'Static Sidebar'
-			,'activeNav' => 'layouts'
-		));
-	}
+  if($id == 'fluidrows') {
+    echo render_template("template", array(
+      'body' => './docs-php/views/layouts/_fluidRows.php'
+      ,'link' => '<p><a href="/layouts">Back to layouts</a></p>'
+      ,'title' => 'Fluid Rows'
+      ,'activeNav' => 'layouts'
+    ));
+  }
+  if($id == 'staticsidebar') {
+    echo render_template("template", array(
+      'body' => './docs-php/views/layouts/_staticSidebar.php'
+      ,'link' => '<p><a href="/layouts">Back to layouts</a></p>'
+      ,'title' => 'Static Sidebar'
+      ,'activeNav' => 'layouts'
+    ));
+  }
 }
 function test() {
-	echo render_template("template", array(
-		'body' => './docs-php/views/etc/_layoutTest.php',
-		'title' => 'test'
-	));
+  echo render_template("template", array(
+    'body' => './docs-php/views/etc/_layoutTest.php',
+    'title' => 'test'
+  ));
 }
 function page($id) {
-	echo render_template("template", array(
-		'body' => './docs-php/views/pages/_' . $id . '.php'
-		//,'link' => '<p><a href="/layouts">Back to layouts</a></p>'
-		,'title' => $id
-		,'page' => true
-	));
+  echo render_template("template", array(
+    'body' => './docs-php/views/pages/_' . $id . '.php'
+    //,'link' => '<p><a href="/layouts">Back to layouts</a></p>'
+    ,'title' => $id
+    ,'page' => true
+  ));
 }
 
 $app->run();
