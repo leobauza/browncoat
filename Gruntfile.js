@@ -11,7 +11,7 @@ module.exports = function(grunt) {
           style: 'compressed' //compressed or compact or expanded
         },
         files: {
-          'assets/css/styles.css' : 'assets/scss/styles.scss'
+          'web/assets/css/styles.css' : 'src/scss/styles.scss'
         }
       }
     },
@@ -41,7 +41,7 @@ module.exports = function(grunt) {
         livereload: true
       },
       css: {
-        files: ['assets/scss/**/*.scss'],
+        files: ['src/scss/**/*.scss'],
         tasks: ['sass'],
         options: {
           spawn: false

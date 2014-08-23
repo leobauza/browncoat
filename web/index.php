@@ -1,4 +1,8 @@
 <?php
+/**
+ * @file
+ * Description
+ */
 
 function render_template($filename, $variables) {
   //$variables['new'] = 'new value!';
@@ -70,7 +74,7 @@ function removingthings() {
 }
 
 function layout($id) {
-  if($id == 'fluidrows') {
+  if ($id == 'fluidrows') {
     echo render_template("template", array(
       'body' => './docs-php/views/layouts/_fluidRows.php'
       ,'link' => '<p><a href="/layouts">Back to layouts</a></p>'
@@ -78,7 +82,7 @@ function layout($id) {
       ,'activeNav' => 'layouts'
     ));
   }
-  if($id == 'staticsidebar') {
+  if ($id == 'staticsidebar') {
     echo render_template("template", array(
       'body' => './docs-php/views/layouts/_staticSidebar.php'
       ,'link' => '<p><a href="/layouts">Back to layouts</a></p>'
@@ -98,13 +102,9 @@ function page($id) {
     'body' => './docs-php/views/pages/_' . $id . '.php'
     //,'link' => '<p><a href="/layouts">Back to layouts</a></p>'
     ,'title' => $id
-    ,'page' => true
+    ,'page' => TRUE
   ));
 }
 
 $app->run();
-
-
-?>
-
 

@@ -1,6 +1,12 @@
 Welcome to browncoat 0.2.3
 ==================
 
+# THE PROBLEM TO FIX
+We are thinking about the assets folder wrong...
+- SCSS and JS are/can be mixed.
+- A module may have SCSS files and JS files that are related.
+- There ought to be a mechanism for this...
+- There ought to be a public folder where things get compiled to using GRUNT
 
 ## about this project
 browncoat (lower case "b") is a light front end library. It is built using scss and uses require.js for scripts. It is meant for fast prototyping of small projects, or to be used as a sandbox to test out new technologies. It runs on the PHP micro-framework SLIM to create a very basic template structure.
@@ -14,15 +20,15 @@ browncoat (lower case "b") is a light front end library. It is built using scss 
 
 ### templates and views
 - There is one template that is basically an html wrapper localated at templates/template.php
-- All the pages are set up as views with subviews in the views/ directory. ie. to edit the homepage you would open the file at views/_home.php and edit that.
+- All the pages are set up as views with subviews in the views/ directory. ie. to edit the homepage you would open the file at `views/_home.php` and edit that.
 
 ### scss
 
 - Found in the assets/scss directory
 - There are 3 main files:
-	1. \_app.scss: this file combines all the files inside the assets/scss/app folder. These files are app specific and make up the libraries included with browncoat.
-	2. \_browncoat.scss: this file combines all the files inside the assets/scss/browncoat directory. These files are all the bases and variables that form the core of browncoat.
-	3. \_styles.scss: this file combines the above to files and is the single file that needs to be compiled.
+  1. `\_app.scss`: this file combines all the files inside the assets/scss/app folder. These files are app specific and make up the libraries included with browncoat.
+  2. `\_browncoat.scss`: this file combines all the files inside the assets/scss/browncoat directory. These files are all the bases and variables that form the core of browncoat.
+  3. `\_styles.scss`: this file combines the above to files and is the single file that needs to be compiled.
 
 > note: inside the browncoat/ directory there are two folders bases and normalizers. By "browncoat convention" the bases folder are meant for variables, placeholders, and mixins, meaning none of those files should output any real CSS.
 
@@ -60,18 +66,12 @@ I am working on an easier go at installing browncoat using a combination of grun
 
 ### changelog (highlights)
 
-##### v0.1.9
-- The first "version"
-
-##### v0.2.0
-- Slim php framework added (templates and views)
-- Moved from less to scss
-- Added require.js to structure js
-- Added r.js for build
-
-##### v0.2.1
-- Add change log to readme
-- Add license
+##### v0.2.3 (in progress)
+- Documentation for CSS section
+- Documentation patterns defined
+- New %row class (scratch that, this should be a @mixin)
+- Reorganized all SCSS, revised folder structure, and revised some rules
+- Added Gruntfile
 
 ##### v0.2.2
 - Javascript clean up
@@ -81,31 +81,19 @@ I am working on an easier go at installing browncoat using a combination of grun
 - Add new form styles
 - Add code to documentation, revamp all css section documentation.
 
-##### v0.2.3 (in progress)
-- Documentation for CSS section
-- Documentation patterns defined
-- New %row class (scratch that, this should be a @mixin)
-- Reorganized all SCSS, revised folder structure, and revised some rules
+##### v0.2.1
+- Add change log to readme
+- Add license
+
+##### v0.2.0
+- Slim php framework added (templates and views)
+- Moved from less to scss
+- Added require.js to structure js
+- Added r.js for build
+
+##### v0.1.9
+- The first "version"
+
 
 ### Plan
 
-##### v0.2
-This version will see the finalizing of all base browncoat css code
-
-##### v0.3
-This version will see the finalizing of all the existing libraries css code
-
-##### v0.4
-This version will see the finalizing of all the existing vendors css code
-
-##### v0.5
-This version will see the finalizing of javascript starter code (both require.js style and non require.js)
-
-##### v0.6
-This version will address all documentation concerns. Rearranging of directories, corrections, structure, etc.
-
-##### v0.7
-Basic sample pages developed. Possibly with new libraries and plugins.
-
-##### v0.8
-Including grunt.
