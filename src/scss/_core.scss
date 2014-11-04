@@ -1,9 +1,14 @@
-//config
-@import 'config/bases',
-        'config/vars',
-        'config/mixins';
+/**
+ * Config
+ * Variables and utilities
+ */
+@import 'config/vars',
+        'config/utils';
 
-//core
+/**
+ * Core
+ * Base styles
+ */
 @import 'core/reset',
         'core/layout',
         'core/list',
