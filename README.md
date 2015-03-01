@@ -1,13 +1,6 @@
 Welcome to browncoat 0.2.3
 ==================
 
-# THE PROBLEM TO FIX
-We are thinking about the assets folder wrong...
-- SCSS and JS are/can be mixed.
-- A module may have SCSS files and JS files that are related.
-- There ought to be a mechanism for this...
-- There ought to be a public folder where things get compiled to using GRUNT
-
 ## about this project
 browncoat (lower case "b") is a light front end library. It is built using scss and uses require.js for scripts. It is meant for fast prototyping of small projects, or to be used as a sandbox to test out new technologies. It runs on the PHP micro-framework SLIM to create a very basic template structure.
 
@@ -66,7 +59,7 @@ I am working on an easier go at installing browncoat using a combination of grun
 
 ### changelog (highlights)
 
-##### v0.2.3 (in progress)
+##### v0.2.3
 - Documentation for CSS section
 - Documentation patterns defined
 - New %row class (scratch that, this should be a @mixin)
