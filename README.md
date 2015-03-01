@@ -1,16 +1,8 @@
-Welcome to browncoat 0.2.3
+Welcome to browncoat 0.3 (codename: `gulp magic`)
 ==================
-
-# THE PROBLEM TO FIX
-We are thinking about the assets folder wrong...
-- SCSS and JS are/can be mixed.
-- A module may have SCSS files and JS files that are related.
-- There ought to be a mechanism for this...
-- There ought to be a public folder where things get compiled to using GRUNT
 
 ## about this project
 browncoat (lower case "b") is a light front end library. It is built using scss and uses require.js for scripts. It is meant for fast prototyping of small projects, or to be used as a sandbox to test out new technologies. It runs on the PHP micro-framework SLIM to create a very basic template structure.
-
 
 ### instructions to see a front page
 
@@ -65,6 +57,13 @@ I am working on an easier go at installing browncoat using a combination of grun
 
 
 ### changelog (highlights)
+
+##### v0.3
+- Removed grunt in favour of gulp*
+- Fixed up some scss
+- %row uses %group to have all rows properly clearfix automatically
+
+* This is the `gulp-starter`. We will be breaking out gulp-starter into its own repo and using it as a submodule here with a `config.default.js` commited and a `config.js` .gitignored
 
 ##### v0.2.3
 - Documentation for CSS section

@@ -3,6 +3,11 @@ var src = './src',
     theme = '.';
 
 module.exports = {
+  main: {
+    src: src,
+    dest: dest,
+    theme: theme
+  },
   browserify: {
     bundleConfigs: [{
       entry: src + '/js/app.js',
