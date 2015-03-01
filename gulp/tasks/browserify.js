@@ -33,8 +33,7 @@ gulp.task('browserify', function () {
       b = watchify(b);
 
       b
-      .on('update', bundle)
-      .on('error', handleErrors);
+      .on('update', bundle);
 
       cache[filename] = b;
 
@@ -53,6 +52,7 @@ gulp.task('browserify', function () {
 
       return gulp.src([bundleConfig.entry])
         .pipe(bundle)
+        .on('error', handleErrors)
         .pipe(rename(bundleConfig.outputName))
         .pipe(gulp.dest(bundleConfig.dest))
         .on('end', function () {
