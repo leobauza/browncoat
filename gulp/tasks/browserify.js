@@ -26,7 +26,7 @@ gulp.task('browserify', function () {
         fullPaths: true,
         paths: [
           './node_modules',
-          './sites/all/themes/jf/src/js',
+          './src/js',
         ]
       });
 

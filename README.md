@@ -66,7 +66,7 @@ I am working on an easier go at installing browncoat using a combination of grun
 
 ### changelog (highlights)
 
-##### v0.2.3 (in progress)
+##### v0.2.3
 - Documentation for CSS section
 - Documentation patterns defined
 - New %row class (scratch that, this should be a @mixin)
