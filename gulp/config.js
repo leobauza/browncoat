@@ -1,12 +1,12 @@
 var src = './src',
     dest = './web/assets',
-    theme = '.';
+    base = '.';
 
 module.exports = {
   main: {
     src: src,
     dest: dest,
-    theme: theme
+    base: base
   },
   browserify: {
     bundleConfigs: [{
@@ -28,10 +28,10 @@ module.exports = {
   },
   sprite: {
     entry: src + '/icons/*.svg',
-    dest: theme,
+    dest: base,
     name: 'sprite.svg', // file name
     sprite: './web/assets/img/', // dest rel to theme
     scss:'./src/scss/core/_sprite.scss', // dest rel to theme
-    img: theme + '/web/assets/img' //img location for svg2png
+    img: base + '/web/assets/img' //img location for svg2png
   }
 };

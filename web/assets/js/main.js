@@ -1,14 +1,15 @@
 (function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({"/Users/lbauza/Sites/Frameworks/browncoat/src/js/app.js":[function(require,module,exports){
 "use strict";
 
-var Flyweight;
+var Flyweight, Sample;
 
 if (typeof require === 'function') {
   Flyweight = require('libs/flyweight');
+  Sample = require('modules/sample');
 }
 
 console.log(Flyweight);
-},{"libs/flyweight":"/Users/lbauza/Sites/Frameworks/browncoat/src/js/libs/flyweight.js"}],"/Users/lbauza/Sites/Frameworks/browncoat/src/js/libs/flyweight.js":[function(require,module,exports){
+},{"libs/flyweight":"/Users/lbauza/Sites/Frameworks/browncoat/src/js/libs/flyweight.js","modules/sample":"/Users/lbauza/Sites/Frameworks/browncoat/src/js/modules/sample.js"}],"/Users/lbauza/Sites/Frameworks/browncoat/src/js/libs/flyweight.js":[function(require,module,exports){
 /**
  * The Flyweight Class
  */
@@ -460,4 +461,57 @@ console.log(Flyweight);
 
 });
 
-},{}]},{},["/Users/lbauza/Sites/Frameworks/browncoat/src/js/app.js"]);
+},{}],"/Users/lbauza/Sites/Frameworks/browncoat/src/js/modules/sample.js":[function(require,module,exports){
+(function ($) {
+
+  "use strict";
+
+  var Flyweight;
+
+  if (typeof require === 'function' && typeof Flyweight !== 'function') {
+    Flyweight = require('libs/flyweight');
+  }
+
+  /**
+   * @doc module
+   * @name Sample
+   * @description
+   * A sample fw module that uses Utils
+   */
+  var Sample = Flyweight.Module.extend({
+    name: 'Sample',
+    el: 'body',
+    moduleOptions: {
+      optionOne: 'my option default'
+    },
+    debug: false,
+    initialize: function () {
+      this.msg(this.$el); //access the module element through this.$el
+      this.msg(this.optionOne); //access to modules options
+    },
+    onDelegated: function (e) {
+      this.msg("onDelegate Sample (replaces empty default)");
+    },
+    test: function (e) {
+      var _this = e.data.context,
+          $this = $(this),
+          html = $this.html();
+
+      _this.msg("CHANGE ME");
+
+    },
+    events: {
+      'click p' : 'test'
+    }
+  });
+
+  //Exports the page module for app.js to use
+  module.exports = {
+    sample: new Sample('body', {
+      optionOne: 'change option one'
+    }),
+    sampletwo: new Sample(document)
+  };
+
+})(jQuery);
+},{"libs/flyweight":"/Users/lbauza/Sites/Frameworks/browncoat/src/js/libs/flyweight.js"}]},{},["/Users/lbauza/Sites/Frameworks/browncoat/src/js/app.js"]);

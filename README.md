@@ -2,7 +2,31 @@ Welcome to browncoat 0.3 (codename: `gulp magic`)
 ==================
 
 ## about this project
-browncoat (lower case "b") is a light front end library. It is built using scss and uses require.js for scripts. It is meant for fast prototyping of small projects, or to be used as a sandbox to test out new technologies. It runs on the PHP micro-framework SLIM to create a very basic template structure.
+Browncoat is a front end framework. It uses scss as a css preprocessor, browserify and flyweight for modularized javascript, and gulp as a task runner. [todo: add links]
+
+## Organization
+
+The `src` directory compiles into the `web` directory. The `src` directory is broken up into three directories:
+
+#### js
+
+Contains all the javascript. Flyweight, and other libraries go inside the `libs` directory. All flyweight modules go in the `modules` directory. All entry point files are directly under the `js` directory. One entry point is added by default `app.js`. There is a sample flyweight module in the `modules` directory. See gulp `browserify` task. [todo: link to this task on the readme]
+
+#### scss
+  
+
+
+#### icons
+
+Contains images that will be combined into a single svg sprite with a png backup. See gulp `sprite` task. [todo: link to this task on the readme]
+
+
+
+using GULP
+
+Using Browserify
+
+SCSS
 
 ### instructions to see a front page
 
