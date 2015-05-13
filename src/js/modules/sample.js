@@ -5,7 +5,7 @@
   var Flyweight;
 
   if (typeof require === 'function' && typeof Flyweight !== 'function') {
-    Flyweight = require('libs/flyweight');
+    Flyweight = require('../libs/flyweight');
   }
 
   /**

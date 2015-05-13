@@ -23,11 +23,11 @@ gulp.task('browserify', function () {
       b = browserify(filename, {
         cache: {},
         packageCache: {},
-        fullPaths: true,
-        paths: [
-          './node_modules',
-          './src/js',
-        ]
+        fullPaths: false
+        // paths: [
+        //   './node_modules',
+        //   './src/js'
+        // ]
       });
 
       b = watchify(b);
