@@ -39,6 +39,7 @@ $global_columns: 12;
 $global_gutter: 3.183;
 
 @mixin rows($gutter: 3.183, $columns: 12) {
+  @extend %group;
   width:100%;
   //margin: 0px 0px 10px;
 
