@@ -13,7 +13,7 @@ The `src` directory compiles into the `web` directory. The `src` directory is br
 Contains all the javascript. Flyweight, and other libraries go inside the `libs` directory. All flyweight modules go in the `modules` directory. All entry point files are directly under the `js` directory. One entry point is added by default `app.js`. There is a sample flyweight module in the `modules` directory. See gulp `browserify` task. [todo: link to this task on the readme]
 
 #### scss
-  
+
 
 
 #### icons
@@ -83,7 +83,7 @@ I am working on an easier go at installing browncoat using a combination of grun
 ### changelog (highlights)
 
 ##### v0.3
-- Removed grunt in favour of gulp*
+- Added gulp*
 - Fixed up some scss
 - %row uses %group to have all rows properly clearfix automatically
 
