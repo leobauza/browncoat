@@ -7,24 +7,25 @@ browser:
 snap_file: "javascript/casper.js"
 
 # Type the name of the directory that shots will be stored in
-directory: 'shots'
+directory: 'casper_shots'
+history_dir: 'casper_history_shots'
 
 # Add only 2 domains, key will act as a label
 domains:
-  russian: "http://browncoat.loc"
-  arabic: "http://browncoat.loc"
+  browncoat: "http://browncoat.loc"
+  # arabic: "http://browncoat.loc"
 
 #Type screen widths below, here are a couple of examples
 screen_widths:
   - 320
-  - 600
+  # - 600
   - 768
-  - 1024
+  # - 1024
   - 1280
 
 #Type page URL paths below, here are a couple of examples
 paths:
-  brand:
+  header:
     path: /
     selector: '.site-header'
 

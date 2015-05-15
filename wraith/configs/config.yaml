@@ -18,15 +18,17 @@ domains:
 #Type screen widths below, here are a couple of examples
 screen_widths:
   - 320
-  - 600
+  # - 600
   - 768
-  - 1024
+  # - 1024
   - 1280
 
 #Type page URL paths below, here are a couple of examples
 paths:
   home: /
   libraries: /libraries
+  css: /css
+  layouts: /layouts
 
 #Amount of fuzz ImageMagick will use
 fuzz: '20%'
