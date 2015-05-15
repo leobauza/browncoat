@@ -1,0 +1,64 @@
+/*
+ * 03_collections/dropdowns
+ * Styles for dropdowns
+ */
+
+.dropdown-group {
+  position:relative;
+  margin:0 0 20px;
+  %btn { //use the placeholder class
+    margin-bottom:0;
+  }
+  .dropdown-menu {
+    display: none;
+  }
+  &.open {
+    z-index: 100; //fix ie 7
+    .dropdown-menu {
+      display:block;
+    }
+  }
+  .btn-group {
+    margin: 0;
+  }
+}
+.dropdown-menu {
+  @include resetList();
+  position: absolute;
+  top: 100%;
+  left:0;
+  margin: 2px 0 0 0;
+  background: $white;
+  border: 1px solid Greyscale(10);
+  z-index: 100;
+  li {
+    margin: 0;
+    a {
+      display:block;
+      padding: 5px 15px;
+      font-size: $text_size;
+      line-height: $text_line_height;
+      color: $text_colour;
+      &:hover {
+        text-decoration: none;
+        background: Greyscale(10);
+      }
+    }
+  }
+}
+
+.caret {
+  @include inlineBlock(5px);
+  vertical-align: middle;
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 5px solid $white;
+}
+.active {
+  .caret {
+    border-top: none;
+    border-bottom: 5px solid $white;
+  }
+}

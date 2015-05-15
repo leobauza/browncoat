@@ -1,6 +1,28 @@
-//import entire core library (_core.scss)
-@import 'core';
-//import all app files (_app.scss)
-@import 'app';
-//import all modules files (_modules.scss)
-@import 'modules';
+// 00 bits
+@import '00_bits/vars',
+        '00_bits/utils',
+        '00_bits/sprites';
+// 01 elements
+@import '01_elements/resets',
+        '01_elements/lists',
+        '01_elements/forms',
+        '01_elements/tables';
+// 02 items
+@import '02_items/btns',
+        '02_items/callouts',
+        '02_items/dropdowns',
+        '02_items/listgroups';
+// 03 collections
+@import '03_collections/boxes',
+        '03_collections/dropdowns',
+        '03_collections/heroes',
+        '03_collections/modals',
+        '03_collections/navs';
+// 04 sections
+@import '04_sections/header',
+        '04_sections/main',
+        '04_sections/sidebar',
+        '04_sections/footer';
+// 05 layouts
+@import '05_layouts/site',
+        '05_layouts/etc';

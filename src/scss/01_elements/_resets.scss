@@ -1,15 +1,7 @@
-/* core/reset */
-//border box
-%borderBox {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  &:before, &:after {
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-  }
-}
+/*
+ * 01_elements/reset
+ * CSS reset styles + vars integration
+ */
 
 article,
 aside,

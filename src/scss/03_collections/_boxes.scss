@@ -1,4 +1,8 @@
-/* app/components/box */
+/*
+ * 03_collections/boxes
+ * Styles for boxes
+ */
+
 %box {
   @include marpad(0 0 10px, 0px);
   @include borderRadius(5px);

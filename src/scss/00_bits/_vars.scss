@@ -1,4 +1,8 @@
-/* config/_vars (does not output css) */
+/*
+ * 00_bits/vars
+ * Variables for colours and typography
+ */
+
 //greyscale
 $white: #fff;
 $black: #000;
@@ -8,15 +12,12 @@ $brand: #8790A5;
 $brand_alt: darken($brand, 10);
 $body_bg: $white;
 
-
 //links
 $link_colour: #428bca;
 $link_hover_colour: darken($link_colour, 20);
 
-
 //focus
 $focus_border: rgba(82, 168, 236, 0.8);
-
 
 //factory
 @function ColourConstructor ($perc, $colour) {
@@ -31,12 +32,10 @@ $focus_border: rgba(82, 168, 236, 0.8);
   }
 }
 
-
 //functions
 @function Greyscale ($perc: 50) {
   @return darken(#fff, $perc)
 }
-
 
 //boxes and text
 $text_colour: ColourConstructor(80, $white);
