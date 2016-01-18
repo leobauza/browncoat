@@ -39,12 +39,13 @@ todo! Now with new atomic structure!
 Contains images that will be combined into a single svg sprite with a png backup. See gulp `sprite` task. [todo: link to this task on the readme]
 
 
+#### GULP
 
-using GULP
+Note: We are using an old version of browserify in our gulp tasks so that we can use vinyl-transform instead of vinyl-source-stream in an undefined way. Why? Because I am too lazy right now to change my code to use vinyl-source-stream and glob. (see: https://wehavefaces.net/gulp-browserify-the-gulp-y-way-bb359b3f9623#.wtqf933fv)
 
-Using Browserify
+#### browserify
 
-SCSS
+See browserify documentation.
 
 ### instructions to see a front page
 
@@ -55,14 +56,6 @@ SCSS
 ### templates and views
 - There is one template that is basically an html wrapper localated at templates/template.php
 - All the pages are set up as views with subviews in the views/ directory. ie. to edit the homepage you would open the file at `views/_home.php` and edit that.
-
-### scss
-
-
-### compiling scss
-
-
-### js (use browserify)
 
 
 ### versioning
