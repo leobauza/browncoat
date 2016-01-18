@@ -3,7 +3,7 @@
  * Styles for specialized lists (listgroups)
  */
 
-$listGroupBorder: Greyscale(10);
+$listGroupBorder: lighten($black, 90);
 %listGroupItem {
   margin:0;
   padding:10px;
@@ -36,7 +36,7 @@ ul.list-group {
     display: block;
 
     &:hover {
-      background: Greyscale(5);
+      background: lighten($black, 95);
       text-decoration:none;
     }
     &.active {
