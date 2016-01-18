@@ -86,6 +86,7 @@ I am working on an easier go at installing browncoat using a combination of grun
 ##### v0.4
 - Added Visual Regression Testing with Wraith (responsive screenshot comparisons)
 - Reorganized CSS to follow atomic-like structure
+- Added IE compatibility for `gulp sprite`
 
 ##### v0.3
 - Added gulp*

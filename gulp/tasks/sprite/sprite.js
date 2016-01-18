@@ -32,6 +32,11 @@ gulp.task('svgSprite', function () {
           var vals = render(values).split('|');
           return vals[0] - vals[1];
         };
+      },
+      png: function() {
+        return function(sprite, render) {
+          return render(sprite).split('.svg').join('.png');
+        };
       }
     }
   };
