@@ -50,8 +50,6 @@ body {
   background: $body_bg;
   font-size: $base_size;
   @include marpad(0px, 0px);
-  //font-family: $serif;
-  //font-family: $sans_serif;
   font-family: $global_family;
   word-wrap: break-word;
 }
@@ -59,8 +57,8 @@ hr {
   height: 1px;
   @include marpad(0px 0px 20px 0px, 0px);
   border: 0;
-  border-bottom: 1px solid Greyscale(0);
-  border-top: 1px solid Greyscale(12);
+  border-bottom: 1px solid $white;
+  border-top: 1px solid lighten($black, 90);
   clear: both;
   overflow: 0;
 }
@@ -106,7 +104,7 @@ h4,
 h5,
 h6 {
   margin: 0 0 .38196em;
-  font-weight: 500;
+  font-weight: $boldFont;
   text-rendering: optimizelegibility;
   line-height: 1.2em;
   color: $text_colour;
@@ -150,11 +148,11 @@ code {
   font-size: 85%;
   padding: 2px 4px;
   color: $info;
-  background: Greyscale(5);
+  background: lighten($black, 90);
 }
 
 .reverse {
-  background: Greyscale(85);
+  background: lighten($black, 25);
   h1,
   h2,
   h3,

@@ -16,7 +16,7 @@
 }
 
 .division {
-  border-bottom: 1px solid Greyscale(20);
+  border-bottom: 1px solid lighten($black, 80);
   margin: 0 0 20px;
 }
 .division-flush {

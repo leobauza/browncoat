@@ -11,10 +11,10 @@
           border-radius:$radius!important;
 }
 
-$docBorder: Greyscale(12);
+$docBorder: lighten($black, 88);
 
 .bc-soon {
-  color: Greyscale(25);
+  color: lighten($black, 75);
 }
 
 .site-header {
@@ -71,7 +71,7 @@ $docBorder: Greyscale(12);
     left: 20px;
     font-size: 2em;
     font-weight: 500;
-    color: Greyscale(25);
+    color: lighten($black, 75);
   }
   &.rel-files {
     &:after {

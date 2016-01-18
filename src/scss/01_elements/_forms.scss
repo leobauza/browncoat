@@ -19,7 +19,7 @@ form {
     line-height: 1.8em;
     width: 100%;
     margin: 0 0 10px;
-    color: Greyscale(50);
+    color: lighten($black, 50);
     @extend %borderBox;
   }
 
@@ -39,7 +39,7 @@ form {
     height: 34px;
     padding: 4px;
     //margin-bottom: 9px;
-    color: Greyscale(75);
+    color: lighten($black, 25);
     margin-left:0;
   }
 
@@ -48,7 +48,7 @@ form {
   input[type="password"],
   input[type="email"] {
     background-color: $white;
-    border:1px solid Greyscale(25);
+    border:1px solid lighten($black, 25);
     @include borderRadius();
     //@include boxShadow(inset 0 1px 1px rgba(0, 0, 0, 0.5));
     &:focus {
@@ -61,7 +61,7 @@ form {
 
   select {
     background-color: $white;
-    border: 1px solid Greyscale();
+    border: 1px solid lighten($black, 50);
     height: 30px;
     line-height: 30px;
     @include borderRadius(5px);
@@ -115,9 +115,9 @@ fieldset {
 }
 
 .form__collection {
-  background: Greyscale(5);
+  background:  lighten($black, 95);
   padding: 10px;
-  border: 1px solid Greyscale();
+  border: 1px solid  lighten($black, 50);
   margin: 0 0 10px;
 }
 .form__group {
@@ -128,7 +128,7 @@ fieldset {
   padding: 3px 0px;
   margin: 0px;
   font-size: 1.4em;
-  color: Greyscale(50);
+  color: lighten($black, 50);
 }
 
 %radio_checkbox {
