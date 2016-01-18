@@ -1,0 +1,178 @@
+/*
+ * 05_layouts/site
+ * Main site layout styles
+ */
+
+.container {
+  padding: 0px 20px;
+}
+.divider {
+  padding: 20px;
+}
+
+.padder {
+  padding-top:20px;
+  padding-bottom:20px;
+}
+
+.division {
+  border-bottom: 1px solid Greyscale(20);
+  margin: 0 0 20px;
+}
+.division-flush {
+  @extend .division;
+  margin: 0;
+}
+
+.spacer {
+  margin: 0 0 20px;
+}
+
+[class*="row-fluid"] > [class*="span"],
+.row-static > [class*="span"] {
+  .inner {
+    padding:20px;
+  }
+}
+
+/*
+ * base rows
+ */
+//grid
+$global_columns: 12;
+$global_gutter: 3.183;
+
+@mixin rows($gutter: 3.183, $columns: 12) {
+  @extend %group;
+  width:100%;
+  //margin: 0px 0px 10px;
+
+  &> [class*="span"] {
+    float:left;
+    margin-right: $gutter * 1%;
+    &.l {
+      margin-right:0;
+    }
+    &:last-child {
+      margin-right:0;
+    }
+  }
+
+  @for $i from 1 through $columns {
+    $col_width: (99.9998 / $columns);
+
+    & > .span#{$i} {
+      $col_remainder: ($gutter/$columns) * $i;
+      width: ($col_width * $i - $gutter + $col_remainder) * 1%;
+    }
+  }
+}
+
+/*
+ * new: basic row
+ */
+.row {
+  @include rows($global_gutter, $global_columns);
+  width: (100 - $global_gutter * 2) * 1%;
+  padding: 0 $global_gutter * 1%;
+}
+
+
+/*
+ * fluid row using overflow hidden
+ */
+
+.row-fluid {
+  @include rows($global_gutter, $global_columns);
+
+  &> [class*="span"] {
+    &.l {
+      margin-right: 0;
+      @include overflower;
+    }
+    &:last-child {
+      margin-right: 0;
+      @include overflower;
+    }
+  }
+}
+
+
+/*
+ * fluid row using percentages
+ */
+
+.row-fluid--alt {
+  @include rows();
+}
+
+
+/*
+ * fluid row no gutter
+ */
+
+.row-fluid--flush {
+  @include rows($global_gutter, $global_columns);
+
+  &> [class*="span"] {
+    margin-right:0;
+  }
+
+  @for $i from 1 through $global_columns {
+    $alt_col_width: (99.9998 / $global_columns);
+    & > .span#{$i} {
+      width: ($alt_col_width * $i) * 1%;
+    }
+  }
+}
+
+
+/*
+ * static sidebar
+ */
+
+.row-static > {
+  .span-sidebar {
+    width: 250px;
+    float:left;
+  }
+  .span-main {
+    @include overflower;
+  }
+}
+
+
+/*
+ * Alignment
+ */
+
+.al-c {
+  text-align:center;
+}
+.al-r {
+  text-align:right;
+}
+.al-l {
+  text-align:left;
+}
+
+/*
+ * Responsive
+ */
+//@media (max-width: 43.75em) { // 700px
+@media (max-width: 59.9375em) { // 959px
+
+  /*margin right instead of margin left to do overflow hidden*/
+  [class*="row"] > [class*="span"] {
+    float: none;
+    width: auto;
+    margin-right: 0;
+  }
+
+  /*Use this to set exact percentages and have the last box be ok*/
+  [class*="row"] > [class*="span"]:last-child {
+    overflow: visible;
+  }
+
+
+}

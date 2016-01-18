@@ -1,0 +1,85 @@
+/*
+ * 02_items/callouts
+ * Styles for specialized divs (callouts and notes)
+ */
+
+@mixin calloutSetup ($color, $lper: 30, $dper: 30) {
+  background: lighten($color, $lper);
+  border: 1px solid lighten($color, 10);
+  color: darken($color, $dper);
+}
+
+%callout {
+  @include marpad(0 0 10px, 15px);
+  @include borderRadius(5px);
+  font-size: 1.4em;
+}
+
+//callout types
+.callout--default {
+  @extend %callout;
+  @include calloutSetup($default);
+}
+.callout--main {
+  @extend %callout;
+  @include calloutSetup($brand);
+}
+.callout--info {
+  @extend %callout;
+  @include calloutSetup($info);
+}
+.callout--success {
+  @extend %callout;
+  @include calloutSetup($success);
+}
+.callout--warning {
+  @extend %callout;
+  @include calloutSetup($warning);
+}
+.callout--error {
+  @extend %callout;
+  @include calloutSetup($error);
+}
+
+
+//notes (like callouts but different)
+@mixin noteSetup ($color, $lper: 34, $dper: 30, $bper: 20) {
+  background: lighten($color, $lper);
+  border-left: 3px solid lighten($color, $bper);
+  h1, h2, h3, h4, h5, h6, code {
+    color: darken($color, $dper);
+  }
+}
+
+%note {
+  @include marpad(0 0 20px, 15px);
+  p:last-child {
+    margin: 0;
+  }
+}
+
+//callout types
+.note--default {
+  @extend %note;
+  @include noteSetup($default, 22, 30, 15);
+}
+.note--main {
+  @extend %note;
+  @include noteSetup($brand);
+}
+.note--info {
+  @extend %note;
+  @include noteSetup($info, 44);
+}
+.note--success {
+  @extend %note;
+  @include noteSetup($success);
+}
+.note--warning {
+  @extend %note;
+  @include noteSetup($warning);
+}
+.note--error {
+  @extend %note;
+  @include noteSetup($error);
+}

@@ -1,0 +1,209 @@
+/*
+ * 00_bits/utils
+ * Utilities including various mixins and placeholders
+ */
+
+//common box shadows
+$single_shadow: 0px 5px 10px -4px rgba(0, 0, 0, 0.3);
+$form_focus_shadow: inset 0 5px 5px rgba(0, 0, 0, 0.025), 0 0 2px rgba(82, 168, 236, 0.6);
+$inset_shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+
+/**
+ * Mixins
+ */
+
+//css3
+@mixin borderRadius ($radius: 3px) {
+  -webkit-border-radius:$radius;
+     -moz-border-radius:$radius;
+          border-radius:$radius;
+}
+
+@mixin boxShadow ($shadows...) {
+  -webkit-box-shadow: $shadows;
+    -moz-box-shadow: $shadows;
+      box-shadow: $shadows;
+}
+
+@mixin transition ($args...) {
+  transition: $args;
+    -moz-transition: $args;
+      -webkit-transition: $args;
+        -o-transition: $args;
+}
+
+@mixin rotate ($deg) {
+  transform:rotate($deg);
+  -ms-transform:rotate($deg);
+  -webkit-transform:rotate($deg);
+}
+
+//gradients
+@mixin gradient ($top, $bottom){
+  background: $bottom;
+  background:-moz-linear-gradient(top,  $top 0%, $bottom 100%);
+  background:-webkit-gradient(linear, left top, left bottom, color-stop(0%,$top), color-stop(100%,$bottom));
+  background:-webkit-linear-gradient(top,  $top 0%,$bottom 100%);
+  background:-o-linear-gradient(top,  $top 0%,$bottom 100%);
+  background:-ms-linear-gradient(top,  $top 0%,$bottom 100%);
+  background:linear-gradient(to bottom,  $top 0%,$bottom 100%);
+  *filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr=#{$top}, endColorstr=#{$bottom});
+}
+
+// flexbox
+@mixin flexbox() {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+}
+
+@mixin flex($values) {
+  -webkit-box-flex: $values;
+  -moz-box-flex:  $values;
+  -webkit-flex:  $values;
+  -ms-flex:  $values;
+  flex:  $values;
+}
+
+@mixin order($val) {
+  -webkit-box-ordinal-group: $val;
+  -moz-box-ordinal-group: $val;
+  -ms-flex-order: $val;
+  -webkit-order: $val;
+  order: $val;
+}
+
+/**
+ * String Replace for font-face mixin
+ */
+@function str-replace($string, $search, $replace: "") {
+  $index: str-index($string, $search);
+
+  @if $index {
+    @return str-slice($string, 1, $index - 1) + $replace + str-replace(str-slice($string, $index + str-length($search)), $search, $replace);
+  }
+
+  @return $string;
+}
+
+// @fontface
+@mixin font-face($name, $path, $weight: null, $style: null, $exts: eot woff2 woff ttf svg) {
+  $src: null;
+
+  $extmods: (
+    eot: "?",
+    svg: "#" + str-replace($name, " ", "_")
+  );
+
+  $formats: (
+    otf: "opentype",
+    ttf: "truetype"
+  );
+
+  @each $ext in $exts {
+    $extmod: if(map-has-key($extmods, $ext), $ext + map-get($extmods, $ext), $ext);
+    $format: if(map-has-key($formats, $ext), map-get($formats, $ext), $ext);
+    @if $src == null {
+      $src: url(quote($path + "." + $extmod)) + " " + format(quote($format));
+    } @else {
+      $src: append($src, url(quote($path + "." + $extmod)) format(quote($format)), comma);
+    }
+  }
+
+  @font-face {
+    font-family: quote($name);
+    font-style: $style;
+    font-weight: $weight;
+    src: $src;
+  }
+}
+
+//resets
+@mixin resetList ($margin: 0 0 20px, $padding: 0) {
+  margin: $margin;
+  padding: $padding;
+  list-style:none;
+  font-size:100%;
+}
+
+//build box
+@mixin square($w,$h) {
+  width: $w;
+  height: $h;
+}
+@mixin marpad($m:0px,$p:0px) {
+  margin: $m;
+  padding: $p;
+}
+@mixin inlineBlock($h) {
+  display: inline-block;
+  *display: inline;
+  zoom: 1;
+  _height: $h;
+}
+
+//layout
+@mixin overflower {
+  width: auto;
+  float: none;
+  overflow: hidden;
+}
+
+@mixin magicBox($perc:35) {
+  position: relative;
+  padding-bottom: $perc * 1%;
+  height: 0;
+}
+
+//paths
+$path_to_images: "../images/";
+
+@mixin bgImg($name, $l:50%, $t:50%, $repeat:no-repeat) {
+  display: block;
+  background: url($path_to_images + $name) $l $t $repeat;
+}
+
+@mixin bgImgX2($name, $l, $t, $w, $h, $repeat:no-repeat) {
+  @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    display: block;
+    background-image: url($path_to_images + '/x2/' + $name);
+    background-position: $l $t;
+    background-repeat: $repeat;
+    //@include bgImg('/x2/' + $name, $l, $t);
+    background-size: $w $h;
+  }
+}
+
+/**
+ * Placeholders
+ */
+
+//clearfix
+%group {
+  zoom: 1;
+  &:before {
+    display: table;
+    content: "";
+  }
+  &:after {
+    display: table;
+    content: "";
+    clear: both;
+  }
+}
+
+//border box
+%borderBox {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  &:before, &:after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+}
+
+/* end */

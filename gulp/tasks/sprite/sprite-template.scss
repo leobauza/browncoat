@@ -16,7 +16,8 @@ ${{name}}-height: {{height.inner}}px;
 ${{name}}-total-width: {{spriteWidth}}px;
 ${{name}}-total-height: {{spriteHeight}}px;
 ${{name}}-image: '../img/{{{spriteFile}}}';
-${{name}}: 0px 0px {{#calcOffset}}{{position.absolute.x}}|{{padding.right}}{{/calcOffset}}px {{#calcOffset}}{{position.absolute.y}}|{{padding.top}}{{/calcOffset}}px {{width.inner}}px {{height.inner}}px {{spriteWidth}}px {{spriteHeight}}px '../img/{{{spriteFile}}}';
+${{name}}-png-image: '../img/{{#png}}{{{spriteFile}}}{{/png}}';
+${{name}}: 0px 0px {{#calcOffset}}{{position.absolute.x}}|{{padding.right}}{{/calcOffset}}px {{#calcOffset}}{{position.absolute.y}}|{{padding.top}}{{/calcOffset}}px {{width.inner}}px {{height.inner}}px {{spriteWidth}}px {{spriteHeight}}px '../img/{{{spriteFile}}}' '../img/{{#png}}{{{spriteFile}}}{{/png}}';
 {{/shapes}}
 
 /*
@@ -46,7 +47,12 @@ The provided mixins are intended to be used with the array-like variables
 
 @mixin sprite-image($sprite) {
   $sprite-image: nth($sprite, 9);
-  background-image: url(#{$sprite-image});
+  background-image: url(#{$sprite-image}?v=2);
+}
+
+@mixin sprite-png-image($sprite) {
+  $sprite-png-image: nth($sprite, 10);
+  background-image: url(#{$sprite-png-image});
 }
 
 @mixin sprite($sprite) {
@@ -54,4 +60,7 @@ The provided mixins are intended to be used with the array-like variables
   @include sprite-position($sprite);
   @include sprite-width($sprite);
   @include sprite-height($sprite);
+  .lt-ie9 & {
+    @include sprite-png-image($sprite);
+  }
 }

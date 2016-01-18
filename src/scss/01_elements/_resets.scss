@@ -1,0 +1,184 @@
+/*
+ * 01_elements/reset
+ * CSS reset styles + vars integration
+ */
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+nav,
+section {
+  display: block;
+}
+audio, canvas, video {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+}
+audio:not([controls]) {
+  display: none;
+}
+img {
+  max-width: 100%;
+  height: auto;
+  border: 0;
+  -ms-interpolation-mode: bicubic;
+}
+html {
+  font-size: 100%;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+:focus {
+  outline: none;
+  border: none;
+}
+a:focus {
+  outline: none;
+  border: none;
+}
+a:hover, a:active {
+  outline: 0;
+}
+
+body {
+  background: $body_bg;
+  font-size: $base_size;
+  @include marpad(0px, 0px);
+  //font-family: $serif;
+  //font-family: $sans_serif;
+  font-family: $global_family;
+  word-wrap: break-word;
+}
+hr {
+  height: 1px;
+  @include marpad(0px 0px 20px 0px, 0px);
+  border: 0;
+  border-bottom: 1px solid Greyscale(0);
+  border-top: 1px solid Greyscale(12);
+  clear: both;
+  overflow: 0;
+}
+a {
+  color: $link_colour;
+  text-decoration: none;
+}
+a:hover {
+  color: $link_hover_colour;
+  text-decoration: underline;
+}
+button {
+  font-family: $global_family;
+}
+p {
+  font-size: $text_size;
+  line-height: $text_line_height;
+  color: $text_colour;
+  margin: 0 0 20px;
+  padding: 0;
+  &.intro {
+    font-size: 2em;
+    margin: 0 0 40px;
+  }
+  &.soft-intro {
+    font-size: 2em;
+  }
+}
+small {
+  font-size: 80%;
+  line-height: 1;
+}
+strong, b {
+  font-weight: 600;
+}
+em, i {
+  font-style: italic;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0 0 .38196em;
+  font-weight: 500;
+  text-rendering: optimizelegibility;
+  line-height: 1.2em;
+  color: $text_colour;
+  a {
+    color: $link_colour;
+    &:hover {
+      text-decoration:none;
+    }
+  }
+  small {
+    font-size: 70%;
+    color: $litetext_colour;
+  }
+}
+h1 {
+  font-size: $h1;
+}
+h2 {
+  font-size: $h2;
+}
+h3 {
+  font-size: $h3;
+}
+h4 {
+  font-size: $h4;
+}
+h5 {
+  font-size: $h5;
+}
+h6 {
+  font-size: $h6;
+}
+pre {
+  white-space: pre-wrap;
+  font-size: 1.4em;
+  line-height: 1.8em;
+}
+code {
+  @extend %borderBox;
+  font-family: $code;
+  font-size: 85%;
+  padding: 2px 4px;
+  color: $info;
+  background: Greyscale(5);
+}
+
+.reverse {
+  background: Greyscale(85);
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p,
+  li {
+    color: $white;
+  }
+  a {
+    color: lighten($link_colour, 10);
+    &:hover {
+      color: lighten($link_colour, 20);
+    }
+  }
+}
+
+header,
+footer,
+%rows,
+.group,
+.form-group,
+.input-group,
+[class*="-group"] {
+  @extend %group;
+}

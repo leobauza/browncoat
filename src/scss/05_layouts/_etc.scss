@@ -1,0 +1,202 @@
+/*
+ * 05_layouts/etc
+ * This should be empty when going to production
+ * this is a temporary bucket at the highest level
+ * of the scss tree for temporary styles/sandboxing
+ */
+
+@mixin importantBorderRadius ($radius: 3px) {
+  -webkit-border-radius:$radius!important;
+     -moz-border-radius:$radius!important;
+          border-radius:$radius!important;
+}
+
+$docBorder: Greyscale(12);
+
+.bc-soon {
+  color: Greyscale(25);
+}
+
+.site-header {
+  padding-top: 36px;
+  margin:0 0 20px;
+  .nav-bar {
+    position:fixed;
+    top:0;
+    left:0;
+    z-index:100;
+  }
+}
+.short {
+  margin-right: 50%; //does this solve the IE issue?
+}
+
+.boxy {
+  border:1px solid ColourConstructor(0, $brand);
+  background: ColourConstructor(-100, $brand_alt);
+  color: $text_colour;
+}
+
+
+
+
+
+
+/*documentation divisions*/
+.bc-section-header {
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid $docBorder;
+}
+
+.bc-doc-box {
+  padding-bottom: 100px;
+}
+
+.bc-capsule {
+  @include borderRadius(5px);
+  position:relative;
+  border: 1px solid $docBorder;
+  padding: 60px 20px 20px;
+  margin: 0 0 20px;
+  &.code-companion {
+    @include borderRadius(5px 5px 0 0);
+    margin: 0;
+    border-bottom: none;
+  }
+  &:after {
+    content: "Sample";
+    position:absolute;
+    top: 20px;
+    left: 20px;
+    font-size: 2em;
+    font-weight: 500;
+    color: Greyscale(25);
+  }
+  &.rel-files {
+    &:after {
+      content: "Relevant Files";
+    }
+  }
+  ul, p, ol {
+    &:last-child {
+      margin-bottom: 0;
+      li:last-child {
+        margin: 0;
+      }
+    }
+  }
+}
+
+
+
+/*github gist styles*/
+.bc-gist-solo {
+  .gist, .gist-file {
+    @include importantBorderRadius(3px);
+  }
+}
+
+.gist {
+  font-size: 1.3em;
+  margin-bottom: 40px;
+  .gist-file {
+    margin: 0!important;
+    .gist-data .line-pre {
+      font-family: $code!important;
+    }
+    .gist-data .line-numbers {
+      display: none;
+    }
+  }
+}
+.gist, .gist-file {
+  @include importantBorderRadius(0px 0px 3px 3px);
+}
+
+@media (max-width: 959px) {
+  .short {
+    width: auto;
+  }
+}
+
+.narrow-box {
+  width:500px;
+  margin:0 auto 40px;
+}
+
+.paint .inner {
+  background: $brand;
+  border-bottom: 1px solid $black;
+}
+
+/**
+ * Drupal Specific
+ */
+.element-invisible {
+  display: none;
+}
+
+#admin-menu-wrapper {
+  ul {
+    font-size: 100%;
+  }
+  .dropdown > li > ul {
+
+  }
+}
+
+#admin-menu {
+  .dropdown {
+    li {
+      line-height: 1.2em;
+    }
+  }
+}
+
+.page-user {
+  background: $white;
+}
+
+/**
+ * Drupal Tabs
+ */
+.nav-tabs {
+  @extend %group;
+  @include resetList(0px, 10px);
+  li {
+    float: left;
+    margin: 0 2px 0 0;
+  }
+  a {
+    @include borderRadius();
+    background: $brand;
+    color: $white;
+    display: block;
+    padding: 5px 10px;
+    font-weight: 700;
+    font-size: 1.2em;
+    &:hover {
+      text-decoration: none;
+      background: darken($brand, 10);
+    }
+  }
+}
+
+/**
+ * Drupal Login
+ */
+#user-login {
+  width: 280px;
+  padding: 20px;
+  margin: 0 auto;
+  .form-item {
+    margin: 0 0 20px;
+  }
+}
+
+
+
+
+
+

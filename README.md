@@ -1,8 +1,26 @@
-Welcome to browncoat 0.3 (codename: `gulp magic`)
+Welcome to browncoat 0.4 (codename: `Atomic Ghosts`)
 ==================
 
 ## about this project
 Browncoat is a front end framework. It uses scss as a css preprocessor, browserify and flyweight for modularized javascript, and gulp as a task runner. [todo: add links]
+
+## Visual Regression Testing with Wraith
+
+Visual regression testing has been added as of `version 0.4`. We are using Wraith, a screenshot comparison tool created by BBC news. You will need Wraith installed on your computer if you want to use it, you can find it and instructions on how to set it up on their [github page](https://github.com/BBC-News/wraith).
+
+When you are ready to set a baseline for your project run:
+
+`wraith history config`
+
+What this does is create a baseline of shots based on the settings on the config file. You can learn more about the config file form [this post](http://njimedia.com) on the NJI Media Website. (todo: Write that post...)
+
+After making your changes you may want to see how they have affected your entire project. To set this up you will need to run
+
+`wraith latest config`
+
+That will create a comparison between your history and your latest changes.
+
+To view these you will need to set the shots folder as the root folder of a new virtual host and navigate to `yourhost.loc/gallery.html`
 
 ## Organization
 
@@ -14,7 +32,7 @@ Contains all the javascript. Flyweight, and other libraries go inside the `libs`
 
 #### scss
 
-
+todo! Now with new atomic structure!
 
 #### icons
 
@@ -40,27 +58,11 @@ SCSS
 
 ### scss
 
-- Found in the assets/scss directory
-- There are 3 main files:
-  1. `\_app.scss`: this file combines all the files inside the assets/scss/app folder. These files are app specific and make up the libraries included with browncoat.
-  2. `\_browncoat.scss`: this file combines all the files inside the assets/scss/browncoat directory. These files are all the bases and variables that form the core of browncoat.
-  3. `\_styles.scss`: this file combines the above to files and is the single file that needs to be compiled.
-
-> note: inside the browncoat/ directory there are two folders bases and normalizers. By "browncoat convention" the bases folder are meant for variables, placeholders, and mixins, meaning none of those files should output any real CSS.
 
 ### compiling scss
-You will need to install [sass](http://sass-lang.com/)  on your machine to compile the files. you can then run:
 
-```
-cd path/to/browncoat/root
 
-sass --watch assets/scss/styles.scss:assets/css/styles.css
-```
-
-### js (coffeescript)
-Found in the assets/js/ directory. Documentation coming soon. For now: It uses require.js and there is a build file for use with r.js in the assets/build/ directory. The assets/vendor/ directory contains some plugins. And the assets/boilerplates/ directory has some boilerplates for jQuery plugins.
-
-> note: All js is written in coffeescript and the coffeescript plugin for require.js takes care of compiling it.
+### js (use browserify)
 
 
 ### versioning
@@ -70,17 +72,21 @@ numbered as such:
 <major>.<minor>.<patch>
 ```
 
-The underlying structure has changed drastically since v0.1.9 and will be changing again. It will change to have an express backend and do some task management with grunt and later move to yeoman.
-
 ### Code
 All the code and conventions will be made available as github gists so that anyone can comment on any individual piece of code. My hope is this will make it easier for me to update different parts of the framework. While having issues on github for browncoat as a whole is useful, something like changing a class name on the forms prettify library might get lost.
 Of course, that may end up working horribly, but it also has the side-effect of giving me an easier way to include embedded code for easier copying and pasting in the docs.
 
 ### get updates
+TODO!!
 I am working on an easier go at installing browncoat using a combination of grunt and bower to set up a project. Until then forking the repository is all I've got for you though.
 
 
 ### changelog (highlights)
+
+##### v0.4
+- Added Visual Regression Testing with Wraith (responsive screenshot comparisons)
+- Reorganized CSS to follow atomic-like structure
+- Added IE compatibility for `gulp sprite`
 
 ##### v0.3
 - Added gulp*

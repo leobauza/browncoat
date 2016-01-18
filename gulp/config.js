@@ -31,7 +31,7 @@ module.exports = {
     dest: base,
     name: 'sprite.svg', // file name
     sprite: './web/assets/img/', // dest rel to theme
-    scss:'./src/scss/core/_sprite.scss', // dest rel to theme
+    scss:'./src/scss/00_bits/_sprites.scss', // dest rel to theme
     img: base + '/web/assets/img' //img location for svg2png
   }
 };

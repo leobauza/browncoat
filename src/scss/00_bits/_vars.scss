@@ -1,0 +1,73 @@
+/*
+ * 00_bits/vars
+ * Variables for colours and typography
+ */
+
+//greyscale
+$white: #fff;
+$black: #000;
+
+//gen
+$brand: #8790A5;
+$brand_alt: darken($brand, 10);
+$body_bg: $white;
+
+//links
+$link_colour: #428bca;
+$link_hover_colour: darken($link_colour, 20);
+
+//focus
+$focus_border: rgba(82, 168, 236, 0.8);
+
+//factory
+@function ColourConstructor ($perc, $colour) {
+  @if $perc > 0 {
+    @return darken($colour, $perc)
+  }
+  @if $perc < 0 {
+    @return lighten($colour, $perc * -1)
+  }
+  @if $perc == 0 {
+    @return $colour
+  }
+}
+
+//functions
+@function Greyscale ($perc: 50) {
+  @return darken(#fff, $perc)
+}
+
+//boxes and text
+$text_colour: ColourConstructor(80, $white);
+$litetext_colour: lighten($text_colour, 50);
+
+//alets
+$default: Greyscale(25);
+$info: $link_colour;
+$success: #5cb85c;
+$warning: #f0ad4e;
+$error: #d9534f;
+
+$base_size: 62.5%;
+$display: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+$sans_serif: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+$serif: "Georgia", "Times New Roman", Times, serif;
+$code: Menlo,Monaco,Consolas,"Courier New",monospace;
+//$serif: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+
+$global_family: $sans_serif; //not everything inherits from the body...so we have $global_family
+
+$text_size: 1.6em;
+$text_line_height: 1.6em;
+
+$h1: 4.8em;
+$h2: 3.6em;
+$h3: 2.8em;
+$h4: 2.2em;
+$h5: 1.8em;
+$h6: 1.4em;
+
+$lists_font_size: $text_size;
+$lists_line_height: $text_line_height;
+
+/* end */
