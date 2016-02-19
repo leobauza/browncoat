@@ -2,7 +2,24 @@ Welcome to browncoat 0.5 (codename: `Reconstruction`)
 ==================
 
 ## about this project
-Browncoat is a front end framework. It uses scss as a css preprocessor, browserify and flyweight for modularized javascript, and gulp as a task runner. [todo: add links]
+
+Browncoat is a front end start point framework. It uses scss for css preprocessing, webpack for js implementation of require() and gulp as a task runner.
+
+## Organization
+
+The `src` directory compiles into the `web` directory. The `src` directory is broken up into three directories:
+
+#### js
+
+Contains all the javascript. Flyweight, and other libraries go inside the `libs` directory. All flyweight modules go in the `modules` directory. All entry point files are directly under the `js` directory. One entry point is added by default `app.js`. There is a sample flyweight module in the `modules` directory. See gulp `browserify` task. [todo: link to this task on the readme]
+
+#### scss
+
+todo! Now with new atomic structure!
+
+#### icons
+
+Contains images that will be combined into a single svg sprite with a png backup. See gulp `sprite` task. [todo: link to this task on the readme]
 
 ## Visual Regression Testing with Wraith
 
@@ -22,28 +39,11 @@ That will create a comparison between your history and your latest changes.
 
 To view these you will need to set the shots folder as the root folder of a new virtual host and navigate to `yourhost.loc/gallery.html`
 
-## Organization
-
-The `src` directory compiles into the `web` directory. The `src` directory is broken up into three directories:
-
-#### js
-
-Contains all the javascript. Flyweight, and other libraries go inside the `libs` directory. All flyweight modules go in the `modules` directory. All entry point files are directly under the `js` directory. One entry point is added by default `app.js`. There is a sample flyweight module in the `modules` directory. See gulp `browserify` task. [todo: link to this task on the readme]
-
-#### scss
-
-todo! Now with new atomic structure!
-
-#### icons
-
-Contains images that will be combined into a single svg sprite with a png backup. See gulp `sprite` task. [todo: link to this task on the readme]
-
-
 #### GULP
 
-Note: We are using an old version of browserify in our gulp tasks so that we can use vinyl-transform instead of vinyl-source-stream in an undefined way. Why? Because I am too lazy right now to change my code to use vinyl-source-stream and glob. (see: https://wehavefaces.net/gulp-browserify-the-gulp-y-way-bb359b3f9623#.wtqf933fv)
+[OBSOLETE] Note: We are using an old version of browserify in our gulp tasks so that we can use vinyl-transform instead of vinyl-source-stream in an undefined way. Why? Because I am too lazy right now to change my code to use vinyl-source-stream and glob. (see: https://wehavefaces.net/gulp-browserify-the-gulp-y-way-bb359b3f9623#.wtqf933fv)
 
-#### browserify
+#### browserify [OBSOLETE]
 
 See browserify documentation.
 
@@ -78,6 +78,9 @@ I am working on an easier go at installing browncoat using a combination of grun
 
 ##### v0.5
 - Edits to scss files
+- Added webpack and reworked the entire gulp directory to gulpfile.js directory
+- Switched to multiple sample pages including usage with angular, react, plain html, etc
+- Abandoned PHP templates
 
 ##### v0.4
 - Added Visual Regression Testing with Wraith (responsive screenshot comparisons)
