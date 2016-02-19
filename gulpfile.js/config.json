@@ -1,0 +1,33 @@
+{
+
+  "root": {
+    "src": "./src",
+    "dest": "./web",
+    "base": "."
+  },
+
+  "tasks": {
+
+    "js": {
+      "src": "./js",
+      "dest": "./assets/js",
+      "entries": {
+        "main": "./app.js"
+      }
+    },
+
+    "css": {
+      "src": "./scss/styles.scss",
+      "dest": "./assets/css"
+    },
+
+    "sprite": {
+      "entry": "./icons/*.svg",
+      "fileName": "sprite.svg",
+      "spriteDest": "./assets/img",
+      "scssDest": "./scss/00_bits/_sprites.scss"
+    }
+
+  }
+
+}

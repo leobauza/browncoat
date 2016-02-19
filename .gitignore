@@ -3,3 +3,10 @@
 node_modules
 wraith/shots
 wraith/casper_shots
+
+_gulp
+_node_modules
+_gulpfile.js
+_package.json
+
+npm-debug.log
