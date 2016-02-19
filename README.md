@@ -1,4 +1,4 @@
-Welcome to browncoat 0.4 (codename: `Atomic Ghosts`)
+Welcome to browncoat 0.5 (codename: `Reconstruction`)
 ==================
 
 ## about this project
