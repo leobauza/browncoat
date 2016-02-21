@@ -145,16 +145,36 @@ $inset_shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
 }
 
 //layout
-@mixin overflower {
-  width: auto;
-  float: none;
-  overflow: hidden;
-}
+// @mixin overflower {
+//   width: auto;
+//   float: none;
+//   overflow: hidden;
+// }
 
 @mixin magicBox($perc:35) {
   position: relative;
   padding-bottom: $perc * 1%;
   height: 0;
+}
+
+@mixin quickSpan ($columns: $global_columns, $gutter: $global_columns, $i: 6) {
+  $col_width: (99.9998 / $columns);
+  $col_remainder: ($global_gutter/$global_columns) * $i;
+  width: ($col_width * $i - $gutter + $col_remainder) * 1%;
+  margin-right: $gutter * 1%;
+  float: left;
+}
+
+@mixin quickOffset ($columns: $global_columns, $gutter: $global_gutter, $i: 1) {
+  $col_width: (99.9998 / $columns);
+  $col_remainder: ($global_gutter/$global_columns) * $i;
+  margin-left: (($col_width * $i - $gutter + $col_remainder) + $gutter) * 1%;
+}
+
+@function columnWidth ($i: 1, $columns: $global_columns, $gutter: $global_gutter) {
+  $col_width: (99.9998 / $columns);
+  $col_remainder: ($global_gutter/$global_columns) * $i;
+  @return (($col_width * $i - $gutter + $col_remainder) + $gutter);
 }
 
 //paths
@@ -179,6 +199,12 @@ $path_to_images: "../images/";
 /**
  * Placeholders
  */
+
+%overflower {
+  width: auto;
+  float: none;
+  overflow: hidden;
+}
 
 //clearfix
 %group {

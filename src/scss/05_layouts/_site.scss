@@ -88,11 +88,11 @@ $global_gutter: 3.183;
   &> [class*="span"] {
     &.l {
       margin-right: 0;
-      @include overflower;
+      @extend %overflower;
     }
     &:last-child {
       margin-right: 0;
-      @include overflower;
+      @extend %overflower;
     }
   }
 }
@@ -137,7 +137,7 @@ $global_gutter: 3.183;
     float:left;
   }
   .span-main {
-    @include overflower;
+    @extend %overflower;
   }
 }
 
