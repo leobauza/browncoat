@@ -17,6 +17,10 @@
   },
   "homepage": "http://browncoat.leobauza.com/",
   "dependencies": {
+    "angular": "^1.5.0",
+    "angular-route": "^1.5.0",
+    "angular-sanitize": "^1.5.0",
+    "underscore": "^1.8.3"
   },
   "devDependencies": {
     "browser-sync": "^2.11.1",

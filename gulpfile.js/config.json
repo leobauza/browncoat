@@ -12,7 +12,8 @@
       "src": "./js",
       "dest": "./assets/js",
       "entries": {
-        "main": "./app.js"
+        "main": "./app.js",
+        "ng-main": "./ng-app.js"
       }
     },
 

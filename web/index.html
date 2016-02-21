@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<!--[if lt IE 9]><html ng-app="app" class="lt-ie9" lang="en"><![endif]-->
+<!--[if IE 9]><html ng-app="app" class="ie9" lang="en"><![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--><html ng-app="app" lang="en"><!--<![endif]-->
+<head>
+  <base href="/">
+  <meta charset="utf-8">
+  <title>Default (Angular.js)</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="a website description">
+  <meta name="author" content="the author">
+
+  <!-- styles -->
+  <link rel="stylesheet" href="/assets/css/styles.css" type="text/css" media="screen" charset="utf-8">
+
+  <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+  <!--[if lt IE 9]>
+    <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+
+  <!-- fav and touch icons -->
+  <link rel="shortcut icon" href="/assets/img/favicon.ico" type="image/x-icon">
+</head>
+<body>
+  <header class="site__header">
+    <div class="container">
+      <h1>Browncoat</h1>
+      <p class="intro">Using <code>Angular.js</code> bundle for documentation</p>
+    </div>
+  </header>
+  <section class="row">
+    <article class="span8" ng-view></article>
+    <aside class="span4">
+      <h3>See More:</h3>
+      <a href="/about" class="btn--main">About</a>
+    </aside>
+  </section>
+
+  <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+  <script src="/assets/js/main.js"></script> -->
+  <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
+  <script src="/assets/js/ng-main.js"></script>
+</body>
+</html>

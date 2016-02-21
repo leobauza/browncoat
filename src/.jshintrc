@@ -24,7 +24,7 @@
         //"iLoveDouglas"
         "Drupal",
         "jvm",
-        "_",
+        //"_",
         "Papa",
         "agaGraphs",
         "module",
@@ -32,7 +32,9 @@
         "attachEvent",
         "exports",
         "YT",
-        "L"
+        "L",
+        "angular",
+        "PR" // prettifier
     ],
 
 
