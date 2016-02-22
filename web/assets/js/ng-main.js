@@ -56,19 +56,17 @@
 	angular.module('app', ['ngRoute', 'ngSanitize']);
 	var app = angular.module('app');
 
-	app.service('Data', ['$q', '$http', function ($q, $http) {
+	app.service('Data', ['$q', '$http', '$location', function ($q, $http, $location) {
+
+	  console.log($location.path());
 
 	  this.get = function () {
 	    var d = $q.defer();
 
 	    // Get code
-	    var code = $http.get("/code_samples/boilerplate.html", {
-	      cache: true
-	    });
-
-	    var data = $http.get("/data/data.json", {
-	      cache: true
-	    });
+	    var code = $http.get("/code_samples/boilerplate.html", { cache: true });
+	    // Get data
+	    var data = $http.get("/data/data.json", { cache: true });
 
 	    $q.all([code, data]).then(function (results) {
 	      var resolve = {
@@ -94,7 +92,7 @@
 	  });
 
 	  $scope.boilerplate = codeSamples.boilerplate;
-	  $scope.other = codeSamples.heading;
+	  $scope.other = "Boilerplate";
 	  $scope.data = data.data;
 
 	  console.log(data.data);

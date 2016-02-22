@@ -26,14 +26,26 @@
     <div class="container">
       <h1>Browncoat</h1>
       <p class="intro">Using <code>Angular.js</code> bundle for documentation</p>
+      <p>Make data.json structure to use a repeater and use the title or something as they key to use to grab from the code_samples</p>
     </div>
   </header>
   <section class="row">
-    <article class="span8" ng-view></article>
-    <aside class="span4">
-      <h3>See More:</h3>
-      <a href="/about" class="btn--main">About</a>
-    </aside>
+
+    <article class="span8" ng-view>Loading...</article>
+
+    <nav class="span4">
+      <h3><code>scss</code> Structure:</h3>
+      <div class="list-group">
+        <a href="/" class="active">Introduction</a>
+        <a href="/bits">Bits</a>
+        <a href="/elements">Elements</a>
+        <a href="/items">Items</a>
+        <a href="/collections">Collections</a>
+        <a href="/sections">Sections</a>
+        <a href="/layouts">Layouts</a>
+      </div>
+    </nav>
+
   </section>
 
   <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>

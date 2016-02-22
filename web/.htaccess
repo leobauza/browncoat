@@ -6,5 +6,6 @@ RewriteEngine On
 #
 #RewriteBase /Users/leonardobauza/Sites/frameworks/browncoat2
 
-# RewriteCond %{REQUEST_FILENAME} !-f
-# RewriteRule ^(.*)$ index.php [QSA,L]
+RewriteRule ^(react)($|/) - [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^(.*)$ index.html [QSA,L]
