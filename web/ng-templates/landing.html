@@ -3,7 +3,10 @@
 <!-- <script src="https://gist.github.com/leobauza/baefedca7fd3ceb3c288.js"></script> -->
 
 <article class="box--main" ng-repeat="block in blocks">
-  <h3>{{block.title}}</h3>
-  <p ng-bind-html="block.description"></p>
-  <xmp class="prettyprint lang-html">{{codeSamples[block.title]}}</xmp>
+  <header class="box__header">
+    <h3>{{block.title}}</h3>
+  </header>
+  <div class="box__body" ng-bind-html="block.description"></div>
+  <xmp class="prettyprint {{block.lang}} linenums">{{codeSamples[block.title]}}</xmp>
 </article>
+

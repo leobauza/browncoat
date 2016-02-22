@@ -56,10 +56,12 @@
 	angular.module('app', ['ngRoute', 'ngSanitize']);
 	var app = angular.module('app');
 
-	app.service('Data', ['$q', '$http', '$location', function ($q, $http, $location) {
+	/**
+	 * Data Service
+	 */
+	app.service('Data', ['$q', '$http', '$location', '$rootScope', function ($q, $http, $location, $rootScope) {
 
-
-	  this.get = function () {
+	  this.getPage = function () {
 
 	    var d = $q.defer(),
 	        path = $location.path().replace(/^\/|\/$/g, '');
@@ -84,9 +86,47 @@
 	    return d.promise;
 	  };
 
+	  this.setSiteInfo = function () {
+
+	    var d = $q.defer();
+
+	    $http.get("/data/main.json", {cache: true})
+	      .success(function (data) {
+
+	        $rootScope.projectTitle = data.projectTitle;
+	        $rootScope.version = data.version;
+	        $rootScope.projectInfo = data.bundles.angular;
+	        d.resolve(true);
+
+	      })
+	      .error(function (err) {
+	        console.error(err);
+	        d.resolve(false);
+	      });
+
+	    return d.promise;
+
+	  };
+
 	}]);
 
-	app.controller('landingCtr', ['$scope', '$timeout', 'data', function ($scope, $timeout, data) {
+
+	/**
+	 * Controllers
+	 * - mainCtrl
+	 * - landingCtr
+	 */
+	app
+	.controller('mainCtrl', ['Data', function (Data) {
+
+	  Data.setSiteInfo().then(function (data) {
+	    console.log(data);
+	  });
+
+	  console.warn("handle navigation and basic stuffs in main controller");
+
+	}])
+	.controller('landingCtr', ['$scope', '$timeout', 'data', function ($scope, $timeout, data) {
 
 	  var rawCodeSamples = data.code.split("|||"),
 	      codeSamples = {},
@@ -103,15 +143,15 @@
 	  $scope.blocks = page.sections;
 	  $scope.codeSamples = codeSamples;
 
-	  console.log(codeSamples);
-	  console.log(data.data);
-
 	  $timeout(function () {
 	    PR.prettyPrint();
 	  }, 0);
 
 	}]);
 
+	/**
+	 * Routing
+	 */
 	app.config(["$routeProvider", "$locationProvider",
 	function ($routeProvider, $locationProvider) {
 
@@ -121,7 +161,7 @@
 	      controller: "landingCtr",
 	      resolve: {
 	        "data" : ["Data", function (Data) {
-	          return Data.get().then(function (val) {
+	          return Data.getPage().then(function (val) {
 	            return val;
 	          });
 	        }]
@@ -131,53 +171,6 @@
 	  $locationProvider.html5Mode(true).hashPrefix("!");
 
 	}]);
-
-	// filters
-	// require('./filters');
-
-	// directives
-	// require('./directives');
-
-	// services
-	// require('./services');
-
-	// controllers
-	// require('./controllers');
-
-	// routing
-	// app.config(require('./config'));
-
-	/**
-	 * @ngdoc interface
-	 * @name app.constant:BOOTSTRAP
-	 * @description
-	 * Bootstrapped data and methods ie a config constatnt.
-	 */
-	// app.constant('BOOTSTRAP', {
-	//   page: bs.page,
-	//   mainMenu: bs.menus.mainMenu,
-	//   footerMenu: bs.menus.footerMenu,
-	//   tpl: function (file) {
-	//     return bs.tpls + "/assets/tpls/" + file + ".html";
-	//   }
-	// });
-
-	// app.run(['$rootScope', '$location', '$window', function ($rootScope, $location, $window) {
-	//
-	//   $rootScope.$on('$locationChangeStart', function (e, next, prev) {
-	//     // console.log(e);
-	//     next = next.split("?")[0];
-	//     prev = prev.split("?")[0];
-	//     // Choose how to handle page changes here...
-	//
-	//     if (next !== prev) {
-	//       $window.scrollTo(0,0);
-	//     }
-	//
-	//   });
-	//
-	// }]);
-
 
 
 /***/ },
