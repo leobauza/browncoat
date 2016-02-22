@@ -58,15 +58,20 @@
 
 	app.service('Data', ['$q', '$http', '$location', function ($q, $http, $location) {
 
-	  console.log($location.path());
 
 	  this.get = function () {
-	    var d = $q.defer();
+
+	    var d = $q.defer(),
+	        path = $location.path().replace(/^\/|\/$/g, '');
+
+	    if (path === '') {
+	      path = 'home';
+	    }
 
 	    // Get code
-	    var code = $http.get("/code_samples/boilerplate.html", { cache: true });
+	    var code = $http.get("/code_samples/" + path + ".html", { cache: true });
 	    // Get data
-	    var data = $http.get("/data/data.json", { cache: true });
+	    var data = $http.get("/data/" + path + ".json", { cache: true });
 
 	    $q.all([code, data]).then(function (results) {
 	      var resolve = {
@@ -81,20 +86,24 @@
 
 	}]);
 
-	app.controller('homeCtrl', ['$scope', '$timeout', 'data', function ($scope, $timeout, data) {
+	app.controller('landingCtr', ['$scope', '$timeout', 'data', function ($scope, $timeout, data) {
 
 	  var rawCodeSamples = data.code.split("|||"),
-	      codeSamples = {};
+	      codeSamples = {},
+	      page = data.data;
 
 	  _.each(rawCodeSamples, function (v, k) {
 	    var codeSample = v.split(":::");
 	    codeSamples[codeSample[0].trim()] = codeSample[1].trim();
 	  });
 
-	  $scope.boilerplate = codeSamples.boilerplate;
-	  $scope.other = "Boilerplate";
-	  $scope.data = data.data;
+	  $scope.title = page.title;
+	  $scope.description = page.description;
 
+	  $scope.blocks = page.sections;
+	  $scope.codeSamples = codeSamples;
+
+	  console.log(codeSamples);
 	  console.log(data.data);
 
 	  $timeout(function () {
@@ -107,9 +116,9 @@
 	function ($routeProvider, $locationProvider) {
 
 	  $routeProvider
-	    .when("/", {
-	      templateUrl: "/ng-templates/home.html",
-	      controller: "homeCtrl",
+	    .when("/:name?", {
+	      templateUrl: "/ng-templates/landing.html",
+	      controller: "landingCtr",
 	      resolve: {
 	        "data" : ["Data", function (Data) {
 	          return Data.get().then(function (val) {
