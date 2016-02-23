@@ -8,11 +8,12 @@ $global_columns: 12;
 $global_gutter: 3.183;
 
 //greyscale
-$white: #fff;
 $black: #000;
+$grey: #efefef;
+$white: #fff;
 
 //gen
-$brand: #8790A5;
+$brand: #428bca;
 $brand_alt: darken($brand, 10);
 $body_bg: $white;
 
@@ -28,7 +29,7 @@ $text_colour: #2d2d2d;
 $litetext_colour: lighten($text_colour, 50);
 
 //alets
-$default: $text_colour;
+$default: $grey;
 $info: $link_colour;
 $success: #5cb85c;
 $warning: #f0ad4e;
@@ -44,7 +45,7 @@ $code: Menlo,Monaco,Consolas,"Courier New",monospace;
 $global_family: $sans_serif; //not everything inherits from the body...so we have $global_family
 
 $text_size: 1.6em;
-$text_line_height: 1.6em;
+$text_line_height: 1.5em;
 
 $h1: 4.8em;
 $h2: 3.6em;

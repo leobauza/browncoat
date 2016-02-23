@@ -1,18 +1,18 @@
 {
   "title": "About Browncoat",
-  "description": "Browncoat is a Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+  "description": "Browncoat is the least popular html, scss, and js framework for developing responsive, mobile last projects on the interwebs. Browncoat provides a folder structure for scss and javascript. It provides a configurable gulp setup for many common tasks. Finally it allows you to modify it and create your own personal/team framework.",
   "sections": [
     {
       "key": "boilerplate",
       "title": "HTML Wrapper Boilerplate",
-      "description": "<p>This is some boilerplate code Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p> <p>Here is another line of stuff.</p>",
+      "description": "<p>HTML boilerplate to start prototyping with browncoat.</p>",
       "lang": "lang-html"
     },
     {
-      "key": "heading",
-      "title": "Sample Thing To Erase",
-      "description": "<p>This is a heading</p>",
-      "lang": "lang-html"
+      "key": "folders",
+      "title": "SCSS Folder Structure",
+      "description": "<p>Brief explenation of the folder structure.</p>",
+      "lang": "lang-js"
     }
   ]
 }
