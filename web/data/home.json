@@ -3,16 +3,33 @@
   "description": "Browncoat is the least popular html, scss, and js framework for developing responsive, mobile last projects on the interwebs. Browncoat provides a folder structure for scss and javascript. It provides a configurable gulp setup for many common tasks. Finally it allows you to modify it and create your own personal/team framework.",
   "sections": [
     {
-      "key": "boilerplate",
-      "title": "HTML Wrapper Boilerplate",
-      "description": "<p>HTML boilerplate to start prototyping with browncoat.</p>",
-      "lang": "lang-html"
+      "key": "folders",
+      "title": "SCSS Folder Structure*",
+      "nav": "SCSS Folders",
+      "file": "<base>/src/scss",
+      "description": "<p>Brief explenation of the folder structure.</p><p class='footnote'>*See scss sidebar links for more in depth information</p>",
+      "lang": "lang-js"
     },
     {
-      "key": "folders",
-      "title": "SCSS Folder Structure",
-      "description": "<p>Brief explenation of the folder structure.</p>",
+      "key": "commonjs",
+      "title": "CommonJS For Modular JS",
+      "nav": "JS",
+      "description": "<p>JS introduction</p>",
       "lang": "lang-js"
+    },
+    {
+      "key": "gulp",
+      "title": "Gulp for Task Management",
+      "nav": "Gulp",
+      "description": "<p>Gulp introduction...</p>",
+      "lang": "lang-bsh"
+    },
+    {
+      "key": "boilerplate",
+      "title": "HTML Wrapper Boilerplate",
+      "nav": "Boilerplate",
+      "description": "<p>HTML boilerplate to start prototyping with browncoat.</p>",
+      "lang": "lang-html"
     }
   ]
 }

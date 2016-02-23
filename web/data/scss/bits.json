@@ -5,12 +5,14 @@
     {
       "key": "vars",
       "title": "Variables",
+      "nav": "Vars",
       "description": "<p>About Vars.</p>",
       "lang": "lang-css"
     },
     {
       "key": "utils",
       "title": "Utilities",
+      "nav": "Utils",
       "description": "<p>About utils</p>",
       "lang": "lang-css"
     }

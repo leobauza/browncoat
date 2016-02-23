@@ -1,13 +1,19 @@
-<h2>{{title}}</h2>
-<p>{{description}}</p>
-<!-- <script src="https://gist.github.com/leobauza/baefedca7fd3ceb3c288.js"></script> -->
+<article class="span8">
+  <h2>{{title}}</h2>
+  <p>{{description}}</p>
+  <!-- <script src="https://gist.github.com/leobauza/baefedca7fd3ceb3c288.js"></script> -->
 
-<article class="box--default" ng-repeat="block in blocks">
-  <header class="box__header">
-    <h3 class="box__heading">{{block.title}}</h3>
-  </header>
-  <div class="box__body" ng-bind-html="block.description"></div>
-  <div ng-if="block.display" class="box__body" ng-bind-html="codeSamples[block.key]"></div>
-  <xmp class="prettyprint {{block.lang}} linenums">{{codeSamples[block.key]}}</xmp>
+  <article id="{{block.key}}" class="box--default" ng-repeat="block in blocks">
+    <header class="box__header">
+      <h4 class="box__heading">{{block.title}} <code ng-if="block.file">{{block.file}}</code></h4>
+    </header>
+    <div class="box__body" ng-bind-html="block.description"></div>
+    <div ng-if="block.display" class="box__body" ng-bind-html="codeSamples[block.key]"></div>
+    <xmp class="prettyprint {{block.lang}} linenums">{{codeSamples[block.key]}}</xmp>
+  </article>
 </article>
-
+<nav class="span4">
+  <div ng-if="blocks" class="list-group">
+    <a ng-repeat="item in blocks" href="#{{item.key}}" ng-class="{'active': isActive(item.key, 'hash')}">{{item.nav || item.title}}</a>
+  </div>
+</nav>

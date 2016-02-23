@@ -53,22 +53,25 @@
 	__webpack_require__(5);
 	__webpack_require__(7);
 
-	angular.module('app', ['ngRoute', 'ngSanitize']);
-	var app = angular.module('app');
+	angular.module("app", ["ngRoute", "ngSanitize"]);
+	var app = angular.module("app");
 
 	/**
 	 * Data Service
 	 */
-	app.service('Data', ['$q', '$http', '$location', '$rootScope', function ($q, $http, $location, $rootScope) {
+	app.service("Data", ["$q", "$http", "$location", "$rootScope", function ($q, $http, $location, $rootScope) {
 
 	  this.getPage = function () {
 
 	    var d = $q.defer(),
 	        path = $location.path().replace(/^\/|\/$/g, '');
 
-	    if (path === '') {
-	      path = 'home';
+	    if (path === "") {
+	      path = "home";
 	    }
+
+	    // Current section is the key for secondary navigation.
+	    $rootScope.currentSection = path.split("/")[0];
 
 	    // Get code
 	    var code = $http.get("/code_samples/" + path + ".html", { cache: true });
@@ -95,6 +98,8 @@
 
 	        $rootScope.projectTitle = data.projectTitle;
 	        $rootScope.version = data.version;
+	        $rootScope.projectNav = data.projectNav;
+	        $rootScope.sectionNavs = data.sectionNavs;
 	        $rootScope.projectInfo = data.bundles.angular;
 	        d.resolve(true);
 
@@ -117,7 +122,7 @@
 	 * - landingCtr
 	 */
 	app
-	.controller('mainCtrl', ['Data', function (Data) {
+	.controller("mainCtrl", ["$scope", "$location", "Data", function ($scope, $location, Data) {
 
 	  Data.setSiteInfo().then(function (data) {
 	    console.log(data);
@@ -125,8 +130,18 @@
 
 	  console.warn("handle navigation and basic stuffs in main controller");
 
+	  // directive instead?
+	  $scope.isActive = function (id, type) {
+
+	    if (type === "hash") {
+	      var hash = $location.hash();
+	      return id === hash;
+	    }
+
+	  };
+
 	}])
-	.controller('landingCtr', ['$scope', '$timeout', 'data', function ($scope, $timeout, data) {
+	.controller("landingCtr", ["$scope", "$timeout", "data", function ($scope, $timeout, data) {
 
 	  var rawCodeSamples = data.code.split("|||"),
 	      codeSamples = {},
@@ -139,7 +154,6 @@
 
 	  $scope.title = page.title;
 	  $scope.description = page.description;
-
 	  $scope.blocks = page.sections;
 	  $scope.codeSamples = codeSamples;
 
@@ -156,7 +170,18 @@
 	function ($routeProvider, $locationProvider) {
 
 	  $routeProvider
-	    .when("/:name?", {
+	    .when("/", {
+	      templateUrl: "/ng-templates/landing.html",
+	      controller: "landingCtr",
+	      resolve: {
+	        "data" : ["Data", function (Data) {
+	          return Data.getPage().then(function (val) {
+	            return val;
+	          });
+	        }]
+	      }
+	    })
+	    .when("/scss/:name?", {
 	      templateUrl: "/ng-templates/landing.html",
 	      controller: "landingCtr",
 	      resolve: {
@@ -166,7 +191,20 @@
 	          });
 	        }]
 	      },
+	      reloadOnSearch: false
+	    })
+	    .when("/js/:name?", {
+	      templateUrl: "/ng-templates/landing.html",
+	      controller: "landingCtr",
+	      resolve: {
+	        "data" : ["Data", function (Data) {
+	          return Data.getPage().then(function (val) {
+	            return val;
+	          });
+	        }]
+	      }
 	    });
+
 
 	  $locationProvider.html5Mode(true).hashPrefix("!");
 

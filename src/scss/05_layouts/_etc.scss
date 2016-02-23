@@ -5,6 +5,47 @@
  * of the scss tree for temporary styles/sandboxing
  */
 
+/**
+ * NEW DOCUMENTATION
+ */
+.prettyprint {
+  ol.linenums {
+    background: #eee;
+    border-top: 1px solid $grey;
+    border-left: 1px solid $grey;
+    border-right: 1px solid $grey;
+    padding: 0px 0px 0px 40px;
+    margin: 0px;
+    &> li {
+      margin: 0px;
+      padding: 0px 0px 0px 20px;
+      border-bottom: 1px solid $grey;
+      background: $white;
+      list-style-type: decimal-leading-zero;
+    }
+  }
+  .com {
+    color: $success;
+  }
+  .pln {
+    color: $text_colour;
+  }
+  .pun {
+    color: $brand;
+  }
+}
+.footnote {
+  font-size: 1.2em;
+  font-weight: $boldFont;
+}
+
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+  display: none !important;
+}
+
+
+
+
 @mixin importantBorderRadius ($radius: 3px) {
   -webkit-border-radius:$radius!important;
      -moz-border-radius:$radius!important;
@@ -129,31 +170,6 @@ $docBorder: lighten($black, 88);
   background: $brand;
   border-bottom: 1px solid $black;
 }
-
-
-
-
-/**
- * NEW DOCUMENTATION
- */
-.prettyprint {
-  ol.linenums {
-    background: #eee;
-    border-top: 1px solid $grey;
-    border-left: 1px solid $grey;
-    border-right: 1px solid $grey;
-    padding: 0px 0px 0px 40px;
-    margin: 0px;
-    &> li {
-      margin: 0px;
-      padding: 0px 0px 0px 20px;
-      border-bottom: 1px solid $grey;
-      background: $white;
-      list-style-type: decimal-leading-zero;
-    }
-  }
-}
-
 
 
 

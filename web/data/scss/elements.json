@@ -3,8 +3,9 @@
   "description": "Elements are...",
   "sections": [
     {
-      "key": "resets",
-      "title": "Resets",
+      "key": "headings",
+      "title": "Headings",
+      "file": "_resets",
       "description": "<p>About resets.</p>",
       "lang": "lang-html",
       "display": true
