@@ -1,0 +1,16 @@
+{
+  "title": "Bits",
+  "description": "Bits are...",
+  "sections": [
+    {
+      "title": "Vars",
+      "description": "<p>About Vars.</p>",
+      "lang": "lang-css"
+    },
+    {
+      "title": "Utils",
+      "description": "<p>About utils</p>",
+      "lang": "lang-css"
+    }
+  ]
+}
