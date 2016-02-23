@@ -7,6 +7,7 @@
     <h3>{{block.title}}</h3>
   </header>
   <div class="box__body" ng-bind-html="block.description"></div>
-  <xmp class="prettyprint {{block.lang}} linenums">{{codeSamples[block.title]}}</xmp>
+  <div ng-if="block.display" class="box__body" ng-bind-html="codeSamples[block.key]"></div>
+  <xmp class="prettyprint {{block.lang}} linenums">{{codeSamples[block.key]}}</xmp>
 </article>
 

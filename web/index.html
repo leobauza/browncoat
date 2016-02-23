@@ -21,14 +21,14 @@
   <!-- fav and touch icons -->
   <link rel="shortcut icon" href="/assets/img/favicon.ico" type="image/x-icon">
 </head>
-<body ng-controller="mainCtrl">
+<body>
   <header class="site__header">
     <div class="container">
       <h1><span ng-bind="projectTitle"></span> <span class="small" ng-bind="version"></span></h1>
       <p class="intro" ng-bind-html="projectInfo.intro"></p>
     </div>
   </header>
-  <section class="row">
+  <section class="row" ng-controller="mainCtrl">
 
     <article class="span8" ng-view>Loading...</article>
 

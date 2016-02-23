@@ -1,0 +1,20 @@
+{
+  "title": "Elements",
+  "description": "Elements are...",
+  "sections": [
+    {
+      "key": "resets",
+      "title": "Resets",
+      "description": "<p>About resets.</p>",
+      "lang": "lang-html",
+      "display": true
+    },
+    {
+      "key": "lists",
+      "title": "Lists",
+      "description": "<p>Abou lists.</p>",
+      "lang": "lang-html",
+      "display": true
+    }
+  ]
+}

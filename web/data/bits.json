@@ -3,12 +3,14 @@
   "description": "Bits are...",
   "sections": [
     {
-      "title": "Vars",
+      "key": "vars",
+      "title": "Variables",
       "description": "<p>About Vars.</p>",
       "lang": "lang-css"
     },
     {
-      "title": "Utils",
+      "key": "utils",
+      "title": "Utilities",
       "description": "<p>About utils</p>",
       "lang": "lang-css"
     }
