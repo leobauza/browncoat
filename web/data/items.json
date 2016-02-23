@@ -1,0 +1,20 @@
+{
+  "title": "Items",
+  "description": "Items are...",
+  "sections": [
+    {
+      "key": "btns",
+      "title": "Buttons",
+      "description": "<p>About buttons.</p>",
+      "lang": "lang-html",
+      "display": true
+    },
+    {
+      "key": "callouts",
+      "title": "Callouts",
+      "description": "<p>About callouts.</p>",
+      "lang": "lang-html",
+      "display": true
+    }
+  ]
+}
