@@ -7,6 +7,26 @@ require("angular");
 require("angular-route");
 require("angular-sanitize");
 
+function processCodeSamples(cs) {
+
+  // Split simples by linebreaks.
+  var samples = cs.split(/---\n/g),
+      out = {};
+
+  // console.log(samples);
+  _.each(samples, function (sample, k) {
+
+    var code = sample.match(/```\n[\s\S]*?\n```/g)[0].replace(/```/g, "").trim(),
+        key = sample.match(/###[\s\S]*?\n/g)[0].replace(/###\s/, "").trim();
+
+    out[key] = code;
+
+  });
+
+  return out;
+
+}
+
 angular.module("app", ["ngRoute", "ngSanitize"]);
 var app = angular.module("app");
 
@@ -28,7 +48,7 @@ app.service("Data", ["$q", "$http", "$location", "$rootScope", function ($q, $ht
     $rootScope.currentSection = path.split("/")[0];
 
     // Get code
-    var code = $http.get("/code_samples/" + path + ".html", { cache: true });
+    var code = $http.get("/code_samples/" + path + ".md", { cache: true });
     // Get data
     var data = $http.get("/data/" + path + ".json", { cache: true });
 
@@ -78,11 +98,7 @@ app.service("Data", ["$q", "$http", "$location", "$rootScope", function ($q, $ht
 app
 .controller("mainCtrl", ["$scope", "$location", "Data", function ($scope, $location, Data) {
 
-  Data.setSiteInfo().then(function (data) {
-    console.log(data);
-  });
-
-  console.warn("handle navigation and basic stuffs in main controller");
+  Data.setSiteInfo().then(function (data) {});
 
   // directive instead?
   $scope.isActive = function (id, type) {
@@ -97,19 +113,13 @@ app
 }])
 .controller("landingCtr", ["$scope", "$timeout", "data", function ($scope, $timeout, data) {
 
-  var rawCodeSamples = data.code.split("|||"),
-      codeSamples = {},
+  var codeSamples = {},
       page = data.data;
-
-  _.each(rawCodeSamples, function (v, k) {
-    var codeSample = v.split(":::");
-    codeSamples[codeSample[0].trim()] = codeSample[1].trim();
-  });
 
   $scope.title = page.title;
   $scope.description = page.description;
   $scope.blocks = page.sections;
-  $scope.codeSamples = codeSamples;
+  $scope.codeSamples = processCodeSamples(data.code);
 
   $timeout(function () {
     PR.prettyPrint();
@@ -120,8 +130,7 @@ app
 /**
  * Routing
  */
-app.config(["$routeProvider", "$locationProvider",
-function ($routeProvider, $locationProvider) {
+app.config(["$routeProvider", "$locationProvider", function ($routeProvider, $locationProvider) {
 
   $routeProvider
     .when("/", {

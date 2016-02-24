@@ -1,7 +1,11 @@
-vars:::
+### vars
+```
 $white: #fff;
-|||
-utils:::
+```
+---
+### utils
+```
 @mixin something ($width) {
   width: $width
 }
+```

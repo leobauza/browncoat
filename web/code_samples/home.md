@@ -1,4 +1,5 @@
-boilerplate:::
+### boilerplate
+```
 <!DOCTYPE html>
 <!--[if lt IE 9]><html class="lt-ie9" lang="en"><![endif]-->
 <!--[if IE 9]><html class="ie9" lang="en"><![endif]-->
@@ -27,8 +28,10 @@ boilerplate:::
   <script src="/assets/js/main.js"></script>
 </body>
 </html>
-|||
-folders:::
+```
+---
+### folders
+```
 |- base
 |-- src
 |---scss
@@ -39,18 +42,22 @@ folders:::
 |---- 03_collections // groups that may contain items and/or elements
 |---- 04_sections // logical page sections
 |---- 05_layouts // control overall structure of the page
-|||
-commonjs:::
+```
+---
+### commonjs
+```
 // modules/mymodule.js
 module.exports = "Hello World!";
 
 // app.js
 var myModule = require("./modules/mymodule");
 console.log(myModule); // outputs "Hellow World!" to console
-
-|||
-gulp:::
+```
+---
+### gulp
+```
 # install dependencies and devDependencies
 npm install
 # run gulp
 npm run gulp
+```
