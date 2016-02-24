@@ -1,0 +1,6 @@
+### scss
+```
+body {
+  background: $white;
+}
+```

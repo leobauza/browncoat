@@ -106,6 +106,14 @@ app
     if (type === "hash") {
       var hash = $location.hash();
       return id === hash;
+    } else if (type === "path") {
+      var path = $location.path(),
+          idParts = id.split("/");
+      if (idParts.length === 2) {
+        return idParts[1] === path.split("/")[1];
+      } else {
+        return id === path;
+      }
     }
 
   };

@@ -10,33 +10,74 @@
  */
 .prettyprint {
   ol.linenums {
-    background: #eee;
+    //
+    counter-reset: li;
+    //
+    background: $white;
     border-top: 1px solid $grey;
     border-left: 1px solid $grey;
     border-right: 1px solid $grey;
+    border-bottom: 1px solid $grey;
     padding: 0px 0px 0px 40px;
     margin: 0px;
     &> li {
+      position: relative;
       margin: 0px;
-      padding: 0px 0px 0px 20px;
-      border-bottom: 1px solid $grey;
+      padding: 4px 0px 4px 10px;
+      // border-bottom: 1px solid $grey;
+      border-left: 1px solid $grey;
+      list-style: none;
       background: $white;
-      list-style-type: decimal-leading-zero;
+      &:hover {
+        background: $grey;
+        &:before {
+          color: $text_colour;
+        }
+      }
+      &:before {
+        position: absolute;
+        right: 100%;
+        top: 0px;
+        padding: 4px 10px 0px 0px;
+        text-align: right;
+        font-size: .60em;
+        font-family: $global_family;
+        font-weight: $boldFont;
+        color: $litetext_colour;
+        content: counter(li);
+        counter-increment: li;
+      }
     }
   }
   .com {
-    color: $success;
+    color: $litetext_colour;
   }
   .pln {
     color: $text_colour;
   }
   .pun {
+    color: $error;
+  }
+  .str {
+    color: $info;
+  }
+  .atn {
+    color: $warning;
+  }
+  .atv {
+    color: $info;
+  }
+  .tag {
     color: $brand;
   }
 }
 .footnote {
   font-size: 1.2em;
   font-weight: $boldFont;
+}
+
+.doc__header {
+  padding: 20px 0px 0px;
 }
 
 [ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {

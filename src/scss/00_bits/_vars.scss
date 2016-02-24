@@ -13,7 +13,7 @@ $grey: #efefef;
 $white: #fff;
 
 //gen
-$brand: #428bca;
+$brand: #c68143;
 $brand_alt: darken($brand, 10);
 $body_bg: $white;
 
@@ -26,7 +26,7 @@ $focus_border: rgba(82, 168, 236, 0.8);
 
 //boxes and text
 $text_colour: #2d2d2d;
-$litetext_colour: lighten($text_colour, 50);
+$litetext_colour: #d6d7d8;
 
 //alets
 $default: $grey;
@@ -59,6 +59,6 @@ $lists_line_height: $text_line_height;
 
 $lightFont: 200;
 $regularFont: 300;
-$boldFont: 500;
+$boldFont: 700;
 
 /* end */

@@ -12,7 +12,7 @@
     <xmp class="prettyprint {{block.lang}} linenums">{{codeSamples[block.key]}}</xmp>
   </article>
 </article>
-<nav class="span4">
+<nav class="span4 l">
   <div ng-if="blocks" class="list-group">
     <a ng-repeat="item in blocks" href="#{{item.key}}" ng-class="{'active': isActive(item.key, 'hash')}">{{item.nav || item.title}}</a>
   </div>

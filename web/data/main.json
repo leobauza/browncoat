@@ -8,7 +8,7 @@
     },
     {
       "name": "scss",
-      "path": "/scss/bits"
+      "path": "/scss"
     },
     {
       "name": "js",
@@ -27,33 +27,33 @@
     "scss": [
       {
         "name": "Bits",
-        "path": "scss/bits"
+        "path": "/scss/bits"
       },
       {
         "name": "Elements",
-        "path": "scss/elements"
+        "path": "/scss/elements"
       },
       {
         "name": "Items",
-        "path": "scss/items"
+        "path": "/scss/items"
       },
       {
         "name": "Collections",
-        "path": "scss/collections"
+        "path": "/scss/collections"
       },
       {
         "name": "Sections",
-        "path": "scss/sections"
+        "path": "/scss/sections"
       },
       {
         "name": "Layouts",
-        "path": "scss/layouts"
+        "path": "/scss/layouts"
       }
     ],
     "js": [
       {
         "name": "Sample",
-        "path": "js/sample"
+        "path": "/js/sample"
       }
     ]
   },
