@@ -1,5 +1,5 @@
-Welcome to browncoat 0.5 (codename: `Reconstruction`)
-==================
+Browncoat 0.5 (codename: `Reconstruction`)
+---
 
 ## about this project
 
