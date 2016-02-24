@@ -26,7 +26,7 @@
     <div class="container">
       <h1><span ng-bind="projectTitle"></span> <span class="small" ng-bind="version"></span></h1>
       <nav ng-cloak class="btn-group">
-        <a ng-repeat="item in projectNav" href="{{item.path}}" class="btn--main" ng-bind="item.name"></a>
+        <a ng-repeat="item in projectNav" href="{{item.path}}" class="btn--default" ng-bind="item.name"></a>
       </nav>
       <p class="intro" ng-bind-html="projectInfo.intro"></p>
     </div>
@@ -34,7 +34,7 @@
 
   <section class="container">
     <nav ng-cloak ng-if="currentSection != 'home'" class="btn-group">
-      <a ng-repeat="item in sectionNavs[currentSection]" href="{{item.path}}" class="btn--main" ng-bind="item.name"></a>
+      <a ng-repeat="item in sectionNavs[currentSection]" href="{{item.path}}" class="btn--default" ng-bind="item.name"></a>
     </section>
   </nav>
 
