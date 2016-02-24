@@ -1,5 +1,5 @@
 ### boilerplate
-```
+```html
 <!DOCTYPE html>
 <!--[if lt IE 9]><html class="lt-ie9" lang="en"><![endif]-->
 <!--[if IE 9]><html class="ie9" lang="en"><![endif]-->
@@ -31,7 +31,7 @@
 ```
 ---
 ### folders
-```
+```bash
 /scss
   styles.scss // aggregates all scripts
   00_bits // variables and utilities
@@ -53,7 +53,7 @@ console.log(myModule); // outputs "Hellow World!" to console
 ```
 ---
 ### gulp
-```
+```js
 # install dependencies and devDependencies
 npm install
 # run gulp

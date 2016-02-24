@@ -62,7 +62,7 @@
 	  // console.log(samples);
 	  _.each(samples, function (sample, k) {
 
-	    var code = sample.match(/```[a-z]*\n[\s\S]*?\n```/g)[0].replace(/```[a-z]*\n/g, "").trim(),
+	    var code = sample.match(/```[a-z]*\n[\s\S]*?\n```/g)[0].replace(/```[a-z]*\n*/g, "").trim(),
 	        key = sample.match(/###[\s\S]*?\n/g)[0].replace(/###\s/, "").trim();
 
 	    out[key] = code;
