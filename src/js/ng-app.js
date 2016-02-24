@@ -16,7 +16,7 @@ function processCodeSamples(cs) {
   // console.log(samples);
   _.each(samples, function (sample, k) {
 
-    var code = sample.match(/```\n[\s\S]*?\n```/g)[0].replace(/```/g, "").trim(),
+    var code = sample.match(/```[a-z]*\n[\s\S]*?\n```/g)[0].replace(/```[a-z]*\n/g, "").trim(),
         key = sample.match(/###[\s\S]*?\n/g)[0].replace(/###\s/, "").trim();
 
     out[key] = code;
@@ -133,7 +133,23 @@ app
     PR.prettyPrint();
   }, 0);
 
+}])
+.controller("styleguideCtr", ["$scope", "$timeout", "data", function ($scope, $timeout, data) {
+
+  var codeSamples = {},
+      page = data.data;
+
+  $scope.title = page.title;
+  $scope.description = page.description;
+  $scope.blocks = page.sections;
+  $scope.codeSamples = processCodeSamples(data.code);
+
+  $timeout(function () {
+    PR.prettyPrint();
+  }, 0);
+
 }]);
+
 
 /**
  * Routing
@@ -167,6 +183,17 @@ app.config(["$routeProvider", "$locationProvider", function ($routeProvider, $lo
     .when("/js/:name?", {
       templateUrl: "/ng-templates/landing.html",
       controller: "landingCtr",
+      resolve: {
+        "data" : ["Data", function (Data) {
+          return Data.getPage().then(function (val) {
+            return val;
+          });
+        }]
+      }
+    })
+    .when("/styleguide/:section?", {
+      templateUrl: "/ng-templates/styleguide.html",
+      controller: "styleguideCtr",
       resolve: {
         "data" : ["Data", function (Data) {
           return Data.getPage().then(function (val) {

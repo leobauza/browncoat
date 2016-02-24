@@ -6,6 +6,6 @@ RewriteEngine On
 #
 #RewriteBase /Users/leonardobauza/Sites/frameworks/browncoat2
 
-RewriteRule ^(react)($|/) - [L]
+RewriteRule ^(code_samples|data)($|/) - [L]
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteRule ^(.*)$ index.html [QSA,L]

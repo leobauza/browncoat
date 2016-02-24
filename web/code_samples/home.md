@@ -43,7 +43,7 @@
 ```
 ---
 ### commonjs
-```
+```js
 // modules/mymodule.js
 module.exports = "Hello World!";
 
