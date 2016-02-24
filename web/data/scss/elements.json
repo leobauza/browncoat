@@ -7,14 +7,12 @@
       "title": "Headings",
       "file": "_resets",
       "description": "<p>About my headings.</p>",
-      "lang": "lang-html",
       "display": true
     },
     {
       "key": "lists",
       "title": "Lists",
       "description": "<p>Abou lists.</p>",
-      "lang": "lang-html",
       "display": true
     }
   ]

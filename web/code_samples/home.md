@@ -33,13 +33,13 @@
 ### folders
 ```bash
 /scss
-  styles.scss // aggregates all scripts
-  00_bits // variables and utilities
-  01_elements // basic html elements and resets
-  02_items // extended basic elements
-  03_collections // groups that may contain items and/or elements
-  04_sections // logical page sections
-  05_layouts // control overall structure of the page
+  styles.scss # aggregates all scripts
+  00_bits # variables and utilities
+  01_elements # basic html elements and resets
+  02_items # extended basic elements
+  03_collections # groups that may contain items and/or elements
+  04_sections # logical page sections
+  05_layouts # control overall structure of the page
 ```
 ---
 ### commonjs
@@ -53,7 +53,7 @@ console.log(myModule); // outputs "Hellow World!" to console
 ```
 ---
 ### gulp
-```js
+```bash
 # install dependencies and devDependencies
 npm install
 # run gulp

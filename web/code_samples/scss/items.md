@@ -1,5 +1,5 @@
 ### btns
-```
+```html
 <a href="#" class="btn">Main Button</a>
 <a href="#" class="btn -main">Main Button</a>
 <a href="#" class="btn -info">Main Button</a>
@@ -9,6 +9,6 @@
 ```
 ---
 ### callouts
-```
+```html
 <div class="callout--main">A Callout</div>
 ```

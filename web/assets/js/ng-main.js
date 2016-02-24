@@ -63,9 +63,13 @@
 	  _.each(samples, function (sample, k) {
 
 	    var code = sample.match(/```[a-z]*\n[\s\S]*?\n```/g)[0].replace(/```[a-z]*\n*/g, "").trim(),
-	        key = sample.match(/###[\s\S]*?\n/g)[0].replace(/###\s/, "").trim();
+	        key = sample.match(/###[\s\S]*?\n/g)[0].replace(/###\s/, "").trim(),
+	        lang = sample.match(/```[a-z]*\n/)[0].replace(/```/g, "").trim();
 
-	    out[key] = code;
+	    out[key] = {
+	      code: code,
+	      lang: lang === "" ? "lang-bash" : "lang-" + lang
+	    };
 
 	  });
 
@@ -182,17 +186,6 @@
 	}])
 	.controller("styleguideCtr", ["$scope", "$timeout", "data", function ($scope, $timeout, data) {
 
-	  var codeSamples = {},
-	      page = data.data;
-
-	  $scope.title = page.title;
-	  $scope.description = page.description;
-	  $scope.blocks = page.sections;
-	  $scope.codeSamples = processCodeSamples(data.code);
-
-	  $timeout(function () {
-	    PR.prettyPrint();
-	  }, 0);
 
 	}]);
 
