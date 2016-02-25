@@ -1,6 +1,7 @@
 var gulp        = require('gulp'),
     config      = require('../config'),
-    browserSync = require('browser-sync');
+    browserSync = require('browser-sync'),
+    modRewrite  = require('connect-modrewrite');
 
 var watchTask = function(callback) {
 
