@@ -16,13 +16,11 @@
 }
 .prettyprint {
   ol.linenums {
-    //
     counter-reset: li;
-    //
     background: $white;
     border-top: 1px solid $grey;
     border-left: 1px solid $grey;
-    border-right: 1px solid $grey;
+    // border-right: 1px solid $grey;
     border-bottom: 1px solid $grey;
     padding: 0px 0px 0px 40px;
     margin: 0px;
@@ -31,11 +29,11 @@
       margin: 0px;
       padding: 4px 0px 4px 10px;
       // border-bottom: 1px solid $grey;
-      border-left: 1px solid $grey;
+      border-left: 1px solid $text_colour;
       list-style: none;
-      background: $white;
+      background: $text_colour;
       &:hover {
-        background: $grey;
+        background: lighten($text_colour, 5);
         &:before {
           color: $text_colour;
         }
@@ -55,14 +53,14 @@
       }
     }
   }
-  .com {
-    color: $litetext_colour;
+  .com, .dec {
+    color: $grey;
   }
-  .pln {
-    color: $text_colour;
+  .pln, .lit {
+    color: $white;
   }
   .pun {
-    color: $error;
+    color: $white;
   }
   .str {
     color: $info;
@@ -73,7 +71,7 @@
   .atv {
     color: $info;
   }
-  .tag {
+  .tag, .kwd {
     color: $brand;
   }
 }
