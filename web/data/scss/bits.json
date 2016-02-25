@@ -6,13 +6,17 @@
       "key": "vars",
       "title": "Variables",
       "nav": "Vars",
-      "description": "<p>About Vars.</p>"
+      "description": "<p>About Vars.</p>",
+      "file": "_vars",
+      "display": false
     },
     {
       "key": "utils",
       "title": "Utilities",
       "nav": "Utils",
-      "description": "<p>About utils</p>"
+      "description": "<p>About utils</p>",
+      "file": "_utils",
+      "display": false
     }
   ]
 }

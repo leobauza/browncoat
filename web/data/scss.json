@@ -6,7 +6,9 @@
       "key": "scss",
       "title": "SCSS?",
       "nav": "??",
-      "description": "<p>Something?</p>"
+      "description": "<p>Something?</p>",
+      "file": false,
+      "display": false
     }
   ]
 }

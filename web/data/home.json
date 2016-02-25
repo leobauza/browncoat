@@ -6,26 +6,33 @@
       "key": "folders",
       "title": "SCSS Folder Structure*",
       "nav": "SCSS Folders",
+      "description": "<p>Brief explenation of the folder structure.</p><p class='footnote'>*See scss sidebar links for more in depth information</p>",
       "file": "<base>/src/scss",
-      "description": "<p>Brief explenation of the folder structure.</p><p class='footnote'>*See scss sidebar links for more in depth information</p>"
+      "display": false
     },
     {
       "key": "commonjs",
       "title": "CommonJS For Modular JS",
       "nav": "JS",
-      "description": "<p>JS introduction</p>"
+      "description": "<p>JS introduction</p>",
+      "file": false,
+      "display": false
     },
     {
       "key": "gulp",
       "title": "Gulp for Task Management",
       "nav": "Gulp",
-      "description": "<p>Gulp introduction...</p>"
+      "description": "<p>Gulp introduction...</p>",
+      "file": false,
+      "display": false
     },
     {
       "key": "boilerplate",
       "title": "HTML Wrapper Boilerplate",
       "nav": "Boilerplate",
-      "description": "<p>HTML boilerplate to start prototyping with browncoat.</p>"
+      "description": "<p>HTML boilerplate to start prototyping with browncoat.</p>",
+      "file": false,
+      "display": false
     }
   ]
 }

@@ -7,7 +7,7 @@ require("angular");
 require("angular-route");
 require("angular-sanitize");
 
-function processCodeSamples(cs) {
+function parseCodeSamples(cs) {
 
   // Split simples by linebreaks.
   var samples = cs.split(/---\n/g),
@@ -49,6 +49,7 @@ app.service("Data", ["$q", "$http", "$location", "$rootScope", function ($q, $ht
     }
 
     // Current section is the key for secondary navigation.
+    $rootScope.tplType = "doc";
     $rootScope.currentSection = path.split("/")[0];
 
     // Get code
@@ -62,9 +63,33 @@ app.service("Data", ["$q", "$http", "$location", "$rootScope", function ($q, $ht
         data: results[1].data
       };
       d.resolve(resolve);
+    }, function (err) {
+      console.log(err);
     });
 
     return d.promise;
+  };
+
+  this.getStyleguide = function () {
+
+    var d = $q.defer(),
+        path = $location.path().replace(/^\/|\/$/g, '');
+
+    // Current section is the key for secondary navigation.
+    $rootScope.tplType = "styleguide";
+    $rootScope.currentSection = path.split("/")[0];
+
+    // Get data
+    $http.get("/data/" + path + ".json", { cache: true })
+    .success(function (data) {
+      d.resolve(data);
+    })
+    .error(function (err) {
+      console.error(err);
+    });
+
+    return d.promise;
+
   };
 
   this.setSiteInfo = function () {
@@ -131,7 +156,7 @@ app
   $scope.title = page.title;
   $scope.description = page.description;
   $scope.blocks = page.sections;
-  $scope.codeSamples = processCodeSamples(data.code);
+  $scope.codeSamples = parseCodeSamples(data.code);
 
   $timeout(function () {
     PR.prettyPrint();
@@ -140,6 +165,7 @@ app
 }])
 .controller("styleguideCtr", ["$scope", "$timeout", "data", function ($scope, $timeout, data) {
 
+  $scope.data = data;
 
 }]);
 
@@ -189,7 +215,7 @@ app.config(["$routeProvider", "$locationProvider", function ($routeProvider, $lo
       controller: "styleguideCtr",
       resolve: {
         "data" : ["Data", function (Data) {
-          return Data.getPage().then(function (val) {
+          return Data.getStyleguide().then(function (val) {
             return val;
           });
         }]

@@ -6,12 +6,14 @@
       "key": "btns",
       "title": "Buttons",
       "description": "<p>About buttons.</p>",
+      "file": false,
       "display": true
     },
     {
       "key": "callouts",
       "title": "Callouts",
       "description": "<p>About callouts.</p>",
+      "file": false,
       "display": true
     }
   ]

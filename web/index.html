@@ -22,7 +22,7 @@
   <link rel="shortcut icon" href="/assets/img/favicon.ico" type="image/x-icon">
 </head>
 <body ng-controller="mainCtrl">
-  <header class="doc__header">
+  <header ng-class="{'-styleguide': tplType == 'styleguide'}" class="doc__header">
     <div class="container">
       <h1><span ng-bind="projectTitle"></span> <span class="small" ng-bind="version"></span></h1>
       <nav ng-cloak class="btn-group">
@@ -38,7 +38,7 @@
     </section>
   </nav>
 
-  <section class="row" ng-view>
+  <section ng-class="{row: tplType == 'doc'}" ng-view>
     <h6>Loading...</h6>
   </section>
 
