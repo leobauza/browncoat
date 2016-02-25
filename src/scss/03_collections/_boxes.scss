@@ -19,60 +19,57 @@
   font-weight: $regularFont;
 }
 .box__body {
-  padding: 20px 18px 0px;
+  padding: 20px 19px 0px;
   border-left: 1px solid $default;
   border-right: 1px solid $default;
+  &.-cont {
+    padding: 0px 19px;
+  }
 }
 
 //box types
-.box--default {
+.box {
   @extend %box;
+  &.-main {
+    .box__header {
+      background: $brand;
+    }
+    .box__heading {
+      color: $white;
+    }
+  }
+  &.-info {
+    .box__header {
+      background: $info;
+    }
+    .box__heading {
+      color: $white;
+    }
+  }
+  &.-success {
+    .box__header {
+      background: $success;
+    }
+    .box__heading {
+      color: $white;
+    }
+  }
+  &.-warning {
+    .box__header {
+      background: $warning;
+    }
+    .box__heading {
+      color: $white;
+    }
+  }
+  &.-error {
+    .box__header {
+      background: $error;
+    }
+    .box__heading {
+      color: $white;
+    }
+  }
 }
 
-.box--main {
-  @extend %box;
-  .box__header {
-    background: $brand;
-  }
-  .box__heading {
-    color: $white;
-  }
-}
-
-.box--info {
-  @extend %box;
-  .box__header {
-    background: $info;
-  }
-  .box__heading {
-    color: $white;
-  }
-}
-.box--success {
-  @extend %box;
-  .box__header {
-    background: $success;
-  }
-  .box__heading {
-    color: $white;
-  }
-}
-.box--warning {
-  @extend %box;
-  .box__header {
-    background: $warning;
-  }
-  .box__heading {
-    color: $white;
-  }
-}
-.box--error {
-  @extend %box;
-  .box__header {
-    background: $error;
-  }
-  .box__heading {
-    color: $white;
-  }
-}
 
