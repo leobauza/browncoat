@@ -142,11 +142,12 @@
 
 	    $http.get("/data/main.json", {cache: true})
 	      .success(function (data) {
-
+	        console.log(data.styleguideNavs);
 	        $rootScope.projectTitle = data.projectTitle;
 	        $rootScope.version = data.version;
 	        $rootScope.projectNav = data.projectNav;
 	        $rootScope.sectionNavs = data.sectionNavs;
+	        $rootScope.styleguideNavs = data.styleguideNavs;
 	        $rootScope.projectInfo = data.bundles.angular;
 	        d.resolve(true);
 
