@@ -147,8 +147,8 @@ code {
   font-family: $code;
   font-size: 85%;
   padding: 2px 4px;
-  color: $info;
-  background: lighten($black, 90);
+  color: $link_colour;
+  background: $grey;
 }
 
 xmp {

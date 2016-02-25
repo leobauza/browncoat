@@ -48,10 +48,6 @@ app.service("Data", ["$q", "$http", "$location", "$rootScope", function ($q, $ht
       path = "home";
     }
 
-    // Current section is the key for secondary navigation.
-    $rootScope.tplType = "doc";
-    $rootScope.currentSection = path.split("/")[0];
-
     // Get code
     var code = $http.get("/code_samples/" + path + ".md", { cache: true });
     // Get data
@@ -62,6 +58,9 @@ app.service("Data", ["$q", "$http", "$location", "$rootScope", function ($q, $ht
         code: results[0].data,
         data: results[1].data
       };
+      // Current section is the key for secondary navigation.
+      $rootScope.tplType = "doc";
+      $rootScope.currentSection = path.split("/")[0];
       d.resolve(resolve);
     }, function (err) {
       console.log(err);
@@ -75,13 +74,12 @@ app.service("Data", ["$q", "$http", "$location", "$rootScope", function ($q, $ht
     var d = $q.defer(),
         path = $location.path().replace(/^\/|\/$/g, '');
 
-    // Current section is the key for secondary navigation.
-    $rootScope.tplType = "styleguide";
-    $rootScope.currentSection = path.split("/")[0];
-
     // Get data
     $http.get("/data/" + path + ".json", { cache: true })
     .success(function (data) {
+      // Current section is the key for secondary navigation.
+      $rootScope.tplType = "styleguide";
+      $rootScope.currentSection = path.split("/")[0];
       d.resolve(data);
     })
     .error(function (err) {

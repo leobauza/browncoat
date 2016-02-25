@@ -57,6 +57,18 @@
       }
     ]
   },
+  "styleguideNavs": {
+    "main": [
+      {
+        "name": "first",
+        "path": "/first"
+      },
+      {
+        "name": "second",
+        "path": "/second"
+      }
+    ]
+  },
   "bundles": {
     "angular": {
       "intro": "Using <code class='small'>Angular.js</code> bundle for documentation routing. This is the default documentation and sample for browncoat."

@@ -5,10 +5,15 @@ var gulp        = require('gulp'),
 var watchTask = function(callback) {
 
   browserSync.init({
-    proxy: "http://browncoat.loc"
-    // server: {
-    //   baseDir: "./web"
-    // }
+    // proxy: "http://browncoat.loc"
+    server: {
+      baseDir: "./web",
+      middleware: [
+        modRewrite([
+          '!\\.\\w+$ /index.html [L]'
+        ])
+      ]
+    }
   });
 
   gulp.watch(config.root.src + '/scss/**/*.scss', ['css']);
