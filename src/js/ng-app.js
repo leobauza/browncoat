@@ -152,6 +152,15 @@ app
   var codeSamples = {},
       page = data.data;
 
+  _.each(page.sections, function (v, k) {
+    if (v.description.indexOf("<p>") === -1) {
+      var dparts = v.description.split("==>");
+      page.sections[k].description = _.map(dparts, function (v, k) {
+        return "<p>" + v + "</p>";
+      }).join("");
+    }
+  });
+
   $scope.title = page.title;
   $scope.description = page.description;
   $scope.blocks = page.sections;

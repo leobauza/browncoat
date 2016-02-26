@@ -53,7 +53,10 @@
       }
     }
   }
-  .com, .dec {
+  .com {
+    color: lighten($black, 45);
+  }
+  .dec {
     color: $grey;
   }
   .pln, .lit {

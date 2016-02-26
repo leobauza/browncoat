@@ -3,6 +3,14 @@
   "description": "Bits are...",
   "sections": [
     {
+      "key": "colours",
+      "title": "Colours",
+      "nav": false,
+      "description": "The defined colours are required for all browncoat libraries to compile correctly.==>A second paragraph defined by an arrow.",
+      "file": "_vars",
+      "display": false
+    },
+    {
       "key": "vars",
       "title": "Variables",
       "nav": "Vars",
@@ -16,6 +24,14 @@
       "nav": "Utils",
       "description": "<p>About utils</p>",
       "file": "_utils",
+      "display": false
+    },
+    {
+      "key": "sprites",
+      "title": "Sprites",
+      "nav": false,
+      "description": "<p>About sprites.</p>",
+      "file": "_sprites",
       "display": false
     }
   ]
