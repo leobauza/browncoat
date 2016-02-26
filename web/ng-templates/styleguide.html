@@ -3,9 +3,9 @@
     <h1>{{data.title}}</h1>
   </div>
 </header>
-<nav class="site__nav">
-  <ul>
-    <li ng-repeat="item in styleguideNavs.main"><a href="/styleguide{{item.path}}">{{item.name}}</a></li>
+<nav class="site__nav container">
+  <ul class="nav group">
+    <li class="nav__item" ng-repeat="item in styleguideNavs.main"><a href="/styleguide{{item.path}}">{{item.name}}</a></li>
   </ul>
 </nav>
 <section class="container">

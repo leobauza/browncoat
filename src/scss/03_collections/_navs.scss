@@ -3,7 +3,24 @@
  * Styles for navs
  */
 
-//nav bar
+%nav {
+  @include resetList(0px 0px 20px, 0px);
+  border-bottom: 1px solid $grey;
+}
+.nav__item {
+  float: left;
+  margin: 0px 40px 0px 0px;
+  a {
+    display: block;
+    padding: 10px 0px;
+    font-size: $text_size;
+  }
+}
+
 .site__nav {
-  display: block;
+
+}
+
+.nav {
+  @extend %nav;
 }
