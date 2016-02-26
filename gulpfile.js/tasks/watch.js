@@ -11,7 +11,8 @@ var watchTask = function(callback) {
       baseDir: "./web",
       middleware: [
         modRewrite([
-          '!\\.\\w+$ /index.html [L]'
+          '^/assets/css/(.*) - [L]', // allow browsersync to stream css
+          '!\\.\\w+$ /index.html [L]' // check on this...
         ])
       ]
     }
