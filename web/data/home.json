@@ -1,6 +1,6 @@
 {
   "title": "About Browncoat",
-  "description": "Browncoat is the least popular html, scss, and js framework for developing responsive, mobile last projects on the interwebs. Browncoat provides a folder structure for scss and javascript. It provides a configurable gulp setup for many common tasks. Finally it allows you to modify it and create your own personal/team framework.",
+  "description": "Browncoat is the least popular html, sass (scss syntax), and js framework for developing responsive, mobile-last projects on the interwebs. Browncoat provides a folder structure for scss and javascript. It provides a configurable gulp setup for many common tasks. Finally it allows you to modify it and create your own personal/team framework.",
   "sections": [
     {
       "key": "folders",

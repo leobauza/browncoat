@@ -1,6 +1,6 @@
 <article class="span8">
   <h2>{{title}}</h2>
-  <p>{{description}}</p>
+  <p ng-bind-html="description"></p>
   <!-- <script src="https://gist.github.com/leobauza/baefedca7fd3ceb3c288.js"></script> -->
 
   <article id="{{block.key}}" class="box" ng-repeat="block in blocks">

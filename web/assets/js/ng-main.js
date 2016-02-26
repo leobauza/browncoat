@@ -200,15 +200,15 @@
 
 	  _.each(page.sections, function (v, k) {
 	    if (v.description.indexOf("<p>") === -1) {
-	      var dparts = v.description.split("==>");
+	      var dparts = v.description.split("=>");
 	      page.sections[k].description = _.map(dparts, function (v, k) {
-	        return "<p>" + v + "</p>";
+	        return "<p>" + v.replace(/`([\s+\S]*?)`/g, "<code>$1</code>") + "</p>";
 	      }).join("");
 	    }
 	  });
 
 	  $scope.title = page.title;
-	  $scope.description = page.description;
+	  $scope.description = page.description.replace(/`([\s+\S]*?)`/g, "<code>$1</code>");
 	  $scope.blocks = page.sections;
 	  $scope.codeSamples = parseCodeSamples(data.code);
 
