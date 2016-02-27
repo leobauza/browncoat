@@ -1,29 +1,21 @@
 {
   "title": "About Browncoat",
-  "description": "Browncoat is the least popular html, sass (scss syntax), and js framework for developing responsive, mobile-last projects on the interwebs. Browncoat provides a folder structure for scss and javascript. It provides a configurable gulp setup for many common tasks. Finally it allows you to modify it and create your own personal/team framework.",
+  "description": "Browncoat is a html, scss, and js framework. It provides a folder structure for assets, a configurable gulp setup, and internal styleguide creation.",
   "sections": [
     {
-      "key": "folders",
-      "title": "SCSS Folder Structure*",
-      "nav": "SCSS Folders",
-      "description": "<p>Brief explenation of the folder structure.</p><p class='footnote'>*See scss sidebar links for more in depth information</p>",
-      "file": "<base>/src/scss",
-      "display": false
-    },
-    {
-      "key": "commonjs",
-      "title": "CommonJS For Modular JS",
-      "nav": "JS",
-      "description": "<p>JS introduction</p>",
+      "key": "start",
+      "title": "Start Here",
+      "nav": false,
+      "description": "Go to <a href='https://github.com/leobauza/browncoat'>the browncoat github page</a> and download the zip package for the project.=>Unzip it and place the contents in your project folder.=>Open a terminal and perform the commands bellow.=>A browser window should automatically open to `localhost:3000` containing the same documentation for browncoat you would see at <a href='http://browncoat.leobauza.com'>the online docs</a>.",
       "file": false,
       "display": false
     },
     {
       "key": "gulp",
-      "title": "Gulp for Task Management",
+      "title": "Gulp Task Management",
       "nav": "Gulp",
-      "description": "<p>Gulp introduction...</p>",
-      "file": false,
+      "description": "After running `npm run gulp` a watch task will start. This watches all scss, js, and html files and triggers recompilling (of js and scss). Changes will also trigger browsersync which will stream the changes to the browser or when streaming is not available it will reload the browser so changes are immediately visible.",
+      "file": "/gulpfile.js",
       "display": false
     },
     {

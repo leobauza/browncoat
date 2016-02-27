@@ -1,3 +1,12 @@
+### start
+```bash
+# Install dependencies
+npm install
+
+# Run Gulp
+npm run gulp
+```
+---
 ### boilerplate
 ```html
 <!DOCTYPE html>
@@ -32,32 +41,15 @@
 </html>
 ```
 ---
-### folders
-```bash
-/scss
-  styles.scss # aggregates all scripts
-  00_bits # variables and utilities
-  01_elements # basic html elements and resets
-  02_items # extended basic elements
-  03_collections # groups that may contain items and/or elements
-  04_sections # logical page sections
-  05_layouts # control overall structure of the page
-```
----
-### commonjs
-```js
-// modules/mymodule.js
-module.exports = "Hello World!";
-
-// app.js
-var myModule = require("./modules/mymodule");
-console.log(myModule); // outputs "Hellow World!" to console
-```
----
 ### gulp
 ```bash
-# install dependencies and devDependencies
-npm install
-# run gulp
+# Default gulp task
 npm run gulp
+## Watches:
+# /src/scss
+# /src/js
+# *.html in /web
+## Compiles to:
+# /assets/css
+# /assets/js
 ```

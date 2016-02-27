@@ -142,7 +142,6 @@
 
 	    $http.get("/data/main.json", {cache: true})
 	      .success(function (data) {
-	        console.log(data.styleguideNavs);
 	        $rootScope.projectTitle = data.projectTitle;
 	        $rootScope.version = data.version;
 	        $rootScope.projectNav = data.projectNav;
