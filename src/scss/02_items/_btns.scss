@@ -6,105 +6,89 @@
 %btn{
   @include inlineBlock(20);
   @include marpad(0 0 20px, 10px 15px);
-  @include borderRadius(5px);
-  color: $white;
-  border: 1px solid darken($default, 10);
+  color: $text_colour;
+  border: 1px solid $default;
   font-size: $text_size;
   text-align: center;
   cursor: pointer;
   &:hover, &.active {
-    background: darken($default,10);
-    color: $white;
-    text-decoration:none;
+    background: $default;
+    color: $text_colour;
+    text-decoration: none;
   }
   &:focus {
-    border: 1px solid darken($default, 10);
+    border: 1px solid $default;
   }
   &:active {
 
   }
 }
 
-//button types
-.btn--default {
+.btn {
   @extend %btn;
-  background: none;
-  color: $text_colour;
-  &:hover, &.active {
-    background: $default;
+  &.-main {
+    @include gradient($brand, lighten($brand, 2));
+    color: $white;
+    border-color: $brand;
+    &:hover, &.active {
+      background: $white;
+      color: $brand;
+    }
+    &:focus {
+      border-color: $brand;
+    }
   }
-}
-.btn--main {
-  @extend %btn;
-  @include gradient($brand, lighten($brand, 2));
-  border-color: darken($brand, 10);
-  &:hover, &.active {
-    background: darken($brand, 10);
+  &.-info {
+    @include gradient($info, lighten($info, 2));
+    color: $white;
+    border-color: $info;
+    &:hover, &.active {
+      background: $white;
+      color: $info;
+    }
+    &:focus {
+      border-color: $info;
+    }
   }
-  &:focus {
-    border: 1px solid darken($brand, 10);
+  &.-success {
+    @include gradient($success, lighten($success, 2));
+    color: $white;
+    border-color: $success;
+    &:hover, &.active {
+      background: $white;
+      color: $success;
+    }
+    &:focus {
+      border-color: $success;
+    }
   }
-}
-.btn--info {
-  @extend %btn;
-  @include gradient($info, lighten($info, 2));
-  border-color: darken($info, 10);
-  &:hover, &.active {
-    background: darken($info, 10);
+  &.-warning {
+    @include gradient($warning, lighten($warning, 2));
+    color: $white;
+    border-color: $warning;
+    &:hover, &.active {
+      background: $white;
+      color: $warning;
+    }
+    &:focus {
+      border-color: $warning;
+    }
   }
-  &:focus {
-    border: 1px solid darken($info, 10);
-  }
-}
-.btn--success {
-  @extend %btn;
-  @include gradient($success, lighten($success, 2));
-  border-color: darken($success, 10);
-  &:hover, &.active {
-    background: darken($success, 10);
-  }
-  &:focus {
-    border: 1px solid darken($success, 10);
-  }
-}
-.btn--warning {
-  @extend %btn;
-  @include gradient($warning, lighten($warning, 2));
-  border-color: darken($warning, 10);
-  &:hover, &.active {
-    background: darken($warning, 10);
-  }
-  &:focus {
-    border: 1px solid darken($warning, 10);
-  }
-}
-.btn--error {
-  @extend %btn;
-  @include gradient($error, lighten($error, 2));
-  border-color: darken($error, 10);
-  &:hover, &.active {
-    background: darken($error, 10);
-  }
-  &:focus {
-    border: 1px solid darken($error, 10);
+  &.-error {
+    @include gradient($error, lighten($error, 2));
+    color: $white;
+    border-color: $error;
+    &:hover, &.active {
+      background: $white;
+      color: $error;
+    }
+    &:focus {
+      border-color: $error;
+    }
   }
 }
 
-//button sizes
-.btn--large {
-  padding: 15px 25px;
-  font-size: 2em;
-}
-.btn--small {
-  padding: 10px 15px;
-  font-size: 1.4em;
-}
-.btn--xsmall {
-  padding: 5px 10px;
-  font-size: 1.2em;
-}
-
-//button groups
+// Button Groups.
 .btn-group {
   margin: 0 0 20px;
   %btn{
@@ -113,7 +97,6 @@
     float: left;
     margin-bottom: 0;
     margin-left: -1px;
-    //border-left: none;
     &:first-child {
       @include borderRadius(5px 0px 0px 5px);
     }
@@ -121,127 +104,4 @@
       @include borderRadius(0px 5px 5px 0px);
     }
   }
-}
-
-// btns w/ fx
-$transTime: .2s;
-
-.collapse-btn {
-  @include square(48px, 48px);
-  display: block;
-  padding: 0;
-  margin: 0;
-  background: $white;
-  border: 1px solid lighten($black, 75);
-  cursor: pointer;
-  &:hover, &.active {
-    background: $white;
-    text-decoration: none;
-  }
-  &:focus {
-    border: 1px solid lighten($black, 75);
-  }
-  &:active {
-
-  }
-}
-
-//THIN
-.collapse-thin {
-  position: relative;
-  span {
-    @include transition(all $transTime);
-    position: absolute;
-    left: 5px;
-    display: block;
-    width: 38px;
-    height: 4px;
-    background: lighten($black, 75);
-  }
-  .one {
-    top: 9px;
-  }
-  .two {
-    top: 22px;
-  }
-  .three {
-    top: 35px;
-  }
-}
-
-.collapse-thin {
-  /*stage one*/
-  &.stg-one {
-    .one, .two, .three {
-      top: 22px;
-    }
-    .two {
-      visibility: hidden;
-    }
-  }
-  /*stage two*/
-  &.stg-two {
-    span {
-      background: $error;
-    }
-    .one {
-      @include rotate(45deg);
-    }
-    .three {
-      @include rotate(-45deg);
-    }
-  }
-}
-
-
-//THICK
-.collapse-thick {
-  position: relative;
-  span {
-    @include transition(all $transTime);
-    position: absolute;
-    left: 5px;
-    display: block;
-    width: 38px;
-    height: 6px;
-    background: lighten($black, 75);
-  }
-  .one {
-    top: 8px;
-  }
-  .two {
-    top: 21px;
-  }
-  .three {
-    top: 34px;
-  }
-}
-
-.collapse-thick {
-  /*stage one*/
-  &.stg-one {
-    .one, .two, .three {
-      top: 21px;
-    }
-    .two {
-      visibility: hidden;
-    }
-  }
-  /*stage two*/
-  &.stg-two {
-    span {
-      background: $error;
-    }
-    .one {
-      @include rotate(45deg);
-    }
-    .three {
-      @include rotate(-45deg);
-    }
-  }
-}
-
-//BORDERLESS
-.collapse-borderless {
-  border: none;
 }

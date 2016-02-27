@@ -1,0 +1,23 @@
+{
+  "title": "Sample Styleguide Page",
+  "description": "This is a sample styleguide page!",
+  "boxes": [
+    {
+      "title": "Box One",
+      "body": "Box one body."
+    },
+    {
+      "title": "Box Two",
+      "body": "Box two body."
+    },
+    {
+      "title": "Box Three",
+      "body": "Box three body."
+    },
+    {
+      "title": "Box Four",
+      "body": "Box four body.",
+      "button": ["#", "Learn More"]
+    }
+  ]
+}

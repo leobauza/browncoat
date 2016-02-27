@@ -77,18 +77,18 @@ p {
   font-size: $text_size;
   line-height: $text_line_height;
   color: $text_colour;
-  margin: 0 0 20px;
-  padding: 0;
+  margin: 0;
+  padding: 0 0 20px;
   &.intro {
     font-size: 2em;
-    margin: 0 0 40px;
+    padding: 0 0 40px;
   }
   &.soft-intro {
     font-size: 2em;
   }
 }
-small {
-  font-size: 80%;
+small, .small {
+  font-size: 65%;
   line-height: 1;
 }
 strong, b {
@@ -103,7 +103,7 @@ h3,
 h4,
 h5,
 h6 {
-  margin: 0 0 .38196em;
+  margin: 0 0 20px;
   font-weight: $boldFont;
   text-rendering: optimizelegibility;
   line-height: 1.2em;
@@ -116,7 +116,7 @@ h6 {
   }
   small {
     font-size: 70%;
-    color: $litetext_colour;
+    color: $text_colour_light;
   }
 }
 h1 {
@@ -147,8 +147,12 @@ code {
   font-family: $code;
   font-size: 85%;
   padding: 2px 4px;
-  color: $info;
-  background: lighten($black, 90);
+  color: $link_colour;
+  background: $grey;
+}
+
+xmp {
+  margin: 0px;
 }
 
 .reverse {

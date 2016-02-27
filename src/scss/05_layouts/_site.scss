@@ -4,28 +4,7 @@
  */
 
 .container {
-  padding: 0px 20px;
-}
-.divider {
-  padding: 20px;
-}
-
-.padder {
-  padding-top:20px;
-  padding-bottom:20px;
-}
-
-.division {
-  border-bottom: 1px solid lighten($black, 80);
-  margin: 0 0 20px;
-}
-.division-flush {
-  @extend .division;
-  margin: 0;
-}
-
-.spacer {
-  margin: 0 0 20px;
+  padding: 0px $global_gutter * 1%;
 }
 
 [class*="row-fluid"] > [class*="span"],
@@ -38,9 +17,6 @@
 /*
  * base rows
  */
-//grid
-$global_columns: 12;
-$global_gutter: 3.183;
 
 @mixin rows($gutter: 3.183, $columns: 12) {
   @extend %group;
@@ -88,11 +64,11 @@ $global_gutter: 3.183;
   &> [class*="span"] {
     &.l {
       margin-right: 0;
-      @include overflower;
+      @extend %overflower;
     }
     &:last-child {
       margin-right: 0;
-      @include overflower;
+      @extend %overflower;
     }
   }
 }
@@ -137,7 +113,7 @@ $global_gutter: 3.183;
     float:left;
   }
   .span-main {
-    @include overflower;
+    @extend %overflower;
   }
 }
 
