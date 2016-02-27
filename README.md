@@ -43,9 +43,11 @@ To view these you will need to set the shots folder as the root folder of a new 
 
 ## Statuses
 
-*unstable* - Incomplete and untested.
-*review* - Complete but untested.
-*stable* - Complete and tested. Pending release/Released.
+**unstable** - Incomplete and untested.
+
+**review** - Complete but untested.
+
+**stable** - Complete and tested. Pending release/Released.
 
 ## changelog
 
