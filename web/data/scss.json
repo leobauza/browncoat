@@ -7,7 +7,7 @@
       "title": "SCSS Folder Structure*",
       "nav": "SCSS Folders",
       "description": "<p>Brief explenation of the folder structure.</p><p class='footnote'>*See scss section for more information</p>",
-      "file": "<base>/src/scss",
+      "file": "/src/scss",
       "display": false
     },
     {

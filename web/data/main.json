@@ -27,23 +27,23 @@
     "home": [
       {
         "name": "gulpfile.js",
-        "path": "folders/gulpfilejs"
+        "path": "/home/gulpfilejs"
       },
       {
         "name": "node_modules",
-        "path": "folders/node_modules"
+        "path": "/home/node_modules"
       },
       {
         "name": "src",
-        "path": "folders/src"
+        "path": "home/src"
       },
       {
         "name": "web",
-        "path": "folders/web"
+        "path": "/home/web"
       },
       {
         "name": "wraith",
-        "path": "folders/wraith"
+        "path": "/home/wraith"
       }
     ],
     "scss": [

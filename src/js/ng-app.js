@@ -136,7 +136,13 @@ app
     } else if (type === "path") {
       var path = $location.path(),
           idParts = id.split("/");
-      if (idParts.length === 2) {
+
+      if (id === "/" && path === "/") {
+        return true;
+      } else if (idParts.length === 2) {
+        if (idParts[1] === "") {
+          idParts[1] = "home";
+        }
         return idParts[1] === path.split("/")[1];
       } else {
         return id === path;
@@ -211,6 +217,17 @@ app.config(["$routeProvider", "$locationProvider", function ($routeProvider, $lo
       reloadOnSearch: false
     })
     .when("/js/:name?", {
+      templateUrl: "/ng-templates/landing.html",
+      controller: "landingCtr",
+      resolve: {
+        "data" : ["Data", function (Data) {
+          return Data.getPage().then(function (val) {
+            return val;
+          });
+        }]
+      }
+    })
+    .when("/home/:name?", {
       templateUrl: "/ng-templates/landing.html",
       controller: "landingCtr",
       resolve: {

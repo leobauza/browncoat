@@ -9,7 +9,7 @@ $global_gutter: 3.183;
 
 // greyscale
 $black: #000;
-$grey: #efefef;
+$grey: #dedede;
 $white: #fff;
 
 // general
@@ -44,8 +44,8 @@ $code: Menlo,Monaco,Consolas,"Courier New",monospace;
 
 $global_family: $sans_serif; //not everything inherits from the body...so we have $global_family
 
-$text_size: 1.8em;
-$text_line_height: 1.6em;
+$text_size: 1.6em;
+$text_line_height: 1.333em;
 $lists_font_size: $text_size;
 $lists_line_height: $text_line_height;
 
