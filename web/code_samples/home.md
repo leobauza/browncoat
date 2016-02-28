@@ -1,10 +1,16 @@
 ### start
 ```bash
+# You will nede node/npm to use browncoat
+# Download and install from the nodejs website
+# https://nodejs.org/en/
+
 # Install dependencies
 npm install
+# This will take a few momenets while npm gets all the packages
 
 # Run Gulp
 npm run gulp
+# This will take a few moments while gulp gets started
 ```
 ---
 ### boilerplate
@@ -52,4 +58,40 @@ npm run gulp
 ## Compiles to:
 # /assets/css
 # /assets/js
+```
+---
+### structure
+```bash
+# Contains all gulp taks
+/gulpfile.js
+
+# Dependencies are broken up in two parts:
+# - Dependencies for gulp (devDependencies on package.json)
+# - Dependencies for application or website (dependencies on package.json)
+# This folder is gitignored and is created by running npm install.
+/node_modules
+
+# Where all css/js work is done. Folders inside the src directory are
+# compiled into the web/assets/ directory.
+# Also contains the icons folder that is used to create sprites.
+/src
+
+# The root of the application. Contains the assets compiled for src files,
+# code samples files, data files, templates, and the index.
+/web
+
+# Contains files related to visual regression testing.
+/wraith
+
+# For use with git version control.
+.gitignore
+
+# The MIT License (MIT)
+LICENSE
+
+# File that specifies what modules will be downloaded into node_modules.
+package.json
+
+# Readme file for github project.
+README.md
 ```

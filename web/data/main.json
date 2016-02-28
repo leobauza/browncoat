@@ -24,6 +24,28 @@
     }
   ],
   "sectionNavs": {
+    "home": [
+      {
+        "name": "gulpfile.js",
+        "path": "folders/gulpfilejs"
+      },
+      {
+        "name": "node_modules",
+        "path": "folders/node_modules"
+      },
+      {
+        "name": "src",
+        "path": "folders/src"
+      },
+      {
+        "name": "web",
+        "path": "folders/web"
+      },
+      {
+        "name": "wraith",
+        "path": "folders/wraith"
+      }
+    ],
     "scss": [
       {
         "name": "Bits",

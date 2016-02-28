@@ -33,7 +33,7 @@
   </header>
 
   <section class="container">
-    <nav ng-cloak ng-if="currentSection != 'home'" class="btn-group">
+    <nav id="section-nav" class="btn-group" ng-cloak>
       <a ng-repeat="item in sectionNavs[currentSection]" href="{{item.path}}" ng-class="{'active': isActive(item.path, 'path')}" class="btn" ng-bind="item.name"></a>
     </section>
   </nav>
