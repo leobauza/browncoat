@@ -1,13 +1,13 @@
 {
   "title": "Scss Overview",
-  "description": "Browncoat uses sass as a preprocessor, and uses the scss syntax for writing css. There is a folder structure that goes from simplest bits of css information to large layouts defined by css. There are also coding standards to get the most consistent and managable css code possible.",
+  "description": "Browncoat uses sass as a preprocessor, and uses the scss syntax for writing css. A folder structure exists that goes from the simplest part of scss (bits) to the largest part (layouts). There are coding standards to ensure consistency and reusability.",
   "sections": [
     {
       "key": "folders",
       "title": "SCSS Folder Structure*",
       "nav": "SCSS Folders",
       "description": [
-        "Folders are divided from the smallest piece (bits) of scss code to the largest (layouts). Each folder has a section in the documentations."
+        "Folders are divided from the smallest part (bits) of scss code to the largest (layouts). Each folder has a section in the documentations."
       ],
       "file": "/src/scss",
       "display": false
@@ -17,7 +17,7 @@
       "title": "SCSS Parts",
       "nav": false,
       "description": [
-        "From smallest to largest: `bits` > `elements` > `items` > `collections` > `sections` > `layouts`. See examples of parts below. Each part corresponds to a folder that has a section in the documentation."
+        "From smallest part to largest: `bits` > `elements` > `items` > `collections` > `sections` > `layouts`. See examples of parts below. Each part corresponds to a folder that has a section in the documentation."
       ],
       "file": false,
       "display": false

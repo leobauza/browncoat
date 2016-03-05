@@ -1,6 +1,6 @@
 {
   "title": "Bits",
-  "description": "The smallest units of sass code. Should only contain variables and utilities to be used by other files. They should not contain rule sets except those inside `mixins` or `placeholders`.",
+  "description": "The smallest part of scss code. Should only contain variables and utilities to be used by other files. They should not contain rule sets except those inside `mixins` or `placeholders`.",
   "sections": [
     {
       "key": "colours",
@@ -19,10 +19,12 @@
       "display": false
     },
     {
-      "key": "layout",
-      "title": "Layout",
+      "key": "grid",
+      "title": "Grid",
       "nav": false,
-      "description": "Set then number of columns and gutter here for the primary grid.",
+      "description": [
+        "Set then number of columns and gutter here for the primary grid."
+      ],
       "file": "_vars",
       "display": false
     },
@@ -30,7 +32,9 @@
       "key": "utils",
       "title": "Utilities",
       "nav": "Utils",
-      "description": "Contains mixins, placeholders, and functions. See file for all utilities. Examples below are generic.",
+      "description": [
+        "Contains mixins, placeholders, and functions. See file for all utilities. Examples below are generic."
+      ],
       "file": "_utils",
       "display": false
     },

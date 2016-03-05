@@ -67,7 +67,7 @@ $boldFont: 700;
 /* end */
 ```
 ---
-### layout
+### grid
 ```css
 /* grid */
 $global_columns: 12;
