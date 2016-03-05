@@ -88,13 +88,14 @@ h1 {
 ### childrenAndModifiers
 ```css
 %box {
-  /*
-   * child relationship
-   * note: the implied parent class is below (ie. .box and its modifiers)
-   */
-  .box__header {
-    font-weight: $boldFont;
-  }
+  /* generic styles */
+}
+/*
+ * child relationship
+ * note: the implied parent is .box + modifiers
+ */
+.box__header {
+  font-weight: $boldFont;
 }
 .box {
   @extend %box;

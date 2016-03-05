@@ -6,15 +6,19 @@
       "key": "folders",
       "title": "SCSS Folder Structure*",
       "nav": "SCSS Folders",
-      "description": "<p>Brief explenation of the folder structure.</p><p class='footnote'>*See scss section for more information</p>",
+      "description": [
+        "Folders are divided from the smallest piece (bits) of scss code to the largest (layouts). Each folder has a section in the documentations."
+      ],
       "file": "/src/scss",
       "display": false
     },
     {
       "key": "structure",
-      "title": "Scss Structure",
+      "title": "SCSS Parts",
       "nav": false,
-      "description": "Goes as follows `bits` > `elements` > `items` > `collections` > `sections` > `layouts`. They are briefly laid out here and have their own sections in the docs.",
+      "description": [
+        "From smallest to largest: `bits` > `elements` > `items` > `collections` > `sections` > `layouts`. See examples of parts below. Each part corresponds to a folder that has a section in the documentation."
+      ],
       "file": false,
       "display": false
     },
