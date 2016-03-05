@@ -27,7 +27,7 @@
     "home": [
       {
         "name": "gulpfile.js",
-        "path": "/home/gulpfilejs"
+        "path": "/gulp"
       },
       {
         "name": "node_modules",

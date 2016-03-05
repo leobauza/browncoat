@@ -273,6 +273,17 @@
 	        }]
 	      }
 	    })
+	    .when("/gulp", {
+	      templateUrl: "/ng-templates/landing.html",
+	      controller: "landingCtr",
+	      resolve: {
+	        "data" : ["Data", function (Data) {
+	          return Data.getPage().then(function (val) {
+	            return val;
+	          });
+	        }]
+	      }
+	    })
 	    .when("/home/:name?", {
 	      templateUrl: "/ng-templates/landing.html",
 	      controller: "landingCtr",
