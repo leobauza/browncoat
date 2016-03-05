@@ -1,0 +1,21 @@
+/*
+ * 03_collections/btngroups
+ * Styles for button groups
+ */
+
+.btn-group {
+  margin: 0 0 20px;
+  %btn{
+    @include borderRadius(0);
+    position: relative;
+    float: left;
+    margin-bottom: 0;
+    margin-left: -1px;
+    &:first-child {
+      @include borderRadius(5px 0px 0px 5px);
+    }
+    &:last-child {
+      @include borderRadius(0px 5px 5px 0px);
+    }
+  }
+}

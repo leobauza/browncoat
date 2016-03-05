@@ -24,7 +24,7 @@
       "key": "lists",
       "title": "Lists",
       "description": [
-        "Lists styled using variables found in `_vars.scss`. Lists set up base styles for `03_collections/_listmods.scss`"
+        "Lists styled using variables found in `_vars.scss`. Lists set up base styles for `03_collections/_listgroups.scss`"
       ],
       "file": "_lists",
       "display": true

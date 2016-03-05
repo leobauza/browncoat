@@ -5,15 +5,17 @@
     {
       "key": "btns",
       "title": "Buttons",
-      "description": "<p>About buttons.</p>",
-      "file": false,
+      "description": [
+        "Buttons extend the `%btn` placeholder. They create base styles for `03_collections/_btngroups.scss`."
+      ],
+      "file": "_btns",
       "display": true
     },
     {
       "key": "callouts",
       "title": "Callouts",
       "description": "<p>About callouts.</p>",
-      "file": false,
+      "file": "_callouts",
       "display": true
     }
   ]

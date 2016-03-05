@@ -10,5 +10,10 @@
 ---
 ### callouts
 ```html
-<div class="callout--main">A Callout</div>
+<div class="callout">A default callout</div>
+<div class="callout -main">A main callout</div>
+<div class="callout -info">A info callout</div>
+<div class="callout -success">A success callout</div>
+<div class="callout -warning">A warning callout</div>
+<div class="callout -error">An error callout</div>
 ```
