@@ -91,5 +91,35 @@
 ---
 ### tables
 ```html
-
+<table>
+  <caption>Optional table caption.</caption>
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>Head 1</th>
+      <th>Head 2</th>
+      <th>Head 3</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>1</th>
+      <td>Col 1 Row 1</td>
+      <td>Col 2 Row 1</td>
+      <td>Col 3 Row 1</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Col 1 Row 2</td>
+      <td>Col 2 Row 2</td>
+      <td>Col 3 Row 2</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Col 1 Row 3</td>
+      <td>Col 2 Row 3</td>
+      <td>Col 3 Row 3</td>
+    </tr>
+  </tbody>
+</table>
 ```

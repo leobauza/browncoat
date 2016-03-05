@@ -3,15 +3,6 @@
   "description": "Basic styles for html tags. This part contains no styles for classes, ids, or attributes. Elements part uses bits to construct rule sets. Elements contain foundational styles for larger parts.",
   "sections": [
     {
-      "key": "forms",
-      "title": "Forms",
-      "description": [
-        "Forms styled using variables found in `_vars.scss`. Forms use utilities found in `_utils.scss`. Forms set up base styles for `03_collections/_formgroups.scss`"
-      ],
-      "file": "_forms",
-      "display": true
-    },
-    {
       "key": "headings",
       "title": "Headings",
       "description": [
@@ -32,15 +23,26 @@
     {
       "key": "lists",
       "title": "Lists",
-      "description": "<p>Abou lists.</p>",
+      "description": [
+        "Lists styled using variables found in `_vars.scss`. Lists set up base styles for `03_collections/_listmods.scss`"
+      ],
       "file": "_lists",
+      "display": true
+    },
+    {
+      "key": "forms",
+      "title": "Forms",
+      "description": [
+        "Forms styled using variables found in `_vars.scss`. Forms use utilities found in `_utils.scss`. Forms set up base styles for `03_collections/_formmods.scss`"
+      ],
+      "file": "_forms",
       "display": true
     },
     {
       "key": "tables",
       "title": "Tables",
       "description": [
-        "Forms..."
+        "Tables styled using variables found in `_vars.scss`. Tables set up base styles for `03_collections/_tablemods.scss`"
       ],
       "file": "_tables",
       "display": true
