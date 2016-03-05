@@ -1,11 +1,31 @@
 {
   "title": "Elements",
-  "description": "Elements are...",
+  "description": "Basic styles for html tags. This part contains no styles for classes, ids, or attributes. Elements part uses bits to construct rule sets. Elements contain foundational styles for larger parts.",
   "sections": [
+    {
+      "key": "forms",
+      "title": "Forms",
+      "description": [
+        "Forms styled using variables found in `_vars.scss`. Forms use utilities found in `_utils.scss`. Forms set up base styles for `03_collections/_formgroups.scss`"
+      ],
+      "file": "_forms",
+      "display": true
+    },
     {
       "key": "headings",
       "title": "Headings",
-      "description": "<p>About my headings.</p>",
+      "description": [
+        "Headings styled using variables found in `_vars.scss`."
+      ],
+      "file": "_resets",
+      "display": true
+    },
+    {
+      "key": "ap",
+      "title": "Links & Paragraphs",
+      "description": [
+        "Paragraph and anchor tags styled using variables found in `_vars.scss`."
+      ],
       "file": "_resets",
       "display": true
     },
@@ -13,15 +33,17 @@
       "key": "lists",
       "title": "Lists",
       "description": "<p>Abou lists.</p>",
-      "file": false,
+      "file": "_lists",
       "display": true
     },
     {
-      "key": "sample",
-      "title": "Sample Something Different",
-      "description": "<p>About my sample.</p>",
-      "file": false,
-      "display": false
+      "key": "tables",
+      "title": "Tables",
+      "description": [
+        "Forms..."
+      ],
+      "file": "_tables",
+      "display": true
     }
   ]
 }

@@ -47,10 +47,11 @@ a:hover, a:active {
 }
 
 body {
+  @include marpad(0px, 0px);
   background: $body_bg;
   font-size: $base_size;
-  @include marpad(0px, 0px);
   font-family: $global_family;
+  color: $text_colour;
   word-wrap: break-word;
 }
 hr {
@@ -76,7 +77,6 @@ button {
 p {
   font-size: $text_size;
   line-height: $text_line_height;
-  color: $text_colour;
   margin: 0;
   padding: 0 0 20px;
   &.intro {
@@ -107,7 +107,6 @@ h6 {
   font-weight: $boldFont;
   text-rendering: optimizelegibility;
   line-height: 1.2em;
-  color: $text_colour;
   a {
     color: $link_colour;
     &:hover {
@@ -153,26 +152,6 @@ code {
 
 xmp {
   margin: 0px;
-}
-
-.reverse {
-  background: lighten($black, 25);
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6,
-  p,
-  li {
-    color: $white;
-  }
-  a {
-    color: lighten($link_colour, 10);
-    &:hover {
-      color: lighten($link_colour, 20);
-    }
-  }
 }
 
 header,

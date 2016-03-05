@@ -1,0 +1,115 @@
+/*
+ * 03_collections/formgroups
+ * Styles for form groups
+ */
+
+.form__collection {
+  background:  lighten($black, 95);
+  padding: 10px;
+  border: 1px solid  lighten($black, 50);
+  margin: 0 0 10px;
+}
+.form__group {
+  margin: 0 0 20px;
+}
+
+.form__text {
+  padding: 3px 0px;
+  margin: 0px;
+  font-size: 1.4em;
+}
+
+%radio_checkbox {
+  margin: 0 0 20px;
+  label {
+    font-weight: normal;
+  }
+}
+.form__radios {
+  @extend %radio_checkbox;
+}
+.form__checkbox {
+  @extend %radio_checkbox;
+  label {
+    margin: 0;
+  }
+}
+
+//form modifiers
+.form--inline {
+  .form__group {
+    display: inline-block;
+    padding-right: 10px;
+  }
+  .form__checkbox {
+    display: inline-block;
+    padding-right: 10px;
+  }
+  button {
+    display: inline-block;
+  }
+}
+
+.form--horizontal {
+  $form_gutter: 2;
+  $form_columns: 12;
+
+  .form__group {
+    label {
+      padding-top: 5px;
+      text-align: right;
+    }
+    @extend %group;
+  }
+  .form__checkbox {
+    @extend %group;
+  }
+
+
+  [class*="span"] {
+    float:left;
+    margin-right: $form_gutter * 1%;
+    &.l {
+      margin-right:0;
+    }
+    &:last-child {
+      margin-right:0;
+    }
+  }
+
+  @for $i from 1 through $form_columns {
+    $form_columns_width: (99.9998 / $form_columns);
+
+    .span#{$i} {
+      $form_col_remainder: ($form_gutter/$form_columns) * $i;
+      width: ($form_columns_width * $i - $form_gutter + $form_col_remainder) * 1%;
+    }
+  }
+
+}
+
+@media (max-width: 959px) {
+
+  .form--horizontal {
+    .form__group {
+      label {
+        text-align: left;
+        padding: 0;
+      }
+    }
+
+    [class*="span"] {
+      float: none;
+      width:auto;
+      margin-right: 0;
+    }
+
+    [class*="span"]:last-child {
+      overflow:auto;
+    }
+
+
+  }
+
+
+}

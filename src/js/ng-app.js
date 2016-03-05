@@ -152,7 +152,7 @@ app
   };
 
 }])
-.controller("landingCtr", ["$scope", "$timeout", "data", function ($scope, $timeout, data) {
+.controller("landingCtr", ["$scope", "$timeout", "data", "$sce", function ($scope, $timeout, data, $sce) {
 
   var codeSamples = {},
       page = data.data;
@@ -174,6 +174,10 @@ app
   $scope.description = page.description.replace(/`([\s+\S]*?)`/g, "<code>$1</code>");
   $scope.blocks = page.sections;
   $scope.codeSamples = parseCodeSamples(data.code);
+
+  $scope.reTrustHtml = function (code) {
+    return $sce.trustAsHtml(code);
+  };
 
   $timeout(function () {
     PR.prettyPrint();

@@ -67,11 +67,11 @@ ol {
     }
     /*expert*/
     &>ol {
-      list-style: lower-latin;
+      list-style: lower-alpha;
       &>li {
         /*madness*/
         &>ol {
-          list-style: lower-alpha;
+          list-style: upper-roman;;
           &>li {
             /*inception*/
             &>ol {
