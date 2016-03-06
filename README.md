@@ -14,6 +14,9 @@ Install node module dependencies and run the documentation.
 npm install
 
 # Opens browser to localhost:3000 to view docs
+npm run docs
+
+# Opens browser to localhost:3000 to view app
 npm run gulp
 ```
 

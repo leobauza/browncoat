@@ -8,8 +8,8 @@
 npm install
 # This will take a few momenets while npm gets all the packages
 
-# Run Gulp
-npm run gulp
+# Run Gulp to view docs
+npm run docs
 # This will take a few moments while gulp gets started
 ```
 ---
