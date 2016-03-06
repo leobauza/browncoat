@@ -17,6 +17,7 @@
     "prototypejs"   : false,
     "mootools"      : false,
     "dojo"          : false,
+    "jasmine"       : true,
 
     "predef"        : [  // Custom globals.
         //"exampleVar",
@@ -34,7 +35,8 @@
         "YT",
         "L",
         "angular",
-        "PR" // prettifier
+        "PR", // prettifier
+        "inject" // ngMock
     ],
 
 
