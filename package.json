@@ -4,7 +4,8 @@
   "description": "The platypus friend framework",
   "main": "index.php",
   "scripts": {
-    "gulp": "gulp"
+    "gulp": "gulp",
+    "karma": "karma"
   },
   "repository": {
     "type": "git",
@@ -23,8 +24,8 @@
     "underscore": "^1.8.3"
   },
   "devDependencies": {
-    "connect-modrewrite": "^0.8.5",
     "browser-sync": "^2.11.1",
+    "connect-modrewrite": "^0.8.5",
     "gulp": "^3.8.11",
     "gulp-notify": "^2.2.0",
     "gulp-rename": "^1.2.0",
@@ -33,6 +34,10 @@
     "gulp-svg-sprite": "^1.0.18",
     "gulp-svg2png": "^0.3.0",
     "gulp-util": "^3.0.3",
+    "jasmine-core": "^2.4.1",
+    "karma": "^0.13.21",
+    "karma-chrome-launcher": "^0.2.2",
+    "karma-jasmine": "^0.3.7",
     "require-dir": "^0.1.0",
     "webpack": "^1.12.12"
   }
