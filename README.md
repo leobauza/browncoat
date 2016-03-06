@@ -58,7 +58,7 @@ Commits should be formatted as follows:
 # optional: short name
 # description: A short description (can break into multiple lines below
 # summary line)
-$ type (optional): description
+$ type(optional): description
 # eg.
 $ task: Add scss section to docs
 $ chore: Clean up tests
@@ -71,7 +71,7 @@ $ patch: Fix failing Tavis CI tests
 - Production gulp task
 - Wraith update/docs (currently broken)
 
-## Important Changes from v4.0
+## Important Changes from v0.4.0
 
 - Major changes to SCSS structure
 - Added webpack
