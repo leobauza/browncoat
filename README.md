@@ -49,6 +49,14 @@ To view these you will need to set the shots folder as the root folder of a new 
 
 **stable** - Complete and tested. Pending release/Released.
 
+## Todo
+
+- Testing with karma?
+- Travis CI
+- Separate docs into doc folder not web folder (plus gulp doc)
+- Production gulp task
+- Doc gulp task
+
 ## changelog
 
 ##### v0.5
