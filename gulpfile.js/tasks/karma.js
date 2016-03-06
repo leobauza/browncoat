@@ -5,11 +5,9 @@ var gulp =    require('gulp'),
 /**
  * Run test once and exit
  */
-gulp.task('karma', function () {
+gulp.task('karma', function (done) {
   new Server({
     configFile: path.join(__dirname, '../..', 'karma.conf.js'),
     singleRun: true
-  }, function (ec) {
-    return ec;
-  }).start();
+  }, done).start();
 });
