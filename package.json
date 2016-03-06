@@ -6,7 +6,8 @@
   "scripts": {
     "gulp": "gulp",
     "docs": "gulp docs",
-    "karma": "karma"
+    "karma": "karma",
+    "test": "gulp karma"
   },
   "repository": {
     "type": "git",
