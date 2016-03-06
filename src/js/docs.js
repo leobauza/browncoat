@@ -185,7 +185,6 @@ app
 
 }])
 .controller("styleguideCtr", ["$scope", "$timeout", "data", function ($scope, $timeout, data) {
-  $scope.test = "test";
   $scope.data = data;
 
 }]);

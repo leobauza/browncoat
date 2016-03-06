@@ -15,7 +15,7 @@ module.exports = function(config) {
 
     // list of files / patterns to load in the browser
     files: [
-      'web/assets/js/ng-main.js',
+      'docs/assets/js/docs.js',
       'src/js/__tests__/*Spec.js'
     ],
 
@@ -56,7 +56,7 @@ module.exports = function(config) {
 
     // start these browsers
     // available browser launchers: https://npmjs.org/browse/keyword/karma-launcher
-    browsers: ['Chrome'],
+    browsers: [(process.env.TRAVIS_CI === 'true'? 'Firefox' : 'Chrome')],
 
 
     // Continuous Integration mode
