@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/leobauza/browncoat.svg?branch=master)](https://travis-ci.org/leobauza/browncoat)
+[![Build Status](https://travis-ci.org/leobauza/browncoat.svg?branch=feat/0.5.1)](https://travis-ci.org/leobauza/browncoat)
 
 Browncoat 0.5.x `Reconstruction`
 ---

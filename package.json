@@ -1,8 +1,8 @@
 {
   "name": "Browncoat",
-  "version": "0.2.2",
+  "version": "0.5.1",
   "description": "The platypus friend framework",
-  "main": "index.php",
+  "main": "index.html",
   "scripts": {
     "gulp": "gulp",
     "docs": "gulp docs",
