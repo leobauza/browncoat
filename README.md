@@ -1,4 +1,6 @@
-Browncoat 0.5 [codename: `Reconstruction`, status: `unstable`]
+[![Build Status](https://travis-ci.org/leobauza/browncoat.svg?branch=master)](https://travis-ci.org/leobauza/browncoat)
+
+Browncoat 0.5.x `Reconstruction`
 ---
 
 ## About
@@ -43,14 +45,6 @@ To view these you will need to set the shots folder as the root folder of a new 
 ```
 <major>.<minor>.<patch>
 ```
-
-## Statuses
-
-**unstable** - Incomplete and untested.
-
-**review** - Complete but untested.
-
-**stable** - Complete and tested. Pending release/Released.
 
 ## Todo
 
