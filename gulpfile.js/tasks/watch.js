@@ -5,10 +5,12 @@ var gulp        = require('gulp'),
 
 var watchTask = function(callback) {
 
+  var dest = process.argv[2] === "docs" ? "docs" : "dest";
+
   browserSync.init({
     // proxy: "http://browncoat.loc"
     server: {
-      baseDir: "./web",
+      baseDir: process.argv[2] === "docs" ? "./docs" : "./web",
       middleware: [
         modRewrite([
           '^/assets/css/(.*) - [L]', // allow browsersync to stream css
@@ -19,8 +21,9 @@ var watchTask = function(callback) {
   });
 
   gulp.watch(config.root.src + '/scss/**/*.scss', ['css']);
-  gulp.watch(config.root.dest + "/**/*.html").on('change', browserSync.reload);
+  gulp.watch(config.root[dest] + "/**/*.html").on('change', browserSync.reload);
 };
 
-gulp.task('watch', ['js'], watchTask);
+gulp.task("watch", ["css", "js"], watchTask);
+gulp.task("docs", ["css", "js", "sprite"], watchTask);
 module.exports = watchTask;

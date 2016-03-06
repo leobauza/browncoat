@@ -7,12 +7,14 @@ var gulp =      require('gulp'),
     svg2png =   require('gulp-svg2png'),
     path =      require('path');
 
+var dest = process.argv[2] === "docs" ? "docs" : "dest";
+
 var paths = {
   src: path.join(config.root.src, config.tasks.sprite.entry),
   dest: config.root.base,
   scssDest: path.join(config.root.src, config.tasks.sprite.scssDest),
-  spriteDest: path.join(config.root.dest, config.tasks.sprite.spriteDest),
-  spriteEndLocation: path.join(config.root.base, config.root.dest, config.tasks.sprite.spriteDest)
+  spriteDest: path.join(config.root[dest], config.tasks.sprite.spriteDest),
+  spriteEndLocation: path.join(config.root.base, config.root[dest], config.tasks.sprite.spriteDest)
 };
 
 var spriteTask = function () {

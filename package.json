@@ -4,7 +4,8 @@
   "description": "The platypus friend framework",
   "main": "index.php",
   "scripts": {
-    "gulp": "gulp"
+    "gulp": "gulp",
+    "docs": "gulp docs"
   },
   "repository": {
     "type": "git",

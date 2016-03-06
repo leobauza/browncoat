@@ -9,11 +9,14 @@ var gulp =        require("gulp"),
     path =        require("path"),
     browserSync = require("browser-sync");
 
+var dest = process.argv[2] === "docs" ? "docs" : "dest";
+var entries = process.argv[2] === "docs" ? "doc_entries" : "entries"
+
 var webPackConfig = {
   context: path.resolve(config.root.src, config.tasks.js.src),
-  entry: config.tasks.js.entries,
+  entry: config.tasks.js[entries],
   output: {
-    path: path.resolve(config.root.dest, config.tasks.js.dest),
+    path: path.resolve(config.root[dest], config.tasks.js.dest),
     filename: '[name].js'
   }
 };

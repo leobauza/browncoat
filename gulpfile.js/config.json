@@ -3,6 +3,7 @@
   "root": {
     "src": "./src",
     "dest": "./web",
+    "docs": "./docs",
     "base": "."
   },
 
@@ -12,8 +13,10 @@
       "src": "./js",
       "dest": "./assets/js",
       "entries": {
-        "main": "./app.js",
-        "ng-main": "./ng-app.js"
+        "main": "./app.js"
+      },
+      "doc_entries": {
+        "docs": "./docs.js"
       }
     },
 
