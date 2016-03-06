@@ -41,6 +41,7 @@
     "karma-chrome-launcher": "^0.2.2",
     "karma-firefox-launcher": "^0.1.6",
     "karma-jasmine": "^0.3.7",
+    "karma-nyan-reporter": "^0.2.3",
     "require-dir": "^0.1.0",
     "webpack": "^1.12.12"
   }
