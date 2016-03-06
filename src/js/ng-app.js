@@ -6,6 +6,7 @@ var _ = require("underscore");
 require("angular");
 require("angular-route");
 require("angular-sanitize");
+require('angular-mocks/ngMock');
 
 function parseCodeSamples(cs) {
 
@@ -170,11 +171,10 @@ app
     }
   });
 
-  $scope.title = page.title;
-  $scope.description = page.description.replace(/`([\s+\S]*?)`/g, "<code>$1</code>");
-  $scope.blocks = page.sections;
+  $scope.title = page.title || false;
+  $scope.description = page.description ? page.description.replace(/`([\s+\S]*?)`/g, "<code>$1</code>") : false;
+  $scope.blocks = page.sections || false;
   $scope.codeSamples = parseCodeSamples(data.code);
-
   $scope.reTrustHtml = function (code) {
     return $sce.trustAsHtml(code);
   };
@@ -185,7 +185,7 @@ app
 
 }])
 .controller("styleguideCtr", ["$scope", "$timeout", "data", function ($scope, $timeout, data) {
-
+  $scope.test = "test";
   $scope.data = data;
 
 }]);

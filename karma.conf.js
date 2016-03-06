@@ -15,6 +15,7 @@ module.exports = function(config) {
 
     // list of files / patterns to load in the browser
     files: [
+      'web/assets/js/ng-main.js',
       'src/js/__tests__/*Spec.js'
     ],
 
