@@ -12,3 +12,12 @@
     font-family: $serif;
   }
 }
+
+.label {
+  color: $text_colour_light;
+  margin: 0px;
+  padding: 5px;
+  border: 1px solid $grey;
+  border-bottom: none;
+  display: inline-block;
+}

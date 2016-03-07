@@ -9,7 +9,10 @@
       <h4 class="box__heading">{{block.title}} <code ng-if="block.file">{{block.file}}</code></h4>
     </header>
     <div class="box__body" ng-bind-html="block.description"></div>
-    <div ng-if="block.display" class="box__body -cont" ng-bind-html="reTrustHtml(codeSamples[block.key].code)"></div>
+    <div ng-if="block.display" class="box__body -cont" >
+      <h6 class="label">Sample</h6>
+      <div class="code-sample" ng-bind-html="reTrustHtml(codeSamples[block.key].code)"></div>
+    </div>
     <xmp class="prettyprint {{codeSamples[block.key].lang}} linenums">{{codeSamples[block.key].code}}</xmp>
   </article>
 </article>

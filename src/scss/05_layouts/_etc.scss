@@ -27,7 +27,7 @@
     &> li {
       position: relative;
       margin: 0px;
-      padding: 4px 0px 4px 10px;
+      padding: 4px 10px 4px 10px;
       // border-bottom: 1px solid $grey;
       border-left: 1px solid $text_colour;
       list-style: none;
@@ -77,6 +77,11 @@
   .tag, .kwd {
     color: $brand;
   }
+}
+.code-sample {
+  @extend %group;
+  border-top: 1px solid $grey;
+  padding: 10px 0px;
 }
 .footnote { // MAKE FOOTNOTES AVAILABLE THROUGH JSON FILE SOMEHOW
   font-size: 1.2em;
