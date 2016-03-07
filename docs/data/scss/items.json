@@ -17,6 +17,24 @@
       "description": "<p>About callouts.</p>",
       "file": "_callouts",
       "display": true
+    },
+    {
+      "key": "headings",
+      "title": "Headings",
+      "description": [
+        "Modify `h1` - `h6` standalones (ie. not part of a `collection`). Use format `.heading.-class`. For headings as parts of `collections` use `collection__heading`."
+      ],
+      "file": "_headings",
+      "display": true
+    },
+    {
+      "key": "icons",
+      "title": "Icons",
+      "description": [
+        "Icons rely on the `sprite($file_name)` mixin in `02_bits/_utils.scss`. Variable names are determined by svg files in `src/icons/`."
+      ],
+      "file": "_icons",
+      "display": true
     }
   ]
 }

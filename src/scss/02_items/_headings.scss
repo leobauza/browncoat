@@ -1,0 +1,14 @@
+/*
+ * 02_items/headings
+ * Styles for headings
+ */
+%heading {
+  color: $grey;
+}
+
+.heading {
+  @extend %heading;
+  &.-serif {
+    font-family: $serif;
+  }
+}

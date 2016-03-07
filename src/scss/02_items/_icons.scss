@@ -1,0 +1,19 @@
+/*
+ * 02_items/headings
+ * Styles for icons
+ */
+
+.icon {
+  display: block;
+  float: left;
+  margin: 0px 10px 20px 0px;
+  &.-twitter {
+    @include sprite($twitter);
+  }
+  &.-dribbble {
+    @include sprite($dribbble);
+  }
+  &.-instagram {
+    @include sprite($instagram);
+  }
+}

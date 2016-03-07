@@ -17,3 +17,16 @@
 <div class="callout -warning">A warning callout</div>
 <div class="callout -error">An error callout</div>
 ```
+---
+### headings
+```html
+<h1 class="heading">Special Heading</h1>
+<h1 class="heading -serif">Special Heading</h1>
+```
+---
+### icons
+```html
+<i class="icon -twitter"></i>
+<i class="icon -dribbble"></i>
+<i class="icon -instagram"></i>
+```
