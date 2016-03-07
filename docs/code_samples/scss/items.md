@@ -20,8 +20,12 @@
 ---
 ### headings
 ```html
-<h1 class="heading">Special Heading</h1>
-<h1 class="heading -serif">Special Heading</h1>
+<h1 class="heading -serif">Heading</h1>
+<h2 class="heading -serif">Heading</h2>
+<h3 class="heading -serif">Heading</h3>
+<h4 class="heading -serif">Heading</h4>
+<h5 class="heading -serif">Heading</h5>
+<h6 class="heading -serif">Heading</h6>
 ```
 ---
 ### icons

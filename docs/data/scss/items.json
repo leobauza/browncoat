@@ -1,6 +1,6 @@
 {
   "title": "Items",
-  "description": "Items are...",
+  "description": "Items are augmented elements. Items consist of single elements with classes that modify them.",
   "sections": [
     {
       "key": "btns",
