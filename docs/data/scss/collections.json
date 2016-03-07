@@ -1,0 +1,24 @@
+{
+  "title": "Collections",
+  "description": "Collections are groups of items or elements. Collections consist of wrappers around one or many items and/or elemetns.",
+  "sections": [
+    {
+      "key": "boxes",
+      "title": "Boxes",
+      "description": [
+        "Boxes are made up of a box header and a box body. The browncoat documentation is built using boxes for each documentation segment."
+      ],
+      "file": "_boxes",
+      "display": true
+    },
+    {
+      "key": "btns",
+      "title": "Button Groups",
+      "description": [
+        "Buttong groups consist of a wrapper with any type of button that extends from the `%btn` placeholder."
+      ],
+      "file": "_btngroups",
+      "display": true
+    }
+  ]
+}
