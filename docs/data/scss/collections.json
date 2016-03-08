@@ -31,11 +31,20 @@
     },
     {
       "key": "listgroups",
-      "title": "Listgroups",
+      "title": "List Groups",
       "description": [
         "Listgroups are augmented groups of lists or links. Listgroups should not contain links that extend `%btn`. For that use `03_collections/_btngroups.scss`."
       ],
       "file": "_listgroups",
+      "display": true
+    },
+    {
+      "key": "formgroups",
+      "title": "Form Groups",
+      "description": [
+        "Form groups help layout forms. Use extensions of `%btn` for submit buttons in favour of styling these directly."
+      ],
+      "file": "_formgroups",
       "display": true
     }
   ]

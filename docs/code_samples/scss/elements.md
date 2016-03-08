@@ -79,8 +79,12 @@
     </select>
   </fieldset>
   <fieldset>
-    <label for="file"></label>
+    <label for="file">File</label>
     <input type="file">
+  </fieldset>
+  <fieldset>
+    <label for="textarea">Textarea</label>
+    <textarea name="textarea"></textarea>
   </fieldset>
   <fieldset>
     <input type="submit" value="Submit Input">

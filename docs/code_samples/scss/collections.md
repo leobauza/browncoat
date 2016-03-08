@@ -92,3 +92,21 @@
   <li>Item Three</li>
 </ul>
 ```
+---
+### formgroups
+```html
+<form>
+  <div class="form__group">
+    <label for="name">Name</label>
+    <input type="text">
+  </div>
+  <div class="radio">
+    <label><input type="radio" name="truthiness" value="true">True</label>
+    <label><input type="radio" name="truthiness" value="false">False</label>
+  </div>
+  <div class="checkbox">
+    <label for="check"><input type="checkbox" name="check">Check</label>
+  </div>
+  <input type="submit" class="btn -error" name="submit">
+</form>
+```

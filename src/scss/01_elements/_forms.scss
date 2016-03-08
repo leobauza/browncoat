@@ -50,7 +50,7 @@ input[type="password"],
 input[type="email"] {
   @include borderRadius(none);
   background-color: $white;
-  border: 1px solid $text_colour;
+  border: 1px solid $grey;
   //@include boxShadow(inset 0 1px 1px rgba(0, 0, 0, 0.5));
   &:focus {
     border:1px solid $focus_border;
@@ -62,7 +62,7 @@ input[type="email"] {
 
 select {
   background-color: $white;
-  border: 1px solid $text_colour;
+  border: 1px solid $grey;
   height: 30px;
   line-height: 30px;
   @include borderRadius(5px);
@@ -96,7 +96,7 @@ button,
 input[type="submit"] {
   @include borderRadius(0px);
   cursor: pointer;
-  border: 1px solid $text_colour;
+  border: 1px solid $grey;
   background: none;
   &:hover{
     background: $text_colour;

@@ -9,6 +9,7 @@
   color: $text_colour;
   border: 1px solid $default;
   font-size: $text_size;
+  line-height: $text_line_height;
   text-align: center;
   cursor: pointer;
   &:hover, &.active {
@@ -24,7 +25,7 @@
   }
 }
 
-.btn {
+.btn, input[type="submit"].btn, button.btn {
   @extend %btn;
   &.-main {
     @include gradient($brand, lighten($brand, 2));

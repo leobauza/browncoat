@@ -31,7 +31,7 @@
       "key": "icons",
       "title": "Icons",
       "description": [
-        "Icons rely on the `sprite($file_name)` mixin in `02_bits/_utils.scss`. Variable names are determined by svg files in `src/icons/`."
+        "Icons rely on the `sprite($file_name)` mixin in `02_bits/_utils.scss`. Variable names are determined by svg file names in `src/icons/`."
       ],
       "file": "_icons",
       "display": true
