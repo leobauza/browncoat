@@ -28,6 +28,15 @@
       ],
       "file": "_btngroups",
       "display": true
+    },
+    {
+      "key": "listgroups",
+      "title": "Listgroups",
+      "description": [
+        "Listgroups are augmented groups of lists or links. Listgroups should not contain links that extend `%btn`. For that use `03_collections/_btngroups.scss`."
+      ],
+      "file": "_listgroups",
+      "display": true
     }
   ]
 }

@@ -3,11 +3,10 @@
  * Styles for specialized lists (listgroups)
  */
 
-$listGroupBorder: lighten($black, 90);
 %listGroupItem {
   margin:0;
   padding:10px;
-  border-top: 1px solid $listGroupBorder;
+  border-top: 1px solid $grey;
   color: $text_colour;
   font-size: $text_size;
   line-height:$text_line_height;
@@ -20,7 +19,7 @@ ul.list-group {
   @include borderRadius(5px);
   margin: 0 0 20px;
   background: $white;
-  border: 1px solid $listGroupBorder;
+  border: 1px solid $grey;
   border-top: none;
   li {
     @extend %listGroupItem;
@@ -34,14 +33,13 @@ ul.list-group {
   a {
     @extend %listGroupItem;
     display: block;
-
     &:hover {
-      background: lighten($black, 95);
+      background: $grey;
       text-decoration:none;
     }
     &.active {
       background: $link_colour;
-      border-top: 1px solid lighten($link_colour, 10);
+      border-top: 1px solid $link_colour;
       color: $white;
       text-decoration:none;
     }

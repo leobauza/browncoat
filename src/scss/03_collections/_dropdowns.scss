@@ -2,128 +2,57 @@
  * 02_items/dropdowns
  * Styles for specialized anchors list (dropdowns)
  */
-
-.dropdown-group {
-  position:relative;
-  margin:0 0 20px;
-  %btn { //use the placeholder class
-    margin-bottom:0;
+%dropdown {
+  %btn {
+    position: relative;
+    padding-right: 40px;
+    margin: 0px;
+    font-size: 100%;
   }
-  .dropdown-menu {
+  .list-group {
+    @include borderRadius(0px);
     display: none;
-  }
-  &.open {
-    z-index: 100; //fix ie 7
-    .dropdown-menu {
-      display:block;
+    position: absolute;
+    top: 100%;
+    left: -1px;
+    width: 150%;
+    z-index: 100;
+    li:first-child {
+      @include borderRadius(0px);
     }
   }
-  .btn-group {
-    margin: 0;
+  li {
+    text-align: left;
+    &:hover {
+      background: $grey;
+    }
+  }
+  .arrow {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    margin-top: -5px;
   }
 }
-.dropdown-menu {
-  @include resetList();
-  position: absolute;
-  top: 100%;
-  left:0;
-  margin: 2px 0 0 0;
-  background: $white;
-  border: 1px solid lighten($black, 90);
-  z-index: 100;
-  li {
-    margin: 0;
-    a {
-      display:block;
-      padding: 5px 15px;
-      font-size: $text_size;
-      line-height: $text_line_height;
-      color: $text_colour;
-      &:hover {
-        text-decoration: none;
-        background: lighten($black, 90);
+.dropdown__selected {
+  font-size: $text_size;
+}
+
+.dropdown {
+  @extend %dropdown;
+  &.-hover {
+    %btn:hover {
+      &> .list-group {
+        display: block;
       }
     }
   }
-}
-
-.caret {
-  @include inlineBlock(5px);
-  vertical-align: middle;
-  width: 0;
-  height: 0;
-  border-left: 5px solid transparent;
-  border-right: 5px solid transparent;
-  border-top: 5px solid $white;
-}
-.active {
-  .caret {
-    border-top: none;
-    border-bottom: 5px solid $white;
-  }
-}
-
-/*
- * 03_collections/dropdowns
- * Styles for dropdowns
- */
-
-.dropdown-group {
-  position:relative;
-  margin:0 0 20px;
-  %btn { //use the placeholder class
-    margin-bottom:0;
-  }
-  .dropdown-menu {
-    display: none;
-  }
-  &.open {
-    z-index: 100; //fix ie 7
-    .dropdown-menu {
-      display:block;
-    }
-  }
-  .btn-group {
-    margin: 0;
-  }
-}
-.dropdown-menu {
-  @include resetList();
-  position: absolute;
-  top: 100%;
-  left:0;
-  margin: 2px 0 0 0;
-  background: $white;
-  border: 1px solid lighten($black, 90);
-  z-index: 100;
-  li {
-    margin: 0;
-    a {
-      display:block;
-      padding: 5px 15px;
-      font-size: $text_size;
-      line-height: $text_line_height;
-      color: $text_colour;
-      &:hover {
-        text-decoration: none;
-        background: lighten($black, 90);
+  &.-js {
+    %btn.active {
+      &> .list-group {
+        display: block;
       }
     }
   }
-}
 
-.caret {
-  @include inlineBlock(5px);
-  vertical-align: middle;
-  width: 0;
-  height: 0;
-  border-left: 5px solid transparent;
-  border-right: 5px solid transparent;
-  border-top: 5px solid $white;
-}
-.active {
-  .caret {
-    border-top: none;
-    border-bottom: 5px solid $white;
-  }
 }

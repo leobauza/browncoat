@@ -22,7 +22,7 @@
   padding: 20px 19px 0px;
   border-left: 1px solid $default;
   border-right: 1px solid $default;
-  overflow: auto; // prevent margin collapse
+  // overflow: auto; // prevent margin collapse
   &.-cont {
     padding: 0px 19px;
   }
