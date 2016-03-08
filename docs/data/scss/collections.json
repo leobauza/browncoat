@@ -15,7 +15,16 @@
       "key": "btns",
       "title": "Button Groups",
       "description": [
-        "Buttong groups consist of a wrapper with any type of button that extends from the `%btn` placeholder."
+        "Button groups consist of a wrapper with a group of any type of button that extends from the `%btn` placeholder."
+      ],
+      "file": "_btngroups",
+      "display": true
+    },
+    {
+      "key": "dropdowns",
+      "title": "Dropdowns",
+      "description": [
+        "Dropdowns consist of a wrapper with any type of button that extends from the `%btn` placeholder, an unordered list, and an arrow."
       ],
       "file": "_btngroups",
       "display": true

@@ -82,6 +82,10 @@
   @extend %group;
   border-top: 1px solid $grey;
   padding: 10px 0px;
+  .arrow, .icon {
+    float: left;
+    margin: 0px 0px 0px 10px;
+  }
 }
 .footnote { // MAKE FOOTNOTES AVAILABLE THROUGH JSON FILE SOMEHOW
   font-size: 1.2em;

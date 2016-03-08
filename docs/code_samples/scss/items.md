@@ -33,4 +33,8 @@
 <i class="icon -twitter"></i>
 <i class="icon -dribbble"></i>
 <i class="icon -instagram"></i>
+<i class="arrow -up"></i>
+<i class="arrow -right"></i>
+<i class="arrow -down"></i>
+<i class="arrow -left"></i>
 ```

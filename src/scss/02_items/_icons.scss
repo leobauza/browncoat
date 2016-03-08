@@ -5,8 +5,6 @@
 
 .icon {
   display: block;
-  float: left;
-  margin: 0px 10px 0px 0px;
   &.-twitter {
     @include sprite($twitter);
   }
@@ -15,5 +13,31 @@
   }
   &.-instagram {
     @include sprite($instagram);
+  }
+}
+
+.arrow {
+  display: block;
+  width: 0;
+  height: 0;
+  &.-up {
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid $text_colour;
+  }
+  &.-right {
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-left: 10px solid $text_colour;
+  }
+  &.-down {
+    border-top: 10px solid $text_colour;
+    border-right: 10px solid transparent;
+    border-left: 10px solid transparent;
+  }
+  &.-left {
+    border-top: 10px solid transparent;
+    border-right: 10px solid $text_colour;
+    border-bottom: 10px solid transparent;
   }
 }
