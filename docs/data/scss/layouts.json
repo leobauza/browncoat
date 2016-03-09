@@ -10,6 +10,26 @@
       ],
       "file": "_site",
       "display": false
+    },
+    {
+      "key": "rows",
+      "title": "Rows",
+      "description": [
+        "`Rows` contain `spans` to create grids. Colours in examples added for visualization by the docs."
+      ],
+      "file": "_site",
+      "display": true
+    },
+    {
+      "key": "makerows",
+      "title": "Create Rows",
+      "description": [
+        "The default rows use `@mixin rows($gutter, $columns)` to generate the necessary css for the grid. This means that new grids can be created on demand by providing a `gutter percentage` and a `number of columns` to the mixin.",
+        "Name row classes `row-descriptor` where `descriptor` stands for a single descriptive word. Rows are not extensions of a generic, they are self contained classes so the modifier patter doesn't apply (ie. `row -descriptor` would be wrong).",
+        "Rewriting the default rows before creating alternative grids is mandatory if the defaults are not in use."
+      ],
+      "file": "_site",
+      "display": false
     }
   ]
 }

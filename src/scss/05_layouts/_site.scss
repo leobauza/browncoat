@@ -54,10 +54,10 @@
 
 
 /*
- * fluid row using overflow hidden
+ * Row using overflow hidden
  */
 
-.row-fluid {
+.row-alt {
   @include rows($global_gutter, $global_columns);
 
   &> [class*="span"] {
@@ -72,33 +72,12 @@
   }
 }
 
-
-/*
- * fluid row using percentages
- */
-
-.row-fluid--alt {
-  @include rows();
-}
-
-
 /*
  * fluid row no gutter
  */
 
-.row-fluid--flush {
-  @include rows($global_gutter, $global_columns);
-
-  &> [class*="span"] {
-    margin-right:0;
-  }
-
-  @for $i from 1 through $global_columns {
-    $alt_col_width: (99.9998 / $global_columns);
-    & > .span#{$i} {
-      width: ($alt_col_width * $i) * 1%;
-    }
-  }
+.row-flush {
+  @include rows(0, $global_columns);
 }
 
 /*

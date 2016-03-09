@@ -102,6 +102,12 @@
       margin-right: 1%;
     }
   }
+  [class*="row"] {
+    background: lighten($info, 20);
+    [class*="span"] {
+      background: $info;
+    }
+  }
 }
 .footnote { // MAKE FOOTNOTES AVAILABLE THROUGH JSON FILE SOMEHOW
   font-size: 1.2em;
