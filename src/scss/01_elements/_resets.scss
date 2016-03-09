@@ -156,10 +156,7 @@ xmp {
 
 header,
 footer,
-%rows,
 .group,
-.form-group,
-.input-group,
 [class*="-group"] {
   @extend %group;
 }

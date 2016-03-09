@@ -1,6 +1,6 @@
 /*
  * 05_layouts/site
- * Main site layout styles
+ * Site layout styles
  */
 
 .container {
@@ -15,9 +15,8 @@
 }
 
 /*
- * base rows
+ * Row generator
  */
-
 @mixin rows($gutter: 3.183, $columns: 12) {
   @extend %group;
   width:100%;
@@ -45,7 +44,7 @@
 }
 
 /*
- * new: basic row
+ * Basic row
  */
 .row {
   @include rows($global_gutter, $global_columns);
@@ -102,41 +101,11 @@
   }
 }
 
-
-/*
- * static sidebar
- */
-
-.row-static > {
-  .span-sidebar {
-    width: 250px;
-    float:left;
-  }
-  .span-main {
-    @extend %overflower;
-  }
-}
-
-
-/*
- * Alignment
- */
-
-.al-c {
-  text-align:center;
-}
-.al-r {
-  text-align:right;
-}
-.al-l {
-  text-align:left;
-}
-
 /*
  * Responsive
  */
-//@media (max-width: 43.75em) { // 700px
 @media (max-width: 59.9375em) { // 959px
+//@media (max-width: 43.75em) { // 700px
 
   /*margin right instead of margin left to do overflow hidden*/
   [class*="row"] > [class*="span"] {
