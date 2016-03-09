@@ -1,0 +1,19 @@
+/*
+ * 04_sections/nav
+ * Styles for nav section
+ */
+
+.site__nav {
+  margin: 0 0 20px;
+  ul {
+    @include resetList(0px, 0px);
+  }
+  li {
+    float: left;
+    margin: 0px 10px 0px 0px;
+  }
+  a {
+    display: block;
+    font-size: $text_size;
+  }
+}
