@@ -3,15 +3,6 @@
  * Styles for specialized lists (listgroups)
  */
 
-%listGroupItem {
-  margin:0;
-  padding:10px;
-  border-top: 1px solid $grey;
-  color: $text_colour;
-  font-size: $text_size;
-  line-height:$text_line_height;
-}
-
 ul.list-group {
   @include resetList();
 }
@@ -21,8 +12,15 @@ ul.list-group {
   background: $white;
   border: 1px solid $grey;
   border-top: none;
+  li, a {
+    margin:0;
+    padding:10px;
+    border-top: 1px solid $grey;
+    color: $text_colour;
+    font-size: $text_size;
+    line-height:$text_line_height;
+  }
   li {
-    @extend %listGroupItem;
     &:last-child {
       @include borderRadius(0px 0px 5px 5px);
     }
@@ -31,7 +29,6 @@ ul.list-group {
     }
   }
   a {
-    @extend %listGroupItem;
     display: block;
     &:hover {
       background: $grey;
@@ -49,5 +46,17 @@ ul.list-group {
     &:first-child {
       @include borderRadius(5px 5px 0px 0px);
     }
+  }
+}
+
+.nav {
+  @include resetList(0px, 0px);
+  li {
+    float: left;
+    margin: 0px 10px 0px 0px;
+  }
+  a {
+    display: block;
+    font-size: $text_size;
   }
 }

@@ -1,48 +1,48 @@
 {
   "title": "Sections",
-  "description": "??",
+  "description": "Sections describe large areas of the page. Sections are `children` of an implied `.site` global class. This is to avoid having an overly generic class like `header` since that could be used as a `collection` class name where it is more appropriate to be less descriptive.",
   "sections": [
     {
       "key": "header",
       "title": "Header",
       "description": [
-        "Header..."
+        "The header of the site. Styles should only affect the container and positioning of collections, items, or elements within."
       ],
       "file": "_header",
-      "display": true
+      "display": false
     },
     {
       "key": "footer",
       "title": "Footer",
       "description": [
-        "Footer..."
+        "The footer of the site. Styles should only affect the container and positioning of collections, items, or elements within."
       ],
       "file": "_footer",
-      "display": true
+      "display": false
     },
     {
       "key": "main",
       "title": "Main",
       "description": [
-        "Main..."
+        "The main content of the site. Styles should only affect the container and positioning of collections, items, or elements within."
       ],
       "file": "_main",
-      "display": true
+      "display": false
     },
     {
       "key": "sidebar",
       "title": "Sidebar",
       "description": [
-        "Sidebar..."
+        "The sidebar(s) of the site. Styles should only affect the container and positioning of collections, items, or elements within."
       ],
       "file": "_sidebar",
-      "display": true
+      "display": false
     },
     {
       "key": "nav",
       "title": "Nav",
       "description": [
-        "Nav..."
+        "The navigation(s) of the site. Styles should only affect the container and positioning of collections, items, or elements within. `nav` class is part of `03_collections/_listgroups.scss`, it is an example where the `nav` class has been left available for a collection to use."
       ],
       "file": "_nav",
       "display": true
