@@ -9,12 +9,14 @@ var gulp =          require('gulp'),
     path =          require('path'),
     browserSync =   require('browser-sync');
 
+var dest = process.argv[2] === "docs" ? "docs" : "dest";
+
 var paths = {
   src: path.join(config.root.src, config.tasks.css.src),
-  dest: path.join(config.root.dest, config.tasks.css.dest)
+  dest: path.join(config.root[dest], config.tasks.css.dest)
 };
 
-var cssTask = function () {
+var cssTask = function (override) {
   return gulp.src(paths.src)
     .pipe(sourcemaps.init())
     .pipe(sass())

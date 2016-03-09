@@ -1,0 +1,46 @@
+{
+  "title": "gulpfile.js",
+  "description": "This directory contains all gulp taks. By using the name `gulpfile.js` gulp will read the `index.js` file as the actual `gulpfile.js`.",
+  "sections": [
+    {
+      "key": "tasks",
+      "title": "Tasks",
+      "nav": false,
+      "description": [
+        "Contains all gulp tasks. The default task calls all other tasks. Each task can also be called individually. Use `npm run` to use the local gulp"
+      ],
+      "file": "gulpfile.js/tasks",
+      "display": false
+    },
+    {
+      "key": "utils",
+      "title": "Utils",
+      "nav": false,
+      "description": [
+        "Gulp utilities are helpers for gulp tasks (ie. pretty printing log messages to the console, handling errors, and pretty printing time)."
+      ],
+      "file": "gulpfile.js/utils",
+      "display": false
+    },
+    {
+      "key": "config",
+      "title": "Config",
+      "nav": false,
+      "description": [
+        "Contains gulp configuration for the project, and for each individual task. This should be used instead of editing gulp tasks unless trying to change task functionality entirely."
+      ],
+      "file": "gulpfile.js/config.json",
+      "display": false
+    },
+    {
+      "key": "index",
+      "title": "Index",
+      "nav": false,
+      "description": [
+        "Entry point for gulp."
+      ],
+      "file": "gulpfile.js/index.js",
+      "display": false
+    }
+  ]
+}

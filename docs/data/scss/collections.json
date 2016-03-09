@@ -1,0 +1,51 @@
+{
+  "title": "Collections",
+  "description": "Collections are groups of items or elements. Collections consist of wrappers around one or many items and/or elemetns.",
+  "sections": [
+    {
+      "key": "boxes",
+      "title": "Boxes",
+      "description": [
+        "Boxes are made up of a box header and a box body. The browncoat documentation is built using boxes for each documentation segment."
+      ],
+      "file": "_boxes",
+      "display": true
+    },
+    {
+      "key": "btns",
+      "title": "Button Groups",
+      "description": [
+        "Button groups consist of a wrapper with a group of any type of button that extends from the `%btn` placeholder."
+      ],
+      "file": "_btngroups",
+      "display": true
+    },
+    {
+      "key": "dropdowns",
+      "title": "Dropdowns",
+      "description": [
+        "Dropdowns consist of a wrapper with any type of button that extends from the `%btn` placeholder, an unordered list, and an arrow."
+      ],
+      "file": "_btngroups",
+      "display": true
+    },
+    {
+      "key": "listgroups",
+      "title": "List Groups",
+      "description": [
+        "Listgroups are augmented groups of lists or links. Listgroups should not contain links that extend `%btn`. For that use `03_collections/_btngroups.scss`."
+      ],
+      "file": "_listgroups",
+      "display": true
+    },
+    {
+      "key": "formgroups",
+      "title": "Form Groups",
+      "description": [
+        "Form groups help layout forms. Use extensions of `%btn` for submit buttons in favour of styling these directly."
+      ],
+      "file": "_formgroups",
+      "display": true
+    }
+  ]
+}

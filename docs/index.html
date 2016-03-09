@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<!--[if lt IE 9]><html ng-app="app" class="lt-ie9" lang="en"><![endif]-->
+<!--[if IE 9]><html ng-app="app" class="ie9" lang="en"><![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--><html ng-app="app" lang="en"><!--<![endif]-->
+<head>
+  <base href="/">
+  <meta charset="utf-8">
+  <title>Default (Angular.js)</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="a website description">
+  <meta name="author" content="the author">
+
+  <!-- styles -->
+  <link rel="stylesheet" href="/assets/css/styles.css" type="text/css" media="screen" charset="utf-8">
+
+  <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+  <!--[if lt IE 9]>
+    <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+
+  <!-- fav and touch icons -->
+  <link rel="shortcut icon" href="/assets/img/favicon.ico" type="image/x-icon">
+</head>
+<body ng-controller="mainCtrl">
+  <header ng-class="{'-styleguide': tplType == 'styleguide'}" class="doc__header">
+    <div class="container">
+      <h1><span ng-bind="projectTitle"></span> <span class="small" ng-bind="version"></span></h1>
+      <nav ng-cloak class="btn-group">
+        <a ng-repeat="item in projectNav" href="{{item.path}}" ng-class="{'active': isActive(item.path, 'path')}" class="btn" ng-bind="item.name"></a>
+      </nav>
+      <p class="intro" ng-bind-html="projectInfo.intro"></p>
+    </div>
+  </header>
+
+  <section class="container">
+    <nav id="section-nav" class="btn-group" ng-cloak>
+      <a ng-repeat="item in sectionNavs[currentSection]" href="{{item.path}}" ng-class="{'active': isActive(item.path, 'path')}" class="btn" ng-bind="item.name"></a>
+    </section>
+  </nav>
+
+  <section ng-class="{row: tplType == 'doc'}" ng-view>
+    <h6 class="container">Loading...</h6>
+  </section>
+
+  <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+  <script src="/assets/js/main.js"></script> -->
+  <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
+  <script>
+    PR['registerLangHandler'](
+        PR['createSimpleLexer'](
+            // Shortcut patterns.
+            [
+             // The space production <s>
+             [PR['PR_PLAIN'],       /^[ \t\r\n\f]+/, null, ' \t\r\n\f']
+            ],
+            // Fall-through patterns.
+            [
+             // Quoted strings.  <string1> and <string2>
+             [PR['PR_STRING'],
+              /^\"(?:[^\n\r\f\\\"]|\\(?:\r\n?|\n|\f)|\\[\s\S])*\"/, null],
+             [PR['PR_STRING'],
+              /^\'(?:[^\n\r\f\\\']|\\(?:\r\n?|\n|\f)|\\[\s\S])*\'/, null],
+             ['lang-css-str', /^url\(([^\)\"\']+)\)/i],
+             [PR['PR_KEYWORD'],
+              /^(?:url|rgb|\!important|@import|@page|@media|@charset|inherit)(?=[^\-\w]|$)/i,
+              null],
+             // A property name -- an identifier followed by a colon.
+             ['lang-css-kw', /^(-?(?:[_a-z]|(?:\\[0-9a-f]+ ?))(?:[_a-z0-9\-]|\\(?:\\[0-9a-f]+ ?))*)\s*:/i],
+             // A C style block comment.  The <comment> production.
+             [PR['PR_COMMENT'], /^\/\*[^*]*\*+(?:[^\/*][^*]*\*+)*\//],
+             // Escaping text spans
+             [PR['PR_COMMENT'], /^(?:<!--|-->)/],
+             // A number possibly containing a suffix.
+             [PR['PR_LITERAL'], /^(?:\d+|\d*\.\d+)(?:%|[a-z]+)?/i],
+             // A hex color
+             [PR['PR_LITERAL'], /^#(?:[0-9a-f]{3}){1,2}\b/i],
+             // An identifier
+             [PR['PR_PLAIN'],
+              /^-?(?:[_a-z]|(?:\\[\da-f]+ ?))(?:[_a-z\d\-]|\\(?:\\[\da-f]+ ?))*/i],
+             // A run of punctuation
+             [PR['PR_PUNCTUATION'], /^[^\s\w\'\"]+/]
+            ]),
+        ['css']);
+    // Above we use embedded languages to highlight property names (identifiers
+    // followed by a colon) differently from identifiers in values.
+    PR['registerLangHandler'](
+        PR['createSimpleLexer']([],
+            [
+             [PR['PR_KEYWORD'],
+              /^-?(?:[_a-z]|(?:\\[\da-f]+ ?))(?:[_a-z\d\-]|\\(?:\\[\da-f]+ ?))*/i]
+            ]),
+        ['css-kw']);
+    // The content of an unquoted URL literal like url(http://foo/img.png) should
+    // be colored as string content.  This language handler is used above in the
+    // URL production to do so.
+    PR['registerLangHandler'](
+        PR['createSimpleLexer']([],
+            [
+             [PR['PR_STRING'], /^[^\)\"\']+/]
+            ]),
+        ['css-str']);
+  </script>
+  <script src="/assets/js/docs.js"></script>
+</body>
+</html>

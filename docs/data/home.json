@@ -1,0 +1,47 @@
+{
+  "title": "About Browncoat",
+  "description": "Browncoat is a html, scss, and js framework. It provides a folder structure for assets, a configurable gulp setup, and internal styleguide creation.",
+  "sections": [
+    {
+      "key": "start",
+      "title": "Start Here",
+      "nav": false,
+      "description": [
+        "Go to <a href='https://github.com/leobauza/browncoat'>the browncoat github page</a> and download the zip package for the project.",
+        "Unzip it and place the contents in your project folder.",
+        "Open your command line tool and run the commands bellow.",
+        "A browser window should automatically open to `localhost:3000` containing the same documentation for browncoat you would see at <a href='http://browncoat.leobauza.com'>the online docs</a>."
+      ],
+      "file": false,
+      "display": false
+    },
+    {
+      "key": "gulp",
+      "title": "Gulp Task Management",
+      "nav": "Gulp",
+      "description": "After running `npm run gulp` a watch task will start. This watches all scss, js, and html files and triggers recompilling (of js and scss). Changes will also trigger browsersync which streams changes to the browser or reloads the browser making changes immediately visible.",
+      "file": "/gulpfile.js",
+      "display": false
+    },
+    {
+      "key": "structure",
+      "title": "Top Level Structure",
+      "nav": false,
+      "description": [
+        "A brief overview of the top folder structure. For more detail see <a href='#section-nav'>navagation above</a>."
+      ],
+      "file": false,
+      "display": false
+    },
+    {
+      "key": "boilerplate",
+      "title": "HTML Wrapper Boilerplate",
+      "nav": "Boilerplate",
+      "description": [
+        "HTML boilerplate to start prototyping with browncoat."
+      ],
+      "file": false,
+      "display": false
+    }
+  ]
+}

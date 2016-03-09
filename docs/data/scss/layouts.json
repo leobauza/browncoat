@@ -1,0 +1,15 @@
+{
+  "title": "Layouts",
+  "description": "Layouts describe all page arrengements, containers, and container arrengements at the highest level.",
+  "sections": [
+    {
+      "key": "container",
+      "title": "Container",
+      "description": [
+        "Containers set `horizontal limits`. This includes left and right `margin/padding` as well as `max-width` (or a speicified width)."
+      ],
+      "file": "_site",
+      "display": false
+    }
+  ]
+}

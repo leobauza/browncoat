@@ -1,0 +1,43 @@
+{
+  "title": "Scss Overview",
+  "description": "Browncoat uses sass as a preprocessor, and uses the scss syntax for writing css. A folder structure exists that goes from the simplest part of scss (bits) to the largest part (layouts). There are coding standards to ensure consistency and reusability.",
+  "sections": [
+    {
+      "key": "folders",
+      "title": "SCSS Folder Structure*",
+      "nav": "SCSS Folders",
+      "description": [
+        "Folders are divided from the smallest part (bits) of scss code to the largest (layouts). Each folder has a section in the documentations."
+      ],
+      "file": "/src/scss",
+      "display": false
+    },
+    {
+      "key": "structure",
+      "title": "SCSS Parts",
+      "nav": false,
+      "description": [
+        "From smallest part to largest: `bits` > `elements` > `items` > `collections` > `sections` > `layouts`. See examples of parts below. Each part corresponds to a folder that has a section in the documentation."
+      ],
+      "file": false,
+      "display": false
+    },
+    {
+      "key": "generics",
+      "title": "Create Generics",
+      "nav": "Generics",
+      "description": "When creating an item or collection it's a good idea to create a generic version with a placeholder. This allows the generic to be extended into many different iterations with the same common parent properties or slightly tweaked select properties.",
+      "file": false,
+      "display": false
+    },
+    {
+      "key": "childrenAndModifiers",
+      "title": "Children and Modifiers",
+      "nav": false,
+      "description": "Expressing relationships between selectors makes it easier to understand scss code. For this reason we have selector naming conventions for classes. A top level class should be named (when possible) a single short word (ie `.box`). Any children that are RELATED to that class should be named using that classes name followed by two underscores and the child's equally short single word (ie `.box__header`).=>When indicating a modifier relationship the two underscores should be replaced with and additional class prefixed by a single dash (ie. `.box.-main`)=>Children relationships should not go more than one level deep (ie. `.box__header__heading` shouldn't exist, and should simply be `.box__heading` even if nested in a `.box__header`).",
+      "file": false,
+      "display": false
+    }
+
+  ]
+}

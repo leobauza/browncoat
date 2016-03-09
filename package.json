@@ -1,10 +1,12 @@
 {
   "name": "Browncoat",
-  "version": "0.2.2",
-  "description": "The platypus friend framework",
-  "main": "index.php",
+  "version": "0.5.0",
+  "description": "The platypus friendly framework",
   "scripts": {
-    "gulp": "gulp"
+    "gulp": "gulp",
+    "docs": "gulp docs",
+    "karma": "karma",
+    "test": "gulp karma"
   },
   "repository": {
     "type": "git",
@@ -20,11 +22,12 @@
     "angular": "^1.5.0",
     "angular-route": "^1.5.0",
     "angular-sanitize": "^1.5.0",
-    "connect-modrewrite": "^0.8.5",
+    "angular-mocks": "^1.5.0",
     "underscore": "^1.8.3"
   },
   "devDependencies": {
     "browser-sync": "^2.11.1",
+    "connect-modrewrite": "^0.8.5",
     "gulp": "^3.8.11",
     "gulp-notify": "^2.2.0",
     "gulp-rename": "^1.2.0",
@@ -33,6 +36,12 @@
     "gulp-svg-sprite": "^1.0.18",
     "gulp-svg2png": "^0.3.0",
     "gulp-util": "^3.0.3",
+    "jasmine-core": "^2.4.1",
+    "karma": "^0.13.21",
+    "karma-chrome-launcher": "^0.2.2",
+    "karma-firefox-launcher": "^0.1.6",
+    "karma-jasmine": "^0.3.7",
+    "karma-nyan-reporter": "^0.2.3",
     "require-dir": "^0.1.0",
     "webpack": "^1.12.12"
   }

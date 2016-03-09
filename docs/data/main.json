@@ -1,0 +1,99 @@
+{
+  "projectTitle": "Browncoat",
+  "version": "0.5.1",
+  "projectNav": [
+    {
+      "name": "home",
+      "path": "/"
+    },
+    {
+      "name": "scss",
+      "path": "/scss"
+    },
+    {
+      "name": "js",
+      "path": "/js"
+    },
+    {
+      "name": "Gulp",
+      "path": "/gulp"
+    },
+    {
+      "name": "Styleguide",
+      "path": "/styleguide"
+    }
+  ],
+  "sectionNavs": {
+    "home": [
+      {
+        "name": "gulpfile.js",
+        "path": "/gulp"
+      },
+      {
+        "name": "node_modules",
+        "path": "/home/node_modules"
+      },
+      {
+        "name": "src",
+        "path": "home/src"
+      },
+      {
+        "name": "web",
+        "path": "/home/web"
+      },
+      {
+        "name": "wraith",
+        "path": "/home/wraith"
+      }
+    ],
+    "scss": [
+      {
+        "name": "Bits",
+        "path": "/scss/bits"
+      },
+      {
+        "name": "Elements",
+        "path": "/scss/elements"
+      },
+      {
+        "name": "Items",
+        "path": "/scss/items"
+      },
+      {
+        "name": "Collections",
+        "path": "/scss/collections"
+      },
+      {
+        "name": "Sections",
+        "path": "/scss/sections"
+      },
+      {
+        "name": "Layouts",
+        "path": "/scss/layouts"
+      }
+    ],
+    "js": [
+      {
+        "name": "Sample",
+        "path": "/js/sample"
+      }
+    ]
+  },
+  "styleguideNavs": {
+    "main": [
+      {
+        "name": "first",
+        "path": "/first"
+      },
+      {
+        "name": "second",
+        "path": "/second"
+      }
+    ]
+  },
+  "bundles": {
+    "angular": {
+      "intro": "Using <code class='small'>Angular.js</code> bundle for documentation routing. This is the default documentation and sample for browncoat."
+    }
+  }
+}

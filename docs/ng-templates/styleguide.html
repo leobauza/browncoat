@@ -1,0 +1,24 @@
+<header class="site__header">
+  <div class="container">
+    <h1>{{data.title}}</h1>
+  </div>
+</header>
+<nav class="site__nav container">
+  <ul class="nav group">
+    <li ng-repeat="item in styleguideNavs.main"><a href="/styleguide{{item.path}}">{{item.name}}</a></li>
+  </ul>
+</nav>
+<section class="container">
+  <p class="intro">{{data.description}}</p>
+</section>
+<section class="row">
+  <article ng-repeat="box in data.boxes" class="box span{{12/data.boxes.length}}">
+    <header class="box__header">
+      <h3 class="box__heading">{{box.title}}</h3>
+    </header>
+    <div class="box__body -end">
+      <p>{{box.body}}</p>
+      <a class="btn -main" ng-if="box.button" href="{{box.button[0]}}">{{box.button[1]}}</a>
+    </div>
+  </article>
+</section>

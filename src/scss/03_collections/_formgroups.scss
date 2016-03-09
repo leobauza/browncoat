@@ -1,0 +1,40 @@
+/*
+ * 03_collections/formgroups
+ * Styles for form groups
+ */
+.form__group {
+  margin: 0 0 20px;
+}
+
+.form__text {
+  padding: 3px 0px;
+  margin: 0px;
+  font-size: 1.4em;
+}
+
+.radio, .checkbox {
+  margin: 0 0 20px;
+  label {
+    font-weight: normal;
+  }
+}
+.checkbox {
+  label {
+    margin: 0;
+  }
+}
+
+//form modifiers
+.form--inline {
+  .form__group {
+    display: inline-block;
+    padding-right: 10px;
+  }
+  .form__checkbox {
+    display: inline-block;
+    padding-right: 10px;
+  }
+  button {
+    display: inline-block;
+  }
+}

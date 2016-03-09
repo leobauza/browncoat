@@ -1,6 +1,6 @@
 /*
  * 02_items/btns
- * Styles for specialized anchors (buttons)
+ * Styles for specialized anchors
  */
 
 %btn{
@@ -9,6 +9,7 @@
   color: $text_colour;
   border: 1px solid $default;
   font-size: $text_size;
+  line-height: $text_line_height;
   text-align: center;
   cursor: pointer;
   &:hover, &.active {
@@ -24,8 +25,19 @@
   }
 }
 
-.btn {
+.btn, input[type="submit"].btn, button.btn {
   @extend %btn;
+  &.-link {
+    color: $text_colour;
+    border-color: $grey;
+    &:hover, &.active {
+      background: $link_colour;
+      color: $white;
+    }
+    &:focus {
+      border-color: $grey;
+    }
+  }
   &.-main {
     @include gradient($brand, lighten($brand, 2));
     color: $white;
@@ -84,24 +96,6 @@
     }
     &:focus {
       border-color: $error;
-    }
-  }
-}
-
-// Button Groups.
-.btn-group {
-  margin: 0 0 20px;
-  %btn{
-    @include borderRadius(0);
-    position: relative;
-    float: left;
-    margin-bottom: 0;
-    margin-left: -1px;
-    &:first-child {
-      @include borderRadius(5px 0px 0px 5px);
-    }
-    &:last-child {
-      @include borderRadius(0px 5px 5px 0px);
     }
   }
 }

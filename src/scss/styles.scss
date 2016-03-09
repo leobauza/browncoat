@@ -10,16 +10,17 @@
 // 02 items
 @import '02_items/btns',
         '02_items/callouts',
-        '02_items/dropdowns',
-        '02_items/listgroups';
+        '02_items/headings',
+        '02_items/icons';
 // 03 collections
 @import '03_collections/boxes',
         '03_collections/dropdowns',
-        '03_collections/heroes',
-        '03_collections/modals',
-        '03_collections/navs';
+        '03_collections/btngroups',
+        '03_collections/formgroups',
+        '03_collections/listgroups';
 // 04 sections
 @import '04_sections/header',
+        '04_sections/nav',
         '04_sections/main',
         '04_sections/sidebar',
         '04_sections/footer';
