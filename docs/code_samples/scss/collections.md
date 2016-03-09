@@ -107,6 +107,6 @@
   <div class="checkbox">
     <label for="check"><input type="checkbox" name="check">Check</label>
   </div>
-  <input type="submit" class="btn -error" name="submit">
+  <input type="submit" class="btn" name="submit">
 </form>
 ```

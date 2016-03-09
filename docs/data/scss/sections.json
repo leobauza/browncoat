@@ -1,0 +1,51 @@
+{
+  "title": "Sections",
+  "description": "??",
+  "sections": [
+    {
+      "key": "header",
+      "title": "Header",
+      "description": [
+        "Header..."
+      ],
+      "file": "_header",
+      "display": true
+    },
+    {
+      "key": "footer",
+      "title": "Footer",
+      "description": [
+        "Footer..."
+      ],
+      "file": "_footer",
+      "display": true
+    },
+    {
+      "key": "main",
+      "title": "Main",
+      "description": [
+        "Main..."
+      ],
+      "file": "_main",
+      "display": true
+    },
+    {
+      "key": "sidebar",
+      "title": "Sidebar",
+      "description": [
+        "Sidebar..."
+      ],
+      "file": "_sidebar",
+      "display": true
+    },
+    {
+      "key": "nav",
+      "title": "Nav",
+      "description": [
+        "Nav..."
+      ],
+      "file": "_nav",
+      "display": true
+    }
+  ]
+}
