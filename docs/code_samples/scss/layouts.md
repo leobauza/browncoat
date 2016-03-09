@@ -1,8 +1,10 @@
 ### container
 ```html
-<div class="container">
-  ...
-</div>
+<section class="section">
+  <div class="container">
+    ...
+  </div>
+</section>
 ```
 ---
 ### rows

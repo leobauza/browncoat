@@ -4,7 +4,12 @@
  */
 
 .container {
-  padding: 0px $global_gutter * 1%;
+  padding-left: $global_gutter * 1%;
+  padding-right: $global_gutter * 1%;
+}
+
+.section {
+  padding-bottom: 20px;
 }
 
 [class*="row-fluid"] > [class*="span"],

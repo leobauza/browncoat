@@ -4,12 +4,12 @@
   "sections": [
     {
       "key": "container",
-      "title": "Container",
+      "title": "Container and Section",
       "description": [
-        "Containers set `horizontal limits`. This includes left and right `margin/padding` as well as `max-width` (or a speicified width)."
+        "Containers set `horizontal spacing` including left/right `margin/padding` as well as `max-width` (or a speicified `width`). Sections set `vertical spacing` including bottom/top `margin/padding`."
       ],
       "file": "_site",
-      "display": false
+      "display": true
     },
     {
       "key": "rows",
