@@ -45,11 +45,18 @@
 ### btns
 ```html
 <nav class="btn-group">
-  <a href="#" class="btn">Button</a>
-  <a href="#" class="btn -info">Button</a>
-  <a href="#" class="btn -success">Button</a>
-  <a href="#" class="btn -warning">Button</a>
-  <a href="#" class="btn -error">Button</a>
+  <a href="#" class="btn -link">Button</a>
+  <a href="#" class="btn -link">Button</a>
+  <a href="#" class="btn -link">Button</a>
+  <a href="#" class="btn -link">Button</a>
+  <a href="#" class="btn -link l">Button</a>
+</nav>
+<nav class="btn-stack">
+  <a href="#" class="btn -link">Button</a>
+  <a href="#" class="btn -link">Button</a>
+  <a href="#" class="btn -link">Button</a>
+  <a href="#" class="btn -link">Button</a>
+  <a href="#" class="btn -link l">Button</a>
 </nav>
 ```
 ---
@@ -81,11 +88,6 @@
 ---
 ### listgroups
 ```html
-<div class="list-group">
-  <a href="#" class="active">Item One</a>
-  <a href="#">Item Two</a>
-  <a href="#">Item Three</a>
-</div>
 <ul class="list-group">
   <li>Item One</li>
   <li>Item Two</li>

@@ -12,15 +12,13 @@ ul.list-group {
   background: $white;
   border: 1px solid $grey;
   border-top: none;
-  li, a {
+  li {
     margin:0;
     padding:10px;
     border-top: 1px solid $grey;
     color: $text_colour;
     font-size: $text_size;
     line-height:$text_line_height;
-  }
-  li {
     &:last-child {
       @include borderRadius(0px 0px 5px 5px);
     }
@@ -30,22 +28,6 @@ ul.list-group {
   }
   a {
     display: block;
-    &:hover {
-      background: $grey;
-      text-decoration:none;
-    }
-    &.active {
-      background: $link_colour;
-      border-top: 1px solid $link_colour;
-      color: $white;
-      text-decoration:none;
-    }
-    &:last-child {
-      @include borderRadius(0px 0px 5px 5px);
-    }
-    &:first-child {
-      @include borderRadius(5px 5px 0px 0px);
-    }
   }
 }
 

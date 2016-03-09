@@ -94,7 +94,7 @@
       margin: 0px;
     }
   }
-  &> .list-group {
+  &> .list-group, &> .btn-stack {
     @extend %borderBox;
     float: left;
     width: 49.5%;

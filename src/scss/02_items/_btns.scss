@@ -27,6 +27,17 @@
 
 .btn, input[type="submit"].btn, button.btn {
   @extend %btn;
+  &.-link {
+    color: $text_colour;
+    border-color: $grey;
+    &:hover, &.active {
+      background: $link_colour;
+      color: $white;
+    }
+    &:focus {
+      border-color: $grey;
+    }
+  }
   &.-main {
     @include gradient($brand, lighten($brand, 2));
     color: $white;
