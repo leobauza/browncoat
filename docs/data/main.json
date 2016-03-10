@@ -15,11 +15,11 @@
       "path": "/js"
     },
     {
-      "name": "Gulp",
+      "name": "gulp",
       "path": "/gulp"
     },
     {
-      "name": "Styleguide",
+      "name": "styleguide",
       "path": "/styleguide"
     }
   ],

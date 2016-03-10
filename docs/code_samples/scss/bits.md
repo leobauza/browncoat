@@ -1,12 +1,8 @@
 ### colours
 ```css
-/*
- * colours
- * colour values here may not match current colours (see styleguide).
- */
 /* greyscale */
 $black: #000;
-$grey: #efefef;
+$grey: #dedede;
 $white: #fff;
 
 /* general */
@@ -25,7 +21,7 @@ $focus_border: rgba(82, 168, 236, 0.8);
 $text_colour: #2d2d2d;
 $text_colour_light: #d6d7d8;
 
-/* alets */
+/* alerts */
 $default: $grey;
 $info: #66d9ef;
 $success: #5cb85c;
@@ -94,16 +90,6 @@ $global_gutter: 3.183;
 ---
 ### sprites
 ```css
-/* sprite mixin */
-@mixin sprite($sprite) {
-  @include sprite-image($sprite);
-  @include sprite-position($sprite);
-  @include sprite-width($sprite);
-  @include sprite-height($sprite);
-  .lt-ie9 & {
-    @include sprite-png-image($sprite);
-  }
-}
 /*
  * Usage
  * For file "icon_twitter.svg"
