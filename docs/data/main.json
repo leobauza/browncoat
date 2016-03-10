@@ -25,26 +25,7 @@
   ],
   "sectionNavs": {
     "home": [
-      {
-        "name": "gulpfile.js",
-        "path": "/gulp"
-      },
-      {
-        "name": "node_modules",
-        "path": "/home/node_modules"
-      },
-      {
-        "name": "src",
-        "path": "home/src"
-      },
-      {
-        "name": "web",
-        "path": "/home/web"
-      },
-      {
-        "name": "wraith",
-        "path": "/home/wraith"
-      }
+
     ],
     "scss": [
       {
@@ -73,10 +54,6 @@
       }
     ],
     "js": [
-      {
-        "name": "Sample",
-        "path": "/js/sample"
-      }
     ]
   },
   "styleguideNavs": {

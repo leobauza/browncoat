@@ -30,6 +30,10 @@
     border-bottom: 1px solid $default;
   }
 }
+.box__footer {
+  border: 1px solid $default;
+  padding: 5px 19px;
+}
 
 //box types
 .box {

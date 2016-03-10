@@ -21,7 +21,7 @@
     border-top: 1px solid $grey;
     border-left: 1px solid $grey;
     // border-right: 1px solid $grey;
-    border-bottom: 10px solid $grey;
+    // border-bottom: 10px solid $grey;
     padding: 0px 0px 0px 40px;
     margin: 0px;
     &> li {
@@ -109,9 +109,13 @@
     }
   }
 }
-.footnote { // MAKE FOOTNOTES AVAILABLE THROUGH JSON FILE SOMEHOW
-  font-size: 1.2em;
-  font-weight: $boldFont;
+.footnote {
+  display: block;
+  padding: 0px;
+  margin: 0px;
+  background: none;
+  text-align: right;
+  font-size: $h6;
 }
 [ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
   display: none !important;

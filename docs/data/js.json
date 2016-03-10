@@ -1,13 +1,25 @@
 {
   "title": "JS Overview",
-  "description": "??",
+  "description": "Browncoat has a tiny javasript boilerplate. `app.js` in `/src/js` is used as the main bundle to compile by gulp (using webpack). A `modules` folder exists and a sample module is provided.",
   "sections": [
     {
       "key": "commonjs",
-      "title": "CommonJS For Modular JS",
+      "title": "CommonJS",
       "nav": "CommonJS",
-      "description": "<p>JS introduction</p>",
-      "file": false,
+      "description": [
+        "CommonJS provides the `require()` function which allows importing of a module into the current scope. It also provides the `module` object which allows exports from the current scope."
+      ],
+      "file": "/src/js && /src/js/modules",
+      "display": false
+    },
+    {
+      "key": "docs",
+      "title": "Docs",
+      "nav": false,
+      "description": [
+        "This documentation is an `angular.js` application. The application is compiled as a separate bundle from the `docs.js` file into `/docs/assets/js`."
+      ],
+      "file": "/src/js/docs.js",
       "display": false
     }
   ]
