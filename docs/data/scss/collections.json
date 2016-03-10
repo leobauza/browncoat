@@ -1,12 +1,14 @@
 {
   "title": "Collections",
-  "description": "Collections are groups of items or elements. Collections consist of wrappers around one or many items and/or elemetns.",
+  "description": [
+    "Groups of `items` and/or `elements`. Collections MUST have a parent wrapper surrounding one or many `items` and/or `elements`."
+  ],
   "sections": [
     {
       "key": "boxes",
       "title": "Boxes",
       "description": [
-        "Boxes are made up of a box header and a box body. The browncoat documentation is built using boxes for each documentation segment."
+        "MUST extend the `%box` placeholder. Boxes MUST use at least one child box element."
       ],
       "file": "_boxes",
       "display": true
@@ -15,7 +17,7 @@
       "key": "btns",
       "title": "Button Groups",
       "description": [
-        "Button groups consist of a wrapper with a group of any type of button that extends from the `%btn` placeholder."
+        "MUST be a wrapper containing `items` that extend `%btn`"
       ],
       "file": "_btngroups",
       "display": true
@@ -24,7 +26,7 @@
       "key": "dropdowns",
       "title": "Dropdowns",
       "description": [
-        "Dropdowns consist of a wrapper with any type of button that extends from the `%btn` placeholder, an unordered list, and an arrow."
+        "MUST be a wrapper containing an `item` that extends `%btn`, a list element, and an `arrow`"
       ],
       "file": "_btngroups",
       "display": true
@@ -33,7 +35,7 @@
       "key": "listgroups",
       "title": "List Groups",
       "description": [
-        "Listgroups are augmented groups of lists or links. Listgroups should not contain links that extend `%btn`. For that use `03_collections/_btngroups.scss`."
+        "MUST be an augmented list or list of links. Wrapper MUST NOT contain `items` that extend %btn, button groups should be used for that."
       ],
       "file": "_listgroups",
       "display": true
@@ -42,7 +44,7 @@
       "key": "formgroups",
       "title": "Form Groups",
       "description": [
-        "Form groups help layout forms. Use extensions of `%btn` for submit buttons in favour of styling these directly."
+        "Alternatives to fieldsets. Submit buttons/inputs SHOULD use classes that extend `%btn` instead of being styled directly."
       ],
       "file": "_formgroups",
       "display": true
