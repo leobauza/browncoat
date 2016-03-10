@@ -1,12 +1,12 @@
 {
   "title": "Sections",
-  "description": "Sections describe large areas of the page. Sections are `children` of an implied `.site` global class. This is to avoid having an overly generic class like `header` since that could be used as a `collection` class name where it is more appropriate to be less descriptive.",
+  "description": "Sections describe large areas/regions of the page. Sections are `children` of an implied `site` global class. This prevents overly generic class names like `header` that SHOULD be used by `collections`.",
   "sections": [
     {
       "key": "header",
       "title": "Header",
       "description": [
-        "The header of the site. Styles should only affect the container and positioning of collections, items, or elements within."
+        "The header of the site. Styles MUST only affect the container and positioning of collections, items, and elements within."
       ],
       "file": "_header",
       "display": false
@@ -15,7 +15,7 @@
       "key": "footer",
       "title": "Footer",
       "description": [
-        "The footer of the site. Styles should only affect the container and positioning of collections, items, or elements within."
+        "The footer of the site. Styles MUST only affect the container and positioning of collections, items, and elements within."
       ],
       "file": "_footer",
       "display": false
@@ -24,7 +24,7 @@
       "key": "main",
       "title": "Main",
       "description": [
-        "The main content of the site. Styles should only affect the container and positioning of collections, items, or elements within."
+        "The main content of the site. Styles MUST only affect the container and positioning of collections, items, and elements within."
       ],
       "file": "_main",
       "display": false
@@ -33,7 +33,7 @@
       "key": "sidebar",
       "title": "Sidebar",
       "description": [
-        "The sidebar(s) of the site. Styles should only affect the container and positioning of collections, items, or elements within."
+        "The sidebar(s) of the site. Styles MUST only affect the container and positioning of collections, items, and elements within."
       ],
       "file": "_sidebar",
       "display": false
@@ -42,7 +42,7 @@
       "key": "nav",
       "title": "Nav",
       "description": [
-        "The navigation(s) of the site. Styles should only affect the container and positioning of collections, items, or elements within. `nav` class is part of `03_collections/_listgroups.scss`, it is an example where the `nav` class has been left available for a collection to use."
+        "The navigation(s) of the site. Styles should only affect the container and positioning of collections, items, and elements within. <strong>Note:</strong> `.nav` is a `collection` class."
       ],
       "file": "_nav",
       "display": true
