@@ -11,6 +11,82 @@ npm install
 # Run Gulp to view docs
 npm run docs
 # This will take a few moments while gulp gets started
+# The javascript for the docs is compiled from /src/js/docs.js
+# The CSS for the app is compiled from /src/scss/styles.scss (matches the app)
+
+# Run Gulp to view app
+npm run gulp
+# This will take a few moments while gulp gets started
+# By default there app will have "Hello World" in an h1 tag
+# The javascript for the app is compiled from /src/js/app.js
+# The CSS for the app is compiled from /src/scss/styles.scss (matches the docs)
+```
+---
+### gulp
+```bash
+# Default gulp task
+npm run gulp
+## Watches:
+# /src/scss
+# /src/js
+# *.html in /web
+## Compiles to:
+# /web/assets/css
+# /web/assets/js
+
+# Default gulp task
+npm run docs
+## Watches:
+# /src/scss
+# /src/js
+# *.html in /docs
+# *.md in /docs
+# *.json in /docs
+## Compiles to:
+# /docs/assets/css
+# /docs/assets/js
+
+```
+---
+### structure
+```bash
+# Contains all gulp tasks
+/gulpfile.js
+
+# Dependencies for gulp (devDependencies in package.json)
+# Dependencies for application/website (dependencies in package.json)
+# Folder git ignored and created by running npm install
+/node_modules
+
+# All css and js development MUST be done inside this folder.
+# Folders inside the src directory are compiled into /web and /docs
+/src
+
+# Root of the application
+# Contains /assets with compiled css and js code
+/web
+
+# Root of the documentation
+# Contains /assets with compiled css and js code
+# Contains /code_samples with .md files used to generate docs
+# Contains /data with .json files used to generate docs
+# Contains /ng-templates with docs templates used by docs.js
+/docs
+
+# Contains files related to visual regression testing
+/wraith
+
+# Generic git ignore file
+.gitignore
+
+# MIT License (MIT)
+LICENSE
+
+# See NPM package.json specifications
+package.json
+
+# Readme file for github project
+README.md
 ```
 ---
 ### boilerplate
@@ -38,60 +114,9 @@ npm run docs
   <link rel="shortcut icon" href="/assets/img/favicon.ico" type="image/x-icon">
 </head>
 <body>
-  ...
-  <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
-  <script src="/assets/js/main.js"></script> -->
-  <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
-  <script src="/assets/js/ng-main.js"></script>
+  <h1>Hello WOrld</h1>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+  <script src="/assets/js/main.js"></script>
 </body>
 </html>
-```
----
-### gulp
-```bash
-# Default gulp task
-npm run gulp
-## Watches:
-# /src/scss
-# /src/js
-# *.html in /web
-## Compiles to:
-# /assets/css
-# /assets/js
-```
----
-### structure
-```bash
-# Contains all gulp taks
-/gulpfile.js
-
-# Dependencies are broken up in two parts:
-# - Dependencies for gulp (devDependencies on package.json)
-# - Dependencies for application or website (dependencies on package.json)
-# This folder is gitignored and is created by running npm install.
-/node_modules
-
-# Where all css/js work is done. Folders inside the src directory are
-# compiled into the web/assets/ directory.
-# Also contains the icons folder that is used to create sprites.
-/src
-
-# The root of the application. Contains the assets compiled for src files,
-# code samples files, data files, templates, and the index.
-/web
-
-# Contains files related to visual regression testing.
-/wraith
-
-# For use with git version control.
-.gitignore
-
-# The MIT License (MIT)
-LICENSE
-
-# File that specifies what modules will be downloaded into node_modules.
-package.json
-
-# Readme file for github project.
-README.md
 ```
