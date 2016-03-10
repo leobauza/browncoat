@@ -1,13 +1,15 @@
 {
   "title": "Scss Overview",
-  "description": "Browncoat uses sass as a preprocessor, and uses the scss syntax for writing css. A folder structure exists that goes from the simplest part of scss (bits) to the largest part (layouts). There are coding standards to ensure consistency and reusability.",
+  "description": [
+    "CSS is written in Sass using the SCSS (Sassy CSS) sytanx. Compiling is handled by gulp."
+  ],
   "sections": [
     {
       "key": "folders",
-      "title": "SCSS Folder Structure*",
-      "nav": "SCSS Folders",
+      "title": "SCSS Folder Structure",
+      "nav": "SCSS Folder",
       "description": [
-        "Folders are divided from the smallest part (bits) of scss code to the largest (layouts). Each folder has a section in the documentations."
+        "SCSS is divided into 6 categories of code. Docs subsections detail each category. `styles.scss` SHOULD `@import` all SCSS files to be compiled into CSS."
       ],
       "file": "/src/scss",
       "display": false
@@ -17,7 +19,7 @@
       "title": "SCSS Parts",
       "nav": false,
       "description": [
-        "From smallest part to largest: `bits` > `elements` > `items` > `collections` > `sections` > `layouts`. See examples of parts below. Each part corresponds to a folder that has a section in the documentation."
+        "In order from smallest to largest: `bits`, `elements`, `items`, `collections`, `sections`, `layouts`. Examples below."
       ],
       "file": false,
       "display": false
@@ -26,7 +28,11 @@
       "key": "generics",
       "title": "Create Generics",
       "nav": "Generics",
-      "description": "When creating an item or collection it's a good idea to create a generic version with a placeholder. This allows the generic to be extended into many different iterations with the same common parent properties or slightly tweaked select properties.",
+      "description": [
+        "A generic MUST be a placeholder for the most common version of an `item` or `collection`. Generics are extended initially by a class of the same name (ie. `%btn` is extended by `.btn`).",
+        "Modifiers MUST be children of classes and not generics. Additional extensions of the generic MUST NOT modify existing properties on the generic, they MUST only augment the generic."
+      ],
+
       "file": false,
       "display": false
     },
@@ -34,7 +40,11 @@
       "key": "childrenAndModifiers",
       "title": "Children and Modifiers",
       "nav": false,
-      "description": "Expressing relationships between selectors makes it easier to understand scss code. For this reason we have selector naming conventions for classes. A top level class should be named (when possible) a single short word (ie `.box`). Any children that are RELATED to that class should be named using that classes name followed by two underscores and the child's equally short single word (ie `.box__header`).=>When indicating a modifier relationship the two underscores should be replaced with and additional class prefixed by a single dash (ie. `.box.-main`)=>Children relationships should not go more than one level deep (ie. `.box__header__heading` shouldn't exist, and should simply be `.box__heading` even if nested in a `.box__header`).",
+      "description": [
+        "Selector naming conventions make it easier to to understand Scss code.",
+        "Top level classes SHOULD be named a single short word (eg. `box`). Related children MUST be named using the parent name followed by two underscores followed by the child's name (eg. `box__header`). Parent-child relationships SHOULD only go one level deep (ie. `box__header__title` is discouraged). Parent child relationships SHOULD only exist in `collections`.",
+        "Modifiers MUST be named using a dash and the modifiers name (eg. `-main`). Modifiers MUST follow the class they are modifying (eg. `btn -main`)."
+      ],
       "file": false,
       "display": false
     }

@@ -7,7 +7,7 @@ Browncoat 0.5.0
 
 ## About
 
-Browncoat is a front-end styleguide documentation framework (FSDF). Browncoat self documents and serves up examples of itself using [browsersync's](https://www.browsersync.io/) built-in static server.
+Browncoat is a front-end styleguide documentation framework (FSDF) and prototype tool. The application `npm run gulp` and documentation `npm run docs` are served up using [browsersync's](https://www.browsersync.io/) built-in static server.
 
 ## Install
 
@@ -56,11 +56,13 @@ Browncoat uses [semver](http://semver.org/) specifications.
 Commits should be formatted as follows:
 
 ```bash
-# type: task, chore, version, or patch
+# type: version, task, chore, or patch
 # optional: short name
-# description: A short description (can break into multiple lines below
-# summary line)
+# description: A short description
+# additional: Any additional information MUST be added after 2 returns
 $ type(optional): description
+>
+> Additional
 # eg.
 $ task: Add scss section to docs
 $ chore: Clean up tests
@@ -71,7 +73,7 @@ $ patch: Fix failing Tavis CI tests
 ## Todo
 
 - Production gulp task
-- Wraith update/docs (currently broken)
+- Wraith update/docs [broken]
 
 ## Important Changes from v0.4.0
 
