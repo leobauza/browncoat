@@ -146,10 +146,8 @@ pre {
 code {
   @extend %borderBox;
   font-family: $code;
-  font-size: 85%;
   padding: 2px 4px;
   color: $link_colour;
-  background: $grey;
 }
 
 xmp {
