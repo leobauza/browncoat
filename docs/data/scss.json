@@ -21,7 +21,7 @@
       "description": [
         "In order from smallest to largest: `bits`, `elements`, `items`, `collections`, `sections`, `layouts`. Examples below."
       ],
-      "file": false,
+      "file": "/src/scss",
       "display": false
     },
     {
@@ -33,7 +33,7 @@
         "Modifiers MUST be children of classes and not generics. Additional extensions of the generic MUST NOT modify existing properties on the generic, they MUST only augment the generic."
       ],
 
-      "file": false,
+      "file": "/src/scss",
       "display": false
     },
     {
@@ -45,7 +45,7 @@
         "Top level classes SHOULD be named a single short word (eg. `box`). Related children MUST be named using the parent name followed by two underscores followed by the child's name (eg. `box__header`). Parent-child relationships SHOULD only go one level deep (ie. `box__header__title` is discouraged). Parent child relationships SHOULD only exist in `collections`.",
         "Modifiers MUST be named using a dash and the modifiers name (eg. `-main`). Modifiers MUST follow the class they are modifying (eg. `btn -main`)."
       ],
-      "file": false,
+      "file": "/src/scss",
       "display": false
     }
 

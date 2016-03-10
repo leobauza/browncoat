@@ -1,6 +1,6 @@
 {
   "title": "JS Overview",
-  "description": "Browncoat has a tiny javasript boilerplate. `app.js` in `/src/js` is used as the main bundle to compile by gulp (using webpack). A `modules` folder exists and a sample module is provided.",
+  "description": "`app.js` in `/src/js` is used as the main bundle to compile by gulp (using webpack). See `modules` folder for module sample.",
   "sections": [
     {
       "key": "commonjs",

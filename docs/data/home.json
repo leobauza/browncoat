@@ -13,7 +13,7 @@
         "Browncoat SHOULD be downloaded from <a href='https://github.com/leobauza/browncoat'>the browncoat github page</a>. It MUST be downloaded (e.g. zip file download) and not forked or cloned unless contributing to the browncoat project.",
         "Once the project is open to the base directory (ie. level where `package.json` is found) the commands below can be run."
       ],
-      "file": false,
+      "file": "/",
       "display": false
     },
     {
@@ -31,7 +31,7 @@
       "description": [
         "Brief overview of the top folder structure."
       ],
-      "file": false,
+      "file": "/",
       "display": false
     },
     {
