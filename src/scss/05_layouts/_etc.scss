@@ -16,6 +16,7 @@
 }
 .prettyprint {
   ol.linenums {
+    font-size: 100%;
     counter-reset: li;
     background: $white;
     border-top: 1px solid $grey;
@@ -32,6 +33,7 @@
       border-left: 1px solid $text_colour;
       list-style: none;
       background: $text_colour;
+      font-size: $text_size;
       &:hover {
         background: lighten($text_colour, 5);
         &:before {

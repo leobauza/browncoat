@@ -53,6 +53,8 @@ body {
   font-family: $global_family;
   color: $text_colour;
   word-wrap: break-word;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing:grayscale;
 }
 hr {
   height: 1px;
@@ -152,6 +154,7 @@ code {
 
 xmp {
   margin: 0px;
+  font-family: $code;
 }
 
 header,
