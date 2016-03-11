@@ -3,5 +3,5 @@
 node_modules
 wraith/shots
 wraith/casper_shots
-
+docs/.htaccess
 npm-debug.log

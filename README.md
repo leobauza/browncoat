@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/leobauza/browncoat.svg?branch=feat/0.5.1)](https://travis-ci.org/leobauza/browncoat)
+[![Build Status](https://travis-ci.org/leobauza/browncoat.svg?branch=master)](https://travis-ci.org/leobauza/browncoat)
 
 Browncoat 1.0.0-alpha
 ---
@@ -80,13 +80,6 @@ $ chore: clean up tests
 $ version(0.5.1): prepare release
 $ patch: fix failing Tavis CI tests
 ```
-
-## Todo
-
-- Production gulp task
-- Documentation on how to document
-- Complete styleguide of defaults
-- Wraith update/docs [broken]
 
 ## Important Changes from v0.4.0
 
