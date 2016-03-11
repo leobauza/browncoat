@@ -1,12 +1,12 @@
 {
   "title": "Layouts",
-  "description": "Layouts describe all page arrengements, containers, and container arrengements at the highest level.",
+  "description": "Layouts determine page arrengements, containers, and sections.",
   "sections": [
     {
       "key": "container",
       "title": "Container and Section",
       "description": [
-        "Containers set `horizontal spacing` including left/right `margin/padding` as well as `max-width` (or a speicified `width`). Sections set `vertical spacing` including bottom/top `margin/padding`."
+        "Containers MUST set horizontal spacing including `margin/padding` and `width`. Sections MUST set vertical spacing including `margin/padding` and `height`."
       ],
       "file": "_site",
       "display": true
@@ -15,7 +15,7 @@
       "key": "rows",
       "title": "Rows",
       "description": [
-        "`Rows` contain `spans` to create grids. Colours in examples added for visualization by the docs."
+        "`Rows` contain `spans` to create grids. (Colours in examples added for visualization by the docs)."
       ],
       "file": "_site",
       "display": true
@@ -24,9 +24,9 @@
       "key": "makerows",
       "title": "Create Rows",
       "description": [
-        "The default rows use `@mixin rows($gutter, $columns)` to generate the necessary css for the grid. This means that new grids can be created on demand by providing a `gutter percentage` and a `number of columns` to the mixin.",
-        "Name row classes `row-descriptor` where `descriptor` stands for a single descriptive word. Rows are not extensions of a generic, they are self contained classes so the modifier patter doesn't apply (ie. `row -descriptor` would be wrong).",
-        "Rewriting the default rows before creating alternative grids is mandatory if the defaults are not in use."
+        "Default rows MUST use `@mixin rows($gutter, $columns)` to generate a default grid. New grids SHOULD be created by providing a `gutter percentage` and a `number of columns` to the `rows` mixin.",
+        "Row classes MUST be named with the word `row` followed by a dash following by a descriptor (eg. `row-descriptor`). The descriptor SHOULD be a single word.",
+        "The default `row` class MUST be in use before creating any new `row` classes."
       ],
       "file": "_site",
       "display": false
