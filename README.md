@@ -1,6 +1,6 @@
 [![Build Status](https://travis-ci.org/leobauza/browncoat.svg?branch=master)](https://travis-ci.org/leobauza/browncoat)
 
-Browncoat 1.0.0-alpha
+Browncoat 1.0.0-alpha.1
 ---
 
 `Tracey`
@@ -81,15 +81,8 @@ $ version(0.5.1): prepare release
 $ patch: fix failing Tavis CI tests
 ```
 
-## Important Changes from v0.4.0
+## Important Changes from v1.0.0-alpha
 
-- Major changes to SCSS structure
-- Added webpack
-- Added browsersync (no need for virtual host set up to run PHP application)
-- `gulp/` directory to `gulpfile.js/` directory
-- Angular.js application for documentation
-- Remove all PHP
-- Rewrite docs
-- Doc editing through data files + md files
-- Tests with Karma/Jasmine
-- Travis CI integration
+- Fix failing tests
+- Add `.htacess` and `favicon` to docs for `browncoat.leobauza.com` release deployment
+- Updated `.gitignore` and `README.md`
