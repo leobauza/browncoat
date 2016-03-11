@@ -56,33 +56,36 @@ Browncoat uses [semver](http://semver.org/) specifications.
 Commits MUST stick to this format:
 
 ```bash
-# type: version, task, chore, or patch
-# optional: short name
-# description: A short description
-# additional: Any additional information MUST be added after 2 returns
+# type: "version", "task", "chore", or "patch"
+# optional: short name (do not capitalize)
+# description: A short description (do not capitalize)
+# additional: Any additional information MUST be added after 2 returns (do capitalize)
 $ type(optional): description
 >
 > Additional
 # eg.
-$ task: Add scss section to docs
-$ chore: Clean up tests
+$ task: add scss section to docs
+$ chore: clean up tests
 $ version(0.5.1): prepare release
-$ patch: Fix failing Tavis CI tests
+$ patch: fix failing Tavis CI tests
 ```
 
 ## Todo
 
 - Production gulp task
+- Documentation on how to document
+- Complete styleguide of defaults
 - Wraith update/docs [broken]
 
 ## Important Changes from v0.4.0
 
 - Major changes to SCSS structure
 - Added webpack
-- Added browsersync (no need for virtual host set up anymore)
+- Added browsersync (no need for virtual host set up to run PHP application)
 - `gulp/` directory to `gulpfile.js/` directory
 - Angular.js application for documentation
-- Abandon PHP
-- Rewrite of docs
+- Remove all PHP
+- Rewrite docs
+- Doc editing through data files + md files
 - Tests with Karma/Jasmine
 - Travis CI integration
