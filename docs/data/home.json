@@ -2,7 +2,7 @@
   "title": "About Browncoat",
   "description": [
     "Browncoat is a html, scss, and js framework. It provides a folder structure for assets, a configurable gulp setup, and internal styleguide creation. Browncoat uses <a target='_blank' href='http://semver.org/'>semver</a> specifications.",
-    "<strong>Note:</strong> The key words MUST, MUST NOT, REQUIRED, SHALL, SHALL NOT, SHOULD, SHOULD NOT, RECOMMENDED, MAY, and OPTIONAL in this document are to be interpreted as described in <a target='_blank' href='http://tools.ietf.org/html/rfc2119'>RFC 2119</a>."
+    "The key words MUST, MUST NOT, REQUIRED, SHALL, SHALL NOT, SHOULD, SHOULD NOT, RECOMMENDED, MAY, and OPTIONAL in this document are to be interpreted as described in <a target='_blank' href='http://tools.ietf.org/html/rfc2119'>RFC 2119</a>."
   ],
   "sections": [
     {

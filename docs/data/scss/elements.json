@@ -10,7 +10,7 @@
       "description": [
         "MUST use `$h1` - `$h6` variables."
       ],
-      "file": "_resets",
+      "file": "/src/scss/01_elements/_resets.scss",
       "display": true
     },
     {
@@ -19,7 +19,7 @@
       "description": [
         "MUST use `$text_size` and `$text_line_height` variables."
       ],
-      "file": "_resets",
+      "file": "/src/scss/01_elements/_resets.scss",
       "display": true
     },
     {
@@ -28,7 +28,7 @@
       "description": [
         "MUST use `$lists_font_size` and `$lists_line_height` variables. SHOULD lay foundational styles for `collection` lists."
       ],
-      "file": "_lists",
+      "file": "/src/scss/01_elements/_lists.scss",
       "display": true
     },
     {
@@ -37,7 +37,7 @@
       "description": [
         "SHOULD lay foundational styles for `collection` forms."
       ],
-      "file": "_forms",
+      "file": "/src/scss/01_elements/_forms.scss",
       "display": true
     },
     {
@@ -46,7 +46,7 @@
       "description": [
         "SHOULD lay foundational styles for `collection` tables."
       ],
-      "file": "_tables",
+      "file": "/src/scss/01_elements/_tables.scss",
       "display": true
     }
   ]

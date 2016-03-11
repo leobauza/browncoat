@@ -8,7 +8,7 @@
       "description": [
         "The header of the site. Styles MUST only affect the container and positioning of collections, items, and elements within."
       ],
-      "file": "_header",
+      "file": "/src/scss/04_sections/_header.scss",
       "display": false
     },
     {
@@ -17,7 +17,7 @@
       "description": [
         "The footer of the site. Styles MUST only affect the container and positioning of collections, items, and elements within."
       ],
-      "file": "_footer",
+      "file": "/src/scss/04_sections/_footer.scss",
       "display": false
     },
     {
@@ -26,7 +26,7 @@
       "description": [
         "The main content of the site. Styles MUST only affect the container and positioning of collections, items, and elements within."
       ],
-      "file": "_main",
+      "file": "/src/scss/04_sections/_main.scss",
       "display": false
     },
     {
@@ -35,7 +35,7 @@
       "description": [
         "The sidebar(s) of the site. Styles MUST only affect the container and positioning of collections, items, and elements within."
       ],
-      "file": "_sidebar",
+      "file": "/src/scss/04_sections/_sidebar.scss",
       "display": false
     },
     {
@@ -44,7 +44,7 @@
       "description": [
         "The navigation(s) of the site. Styles should only affect the container and positioning of collections, items, and elements within. <strong>Note:</strong> `.nav` is a `collection` class."
       ],
-      "file": "_nav",
+      "file": "/src/scss/04_sections/_nav.scss",
       "display": true
     }
   ]

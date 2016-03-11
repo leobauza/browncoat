@@ -10,7 +10,7 @@
       "description": [
         "MUST extend the `%box` placeholder. Boxes MUST use at least one child box element."
       ],
-      "file": "_boxes",
+      "file": "/src/scss/03_collections/_boxes.scss",
       "display": true
     },
     {
@@ -19,7 +19,7 @@
       "description": [
         "MUST be a wrapper containing `items` that extend `%btn`"
       ],
-      "file": "_btngroups",
+      "file": "/src/scss/03_collections/_btngroups.scss",
       "display": true
     },
     {
@@ -28,7 +28,7 @@
       "description": [
         "MUST be a wrapper containing an `item` that extends `%btn`, a list element, and an `arrow`"
       ],
-      "file": "_btngroups",
+      "file": "/src/scss/03_collections/_btngroups.scss",
       "display": true
     },
     {
@@ -37,7 +37,7 @@
       "description": [
         "MUST be an augmented list or list of links. Wrapper MUST NOT contain `items` that extend %btn, button groups should be used for that."
       ],
-      "file": "_listgroups",
+      "file": "/src/scss/03_collections/_listgroups.scss",
       "display": true
     },
     {
@@ -46,7 +46,7 @@
       "description": [
         "Alternatives to fieldsets. Submit buttons/inputs SHOULD use classes that extend `%btn` instead of being styled directly."
       ],
-      "file": "_formgroups",
+      "file": "/src/scss/03_collections/_formgroups.scss",
       "display": true
     }
   ]

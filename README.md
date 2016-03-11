@@ -7,11 +7,11 @@ Browncoat 0.5.0
 
 ## About
 
-Browncoat is a front-end styleguide documentation framework (FSDF) and prototype tool. The application `npm run gulp` and documentation `npm run docs` are served up using [browsersync's](https://www.browsersync.io/) built-in static server.
+Browncoat is a front-end styleguide documentation framework (FSDF) and prototype tool. The application and documentation are served up using [browsersync's](https://www.browsersync.io/) built-in static server.
 
 ## Install
 
-Install node module dependencies and run the documentation.
+Make sure Node 0.12.x is installed.
 
 ```bash
 # Install dependencies
@@ -27,7 +27,7 @@ npm run gulp
 npm test
 ```
 
-## Visual Regression Testing with Wraith
+## Visual Regression Testing with Wraith [BROKEN]
 
 Visual regression testing added as of `version 0.4`. Uses wraith, a screenshot comparison tool created by BBC news. Requires Wraith be installed. Instructions at their [github page](https://github.com/BBC-News/wraith).
 
@@ -51,9 +51,9 @@ Browncoat uses [semver](http://semver.org/) specifications.
 <major>.<minor>.<patch>
 ```
 
-## Contribute
+## Commits
 
-Commits should be formatted as follows:
+Commits MUST stick to this format:
 
 ```bash
 # type: version, task, chore, or patch

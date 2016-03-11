@@ -8,7 +8,7 @@
       "description": [
         "SHOULD extend the `%btn` placeholder."
       ],
-      "file": "_btns",
+      "file": "/src/scss/02_items/_btns.scss",
       "display": true
     },
     {
@@ -17,7 +17,7 @@
       "description": [
         "SHOULD extend the `%callout` placeholder."
       ],
-      "file": "_callouts",
+      "file": "/src/scss/02_items/_callouts.scss",
       "display": true
     },
     {
@@ -26,7 +26,7 @@
       "description": [
         "MUST only modify standalone `h1` - `h6`. MUST use modifier format (`-heading -modifier`). Headings that are parts of `collections` MUST use child selector format (`parent__child`)."
       ],
-      "file": "_headings",
+      "file": "/src/scss/02_items/_headings.scss",
       "display": true
     },
     {
@@ -36,7 +36,7 @@
         "Most icons use the `sprite($file_name)` mixin provided by `/src/scss/00_bits/_sprites.scss`. Variable names are determined by svg file names in `src/icons/`. SVG file names MUST be named in snake case (eg. `snake_case`).",
         "Icons not using the `sprite($file_name)` mixin SHOULD be CSS only (eg. CSS triangles below)."
       ],
-      "file": "_icons",
+      "file": "/src/scss/02_items/_icons.scss",
       "display": true
     }
   ]

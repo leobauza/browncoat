@@ -8,7 +8,7 @@
       "description": [
         "Containers MUST set horizontal spacing including `margin/padding` and `width`. Sections MUST set vertical spacing including `margin/padding` and `height`."
       ],
-      "file": "_site",
+      "file": "/src/scss/05_layouts/_site.scss",
       "display": true
     },
     {
@@ -17,7 +17,7 @@
       "description": [
         "`Rows` contain `spans` to create grids. (Colours in examples added for visualization by the docs)."
       ],
-      "file": "_site",
+      "file": "/src/scss/05_layouts/_site.scss",
       "display": true
     },
     {
@@ -28,7 +28,7 @@
         "Row classes MUST be named with the word `row` followed by a dash following by a descriptor (eg. `row-descriptor`). The descriptor SHOULD be a single word.",
         "The default `row` class MUST be in use before creating any new `row` classes."
       ],
-      "file": "_site",
+      "file": "/src/scss/05_layouts/_site.scss",
       "display": false
     }
   ]
