@@ -1,13 +1,13 @@
 [![Build Status](https://travis-ci.org/leobauza/browncoat.svg?branch=feat/0.5.1)](https://travis-ci.org/leobauza/browncoat)
 
-Browncoat 0.5.0
+Browncoat 1.0.0-alpha
 ---
 
-`Reconstruction`
+`Tracey`
 
 ## About
 
-Browncoat is a front-end styleguide documentation framework (FSDF) and prototype tool. The application and documentation are served up using [browsersync's](https://www.browsersync.io/) built-in static server.
+Browncoat is a front-end prototype tool. Documentation is served from the `/docs` directory. Application is served from the `/web` directory. Both use [browsersync's](https://www.browsersync.io/) built-in static server.
 
 ## Install
 
@@ -50,6 +50,17 @@ Browncoat uses [semver](http://semver.org/) specifications.
 ```
 <major>.<minor>.<patch>
 ```
+
+Version change checklist:
+
+- MUST update `main.json` version
+- MUST update `package.json` version
+- MUST update `README.md` version
+- Major updates MUST change codename
+- Minor updates MAY change codename
+- Patch updates MUST NOT change codename
+- Update important changes
+- Update `changelog.md`
 
 ## Commits
 
