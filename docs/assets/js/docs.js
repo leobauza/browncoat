@@ -202,7 +202,8 @@
 	.controller("landingCtr", ["$scope", "$timeout", "data", "$sce", function ($scope, $timeout, data, $sce) {
 
 	  var codeSamples = {},
-	      page = data.data;
+	      page = data.data,
+	      pageDescription = "";
 
 	  _.each(page.sections, function (v, k) {
 	    if (v.description.indexOf("<p>") === -1 && typeof v.description === "string") {
@@ -217,8 +218,18 @@
 	    }
 	  });
 
+	  if (typeof page.description === "string") {
+	    pageDescription = "<p>" + page.description.replace(/`([\s+\S]*?)`/g, "<code>$1</code>") + "</p>";
+	  } else if (typeof page.description === "object") {
+	    pageDescription = _.map(page.description, function (v, k) {
+	      return "<p>" + v.replace(/`([\s+\S]*?)`/g, "<code>$1</code>") + "</p>";
+	    }).join("");
+	  } else {
+	    pageDescription = false;
+	  }
+
 	  $scope.title = page.title || false;
-	  $scope.description = page.description ? page.description.replace(/`([\s+\S]*?)`/g, "<code>$1</code>") : false;
+	  $scope.description = pageDescription ? pageDescription : false;
 	  $scope.blocks = page.sections || false;
 	  $scope.codeSamples = parseCodeSamples(data.code);
 	  $scope.reTrustHtml = function (code) {
@@ -232,7 +243,6 @@
 	}])
 	.controller("styleguideCtr", ["$scope", "$timeout", "data", function ($scope, $timeout, data) {
 	  $scope.data = data;
-
 	}]);
 
 

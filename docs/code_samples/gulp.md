@@ -4,11 +4,15 @@
 # Runs the watch task
 npm run gulp
 
-# Watch task [watch.js] (called by default task)
+# Docs task [watch.js]
+# Like the default task but compiles docs.js instead of app.js
+npm run gulp docs
+
+# Watch task [watch.js]
 # Sets up browserSync
-# Watches src/scss and Runs css task on change
-# Watching .html files and does a browserSync reload on change
-# Runs js task
+# Watches /src/scss and Runs css task on change
+# Watches /web/*.html files and browserSync reloads on change
+# Runs js task (webpack watches js files)
 npm run gulp watch
 
 # Sass task [css.js] (called by watch task)
@@ -44,9 +48,10 @@ var prettifyTime = require('<path>/prettifyTime'),
 {
   // Directory configurations
   "root": {
+    "src": "./src",
+    "dest": "./web",
+    "docs": "./docs",
     "base": "."
-    "src": "./src", // src dir rel to base
-    "dest": "./web", // web dir rel to base
   },
   // Task specific configurations
   "tasks": {
@@ -55,14 +60,16 @@ var prettifyTime = require('<path>/prettifyTime'),
       "src": "./js",
       "dest": "./assets/js",
       "entries": {
-        "main": "./app.js",
-        "ng-main": "./ng-app.js"
+        "main": "./app.js"
+      },
+      "doc_entries": {
+        "docs": "./docs.js"
       }
     },
     // css task configurations
     "css": {
-      "src": "./scss/styles.scss", // resolves to ./src/scss...
-      "dest": "./assets/css" // resolves to ./web/assets...
+      "src": "./scss/styles.scss",
+      "dest": "./assets/css"
     },
     // sprite task configurations
     "sprite": {
@@ -71,6 +78,7 @@ var prettifyTime = require('<path>/prettifyTime'),
       "spriteDest": "./assets/img",
       "scssDest": "./scss/00_bits/_sprites.scss"
     }
+
   }
 }
 ```

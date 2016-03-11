@@ -1,39 +1,42 @@
 {
   "title": "Items",
-  "description": "Items are augmented elements. Items consist of single elements with classes that modify them.",
+  "description": "Augmented `elements`. `Items` MUST be a single `element` with a class(es) added. If an `item` uses a  <a href='/scss#generics'>`generic`</a> it MUST use the same name for the first class that extends it. The first class SHOULD NOT add any additional rules.",
   "sections": [
     {
       "key": "btns",
       "title": "Buttons",
       "description": [
-        "Buttons extend the `%btn` placeholder. They create base styles for `03_collections/_btngroups.scss`."
+        "SHOULD extend the `%btn` placeholder."
       ],
-      "file": "_btns",
+      "file": "/src/scss/02_items/_btns.scss",
       "display": true
     },
     {
       "key": "callouts",
       "title": "Callouts",
-      "description": "<p>About callouts.</p>",
-      "file": "_callouts",
+      "description": [
+        "SHOULD extend the `%callout` placeholder."
+      ],
+      "file": "/src/scss/02_items/_callouts.scss",
       "display": true
     },
     {
       "key": "headings",
       "title": "Headings",
       "description": [
-        "Modify `h1` - `h6` standalones (ie. not part of a `collection`). Use format `.heading.-class`. For headings as parts of `collections` use `collection__heading`."
+        "MUST only modify standalone `h1` - `h6`. MUST use modifier format (`-heading -modifier`). Headings that are parts of `collections` MUST use child selector format (`parent__child`)."
       ],
-      "file": "_headings",
+      "file": "/src/scss/02_items/_headings.scss",
       "display": true
     },
     {
       "key": "icons",
       "title": "Icons",
       "description": [
-        "Icons rely on the `sprite($file_name)` mixin in `02_bits/_utils.scss`. Variable names are determined by svg file names in `src/icons/`."
+        "Most icons use the `sprite($file_name)` mixin provided by `/src/scss/00_bits/_sprites.scss`. Variable names are determined by svg file names in `src/icons/`. SVG file names MUST be named in snake case (eg. `snake_case`).",
+        "Icons not using the `sprite($file_name)` mixin SHOULD be CSS only (eg. CSS triangles below)."
       ],
-      "file": "_icons",
+      "file": "/src/scss/02_items/_icons.scss",
       "display": true
     }
   ]

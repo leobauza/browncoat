@@ -15,11 +15,11 @@
       "path": "/js"
     },
     {
-      "name": "Gulp",
+      "name": "gulp",
       "path": "/gulp"
     },
     {
-      "name": "Styleguide",
+      "name": "styleguide",
       "path": "/styleguide"
     }
   ],
@@ -70,7 +70,7 @@
   },
   "bundles": {
     "angular": {
-      "intro": "Using <code class='small'>Angular.js</code> bundle for documentation routing. This is the default documentation and sample for browncoat."
+      "intro": "Documentation built using Angular.js"
     }
   }
 }

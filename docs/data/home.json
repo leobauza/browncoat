@@ -1,25 +1,26 @@
 {
   "title": "About Browncoat",
-  "description": "Browncoat is a html, scss, and js framework. It provides a folder structure for assets, a configurable gulp setup, and internal styleguide creation.",
+  "description": [
+    "Browncoat is a html, scss, and js framework. It provides a folder structure for assets, a configurable gulp setup, and internal styleguide creation. Browncoat uses <a target='_blank' href='http://semver.org/'>semver</a> specifications.",
+    "The key words MUST, MUST NOT, REQUIRED, SHALL, SHALL NOT, SHOULD, SHOULD NOT, RECOMMENDED, MAY, and OPTIONAL in this document are to be interpreted as described in <a target='_blank' href='http://tools.ietf.org/html/rfc2119'>RFC 2119</a>."
+  ],
   "sections": [
     {
       "key": "start",
       "title": "Start Here",
       "nav": false,
       "description": [
-        "Go to <a href='https://github.com/leobauza/browncoat'>the browncoat github page</a> and download the zip package for the project.",
-        "Unzip it and place the contents in your project folder.",
-        "Open your command line tool and run the commands bellow.",
-        "A browser window should automatically open to `localhost:3000` containing the same documentation for browncoat you would see at <a href='http://browncoat.leobauza.com'>the online docs</a>."
+        "Browncoat SHOULD be downloaded from <a href='https://github.com/leobauza/browncoat'>the browncoat github page</a>. It MUST be downloaded (e.g. zip file download) and not forked or cloned unless contributing to the browncoat project.",
+        "Once the project is open to the base directory (ie. level where `package.json` is found) the commands below can be run."
       ],
-      "file": false,
+      "file": "/",
       "display": false
     },
     {
       "key": "gulp",
       "title": "Gulp Task Management",
       "nav": "Gulp",
-      "description": "After running `npm run gulp` a watch task will start. This watches all scss, js, and html files and triggers recompilling (of js and scss). Changes will also trigger browsersync which streams changes to the browser or reloads the browser making changes immediately visible.",
+      "description": "`npm run gulp` or `npm run docs` kick off a watch task. Changes to scss, js, html, md, or json files will trigger recompilling. Changes will also trigger browsersync to reload or stream changes. See `gulp` section for details.",
       "file": "/gulpfile.js",
       "display": false
     },
@@ -28,9 +29,9 @@
       "title": "Top Level Structure",
       "nav": false,
       "description": [
-        "A brief overview of the top folder structure. For more detail see <a href='#section-nav'>navagation above</a>."
+        "Brief overview of the top folder structure."
       ],
-      "file": false,
+      "file": "/",
       "display": false
     },
     {
@@ -38,9 +39,9 @@
       "title": "HTML Wrapper Boilerplate",
       "nav": "Boilerplate",
       "description": [
-        "HTML boilerplate to start prototyping with browncoat."
+        "HTML boilerplate to start prototyping with browncoat fond in the `web` directory."
       ],
-      "file": false,
+      "file": "/web/index.html",
       "display": false
     }
   ]

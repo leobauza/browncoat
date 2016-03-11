@@ -50,9 +50,12 @@ body {
   @include marpad(0px, 0px);
   background: $body_bg;
   font-size: $base_size;
+  font-weight: $regularFont;
   font-family: $global_family;
   color: $text_colour;
   word-wrap: break-word;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing:grayscale;
 }
 hr {
   height: 1px;
@@ -75,10 +78,10 @@ button {
   font-family: $global_family;
 }
 p {
-  font-size: $text_size;
-  line-height: $text_line_height;
   margin: 0;
   padding: 0 0 20px;
+  font-size: $text_size;
+  line-height: $text_line_height;
   &.intro {
     font-size: 2em;
     padding: 0 0 40px;
@@ -144,14 +147,13 @@ pre {
 code {
   @extend %borderBox;
   font-family: $code;
-  font-size: 85%;
   padding: 2px 4px;
   color: $link_colour;
-  background: $grey;
 }
 
 xmp {
   margin: 0px;
+  font-family: $code;
 }
 
 header,

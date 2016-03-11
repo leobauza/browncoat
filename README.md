@@ -7,11 +7,11 @@ Browncoat 0.5.0
 
 ## About
 
-Browncoat is a front-end styleguide documentation framework (FSDF). Browncoat self documents and serves up examples of itself using [browsersync's](https://www.browsersync.io/) built-in static server.
+Browncoat is a front-end styleguide documentation framework (FSDF) and prototype tool. The application and documentation are served up using [browsersync's](https://www.browsersync.io/) built-in static server.
 
 ## Install
 
-Install node module dependencies and run the documentation.
+Make sure Node 0.12.x is installed.
 
 ```bash
 # Install dependencies
@@ -27,7 +27,7 @@ npm run gulp
 npm test
 ```
 
-## Visual Regression Testing with Wraith
+## Visual Regression Testing with Wraith [BROKEN]
 
 Visual regression testing added as of `version 0.4`. Uses wraith, a screenshot comparison tool created by BBC news. Requires Wraith be installed. Instructions at their [github page](https://github.com/BBC-News/wraith).
 
@@ -51,36 +51,41 @@ Browncoat uses [semver](http://semver.org/) specifications.
 <major>.<minor>.<patch>
 ```
 
-## Contribute
+## Commits
 
-Commits should be formatted as follows:
+Commits MUST stick to this format:
 
 ```bash
-# type: task, chore, version, or patch
-# optional: short name
-# description: A short description (can break into multiple lines below
-# summary line)
+# type: "version", "task", "chore", or "patch"
+# optional: short name (do not capitalize)
+# description: A short description (do not capitalize)
+# additional: Any additional information MUST be added after 2 returns (do capitalize)
 $ type(optional): description
+>
+> Additional
 # eg.
-$ task: Add scss section to docs
-$ chore: Clean up tests
+$ task: add scss section to docs
+$ chore: clean up tests
 $ version(0.5.1): prepare release
-$ patch: Fix failing Tavis CI tests
+$ patch: fix failing Tavis CI tests
 ```
 
 ## Todo
 
 - Production gulp task
-- Wraith update/docs (currently broken)
+- Documentation on how to document
+- Complete styleguide of defaults
+- Wraith update/docs [broken]
 
 ## Important Changes from v0.4.0
 
 - Major changes to SCSS structure
 - Added webpack
-- Added browsersync (no need for virtual host set up anymore)
+- Added browsersync (no need for virtual host set up to run PHP application)
 - `gulp/` directory to `gulpfile.js/` directory
 - Angular.js application for documentation
-- Abandon PHP
-- Rewrite of docs
+- Remove all PHP
+- Rewrite docs
+- Doc editing through data files + md files
 - Tests with Karma/Jasmine
 - Travis CI integration

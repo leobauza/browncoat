@@ -1,6 +1,6 @@
-<article class="span8">
+<article class="span9">
   <h2>{{title}}</h2>
-  <p ng-bind-html="description"></p>
+  <div ng-bind-html="description"></div>
   <article id="{{block.key}}" class="box" ng-repeat="block in blocks">
     <header class="box__header">
       <h4 class="box__heading">{{block.title}}</h4>
@@ -16,7 +16,7 @@
     </footer>
   </article>
 </article>
-<nav class="span4 l">
+<nav class="span3 l">
   <div ng-if="blocks" class="btn-stack">
     <a class="btn -link" ng-repeat="item in blocks" href="#{{item.key}}" ng-class="{'active': isActive(item.key, 'hash')}">{{item.nav || item.title}}</a>
   </div>

@@ -1,50 +1,52 @@
 {
   "title": "Elements",
-  "description": "Basic styles for html tags. This part contains no styles for classes, ids, or attributes. Elements part uses bits to construct rule sets. Elements contain foundational styles for larger parts.",
+  "description": [
+    "Styles for html tags. MUST NOT contain styles for any classes, ids, or attributes. `Element` SHOULD use `bits` to construct rule sets."
+  ],
   "sections": [
     {
       "key": "headings",
       "title": "Headings",
       "description": [
-        "Headings styled using variables found in `_vars.scss`."
+        "MUST use `$h1` - `$h6` variables."
       ],
-      "file": "_resets",
+      "file": "/src/scss/01_elements/_resets.scss",
       "display": true
     },
     {
       "key": "ap",
       "title": "Links & Paragraphs",
       "description": [
-        "Paragraph and anchor tags styled using variables found in `_vars.scss`."
+        "MUST use `$text_size` and `$text_line_height` variables."
       ],
-      "file": "_resets",
+      "file": "/src/scss/01_elements/_resets.scss",
       "display": true
     },
     {
       "key": "lists",
       "title": "Lists",
       "description": [
-        "Lists styled using variables found in `_vars.scss`. Lists set up base styles for `03_collections/_listgroups.scss`"
+        "MUST use `$lists_font_size` and `$lists_line_height` variables. SHOULD lay foundational styles for `collection` lists."
       ],
-      "file": "_lists",
+      "file": "/src/scss/01_elements/_lists.scss",
       "display": true
     },
     {
       "key": "forms",
       "title": "Forms",
       "description": [
-        "Forms styled using variables found in `_vars.scss`. Forms use utilities found in `_utils.scss`. Forms set up base styles for `03_collections/_formmods.scss`"
+        "SHOULD lay foundational styles for `collection` forms."
       ],
-      "file": "_forms",
+      "file": "/src/scss/01_elements/_forms.scss",
       "display": true
     },
     {
       "key": "tables",
       "title": "Tables",
       "description": [
-        "Tables styled using variables found in `_vars.scss`. Tables set up base styles for `03_collections/_tablemods.scss`"
+        "SHOULD lay foundational styles for `collection` tables."
       ],
-      "file": "_tables",
+      "file": "/src/scss/01_elements/_tables.scss",
       "display": true
     }
   ]

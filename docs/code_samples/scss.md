@@ -1,13 +1,13 @@
 ### folders
 ```bash
 /scss
-  styles.scss # aggregates all files
-  00_bits # variables and utilities
-  01_elements # basic html elements and resets
-  02_items # extended basic elements
-  03_collections # groups that may contain items and/or elements
-  04_sections # logical page sections
-  05_layouts # control overall structure of the page
+  styles.scss # SHOULD aggregate all SCSS files
+  00_bits # MUST contain variables and utilities
+  01_elements # MUST contain plain html elements
+  02_items # MUST contain augmented plain html elements
+  03_collections # MUST contain groups that MAY contain items and/or elements
+  04_sections # MUST contain logical page sections
+  05_layouts # MUST deal with page structure
 ```
 ---
 ### structure
@@ -19,15 +19,21 @@ h1 {
   font-size: $h1;
 }
 /* items */
+%btn {
+  /* generic */
+}
 .btn {
   @extend %btn;
 }
 /* collections */
+%box {
+  /* generic */
+}
 .box {
   @extend %box;
-  .box__heading {
-    font-size: $h1;
-  }
+}
+.box__heading {
+  font-size: $h1;
 }
 /* sections */
 .site__header {
@@ -42,13 +48,14 @@ h1 {
 ---
 ### generics
 ```css
-/* button generic placeholder */
-%btn {
+/* button generic */
+%btn{
   @include inlineBlock(20);
   @include marpad(0 0 20px, 10px 15px);
   color: $text_colour;
   border: 1px solid $default;
   font-size: $text_size;
+  line-height: $text_line_height;
   text-align: center;
   cursor: pointer;
   &:hover, &.active {
@@ -62,9 +69,8 @@ h1 {
 }
 
 /*
- * create a basic button (instance of the generic)
- * then extend the generic with .-main and -.alt
- * these 2 differ in background colour and colour
+ * Initial extension of generic
+ * Modified background and colour with .-alt and .-main
  */
 .btn {
   @extend %btn;
@@ -83,6 +89,18 @@ h1 {
     }
   }
 }
+
+/*
+ * Additional extension of generic
+ * Does not modify existing properties
+ * Augments generic with a text-shadow property
+ * (Optional) To retain .btn's modifiers extend .btn instead
+ */
+.my-btn {
+  @extend %btn;
+  text-shadow: 1px 1px 1px #000;
+}
+/* end */
 ```
 ---
 ### childrenAndModifiers
@@ -92,16 +110,19 @@ h1 {
 }
 /*
  * child relationship
- * note: the implied parent is .box + modifiers
  */
 .box__header {
   font-weight: $boldFont;
 }
+/*
+ * Initial extension of generic
+ */
 .box {
   @extend %box;
-  /* modifier relationship */
+  /* modifier */
   &.-main {
     background: $brand;
   }
 }
+/* end */
 ```
