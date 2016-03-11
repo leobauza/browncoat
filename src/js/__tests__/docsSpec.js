@@ -47,7 +47,7 @@ describe("Controllers", function () {
 
     describe("$scope.description", function () {
       it("Should equal the value of data.data.description", function () {
-        expect($scope.description).toEqual(data.data.description);
+        expect($scope.description).toEqual("<p>" + data.data.description + "</p>");
       });
     });
 
