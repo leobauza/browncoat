@@ -64,7 +64,7 @@ Version change checklist:
 
 ## Commits
 
-Commits MUST stick to this format:
+Commits MUST be in this format:
 
 ```bash
 # type: "version", "task", "chore", or "patch"
