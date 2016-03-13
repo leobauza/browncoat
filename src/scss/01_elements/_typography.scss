@@ -1,0 +1,82 @@
+/*
+ * 01_elements/typography
+ * Styles for typography
+ */
+
+p {
+  margin: 0;
+  padding: 0 0 20px;
+  font-size: $text_size;
+  line-height: $text_line_height;
+  &.intro {
+    font-size: 2em;
+    padding: 0 0 40px;
+  }
+  &.soft-intro {
+    font-size: 2em;
+  }
+}
+small, .small {
+  font-size: 65%;
+  line-height: 1;
+}
+strong, b {
+  font-weight: 600;
+}
+em, i {
+  font-style: italic;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0 0 20px;
+  font-weight: $boldFont;
+  text-rendering: optimizelegibility;
+  line-height: 1.2em;
+  a {
+    color: $link_colour;
+    &:hover {
+      text-decoration:none;
+    }
+  }
+  small {
+    font-size: 70%;
+    color: $text_colour_light;
+  }
+}
+h1 {
+  font-size: $h1;
+}
+h2 {
+  font-size: $h2;
+}
+h3 {
+  font-size: $h3;
+}
+h4 {
+  font-size: $h4;
+}
+h5 {
+  font-size: $h5;
+}
+h6 {
+  font-size: $h6;
+}
+pre {
+  white-space: pre-wrap;
+  font-size: 1.4em;
+  line-height: 1.8em;
+}
+code {
+  @extend %borderBox;
+  font-family: $code;
+  padding: 2px 4px;
+  color: $link_colour;
+}
+xmp {
+  margin: 0px;
+  font-family: $code;
+}
