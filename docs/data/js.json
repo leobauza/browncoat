@@ -21,6 +21,16 @@
       ],
       "file": "/src/js/docs.js",
       "display": false
+    },
+    {
+      "key": "jshint",
+      "title": ".jshintrc",
+      "nav": false,
+      "description": [
+        "The default `.jshintrc` file sets rules for writing JS. Text editors with a linter will use the `.jshintrc` file to visualize errors."
+      ],
+      "file": "/src/.jshintrc",
+      "display": false
     }
   ]
 }
