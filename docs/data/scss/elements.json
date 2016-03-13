@@ -10,7 +10,7 @@
       "description": [
         "MUST use `$h1` - `$h6` variables."
       ],
-      "file": "/src/scss/01_elements/_resets.scss",
+      "file": "/src/scss/01_elements/_typography.scss",
       "display": true
     },
     {
@@ -19,7 +19,7 @@
       "description": [
         "MUST use `$text_size` and `$text_line_height` variables."
       ],
-      "file": "/src/scss/01_elements/_resets.scss",
+      "file": "/src/scss/01_elements/_typography.scss",
       "display": true
     },
     {

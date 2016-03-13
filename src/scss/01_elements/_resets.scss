@@ -59,21 +59,6 @@ hr {
   clear: both;
   overflow: 0;
 }
-a {
-  color: $link_colour;
-  text-decoration: none;
-}
-a:hover, a:active {
-  outline: 0;
-}
-a:hover {
-  color: $link_hover_colour;
-  text-decoration: underline;
-}
-a:focus {
-  outline: none;
-  border: none;
-}
 button {
   font-family: $global_family;
 }

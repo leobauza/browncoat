@@ -3,29 +3,6 @@
  * Styles for typography
  */
 
-p {
-  margin: 0;
-  padding: 0 0 20px;
-  font-size: $text_size;
-  line-height: $text_line_height;
-  &.intro {
-    font-size: 2em;
-    padding: 0 0 40px;
-  }
-  &.soft-intro {
-    font-size: 2em;
-  }
-}
-small, .small {
-  font-size: 65%;
-  line-height: 1;
-}
-strong, b {
-  font-weight: 600;
-}
-em, i {
-  font-style: italic;
-}
 h1,
 h2,
 h3,
@@ -64,6 +41,44 @@ h5 {
 }
 h6 {
   font-size: $h6;
+}
+p {
+  margin: 0;
+  padding: 0 0 20px;
+  font-size: $text_size;
+  line-height: $text_line_height;
+  &.intro {
+    font-size: 2em;
+    padding: 0 0 40px;
+  }
+  &.soft-intro {
+    font-size: 2em;
+  }
+}
+small, .small {
+  font-size: 65%;
+  line-height: 1;
+}
+strong, b {
+  font-weight: 600;
+}
+em, i {
+  font-style: italic;
+}
+a {
+  color: $link_colour;
+  text-decoration: none;
+}
+a:hover, a:active {
+  outline: 0;
+}
+a:hover {
+  color: $link_hover_colour;
+  text-decoration: underline;
+}
+a:focus {
+  outline: none;
+  border: none;
 }
 pre {
   margin: 0px;
