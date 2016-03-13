@@ -20,20 +20,19 @@ pre.prettyprint.prettyprinted {
 }
 .prettyprint {
   ol.linenums {
+    max-height: 750px;
+    overflow: scroll;
     font-size: 100%;
     counter-reset: li;
     background: $white;
     border-top: 1px solid $grey;
     border-left: 1px solid $grey;
-    // border-right: 1px solid $grey;
-    // border-bottom: 10px solid $grey;
     padding: 0px 0px 0px 40px;
     margin: 0px;
     &> li {
       position: relative;
       margin: 0px;
       padding: 4px 10px 4px 10px;
-      // border-bottom: 1px solid $grey;
       border-left: 1px solid $text_colour;
       list-style: none;
       background: $text_colour;
