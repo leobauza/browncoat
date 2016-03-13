@@ -10,7 +10,7 @@
       <h6 class="label">Sample</h6>
       <div class="code-sample" ng-bind-html="reTrustHtml(codeSamples[block.key].code)"></div>
     </div>
-    <xmp ng-if="codeSamples[block.key].code" class="prettyprint {{codeSamples[block.key].lang}} linenums">{{codeSamples[block.key].code}}</xmp>
+    <pre ng-if="codeSamples[block.key].code" class="prettyprint {{codeSamples[block.key].lang}} linenums">{{codeSamples[block.key].code}}</pre>
     <footer class="box__footer">
       <code class="footnote" ng-if="block.file">{{block.file}}</code></h6>
     </footer>
