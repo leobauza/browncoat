@@ -1,5 +1,5 @@
 {
-  "title": "Scss Overview",
+  "title": "SCSS Overview",
   "description": [
     "CSS is written in Sass using the SCSS (Sassy CSS) sytanx. Compiling is handled by gulp."
   ],
@@ -7,29 +7,39 @@
     {
       "key": "folders",
       "title": "SCSS Folder Structure",
-      "nav": "SCSS Folder",
+      "nav": "Folder Structure",
       "description": [
-        "SCSS is divided into 6 categories of code. Docs subsections detail each category. `styles.scss` SHOULD `@import` all SCSS files to be compiled into CSS."
+        "SCSS is divided into 6 categories of code. Each category contains an unlimited number of modules. `styles.scss` SHOULD `@import` all SCSS files to be compiled into CSS."
       ],
       "file": "/src/scss",
       "display": false
     },
     {
-      "key": "structure",
-      "title": "SCSS Parts",
-      "nav": false,
+      "key": "none",
+      "title": "SCSS Categories",
+      "nav": "Categories",
       "description": [
-        "In order from smallest to largest: `bits`, `elements`, `items`, `collections`, `sections`, `layouts`. Examples below."
+        "In order from smallest to largest: `bits`, `elements`, `items`, `collections`, `sections`, `layouts`. Folders inside `/scss` correspond to collections."
+      ],
+      "file": "/src/scss",
+      "display": false
+    },
+    {
+      "key": "modules",
+      "title": "SCSS Modules",
+      "nav": "Modules",
+      "description": [
+        "Self contained exportable SCSS objects. A module MUST correspond to a file. A module MUST be inside a category folder."
       ],
       "file": "/src/scss",
       "display": false
     },
     {
       "key": "generics",
-      "title": "Create Generics",
+      "title": "SCSS Generics",
       "nav": "Generics",
       "description": [
-        "A generic MUST be a placeholder for the most common version of an `item` or `collection`. Generics are extended initially by a class of the same name (ie. `%btn` is extended by `.btn`).",
+        "A generic MUST be a placeholder for the most common version of an `item` or `collection` module. Generics are extended initially by a class of the same name (ie. `%btn` is extended by `.btn`).",
         "Modifiers MUST be children of classes and not generics. Additional extensions of the generic MUST NOT modify existing properties on the generic, they MUST only augment the generic."
       ],
 
@@ -41,7 +51,7 @@
       "title": "Children and Modifiers",
       "nav": false,
       "description": [
-        "Selector naming conventions make it easier to to understand Scss code.",
+        "Selector naming conventions make it easier to to understand SCSS code.",
         "Top level classes SHOULD be named a single short word (eg. `box`). Related children MUST be named using the parent name followed by two underscores followed by the child's name (eg. `box__header`). Parent-child relationships SHOULD only go one level deep (ie. `box__header__title` is discouraged). Parent child relationships SHOULD only exist in `collections`.",
         "Modifiers MUST be named using a dash and the modifiers name (eg. `-main`). Modifiers MUST follow the class they are modifying (eg. `btn -main`)."
       ],

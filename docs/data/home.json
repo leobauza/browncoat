@@ -1,7 +1,7 @@
 {
   "title": "About Browncoat",
   "description": [
-    "Browncoat is a html, scss, and js framework. It provides a folder structure for assets, a configurable gulp setup, and internal styleguide creation. Browncoat uses <a target='_blank' href='http://semver.org/'>semver</a> specifications.",
+    "Browncoat is an opinionated kit for development. It provides a gulp starter setup, an organized Scss structure, and a built in documentation and styleguide framework. Browncoat uses <a target='_blank' href='http://semver.org/'>semver</a> specifications.",
     "The key words MUST, MUST NOT, REQUIRED, SHALL, SHALL NOT, SHOULD, SHOULD NOT, RECOMMENDED, MAY, and OPTIONAL in this document are to be interpreted as described in <a target='_blank' href='http://tools.ietf.org/html/rfc2119'>RFC 2119</a>."
   ],
   "sections": [
@@ -10,8 +10,7 @@
       "title": "Start Here",
       "nav": false,
       "description": [
-        "Browncoat SHOULD be downloaded from <a href='https://github.com/leobauza/browncoat'>the browncoat github page</a>. It MUST be downloaded (e.g. zip file download) and not forked or cloned unless contributing to the browncoat project.",
-        "Once the project is open to the base directory (ie. level where `package.json` is found) the commands below can be run."
+        "Download from <a href='https://github.com/leobauza/browncoat'>github</a>. Open to the base directory and run the commands below."
       ],
       "file": "/",
       "display": false
@@ -20,7 +19,7 @@
       "key": "gulp",
       "title": "Gulp Task Management",
       "nav": "Gulp",
-      "description": "`npm run gulp` or `npm run docs` kick off a watch task. Changes to scss, js, html, md, or json files will trigger recompilling. Changes will also trigger browsersync to reload or stream changes. See `gulp` section for details.",
+      "description": "`npm run gulp` and `npm run docs` start a watch task. Changes to SCSS, js, html, md, or json files will trigger recompilling. Changes will trigger browsersync to reload or stream changes. See `gulp` section for details.",
       "file": "/gulpfile.js",
       "display": false
     },

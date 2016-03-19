@@ -46,43 +46,41 @@ h1 {
 /* end */
 ```
 ---
+### modules
+```css
+/*
+ * 02_items/btns
+ * Buttons module
+ * Specialized anchors and buttons
+ */
+
+%btn {
+  /* code */
+}
+.btn {
+  /* code */
+}
+.my-btn {
+  /* code */
+}
+
+```
+---
 ### generics
 ```css
 /* button generic */
 %btn{
-  @include inlineBlock(20);
-  @include marpad(0 0 20px, 10px 15px);
-  color: $text_colour;
-  border: 1px solid $default;
-  font-size: $text_size;
-  line-height: $text_line_height;
-  text-align: center;
-  cursor: pointer;
-  &:hover, &.active {
-    background: $default;
-    color: $text_colour;
-    text-decoration: none;
-  }
-  &:focus {
-    border: 1px solid $default;
-  }
+  /* generic button code that will be shared */
 }
 
 /*
  * Initial extension of generic
- * Modified background and colour with .-alt and .-main
+ * Modified background and colour with .-main
  */
 .btn {
   @extend %btn;
   &.-main {
     background: $brand;
-    color: $white;
-    &:hover, &.active {
-      /* hover & active styles */
-    }
-  }
-  &.-alt {
-    background: $info;
     color: $white;
     &:hover, &.active {
       /* hover & active styles */
@@ -97,6 +95,7 @@ h1 {
  * (Optional) To retain .btn's modifiers extend .btn instead
  */
 .my-btn {
+  /* extend %btn or .btn */
   @extend %btn;
   text-shadow: 1px 1px 1px #000;
 }

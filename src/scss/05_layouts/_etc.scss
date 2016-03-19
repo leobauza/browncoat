@@ -20,8 +20,8 @@ pre.prettyprint.prettyprinted {
 }
 .prettyprint {
   ol.linenums {
-    max-height: 750px;
-    overflow: scroll;
+    // max-height: 750px;
+    // overflow: scroll;
     font-size: 100%;
     counter-reset: li;
     background: $white;
@@ -37,6 +37,7 @@ pre.prettyprint.prettyprinted {
       list-style: none;
       background: $text_colour;
       font-size: $text_size;
+      line-height: 1.2em;
       &:hover {
         background: lighten($text_colour, 5);
         &:before {
