@@ -1,6 +1,6 @@
 /*
  * 02_items/headings
- * Styles for headings
+ * Headings module
  */
 %heading {
   // common
@@ -14,6 +14,7 @@
 }
 
 .label {
+  @extend %heading;
   color: $text_colour_light;
   margin: 0px;
   padding: 5px;

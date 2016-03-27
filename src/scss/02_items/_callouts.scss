@@ -1,6 +1,6 @@
 /*
  * 02_items/callouts
- * Styles for specialized divs
+ * Callouts module
  */
 
 @mixin calloutSetup ($color, $lper: 30, $dper: 30) {
@@ -16,7 +16,6 @@
   font-size: $text_size;
 }
 
-//callout types
 .callout {
   @extend %callout;
   &.-main {
