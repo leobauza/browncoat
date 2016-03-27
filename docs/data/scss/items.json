@@ -1,12 +1,12 @@
 {
   "title": "Items",
-  "description": "Augmented `elements`. `Items` MUST be a single `element` with a class(es) added. If an `item` uses a  <a href='/scss#generics'>`generic`</a> it MUST use the same name for the first class that extends it. The first class SHOULD NOT add any additional rules.",
+  "description": "Modified `elements`. `Items` MUST be a single `element` with class(es) added. If an `item` uses a  <a href='/scss#generics'>`generic`</a> the first class MUST use the same name to extends it. First class SHOULD NOT add any additional rules.",
   "sections": [
     {
       "key": "btns",
       "title": "Buttons",
       "description": [
-        "SHOULD extend the `%btn` placeholder."
+        "Btns module classes SHOULD extend the `%btn` generic."
       ],
       "file": "/src/scss/02_items/_btns.scss",
       "display": true
@@ -15,16 +15,25 @@
       "key": "callouts",
       "title": "Callouts",
       "description": [
-        "SHOULD extend the `%callout` placeholder."
+        "Callouts module classes SHOULD extend the `%callout` generic."
       ],
       "file": "/src/scss/02_items/_callouts.scss",
+      "display": true
+    },
+    {
+      "key": "gen",
+      "title": "General",
+      "description": [
+        "General module MUST modify more than one type of element (eg. `.intro` can modify a `p` or `h1`)."
+      ],
+      "file": "/src/scss/02_items/_gen.scss",
       "display": true
     },
     {
       "key": "headings",
       "title": "Headings",
       "description": [
-        "MUST only modify standalone `h1` - `h6`. MUST use modifier format (`-heading -modifier`). Headings that are parts of `collections` MUST use child selector format (`parent__child`)."
+        "Headings module MUST only modify standalone `h1` - `h6`. MUST use modifier format (`-modifier`). Headings that are parts of `collections` MUST use child selector format (`parent__child`)."
       ],
       "file": "/src/scss/02_items/_headings.scss",
       "display": true
@@ -33,8 +42,8 @@
       "key": "icons",
       "title": "Icons",
       "description": [
-        "Most icons use the `sprite($file_name)` mixin provided by `/src/scss/00_bits/_sprites.scss`. Variable names are determined by svg file names in `src/icons/`. SVG file names MUST be named in snake case (eg. `snake_case`).",
-        "Icons not using the `sprite($file_name)` mixin SHOULD be CSS only (eg. CSS triangles below)."
+        "Icons module. Most icons use the `sprite($file_name)` mixin provided by `/src/scss/00_bits/_sprites.scss`. Variable names are determined by svg file names in `src/icons/`. SVG file names MUST be named in snake case (eg. `snake_case`).",
+        "Icons not using the `sprite($file_name)` mixin SHOULD be CSS based (eg. CSS triangles below)."
       ],
       "file": "/src/scss/02_items/_icons.scss",
       "display": true

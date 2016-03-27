@@ -18,6 +18,13 @@
 <div class="callout -error">An error callout</div>
 ```
 ---
+### gen
+```html
+<p class="intro">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+<p class="intro -spaced">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+<p class="small">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+```
+---
 ### headings
 ```html
 <h1 class="heading -serif">Heading</h1>
