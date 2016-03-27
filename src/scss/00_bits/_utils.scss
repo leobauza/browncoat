@@ -4,16 +4,19 @@
  * Contains mixins, functions, and placeholders
  */
 
-//common box shadows
+// Box shadow samples
 $single_shadow: 0px 5px 10px -4px rgba(0, 0, 0, 0.3);
 $form_focus_shadow: inset 0 5px 5px rgba(0, 0, 0, 0.025), 0 0 2px rgba(82, 168, 236, 0.6);
 $inset_shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
 
 /**
- * Mixins
+ * Mixins.
+ * @usage:
+ * .selector {
+ *   @include mixinName(args);
+ * }
  */
 
-//css3
 @mixin borderRadius ($radius: 3px) {
   -webkit-border-radius:$radius;
      -moz-border-radius:$radius;
@@ -39,7 +42,6 @@ $inset_shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
   -webkit-transform: rotate($deg);
 }
 
-//gradients
 @mixin gradient ($top, $bottom){
   background: $bottom;
   background: -moz-linear-gradient(top,  $top 0%, $bottom 100%);
@@ -51,7 +53,6 @@ $inset_shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
   *filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr=#{$top}, endColorstr=#{$bottom});
 }
 
-// flexbox
 @mixin flexbox() {
   display: -webkit-box;
   display: -moz-box;
@@ -76,9 +77,7 @@ $inset_shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
   order: $val;
 }
 
-/**
- * String Replace for font-face mixin
- */
+// String Replace for font-face mixin.
 @function str-replace($string, $search, $replace: "") {
   $index: str-index($string, $search);
 
@@ -89,7 +88,6 @@ $inset_shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
   @return $string;
 }
 
-// @fontface
 @mixin font-face($name, $path, $weight: null, $style: null, $exts: eot woff2 woff ttf svg) {
   $src: null;
 
@@ -121,7 +119,6 @@ $inset_shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
   }
 }
 
-//resets
 @mixin resetList ($margin: 0 0 20px, $padding: 0) {
   margin: $margin;
   padding: $padding;
@@ -129,28 +126,22 @@ $inset_shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
   font-size:100%;
 }
 
-//build box
 @mixin square($w,$h) {
   width: $w;
   height: $h;
 }
+
 @mixin marpad($m:0px,$p:0px) {
   margin: $m;
   padding: $p;
 }
+
 @mixin inlineBlock($h) {
   display: inline-block;
   *display: inline;
   zoom: 1;
   _height: $h;
 }
-
-//layout
-// @mixin overflower {
-//   width: auto;
-//   float: none;
-//   overflow: hidden;
-// }
 
 @mixin magicBox($perc:35) {
   position: relative;
@@ -178,7 +169,6 @@ $inset_shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
   @return (($col_width * $i - $gutter + $col_remainder) + $gutter);
 }
 
-//paths
 $path_to_images: "../images/";
 
 @mixin bgImg($name, $l:50%, $t:50%, $repeat:no-repeat) {
@@ -199,6 +189,10 @@ $path_to_images: "../images/";
 
 /**
  * Placeholders
+ * @usage:
+ * .selector {
+ *   @extend %placeholder;
+ * }
  */
 
 %overflower {
@@ -207,7 +201,7 @@ $path_to_images: "../images/";
   overflow: hidden;
 }
 
-//clearfix
+// Clearfix
 %group {
   zoom: 1;
   &:before {
@@ -221,7 +215,6 @@ $path_to_images: "../images/";
   }
 }
 
-//border box
 %borderBox {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -232,5 +225,3 @@ $path_to_images: "../images/";
     box-sizing: border-box;
   }
 }
-
-/* end */
