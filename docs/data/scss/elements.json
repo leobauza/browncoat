@@ -8,7 +8,7 @@
       "key": "headings",
       "title": "Headings",
       "description": [
-        "MUST use `$h1` - `$h6` variables."
+        "Part of the typography module. MUST use `$h1` - `$h6` variables."
       ],
       "file": "/src/scss/01_elements/_typography.scss",
       "display": true
@@ -17,7 +17,7 @@
       "key": "ap",
       "title": "Links & Paragraphs",
       "description": [
-        "MUST use `$text_size` and `$text_line_height` variables."
+        "Part of the typogrpahy module. MUST use `$text_size` and `$text_line_height` variables."
       ],
       "file": "/src/scss/01_elements/_typography.scss",
       "display": true
@@ -26,7 +26,7 @@
       "key": "lists",
       "title": "Lists",
       "description": [
-        "MUST use `$lists_font_size` and `$lists_line_height` variables. SHOULD lay foundational styles for `collection` lists."
+        "Lists module MUST use `$lists_font_size` and `$lists_line_height` variables. SHOULD lay foundational styles for `collection` lists."
       ],
       "file": "/src/scss/01_elements/_lists.scss",
       "display": true
@@ -35,7 +35,7 @@
       "key": "forms",
       "title": "Forms",
       "description": [
-        "SHOULD lay foundational styles for `collection` forms."
+        "Forms module SHOULD lay foundational styles for forms `collections`."
       ],
       "file": "/src/scss/01_elements/_forms.scss",
       "display": true
@@ -44,7 +44,7 @@
       "key": "tables",
       "title": "Tables",
       "description": [
-        "SHOULD lay foundational styles for `collection` tables."
+        "Tables module SHOULD lay foundational styles for tables `collections`."
       ],
       "file": "/src/scss/01_elements/_tables.scss",
       "display": true

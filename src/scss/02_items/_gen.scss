@@ -1,0 +1,18 @@
+/*
+ * 02_items/gen
+ * Gen module
+ */
+
+%intro {
+  font-size: 2em;
+}
+
+.intro {
+  @extend %intro;
+  &.-spaced {
+    padding: 0 0 40px;
+  }
+}
+.small {
+  @extend small;
+}
