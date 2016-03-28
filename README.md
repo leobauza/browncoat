@@ -11,7 +11,7 @@ Browncoat is a front-end prototype tool. Documentation is served from the `/docs
 
 ## Install
 
-Make sure Node 0.12.x is installed.
+Make sure Node 4.x or higher is installed.
 
 ```bash
 # Install dependencies
