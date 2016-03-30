@@ -22,6 +22,7 @@ pre.prettyprint.prettyprinted {
   ol.linenums {
     // max-height: 750px;
     // overflow: scroll;
+    overflow: auto;
     font-size: 100%;
     counter-reset: li;
     background: $white;
@@ -29,19 +30,21 @@ pre.prettyprint.prettyprinted {
     border-left: 1px solid $grey;
     padding: 0px 0px 0px 40px;
     margin: 0px;
+    background: $text_colour;
     &> li {
+      white-space: pre;
       position: relative;
       margin: 0px;
       padding: 4px 10px 4px 10px;
       border-left: 1px solid $text_colour;
       list-style: none;
-      background: $text_colour;
       font-size: $text_size;
       line-height: 1.2em;
+      background: none;
       &:hover {
         background: lighten($text_colour, 5);
         &:before {
-          color: $text_colour;
+          color: $info;
         }
       }
       &:before {
@@ -93,12 +96,13 @@ pre.prettyprint.prettyprinted {
     margin: 0 10px 0 0;
   }
   &> %box {
-    float: left;
-    width: 19%;
-    margin: 0 1.19999% 0 0;
-    &:last-child {
-      margin: 0px;
-    }
+    margin: 0px;
+    // float: left;
+    // width: 19%;
+    // margin: 0 1.19999% 0 0;
+    // &:last-child {
+    //   margin: 0px;
+    // }
   }
   &> .list-group, &> .btn-stack {
     @extend %borderBox;

@@ -8,51 +8,7 @@
     <p>Sample box body. Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
   </div>
   <footer class="box__footer">
-    <code>extends %box</code>
-  </footer>
-</article>
-<article class="box -info">
-  <header class="box__header">
-    <h4 class="box__heading">Sample Box</h4>
-  </header>
-  <div class="box__body">
-    <p>Sample box body. Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-  </div>
-  <footer class="box__footer">
-    <code>extends %box</code>
-  </footer>
-</article>
-<article class="box -success">
-  <header class="box__header">
-    <h4 class="box__heading">Sample Box</h4>
-  </header>
-  <div class="box__body">
-    <p>Sample box body. Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-  </div>
-  <footer class="box__footer">
-    <code>extends %box</code>
-  </footer>
-</article>
-<article class="box -warning">
-  <header class="box__header">
-    <h4 class="box__heading">Sample Box</h4>
-  </header>
-  <div class="box__body">
-    <p>Sample box body. Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-  </div>
-  <footer class="box__footer">
-    <code>extends %box</code>
-  </footer>
-</article>
-<article class="box -error">
-  <header class="box__header">
-    <h4 class="box__heading">Sample Box</h4>
-  </header>
-  <div class="box__body">
-    <p>Sample box body. Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-  </div>
-  <footer class="box__footer">
-    <code>extends %box</code>
+    <code>Can be extended with -success, -warning, -error, -info</code>
   </footer>
 </article>
 ```
