@@ -1,6 +1,6 @@
 [![Build Status](https://travis-ci.org/leobauza/browncoat.svg?branch=master)](https://travis-ci.org/leobauza/browncoat)
 
-Browncoat 1.0.0-alpha.1
+Browncoat 1.0.0-alpha.2
 ---
 
 `Tracey`
@@ -81,8 +81,8 @@ $ version(0.5.1): prepare release
 $ patch: fix failing Tavis CI tests
 ```
 
-## Important Changes from v1.0.0-alpha
+## Important Changes from v1.0.0-alpha.2
 
-- Fix failing tests
-- Add `.htacess` and `favicon` to docs for `browncoat.leobauza.com` release deployment
-- Updated `.gitignore` and `README.md`
+- Fix issues: #26, #22, #21, #23, #25, and #24
+- Update Documentation
+- Update gulp-sass for latest node/npm versions
