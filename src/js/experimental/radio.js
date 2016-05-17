@@ -11,9 +11,16 @@ function privateMethod (value) {
  * @name Radio
  * @description
  * Custom event subscription and broadcasting system.
+ * @sample
+ * var Radio = require("./experimental/radio"); // require radio module
+ * var radio = new Radio("myChannel"); // create radio channels
+ * radio.subscribe(el, "myChannel", callback);
+ * radio.broadcast("myChannel"); // el callback should fire
+ * radio.unsubscribe(el, "myChannel", callback);
+ * radio.broadcast("myChannel"); // el callback should not fire
  */
 var Radio = function (channelNames) {
-  // constructor
+
   this.events = [];
 
   if (typeof channelNames === "string") {
