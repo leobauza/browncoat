@@ -19,14 +19,16 @@
       "path": "/gulp"
     },
     {
+      "name": "docs",
+      "path": "/docs"
+    },
+    {
       "name": "styleguide",
       "path": "/styleguide"
     }
   ],
   "sectionNavs": {
-    "home": [
-
-    ],
+    "home": [],
     "scss": [
       {
         "name": "Bits",
@@ -53,8 +55,8 @@
         "path": "/scss/layouts"
       }
     ],
-    "js": [
-    ]
+    "js": [],
+    "docs": []
   },
   "styleguideNavs": {
     "main": [

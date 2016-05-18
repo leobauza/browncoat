@@ -1,0 +1,16 @@
+{
+  "title": "Docs",
+  "description": "How to add to these docs.",
+  "sections": [
+    {
+      "key": "test",
+      "title": "Test",
+      "nav": false,
+      "description": [
+        "Description."
+      ],
+      "file": "/docs",
+      "display": false
+    }
+  ]
+}
