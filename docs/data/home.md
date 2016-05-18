@@ -114,7 +114,7 @@ README.md
   <link rel="shortcut icon" href="/assets/img/favicon.ico" type="image/x-icon">
 </head>
 <body>
-  <h1>Hello WOrld</h1>
+  <h1>Hello World</h1>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
   <script src="/assets/js/main.js"></script>
 </body>

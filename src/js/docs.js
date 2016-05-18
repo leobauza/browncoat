@@ -35,7 +35,7 @@ function convertToColourBlocks(code) {
 
 function parseCodeSamples(cs) {
 
-  // Split simples by linebreaks.
+  // Split samples by linebreaks.
   var samples = cs.split(/---\n/g),
       out = {};
 
@@ -45,6 +45,10 @@ function parseCodeSamples(cs) {
     var code = sample.match(/```[a-z]*\n[\s\S]*?\n```/g)[0].replace(/```[a-z]*\n*/g, "").trim(),
         key = sample.match(/###[\s\S]*?\n/g)[0].replace(/###\s/, "").trim(),
         lang = sample.match(/```[a-z]*\n/)[0].replace(/```/g, "").trim();
+
+    if (lang === "md") {
+      code = code.replace(/\\/g, "");
+    }
 
     out[key] = {
       codeDisplay: key === "colours" ? convertToColourBlocks(code) : code,
