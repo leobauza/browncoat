@@ -10,9 +10,10 @@ var gulp =          require('gulp'),
     browserSync =   require('browser-sync');
 
 var dest = process.argv[2] === "docs" ? "docs" : "dest";
+var src = process.argv[2] === "docs" ? "docs" : "src";
 
 var paths = {
-  src: path.join(config.root.src, config.tasks.css.src),
+  src: path.join(config.root.src, config.tasks.css[src]),
   dest: path.join(config.root[dest], config.tasks.css.dest)
 };
 
