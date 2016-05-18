@@ -112,6 +112,20 @@ pre.prettyprint.prettyprinted {
     }
   }
 }
+.docolour {
+  @extend %group;
+  margin: 0 0 20px;
+}
+.docolour__heading {
+  clear: both;
+  margin: 0 0 5px;
+  text-transform: capitalize;
+}
+.docolour__box {
+  height: 40px;
+  width: 40px;
+  float: left;
+}
 .footnote {
   display: block;
   padding: 0px;

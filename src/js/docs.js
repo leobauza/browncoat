@@ -8,6 +8,31 @@ require("angular-route");
 require("angular-sanitize");
 require('angular-mocks/ngMock');
 
+function convertToColourBlocks(code) {
+
+  var colourGroups = code.match(/\*\/([a-z]*\n[\s\S]*?\n)\/\*/g),
+      headings = code.match(/\/\*([a-z]*[\s\S]*?)\*\//g);
+
+  var markup = [];
+
+  _.each(headings, function (v, k) {
+    if (v === "/* end */") { return; }
+    var colours = colourGroups[k] ? colourGroups[k].match(/#[0-9a-f]{3,6}/ig) : false;
+    markup[k] = "<div class='docolour'>";
+    markup[k] += "<h5 class='docolour__heading'>" + v.replace(/[\/\*]/g, "") + "</h5>";
+    if (colours && colours.length > 0) {
+      _.each(colours, function (vb, kb) {
+        markup[k] += "<div class='docolour__box' style='background:" + vb + "'></div>";
+      });
+      markup[k] += "</div>";
+    } else {
+      markup[k] = '';
+    }
+  });
+
+  return markup.join("\n");
+}
+
 function parseCodeSamples(cs) {
 
   // Split simples by linebreaks.
@@ -22,6 +47,7 @@ function parseCodeSamples(cs) {
         lang = sample.match(/```[a-z]*\n/)[0].replace(/```/g, "").trim();
 
     out[key] = {
+      codeDisplay: key === "colours" ? convertToColourBlocks(code) : code,
       code: code,
       lang: lang === "" ? "lang-bash" : "lang-" + lang
     };
