@@ -209,11 +209,11 @@
 	    if (v.description.indexOf("<p>") === -1 && typeof v.description === "string") {
 	      var dparts = v.description.split("=>");
 	      page.sections[k].description = _.map(dparts, function (v, k) {
-	        return "<p>" + v.replace(/`([\s+\S]*?)`/g, "<code>$1</code>") + "</p>";
+	        return "<p class='box__text'>" + v.replace(/`([\s+\S]*?)`/g, "<code>$1</code>") + "</p>";
 	      }).join("");
 	    } else if (v.description.indexOf("<p>") === -1) {
 	      page.sections[k].description = _.map(v.description, function (v, k) {
-	        return "<p>" + v.replace(/`([\s+\S]*?)`/g, "<code>$1</code>") + "</p>";
+	        return "<p class='box__text'>" + v.replace(/`([\s+\S]*?)`/g, "<code>$1</code>") + "</p>";
 	      }).join("");
 	    }
 	  });
