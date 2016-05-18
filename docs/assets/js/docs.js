@@ -122,7 +122,7 @@
 	    }
 
 	    // Get code
-	    var code = $http.get("/code_samples/" + path + ".md", { cache: true });
+	    var code = $http.get("/data/" + path + ".md", { cache: true });
 	    // Get data
 	    var data = $http.get("/data/" + path + ".json", { cache: true });
 
@@ -167,7 +167,7 @@
 
 	    var d = $q.defer();
 
-	    $http.get("/data/main.json", {cache: true})
+	    $http.get("/data/_main.json", {cache: true})
 	      .success(function (data) {
 	        $rootScope.projectTitle = data.projectTitle;
 	        $rootScope.version = data.version;
