@@ -32,6 +32,7 @@ describe("Controllers", function () {
       it("Should turn markdown into an object with a code and lang property", function () {
         expect($scope.codeSamples).toEqual(jasmine.objectContaining({
           heading: {
+            codeDisplay: "<p>Hello</p>",
             code: "<p>Hello</p>",
             lang: "lang-html"
           }
