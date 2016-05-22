@@ -14,11 +14,15 @@
   }
 }
 pre.prettyprint.prettyprinted {
+  visibility: visible;
   padding: 0px;
   border: none;
+  background: none;
 }
 .prettyprint {
+  visibility: hidden;
   white-space: pre;
+  background: $grey;
   ol.linenums {
     overflow: auto;
     font-size: 100%;
