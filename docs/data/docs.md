@@ -74,3 +74,21 @@ code...
 \`\`\`
 --- // add separator if there are more code samples
 ```
+---
+### paths
+```js
+// Home landing (resolves to "home").
+"/"
+// SCSS landing page and subpages.
+"/scss/:name?"
+// JS landing page and subpages.
+"/js/:name?"
+// Docs landing page (this page) and subpages (this page)
+"/docs/:name?"
+// Gulp landing page (has no subpages)
+"/gulp"
+// Home landing and subpages ("/" resolves as "home" to get home.json & home.md).
+"/home/:name?"
+// Styleguide landing and sections.
+"/styleguide/:section?"
+```

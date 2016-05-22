@@ -11,8 +11,8 @@
       "nav": false,
       "description": [
         "URL paths are resolved in `/src/js/docs.js` by fetching the corresponding data files. Data files are broken up in two parts an `.md` file and a `.json` file. They are found in `/docs/data`. Content changes and code sample changes MUST be made in these files.",
-        "For example: the path `/scss/bits` will tell browncoat docs to get `/data/scss/bits.json` and `/data/scss/bits.md` and generate our doc page.",
-        "This will work for all paths defined in `/docs/data/_main.json` (both `projectNav` and `sectionNavs` items)."
+        "For example: the path `/scss/bits` will tell browncoat docs to get `/data/scss/bits.json` and `/data/scss/bits.md` and generate the doc page.",
+        "This will work for all paths defined in `/docs/data/_main.json` (both `projectNav` and `sectionNavs` objects)."
       ],
       "file": "/docs",
       "display": false
@@ -22,7 +22,7 @@
       "title": "_main.json",
       "nav": "Main JSON file",
       "description": [
-        "Sets up the browncoat docs. See anotated file below."
+        "Sets up the browncoat docs. See anotated file below. The `projectNav` object sets up the top level navigation. The `sectionNavs` object sets up the section navigation (eg. see <a href=\"/scss\">SCSS</a> section)."
       ],
       "file": "/docs/data/_main.json",
       "display": false
@@ -33,7 +33,8 @@
       "nav": "JSON Files",
       "description": [
         "`.json` files contain the page title, description, and sections. Each section is displayed as a box within the page. They have a title, description, footer, optional code sample, and optional rendered code sample. Code samples are stored in the corresponding `.md` file.",
-        "For example: This file `/docs/data/docs.json` has a section (this section) which asks for the code sample \"json\" from `/docs/data/docs.md`. The anotated json sample below is the result."
+        "For example: This file `/docs/data/docs.json` has a section (this section) which asks for the code sample \"json\" from `/docs/data/docs.md`. The code block below is the result (see `/docs/data/docs.json` and `/docs/data/docs.md`).",
+        "<strong>Note:</strong> JSON file descriptions can inlucde backticks for code and any inline html elements."
       ],
       "file": "/docs/data/**/*.json",
       "display": false
@@ -43,10 +44,27 @@
       "title": "Anatomy of an .md file",
       "nav": "Markdown Files",
       "description": [
-        "`.md` files contain code samples. Code samples MUST start with a key using 3 hashtags (#). They MUST be separated by three dashes (-). Sample code must be surrounded by 3 backticks (`) on either end with an optional language specificed."
+        "`.md` files contain code samples. Code samples MUST start with a key using 3 hashtags (#). They MUST be separated by three dashes (-). Sample code must be surrounded by 3 backticks (`) on either end with an optional language specificed.",
+        "<strong>Note:</strong> These are not real `md` files, they are limited to this very specific pattern."
       ],
       "file": "/docs/data/_main.json",
       "display": false
+    },
+    {
+      "key": "paths",
+      "title": "Known Paths",
+      "description": [
+        "Known paths are specified inside the `/src/docmodules/routing.js` file. Any new routes must be specified there. Once specified the browncoat docs code will look for the corresponding JSON and markdown files to create the doc page. Below is a list of all default routes."
+      ],
+      "file": "/src/docmodules/routing.js",
+      "display": false
+    },
+    {
+      "title": "Angular Templates",
+      "description": [
+        "The `index.html` file for the docs will load either `landing.html` for any doc page or `styleguide.html` for styleguide pages. The layout of the docs can be changed in these two files."
+      ],
+      "file": "/docs/ng-templates/*.html"
     }
   ]
 }
