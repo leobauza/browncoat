@@ -12,7 +12,7 @@ history_dir: 'shots_history'
 
 # Add only 2 domains, key will act as a label
 domains:
-  browncoat: "http://browncoat.loc"
+  browncoat: "http://localhost:3000"
   #russian: "http://browncoat.loc"
 
 #Type screen widths below, here are a couple of examples

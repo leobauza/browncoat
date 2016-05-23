@@ -27,7 +27,9 @@ npm run gulp
 npm test
 ```
 
-## Visual Regression Testing with Wraith [BROKEN]
+## Visual Regression Testing with Wraith [BROKEN / HOLD]
+
+[Testing with wraith on hold to look at alternatives and decide whether we should continue using wraith.]
 
 Visual regression testing added as of `version 0.4`. Uses wraith, a screenshot comparison tool created by BBC news. Requires Wraith be installed. Instructions at their [github page](https://github.com/BBC-News/wraith).
 
