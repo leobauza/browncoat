@@ -8,7 +8,7 @@
       "key": "boxes",
       "title": "Boxes",
       "description": [
-        "MUST extend the `%box` placeholder. Boxes MUST use at least one child box element."
+        "MUST extend the `%box` placeholder. Boxes MUST use child box element (ie. don't use `.box p` but rather `.box .box__text`)."
       ],
       "file": "/src/scss/03_collections/_boxes.scss",
       "display": true

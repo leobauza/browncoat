@@ -1,0 +1,149 @@
+/**
+ * Import all styles from the application
+ */
+@import 'styles.scss';
+
+/**
+ * Documentation styles
+ * These styles should not be included in styles.css for the main application
+ */
+.doc__header {
+  padding: 20px 0px 0px;
+  &.-styleguide {
+    border-bottom: 1px solid $grey;
+  }
+}
+pre.prettyprint.prettyprinted {
+  visibility: visible;
+  padding: 0px;
+  border: none;
+  background: none;
+}
+.prettyprint {
+  visibility: hidden;
+  white-space: pre;
+  background: $grey;
+  ol.linenums {
+    overflow: auto;
+    font-size: 100%;
+    counter-reset: li;
+    border-top: 1px solid $grey;
+    border-left: 1px solid $grey;
+    padding: 0px 0px 0px 40px;
+    margin: 0px;
+    background: $text_colour;
+    &> li {
+      display: block;
+      float: left;
+      clear: both;
+      white-space: pre;
+      position: relative;
+      margin: 0px;
+      padding: 4px 10px 4px 10px;
+      list-style: none;
+      font-size: $text_size;
+      line-height: 1.2em;
+      background: none;
+      &:hover {
+        &:before {
+          color: $info;
+        }
+      }
+      &:before {
+        position: absolute;
+        right: 100%;
+        top: 0px;
+        padding: 4px 10px 0px 0px;
+        text-align: right;
+        font-size: .60em;
+        font-family: $global_family;
+        font-weight: $lightFont;
+        color: $text_colour_light;
+        content: counter(li);
+        counter-increment: li;
+        -webkit-touch-callout: none; /* iOS Safari */
+        -webkit-user-select: none;   /* Chrome/Safari/Opera */
+        -khtml-user-select: none;    /* Konqueror */
+        -moz-user-select: none;      /* Firefox */
+        -ms-user-select: none;       /* Internet Explorer/Edge */
+        user-select: none;           /* Non-prefixed version, currently not supported by any browser */
+
+      }
+    }
+  }
+  .com {
+    color: lighten($black, 45);
+  }
+  .dec {
+    color: $grey;
+  }
+  .pln, .lit {
+    color: $white;
+  }
+  .pun {
+    color: $white;
+  }
+  .str {
+    color: $info;
+  }
+  .atn {
+    color: $warning;
+  }
+  .atv {
+    color: $info;
+  }
+  .tag, .kwd {
+    color: $brand;
+  }
+}
+.code-sample {
+  @extend %group;
+  border-top: 1px solid $grey;
+  padding: 10px 0px;
+  &> .arrow, &> .icon, &> .dropdown {
+    float: left;
+    margin: 0 10px 0 0;
+  }
+  &> %box {
+    margin: 0px;
+  }
+  &> .list-group, &> .btn-stack {
+    @extend %borderBox;
+    float: left;
+    width: 49.5%;
+    &:first-child {
+      margin-right: 1%;
+    }
+  }
+  [class^="row"] {
+    background: lighten($info, 20);
+    [class*="span"] {
+      background: $info;
+    }
+  }
+}
+.docolour {
+  @extend %group;
+  margin: 0 0 20px;
+}
+.docolour__heading {
+  clear: both;
+  margin: 0 0 5px;
+  text-transform: capitalize;
+}
+.docolour__box {
+  height: 40px;
+  width: 40px;
+  float: left;
+}
+.footnote {
+  display: block;
+  padding: 0px;
+  margin: 0px;
+  background: none;
+  text-align: right;
+  font-size: $h6;
+}
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+  display: none !important;
+}

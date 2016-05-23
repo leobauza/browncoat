@@ -12,7 +12,7 @@ history_dir: 'casper_history_shots'
 
 # Add only 2 domains, key will act as a label
 domains:
-  browncoat: "http://browncoat.loc"
+  browncoat: "http://localhost:3000"
   # arabic: "http://browncoat.loc"
 
 #Type screen widths below, here are a couple of examples
@@ -27,7 +27,7 @@ screen_widths:
 paths:
   header:
     path: /
-    selector: '.site-header'
+    selector: '.site__header'
 
 #Amount of fuzz ImageMagick will use
 fuzz: '20%'

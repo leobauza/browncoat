@@ -1,3 +1,9 @@
+### v1.0.0-alpha.2
+
+- Fix issues: #26, #22, #21, #23, #25, and #24
+- Update Documentation
+- Update gulp-sass for latest node/npm versions
+
 ### v1.0.0-alpha.1
 
 - Fix failing tests

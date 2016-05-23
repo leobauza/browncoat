@@ -12,7 +12,7 @@
         "Part of the vars module. Default colours MUST be defined for default modules to compile correctly. All colours MUST be assigned to variables."
       ],
       "file": "/src/scss/00_bits/_vars.scss",
-      "display": false
+      "display": true
     },
     {
       "key": "typography",

@@ -1,6 +1,6 @@
 [![Build Status](https://travis-ci.org/leobauza/browncoat.svg?branch=master)](https://travis-ci.org/leobauza/browncoat)
 
-Browncoat 1.0.0-alpha.2
+Browncoat 1.0.0-beta
 ---
 
 `Tracey`
@@ -27,7 +27,9 @@ npm run gulp
 npm test
 ```
 
-## Visual Regression Testing with Wraith [BROKEN]
+## Visual Regression Testing with Wraith [BROKEN / HOLD]
+
+[Testing with wraith on hold to look at alternatives and decide whether we should continue using wraith.]
 
 Visual regression testing added as of `version 0.4`. Uses wraith, a screenshot comparison tool created by BBC news. Requires Wraith be installed. Instructions at their [github page](https://github.com/BBC-News/wraith).
 
@@ -53,7 +55,7 @@ Browncoat uses [semver](http://semver.org/) specifications.
 
 Version change checklist:
 
-- MUST update `main.json` version
+- MUST update `_main.json` version
 - MUST update `package.json` version
 - MUST update `README.md` version
 - Major updates MUST change codename
@@ -77,12 +79,12 @@ $ type(optional): description
 # eg.
 $ task: add scss section to docs
 $ chore: clean up tests
-$ version(0.5.1): prepare release
+$ version(0.5.1) prepare release
 $ patch: fix failing Tavis CI tests
 ```
 
 ## Important Changes from v1.0.0-alpha.2
 
-- Fix issues: #26, #22, #21, #23, #25, and #24
-- Update Documentation
-- Update gulp-sass for latest node/npm versions
+- Fix issues: #20, #19, #29, and #27
+- Added experimental radio.js module
+- Other style improvements and documentation

@@ -2,11 +2,13 @@
 ```bash
 # Default task [default.js]
 # Runs the watch task
+# Prod task does not run watch task and only acts only minimizes web asses
 npm run gulp
+npm run prod
 
 # Docs task [watch.js]
-# Like the default task but compiles docs.js instead of app.js
-npm run gulp docs
+# Like the default task but compiles docs.js instead of app.js and docs.scss instead of styles.scss
+npm run docs
 
 # Watch task [watch.js]
 # Sets up browserSync
@@ -29,6 +31,11 @@ npm run gulp js
 # Takes all .svg files in src/icons directory
 # Creates web/assets/img/sprite.svg and web/assets/img/sprite.png
 npm run gulp sprite
+
+# Test task [karma.js]
+# Runs karma tests in /src/__tests__/ directory (only testing docs at the moment)
+npm test
+
 ```
 ---
 ### utils
