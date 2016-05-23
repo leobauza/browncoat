@@ -7,6 +7,7 @@ var gulp =          require('gulp'),
     handleErrors =  require('../util/handleErrors'),
     sourcemaps =    require('gulp-sourcemaps'),
     path =          require('path'),
+    cssnano =       require('gulp-cssnano'),
     browserSync =   require('browser-sync');
 
 var dest = process.argv[2] === "docs" ? "docs" : "dest";
@@ -17,7 +18,7 @@ var paths = {
   dest: path.join(config.root[dest], config.tasks.css.dest)
 };
 
-var cssTask = function (override) {
+var cssTask = function () {
   return gulp.src(paths.src)
     .pipe(sourcemaps.init())
     .pipe(sass())
@@ -27,5 +28,17 @@ var cssTask = function (override) {
     .pipe(browserSync.stream());
 };
 
+var cssProdTask = function () {
+  return gulp.src(paths.src)
+    .pipe(sass())
+    .on('error', handleErrors)
+    .pipe(cssnano({
+      autoprefixer: false,
+      mergeRules: false
+    }))
+    .pipe(gulp.dest(paths.dest));
+};
+
+gulp.task('prodCss', cssProdTask);
 gulp.task('css', cssTask);
 module.exports = cssTask;
