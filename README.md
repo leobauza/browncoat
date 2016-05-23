@@ -79,7 +79,7 @@ $ type(optional): description
 # eg.
 $ task: add scss section to docs
 $ chore: clean up tests
-$ version(0.5.1): prepare release
+$ version(0.5.1) prepare release
 $ patch: fix failing Tavis CI tests
 ```
 
