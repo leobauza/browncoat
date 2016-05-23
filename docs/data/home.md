@@ -20,6 +20,16 @@ npm run gulp
 # By default there app will have "Hello World" in an h1 tag
 # The javascript for the app is compiled from /src/js/app.js
 # The CSS for the app is compiled from /src/scss/styles.scss (matches the docs)
+
+# Run Prod to minimize CSS and JS
+npm run prod
+# This will minimize CSS using css-nano and minify and uglify js with webpack
+# It will only do this in the web folder and NOT in the docs folder
+
+# Run karma tests for docs
+npm run tests
+# Runs karma tests in /src/__tests__/ directory (only testing docs at the moment)
+
 ```
 ---
 ### gulp
