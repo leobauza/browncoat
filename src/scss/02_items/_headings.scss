@@ -7,14 +7,14 @@
 }
 
 .heading {
-  @extend %heading;
+  // @extend %heading;
   &.-serif {
     font-family: $serif;
   }
 }
 
 .label {
-  @extend %heading;
+  // @extend %heading;
   color: $text_colour_light;
   margin: 0px;
   padding: 5px;
