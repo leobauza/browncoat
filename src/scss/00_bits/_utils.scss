@@ -151,7 +151,7 @@ $inset_shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
 
 @mixin quickSpan ($columns: $global_columns, $gutter: $global_columns, $i: 6) {
   $col_width: (99.9998 / $columns);
-  $col_remainder: ($global_gutter/$global_columns) * $i;
+  $col_remainder: ($gutter/$columns) * $i;
   width: ($col_width * $i - $gutter + $col_remainder) * 1%;
   margin-right: $gutter * 1%;
   float: left;
