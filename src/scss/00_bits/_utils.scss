@@ -81,12 +81,12 @@ $inset_shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
   padding: $p;
 }
 
-@mixin inlineBlock($h) {
-  display: inline-block;
-  *display: inline;
-  zoom: 1;
-  _height: $h;
-}
+// @mixin inlineBlock($h) {
+//   display: inline-block;
+//   *display: inline;
+//   zoom: 1;
+//   _height: $h;
+// }
 
 @mixin magicBox($perc:35) {
   position: relative;
