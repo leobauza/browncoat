@@ -7,7 +7,7 @@ ul.list-group {
   @include resetList();
 }
 .list-group {
-  @include borderRadius(5px);
+  border-radius: 5px;
   margin: 0 0 20px;
   background: $white;
   border: 1px solid $grey;
@@ -20,10 +20,10 @@ ul.list-group {
     font-size: $text_size;
     line-height:$text_line_height;
     &:last-child {
-      @include borderRadius(0px 0px 5px 5px);
+      border-radius: 0px 0px 5px 5px;
     }
     &:first-child {
-      @include borderRadius(5px 5px 0px 0px);
+      border-radius: 5px 5px 0px 0px;
     }
   }
   a {

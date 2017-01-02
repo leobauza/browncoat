@@ -48,7 +48,7 @@
     margin: 0 2px 0 0;
   }
   a {
-    @include borderRadius();
+    border-radius: 5px;
     background: $brand;
     color: $white;
     display: block;
