@@ -1,3 +1,9 @@
+## v1.0.0-beta
+
+- Fix issues: #20, #19, #29, and #27
+- Added experimental radio.js module
+- Other style improvements and documentation
+
 ### v1.0.0-alpha.2
 
 - Fix issues: #26, #22, #21, #23, #25, and #24

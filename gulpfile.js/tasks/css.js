@@ -7,6 +7,7 @@ var gulp =          require('gulp'),
     handleErrors =  require('../util/handleErrors'),
     sourcemaps =    require('gulp-sourcemaps'),
     path =          require('path'),
+    autoprefixer =  require('gulp-autoprefixer'),
     cssnano =       require('gulp-cssnano'),
     browserSync =   require('browser-sync');
 
@@ -23,6 +24,10 @@ var cssTask = function () {
     .pipe(sourcemaps.init())
     .pipe(sass())
     .on('error', handleErrors)
+    .pipe(autoprefixer({
+      browsers: ['last 3 versions'],
+      cascade: false
+    }))
     .pipe(sourcemaps.write())
     .pipe(gulp.dest(paths.dest))
     .pipe(browserSync.stream());
@@ -32,6 +37,10 @@ var cssProdTask = function () {
   return gulp.src(paths.src)
     .pipe(sass())
     .on('error', handleErrors)
+    .pipe(autoprefixer({
+      browsers: ['last 3 versions'],
+      cascade: false
+    }))
     .pipe(cssnano({
       autoprefixer: false,
       mergeRules: false

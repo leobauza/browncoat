@@ -44,15 +44,15 @@ Services.Data = ["$q", "$http", "$location", "$rootScope", function ($q, $http, 
 
     // Get data
     $http.get("/data/" + path + ".json", { cache: true })
-    .success(function (data) {
-      // Current section is the key for secondary navigation.
-      $rootScope.tplType = "styleguide";
-      $rootScope.currentSection = path.split("/")[0];
-      d.resolve(data);
-    })
-    .error(function (err) {
-      console.error(err);
-    });
+      .then(function success (res) {
+        // Current section is the key for secondary navigation.
+        var data = res.data
+        $rootScope.tplType = "styleguide";
+        $rootScope.currentSection = path.split("/")[0];
+        d.resolve(data);
+      }, function error (err) {
+        console.error(err);
+      });
 
     return d.promise;
 
@@ -63,7 +63,8 @@ Services.Data = ["$q", "$http", "$location", "$rootScope", function ($q, $http, 
     var d = $q.defer();
 
     $http.get("/data/_main.json", {cache: true})
-      .success(function (data) {
+      .then(function success (res) {
+        var data = res.data;
         $rootScope.projectTitle = data.projectTitle;
         $rootScope.version = data.version;
         $rootScope.projectNav = data.projectNav;
@@ -71,11 +72,9 @@ Services.Data = ["$q", "$http", "$location", "$rootScope", function ($q, $http, 
         $rootScope.styleguideNavs = data.styleguideNavs;
         $rootScope.projectInfo = data.bundles.angular;
         d.resolve(true);
-
-      })
-      .error(function (err) {
+      }, function error (err) {
         console.error(err);
-        d.resolve(false);
+        d.reject(err);
       });
 
     return d.promise;

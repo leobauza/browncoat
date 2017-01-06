@@ -10,7 +10,7 @@
     font-size: 100%;
   }
   .list-group {
-    @include borderRadius(0px);
+    border-radius: 0px;
     display: none;
     position: absolute;
     top: 100%;
@@ -18,7 +18,7 @@
     width: 150%;
     z-index: 100;
     li:first-child {
-      @include borderRadius(0px);
+      border-radius: 0px;
     }
   }
   li {

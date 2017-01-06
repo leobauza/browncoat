@@ -17,64 +17,9 @@ $inset_shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
  * }
  */
 
-@mixin borderRadius ($radius: 3px) {
-  -webkit-border-radius:$radius;
-     -moz-border-radius:$radius;
-          border-radius:$radius;
-}
-
-@mixin boxShadow ($shadows...) {
-  -webkit-box-shadow: $shadows;
-    -moz-box-shadow: $shadows;
-      box-shadow: $shadows;
-}
-
-@mixin transition ($args...) {
-  transition: $args;
-    -moz-transition: $args;
-      -webkit-transition: $args;
-        -o-transition: $args;
-}
-
-@mixin rotate ($deg) {
-  transform: rotate($deg);
-  -ms-transform: rotate($deg);
-  -webkit-transform: rotate($deg);
-}
-
 @mixin gradient ($top, $bottom){
   background: $bottom;
-  background: -moz-linear-gradient(top,  $top 0%, $bottom 100%);
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,$top), color-stop(100%,$bottom));
-  background: -webkit-linear-gradient(top,  $top 0%,$bottom 100%);
-  background: -o-linear-gradient(top,  $top 0%,$bottom 100%);
-  background: -ms-linear-gradient(top,  $top 0%,$bottom 100%);
   background: linear-gradient(to bottom,  $top 0%,$bottom 100%);
-  *filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr=#{$top}, endColorstr=#{$bottom});
-}
-
-@mixin flexbox() {
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-}
-
-@mixin flex($values) {
-  -webkit-box-flex: $values;
-  -moz-box-flex:  $values;
-  -webkit-flex:  $values;
-  -ms-flex:  $values;
-  flex:  $values;
-}
-
-@mixin order($val) {
-  -webkit-box-ordinal-group: $val;
-  -moz-box-ordinal-group: $val;
-  -ms-flex-order: $val;
-  -webkit-order: $val;
-  order: $val;
 }
 
 // String Replace for font-face mixin.
@@ -136,12 +81,12 @@ $inset_shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
   padding: $p;
 }
 
-@mixin inlineBlock($h) {
-  display: inline-block;
-  *display: inline;
-  zoom: 1;
-  _height: $h;
-}
+// @mixin inlineBlock($h) {
+//   display: inline-block;
+//   *display: inline;
+//   zoom: 1;
+//   _height: $h;
+// }
 
 @mixin magicBox($perc:35) {
   position: relative;
@@ -149,9 +94,9 @@ $inset_shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
   height: 0;
 }
 
-@mixin quickSpan ($columns: $global_columns, $gutter: $global_columns, $i: 6) {
+@mixin quickSpan ($columns: $global_columns, $gutter: $global_gutter, $i: 6) {
   $col_width: (99.9998 / $columns);
-  $col_remainder: ($global_gutter/$global_columns) * $i;
+  $col_remainder: ($gutter/$columns) * $i;
   width: ($col_width * $i - $gutter + $col_remainder) * 1%;
   margin-right: $gutter * 1%;
   float: left;
@@ -216,12 +161,8 @@ $path_to_images: "../images/";
 }
 
 %borderBox {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
   box-sizing: border-box;
   &:before, &:after {
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
     box-sizing: border-box;
   }
 }

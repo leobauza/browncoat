@@ -1,6 +1,6 @@
 {
   "name": "Browncoat",
-  "version": "1.0.0-beta",
+  "version": "1.0.0",
   "description": "The platypus friendly framework",
   "scripts": {
     "gulp": "gulp",
@@ -29,6 +29,7 @@
     "browser-sync": "^2.11.1",
     "connect-modrewrite": "^0.8.5",
     "gulp": "^3.8.11",
+    "gulp-autoprefixer": "^3.1.1",
     "gulp-cssnano": "^2.1.2",
     "gulp-notify": "^2.2.0",
     "gulp-rename": "^1.2.0",
@@ -46,5 +47,6 @@
     "require-dir": "^0.1.0",
     "uglify-loader": "^1.3.0",
     "webpack": "^1.12.12"
-  }
+  },
+  "private": true
 }

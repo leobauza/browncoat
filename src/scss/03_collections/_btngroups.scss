@@ -6,17 +6,17 @@
 .btn-group {
   margin: 0 0 20px;
   %btn{
-    @include borderRadius(0);
+    border-radius: 0px;
     position: relative;
     float: left;
     margin-bottom: 0;
     margin-left: -1px;
     border-right-width: 0px;
     &:first-child {
-      @include borderRadius(5px 0px 0px 5px);
+      border-radius: 5px 0px 0px 5px;
     }
     &:last-child, &.l {
-      @include borderRadius(0px 5px 5px 0px);
+      border-radius: 0px 5px 5px 0px;
       border-right-width: 1px;
     }
   }
@@ -24,7 +24,7 @@
 
 .btn-stack {
   %btn {
-    @include borderRadius(0);
+    border-radius: 0px;
     display: block;
     position: relative;
     margin-bottom: 0;
@@ -33,11 +33,11 @@
     border-bottom-width: 0px;
     // border-top-width: 0px;
     &:first-child {
-      @include borderRadius(5px 5px 0px 0px);
+      border-radius: 5px 5px 0px 0px;
       // border-top-width: 1px;
     }
     &:last-child, &.l {
-      @include borderRadius(0px 0px 5px 5px);
+      border-radius: 0px 0px 5px 5px;
       border-bottom-width: 1px;
     }
   }

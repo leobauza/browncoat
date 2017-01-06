@@ -48,7 +48,7 @@ textarea,
 input[type="text"],
 input[type="password"],
 input[type="email"] {
-  @include borderRadius(none);
+  border-radius: none;
   background-color: $white;
   border: 1px solid $grey;
   //@include boxShadow(inset 0 1px 1px rgba(0, 0, 0, 0.5));
@@ -56,7 +56,7 @@ input[type="email"] {
     border:1px solid $focus_border;
     outline:0;
     outline:thin dotted \9; /* IE6-9 */
-    @include boxShadow($form_focus_shadow);
+    box-shadow: $form_focus_shadow;
   }
 }
 
@@ -65,7 +65,7 @@ select {
   border: 1px solid $grey;
   height: 30px;
   line-height: 30px;
-  @include borderRadius(5px);
+  border-radius: 5px;
   &:focus {
     border: 1px solid $focus_border;
     outline: 0;
@@ -94,7 +94,7 @@ textarea {
 
 button,
 input[type="submit"] {
-  @include borderRadius(0px);
+  border-radius: 0px;
   cursor: pointer;
   border: 1px solid $grey;
   background: none;
@@ -103,7 +103,7 @@ input[type="submit"] {
     color: $white;
   }
   &:focus {
-    @include boxShadow($form_focus_shadow);
+    box-shadow: $form_focus_shadow;
     border: 1px solid $focus_border;
     outline: 0;
     outline: thin dotted \9; // IE6-9
