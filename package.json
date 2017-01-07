@@ -3,10 +3,10 @@
   "version": "1.0.0",
   "description": "The platypus friendly framework",
   "scripts": {
-    "gulp": "gulp",
-    "docs": "gulp docs",
+    "gulp": "gulp --mode default",
+    "docs": "gulp --mode docs",
     "test": "gulp karma",
-    "prod": "gulp prod"
+    "prod": "gulp --mode prod"
   },
   "repository": {
     "type": "git",
@@ -20,9 +20,9 @@
   "homepage": "http://browncoat.leobauza.com/",
   "dependencies": {
     "angular": "^1.5.0",
+    "angular-mocks": "^1.5.0",
     "angular-route": "^1.5.0",
     "angular-sanitize": "^1.5.0",
-    "angular-mocks": "^1.5.0",
     "underscore": "^1.8.3"
   },
   "devDependencies": {
@@ -31,9 +31,11 @@
     "gulp": "^3.8.11",
     "gulp-autoprefixer": "^3.1.1",
     "gulp-cssnano": "^2.1.2",
+    "gulp-if": "^2.0.2",
     "gulp-notify": "^2.2.0",
     "gulp-rename": "^1.2.0",
     "gulp-sass": "^2.2.0",
+    "gulp-sequence": "^0.4.6",
     "gulp-sourcemaps": "^1.6.0",
     "gulp-svg-sprite": "^1.0.18",
     "gulp-svg2png": "^0.3.0",

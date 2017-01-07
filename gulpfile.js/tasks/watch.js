@@ -28,5 +28,5 @@ var watchTask = function(callback) {
 };
 
 gulp.task("watch", ["css", "js"], watchTask);
-gulp.task("docs", ["css", "js", "sprite"], watchTask);
+// gulp.task("docs", ["css", "js", "sprite"], watchTask);
 module.exports = watchTask;

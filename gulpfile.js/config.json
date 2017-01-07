@@ -20,7 +20,7 @@
     },
 
     "css": {
-      "docs": "./scss/docs.scss",
+      "docs": "./src/scss/docs.scss",
       "src": "./scss/styles.scss",
       "dest": "./assets/css"
     },
