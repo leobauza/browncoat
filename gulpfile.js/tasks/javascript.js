@@ -8,12 +8,10 @@ var gulp =        require('gulp'),
     logger =      require('../util/logger'),
     path =        require("path"),
     _ =           require("underscore"),
-    gutil =         require('gulp-util'),
+    gutil =       require('gulp-util'),
     browserSync = require("browser-sync");
 
 const mode = gutil.env.mode; // docs/prod/default
-
-console.log(mode);
 
 var src = mode === "docs" ? "docs" : "src";
 var dest = mode === "docs" ? "docs" : "dest";
@@ -26,6 +24,24 @@ var webPackConfig = {
   output: {
     path: path.resolve(config.root[dest], config.tasks.js.dest),
     filename: '[name].js'
+  },
+  module: {
+    loaders: [
+      {
+        test: /\.js$/,
+        exclude: /node_modules/,
+        loader: "babel-loader",
+        query: {
+          presets: ['es2015'],
+          plugins: ['transform-runtime']
+        }
+      }
+    ]
+  },
+  resolve: { // Maybe only for docs?
+    alias: {
+      app: path.resolve(config.root.src, config.tasks.js.src)
+    }
   }
 };
 
@@ -58,13 +74,13 @@ var jsTask = function (callback) {
   });
 };
 
-var jsProdTask = function (callback) {
-  webpack(webPackProdConfig, function (err, stats) {
-    logger(err, stats);
-    callback();
-  });
-};
+// var jsProdTask = function (callback) {
+//   webpack(webPackProdConfig, function (err, stats) {
+//     logger(err, stats);
+//     callback();
+//   });
+// };
 
-gulp.task('prodJs', jsProdTask);
+// gulp.task('prodJs', jsProdTask);
 gulp.task('js', jsTask);
 module.exports = jsTask;

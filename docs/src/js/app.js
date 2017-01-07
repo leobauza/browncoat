@@ -1,3 +1,5 @@
 "use strict";
 
-console.log("hello, docs!");
+import { hello } from "app/modules/es6";
+
+console.log(hello);

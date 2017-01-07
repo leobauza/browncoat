@@ -42,12 +42,24 @@
 /************************************************************************/
 /******/ ([
 /* 0 */
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+
+	var _es = __webpack_require__(1);
+
+	console.log(_es.hello);
+
+/***/ },
+/* 1 */
 /***/ function(module, exports) {
 
 	"use strict";
 
-	console.log("hello, docs!");
-
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	var hello = exports.hello = "Hello, World!\n";
 
 /***/ }
 /******/ ]);
