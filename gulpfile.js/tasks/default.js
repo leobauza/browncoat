@@ -19,14 +19,23 @@ const gulp         = require('gulp'),
 // });
 
 gulp.task('default', (cb) => {
+
   let env = gutil.env.mode;
+
   if (env === 'default') {
+
     gulpSequence('css', cb);
+
   } else if (env === 'docs') {
+
     gulpSequence('css', cb);
+
   } else if (env === 'prod') {
+
     gulpSequence('css', cb);
+
   }
+
 });
 
 
