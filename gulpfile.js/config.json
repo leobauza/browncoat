@@ -10,12 +10,13 @@
 
     "js": {
       "src": "./js",
+      "docs": "./src/js",
       "dest": "./assets/js",
       "entries": {
         "main": "./app.js"
       },
       "doc_entries": {
-        "docs": "./docs.js"
+        "app": "./app.js"
       }
     },
 

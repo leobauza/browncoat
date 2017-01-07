@@ -8,13 +8,20 @@ var gulp =        require('gulp'),
     logger =      require('../util/logger'),
     path =        require("path"),
     _ =           require("underscore"),
+    gutil =         require('gulp-util'),
     browserSync = require("browser-sync");
 
-var dest = process.argv[2] === "docs" ? "docs" : "dest";
-var entries = process.argv[2] === "docs" ? "doc_entries" : "entries";
+const mode = gutil.env.mode; // docs/prod/default
+
+console.log(mode);
+
+var src = mode === "docs" ? "docs" : "src";
+var dest = mode === "docs" ? "docs" : "dest";
+var entries = mode === "docs" ? "doc_entries" : "entries";
+
 
 var webPackConfig = {
-  context: path.resolve(config.root.src, config.tasks.js.src),
+  context: path.resolve(config.root[src], config.tasks.js[src]),
   entry: config.tasks.js[entries],
   output: {
     path: path.resolve(config.root[dest], config.tasks.js.dest),

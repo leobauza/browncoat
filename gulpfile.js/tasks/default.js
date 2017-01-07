@@ -22,21 +22,24 @@ gulp.task('default', (cb) => {
 
   let env = gutil.env.mode;
 
-  if (env === 'default') {
+  if (env === 'docs') {
 
-    gulpSequence('css', cb);
-
-  } else if (env === 'docs') {
-
-    gulpSequence('css', cb);
+    // Default.
+    gulpSequence(['css', 'js'], 'watch', cb);
 
   } else if (env === 'prod') {
 
     gulpSequence('css', cb);
 
+  } else {
+
+    // Default.
+    gulpSequence(['css', 'js'], 'watch', cb);
+
   }
 
 });
+// gulp.task("docs", ["css", "js", "sprite"], watchTask);
 
 
 // gulp.task('default', ['watch']);

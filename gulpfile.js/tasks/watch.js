@@ -1,16 +1,19 @@
 var gulp        = require('gulp'),
     config      = require('../config'),
     browserSync = require('browser-sync'),
-    modRewrite  = require('connect-modrewrite');
+    modRewrite  = require('connect-modrewrite'),
+    gutil       = require('gulp-util');
+
+const mode = gutil.env.mode; // docs/prod/default
 
 var watchTask = function(callback) {
 
-  var dest = process.argv[2] === "docs" ? "docs" : "dest";
+  var dest = mode === "docs" ? "docs" : "dest";
 
   browserSync.init({
     // proxy: "http://browncoat.loc"
     server: {
-      baseDir: process.argv[2] === "docs" ? "./docs" : "./web",
+      baseDir: mode === "docs" ? "./docs" : "./web",
       middleware: [
         modRewrite([
           '^/assets/img/(.*) - [L]',
@@ -21,12 +24,16 @@ var watchTask = function(callback) {
     }
   });
 
+  if (mode === 'docs') {
+    gulp.watch(config.root.docs + '/src/scss/docs.scss', ['css']);
+  }
+
   gulp.watch(config.root.src + '/scss/**/*.scss', ['css']);
-  gulp.watch(config.root[dest] + "/**/*.html").on('change', browserSync.reload);
-  gulp.watch(config.root[dest] + "/**/*.md").on('change', browserSync.reload);
-  gulp.watch(config.root[dest] + "/**/*.json").on('change', browserSync.reload);
+  // gulp.watch(config.root[dest] + "/**/*.html").on('change', browserSync.reload);
+  // gulp.watch(config.root[dest] + "/**/*.md").on('change', browserSync.reload);
+  // gulp.watch(config.root[dest] + "/**/*.json").on('change', browserSync.reload);
 };
 
-gulp.task("watch", ["css", "js"], watchTask);
+gulp.task("watch", watchTask);
 // gulp.task("docs", ["css", "js", "sprite"], watchTask);
 module.exports = watchTask;

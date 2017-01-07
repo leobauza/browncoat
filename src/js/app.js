@@ -4,3 +4,5 @@ var Sample = require('./modules/sample'),
     sample = new Sample();
 
 sample.method();
+
+console.log("...");

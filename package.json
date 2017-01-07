@@ -3,10 +3,10 @@
   "version": "1.0.0",
   "description": "The platypus friendly framework",
   "scripts": {
-    "gulp": "gulp --mode default",
+    "gulp": "gulp",
     "docs": "gulp --mode docs",
-    "test": "gulp karma",
-    "prod": "gulp --mode prod"
+    "prod": "gulp --mode prod",
+    "test": "gulp karma"
   },
   "repository": {
     "type": "git",
