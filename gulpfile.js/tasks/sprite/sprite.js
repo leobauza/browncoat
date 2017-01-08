@@ -5,9 +5,12 @@ if (!config.tasks.sprite) { return; }
 var gulp =      require('gulp'),
     svgSprite = require('gulp-svg-sprite'),
     svg2png =   require('gulp-svg2png'),
+    gutil =     require('gulp-util'),
     path =      require('path');
 
-var dest = process.argv[2] === "docs" ? "docs" : "dest";
+const mode = gutil.env.mode; // docs/prod/default
+
+var dest = mode === "docs" ? "docs" : "dest";
 
 var paths = {
   src: path.join(config.root.src, config.tasks.sprite.entry),

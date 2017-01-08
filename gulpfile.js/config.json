@@ -10,17 +10,18 @@
 
     "js": {
       "src": "./js",
+      "docs": "./src/js",
       "dest": "./assets/js",
       "entries": {
         "main": "./app.js"
       },
       "doc_entries": {
-        "docs": "./docs.js"
+        "app": "./app.js"
       }
     },
 
     "css": {
-      "docs": "./scss/docs.scss",
+      "docs": "./src/scss/docs.scss",
       "src": "./scss/styles.scss",
       "dest": "./assets/css"
     },

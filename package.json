@@ -4,9 +4,9 @@
   "description": "The platypus friendly framework",
   "scripts": {
     "gulp": "gulp",
-    "docs": "gulp docs",
-    "test": "gulp karma",
-    "prod": "gulp prod"
+    "docs": "gulp --mode docs",
+    "prod": "gulp --mode prod",
+    "test": "gulp karma"
   },
   "repository": {
     "type": "git",
@@ -20,20 +20,26 @@
   "homepage": "http://browncoat.leobauza.com/",
   "dependencies": {
     "angular": "^1.5.0",
+    "angular-mocks": "^1.5.0",
     "angular-route": "^1.5.0",
     "angular-sanitize": "^1.5.0",
-    "angular-mocks": "^1.5.0",
     "underscore": "^1.8.3"
   },
   "devDependencies": {
+    "babel-core": "^6.21.0",
+    "babel-loader": "^6.2.10",
+    "babel-plugin-transform-runtime": "^6.15.0",
+    "babel-preset-es2015": "^6.18.0",
     "browser-sync": "^2.11.1",
     "connect-modrewrite": "^0.8.5",
     "gulp": "^3.8.11",
     "gulp-autoprefixer": "^3.1.1",
     "gulp-cssnano": "^2.1.2",
+    "gulp-if": "^2.0.2",
     "gulp-notify": "^2.2.0",
     "gulp-rename": "^1.2.0",
     "gulp-sass": "^2.2.0",
+    "gulp-sequence": "^0.4.6",
     "gulp-sourcemaps": "^1.6.0",
     "gulp-svg-sprite": "^1.0.18",
     "gulp-svg2png": "^0.3.0",
@@ -45,8 +51,7 @@
     "karma-jasmine": "^0.3.7",
     "karma-nyan-reporter": "^0.2.3",
     "require-dir": "^0.1.0",
-    "uglify-loader": "^1.3.0",
-    "webpack": "^1.12.12"
+    "webpack": "^1.14.0"
   },
   "private": true
 }
