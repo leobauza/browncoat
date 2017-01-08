@@ -42,12 +42,15 @@ if (mode === 'docs') {
     module: {
       loaders: [
         {
-          test: /\.js$/,
+          test: /\.jsx?$/,
           exclude: /node_modules/,
           loader: "babel-loader",
           query: {
             presets: ['es2015'],
-            plugins: ['transform-runtime']
+            plugins: [
+              'transform-runtime',
+              ['transform-react-jsx', { 'pragma': 'h' }]
+            ]
           }
         }
       ]

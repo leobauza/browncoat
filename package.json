@@ -19,7 +19,7 @@
   },
   "homepage": "http://browncoat.leobauza.com/",
   "dependencies": {
-    "preact": "^7.1.0",
+    "preact": "^7.1.0"
   },
   "devDependencies": {
     "babel-core": "^6.21.0",
