@@ -59,7 +59,7 @@
 	Object.defineProperty(exports, "__esModule", {
 	  value: true
 	});
-	var hello = exports.hello = "Hello, World!\n";
+	var hello = exports.hello = "Hello, World\n";
 
 /***/ }
 /******/ ]);

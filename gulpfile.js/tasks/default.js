@@ -22,23 +22,18 @@ gulp.task('default', (cb) => {
 
   let env = gutil.env.mode;
 
-  gulpSequence('js', cb);
-
   if (env === 'docs') {
 
-    // Default.
-    // gulpSequence(['css', 'js'], 'watch', cb);
-    // gulpSequence('css', cb);
-
+    gulpSequence(['css', 'js'], 'watch', cb);
 
   } else if (env === 'prod') {
 
-    // gulpSequence('css', cb);
+    gulpSequence(['css', 'js'], cb);
 
   } else {
 
     // Default.
-    // gulpSequence(['css', 'js'], 'watch', cb);
+    gulpSequence(['css', 'js'], 'watch', cb);
 
   }
 
