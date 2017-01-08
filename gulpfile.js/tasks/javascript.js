@@ -2,14 +2,12 @@ var config = require('../config');
 
 if (!config.tasks.js) { return; }
 
-var gulp =        require('gulp'),
-    gutil =       require('gulp-util'),
-    webpack =     require('webpack'),
-    logger =      require('../util/logger'),
-    path =        require("path"),
-    _ =           require("underscore"),
-    gutil =       require('gulp-util'),
-    browserSync = require("browser-sync");
+const gulp =        require('gulp'),
+      gutil =       require('gulp-util'),
+      webpack =     require('webpack'),
+      logger =      require('../util/logger'),
+      path =        require("path"),
+      browserSync = require("browser-sync");
 
 const mode = gutil.env.mode; // docs/prod/default
 
@@ -114,13 +112,5 @@ var jsTask = function (callback) {
   }
 };
 
-// var jsProdTask = function (callback) {
-//   webpack(webPackProdConfig, function (err, stats) {
-//     logger(err, stats);
-//     callback();
-//   });
-// };
-
-// gulp.task('prodJs', jsProdTask);
 gulp.task('js', jsTask);
 module.exports = jsTask;
