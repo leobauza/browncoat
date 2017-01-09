@@ -6,63 +6,68 @@ import { h, render, Component } from 'preact';
 // Tell Babel to transform JSX into h() calls:
 /** @jsx h */
 
-class Clock extends Component {
+// Development only...
+require('preact/devtools');
+
+class App extends Component {
   constructor() {
     super();
     // set initial state:
-    this.state.time = Date.now();
+    // this.state.time = Date.now();
+    this.state.main = {};
+  }
+
+  componentWillMount() {
+    fetch('/data/_main.json', {
+      method: 'get'
+    }).then((res) => {
+      return res.json();
+    }).then((data) => {
+      this.setState({main: data});
+    }).catch((err) => {
+      console.error(err);
+    });
   }
 
   componentDidMount() {
     // update time every second
-    this.timer = setInterval(() => {
-      this.setState({ time: Date.now() });
-    }, 1000);
+    // this.timer = setInterval(() => {
+    //   this.setState({ time: Date.now() });
+    // }, 1000);
   }
 
   componentWillUnmount() {
     // stop when not renderable.
-    clearInterval(this.timer);
+    // clearInterval(this.timer);
   }
 
   render(props, state) {
-    let time = new Date(state.time).toLocaleTimeString();
-    return <span>{ hello }{ time }</span>;
+    let {projectTitle, version} = state.main;
+    return (
+      <div id="app">
+        <Header title={projectTitle } version={ version } />
+        <MainContent />
+      </div>
+    )
   }
 }
 
-// class Link extends Component {
-
-  // props & state passed to the render fn.
-  // render(props, state) {
-  //   console.log(props, state);
-  //   return <a href={props.href}>{ props.children }</a>;
-  // }
-
-  // Destructuring chosen props.
-  // render({ href, children }) {
-  //   console.log(href, children);
-  //   return <a {...{ href, children}} />;
-  // }
-
-  // Destructing all props.
-  // render(props) {
-  //   console.log(props);
-  //   return <a {...props} />;
-  // }
-
-// }
-
-// Stateless functional component. (has no state!)
-const Link = (props) => (
-  <a {...props} />
+const Header = ({ title, version }) => (
+  <header class="doc__header">
+    <div class="container">
+      <h1>{ title } <span class="small">v{ version }</span></h1>
+      <nav class="btn-group">
+        <a href="#" class="btn"></a>
+      </nav>
+      <p class="intro">intro</p>
+    </div>
+  </header>
 );
-// The below should work but doesn't
-// is it Preact-compat? or is it decorators? ["transform-decorators-legacy"]
-// const Link = ({ children, ...props }) => (
-//     <a {...props}>{ children }</a>
-// );
 
-// render an instance of Clock into <body>:
-render(<Clock />, document.getElementById('app'));
-render(<Link href="http://example.com" prop2="something">link</Link>, document.getElementById('app'));
+const MainContent = () => (
+  <main>
+    <p>Main</p>
+  </main>
+);
+
+render(<App />, document.body);
