@@ -53,22 +53,6 @@ amdefine@>=0.0.4:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/amdefine/-/amdefine-1.0.1.tgz#4a5282ac164729e93619bcfd3ad151f817ce91f5"
 
-angular-mocks@^1.5.0:
-  version "1.6.1"
-  resolved "https://registry.yarnpkg.com/angular-mocks/-/angular-mocks-1.6.1.tgz#2f44a1b3ac608e93751305bce176c274221d8abd"
-
-angular-route@^1.5.0:
-  version "1.6.1"
-  resolved "https://registry.yarnpkg.com/angular-route/-/angular-route-1.6.1.tgz#6d1087f4d6a1422026f91a13be86adc8f1d20ec7"
-
-angular-sanitize@^1.5.0:
-  version "1.6.1"
-  resolved "https://registry.yarnpkg.com/angular-sanitize/-/angular-sanitize-1.6.1.tgz#cacffec3199ed66297afbb1ef366ec66616b3b3f"
-
-angular@^1.5.0:
-  version "1.6.1"
-  resolved "https://registry.yarnpkg.com/angular/-/angular-1.6.1.tgz#a7b6d763a74c157325692619e97257e69d9b6a27"
-
 ansi-regex@^0.2.0, ansi-regex@^0.2.1:
   version "0.2.1"
   resolved "https://registry.yarnpkg.com/ansi-regex/-/ansi-regex-0.2.1.tgz#0d8e946967a3d8143f93e24e298525fc1b2235f9"
@@ -1826,6 +1810,10 @@ form-data@~2.1.1:
     combined-stream "^1.0.5"
     mime-types "^2.1.12"
 
+form-serialize@0.7.1:
+  version "0.7.1"
+  resolved "https://registry.yarnpkg.com/form-serialize/-/form-serialize-0.7.1.tgz#48f74e37d041de4f7d140dd2c54b37fff8d2e843"
+
 formidable@1.0.x:
   version "1.0.17"
   resolved "https://registry.yarnpkg.com/formidable/-/formidable-1.0.17.tgz#ef5491490f9433b705faa77249c99029ae348559"
@@ -3287,6 +3275,12 @@ merge-stream@^1.0.0:
   resolved "https://registry.yarnpkg.com/merge-stream/-/merge-stream-1.0.1.tgz#4041202d508a342ba00174008df0c251b8c135e1"
   dependencies:
     readable-stream "^2.0.1"
+
+microcosm@^11.2.0:
+  version "11.2.0"
+  resolved "https://registry.yarnpkg.com/microcosm/-/microcosm-11.2.0.tgz#bc19a1548cba358cd68ad79fbefb103aec6f7f69"
+  dependencies:
+    form-serialize "0.7.1"
 
 micromatch@2.3.11, micromatch@^2.1.5, micromatch@^2.3.7:
   version "2.3.11"
@@ -5034,10 +5028,6 @@ unc-path-regex@^0.1.0:
 underscore@1.7.x:
   version "1.7.0"
   resolved "https://registry.yarnpkg.com/underscore/-/underscore-1.7.0.tgz#6bbaf0877500d36be34ecaa584e0db9fef035209"
-
-underscore@^1.8.3:
-  version "1.8.3"
-  resolved "https://registry.yarnpkg.com/underscore/-/underscore-1.8.3.tgz#4f3fb53b106e6097fcf9cb4109f2a5e9bdfa5022"
 
 uniq@^1.0.1:
   version "1.0.1"
