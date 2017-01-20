@@ -8,7 +8,9 @@
  */
 
 import Microcosm from 'microcosm';
-
+const start = () => {
+  return;
+}
 // Action
 const increase = () => {
   return function (action) {
@@ -26,8 +28,15 @@ const Count = {
   getInitialState() {
     return {
       type: 'Hello World',
-      count: 0
+      count: 0,
+      addActionHistory: false,
+      renderCount: 0
     };
+  },
+  start (state) {
+    return Object.assign({}, state, {
+      addActionHistory: true
+    });
   },
   open (state, payload) {
     console.log("=============");
@@ -35,7 +44,8 @@ const Count = {
     console.log("state:", state);
     console.log("payload:", payload);
     return Object.assign({}, state, {
-      type: "OPEN..."
+      type: "OPEN...",
+      addActionHistory: false
     });
   },
   loading (state, payload) {
@@ -44,7 +54,8 @@ const Count = {
     console.log("state:", state);
     console.log("payload:", payload);
     return Object.assign({}, state, {
-      type: "LOADING..."
+      type: "LOADING...",
+      addActionHistory: false
     });
   },
   increase (state, payload) {
@@ -54,13 +65,17 @@ const Count = {
     console.log("payload:", payload);
     return Object.assign({}, state, {
       type: "DONE",
-      count: state.count + 1
+      count: state.count + 1,
+      addActionHistory: true,
+      renderCount: state.renderCount + 1
     });
   },
   decrease (state, payload) {
     return Object.assign({}, state, {
       type: "DONE",
-      count: state.count - 1
+      count: state.count - 1,
+      addActionHistory: true,
+      renderCount: state.renderCount + 1
     });
   },
   // Like the switch statements in a reducer.
@@ -72,6 +87,7 @@ const Count = {
     console.log("Function to string:", [increase.loading].toString());
     console.log("Function to string:", [increase.done].toString());
     return {
+      [start]: this.start,
       [increase.open]: this.open,
       [increase.loading]: this.loading,
       [increase]: this.increase, // defaults to calling increase.done
@@ -91,26 +107,27 @@ class Repo extends Microcosm {
 
 // Initialize empty list of actions for undo/redo.
 let actionList = [];
-let currentCount = 0;
-let renderCount = 0;
+
 // Like createStore.
 const repo = new Repo({
   maxHistory: Infinity // needed for checkout to work.
 });
 // Naive Renderer.
 const render = () => {
-  console.log(repo.state.counter)
-  document.getElementById('app').getElementsByTagName('h1')[0].innerHTML = repo.state.counter.type;
+  const counter = repo.state.counter;
+  document.getElementById('app').getElementsByTagName('h1')[0].innerHTML = counter.type;
 
-  if (repo.state.counter.count !== currentCount) {
-    document.getElementById('count').innerHTML = repo.state.counter.count;
-    let el = document.createElement("a");
-    el.setAttribute('href', `#${renderCount}`);
-    el.innerHTML = currentCount;
-    el.classList.add('btn');
-    document.getElementById('action-nav').appendChild(el);
-    currentCount = repo.state.counter.count;
-    renderCount += 1;
+  if (counter.addActionHistory) {
+    document.getElementById('count').innerHTML = counter.count;
+    actionList.forEach((v, k) => {
+      console.log(counter.renderCount);
+      console.log(v, k);
+      // let el = document.createElement("a");
+      // el.setAttribute('href', `#${counter.renderCount}`);
+      // el.innerHTML = counter.count;
+      // el.classList.add('btn');
+      // document.getElementById('action-nav').appendChild(el);
+    })
   }
 }
 
@@ -120,6 +137,10 @@ document.getElementById('increase').addEventListener('click', function () {
 document.getElementById('decrease').addEventListener('click', function () {
   actionList.push(repo.push(decrease));
 });
+document.getElementById('action-nav').addEventListener('click', function (e) {
+  e.preventDefault();
+  repo.checkout(actionList[e.target.getAttribute('href').substr(1)]);
+});
 
 /**
  * repon.on('change', fn) is like store.subscribe(fn)
@@ -127,7 +148,10 @@ document.getElementById('decrease').addEventListener('click', function () {
 repo.on('change', function () {
   render();
 });
-render();
+
+// render(); // this wouldn't record an action as my first action.
+actionList.push(repo.push(start));
+
 
 // let actionList = [];
 // let interval = setInterval(function () {

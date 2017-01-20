@@ -70,17 +70,29 @@
 
 	var _defineProperty3 = _interopRequireDefault(_defineProperty2);
 
-	var _assign = __webpack_require__(91);
+	var _assign = __webpack_require__(88);
 
 	var _assign2 = _interopRequireDefault(_assign);
 
-	var _microcosm = __webpack_require__(88);
+	var _microcosm = __webpack_require__(92);
 
 	var _microcosm2 = _interopRequireDefault(_microcosm);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+	var start = function start() {
+	  return;
+	};
 	// Action
+	/**
+	 * Microcosm example w/o React.
+	 *
+	 * This includes:
+	 * x Microcosm (repo) - like redux stores
+	 * x Domains - like redux reducers (but different)
+	 * x Actions - which are not just static object but functions.
+	 */
+
 	var increase = function increase() {
 	  return function (action) {
 	    action.open('open payload');
@@ -91,15 +103,7 @@
 	      return action.resolve('done payload');
 	    }, 1000);
 	  };
-	}; /**
-	    * Microcosm example w/o React.
-	    *
-	    * This includes:
-	    * x Microcosm (repo) - like redux stores
-	    * x Domains - like redux reducers (but different)
-	    * x Actions - which are not just static object but functions.
-	    */
-
+	};
 	var decrease = function decrease() {
 	  return;
 	};
@@ -109,8 +113,15 @@
 	  getInitialState: function getInitialState() {
 	    return {
 	      type: 'Hello World',
-	      count: 0
+	      count: 0,
+	      addActionHistory: false,
+	      renderCount: 0
 	    };
+	  },
+	  start: function start(state) {
+	    return (0, _assign2.default)({}, state, {
+	      addActionHistory: true
+	    });
 	  },
 	  open: function open(state, payload) {
 	    console.log("=============");
@@ -118,7 +129,8 @@
 	    console.log("state:", state);
 	    console.log("payload:", payload);
 	    return (0, _assign2.default)({}, state, {
-	      type: "OPEN..."
+	      type: "OPEN...",
+	      addActionHistory: false
 	    });
 	  },
 	  loading: function loading(state, payload) {
@@ -127,7 +139,8 @@
 	    console.log("state:", state);
 	    console.log("payload:", payload);
 	    return (0, _assign2.default)({}, state, {
-	      type: "LOADING..."
+	      type: "LOADING...",
+	      addActionHistory: false
 	    });
 	  },
 	  increase: function increase(state, payload) {
@@ -137,13 +150,17 @@
 	    console.log("payload:", payload);
 	    return (0, _assign2.default)({}, state, {
 	      type: "DONE",
-	      count: state.count + 1
+	      count: state.count + 1,
+	      addActionHistory: true,
+	      renderCount: state.renderCount + 1
 	    });
 	  },
 	  decrease: function decrease(state, payload) {
 	    return (0, _assign2.default)({}, state, {
 	      type: "DONE",
-	      count: state.count - 1
+	      count: state.count - 1,
+	      addActionHistory: true,
+	      renderCount: state.renderCount + 1
 	    });
 	  },
 
@@ -157,7 +174,7 @@
 	    console.log("Function to string:", [increase.open].toString());
 	    console.log("Function to string:", [increase.loading].toString());
 	    console.log("Function to string:", [increase.done].toString());
-	    return _ref = {}, (0, _defineProperty3.default)(_ref, increase.open, this.open), (0, _defineProperty3.default)(_ref, increase.loading, this.loading), (0, _defineProperty3.default)(_ref, increase, this.increase), (0, _defineProperty3.default)(_ref, decrease, this.decrease), _ref;
+	    return _ref = {}, (0, _defineProperty3.default)(_ref, start, this.start), (0, _defineProperty3.default)(_ref, increase.open, this.open), (0, _defineProperty3.default)(_ref, increase.loading, this.loading), (0, _defineProperty3.default)(_ref, increase, this.increase), (0, _defineProperty3.default)(_ref, decrease, this.decrease), _ref;
 	  }
 	};
 
@@ -185,26 +202,27 @@
 
 
 	var actionList = [];
-	var currentCount = 0;
-	var renderCount = 0;
+
 	// Like createStore.
 	var repo = new Repo({
 	  maxHistory: Infinity // needed for checkout to work.
 	});
 	// Naive Renderer.
 	var render = function render() {
-	  console.log(repo.state.counter);
-	  document.getElementById('app').getElementsByTagName('h1')[0].innerHTML = repo.state.counter.type;
+	  var counter = repo.state.counter;
+	  document.getElementById('app').getElementsByTagName('h1')[0].innerHTML = counter.type;
 
-	  if (repo.state.counter.count !== currentCount) {
-	    document.getElementById('count').innerHTML = repo.state.counter.count;
-	    var el = document.createElement("a");
-	    el.setAttribute('href', '#' + renderCount);
-	    el.innerHTML = currentCount;
-	    el.classList.add('btn');
-	    document.getElementById('action-nav').appendChild(el);
-	    currentCount = repo.state.counter.count;
-	    renderCount += 1;
+	  if (counter.addActionHistory) {
+	    document.getElementById('count').innerHTML = counter.count;
+	    actionList.forEach(function (v, k) {
+	      console.log(counter.renderCount);
+	      console.log(v, k);
+	      // let el = document.createElement("a");
+	      // el.setAttribute('href', `#${counter.renderCount}`);
+	      // el.innerHTML = counter.count;
+	      // el.classList.add('btn');
+	      // document.getElementById('action-nav').appendChild(el);
+	    });
 	  }
 	};
 
@@ -214,6 +232,10 @@
 	document.getElementById('decrease').addEventListener('click', function () {
 	  actionList.push(repo.push(decrease));
 	});
+	document.getElementById('action-nav').addEventListener('click', function (e) {
+	  e.preventDefault();
+	  repo.checkout(actionList[e.target.getAttribute('href').substr(1)]);
+	});
 
 	/**
 	 * repon.on('change', fn) is like store.subscribe(fn)
@@ -221,7 +243,9 @@
 	repo.on('change', function () {
 	  render();
 	});
-	render();
+
+	// render(); // this wouldn't record an action as my first action.
+	actionList.push(repo.push(start));
 
 	// let actionList = [];
 	// let interval = setInterval(function () {
@@ -1801,6 +1825,66 @@
 
 /***/ },
 /* 88 */
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = { "default": __webpack_require__(89), __esModule: true };
+
+/***/ },
+/* 89 */
+/***/ function(module, exports, __webpack_require__) {
+
+	__webpack_require__(90);
+	module.exports = __webpack_require__(14).Object.assign;
+
+/***/ },
+/* 90 */
+/***/ function(module, exports, __webpack_require__) {
+
+	// 19.1.3.1 Object.assign(target, source)
+	var $export = __webpack_require__(13);
+
+	$export($export.S + $export.F, 'Object', {assign: __webpack_require__(91)});
+
+/***/ },
+/* 91 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	// 19.1.2.1 Object.assign(target, source, ...)
+	var getKeys  = __webpack_require__(46)
+	  , gOPS     = __webpack_require__(70)
+	  , pIE      = __webpack_require__(71)
+	  , toObject = __webpack_require__(4)
+	  , IObject  = __webpack_require__(49)
+	  , $assign  = Object.assign;
+
+	// should work with symbols and should have deterministic property order (V8 bug)
+	module.exports = !$assign || __webpack_require__(23)(function(){
+	  var A = {}
+	    , B = {}
+	    , S = Symbol()
+	    , K = 'abcdefghijklmnopqrst';
+	  A[S] = 7;
+	  K.split('').forEach(function(k){ B[k] = k; });
+	  return $assign({}, A)[S] != 7 || Object.keys($assign({}, B)).join('') != K;
+	}) ? function assign(target, source){ // eslint-disable-line no-unused-vars
+	  var T     = toObject(target)
+	    , aLen  = arguments.length
+	    , index = 1
+	    , getSymbols = gOPS.f
+	    , isEnum     = pIE.f;
+	  while(aLen > index){
+	    var S      = IObject(arguments[index++])
+	      , keys   = getSymbols ? getKeys(S).concat(getSymbols(S)) : getKeys(S)
+	      , length = keys.length
+	      , j      = 0
+	      , key;
+	    while(length > j)if(isEnum.call(S, key = keys[j++]))T[key] = S[key];
+	  } return T;
+	} : $assign;
+
+/***/ },
+/* 92 */
 /***/ function(module, exports) {
 
 	/* WEBPACK VAR INJECTION */(function(global) {'use strict';
@@ -3121,68 +3205,6 @@
 	exports.inherit = inherit;
 
 	/* WEBPACK VAR INJECTION */}.call(exports, (function() { return this; }())))
-
-/***/ },
-/* 89 */,
-/* 90 */,
-/* 91 */
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = { "default": __webpack_require__(92), __esModule: true };
-
-/***/ },
-/* 92 */
-/***/ function(module, exports, __webpack_require__) {
-
-	__webpack_require__(93);
-	module.exports = __webpack_require__(14).Object.assign;
-
-/***/ },
-/* 93 */
-/***/ function(module, exports, __webpack_require__) {
-
-	// 19.1.3.1 Object.assign(target, source)
-	var $export = __webpack_require__(13);
-
-	$export($export.S + $export.F, 'Object', {assign: __webpack_require__(94)});
-
-/***/ },
-/* 94 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-	// 19.1.2.1 Object.assign(target, source, ...)
-	var getKeys  = __webpack_require__(46)
-	  , gOPS     = __webpack_require__(70)
-	  , pIE      = __webpack_require__(71)
-	  , toObject = __webpack_require__(4)
-	  , IObject  = __webpack_require__(49)
-	  , $assign  = Object.assign;
-
-	// should work with symbols and should have deterministic property order (V8 bug)
-	module.exports = !$assign || __webpack_require__(23)(function(){
-	  var A = {}
-	    , B = {}
-	    , S = Symbol()
-	    , K = 'abcdefghijklmnopqrst';
-	  A[S] = 7;
-	  K.split('').forEach(function(k){ B[k] = k; });
-	  return $assign({}, A)[S] != 7 || Object.keys($assign({}, B)).join('') != K;
-	}) ? function assign(target, source){ // eslint-disable-line no-unused-vars
-	  var T     = toObject(target)
-	    , aLen  = arguments.length
-	    , index = 1
-	    , getSymbols = gOPS.f
-	    , isEnum     = pIE.f;
-	  while(aLen > index){
-	    var S      = IObject(arguments[index++])
-	      , keys   = getSymbols ? getKeys(S).concat(getSymbols(S)) : getKeys(S)
-	      , length = keys.length
-	      , j      = 0
-	      , key;
-	    while(length > j)if(isEnum.call(S, key = keys[j++]))T[key] = S[key];
-	  } return T;
-	} : $assign;
 
 /***/ }
 /******/ ]);
