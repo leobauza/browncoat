@@ -40,7 +40,7 @@
     "gulp-sequence": "^0.4.6",
     "gulp-sourcemaps": "^1.6.0",
     "gulp-svg-sprite": "^1.0.18",
-    "gulp-svg2png": "^0.3.0",
+    "gulp-svg2png": "^2.0.0",
     "gulp-util": "^3.0.3",
     "jasmine-core": "^2.4.1",
     "karma": "^0.13.21",
