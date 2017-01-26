@@ -81,7 +81,9 @@
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	var start = function start() {
-	  return;
+	  return function (action) {
+	    action.resolve(action);
+	  };
 	};
 	// Action
 	/**
@@ -100,12 +102,14 @@
 	      return action.send('loading payload');
 	    }, 500); // triggers action.loading and .onUpdate()
 	    setTimeout(function () {
-	      return action.resolve('done payload');
+	      return action.resolve(action);
 	    }, 1000);
 	  };
 	};
 	var decrease = function decrease() {
-	  return;
+	  return function (action) {
+	    action.resolve(action);
+	  };
 	};
 
 	// Domain is like a Reducer.
@@ -115,12 +119,15 @@
 	      type: 'Hello World',
 	      count: 0,
 	      addActionHistory: false,
-	      renderCount: 0
+	      renderCount: 0,
+	      actions: []
 	    };
 	  },
-	  start: function start(state) {
+	  start: function start(state, action) {
 	    return (0, _assign2.default)({}, state, {
-	      addActionHistory: true
+	      addActionHistory: true,
+	      renderCount: state.renderCount + 1,
+	      actions: [].concat(state.actions, [action])
 	    });
 	  },
 	  open: function open(state, payload) {
@@ -143,24 +150,26 @@
 	      addActionHistory: false
 	    });
 	  },
-	  increase: function increase(state, payload) {
+	  increase: function increase(state, action) {
 	    console.log("=============");
 	    console.log("done/default/resolve");
 	    console.log("state:", state);
-	    console.log("payload:", payload);
+	    console.log("payload:", action);
 	    return (0, _assign2.default)({}, state, {
 	      type: "DONE",
 	      count: state.count + 1,
 	      addActionHistory: true,
-	      renderCount: state.renderCount + 1
+	      renderCount: state.renderCount + 1,
+	      actions: [].concat(state.actions, [action])
 	    });
 	  },
-	  decrease: function decrease(state, payload) {
+	  decrease: function decrease(state, action) {
 	    return (0, _assign2.default)({}, state, {
 	      type: "DONE",
 	      count: state.count - 1,
 	      addActionHistory: true,
-	      renderCount: state.renderCount + 1
+	      renderCount: state.renderCount + 1,
+	      actions: [].concat(state.actions, [action])
 	    });
 	  },
 
@@ -205,8 +214,7 @@
 
 	// Like createStore.
 	var repo = new Repo({
-	  maxHistory: Infinity // needed for checkout to work.
-	});
+	  maxHistory: Infinity });
 	// Naive Renderer.
 	var render = function render() {
 	  var counter = repo.state.counter;
@@ -214,23 +222,25 @@
 
 	  if (counter.addActionHistory) {
 	    document.getElementById('count').innerHTML = counter.count;
+
+	    actionList = counter.actions;
+
+	    document.getElementById('action-nav').innerHTML = '';
 	    actionList.forEach(function (v, k) {
-	      console.log(counter.renderCount);
-	      console.log(v, k);
-	      // let el = document.createElement("a");
-	      // el.setAttribute('href', `#${counter.renderCount}`);
-	      // el.innerHTML = counter.count;
-	      // el.classList.add('btn');
-	      // document.getElementById('action-nav').appendChild(el);
+	      var el = document.createElement("a");
+	      el.setAttribute('href', '#' + k);
+	      el.innerHTML = k;
+	      el.classList.add('btn');
+	      document.getElementById('action-nav').appendChild(el);
 	    });
 	  }
 	};
 
 	document.getElementById('increase').addEventListener('click', function () {
-	  actionList.push(repo.push(increase));
+	  repo.push(increase);
 	});
 	document.getElementById('decrease').addEventListener('click', function () {
-	  actionList.push(repo.push(decrease));
+	  repo.push(decrease);
 	});
 	document.getElementById('action-nav').addEventListener('click', function (e) {
 	  e.preventDefault();
@@ -245,24 +255,24 @@
 	});
 
 	// render(); // this wouldn't record an action as my first action.
-	actionList.push(repo.push(start));
+	repo.push(start);
 
-	// let actionList = [];
+	// let actionList = []
 	// let interval = setInterval(function () {
 	//   // repo.push is like store.dispatch
 	//   // BUT you push a function not a string.
 	//   // BUT you can just push a string as well.
-	//   actionList.push(repo.push(increase));
-	//   // actionList.push(repo.push('INCREASE_COUNTER'));
-	//   // console.log(repo.state.count);
-	//   console.log(actionList);
-	// }, 1000);
+	//   actionList.push(repo.push(increase))
+	//   // actionList.push(repo.push('INCREASE_COUNTER'))
+	//   // console.log(repo.state.count)
+	//   console.log(actionList)
+	// }, 1000)
 	//
 	// setTimeout(function () {
-	//   clearInterval(interval);
+	//   clearInterval(interval)
 	//   repo.checkout(actionList[0])
-	//   console.log(repo.state.count);
-	// }, 10000);
+	//   console.log(repo.state.count)
+	// }, 10000)
 
 /***/ },
 /* 1 */
