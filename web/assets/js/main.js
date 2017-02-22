@@ -86,20 +86,23 @@
 	  };
 	};
 	// Action
-	/**
-	 * Microcosm example w/o React.
-	 *
-	 * This includes:
-	 * x Microcosm (repo) - like redux stores
-	 * x Domains - like redux reducers (but different)
-	 * x Actions - which are not just static object but functions.
-	 */
+	/*
+	Microcosm example w/o React.
+
+	This includes:
+	x Microcosm (repo) - like redux stores
+	x Domains - like redux reducers (but different)
+	x Actions - which are not just static object but functions.
+
+	-> effects...are external
+
+	*/
 
 	var increase = function increase() {
 	  return function (action) {
 	    action.open('open payload');
 	    setTimeout(function () {
-	      return action.send('loading payload');
+	      return action.update('loading payload');
 	    }, 500); // triggers action.loading and .onUpdate()
 	    setTimeout(function () {
 	      return action.resolve(action);
@@ -2036,11 +2039,19 @@
 	   */
 	  var symbol = name || (fn.name || FALLBACK) + '.' + uid;
 
-	  fn.open      = symbol + '.open';
-	  fn.loading   = symbol + '.loading';
-	  fn.done      = symbol; // intentional
-	  fn.error     = symbol + '.error';
+	  fn.open = symbol + '.open';
+
+	  fn.loading = symbol + '.loading';
+	  fn.update = fn.loading;
+
+	  fn.done = symbol; // intentional
+	  fn.resolve = fn.done;
+
+	  fn.error = symbol + '.error';
+	  fn.reject = fn.error;
+
 	  fn.cancelled = symbol + '.cancelled';
+	  fn.cancel = fn.cancelled;
 
 	  // The default state is done
 	  fn.toString = toString;
@@ -2229,19 +2240,60 @@
 	    var size = this.root ? 1 : 0;
 
 	    while (action && action.parent) {
-	      action = action.parent;
+	      var parent = action.parent;
+
+	      parent.next = action;
+
+	      action = parent;
+
 	      size += 1;
 	    }
 
 	    this.size = size;
+	  },
+
+	  forEach: function forEach (fn, scope) {
+	    var this$1 = this;
+
+	    var action = this.focus || this.root;
+
+	    while (action) {
+	      fn.call(scope, action);
+
+	      if (action === this$1.head) {
+	        break
+	      }
+
+	      action = action.next;
+	    }
+	  },
+
+	  map: function map (fn, scope) {
+	    var items = [];
+
+	    this.forEach(function (action) {
+	      items.push(fn.call(scope, action));
+	    });
+
+	    return items
+	  },
+
+	  toArray: function toArray () {
+	    return this.map(function (n) { return n; })
 	  }
 
 	};
+
+	var hasOwn = Object.prototype.hasOwnProperty;
 
 	/**
 	 * Shallow copy an object
 	 */
 	function clone (a) {
+	  if (Array.isArray(a)) {
+	    return a.slice(0)
+	  }
+
 	  var copy = {};
 
 	  for (var key in a) {
@@ -2293,8 +2345,32 @@
 	 * Retrieve a value from an object. If no key is provided, just
 	 * return the object.
 	 */
-	function get (object, key) {
-	  return key == null ? object : object[key]
+	function get (object, key, fallback) {
+	  if (object == null) {
+	    return fallback
+	  } else if (key == null) {
+	    return object
+	  }
+
+	  if (Array.isArray(key)) {
+	    return getIn(object, key, fallback)
+	  }
+
+	  return hasOwn.call(object, key) ? object[key] : fallback
+	}
+
+	/**
+	 * Retrieve a value deeply within an object given an array of sequential
+	 * keys.
+	 */
+	function getIn (object, keys, fallback) {
+	  var value = object;
+
+	  for (var i = 0, len = keys.length; i < len; i++) {
+	    value = get(value, keys[i], fallback);
+	  }
+
+	  return value
 	}
 
 	/**
@@ -2303,6 +2379,10 @@
 	 * object.
 	 */
 	function set (object, key, value) {
+	  if (Array.isArray(key)) {
+	    return setIn(object, key, value)
+	  }
+
 	  // If the key path is null, there's no need to traverse the
 	  // object. Just return the value.
 	  if (key == null) {
@@ -2318,6 +2398,49 @@
 	  copy[key] = value;
 
 	  return copy
+	}
+
+	/**
+	 * Deeply assign a value given a path of sequential keys.
+	 */
+	function setIn (object, keys, value) {
+	  if (getIn(object, keys) === value) {
+	    return object
+	  }
+
+	  var key = keys[0];
+	  var rest = keys.slice(1);
+	  var copy = clone(object);
+
+	  if (rest.length) {
+	    copy[key] = (key in copy) ? setIn(copy[key], rest, value) : setIn({}, rest, value);
+	  } else {
+	    copy[key] = value;
+	  }
+
+	  return copy
+	}
+
+	/**
+	 * Compile a key path list for indexes
+	 */
+	function splitKeyPath (string) {
+	  return string.split(/\./)
+	}
+
+	function compileKeyPaths (string) {
+	  var items = string.split(/\s*\,\s*/);
+
+	  return items.map(splitKeyPath)
+	}
+
+	/**
+	 * Given a query (see above), return a subset of an object.
+	 */
+	function extract (object, keyPaths, seed) {
+	  return keyPaths.reduce(function (memo, keyPath) {
+	    return set(memo, keyPath, get(object, keyPath))
+	  }, seed || {})
 	}
 
 	/**
@@ -2376,7 +2499,7 @@
 	   * Set the action state to "loading", then set a payload if provided.
 	   * Triggers the "update" event.
 	   */
-	  send: function send (payload) {
+	  update: function update (payload) {
 	    if (!this.disposable) {
 	      this.type = this.behavior.loading;
 
@@ -2390,6 +2513,16 @@
 	    }
 
 	    return this
+	  },
+
+	  send: function send () {
+	    if (typeof console !== 'undefined') {
+	      console.warn('`send` was deprecated in 11.6.0.',
+	                   'Please use `update` instead.',
+	                   '`send` will be removed in 12.0.0.');
+	    }
+
+	    return this.update.apply(this, arguments)
 	  },
 
 	  /**
@@ -2571,6 +2704,68 @@
 	});
 
 	/**
+	 * Meta Domain
+	 * A domain for managing lifecycle methods and other default behavior
+	 * for other domains.
+	 */
+
+	function MetaDomain () {
+	  this.reset = function (data, deserialize) {
+	    return function (action, repo) {
+	      var initial = repo.getInitialState();
+	      var payload = data;
+
+	      if (deserialize) {
+	        payload = repo.deserialize(data);
+	      }
+
+	      action.resolve(merge(initial, payload));
+	    }
+	  };
+
+	  this.patch = function (data, deserialize) {
+	    return function (action, repo) {
+	      var payload = data;
+
+	      if (deserialize) {
+	        payload = repo.deserialize(payload);
+	      }
+
+	      action.resolve(payload);
+	    }
+	  };
+
+	  this.rebase = function (data) {
+	    return data
+	  };
+	}
+
+	MetaDomain.prototype = {
+	  handleReset: function handleReset (state, data) {
+	    return data
+	  },
+
+	  handlePatch: function handlePatch (state, data) {
+	    return merge(state, data)
+	  },
+
+	  handleRebase: function handleRebase (state, data) {
+	    return merge(data, state)
+	  },
+
+	  register: function register () {
+	    var registry = {};
+
+	    // TODO: This is to work around a parse issue with Buble
+	    registry[this.reset]  = this.handleReset;
+	    registry[this.patch]  = this.handlePatch;
+	    registry[this.rebase] = this.handleRebase;
+
+	    return registry
+	  }
+	};
+
+	/**
 	 * Lifecycle methods are implementated as actions. This module
 	 * enumerates through a preset list of types and creates associated
 	 * actions.
@@ -2579,51 +2774,7 @@
 	var lifecycle = {
 	  getInitialState : 'getInitialState',
 	  serialize       : 'serialize',
-	  deserialize     : 'deserialize',
-	  _willRebase     : '_willRebase',
-	  _willReset      : '_willReset',
-	  _willPatch      : '_willPatch'
-	};
-
-	/**
-	 * Meta Domain
-	 * A domain for managing lifecycle methods and other default behavior
-	 * for other domains.
-	 */
-
-	function MetaDomain () {}
-
-	MetaDomain.prototype.setup = function (repo) {
-	  this.repo = repo;
-	};
-
-	MetaDomain.prototype[lifecycle._willReset] = function (state, ref) {
-	  var owner = ref.owner;
-	  var data = ref.data;
-
-	  return owner === this.repo ? data : state
-	};
-
-	MetaDomain.prototype[lifecycle._willPatch] = function (state, ref) {
-	  var owner = ref.owner;
-	  var data = ref.data;
-
-	  if (owner !== this.repo) {
-	    return state
-	  }
-
-	  return merge(state, data)
-	};
-
-	MetaDomain.prototype[lifecycle._willRebase] = function (state, ref) {
-	  var owner = ref.owner;
-	  var data = ref.data;
-
-	  if (owner !== this.repo) {
-	    return state
-	  }
-
-	  return merge(data, state)
+	  deserialize     : 'deserialize'
 	};
 
 	function getDomainHandlers (domains, type) {
@@ -2660,7 +2811,7 @@
 	  this.registry = {};
 
 	  // All realms contain a meta domain for basic Microcosm operations
-	  this.add(null, MetaDomain);
+	  this.meta = this.add(null, MetaDomain);
 	}
 
 	Realm.prototype = {
@@ -2696,6 +2847,18 @@
 	    }
 
 	    return domain
+	  },
+
+	  reset: function reset (data, deserialize) {
+	    return this.repo.push(this.meta.reset, data, deserialize)
+	  },
+
+	  patch: function patch (data, deserialize) {
+	    return this.repo.push(this.meta.patch, data, deserialize)
+	  },
+
+	  rebase: function rebase (data) {
+	    return this.repo.push(this.meta.rebase, data)
 	  }
 
 	};
@@ -2781,8 +2944,6 @@
 	  return action.resolve(body)
 	}
 
-	var DEFAULT_OPTIONS = { maxHistory: 0, history: null, parent: null };
-
 	/**
 	 * A tree-like data structure that keeps track of the execution order of
 	 * actions that are pushed into it, sequentially folding them together to
@@ -2791,46 +2952,44 @@
 	 * @constructor
 	 * @extends {Emitter}
 	 */
-	function Microcosm (ref, state)  {
-	  if ( ref === void 0 ) ref = DEFAULT_OPTIONS;
-	  var maxHistory = ref.maxHistory;
-	  var history = ref.history;
-	  var parent = ref.parent;
-
+	function Microcosm (options, state, deserialize)  {
 	  Emitter.call(this);
 
-	  this.history = history || new History(maxHistory);
+	  options = options || {};
+
+	  this.parent = options.parent || null;
+	  this.history = this.parent ? this.parent.history : new History(options.maxHistory);
 	  this.history.addRepo(this);
 
 	  this.realm = new Realm(this);
 
-	  this.parent = parent || null;
-
 	  // Keeps track of the root of the history tree
-	  this.archived = parent ? parent.archived : {};
+	  this.archived = this.parent ? this.parent.archived : {};
 
 	  // Keeps track of the focal point of the
-	  this.cached = parent ? parent.cached : this.archived;
+	  this.cached = this.parent ? this.parent.cached : this.archived;
 
 	  // Staging. Internal domain state
-	  this.staged = parent ? parent.state : this.cached;
+	  this.staged = this.parent ? this.parent.state : this.cached;
 
 	  // Publically available data.
-	  this.state = parent ? parent.state : this.staged;
+	  this.state = this.parent ? this.parent.state : this.staged;
 
 	  // Mark children as "followers". Followers do not move through the entire
 	  // lifecycle. They don't have to. This greatly improves fork performance.
-	  this.follower = !!parent;
+	  this.follower = !!this.parent;
+
+	  this.indexes = {};
 
 	  // Track changes with a mutable flag
 	  this.dirty = false;
 
 	  // Microcosm is now ready. Call the setup lifecycle method
-	  this.setup();
+	  this.setup(options);
 
 	  // If given state, reset to that snapshot
 	  if (state) {
-	    this.reset(state, true);
+	    this.reset(state, deserialize);
 	  }
 	}
 
@@ -2992,15 +3151,11 @@
 	    // Update children with their parent's state
 	    if (this.parent) {
 	      this.staged = merge(this.staged, this.parent.state);
-	      this.state  = merge(this.state, this.parent.state);
+	      this.state = merge(this.state, this.parent.state);
 	    }
 
-	    var next = this.dispatch(this.staged, action.type, action.payload);
-
-	    if (this.staged !== next) {
-	      this.staged = next;
-	      this.state = this.commit(next);
-	    }
+	    this.staged = this.dispatch(this.staged, action.type, action.payload);
+	    this.state = this.commit(this.staged);
 
 	    if (this.state != original) {
 	      this.dirty = true;
@@ -3020,6 +3175,7 @@
 
 	    if (this.dirty) {
 	      this.dirty = false;
+
 	      this._emit('change', this.state);
 	    }
 	  },
@@ -3074,9 +3230,9 @@
 	   * @return {Microcosm} self
 	   */
 	  addDomain: function addDomain (key, domain, options) {
-	    this.realm.add(key, domain, options);
-
 	    this.follower = false;
+
+	    this.realm.add(key, domain, options);
 	    this.rebase();
 
 	    return this
@@ -3103,16 +3259,9 @@
 	   * @return {Action} action - An action representing the reset operation.
 	   */
 	  reset: function reset (data, deserialize) {
-	    if (deserialize === true) {
-	      data = this.deserialize(data);
-	    }
-
 	    this.follower = false;
 
-	    return this.push(lifecycle._willReset, {
-	      owner : this,
-	      data  : merge(this.getInitialState(), data)
-	    })
+	    return this.realm.reset(data, deserialize)
 	  },
 
 	  /**
@@ -3123,13 +3272,9 @@
 	   * @return {Action} action - An action representing the patch operation.
 	   */
 	  patch: function patch (data, deserialize) {
-	    if (deserialize === true) {
-	      data = this.deserialize(data);
-	    }
-
 	    this.follower = false;
 
-	    return this.push(lifecycle._willPatch, { data: data, owner: this })
+	    return this.realm.patch(data, deserialize)
 	  },
 
 	  /**
@@ -3139,11 +3284,17 @@
 	   * @return {Object} The deserialized version of the provided payload.
 	   */
 	  deserialize: function deserialize (payload) {
-	    if (payload == null) {
-	      return {}
+	    var base = payload ? payload : {};
+
+	    if (typeof base === 'string') {
+	      base = JSON.parse(base);
 	    }
 
-	    return this.dispatch(payload, lifecycle.deserialize, payload)
+	    if (this.parent) {
+	      base = this.parent.deserialize(base);
+	    }
+
+	    return this.dispatch(base, lifecycle.deserialize, base)
 	  },
 
 	  /**
@@ -3153,7 +3304,13 @@
 	   * @return {Object} The serialized version of repo state.
 	   */
 	  serialize: function serialize () {
-	    return this.dispatch(this.staged, lifecycle.serialize, null)
+	    var base = this.staged;
+
+	    if (this.parent) {
+	      base = merge(base, this.parent.serialize());
+	    }
+
+	    return this.dispatch(base, lifecycle.serialize, null)
 	  },
 
 	  /**
@@ -3171,11 +3328,11 @@
 	   * respected. Emits a "change" event.
 	   */
 	  rebase: function rebase () {
-	    var data = this.getInitialState();
+	    var payload = this.getInitialState();
 
-	    this.cached = merge(this.cached, data);
+	    this.cached = merge(this.cached, payload);
 
-	    this.push(lifecycle._willRebase, { data: data, owner: this });
+	    return this.realm.rebase(payload)
 	  },
 
 	  /**
@@ -3199,9 +3356,100 @@
 	   */
 	  fork: function fork () {
 	    return new Microcosm({
-	      parent  : this,
-	      history : this.history
+	      parent : this
 	    })
+	  },
+
+	  /**
+	   * Memoize a computation of a fragment of application state.
+	   * This may be referenced when computing properties or querying
+	   * state within Presenters.
+	   */
+	  index: function index (name, fragment) {
+	    var this$1 = this;
+	    var processors = [], len = arguments.length - 2;
+	    while ( len-- > 0 ) processors[ len ] = arguments[ len + 2 ];
+
+	    var keyPaths = compileKeyPaths(fragment);
+
+	    var state  = null;
+	    var subset = null;
+	    var answer = null;
+
+	    var query = this.indexes[name] = function () {
+	      var extra = [], len = arguments.length;
+	      while ( len-- ) extra[ len ] = arguments[ len ];
+
+	      if (this$1.state !== state) {
+	        state = this$1.state;
+
+	        var next = extract(state, keyPaths, subset);
+
+	        if (next !== subset) {
+	          subset = next;
+
+	          answer = processors.reduce(function (value, fn) {
+	            return fn.call(this$1, value, state)
+	          }, subset);
+	        }
+	      }
+
+	      return extra.reduce(function (value, fn) {
+	        return fn.call(this$1, value, state)
+	      }, answer)
+	    };
+
+	    return query
+	  },
+
+	  lookup: function lookup (name) {
+	    var index = this.indexes[name];
+
+	    if (index == null) {
+	      if (this.parent) {
+	        return this.parent.lookup(name)
+	      } else {
+	        throw new TypeError('Unable to find missing index ' + name)
+	      }
+	    }
+
+	    return index
+	  },
+
+	  /**
+	   * Invoke an index, optionally adding additional processing.
+	   */
+	  compute: function compute (name) {
+	    var processors = [], len = arguments.length - 1;
+	    while ( len-- > 0 ) processors[ len ] = arguments[ len + 1 ];
+
+	    return this.lookup(name).apply(void 0, processors)
+	  },
+
+	  /**
+	  * Return a memoized compute function. This is useful for repeated
+	  * invocations of a computation as state changes. Useful for use inside
+	  * of Presenters.
+	   */
+	  memo: function memo (name) {
+	    var processors = [], len = arguments.length - 1;
+	    while ( len-- > 0 ) processors[ len ] = arguments[ len + 1 ];
+
+	    var index = this.lookup(name);
+
+	    var last = null;
+	    var answer = null;
+
+	    return function () {
+	      var next = index();
+
+	      if (next !== last) {
+	        last = next;
+	        answer = index.apply(void 0, processors);
+	      }
+
+	      return answer
+	    }
 	  }
 
 	});
@@ -3211,6 +3459,8 @@
 	exports.Action = Action;
 	exports.History = History;
 	exports.tag = tag;
+	exports.get = get;
+	exports.set = set;
 	exports.merge = merge;
 	exports.inherit = inherit;
 

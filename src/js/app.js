@@ -1,11 +1,14 @@
-/**
- * Microcosm example w/o React.
- *
- * This includes:
- * x Microcosm (repo) - like redux stores
- * x Domains - like redux reducers (but different)
- * x Actions - which are not just static object but functions.
- */
+/*
+Microcosm example w/o React.
+
+This includes:
+x Microcosm (repo) - like redux stores
+x Domains - like redux reducers (but different)
+x Actions - which are not just static object but functions.
+
+-> effects...are external
+
+*/
 
 import Microcosm from 'microcosm'
 const start = () => {
@@ -17,8 +20,8 @@ const start = () => {
 const increase = () => {
   return function (action) {
     action.open('open payload')
-    setTimeout(() => action.send('loading payload'), 500); // triggers action.loading and .onUpdate()
-    setTimeout(() => action.resolve(action), 1000)
+    setTimeout(() => action.update('loading payload'), 500); // triggers action.loading and .onUpdate()
+    setTimeout(() => action.resolve(action)          , 1000)
   }
 }
 const decrease = () => {
@@ -31,18 +34,18 @@ const decrease = () => {
 const Count = {
   getInitialState() {
     return {
-      type: 'Hello World',
-      count: 0,
+      type            : 'Hello World',
+      count           : 0,
       addActionHistory: false,
-      renderCount: 0,
-      actions: [],
+      renderCount     : 0,
+      actions         : [],
     }
   },
   start (state, action) {
     return Object.assign({}, state, {
-      addActionHistory: true,
-      renderCount: state.renderCount + 1,
-      actions: [].concat(state.actions, [action]),
+      addActionHistory : true,
+      renderCount      : state.renderCount + 1,
+      actions          : [].concat(state.actions, [action]),
     })
   },
   open (state, payload) {
@@ -51,8 +54,8 @@ const Count = {
     console.log("state:", state)
     console.log("payload:", payload)
     return Object.assign({}, state, {
-      type: "OPEN...",
-      addActionHistory: false,
+      type             : "OPEN...",
+      addActionHistory : false,
     })
   },
   loading (state, payload) {
@@ -61,8 +64,8 @@ const Count = {
     console.log("state:", state)
     console.log("payload:", payload)
     return Object.assign({}, state, {
-      type: "LOADING...",
-      addActionHistory: false,
+      type             : "LOADING...",
+      addActionHistory : false,
     })
   },
   increase (state, action) {
@@ -71,20 +74,20 @@ const Count = {
     console.log("state:", state)
     console.log("payload:", action)
     return Object.assign({}, state, {
-      type: "DONE",
-      count: state.count + 1,
-      addActionHistory: true,
-      renderCount: state.renderCount + 1,
-      actions: [].concat(state.actions, [action]),
+      type             : "DONE",
+      count            : state.count + 1,
+      addActionHistory : true,
+      renderCount      : state.renderCount + 1,
+      actions          : [].concat(state.actions, [action]),
     })
   },
   decrease (state, action) {
     return Object.assign({}, state, {
-      type: "DONE",
-      count: state.count - 1,
-      addActionHistory: true,
-      renderCount: state.renderCount + 1,
-      actions: [].concat(state.actions, [action]),
+      type             : "DONE",
+      count            : state.count - 1,
+      addActionHistory : true,
+      renderCount      : state.renderCount + 1,
+      actions          : [].concat(state.actions, [action]),
     })
   },
   // Like the switch statements in a reducer.
@@ -96,11 +99,11 @@ const Count = {
     console.log("Function to string:", [increase.loading].toString())
     console.log("Function to string:", [increase.done].toString())
     return {
-      [start]: this.start,
-      [increase.open]: this.open,
-      [increase.loading]: this.loading,
-      [increase]: this.increase, // defaults to calling increase.done
-      [decrease]: this.decrease,
+      [start]            : this.start,
+      [increase.open]    : this.open,
+      [increase.loading] : this.loading,
+      [increase]         : this.increase, // defaults to calling increase.done
+      [decrease]         : this.decrease,
       // ['INCREASE_COUNTER']: this.increase
     }
   }
