@@ -80,12 +80,6 @@
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-	var start = function start() {
-	  return function (action) {
-	    action.resolve(action);
-	  };
-	};
-	// Action
 	/*
 	Microcosm example w/o React.
 
@@ -93,11 +87,15 @@
 	x Microcosm (repo) - like redux stores
 	x Domains - like redux reducers (but different)
 	x Actions - which are not just static object but functions.
-
-	-> effects...are external
-
 	*/
+	var logStyles = 'font-weight:700; text-decoration:underline';
 
+	// Action
+	var start = function start() {
+	  return function (action) {
+	    action.resolve(action);
+	  };
+	};
 	var increase = function increase() {
 	  return function (action) {
 	    action.open('open payload');
@@ -118,6 +116,7 @@
 	// Domain is like a Reducer.
 	var Count = {
 	  getInitialState: function getInitialState() {
+	    console.log('%cCount > getInitialState()', logStyles);
 	    return {
 	      type: 'Hello World',
 	      count: 0,
@@ -127,6 +126,8 @@
 	    };
 	  },
 	  start: function start(state, action) {
+	    console.log('%cCount > start()', logStyles);
+
 	    return (0, _assign2.default)({}, state, {
 	      addActionHistory: true,
 	      renderCount: state.renderCount + 1,
@@ -134,30 +135,37 @@
 	    });
 	  },
 	  open: function open(state, payload) {
-	    console.log("=============");
-	    console.log("open");
-	    console.log("state:", state);
-	    console.log("payload:", payload);
+	    console.groupCollapsed('Count > open()');
+	    console.log('action.open');
+	    console.log('%cstate', logStyles, state);
+	    console.log('%cpayload', logStyles, payload);
+	    console.groupEnd();
+
 	    return (0, _assign2.default)({}, state, {
 	      type: "OPEN...",
 	      addActionHistory: false
 	    });
 	  },
 	  loading: function loading(state, payload) {
-	    console.log("=============");
-	    console.log("loading");
-	    console.log("state:", state);
-	    console.log("payload:", payload);
+	    console.groupCollapsed('Count > loading()');
+	    console.log('action.update');
+	    console.log('%cstate', logStyles, state);
+	    console.log('%cpayload', logStyles, payload);
+	    console.groupEnd();
+
 	    return (0, _assign2.default)({}, state, {
 	      type: "LOADING...",
 	      addActionHistory: false
 	    });
 	  },
 	  increase: function increase(state, action) {
-	    console.log("=============");
-	    console.log("done/default/resolve");
-	    console.log("state:", state);
-	    console.log("payload:", action);
+
+	    console.groupCollapsed('Count > increase()');
+	    console.log('action.resolve');
+	    console.log('%cstate', logStyles, state);
+	    console.log('%caction', logStyles, action);
+	    console.groupEnd();
+
 	    return (0, _assign2.default)({}, state, {
 	      type: "DONE",
 	      count: state.count + 1,
@@ -167,6 +175,13 @@
 	    });
 	  },
 	  decrease: function decrease(state, action) {
+
+	    console.groupCollapsed('Count > decrease()');
+	    console.log('action.resolve');
+	    console.log('%cstate', logStyles, state);
+	    console.log('%caction', logStyles, action);
+	    console.groupEnd();
+
 	    return (0, _assign2.default)({}, state, {
 	      type: "DONE",
 	      count: state.count - 1,
@@ -176,16 +191,22 @@
 	    });
 	  },
 
+
 	  // Like the switch statements in a reducer.
 	  register: function register() {
 	    var _ref;
 
 	    // Why does this get called so many times?
-	    console.log("=============");
-	    console.log("Function to string:", [increase].toString());
-	    console.log("Function to string:", [increase.open].toString());
-	    console.log("Function to string:", [increase.loading].toString());
-	    console.log("Function to string:", [increase.done].toString());
+	    console.groupCollapsed('Count Domain: register()');
+	    console.log('%cincrease to string:', logStyles, [increase].toString());
+	    console.log('%cincrease.open to string:', logStyles, [increase.open].toString());
+	    console.log('%cincrease.loading to string:', logStyles, [increase.loading].toString());
+	    console.log('%cstart to string:', logStyles, [start].toString());
+	    console.log('%cdecrease to string:', logStyles, [decrease].toString());
+	    console.groupEnd();
+
+	    // Actions aren't registered until they are needed. Why?
+
 	    return _ref = {}, (0, _defineProperty3.default)(_ref, start, this.start), (0, _defineProperty3.default)(_ref, increase.open, this.open), (0, _defineProperty3.default)(_ref, increase.loading, this.loading), (0, _defineProperty3.default)(_ref, increase, this.increase), (0, _defineProperty3.default)(_ref, decrease, this.decrease), _ref;
 	  }
 	};
@@ -218,6 +239,7 @@
 	// Like createStore.
 	var repo = new Repo({
 	  maxHistory: Infinity });
+
 	// Naive Renderer.
 	var render = function render() {
 	  var counter = repo.state.counter;

@@ -19,7 +19,7 @@
   },
   "homepage": "http://browncoat.leobauza.com/",
   "dependencies": {
-    "microcosm": "^11.2.0",
+    "microcosm": "^11.6.0",
     "preact": "^7.1.0"
   },
   "devDependencies": {

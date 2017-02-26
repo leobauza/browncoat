@@ -5,18 +5,17 @@ This includes:
 x Microcosm (repo) - like redux stores
 x Domains - like redux reducers (but different)
 x Actions - which are not just static object but functions.
-
--> effects...are external
-
 */
+let logStyles = 'font-weight:700; text-decoration:underline'
 
 import Microcosm from 'microcosm'
+
+// Action
 const start = () => {
   return (action) => {
     action.resolve(action)
   }
 }
-// Action
 const increase = () => {
   return function (action) {
     action.open('open payload')
@@ -33,46 +32,60 @@ const decrease = () => {
 // Domain is like a Reducer.
 const Count = {
   getInitialState() {
+    console.log('%cCount > getInitialState()', logStyles)
     return {
-      type            : 'Hello World',
-      count           : 0,
-      addActionHistory: false,
-      renderCount     : 0,
-      actions         : [],
+      type             : 'Hello World',
+      count            : 0,
+      addActionHistory : false,
+      renderCount      : 0,
+      actions          : [],
     }
   },
+
   start (state, action) {
+    console.log('%cCount > start()', logStyles)
+
     return Object.assign({}, state, {
       addActionHistory : true,
       renderCount      : state.renderCount + 1,
       actions          : [].concat(state.actions, [action]),
     })
   },
+
   open (state, payload) {
-    console.log("=============")
-    console.log("open")
-    console.log("state:", state)
-    console.log("payload:", payload)
+    console.groupCollapsed('Count > open()')
+    console.log('action.open')
+    console.log('%cstate'  , logStyles, state)
+    console.log('%cpayload', logStyles, payload)
+    console.groupEnd()
+
     return Object.assign({}, state, {
       type             : "OPEN...",
       addActionHistory : false,
     })
   },
+
   loading (state, payload) {
-    console.log("=============")
-    console.log("loading")
-    console.log("state:", state)
-    console.log("payload:", payload)
+    console.groupCollapsed('Count > loading()')
+    console.log('action.update')
+    console.log('%cstate'  , logStyles, state)
+    console.log('%cpayload', logStyles, payload)
+    console.groupEnd()
+
     return Object.assign({}, state, {
       type             : "LOADING...",
       addActionHistory : false,
     })
   },
+
   increase (state, action) {
-    console.log("=============")
-    console.log("done/default/resolve")
-    console.log("state:", state)
-    console.log("payload:", action)
+
+    console.groupCollapsed('Count > increase()')
+    console.log('action.resolve')
+    console.log('%cstate'  , logStyles, state)
+    console.log('%caction', logStyles, action)
+    console.groupEnd()
+
     return Object.assign({}, state, {
       type             : "DONE",
       count            : state.count + 1,
@@ -81,7 +94,15 @@ const Count = {
       actions          : [].concat(state.actions, [action]),
     })
   },
+
   decrease (state, action) {
+
+    console.groupCollapsed('Count > decrease()')
+    console.log('action.resolve')
+    console.log('%cstate'  , logStyles, state)
+    console.log('%caction', logStyles, action)
+    console.groupEnd()
+
     return Object.assign({}, state, {
       type             : "DONE",
       count            : state.count - 1,
@@ -90,14 +111,20 @@ const Count = {
       actions          : [].concat(state.actions, [action]),
     })
   },
+
   // Like the switch statements in a reducer.
   register() {
     // Why does this get called so many times?
-    console.log("=============")
-    console.log("Function to string:", [increase].toString())
-    console.log("Function to string:", [increase.open].toString())
-    console.log("Function to string:", [increase.loading].toString())
-    console.log("Function to string:", [increase.done].toString())
+    console.groupCollapsed('Count Domain: register()')
+    console.log('%cincrease to string:'        ,logStyles,[increase].toString())
+    console.log('%cincrease.open to string:'   ,logStyles,[increase.open].toString())
+    console.log('%cincrease.loading to string:',logStyles,[increase.loading].toString())
+    console.log('%cstart to string:'           ,logStyles,[start].toString())
+    console.log('%cdecrease to string:'        ,logStyles,[decrease].toString())
+    console.groupEnd()
+
+    // Actions aren't registered until they are needed. Why?
+
     return {
       [start]            : this.start,
       [increase.open]    : this.open,
@@ -124,6 +151,7 @@ let actionList = []
 const repo = new Repo({
   maxHistory: Infinity, // needed for checkout to work.
 })
+
 // Naive Renderer.
 const render = () => {
   const counter = repo.state.counter
